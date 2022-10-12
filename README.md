@@ -9,7 +9,7 @@ $ npm install
 ```
 
 ## Run demo
-The project uses Vite to build and run the dev server.
+The project uses Vite to build and run the dev server. It's already configured to build TailwindCSS file, located in `src/styles/main.css`
 
 ```
 $ npm run dev
