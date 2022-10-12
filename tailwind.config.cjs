@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,jsx}"],
+  content: ['./src/**/*.{html,jsx}'],
   theme: {
     container: {
       center: true
@@ -11,13 +11,13 @@ module.exports = {
       'dark-green': '#02783F',
       'main-dark-blue': '#00283D',
       'dark-blue': '#00344F',
-      'white': '#FFFFFF',
+      white: '#FFFFFF',
       'error-red': '#FA2121'
     },
     fontFamily: {
-      'sans': ['Montserrat']
+      sans: ['Montserrat']
     }
   },
 
-  plugins: [],
+  plugins: []
 }

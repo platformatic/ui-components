@@ -1,22 +1,22 @@
-'use strict';
-import Separator from "../Separator";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+'use strict'
+import Separator from '../VerticalSeparator'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDatabase, faFileLines, faGear } from '@fortawesome/free-solid-svg-icons'
-import BorderedText from "../BorderedText";
-export default function ApiFooter(props) {
+import BorderedText from '../BorderedText'
+export default function ApiFooter (props) {
   const { graphql, openapi } = props
   return (
-    <div className="api-footer">
-      <div className="flex gap-2">
-        {graphql && ( <BorderedText text="GraphQL"/>)}
-        {openapi && ( <BorderedText text="REST"/>)}
+    <div className='api-footer'>
+      <div className='flex gap-2'>
+        {graphql && (<BorderedText text='GraphQL' />)}
+        {openapi && (<BorderedText text='REST' />)}
       </div>
       <div>
-        <span><FontAwesomeIcon icon={faGear}/> Configs</span>
+        <span><FontAwesomeIcon icon={faGear} /> Configs</span>
         <Separator />
-        <span><FontAwesomeIcon icon={faFileLines}/> API Docs</span>
+        <span><FontAwesomeIcon icon={faFileLines} /> API Docs</span>
         <Separator />
-        <span><FontAwesomeIcon icon={faDatabase}/> SQLite</span>
+        <span><FontAwesomeIcon icon={faDatabase} /> SQLite</span>
       </div>
     </div>
   )

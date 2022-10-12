@@ -1,0 +1,10 @@
+.stats-header {
+  @apply flex justify-between items-center font-bold
+}
+.stats-main-stat {
+  @apply flex justify-center items-center;
+  gap: 1rem;
+}
+.stats-other-stats {
+
+}
