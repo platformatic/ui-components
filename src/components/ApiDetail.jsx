@@ -1,10 +1,16 @@
 'use strict'
 
+import Endpoints from './Api/Endpoints'
 import BorderedBox from './BorderedBox'
+import BorderedText from './BorderedText'
+import HorizontalSeparator from './HorizontalSeparator'
+import TwoColumnsLayout from './layouts/TwoColumnsLayout'
 import StatsView from './StatView'
+import VerticalSeparator from './VerticalSeparator'
 
 export default function ApiDetails (props) {
-  // const { url, repository, version } = props
+  const apiData = props.data
+  const { url, repository, version, openapi, graphql, source, lastDeploy } = apiData
   const requestStats = {
     mainStat: {
       value: 12,
@@ -49,10 +55,27 @@ export default function ApiDetails (props) {
   }
   return (
     <>
-      <BorderedBox>
-        Api Details Here
+      <BorderedBox classes='api-data'>
+        <div>
+          Preview/Staging URL: <a href={url}>{url}</a>
+        </div>
+        <div>
+          Repository: <a href={`https://github.com/${repository}`}>{repository}</a>
+        </div>
+        <div>
+          Version: <BorderedText text={`v${version}`} />
+        </div>
+        <HorizontalSeparator />
+        <div className='flex gap-2 items-center'>
+          <span>Generated with: {source}</span>
+          <VerticalSeparator />
+          <span>Last deployed: {lastDeploy}</span>
+        </div>
+        <div className='flex items-center'>
+          <span className='mr-2'>Endpoints: </span><Endpoints graphql={graphql} openapi={openapi} />
+        </div>
       </BorderedBox>
-      <div className='flex'>
+      <TwoColumnsLayout>
         <BorderedBox>
           <StatsView
             title='Requests'
@@ -67,15 +90,16 @@ export default function ApiDetails (props) {
             stats={latencyStats}
           />
         </BorderedBox>
-      </div>
-      <div className='flex'>
+      </TwoColumnsLayout>
+
+      <TwoColumnsLayout>
         <BorderedBox>
           Connected Clients
         </BorderedBox>
         <BorderedBox>
           Failure Rate
         </BorderedBox>
-      </div>
+      </TwoColumnsLayout>
     </>
 
   )

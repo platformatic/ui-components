@@ -1,0 +1,10 @@
+.tabbed-container {
+  @apply bg-main-dark-blue;
+}
+
+.tabs-header {
+  @apply flex justify-between text-white uppercase hover:cursor-pointer mb-4 tracking-[.25rem] h-[4rem];
+}
+.selected-tab {
+  @apply underline text-main-green underline-offset-8 font-bold;
+}

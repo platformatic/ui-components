@@ -25,7 +25,9 @@
   @apply bg-main-dark-blue;
   font-family: 'Montserrat';
 }
-
+a {
+  @apply text-tertiary-blue;
+}
 .bordered {
   @apply border border-solid box-border rounded-md;
 }
@@ -52,7 +54,7 @@
   @apply justify-self-end;
 }
 .bordered-box {
-  @apply rounded-md bordered p-5 bg-dark-blue text-white mb-4 mr-4 flex-1 gap-y-4
+  @apply rounded-md bordered p-5 bg-dark-blue text-white mb-4 flex-1 gap-y-4;
 }
 input {
   background-color: transparent;
