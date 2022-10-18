@@ -12,12 +12,16 @@ module.exports = {
       'main-dark-blue': '#00283D',
       'dark-blue': '#00344F',
       white: '#FFFFFF',
-      'error-red': '#FA2121'
+      'error-red': '#FA2121',
+      'tertiary-blue': '#2588E4'
     },
     fontFamily: {
       sans: ['Montserrat']
     }
   },
-
+  safelist: [
+    'border-error-red',
+    'border-main-green'
+  ],
   plugins: []
 }

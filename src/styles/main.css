@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 
 @font-face {
   font-family: 'Montserrat';
   src: local('Montserrat'), url(./fonts/Montserrat/static/Montserrat-Light.ttf) format('truetype');
@@ -19,7 +19,7 @@
   font-family: 'Montserrat';
   src: local('Montserrat'), url(./fonts/Montserrat/static/Montserrat-Bold.ttf) format('truetype');
   font-weight: 700;
-}
+} */
 
 :root {
   @apply bg-main-dark-blue;
@@ -34,21 +34,8 @@ a {
 .padded {
   @apply px-2 py-2.5;
 }
-.input-container {
-  @apply flex justify-between w-full padded h-10  text-white bordered;
-}
-
-.api-main {
-  @apply flex items-center text-white;
-}
-.api-data {
-  @apply flex flex-col w-full;
-}
 .api-footer {
   @apply flex justify-between items-center gap-2 text-white p-2 ml-9 pl-5;
-}
-.bordered-text {
-  @apply border border-solid rounded-md px-2 py-1 border-white tracking-[.25rem];
 }
 .api-status {
   @apply justify-self-end;

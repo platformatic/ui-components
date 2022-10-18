@@ -15,7 +15,6 @@ export default function TabbedWindow (props) {
 
   useEffect(() => {
     currentComponent = components[selected]
-    console.log(currentComponent)
   }, [selected])
 
   return (

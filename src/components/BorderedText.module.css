@@ -1,0 +1,3 @@
+.bordered {
+  @apply border border-solid rounded-md px-2 py-1 border-white tracking-[.25rem] text-white;
+}

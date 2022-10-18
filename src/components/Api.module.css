@@ -1,0 +1,7 @@
+.main {
+  @apply flex items-center text-white;
+}
+
+.data {
+  @apply flex flex-col w-full;
+}

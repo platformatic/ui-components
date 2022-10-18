@@ -1,0 +1,3 @@
+.padded {
+  @apply px-2 py-2.5;
+}

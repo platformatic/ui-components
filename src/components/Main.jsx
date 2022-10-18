@@ -6,7 +6,10 @@ import ApiDetails from './ApiDetail'
 import TabbedWindow from './TabbedWindow'
 import Prs from './Pr'
 import Playground from './Playground'
+import Versions from './Versions'
+import { useState } from 'react'
 export default function Main () {
+  const [currentSearch, setCurrentSearch] = useState('')
   const apis = [
     {
       id: 1,
@@ -46,19 +49,21 @@ export default function Main () {
     },
     {
       label: 'Versions',
-      component: () => <h1>Versions</h1>
+      component: () => <Versions />
     }
 
   ]
   return (
-    <div className='container mx-auto px-4 my-5 flex flex-col gap-10'>
+    <>
       <h1 className='text-white text-2xl font-bold'>My APIs</h1>
-      <SearchBar action={() => alert('asd')} />
+      <SearchBar action={(value) => setCurrentSearch(value)} />
+      {currentSearch !== '' && (
+        <span className='text-main-green'>You searched for {currentSearch}</span>
+      )}
       <TabbedWindow
         tabs={tabs}
       />
       {apis.map((api) => { return (<Api key={api.id} data={api} />) })}
-
-    </div>
+    </>
   )
 }
