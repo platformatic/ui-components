@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "tailwind": "tailwindcss -i ./src/styles/main.css -o ./dist/main.css --watch",
+    "tailwind:watch": "tailwindcss -i ./src/styles/main.css -o ./dist/main.css --watch",
+    "tailwind": "tailwindcss -i ./src/styles/main.css -o ./dist/main.css",
     "lint": "standard --fix"
   },
   "dependencies": {
