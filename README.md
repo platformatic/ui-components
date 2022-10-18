@@ -1,5 +1,7 @@
 # Platformatic UI Components
 
+**Please be aware that project is under heavy work in progress** 😇
+
 Provides React UI Components for Platformatic Dashboards.
 
 ## Init

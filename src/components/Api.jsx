@@ -18,7 +18,7 @@ function ApiName (props) {
   )
 }
 export default function API (props) {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
   const { name, version, source, lastDeploy, graphql, openapi, online } = props.data
   const color = online ? 'green' : 'red'
   function getApiIcon () {
@@ -47,7 +47,7 @@ export default function API (props) {
                     </span>
                     <ApiVersion version={version} />
                   </div>
-                  <div className='api-status'>
+                  <div className={styles.status}>
                     <ApiStatus online={online} />
                   </div>
 

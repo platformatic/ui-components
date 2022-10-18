@@ -1,3 +1,7 @@
 .padded {
   @apply px-2 py-2.5;
 }
+
+.bordered {
+  @apply border border-solid box-border rounded-md;
+}

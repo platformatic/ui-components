@@ -5,3 +5,7 @@
 .data {
   @apply flex flex-col w-full;
 }
+
+.status {
+  @apply justify-self-end;
+}

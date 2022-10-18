@@ -2,8 +2,9 @@
   "name": "@platformatic/ui-components",
   "description": "Platformatic UI Components",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "module",
+  "license": "Apache-2.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

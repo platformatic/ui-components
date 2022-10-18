@@ -1,0 +1,3 @@
+.borderedBox {
+  @apply rounded-md p-5 bg-dark-blue text-white mb-4 flex-1 gap-y-4;
+}
