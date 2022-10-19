@@ -9,7 +9,7 @@ import ApiStatus from './Api/Status'
 import BorderedBox from './BorderedBox'
 import HorizontalSeparator from './HorizontalSeparator'
 import styles from './Api.module.css'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 function ApiName (props) {
   const { name } = props

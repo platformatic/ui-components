@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDatabase, faFileLines, faGear } from '@fortawesome/free-solid-svg-icons'
 import BorderedText from '../BorderedText'
 import styles from './Footer.module.css'
+import React from 'react'
 export default function ApiFooter (props) {
   const { graphql, openapi } = props
   return (

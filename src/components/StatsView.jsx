@@ -6,7 +6,7 @@ import styles from './StatsView.module.css'
 import HorizontalSeparator from './HorizontalSeparator'
 import VerticalSeparator from './VerticalSeparator'
 import StatValue from './StatValue'
-
+import React from 'react'
 export default function StatsView (props) {
   const { title, stats } = props
   const mainStat = stats.mainStat

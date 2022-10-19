@@ -1,5 +1,5 @@
 'use strict'
-import { Fragment } from 'react'
+import React from 'react'
 import { getColor } from '../lib/utils'
 export default function StatValue (props) {
   const { value, color, label, pre } = props

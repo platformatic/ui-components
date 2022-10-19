@@ -1,5 +1,5 @@
 'use strict'
-
+import React from 'react'
 import BorderedText from '../BorderedText'
 
 export default function ApiVersion (props) {

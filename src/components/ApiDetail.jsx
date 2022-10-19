@@ -5,9 +5,9 @@ import BorderedBox from './BorderedBox'
 import BorderedText from './BorderedText'
 import HorizontalSeparator from './HorizontalSeparator'
 import TwoColumnsLayout from './layouts/TwoColumnsLayout'
-import StatsView from './StatView'
+import StatsView from './StatsView'
 import VerticalSeparator from './VerticalSeparator'
-
+import React from 'react'
 export default function ApiDetails (props) {
   const apiData = props.data
   const { url, repository, version, openapi, graphql, source, lastDeploy } = apiData

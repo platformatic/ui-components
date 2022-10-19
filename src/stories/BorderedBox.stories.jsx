@@ -17,3 +17,8 @@ export const Green = Template.bind({})
 Green.args = {
   color: 'green'
 }
+export const Red = Template.bind({})
+
+Red.args = {
+  color: 'red'
+}
