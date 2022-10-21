@@ -5,13 +5,12 @@ import styles from './LoginButton.module.css'
 
 export default function LoginButton ({ icon, label, onClick, ...props }) {
   return (
-    <button
-      type='button'
+    <div
       onClick={onClick}
       className={styles.button}
       {...props}
     >
-      {icon ? <FontAwesomeIcon icon={icon} /> : null} &nbsp;{label}
-    </button>
+      {icon ? <FontAwesomeIcon icon={icon} className='mr-2' /> : null} {label}
+    </div>
   )
 }
