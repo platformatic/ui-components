@@ -8,15 +8,15 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "storybook": "NODE_OPTIONS='--openssl-legacy-provider' start-storybook -p 6006",
+    "build-storybook": "NODE_OPTIONS='--openssl-legacy-provider' build-storybook",
     "tailwind:watch": "tailwindcss -i ./src/styles/main.css -o ./dist/main.css --watch",
     "tailwind": "tailwindcss -i ./src/styles/main.css -o ./dist/main.css",
     "lint": "standard --fix"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
-    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/free-brands-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.17",
