@@ -22,7 +22,11 @@ module.exports = {
   },
   safelist: [
     'border-error-red',
-    'border-main-green'
+    'border-main-green',
+    'text-3xl',
+    'text-4xl',
+    'text-5xl',
+    'text-6xl'
   ],
   plugins: []
 }
