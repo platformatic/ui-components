@@ -105,5 +105,4 @@ dist
 
 # Misc
 .DS_Store
-.storybook
 .vscode
