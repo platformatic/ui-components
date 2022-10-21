@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './LoginButton.css'
 
-export const LoginButton = ({ icon, label, onClick, ...props }) => {
+export default function LoginButton ({ icon, label, onClick, ...props }) {
   return (
     <button
       type='button'

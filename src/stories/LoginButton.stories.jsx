@@ -1,7 +1,5 @@
 import React from 'react'
-import { LoginButton } from '../components/LoginButton'
-import { GHLoginButton } from '../components/GHLoginButton'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import LoginButton  from '../components/LoginButton'
 
 export default {
   title: 'Example/LoginButton',

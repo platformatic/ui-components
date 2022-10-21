@@ -1,5 +1,5 @@
 import React from 'react'
-import { GHLoginButton } from '../components/GHLoginButton'
+import GHLoginButton from '../components/GHLoginButton'
 
 export default {
   title: 'Example/GHLoginButton',
