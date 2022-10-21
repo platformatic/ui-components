@@ -14,6 +14,7 @@ import TabbedWindow from './src/components/TabbedWindow'
 import Versions from './src/components/Versions'
 import VerticalSeparator from './src/components/VerticalSeparator'
 import LoginButton from './src/components/LoginButton'
+import GHLoginButton from './src/components/GHLoginButton'
 export {
   Api,
   ApiDetails,
@@ -27,5 +28,7 @@ export {
   SearchBar,
   TabbedWindow,
   Versions,
-  VerticalSeparator
+  VerticalSeparator,
+  LoginButton,
+  GHLoginButton
 }
