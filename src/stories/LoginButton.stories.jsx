@@ -1,8 +1,8 @@
 import React from 'react'
-import LoginButton  from '../components/LoginButton'
+import LoginButton from '../components/LoginButton'
 
 export default {
-  title: 'Example/LoginButton',
+  title: 'Platformatic/LoginButton',
   component: LoginButton
 }
 

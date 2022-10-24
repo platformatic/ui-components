@@ -1,7 +1,7 @@
 'use strict'
 import BorderedBox from '../components/BorderedBox'
 export default {
-  title: 'Example/BorderedBox',
+  title: 'Platformatic/BorderedBox',
   component: BorderedBox,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {

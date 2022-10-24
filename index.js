@@ -1,6 +1,6 @@
 'use strict'
 
-import Api from './src/components/Api'
+import ApiSummary from './src/components/ApiSummary'
 import ApiDetails from './src/components/ApiDetail'
 import BorderedBox from './src/components/BorderedBox'
 import BorderedText from './src/components/BorderedText'
@@ -16,7 +16,7 @@ import VerticalSeparator from './src/components/VerticalSeparator'
 import LoginButton from './src/components/LoginButton'
 import GHLoginButton from './src/components/GHLoginButton'
 export {
-  Api,
+  ApiSummary,
   ApiDetails,
   BorderedBox,
   BorderedText,

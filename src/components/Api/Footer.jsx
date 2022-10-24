@@ -6,7 +6,7 @@ import BorderedText from '../BorderedText'
 import styles from './Footer.module.css'
 import React from 'react'
 export default function ApiFooter (props) {
-  const { graphql, openapi } = props
+  const { graphql, openapi, db } = props
   return (
     <div className={styles.footer}>
       <div className='flex gap-2'>
@@ -18,7 +18,7 @@ export default function ApiFooter (props) {
         <Separator />
         <span><FontAwesomeIcon icon={faFileLines} /> API Docs</span>
         <Separator />
-        <span><FontAwesomeIcon icon={faDatabase} /> SQLite</span>
+        <span><FontAwesomeIcon icon={faDatabase} /> {db}</span>
       </div>
     </div>
   )

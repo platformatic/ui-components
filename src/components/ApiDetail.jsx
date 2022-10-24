@@ -9,8 +9,7 @@ import StatsView from './StatsView'
 import VerticalSeparator from './VerticalSeparator'
 import React from 'react'
 export default function ApiDetails (props) {
-  const apiData = props.data
-  const { url, repository, version, openapi, graphql, source, lastDeploy } = apiData
+  const { url, repository, version, openapi, graphql, source, lastDeploy } = props
   const requestStats = {
     mainStat: {
       value: 12,

@@ -4,6 +4,8 @@ import ApiFooter from './Api/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 import ApiVersion from './Api/Version'
+import ApiIcon from './Api/ApiIcon'
+import ApiIconClosed from './Api/ApiIconClosed'
 import Separator from './VerticalSeparator'
 import ApiStatus from './Api/Status'
 import BorderedBox from './BorderedBox'
@@ -17,16 +19,10 @@ function ApiName (props) {
     <span className='text-main-green font-semibold text-2xl'>{name}</span>
   )
 }
-export default function API (props) {
+export default function ApiSummary (props) {
   const [isOpen, setIsOpen] = useState(true)
-  const { name, version, source, lastDeploy, graphql, openapi, online } = props.data
+  const { name, version, source, lastDeploy, graphql, openapi, online, db } = props
   const color = online ? 'green' : 'red'
-  function getApiIcon () {
-    if (isOpen) {
-      return 'api-icon.svg'
-    }
-    return 'api-icon-closed.svg'
-  }
   return (
     <BorderedBox
       color={color}
@@ -35,7 +31,7 @@ export default function API (props) {
         <>
           <div className={styles.main}>
             <div className='flex w-full'>
-              <img className='w-9 mr-5' src={getApiIcon()} />
+              <div className='w-9 mr-5'><ApiIcon /></div>
               <div className={styles.data}>
                 <div className='flex items-center justify-between'>
                   <div className='flex items-center justify-between gap-4'>
@@ -67,12 +63,13 @@ export default function API (props) {
           <ApiFooter
             graphql={graphql}
             openapi={openapi}
+            db={db}
           />
         </>
       )}
       {!isOpen && (
         <div className='flex items-center'>
-          <img className='w-9 mr-5' src={getApiIcon()} />
+          <img className='w-9 mr-5' src={<ApiIconClosed />} />
           <ApiName name={name} />
           <span onClick={() => { setIsOpen(!isOpen) }} className='ml-4 hover:cursor-pointer'>Click here to set up your api</span>
         </div>
