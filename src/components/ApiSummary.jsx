@@ -36,11 +36,7 @@ export default function ApiSummary (props) {
                 <div className='flex items-center justify-between'>
                   <div className='flex items-center justify-between gap-4'>
                     <ApiName name={name} />
-                    <span>
-                      <a href='#' className='border p-2 rounded-full'>
-                        <FontAwesomeIcon color='white' icon={faLink} />
-                      </a>
-                    </span>
+                    <span><FontAwesomeIcon color='white' icon={faLink} /></span>
                     <ApiVersion version={version} />
                   </div>
                   <div className={styles.status}>
