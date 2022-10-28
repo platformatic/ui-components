@@ -22,7 +22,7 @@ export default function TabbedWindow (props) {
       <div className={styles['tabs-header']}>
         {headers.map((header, index) => {
           return (
-            <span onClick={() => setSelected(index)} key={index} className={selected === index ? styles['selected-tab'] : ''}>
+            <span onClick={() => setSelected(index)} key={index} className={`${styles.tab} ${selected === index ? styles['selected-tab'] : ''}`}>
               {header}
             </span>
           )

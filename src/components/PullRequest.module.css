@@ -1,0 +1,18 @@
+.container {
+  @apply flex flex-col;
+}
+.id {
+  @apply text-xl text-main-green font-semibold;
+}
+.header {
+  @apply flex items-center gap-x-4 mb-4;
+}
+.label {
+  @apply font-thin;
+}
+.value {
+  @apply font-semibold;
+}
+.content {
+  
+}

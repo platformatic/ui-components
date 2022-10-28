@@ -3,8 +3,15 @@
 }
 
 .tabs-header {
-  @apply flex justify-between text-white uppercase hover:cursor-pointer mb-4 tracking-[.25rem] h-[4rem];
+  @apply flex justify-start text-white uppercase hover:cursor-pointer mb-4 tracking-[.25rem] h-[2rem];
+}
+.tab {
+  @apply mr-4 min-w-[105px] text-center;
 }
 .selected-tab {
   @apply underline text-main-green underline-offset-8 font-bold;
+}
+
+.tabs-content {
+  @apply h-screen
 }

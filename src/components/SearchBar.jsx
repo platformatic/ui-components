@@ -6,15 +6,23 @@ import styles from './SearchBar.module.css'
 import commonStyles from './Common.module.css'
 export default function SearchBar (props) {
   const inputRef = useRef()
-  const { action } = props
-
+  const { onSubmit, onChange } = props
   function handleSearch () {
-    const value = inputRef.current.value
-    return action(value)
+    if (onSubmit) {
+      const value = inputRef.current.value
+      return onSubmit(value)
+    }
+  }
+
+  function handleChange () {
+    if (onChange) {
+      const value = inputRef.current.value
+      return onChange(value)
+    }
   }
   return (
     <div className={`${styles.input} ${commonStyles.padded}`}>
-      <input type='text' placeholder='Search' className='grow' ref={inputRef} />
+      <input type='text' placeholder='Search' className='grow' ref={inputRef} onChange={handleChange} />
       <button onClick={handleSearch}>
         <FontAwesomeIcon color='white' icon={faSearch} />
       </button>
