@@ -1,8 +1,8 @@
 'use strict'
 
 import SearchBar from './SearchBar'
-import Api from './Api'
 import ApiDetails from './ApiDetail'
+import ApiSummary from './ApiSummary'
 import TabbedWindow from './TabbedWindow'
 import Prs from './Pr'
 import Playground from './Playground'
@@ -63,7 +63,7 @@ export default function Main () {
       <TabbedWindow
         tabs={tabs}
       />
-      {apis.map((api) => { return (<Api key={api.id} data={api} />) })}
+      {apis.map((api) => { return (<ApiSummary key={api.id} data={api} />) })}
     </>
   )
 }
