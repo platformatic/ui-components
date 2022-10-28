@@ -4,7 +4,8 @@ export default {
   title: 'Platformatic/SearchBar',
   component: SearchBar,
   argTypes: {
-    color: { control: 'color' }
+    onChange: { control: 'function' },
+    onSubmit: { control: 'function' }
   }
 }
 const Template = (args) => {

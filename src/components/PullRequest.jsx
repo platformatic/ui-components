@@ -4,6 +4,7 @@ import BorderedBox from './BorderedBox'
 import HorizontalSeparator from './HorizontalSeparator'
 import PullRequestIcon from './icons/PullRequestIcon'
 import styles from './PullRequest.module.css'
+import TextWithLabel from './TextWithLabel'
 import VerticalSeparator from './VerticalSeparator'
 export default function PullRequest ({ id, title, lastCommit, url }) {
   return (
@@ -14,22 +15,16 @@ export default function PullRequest ({ id, title, lastCommit, url }) {
         <span><a href={url} target='_blank' rel='noreferrer'>{url}</a></span>
       </div>
       <div className={styles.content}>
-        <div>
-          <span className={styles.label}>PR Title: </span>
-          <span className={styles.value}>{title}</span>
-        </div>
+        <TextWithLabel label='PR Title' text={title} />
       </div>
 
       <HorizontalSeparator />
-      <div>
-        <span className={styles.label}>Last commit by: </span>
-        <span className={styles.value}>{lastCommit.author}</span>
+      <div className={styles.footer}>
+        <TextWithLabel label='Last commit by' text={lastCommit.author} />
         <VerticalSeparator />
-        <span className={styles.label}>Commit SHA: </span>
-        <span className={styles.value}>{lastCommit.sha}</span>
+        <TextWithLabel label='Commit SHA' text={lastCommit.sha} />
         <VerticalSeparator />
-        <span className={styles.label}>Last Update: </span>
-        <span className={styles.value}>{lastCommit.date}</span>
+        <TextWithLabel label='Last Update' text={lastCommit.date} />
       </div>
     </BorderedBox>
   )

@@ -6,8 +6,10 @@ import BorderedText from './BorderedText'
 import HorizontalSeparator from './HorizontalSeparator'
 import TwoColumnsLayout from './layouts/TwoColumnsLayout'
 import StatsView from './StatsView'
+import TextWithLabel from './TextWithLabel'
 import VerticalSeparator from './VerticalSeparator'
 import React from 'react'
+import styles from './ApiDetail.module.css'
 export default function ApiDetails (props) {
   const { url, repository, version, openapi, graphql, source, lastDeploy } = props
   const requestStats = {
@@ -55,20 +57,22 @@ export default function ApiDetails (props) {
   return (
     <>
       <BorderedBox classes='api-data'>
-        <div>
-          Preview/Staging URL: <a href={url}>{url}</a>
-        </div>
-        <div>
-          Repository: <a href={`https://github.com/${repository}`}>{repository}</a>
-        </div>
-        <div>
-          Version: <BorderedText text={`v${version}`} />
+        <div className={styles.main}>
+          <div>
+            Preview/Staging URL: <a href={url}>{url}</a>
+          </div>
+          <div>
+            Repository: <a href={`https://github.com/${repository}`}>{repository}</a>
+          </div>
+          <div>
+            Version: <BorderedText text={`v${version}`} />
+          </div>
         </div>
         <HorizontalSeparator />
         <div className='flex gap-2 items-center'>
-          <span>Generated with: {source}</span>
+          <TextWithLabel label='Generated With' text={source} />
           <VerticalSeparator />
-          <span>Last deployed: {lastDeploy}</span>
+          <TextWithLabel label='Last deployed' text={lastDeploy} />
         </div>
         <div className='flex items-center'>
           <span className='mr-2'>Endpoints: </span><Endpoints graphql={graphql} openapi={openapi} />

@@ -1,0 +1,9 @@
+.container {
+  @apply text-white
+}
+.label {
+  @apply font-thin mr-2;
+}
+.text {
+  @apply font-semibold;
+}

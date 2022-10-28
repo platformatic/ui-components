@@ -5,8 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 import ApiVersion from './Api/Version'
 import ApiIcon from './icons/ApiIcon'
-import ApiIconClosed from './Api/ApiIconClosed'
-import Separator from './VerticalSeparator'
+import ApiIconClosed from './icons/ApiIconClosed'
+import VerticalSeparator from './VerticalSeparator'
+import TextWithLabel from './TextWithLabel'
 import ApiStatus from './Api/Status'
 import BorderedBox from './BorderedBox'
 import HorizontalSeparator from './HorizontalSeparator'
@@ -46,9 +47,9 @@ export default function ApiSummary (props) {
                 </div>
 
                 <div className='flex gap-2 items-center'>
-                  <span>Generated with: {source}</span>
-                  <Separator />
-                  <span>Last deployed: {lastDeploy}</span>
+                  <TextWithLabel label='Generated With' text={source} />
+                  <VerticalSeparator />
+                  <TextWithLabel label='Last deployed' text={lastDeploy} />
                 </div>
               </div>
 
