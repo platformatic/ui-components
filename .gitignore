@@ -106,3 +106,5 @@ dist
 # Misc
 .DS_Store
 .vscode
+
+storybook-static
