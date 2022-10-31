@@ -4,15 +4,14 @@ import styles from './List.module.css'
 export default function List ({ title, ...props }) {
   return (
     <div className={styles.container}>
-      { title ? 
+      {title &&
         <div
           className={styles.title}
           data-testid='list-title'
           {...props}
         >
           {title}
-        </div>
-      :null }
+        </div>}
       <div className={styles.elements}>
         {props.children}
       </div>

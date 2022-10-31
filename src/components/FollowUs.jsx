@@ -7,16 +7,16 @@ export default function FollowUs ({ label }) {
   return (
     <div className={styles.container}>
       <div className={styles.label}>
-        { label }
+        {label}
       </div>
       <div className={styles.icon}>
-        <FontAwesomeIcon icon={ faTwitter } className='mr-2' data-testid='login-button-icon' /> 
+        <FontAwesomeIcon icon={faTwitter} className='mr-2' data-testid='login-button-icon' />
       </div>
       <div className={styles.icon}>
-        <FontAwesomeIcon icon={ faLinkedin } className='mr-2' data-testid='login-button-icon' /> 
+        <FontAwesomeIcon icon={faLinkedin} className='mr-2' data-testid='login-button-icon' />
       </div>
       <div className={styles.icon}>
-        <FontAwesomeIcon icon={ faGithub } className='mr-2' data-testid='login-button-icon' /> 
+        <FontAwesomeIcon icon={faGithub} className='mr-2' data-testid='login-button-icon' />
       </div>
     </div>
   )

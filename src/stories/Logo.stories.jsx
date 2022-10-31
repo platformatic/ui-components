@@ -10,6 +10,5 @@ const Template = (args) => <Logo {...args} />
 export const LogoSmall = Template.bind({})
 LogoSmall.args = {
   width: 300,
-  heigth: 300,
+  heigth: 300
 }
-

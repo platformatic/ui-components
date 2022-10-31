@@ -7,7 +7,7 @@ export default function List ({ title, detail }) {
     <div className={styles.container}>
       <div className={styles.iconCol}>
         <div data-testid='list-element-title-icon' className={styles.icon}>
-          <FontAwesomeIcon icon={faCircleCheck} /> 
+          <FontAwesomeIcon icon={faCircleCheck} />
         </div>
       </div>
       <div className={styles.textCol}>

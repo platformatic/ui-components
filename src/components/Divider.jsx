@@ -3,6 +3,6 @@ import styles from './Divider.module.css'
 
 export default function Divider ({ label }) {
   return (
-      <hr className={styles.divider}/>
+    <hr className={styles.divider} />
   )
 }
