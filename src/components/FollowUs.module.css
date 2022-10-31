@@ -1,0 +1,11 @@
+.container {
+  @apply flex w-96
+}
+
+.label {
+  @apply uppercase text-light-green
+}
+
+.icon {
+  @apply text-white ml-4
+}

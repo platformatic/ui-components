@@ -1,0 +1,11 @@
+.title {
+  @apply text-light-green font-bold w-full text-left uppercase
+}
+
+.container {
+  @apply w-full
+}
+
+.elements {
+  @apply flex flex-col
+}
