@@ -12,6 +12,7 @@ import TwoColumnsLayout from './src/components/layouts/TwoColumnsLayout'
 import Playground from './src/components/Playground'
 import PullRequest from './src/components/PullRequest'
 import SearchBar from './src/components/SearchBar'
+import Status from './src/components/Status'
 import TabbedWindow from './src/components/TabbedWindow'
 import TextWithLabel from './src/components/TextWithLabel'
 import Versions from './src/components/Versions'
@@ -29,6 +30,7 @@ export {
   Playground,
   PullRequest,
   SearchBar,
+  Status,
   TabbedWindow,
   TextWithLabel,
   Versions,

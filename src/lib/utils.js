@@ -9,6 +9,9 @@ function getColor (type, color) {
     case 'red':
       convertedColor = 'error-red'
       break
+    case 'white':
+      convertedColor = 'white'
+      break
     default:
       convertedColor = 'main-green'
       break

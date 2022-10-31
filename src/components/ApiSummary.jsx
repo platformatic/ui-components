@@ -8,7 +8,7 @@ import ApiIcon from './icons/ApiIcon'
 import ApiIconClosed from './icons/ApiIconClosed'
 import VerticalSeparator from './VerticalSeparator'
 import TextWithLabel from './TextWithLabel'
-import ApiStatus from './Api/Status'
+import Status from './Status'
 import BorderedBox from './BorderedBox'
 import HorizontalSeparator from './HorizontalSeparator'
 import styles from './Api.module.css'
@@ -41,7 +41,7 @@ export default function ApiSummary (props) {
                     <ApiVersion version={version} />
                   </div>
                   <div className={styles.status}>
-                    <ApiStatus online={online} />
+                    <Status color={color} status={online ? 'online' : 'offline'} />
                   </div>
 
                 </div>

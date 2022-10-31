@@ -5,8 +5,23 @@
   @apply text-xl text-main-green font-semibold;
 }
 .header {
-  @apply flex items-center gap-x-4 mb-4;
+  @apply flex items-center justify-between mb-4;
+}
+.title {
+  @apply flex items-center gap-x-4;
 }
 .footer {
-  @apply flex items-center
+  @apply flex items-center;
+}
+.status {
+  @apply flex items-center;
+}
+.unavailable {
+  @apply opacity-30;
+}
+.icons {
+  @apply flex justify-between gap-x-2;
+}
+.icons > *:hover {
+  @apply cursor-pointer;
 }
