@@ -1,0 +1,23 @@
+.container {
+  @apply flex flex-row my-4
+}
+
+.iconCol {
+  @apply flex flex-col w-6
+}
+
+.icon {
+  @apply text-light-green
+}
+
+.title {
+  @apply flex text-light-green font-bold w-full text-left 
+}
+
+.textCol {
+  @apply flex flex-col text-white text-justify w-96
+}
+
+.detailSpace {
+  @apply w-6
+}
