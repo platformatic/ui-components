@@ -3,7 +3,7 @@ import styles from './FollowUs.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-export default function FollowUs ({ label }) {
+export default function FollowUs ({ label = 'FOLLOW US ON' }) {
   return (
     <div className={styles.container}>
       <div className={styles.label}>

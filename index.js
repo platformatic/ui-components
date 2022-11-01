@@ -17,11 +17,12 @@ import TabbedWindow from './src/components/TabbedWindow'
 import TextWithLabel from './src/components/TextWithLabel'
 import Versions from './src/components/Versions'
 import VerticalSeparator from './src/components/VerticalSeparator'
-import Divider from './src/components/Divider'
 import FollowUs from './src/components/FollowUs'
 import List from './src/components/List'
 import ListElement from './src/components/ListElement'
 import Logo from './src/components/Logo'
+import Box from './src/components/Box'
+import FrontpageBackground from './src/components/FrontpageBackground'
 export {
   ApiSummary,
   ApiDetails,
@@ -40,9 +41,10 @@ export {
   TextWithLabel,
   Versions,
   VerticalSeparator,
-  Divider,
   FollowUs,
   List,
   ListElement,
-  Logo
+  Logo,
+  Box,
+  FrontpageBackground
 }

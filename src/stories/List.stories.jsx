@@ -15,8 +15,8 @@ ListWithNoElements.args = {
 
 const TemplateWithElements = (args) => (
   <List {...args}>
-    <ListElement title='List Element 1' detail='List Element 1 Detail' />
-    <ListElement title='List Element 2' detail='List Element 2 Detail' />
+    <ListElement title='List Element 1' detail='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et dui facilisis, molestie urna sed, volutpat nibh.' />
+    <ListElement title='List Element 2' detail='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et dui facilisis, molestie urna sed, volutpat nibh.' />
   </List>
 )
 

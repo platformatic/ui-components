@@ -1,0 +1,3 @@
+.box {
+  @apply mx-24 my-24 flex flex-col
+}
