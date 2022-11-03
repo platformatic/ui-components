@@ -1,0 +1,17 @@
+.button {
+  @apply py-2 px-2 rounded text-center cursor-pointer
+}
+
+.primary-green {
+  @apply  text-main-dark-blue bg-light-green;
+}
+.secondary-green {
+  @apply border-main-green text-main-green bg-none border border-solid box-border rounded-md font-normal;
+}
+
+.primary-red {
+  @apply  text-main-dark-blue bg-error-red;
+}
+.secondary-red {
+  @apply border-error-red text-error-red bg-none border border-solid box-border rounded-md font-normal;
+}

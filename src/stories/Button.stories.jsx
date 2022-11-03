@@ -1,40 +1,71 @@
-import React from 'react'
+'use strict'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import Button from '../components/Button'
 
-import { Button } from './Button'
-
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Button',
+  title: 'Platformatic/Button',
   component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' }
+    label: {
+      type: 'string',
+      control: 'text'
+    },
+    primary: {
+      type: 'boolean'
+    },
+    color: {
+      type: 'string',
+      control: {
+        type: 'radio',
+        options: ['green', 'red']
+      }
+    }
   }
 }
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template = (args) => <Button {...args} />
 
-export const Primary = Template.bind({})
+export const PrimaryGreen = Template.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
+PrimaryGreen.args = {
   primary: true,
-  label: 'Button'
+  label: 'Primary Green',
+  color: 'green'
 }
 
-export const Secondary = Template.bind({})
-Secondary.args = {
-  label: 'Button'
+export const SecondaryGreen = Template.bind({})
+SecondaryGreen.args = {
+  primary: false,
+  label: 'Secondary Green',
+  color: 'green'
 }
 
-export const Large = Template.bind({})
-Large.args = {
-  size: 'large',
-  label: 'Button'
+export const PrimaryWithIcon = Template.bind({})
+PrimaryWithIcon.args = {
+  primary: true,
+  label: 'Primary with Icon',
+  icon: faCheck
 }
 
-export const Small = Template.bind({})
-Small.args = {
-  size: 'small',
-  label: 'Button'
+export const SecondaryWithIcon = Template.bind({})
+SecondaryWithIcon.args = {
+  primary: false,
+  label: 'Secondary with Icon',
+  icon: faCheck
+
+}
+
+export const PrimaryRed = Template.bind({})
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+PrimaryRed.args = {
+  primary: true,
+  label: 'Primary Red',
+  color: 'red'
+}
+
+export const SecondaryRed = Template.bind({})
+SecondaryRed.args = {
+  primary: false,
+  label: 'Secondary Red',
+  color: 'red'
 }
