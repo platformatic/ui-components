@@ -15,14 +15,5 @@ export default function Button ({ icon, label, onClick, primary, color, ...props
       {icon ? <FontAwesomeIcon icon={icon} className='mr-2' data-testid='button-icon' /> : null}
       <span>{label}</span>
     </button>
-    // <div className={styles.container} onClick={onClick}>
-    //   <div
-    //     className={`${styles.button} ${styles[buttonClass]}`}
-    //     data-testid='button'
-    //     {...props}
-    //   >
-    //     {icon ? <FontAwesomeIcon icon={icon} className='mr-2' data-testid='button-icon' /> : null} {label}
-    //   </div>
-    // </div>
   )
 }
