@@ -1,4 +1,5 @@
 'use strict'
+import React from 'react'
 import styles from './Input.module.css'
 import commonStyles from './Common.module.css'
 export default function Input ({ placeholder, value, name }) {
