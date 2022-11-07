@@ -1,0 +1,7 @@
+.header {
+  @apply flex justify-between items-center font-bold;
+}
+
+.title {
+  @apply text-xl;
+}

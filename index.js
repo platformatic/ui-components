@@ -6,6 +6,7 @@ import BorderedBox from './src/components/BorderedBox'
 import BorderedText from './src/components/BorderedText'
 import Box from './src/components/Box'
 import Button from './src/components/Button'
+import DetailedMetric from './src/components/DetailedMetric'
 import FollowUs from './src/components/FollowUs'
 import FrontpageBackground from './src/components/FrontpageBackground'
 import GHLoginButton from './src/components/GHLoginButton'
@@ -19,6 +20,7 @@ import Logo from './src/components/Logo'
 import Playground from './src/components/Playground'
 import PullRequest from './src/components/PullRequest'
 import SearchBar from './src/components/SearchBar'
+import SimpleMetric from './src/components/SimpleMetric'
 import Status from './src/components/Status'
 import TabbedWindow from './src/components/TabbedWindow'
 import TextWithLabel from './src/components/TextWithLabel'
@@ -32,6 +34,7 @@ export {
   BorderedText,
   Box,
   Button,
+  DetailedMetric,
   FollowUs,
   FrontpageBackground,
   HorizontalSeparator,
@@ -45,6 +48,7 @@ export {
   Playground,
   PullRequest,
   SearchBar,
+  SimpleMetric,
   Status,
   TabbedWindow,
   TextWithLabel,

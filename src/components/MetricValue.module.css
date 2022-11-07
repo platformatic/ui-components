@@ -1,0 +1,8 @@
+.metric {
+  @apply flex justify-center items-center;
+  gap: 1rem;
+}
+
+.value {
+  @apply text-5xl
+}
