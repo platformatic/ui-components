@@ -4,7 +4,6 @@ import Endpoints from './Api/Endpoints'
 import BorderedBox from './BorderedBox'
 import BorderedText from './BorderedText'
 import HorizontalSeparator from './HorizontalSeparator'
-import TwoColumnsLayout from './layouts/TwoColumnsLayout'
 import TextWithLabel from './TextWithLabel'
 import VerticalSeparator from './VerticalSeparator'
 import React from 'react'
@@ -35,14 +34,6 @@ export default function ApiDetails (props) {
           <span className='mr-2'>Endpoints: </span><Endpoints graphql={graphql} openapi={openapi} />
         </div>
       </BorderedBox>
-      <TwoColumnsLayout>
-        <BorderedBox>
-          Connected Clients
-        </BorderedBox>
-        <BorderedBox>
-          Failure Rate
-        </BorderedBox>
-      </TwoColumnsLayout>
     </>
 
   )
