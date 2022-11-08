@@ -15,7 +15,8 @@ Green.args = {
   title: 'Requests',
   color: 'green',
   unit: 'ms',
-  value: 120
+  value: 120,
+  tooltip: 'This is a tooltip for the metric'
 }
 
 export const Red = Template.bind({})
@@ -24,7 +25,8 @@ Red.args = {
   title: 'Requests',
   color: 'red',
   unit: 'ms',
-  value: 120
+  value: 120,
+  tooltip: 'This is a tooltip for the metric'
 }
 
 export const WithPrefix = Template.bind({})
@@ -34,5 +36,6 @@ WithPrefix.args = {
   color: 'green',
   unit: 'ms',
   value: 120,
-  pre: 'P90'
+  pre: 'P90',
+  tooltip: 'This is a tooltip for the metric'
 }
