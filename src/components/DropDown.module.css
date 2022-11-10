@@ -1,0 +1,18 @@
+.dropDown {
+  @apply mx-4 relative;
+}
+.container {
+  @apply flex flex-col;
+}
+.arrow {
+  @apply ml-2;
+}
+.header {
+  @apply hover:cursor-pointer
+}
+.menu {
+  @apply absolute border-solid border border-main-green p-4 bg-dark-blue mt-2 rounded-md;
+}
+.item {
+  @apply mb-2
+}

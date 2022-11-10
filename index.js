@@ -7,6 +7,7 @@ import BorderedText from './src/components/BorderedText'
 import Box from './src/components/Box'
 import Button from './src/components/Button'
 import DetailedMetric from './src/components/DetailedMetric'
+import DropDown from './src/components/DropDown'
 import FollowUs from './src/components/FollowUs'
 import FrontpageBackground from './src/components/FrontpageBackground'
 import GHLoginButton from './src/components/GHLoginButton'
@@ -35,6 +36,7 @@ export {
   Box,
   Button,
   DetailedMetric,
+  DropDown,
   FollowUs,
   FrontpageBackground,
   HorizontalSeparator,
