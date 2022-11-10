@@ -5,13 +5,13 @@ import styles from './DropDown.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 export default function DropDown (props) {
-  const { header, items } = props
+  const { header, items, align = 'left' } = props
   const [open, setOpen] = useState(false)
   function handleOpen () {
     setOpen(!open)
   }
   return (
-    <div className={styles.dropDown}>
+    <div className={`${styles.dropDown} ${styles[align]}`}>
       <span className={styles.header} onClick={handleOpen}>
         {header}
         {!open && <FontAwesomeIcon className={styles.arrow} icon={faChevronLeft} />}

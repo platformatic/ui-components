@@ -7,10 +7,34 @@ export default {
 }
 
 const Template = (args) => <DropDown {...args} />
-export const Default = Template.bind({})
+export const DefaultAlignment = Template.bind({})
 
-Default.args = {
+DefaultAlignment.args = {
   header: 'My Menu',
+  items: [
+    <span key='1'>Menu 1</span>,
+    <span key='2'>Menu 2</span>,
+    <span key='3'>This is a very long menu item</span>
+  ]
+}
+
+export const AlignRight = Template.bind({})
+
+AlignRight.args = {
+  header: 'My Menu',
+  align: 'right',
+  items: [
+    <span key='1'>Menu 1</span>,
+    <span key='2'>Menu 2</span>,
+    <span key='3'>This is a very long menu item</span>
+  ]
+}
+
+export const AlignLeft = Template.bind({})
+
+AlignLeft.args = {
+  header: 'My Menu',
+  align: 'left',
   items: [
     <span key='1'>Menu 1</span>,
     <span key='2'>Menu 2</span>,
