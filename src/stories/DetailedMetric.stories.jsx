@@ -16,6 +16,8 @@ Default.args = {
   color: 'green',
   unit: 'ms',
   value: 120,
+  pre: 'P90',
+  tooltip: 'This is a tooltip for the metric',
   leftDetail: {
     value: 600,
     unit: 'ms',
@@ -29,22 +31,3 @@ Default.args = {
     pre: 'P95'
   }
 }
-
-// export const Red = Template.bind({})
-
-// Red.args = {
-//   title: 'Requests',
-//   color: 'red',
-//   unit: 'ms',
-//   value: 120
-// }
-
-// export const WithPrefix = Template.bind({})
-
-// WithPrefix.args = {
-//   title: 'Requests',
-//   color: 'green',
-//   unit: 'ms',
-//   value: 120,
-//   pre: 'P90'
-// }
