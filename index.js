@@ -18,7 +18,6 @@ import ListElement from './src/components/ListElement'
 import LoginButton from './src/components/LoginButton'
 import Logo from './src/components/Logo'
 import Playground from './src/components/Playground'
-import PullRequest from './src/components/PullRequest'
 import SearchBar from './src/components/SearchBar'
 import SimpleMetric from './src/components/SimpleMetric'
 import Status from './src/components/Status'
@@ -46,7 +45,6 @@ export {
   LoginButton,
   Logo,
   Playground,
-  PullRequest,
   SearchBar,
   SimpleMetric,
   Status,
