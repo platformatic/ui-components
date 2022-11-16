@@ -1,6 +1,5 @@
 'use strict'
 
-import ApiDetails from './src/components/ApiDetail'
 import BorderedBox from './src/components/BorderedBox'
 import BorderedText from './src/components/BorderedText'
 import Box from './src/components/Box'
@@ -29,7 +28,6 @@ import TwoColumnsLayout from './src/components/layouts/TwoColumnsLayout'
 import Versions from './src/components/Versions'
 import VerticalSeparator from './src/components/VerticalSeparator'
 export {
-  ApiDetails,
   BorderedBox,
   BorderedText,
   Box,
