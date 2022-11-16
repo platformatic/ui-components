@@ -11,11 +11,11 @@
 }
 
 .title {
-  @apply flex text-light-green font-bold w-full text-left 
+  @apply flex text-light-green font-bold w-full
 }
 
 .textCol {
-  @apply flex flex-col text-white text-justify w-96
+  @apply flex flex-col text-white text-justify w-full
 }
 
 .detailSpace {

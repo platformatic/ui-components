@@ -1,6 +1,5 @@
 'use strict'
 
-import ApiSummary from './src/components/ApiSummary'
 import ApiDetails from './src/components/ApiDetail'
 import BorderedBox from './src/components/BorderedBox'
 import BorderedText from './src/components/BorderedText'
@@ -12,6 +11,7 @@ import FollowUs from './src/components/FollowUs'
 import FrontpageBackground from './src/components/FrontpageBackground'
 import GHLoginButton from './src/components/GHLoginButton'
 import HorizontalSeparator from './src/components/HorizontalSeparator'
+import Icons from './src/components/icons'
 import Input from './src/components/Input'
 import Layout from './src/components/layouts/Layout'
 import List from './src/components/List'
@@ -29,7 +29,6 @@ import TwoColumnsLayout from './src/components/layouts/TwoColumnsLayout'
 import Versions from './src/components/Versions'
 import VerticalSeparator from './src/components/VerticalSeparator'
 export {
-  ApiSummary,
   ApiDetails,
   BorderedBox,
   BorderedText,
@@ -41,6 +40,7 @@ export {
   FrontpageBackground,
   HorizontalSeparator,
   GHLoginButton,
+  Icons,
   Input,
   Layout,
   List,
