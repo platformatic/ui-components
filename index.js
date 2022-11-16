@@ -14,6 +14,7 @@ import Input from './src/components/Input'
 import Layout from './src/components/layouts/Layout'
 import List from './src/components/List'
 import ListElement from './src/components/ListElement'
+import Loadable from './src/components/Loadable'
 import LoginButton from './src/components/LoginButton'
 import Logo from './src/components/Logo'
 import Playground from './src/components/Playground'
@@ -40,6 +41,7 @@ export {
   Layout,
   List,
   ListElement,
+  Loadable,
   LoginButton,
   Logo,
   Playground,
