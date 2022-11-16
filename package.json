@@ -4,6 +4,10 @@
   "version": "0.1.21",
   "type": "module",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/platformatic/ui-components.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
