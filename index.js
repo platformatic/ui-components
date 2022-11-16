@@ -7,7 +7,6 @@ import Button from './src/components/Button'
 import DetailedMetric from './src/components/DetailedMetric'
 import DropDown from './src/components/DropDown'
 import FollowUs from './src/components/FollowUs'
-import FrontpageBackground from './src/components/FrontpageBackground'
 import GHLoginButton from './src/components/GHLoginButton'
 import HorizontalSeparator from './src/components/HorizontalSeparator'
 import Icons from './src/components/icons'
@@ -34,7 +33,6 @@ export {
   DetailedMetric,
   DropDown,
   FollowUs,
-  FrontpageBackground,
   HorizontalSeparator,
   GHLoginButton,
   Icons,
