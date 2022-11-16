@@ -7,30 +7,6 @@ import Versions from './Versions'
 import React, { useState } from 'react'
 export default function Main () {
   const [currentSearch, setCurrentSearch] = useState('')
-  const apis = [
-    {
-      id: 1,
-      name: 'api-online',
-      version: '1.2.3',
-      source: 'Platformatic DB',
-      lastDeploy: '2022-10-10',
-      graphql: true,
-      openapi: true,
-      online: true,
-      url: 'https://example.com',
-      repository: 'platformatic/example'
-    },
-    {
-      id: 2,
-      name: 'api-offline',
-      version: '1.2.3',
-      source: 'Platformatic DB',
-      lastDeploy: '2022-10-10',
-      graphql: true,
-      openapi: true,
-      online: false
-    }
-  ]
   const tabs = [
     {
       label: 'Playground',
