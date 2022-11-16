@@ -1,10 +1,7 @@
 'use strict'
 
 import SearchBar from './SearchBar'
-import ApiDetails from './ApiDetail'
-import ApiSummary from './ApiSummary'
 import TabbedWindow from './TabbedWindow'
-import Prs from './PullRequest'
 import Playground from './Playground'
 import Versions from './Versions'
 import React, { useState } from 'react'
@@ -36,14 +33,6 @@ export default function Main () {
   ]
   const tabs = [
     {
-      label: 'Overview',
-      component: () => <ApiDetails data={apis[0]} />
-    },
-    {
-      label: 'PRs',
-      component: () => <Prs />
-    },
-    {
       label: 'Playground',
       component: () => <Playground />
     },
@@ -63,7 +52,6 @@ export default function Main () {
       <TabbedWindow
         tabs={tabs}
       />
-      {apis.map((api) => { return (<ApiSummary key={api.id} data={api} />) })}
     </>
   )
 }
