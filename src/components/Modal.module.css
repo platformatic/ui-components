@@ -1,0 +1,22 @@
+.blur {
+  @apply absolute top-[50%] left-[50%] z-0 w-[100vw] h-[100vh] translate-x-[-50%] translate-y-[-50%];
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.centered {
+  @apply fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]
+}
+.modal {
+  @apply bg-[#E9F7FF] p-4 rounded-md mx-auto my-auto min-w-[480px];
+}
+.header {
+  @apply flex justify-between items-center;
+}
+.close {
+  @apply hover:cursor-pointer;
+}
+.hr {
+  @apply text-[#00283D] my-2
+}
+.title {
+  @apply font-bold text-lg;
+}

@@ -17,6 +17,7 @@ import ListElement from './src/components/ListElement'
 import Loadable from './src/components/Loadable'
 import LoginButton from './src/components/LoginButton'
 import Logo from './src/components/Logo'
+import Modal from './src/components/Modal'
 import Playground from './src/components/Playground'
 import SearchBar from './src/components/SearchBar'
 import SimpleMetric from './src/components/SimpleMetric'
@@ -44,6 +45,7 @@ export {
   Loadable,
   LoginButton,
   Logo,
+  Modal,
   Playground,
   SearchBar,
   SimpleMetric,
