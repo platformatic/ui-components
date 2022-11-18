@@ -1,6 +1,4 @@
 'use strict'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGear, faPowerOff } from '@fortawesome/free-solid-svg-icons'
 import DropDown from '../components/DropDown'
 export default {
   title: 'Platformatic/DropDown',
