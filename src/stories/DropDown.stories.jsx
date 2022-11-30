@@ -1,12 +1,21 @@
 'use strict'
 import DropDown from '../components/DropDown'
+import BorderedBox from '../components/BorderedBox'
+import HorizontalSeparator from '../components/HorizontalSeparator'
 export default {
   title: 'Platformatic/DropDown',
   component: DropDown,
   decorators: [dd => <div className='text-white'>{dd()}</div>]
 }
 
-const Template = (args) => <DropDown {...args} />
+const Template = (args) => (
+  <div>
+    <DropDown {...args} />
+    <HorizontalSeparator />
+    <BorderedBox>This is another content</BorderedBox>
+  </div>
+
+)
 export const DefaultAlignment = Template.bind({})
 
 DefaultAlignment.args = {
