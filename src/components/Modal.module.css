@@ -2,6 +2,9 @@
   @apply absolute top-[50%] left-[50%] z-0 w-[100vw] h-[100vh] translate-x-[-50%] translate-y-[-50%];
   background-color: rgba(0, 0, 0, 0.75);
 }
+.container {
+  @apply z-[9999];
+}
 .centered {
   @apply fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]
 }
