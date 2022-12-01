@@ -2,6 +2,7 @@
 import DropDown from '../components/DropDown'
 import BorderedBox from '../components/BorderedBox'
 import HorizontalSeparator from '../components/HorizontalSeparator'
+import { useState } from 'react'
 export default {
   title: 'Platformatic/DropDown',
   component: DropDown,
@@ -12,10 +13,19 @@ const Template = (args) => (
   <div>
     <DropDown {...args} />
     <HorizontalSeparator />
-    <BorderedBox>This is another content</BorderedBox>
+    <ContentThatLoads />
   </div>
-
 )
+
+const ContentThatLoads = () => {
+  const [content, setContent] = useState(null)
+  setTimeout(() => {
+    setContent(<div className='mt-4'><BorderedBox>This is rendered after</BorderedBox></div>)
+  }, 1000)
+
+  return content
+}
+
 export const DefaultAlignment = Template.bind({})
 
 DefaultAlignment.args = {

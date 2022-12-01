@@ -16,7 +16,7 @@
   @apply hover:cursor-pointer
 }
 .menu {
-  @apply absolute border-solid border border-main-green p-4 bg-dark-blue mt-8 rounded-md z-[9999];
+  @apply absolute border-solid border border-main-green p-4 bg-dark-blue mt-8 rounded-md z-[999];
 }
 .item {
   @apply mb-2
