@@ -15,3 +15,7 @@
 .secondary-red {
   @apply border-error-red text-error-red bg-none border border-solid box-border rounded-md font-normal;
 }
+
+.disabled {
+  @apply bg-opacity-30 cursor-default;
+}
