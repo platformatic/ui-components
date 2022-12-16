@@ -9,7 +9,7 @@
   @apply fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]
 }
 .modal {
-  @apply bg-[#E9F7FF] p-4 rounded-md mx-auto my-auto min-w-[480px];
+  @apply bg-[#E9F7FF] p-4 rounded-md mx-auto my-auto min-w-[480px] max-h-[85vh] overflow-y-scroll;
 }
 .header {
   @apply flex justify-between items-center;
