@@ -5,7 +5,12 @@ module.exports = {
     container: {
       center: true
     },
-    extend: {},
+    extend: {
+      screens: {
+        'lg': '1440px',
+        // => @media (min-width: 1440px) { ... }
+      },  
+    },
     colors: {
       'main-green': '#21FA90',
       'dark-green': '#02783F',
