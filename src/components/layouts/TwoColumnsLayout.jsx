@@ -1,9 +1,11 @@
 'use strict'
 import React from 'react'
-export default function TwoColumnsLayout (props) {
+import styles from './TwoColumnsLayout.module.css'
+
+export default function TwoColumnsLayout ({ children, gridTemplate = 'columns' }) {
   return (
-    <div className='grid grid-cols-2 gap-x-4'>
-      {props.children}
+    <div className={styles[`${gridTemplate}`]}>
+      {children}
     </div>
   )
 }
