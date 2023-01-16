@@ -1,0 +1,10 @@
+
+.columns {
+    @apply grid grid-cols-2 gap-x-4;
+}
+.rows {
+    @apply grid grid-rows-2 gap-y-4;
+}
+.responsive {
+    @apply grid grid-rows-2 gap-y-4 md:grid-cols-2 md:gap-x-4;
+}
