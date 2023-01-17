@@ -2,10 +2,13 @@
 
 import styles from './Box.module.css'
 import React from 'react'
-export default function Box (props) {
+export default function Box ({ justifyCentered, children }) {
+  let className = `${styles.box}`
+  if (justifyCentered) className += ` ${styles.justifyCentered}`
+
   return (
-    <div className={styles.box}>
-      {props.children}
+    <div className={className}>
+      {children}
     </div>
   )
 }

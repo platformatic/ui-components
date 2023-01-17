@@ -7,8 +7,11 @@ export default {
 }
 
 const Template = (args) => <Logo {...args} />
-export const LogoSmall = Template.bind({})
-LogoSmall.args = {
+export const LogoLarge = Template.bind({})
+LogoLarge.args = {
   width: 300,
   heigth: 300
 }
+
+export const LogoNormal = Template.bind({})
+LogoNormal.args = {}
