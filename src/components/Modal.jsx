@@ -1,7 +1,6 @@
-import { faClose } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import useEscapeKey from '../hooks/useEscapeKey'
+import CloseModalIcon from './icons/CloseModalIcon'
 import styles from './Modal.module.css'
 export default function Modal (props) {
   const { setIsOpen, title } = props
@@ -14,13 +13,14 @@ export default function Modal (props) {
           <div className={styles.header}>
             <div className={styles.title}>{title}</div>
             <div className={styles.close} onClick={() => setIsOpen(false)}>
-              <FontAwesomeIcon icon={faClose} />
+              <CloseModalIcon />
             </div>
           </div>
           <hr className={styles.hr} />
           <div>
             {props.children}
           </div>
+          <hr className={styles.hr} />
         </div>
       </div>
     </>
