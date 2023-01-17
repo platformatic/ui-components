@@ -1,3 +1,7 @@
 .box {
-  @apply mx-24 my-24 flex flex-col
+  @apply mx-24 my-24 flex flex-col;
+}
+
+.justifyCentered {
+  @apply justify-center;
 }
