@@ -1,5 +1,5 @@
 .box {
-  @apply mx-24 my-24 flex flex-col;
+  @apply p-5 m-0 md:p-0 md:m-24 flex flex-col;
 }
 
 .justifyCentered {

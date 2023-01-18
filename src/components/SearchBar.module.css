@@ -1,6 +1,21 @@
 .input {
-  @apply flex justify-between w-full h-10  text-white border-main-green border border-solid box-border rounded-md;
+  @apply flex justify-between w-full h-10 text-white border border-solid box-border rounded-md;
+}
+.onFocus {
+  @apply border-main-green;
+}
+.onBlur {
+  @apply border-white;
+}
+.fillGreen {
+  @apply fill-main-green;
+}
+.fillWhite {
+  @apply fill-white;
 }
 .input > input:focus {
   @apply outline-none;
+}
+.title {
+  @apply font-semibold text-white text-3xl pb-4;
 }
