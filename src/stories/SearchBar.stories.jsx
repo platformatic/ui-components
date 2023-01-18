@@ -5,7 +5,8 @@ export default {
   component: SearchBar,
   argTypes: {
     onChange: { control: 'function' },
-    onSubmit: { control: 'function' }
+    onSubmit: { control: 'function' },
+    title: { control: 'text' }
   }
 }
 const Template = (args) => {
