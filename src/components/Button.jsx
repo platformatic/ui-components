@@ -4,9 +4,6 @@ import React from 'react'
 import styles from './Button.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 export default function Button (props) {
-  // buttonClass: primary|secondary|transparent
-  // colorClass: green|white|red
-  // size: small|medium|large|extra-large
   const { icon, label, buttonClass = 'secondary', color = 'green', disabled, size = 'large', bold = false, ...rest } = props
   let className = `${styles.button} ${styles[buttonClass + '-' + color]} ${styles['button-' + size]}`
   if (disabled) {

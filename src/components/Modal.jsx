@@ -8,7 +8,6 @@ export default function Modal (props) {
   const { setIsOpen, title, layout = 'info' } = props
   const [isHoverCloseModal, setIsHoverCloseModal] = useState(false)
   useEscapeKey(() => setIsOpen(false))
-  console.log(layout)
 
   let whichModal = <></>
   switch (layout) {
