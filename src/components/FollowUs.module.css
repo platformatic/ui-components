@@ -1,11 +1,11 @@
 .container {
-  @apply flex w-96;
+  @apply flex w-full items-center;
 }
 
 .label {
-  @apply uppercase text-light-green
+  @apply uppercase text-light-green tracking-[.15em] text-sm mr-8;
 }
 
 .icon {
-  @apply text-white ml-4
+  @apply text-white mx-4 text-xl;
 }

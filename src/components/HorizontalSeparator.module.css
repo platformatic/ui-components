@@ -1,0 +1,23 @@
+.marginY-4 {
+  @apply my-4;
+}
+
+.marginT-4 {
+  @apply mt-4;
+}
+
+.marginB-4 {
+  @apply mb-4;
+}
+
+.marginY-10 {
+  @apply my-10;
+}
+
+.marginT-10 {
+  @apply mt-10;
+}
+
+.marginB-10 {
+  @apply mb-10;
+}

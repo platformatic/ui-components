@@ -11,12 +11,12 @@ export default function FollowUs ({ label = 'FOLLOW US ON' }) {
       </div>
       <div className={styles.icon}>
         <a href='https://twitter.com/platformatic' target='_blank' rel='noopener noreferrer'>
-          <FontAwesomeIcon icon={faTwitter} className='mr-2 text-white' />
+          <FontAwesomeIcon icon={faTwitter} className='mr-3 text-white' />
         </a>
       </div>
       <div className={styles.icon}>
         <a href='https://www.linkedin.com/company/platformatic/' target='_blank' rel='noopener noreferrer'>
-          <FontAwesomeIcon icon={faLinkedin} className='mr-2 text-white' />
+          <FontAwesomeIcon icon={faLinkedin} className='mr-3 text-white' />
         </a>
       </div>
       <div className={styles.icon}>
