@@ -6,17 +6,39 @@ import DropDown from '../components/DropDown'
 import HorizontalSeparator from '../components/HorizontalSeparator'
 export default {
   title: 'Platformatic/Modal',
-  component: Modal
+  component: Modal,
+  argTypes: {
+    layout: {
+      type: 'string',
+      control: {
+        type: 'radio',
+        options: ['info', 'invite']
+      }
+    }
+  }
 }
 
 const Template = (args) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const { text, ...rest } = args
+  return (
+    <main>
+      <BorderedBox>This Is another Content</BorderedBox>
+      <ContentThatLoads />
+      <Button color='green' primary='true' onClick={() => setIsOpen(true)} label='Open Modal' />
+      {isOpen && <Modal setIsOpen={setIsOpen} {...rest}>{text}</Modal>}
+    </main>
+  )
+}
+
+const TemplateInvite = (args) => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <main>
       <BorderedBox>This Is another Content</BorderedBox>
       <ContentThatLoads />
       <Button color='green' primary='true' onClick={() => setIsOpen(true)} label='Open Modal' />
-      {isOpen && <Modal setIsOpen={setIsOpen} title='Modal Title'>{args.text}</Modal>}
+      {isOpen && <Modal setIsOpen={setIsOpen} {...args}><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p><Button buttonClass='primary' onClick={() => setIsOpen(false)} label='Discard invite' /></Modal>}
     </main>
   )
 }
@@ -33,7 +55,8 @@ const ContentThatLoads = () => {
 export const Default = Template.bind({})
 Default.args = {
   title: 'List Title',
-  text: 'Hello World'
+  text: 'Hello World',
+  layout: 'info'
 }
 
 export const WithLongText = Template.bind({})
@@ -63,3 +86,9 @@ const MenuTemplate = () => {
   )
 }
 export const WithDropDown = MenuTemplate.bind({})
+
+export const InviteLayout = TemplateInvite.bind({})
+InviteLayout.args = {
+  title: 'Give me an invite',
+  layout: 'invite'
+}
