@@ -1,0 +1,18 @@
+.checkbox {
+  @apply border border-light-green p-2 rounded-sm bg-main-dark-blue relative inline-block h-2 w-2;
+  -webkit-appearance: none;
+}
+
+.checkbox:checked {
+	@apply bg-light-green text-main-dark-blue;
+}
+
+.checkbox:checked:after {
+	@apply absolute top-[-2px] left-[1px] h-full w-full;
+  content: '\2714';
+}
+
+.disabled {
+  @apply border-white;
+}
+
