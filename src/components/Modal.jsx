@@ -37,7 +37,7 @@ export default function Modal (props) {
           <div className={styles.blur} onClick={() => setIsOpen(false)} />
           <div className={`${styles.container} ${styles.centered}`}>
             <div className={`${styles.modal} ${styles.modalInvite}`}>
-              <p className={styles.headerInvite}>
+              <div className={styles.headerInvite}>
                 <div
                   className={styles.close}
                   onClick={() => setIsOpen(false)}
@@ -46,7 +46,7 @@ export default function Modal (props) {
                 >
                   {isHoverCloseModal ? <CloseModalGreenHoverIcon /> : <CloseModalGreenIcon />}
                 </div>
-              </p>
+              </div>
               <p className={styles.titleInvite}>{title}</p>
               <div>{props.children}</div>
             </div>

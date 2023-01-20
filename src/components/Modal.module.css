@@ -15,7 +15,7 @@
   @apply bg-light-blue;
 }
 .modalInvite {
-  @apply bg-main-dark-blue border-light-green border shadow-wrap shadow-main-green;
+  @apply bg-main-dark-blue border-light-green border shadow-wrap shadow-main-green max-w-[432px] max-h-[300px];
 }
 .header {
   @apply flex justify-between items-center;
