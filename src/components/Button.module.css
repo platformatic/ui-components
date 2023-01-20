@@ -1,21 +1,64 @@
 .button {
-  @apply py-2 px-2 rounded text-center cursor-pointer
+  @apply rounded text-center cursor-pointer font-normal;
+}
+.fontBold {
+  @apply font-semibold;
+}
+.button-small {
+  @apply p-1 text-sm;
+}
+.button-medium {
+  @apply p-1;
+}
+.button-large {
+  @apply p-2;
+}
+.button-extra-large {
+  @apply p-2 md:p-3;
+}
+
+.margin-right-medium,
+.margin-right-small {
+  @apply mr-1;
+}
+.margin-right-large {
+  @apply mr-2;
+}
+.margin-right-extra-large {
+  @apply mr-3;
 }
 
 .primary-green {
-  @apply  text-main-dark-blue bg-light-green;
+  @apply text-main-dark-blue bg-light-green;
 }
 .secondary-green {
-  @apply border-main-green text-main-green bg-none border border-solid box-border rounded-md font-normal;
+  @apply border-main-green text-main-green bg-none border border-solid box-border rounded-md;
+}
+.transparent-green {
+  @apply text-main-green border-0 bg-transparent;
 }
 
+
 .primary-red {
-  @apply  text-main-dark-blue bg-error-red;
+  @apply text-main-dark-blue bg-error-red;
 }
 .secondary-red {
-  @apply border-error-red text-error-red bg-none border border-solid box-border rounded-md font-normal;
+  @apply border-error-red text-error-red bg-none border border-solid box-border rounded-md;
+}
+.transparent-red {
+  @apply text-error-red border-0 bg-transparent;
+}
+
+.primary-white {
+  @apply text-main-dark-blue bg-white;
+}
+.secondary-white {
+  @apply border-white text-white bg-none border border-solid box-border rounded-md;
+}
+.transparent-white {
+  @apply text-white border-0 bg-transparent;
 }
 
 .disabled {
-  @apply bg-opacity-30 cursor-default;
+  @apply opacity-30 cursor-default;
 }
