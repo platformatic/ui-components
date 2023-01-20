@@ -9,7 +9,10 @@ module.exports = {
       screens: {
         'lg': '1440px',
         // => @media (min-width: 1440px) { ... }
-      },  
+      },
+      boxShadow: {
+        'wrap': '0px 0px 20px rgba(0, 0, 0, 0.6)'
+      }
     },
     colors: {
       'main-green': '#21FA90',
@@ -17,9 +20,11 @@ module.exports = {
       'light-green': '#21F190',
       'main-dark-blue': '#00283D',
       'dark-blue': '#00344F',
+      'light-blue': '#E9F7FF',
       white: '#FFFFFF',
       'error-red': '#FA2121',
-      'tertiary-blue': '#2588E4'
+      'tertiary-blue': '#2588E4',
+      'transparent': 'transparent'
     },
     fontFamily: {
       sans: ['Montserrat']

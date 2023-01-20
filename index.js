@@ -4,6 +4,8 @@ import BorderedBox from './src/components/BorderedBox'
 import BorderedText from './src/components/BorderedText'
 import Box from './src/components/Box'
 import Button from './src/components/Button'
+import ButtonFullRounded from './src/components/ButtonFullRounded'
+import Checkbox from './src/components/Checkbox'
 import DetailedMetric from './src/components/DetailedMetric'
 import DropDown from './src/components/DropDown'
 import FollowUs from './src/components/FollowUs'
@@ -32,6 +34,8 @@ export {
   BorderedText,
   Box,
   Button,
+  ButtonFullRounded,
+  Checkbox,
   DetailedMetric,
   DropDown,
   FollowUs,
