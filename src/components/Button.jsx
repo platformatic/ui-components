@@ -9,7 +9,12 @@ export default function Button (props) {
   // size: small|medium|large|extra-large
   const { icon, label, buttonClass = 'secondary', color = 'green', disabled, size = 'large', bold = false, ...rest } = props
   let className = `${styles.button} ${styles[buttonClass + '-' + color]} ${styles['button-' + size]}`
-  if (disabled) className += ` ${styles.disabled}`
+  if (disabled) {
+    className += ` ${styles.disabled}`
+    if (buttonClass === 'transparent') {
+      className += ` ${styles['disabled-transparent']}`
+    }
+  }
   if (bold) className += ` ${styles.fontBold}`
 
   return (

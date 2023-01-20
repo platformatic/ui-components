@@ -35,7 +35,7 @@
   @apply border-main-green text-main-green bg-none border border-solid box-border rounded-md;
 }
 .transparent-green {
-  @apply text-main-green border-0 bg-transparent;
+  @apply text-main-green border-0 bg-transparent hover:underline;
 }
 
 
@@ -46,7 +46,7 @@
   @apply border-error-red text-error-red bg-none border border-solid box-border rounded-md;
 }
 .transparent-red {
-  @apply text-error-red border-0 bg-transparent;
+  @apply text-error-red border-0 bg-transparent hover:underline;
 }
 
 .primary-white {
@@ -56,9 +56,13 @@
   @apply border-white text-white bg-none border border-solid box-border rounded-md;
 }
 .transparent-white {
-  @apply text-white border-0 bg-transparent;
+  @apply text-white border-0 bg-transparent hover:underline;
 }
 
 .disabled {
   @apply opacity-30 cursor-default;
+}
+
+.disabled-transparent {
+  @apply hover:no-underline;
 }
