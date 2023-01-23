@@ -10,14 +10,14 @@
   @apply items-start;
 }
 .arrow {
-  @apply ml-2;
+  @apply absolute top-[50%] right-0 translate-y-[-50%];
 }
 .header {
-  @apply hover:cursor-pointer
+  @apply hover:cursor-pointer relative pr-6;
 }
 .menu {
-  @apply absolute border-solid border border-main-green p-4 bg-dark-blue mt-8 rounded-md z-[999];
+  @apply absolute border-solid border border-white p-3 bg-light-blue mt-8 rounded-md z-[999] text-sm;
 }
 .item {
-  @apply mb-2
+  @apply py-3 text-main-dark-blue border-t border-main-dark-blue first:border-t-0 text-sm uppercase hover:font-semibold hover:cursor-pointer; 
 }

@@ -9,10 +9,19 @@
   @apply fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]
 }
 .modal {
-  @apply bg-[#E9F7FF] p-4 rounded-md mx-auto my-auto min-w-[480px] max-h-[85vh] overflow-y-auto;
+  @apply p-4 rounded-md mx-auto my-auto min-w-[480px] max-h-[85vh] overflow-y-auto;
+}
+.modalInfo {
+  @apply bg-light-blue;
+}
+.modalInvite {
+  @apply bg-main-dark-blue border-light-green border shadow-wrap shadow-main-green max-w-[432px] max-h-[300px];
 }
 .header {
   @apply flex justify-between items-center;
+}
+.headerInvite {
+  @apply flex justify-end;
 }
 .close {
   @apply hover:cursor-pointer;
@@ -22,4 +31,7 @@
 }
 .title {
   @apply font-bold text-lg;
+}
+.titleInvite {
+  @apply font-bold text-lg text-main-green text-center;
 }

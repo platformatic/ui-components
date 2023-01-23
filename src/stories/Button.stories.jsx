@@ -11,14 +11,31 @@ export default {
       type: 'string',
       control: 'text'
     },
-    primary: {
+    bold: {
       type: 'boolean'
+    },
+    buttonClass: {
+      type: 'string',
+      control: {
+        type: 'radio',
+        options: ['primary', 'secondary', 'transparent']
+      }
     },
     color: {
       type: 'string',
       control: {
         type: 'radio',
-        options: ['green', 'red']
+        options: ['green', 'red', 'white']
+      }
+    },
+    disabled: {
+      type: 'boolean'
+    },
+    size: {
+      type: 'string',
+      control: {
+        type: 'radio',
+        options: ['small', 'medium', 'large', 'extra-large']
       }
     }
   }
@@ -29,45 +46,45 @@ const Template = (args) => <Button {...args} />
 export const PrimaryGreen = Template.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 PrimaryGreen.args = {
-  primary: true,
+  buttonClass: 'primary',
   label: 'Primary Green',
-  color: 'green'
+  color: 'green',
+  bold: true
 }
 
-export const SecondaryGreen = Template.bind({})
-SecondaryGreen.args = {
-  primary: false,
+export const SecondaryRed = Template.bind({})
+SecondaryRed.args = {
   label: 'Secondary Green',
-  color: 'green'
+  color: 'red'
+}
+
+export const TransparentWhite = Template.bind({})
+TransparentWhite.args = {
+  buttonClass: 'transparent',
+  label: 'Secondary Green',
+  color: 'white'
 }
 
 export const PrimaryWithIcon = Template.bind({})
 PrimaryWithIcon.args = {
-  primary: true,
+  buttonClass: 'primary',
   label: 'Primary with Icon',
   icon: faCheck
 }
 
 export const SecondaryWithIcon = Template.bind({})
 SecondaryWithIcon.args = {
-  primary: false,
+  buttonClass: 'secondary',
   label: 'Secondary with Icon',
-  icon: faCheck
-
+  icon: faCheck,
+  color: 'white'
 }
 
 export const PrimaryRed = Template.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 PrimaryRed.args = {
-  primary: true,
+  buttonClass: 'primary',
   label: 'Primary Red',
-  color: 'red'
-}
-
-export const SecondaryRed = Template.bind({})
-SecondaryRed.args = {
-  primary: false,
-  label: 'Secondary Red',
   color: 'red'
 }
 
@@ -91,17 +108,17 @@ const DisabledTemplate = (args) => {
 export const DisabledGreen = DisabledTemplate.bind({})
 
 DisabledGreen.args = {
-  primary: true,
+  buttonClass: 'primary',
   label: 'A simple button',
   color: 'green',
-  disabeld: true
+  disabled: true
 }
 
 export const DisabledRed = DisabledTemplate.bind({})
 
 DisabledRed.args = {
-  primary: true,
+  buttonClass: 'primary',
   label: 'A simple button',
   color: 'red',
-  disabeld: true
+  disabled: true
 }

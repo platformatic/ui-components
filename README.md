@@ -24,3 +24,7 @@ Storybook is still a work in progress, you can start it with
 ```
 $ npm run storybook
 ```
+
+## Storybook public link
+
+https://ui.platformatic.cloud/
