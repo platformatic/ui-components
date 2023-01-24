@@ -1,0 +1,12 @@
+.green > circle,
+.green > path {
+    @apply stroke-main-green;
+}
+.red > circle,
+.red > path {
+    @apply stroke-error-red;
+}
+.white > circle,
+.white > path {
+    @apply stroke-white;
+}
