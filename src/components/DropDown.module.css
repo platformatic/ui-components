@@ -13,7 +13,10 @@
   @apply absolute top-[50%] right-0 translate-y-[-50%];
 }
 .header {
-  @apply hover:cursor-pointer relative pr-6;
+  @apply flex items-center hover:cursor-pointer relative pr-6;
+}
+.picture {
+  @apply border border-transparent rounded-full mr-2;
 }
 .menu {
   @apply absolute border-solid border border-white px-0 py-1 bg-light-blue mt-8 rounded-md z-[999] text-sm min-w-[175px];
