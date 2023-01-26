@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import useEscapeKey from '../hooks/useEscapeKey'
 import CloseModalIcon from './icons/CloseModalIcon'
-import CloseModalGreenIcon from './icons/CloseModalGreenIcon'
-import CloseModalGreenHoverIcon from './icons/CloseModalGreenHoverIcon'
+import RoundCloseIcon from './icons/RoundCloseIcon'
+import RoundCloseHoverIcon from './icons/RoundCloseHoverIcon'
+import Logo from './Logo'
+import HorizontalSeparator from './HorizontalSeparator'
 import styles from './Modal.module.css'
+
 export default function Modal (props) {
   const { setIsOpen, title, layout = 'info' } = props
   const [isHoverCloseModal, setIsHoverCloseModal] = useState(false)
@@ -31,6 +34,7 @@ export default function Modal (props) {
         </>
       )
       break
+
     case 'invite':
       whichModal = (
         <>
@@ -44,7 +48,7 @@ export default function Modal (props) {
                   onMouseEnter={() => setIsHoverCloseModal(true)}
                   onMouseLeave={() => setIsHoverCloseModal(false)}
                 >
-                  {isHoverCloseModal ? <CloseModalGreenHoverIcon /> : <CloseModalGreenIcon />}
+                  {isHoverCloseModal ? <RoundCloseHoverIcon /> : <RoundCloseIcon />}
                 </div>
               </div>
               <p className={styles.titleInvite}>{title}</p>
@@ -54,6 +58,36 @@ export default function Modal (props) {
         </>
       )
       break
+
+    case 'fullscreen':
+      whichModal = (
+        <>
+          <div className={`${styles.container} ${styles.fullscreen}`}>
+            <div className={styles.modalFullscreen}>
+              <div className={styles.headerInvite}>
+                <div
+                  className={styles.close}
+                  onClick={() => setIsOpen(false)}
+                  onMouseEnter={() => setIsHoverCloseModal(true)}
+                  onMouseLeave={() => setIsHoverCloseModal(false)}
+                >
+                  {isHoverCloseModal ? <RoundCloseHoverIcon color='main-dark-blue' /> : <RoundCloseIcon color='main-dark-blue' />}
+                </div>
+              </div>
+              <div className={styles.contentFullscreen}>
+                <div className={styles.titleFullscreen}>
+                  <Logo width={100} heigth={80} color='main-dark-blue' />
+                  <h3>PLATFORMATIC</h3>
+                </div>
+                <HorizontalSeparator marginTop={10} marginBottom={10} color='main-dark-blue' opacity={20} />
+                <div>{props.children}</div>
+              </div>
+            </div>
+          </div>
+        </>
+      )
+      break
+
     default:
       break
   }

@@ -12,7 +12,7 @@ export default {
       type: 'string',
       control: {
         type: 'radio',
-        options: ['info', 'invite']
+        options: ['info', 'invite', 'fullscreen']
       }
     }
   }
@@ -91,4 +91,10 @@ export const InviteLayout = TemplateInvite.bind({})
 InviteLayout.args = {
   title: 'Give me an invite',
   layout: 'invite'
+}
+
+export const FullscreenLayout = Template.bind({})
+FullscreenLayout.args = {
+  title: 'Give me an invite',
+  layout: 'fullscreen'
 }
