@@ -3,7 +3,7 @@
 }
 
 .label {
-  @apply uppercase text-light-green tracking-[.15em] text-sm mr-8;
+  @apply uppercase text-light-green tracking-more-widest text-sm mr-8;
 }
 
 .icon {

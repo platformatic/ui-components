@@ -3,7 +3,7 @@
 }
 
 .tabs-header {
-  @apply flex justify-start text-white uppercase hover:cursor-pointer mb-4 tracking-[.25rem] h-[2rem];
+  @apply flex justify-start text-white uppercase hover:cursor-pointer mb-4 tracking-super-widest h-[2rem];
 }
 .tab {
   @apply mx-8 min-w-[105px] text-center text-sm first:ml-0 last:mr-0;  

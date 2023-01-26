@@ -28,6 +28,16 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Montserrat']
+    },
+    letterSpacing: {
+      tighter: '-.05em',
+      tight: '-.025em',
+      normal: '0',
+      wide: '.025em',
+      wider: '.05em',
+      widest: '.1em',
+      'more-widest': '.15em',
+      'super-widest': '.25em',
     }
   },
   safelist: [
