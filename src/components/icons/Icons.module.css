@@ -1,15 +1,19 @@
 .green > circle,
 .green > rect, 
 .green > path {
-    @apply stroke-main-green;
+  @apply stroke-main-green;
 }
 .red > circle,
 .red > rect,
 .red > path {
-    @apply stroke-error-red;
+  @apply stroke-error-red;
 }
 .white > circle,
 .white > rect,
 .white > path {
-    @apply stroke-white;
+  @apply stroke-white;
+}
+
+.noShrinkForFlex {
+  @apply shrink-0
 }
