@@ -1,0 +1,41 @@
+.container {
+  @apply max-w-[216px] w-full p-4 border border-white rounded-md h-auto relative;
+  transition: max-width 0.2s linear;
+}
+.collapsed {
+  @apply max-w-[96px] text-center;
+}
+.buttonPuzzle {
+  @apply border-0;
+}
+.buttonCollapse {
+  @apply absolute border border-white rounded-full h-6 w-6 right-[-0.875rem] bg-main-dark-blue;
+  top: 1rem;
+}
+.title {
+  @apply text-white font-bold py-3;
+}
+.buttonItem {
+  @apply flex items-center border-0 w-full mx-auto;
+}
+.buttonItemCollapsed {
+  @apply w-auto
+}
+.item {
+  @apply text-sm text-white ml-2 grow-0;
+}
+.itemSelected {
+  @apply text-light-green;
+}
+.items {
+  @apply flex flex-col gap-y-3 py-2;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
