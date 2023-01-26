@@ -9,7 +9,9 @@
   @apply border-0;
 }
 .buttonCollapse {
-  @apply absolute border border-white rounded-full h-6 w-6 right-[-0.875rem] bg-main-dark-blue;
+  @apply absolute border border-white rounded-full h-6 w-6 right-[-0.875rem]; 
+  /* Override tailwind dist button[type='button]: background: transparent*/
+  @apply bg-main-dark-blue !important;
   top: 1rem;
 }
 .title {
