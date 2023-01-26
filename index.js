@@ -13,7 +13,7 @@ import GHLoginButton from './src/components/GHLoginButton'
 import HorizontalSeparator from './src/components/HorizontalSeparator'
 import Icons from './src/components/icons'
 import Input from './src/components/Input'
-import Sidebar from './src/components/Sidebar'
+import SideBar from './src/components/SideBar'
 import Layout from './src/components/layouts/Layout'
 import List from './src/components/List'
 import ListElement from './src/components/ListElement'
@@ -44,7 +44,7 @@ export {
   GHLoginButton,
   Icons,
   Input,
-  Sidebar,
+  SideBar,
   Layout,
   List,
   ListElement,
