@@ -1,6 +1,6 @@
 'use strict'
 import { useState } from 'react'
-import LateralBar from '../components/LateralBar'
+import Sidebar from '../components/Sidebar'
 import BorderedBox from '../components/BorderedBox'
 
 const divStyle = {
@@ -11,8 +11,8 @@ const divStyle = {
 }
 
 export default {
-  title: 'Platformatic/LateralBar',
-  component: LateralBar,
+  title: 'Platformatic/Sidebar',
+  component: Sidebar,
   decorators: [
     (Story) => (
       <div style={divStyle}>
@@ -23,14 +23,14 @@ export default {
   ]
 }
 
-const Template = (args) => <LateralBar {...args} />
+const Template = (args) => <Sidebar {...args} />
 
-export const EmptyLateralBar = Template.bind({})
+export const EmptySidebar = Template.bind({})
 
-EmptyLateralBar.args = {
+EmptySidebar.args = {
   title: 'Lateral bar empty',
   addTitle: 'Create',
-  onClickAdd: () => alert('clicked on add EmptyLateralBar')
+  onClickAdd: () => alert('clicked on add EmptySidebar')
 }
 
 const FullLateralTemplate = (args) => {
@@ -42,13 +42,13 @@ const FullLateralTemplate = (args) => {
   }
 
   return (
-    <LateralBar items={items} onClickAdd={() => onClickAdd()} {...args} />
+    <Sidebar items={items} onClickAdd={() => onClickAdd()} {...args} />
   )
 }
 
-export const FullLateralBar = FullLateralTemplate.bind({})
+export const FullSidebar = FullLateralTemplate.bind({})
 
-FullLateralBar.args = {
+FullSidebar.args = {
   title: 'Lateral bar Full',
   addTitle: 'Create',
   onClickItemSelected: (index) => alert('selected: ' + index)

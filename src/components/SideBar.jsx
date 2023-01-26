@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import PuzzleIcon from './icons/PuzzleIcon'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faPlus } from '@fortawesome/free-solid-svg-icons'
-import styles from './LateralBar.module.css'
+import styles from './Sidebar.module.css'
 import ReactTooltip from 'react-tooltip'
 import HorizontalSeparator from './HorizontalSeparator'
-export default function LateralBar (props) {
+export default function Sidebar (props) {
   const { title, defaultSelected = 0, onClickItemSelectedParent = () => {}, items = [], onClickAdd = () => {}, addTitle = 'Add' } = props
   const [collapsed, setCollapsed] = useState(false)
   const [selectedItem, setSelectedItem] = useState(defaultSelected)
