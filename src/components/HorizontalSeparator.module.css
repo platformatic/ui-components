@@ -21,3 +21,7 @@
 .marginB-10 {
   @apply mb-10;
 }
+
+.apply-opacity-20 {
+  @apply opacity-20;
+}
