@@ -28,12 +28,12 @@ const Template = (args) => <Sidebar {...args} />
 export const EmptySidebar = Template.bind({})
 
 EmptySidebar.args = {
-  title: 'Lateral bar empty',
+  title: 'Sidebar bar empty',
   addTitle: 'Create',
   onClickAdd: () => alert('clicked on add EmptySidebar')
 }
 
-const FullLateralTemplate = (args) => {
+const FullSidebarTemplate = (args) => {
   const [items, setItems] = useState(['a very very very very very long title 1', 'Title number 2'])
   function onClickAdd () {
     const tmpItem = items.map(item => item)
@@ -46,10 +46,10 @@ const FullLateralTemplate = (args) => {
   )
 }
 
-export const FullSidebar = FullLateralTemplate.bind({})
+export const FullSidebar = FullSidebarTemplate.bind({})
 
 FullSidebar.args = {
-  title: 'Lateral bar Full',
+  title: 'Sidebar bar Full',
   addTitle: 'Create',
   onClickItemSelected: (index) => alert('selected: ' + index)
 }
