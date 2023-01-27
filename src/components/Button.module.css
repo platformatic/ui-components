@@ -38,7 +38,6 @@
   @apply text-main-green border-0 bg-transparent hover:underline;
 }
 
-
 .primary-red {
   @apply text-main-dark-blue bg-error-red;
 }
@@ -59,10 +58,13 @@
   @apply text-white border-0 bg-transparent hover:underline;
 }
 
+.tertiary-white {
+  @apply bg-main-dark-blue border-0 text-white !important;
+}
+
 .disabled {
   @apply opacity-30 cursor-default;
 }
-
 .disabled-transparent {
   @apply hover:no-underline;
 }

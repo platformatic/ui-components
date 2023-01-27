@@ -1,7 +1,25 @@
+.bordered {
+  @apply border border-solid box-border rounded-md;
+}
+.bordered--green {
+  @apply border-main-green
+}
+.bordered--main-dark-blue {
+  @apply border-main-dark-blue;
+}
+
+.error-message {
+  @apply text-error-red text-xs px-2;
+}
+
 .padded {
   @apply px-2 py-2.5;
 }
 
-.bordered {
-  @apply border border-solid box-border rounded-md;
+.text--green {
+  @apply text-main-green
 }
+.text--main-dark-blue {
+  @apply text-main-dark-blue;
+}
+

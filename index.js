@@ -30,6 +30,7 @@ import TextWithLabel from './src/components/TextWithLabel'
 import TwoColumnsLayout from './src/components/layouts/TwoColumnsLayout'
 import Versions from './src/components/Versions'
 import VerticalSeparator from './src/components/VerticalSeparator'
+
 export {
   BorderedBox,
   BorderedText,
