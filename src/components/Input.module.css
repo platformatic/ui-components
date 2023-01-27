@@ -1,7 +1,0 @@
-.inputContainer {
-  @apply flex justify-between w-full h-10  text-white border-main-green border border-solid box-border rounded-md;
-}
-
-.input {
-  @apply grow focus:outline-none
-}
