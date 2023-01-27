@@ -1,0 +1,43 @@
+.container {
+  @apply flex w-full h-10 items-center;
+}
+.switch {
+  @apply relative inline-block w-[50px] h-[24px];
+}
+.switch input { 
+  @apply opacity-0 w-0 h-0;
+}
+.slider {
+  @apply absolute cursor-pointer top-0 left-0 right-0 bottom-0 h-full;
+  background-color: #707070;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.label {
+  @apply px-2 text-xs font-normal text-main-dark-blue;
+}
+.slider:before {
+  @apply absolute h-4 w-4 left-[4px] bottom-[4px] bg-white;
+  content: "";
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  @apply bg-main-green;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 100px;
+}
+
+.slider.round:before {
+  @apply rounded-full;
+}
