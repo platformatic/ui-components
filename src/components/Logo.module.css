@@ -1,0 +1,6 @@
+.white > path[id='platformatic-cloud']{
+  @apply stroke-white
+}
+.main-dark-blue > path[id='platformatic-cloud']{
+  @apply stroke-main-dark-blue
+}

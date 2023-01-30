@@ -2,11 +2,11 @@ import ApiIcon from './ApiIcon'
 import ApiIconClosed from './ApiIconClosed'
 import ApiEmptyIcon from './ApiEmptyIcon'
 import CloseModalIcon from './CloseModalIcon'
-import CloseModalGreenIcon from './CloseModalGreenIcon'
-import CloseModalGreenHoverIcon from './CloseModalGreenHoverIcon'
+import RoundCloseIcon from './RoundCloseIcon'
+import RoundCloseHoverIcon from './RoundCloseHoverIcon'
 import MetricsIcon from './MetricsIcon'
 import PullRequestIcon from './PullRequestIcon'
 
 export default {
-  ApiIcon, ApiIconClosed, ApiEmptyIcon, CloseModalIcon, CloseModalGreenIcon, CloseModalGreenHoverIcon, MetricsIcon, PullRequestIcon
+  ApiIcon, ApiIconClosed, ApiEmptyIcon, CloseModalIcon, RoundCloseIcon, RoundCloseHoverIcon, MetricsIcon, PullRequestIcon
 }

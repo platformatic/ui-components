@@ -1,5 +1,7 @@
 import React from 'react'
-export default function Logo ({ width = 107, heigth = 86 }) {
+import styles from './Logo.module.css'
+export default function Logo ({ width = 107, heigth = 86, color = 'white' }) {
+  const className = styles[`${color}`]
   return (
     <svg
       width={width}
@@ -7,10 +9,12 @@ export default function Logo ({ width = 107, heigth = 86 }) {
       viewBox='0 0 107 86'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      className={className}
     >
       <path
+        id='platformatic-cloud'
         d='M30.8197 62.5803H89.7919V62.5614C92.0266 62.4574 94.2096 61.8539 96.1799 60.7954C98.1502 59.7369 99.8577 58.2503 101.177 56.4452C102.496 54.6401 103.392 52.5624 103.801 50.3652C104.21 48.168 104.12 45.9072 103.538 43.7493C102.956 41.5915 101.897 39.5915 100.438 37.8967C98.9799 36.202 97.1596 34.8556 95.1114 33.9567C93.0632 33.0579 90.8392 32.6294 88.6032 32.703C86.3673 32.7765 84.1763 33.3502 82.1917 34.3817C80.9669 31.5572 79.1131 29.0491 76.7716 27.0482C74.43 25.0473 71.6623 23.6064 68.6792 22.8352M18.1691 22.8352C13.8266 23.9537 9.97973 26.4828 7.23367 30.0244C4.48761 33.566 2.99827 37.9192 3 42.399C3.00173 46.8787 4.49443 51.2307 7.24322 54.7702C9.992 58.3098 13.8409 60.8359 18.1841 61.951'
-        stroke='white'
+        stroke='none'
         strokeWidth={4.21053}
         strokeLinecap='round'
         strokeLinejoin='round'

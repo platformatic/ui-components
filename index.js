@@ -11,8 +11,8 @@ import DropDown from './src/components/DropDown'
 import FollowUs from './src/components/FollowUs'
 import GHLoginButton from './src/components/GHLoginButton'
 import HorizontalSeparator from './src/components/HorizontalSeparator'
+import Forms from './src/components/forms'
 import Icons from './src/components/icons'
-import Input from './src/components/Input'
 import SideBar from './src/components/SideBar'
 import Layout from './src/components/layouts/Layout'
 import List from './src/components/List'
@@ -30,6 +30,7 @@ import TextWithLabel from './src/components/TextWithLabel'
 import TwoColumnsLayout from './src/components/layouts/TwoColumnsLayout'
 import Versions from './src/components/Versions'
 import VerticalSeparator from './src/components/VerticalSeparator'
+
 export {
   BorderedBox,
   BorderedText,
@@ -42,8 +43,8 @@ export {
   FollowUs,
   HorizontalSeparator,
   GHLoginButton,
+  Forms,
   Icons,
-  Input,
   SideBar,
   Layout,
   List,

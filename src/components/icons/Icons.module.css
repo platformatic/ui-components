@@ -13,6 +13,17 @@
 .white > path {
   @apply stroke-white;
 }
+.main-dark-blue > circle,
+.main-dark-blue > rect,
+.main-dark-blue > path {
+  @apply stroke-main-dark-blue;
+}
+.fill-circle-green > circle {
+  @apply fill-white;
+}
+.fill-circle-main-dark-blue > circle {
+  @apply fill-main-dark-blue;
+}
 
 .noShrinkForFlex {
   @apply shrink-0
