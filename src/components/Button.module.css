@@ -1,5 +1,5 @@
 .button {
-  @apply rounded text-center cursor-pointer font-normal;
+  @apply rounded text-center cursor-pointer font-normal rounded-md border border-solid box-border;
 }
 .fontBold {
   @apply font-semibold;
@@ -28,43 +28,72 @@
   @apply mr-3;
 }
 
-.primary-green {
-  @apply text-main-dark-blue bg-light-green;
+.background-color-main-green {
+  @apply bg-main-green;
 }
-.secondary-green {
-  @apply border-main-green text-main-green bg-none border border-solid box-border rounded-md;
+.background-color-light-green {
+  @apply bg-light-green;
 }
-.transparent-green {
-  @apply text-main-green border-0 bg-transparent hover:underline;
+.background-color-dark-green {
+  @apply bg-dark-green;
 }
-
-.primary-red {
-  @apply text-main-dark-blue bg-error-red;
+.background-color-main-dark-blue{
+  @apply bg-main-dark-blue;
 }
-.secondary-red {
-  @apply border-error-red text-error-red bg-none border border-solid box-border rounded-md;
+.background-color-dark-blue{
+  @apply bg-dark-blue;
 }
-.transparent-red {
-  @apply text-error-red border-0 bg-transparent hover:underline;
+.background-color-light-blue{
+  @apply bg-light-blue;
 }
-
-.primary-white {
-  @apply text-main-dark-blue bg-white;
+.background-color-white{
+  @apply bg-white;
 }
-.secondary-white {
-  @apply border-white text-white bg-none border border-solid box-border rounded-md;
+.background-color-error-red{
+  @apply bg-error-red;
 }
-.transparent-white {
-  @apply text-white border-0 bg-transparent hover:underline;
+.background-color-tertiary-blue{
+  @apply bg-tertiary-blue;
 }
-
-.tertiary-white {
-  @apply bg-main-dark-blue border-0 text-white !important;
+.background-color-transparent{
+  @apply bg-transparent;
 }
-
+.color-main-green {
+  @apply text-main-green border-main-green;
+}
+.color-light-green {
+  @apply text-light-green border-light-green;
+}
+.color-dark-green {
+  @apply text-dark-green border-dark-green;
+}
+.color-main-dark-blue{
+  @apply text-main-dark-blue border-main-dark-blue;
+}
+.color-dark-blue{
+  @apply text-dark-blue border-dark-blue;
+}
+.color-light-blue{
+  @apply text-light-blue border-light-blue;
+}
+.color-white{
+  @apply text-white border-white;
+}
+.color-error-red{
+  @apply text-error-red border-error-red;
+}
+.color-tertiary-blue{
+  @apply text-tertiary-blue border-tertiary-blue;
+}
+.color-transparent{
+  @apply text-transparent border-transparent;
+}
+.no-border {
+  @apply border-0;
+}
 .disabled {
   @apply opacity-30 cursor-default;
 }
-.disabled-transparent {
-  @apply hover:no-underline;
+.underline-effect {
+  @apply hover:underline;
 }

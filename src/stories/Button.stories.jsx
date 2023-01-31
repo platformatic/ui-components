@@ -3,6 +3,8 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import Button from '../components/Button'
 
+const colors = ['main-green', 'dark-green', 'light-green', 'main-dark-blue', 'dark-blue', 'light-blue', 'white', 'error-red', 'tertiary-blue', 'transparent']
+
 export default {
   title: 'Platformatic/Button',
   component: Button,
@@ -14,18 +16,18 @@ export default {
     bold: {
       type: 'boolean'
     },
-    buttonClass: {
+    backgroundColor: {
       type: 'string',
       control: {
         type: 'radio',
-        options: ['primary', 'secondary', 'transparent']
+        options: colors
       }
     },
     color: {
       type: 'string',
       control: {
         type: 'radio',
-        options: ['green', 'red', 'white']
+        options: colors
       }
     },
     disabled: {
@@ -37,55 +39,36 @@ export default {
         type: 'radio',
         options: ['small', 'medium', 'large', 'extra-large']
       }
+    },
+    underlineEffect: {
+      type: 'boolean'
+    },
+    bordered: {
+      type: 'boolean'
     }
   }
 }
 
 const Template = (args) => <Button {...args} />
 
-export const PrimaryGreen = Template.bind({})
+export const OnlyLabel = Template.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-PrimaryGreen.args = {
-  buttonClass: 'primary',
-  label: 'Primary Green',
-  color: 'green',
-  bold: true
+OnlyLabel.args = {
+  label: 'Sample label',
+  backgroundColor: 'light-green'
 }
 
-export const SecondaryRed = Template.bind({})
-SecondaryRed.args = {
-  label: 'Secondary Green',
-  color: 'red'
+export const BorderedRed = Template.bind({})
+BorderedRed.args = {
+  label: 'Borderer Red',
+  color: 'error-red'
 }
 
 export const TransparentWhite = Template.bind({})
 TransparentWhite.args = {
-  buttonClass: 'transparent',
-  label: 'Secondary Green',
-  color: 'white'
-}
-
-export const PrimaryWithIcon = Template.bind({})
-PrimaryWithIcon.args = {
-  buttonClass: 'primary',
-  label: 'Primary with Icon',
+  label: 'White',
+  color: 'white',
   icon: faCheck
-}
-
-export const SecondaryWithIcon = Template.bind({})
-SecondaryWithIcon.args = {
-  buttonClass: 'secondary',
-  label: 'Secondary with Icon',
-  icon: faCheck,
-  color: 'white'
-}
-
-export const PrimaryRed = Template.bind({})
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-PrimaryRed.args = {
-  buttonClass: 'primary',
-  label: 'Primary Red',
-  color: 'red'
 }
 
 const DisabledTemplate = (args) => {
@@ -97,28 +80,25 @@ const DisabledTemplate = (args) => {
         <span className='ml-4 text-xl'>👈 This button is {enabled ? 'enabled' : 'disabled'}</span>
       </div>
       <div>
-        <Button label='Toggle Disabled' primary='true' onClick={() => setEnabled(!enabled)} />
+        <Button label='Toggle Disabled' backgroundColor='main-green' onClick={() => setEnabled(!enabled)} />
       </div>
-
     </div>
-
   )
 }
 
 export const DisabledGreen = DisabledTemplate.bind({})
 
 DisabledGreen.args = {
-  buttonClass: 'primary',
+  backgroundColor: 'main-green',
   label: 'A simple button',
-  color: 'green',
+  color: 'main-dark-blue',
   disabled: true
 }
 
 export const DisabledRed = DisabledTemplate.bind({})
 
 DisabledRed.args = {
-  buttonClass: 'primary',
   label: 'A simple button',
-  color: 'red',
+  color: 'error-red',
   disabled: true
 }
