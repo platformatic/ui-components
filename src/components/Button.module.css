@@ -27,33 +27,32 @@
 .margin-right-extra-large {
   @apply mr-3;
 }
-
 .background-color-main-green {
-  @apply bg-main-green;
+  @apply bg-main-green !important;
 }
 .background-color-light-green {
-  @apply bg-light-green;
+  @apply bg-light-green !important;
 }
 .background-color-dark-green {
-  @apply bg-dark-green;
+  @apply bg-dark-green !important;
 }
 .background-color-main-dark-blue{
-  @apply bg-main-dark-blue;
+  @apply bg-main-dark-blue !important;
 }
 .background-color-dark-blue{
-  @apply bg-dark-blue;
+  @apply bg-dark-blue !important;
 }
 .background-color-light-blue{
-  @apply bg-light-blue;
+  @apply bg-light-blue !important;
 }
 .background-color-white{
-  @apply bg-white;
+  @apply bg-white !important;
 }
 .background-color-error-red{
-  @apply bg-error-red;
+  @apply bg-error-red !important;
 }
 .background-color-tertiary-blue{
-  @apply bg-tertiary-blue;
+  @apply bg-tertiary-blue !important;
 }
 .background-color-transparent{
   @apply bg-transparent;

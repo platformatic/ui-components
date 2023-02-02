@@ -1,0 +1,18 @@
+.container {
+  @apply flex flex-col;
+}
+.title{
+  @apply text-xl font-semibold text-main-dark-blue;
+}
+.helper{
+  @apply text-sm text-main-dark-blue pb-4;
+}
+.content {
+  @apply flex gap-x-1 w-full;
+}
+.content button {
+  @apply shrink-0;
+}
+.disabled {
+  @apply opacity-20;
+}

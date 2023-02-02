@@ -8,8 +8,9 @@ function Button (props) {
   const { icon, label, color, backgroundColor, size, disabled, bold, underlineEffect, bordered, ...rest } = props
   let className = `${styles.button} ${styles['background-color-' + backgroundColor]} ${styles['color-' + color]} ${styles['button-' + size]}`
   if (!bordered) className += ` ${styles['no-border']}`
-  if (disabled) className += ` ${styles.disabled}`
-  else {
+  if (disabled) {
+    className += ` ${styles.disabled}`
+  } else {
     if (underlineEffect) className += ` ${styles['underline-effect']}`
   }
   if (bold) className += ` ${styles.fontBold}`
@@ -26,7 +27,7 @@ Button.propTypes = {
   /**
    * Icon
    */
-  icon: PropTypes.string,
+  icon: PropTypes.object,
   /**
    * label
    */

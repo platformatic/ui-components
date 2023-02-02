@@ -1,15 +1,55 @@
 'use strict'
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from './Input.module.css'
 import commonStyles from '../Common.module.css'
-export default function Input ({ placeholder, value, name, borderColor = 'green', errorMessage = '', onChange = () => {} }) {
+function Input ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled }) {
   const className = styles.inputContainer + ' ' + commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`] + ' ' + commonStyles.padded
   return (
-    <>
+    <div className={styles.container}>
       <div className={className}>
-        <input type='text' name={name} value={value} placeholder={placeholder} className='grow' onChange={onChange} />
+        <input type='text' name={name} value={value} placeholder={placeholder} className={styles.fullWidth} onChange={onChange} disabled={disabled} />
       </div>
       {errorMessage.length > 0 && <span className={commonStyles['error-message']}>{errorMessage}</span>}
-    </>
+    </div>
   )
 }
+
+Input.propTypes = {
+  /**
+   * placeholder
+   */
+  placeholder: PropTypes.string,
+  /**
+   * value
+   */
+  value: PropTypes.string,
+  /**
+   * name
+   */
+  name: PropTypes.string,
+  /**
+   * color of border
+   */
+  borderColor: PropTypes.oneOf(['main-green', 'main-dark-blue']),
+  /**
+   * onChange
+   */
+  onChange: PropTypes.func,
+  /**
+   * Disabled
+   */
+  disabled: PropTypes.bool
+}
+
+Input.defaultProps = {
+  placeholder: '',
+  value: null,
+  name: '',
+  borderColor: 'main-green',
+  errorMessage: '',
+  onChange: () => {},
+  disabled: false
+}
+
+export default Input

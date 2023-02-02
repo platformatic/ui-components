@@ -1,6 +1,8 @@
-import ToggleSwitch from './ToggleSwitch'
 import Input from './Input'
+import Field from './Field'
+import Preview from './Preview'
+import ToggleSwitch from './ToggleSwitch'
 
 export default {
-  ToggleSwitch, Input
+  Input, Field, Preview, ToggleSwitch
 }

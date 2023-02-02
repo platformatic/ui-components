@@ -18,6 +18,7 @@ import Layout from './src/components/layouts/Layout'
 import List from './src/components/List'
 import ListElement from './src/components/ListElement'
 import Loadable from './src/components/Loadable'
+import Loader from './src/components/Loader'
 import LoginButton from './src/components/LoginButton'
 import Logo from './src/components/Logo'
 import Modal from './src/components/Modal'
@@ -50,6 +51,7 @@ export {
   List,
   ListElement,
   Loadable,
+  Loader,
   LoginButton,
   Logo,
   Modal,
@@ -61,5 +63,5 @@ export {
   TextWithLabel,
   TwoColumnsLayout,
   Versions,
-  VerticalSeparator
+  VerticalSeparator,
 }
