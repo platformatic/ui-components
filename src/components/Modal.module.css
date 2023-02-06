@@ -1,5 +1,5 @@
 .blur {
-  @apply absolute top-[50%] left-[50%] w-[100vw] h-[100vh] translate-x-[-50%] translate-y-[-50%] z-[9999];
+  @apply fixed top-[50%] left-[50%] w-full h-screen translate-x-[-50%] translate-y-[-50%] z-10;
   background-color: rgba(0, 0, 0, 0.75);
 }
 .container {
