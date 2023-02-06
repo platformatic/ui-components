@@ -1,7 +1,7 @@
 'use strict'
 import ToggleSwitch from '../../components/forms/ToggleSwitch'
 export default {
-  title: 'Platformatic/ToggleSwitch',
+  title: 'Platformatic/Forms/ToggleSwitch',
   component: ToggleSwitch
 }
 

@@ -1,0 +1,12 @@
+.container {
+  @apply flex flex-col
+}
+.title{
+  @apply text-sm text-main-dark-blue pb-1;
+}
+.value{
+  @apply text-xl font-semibold text-main-dark-blue;
+}
+.link {
+  @apply font-semibold;
+}

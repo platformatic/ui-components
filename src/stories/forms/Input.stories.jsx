@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import Input from '../../components/forms/Input'
 export default {
-  title: 'Platformatic/Input',
+  title: 'Platformatic/Forms/Input',
   component: Input
 }
 

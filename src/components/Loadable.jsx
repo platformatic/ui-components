@@ -2,7 +2,7 @@ import React, { useState, cloneElement, Children } from 'react'
 import styles from './Loadable.module.css'
 import { SpinnerCircular } from 'spinners-react'
 
-export default function List ({ ...props }) {
+export default function Loadable ({ ...props }) {
   // If null then loading not started, if true then loading, if false then done loading
   const [loading, setLoading] = useState(null)
   const startLoading = (reset = false) => {

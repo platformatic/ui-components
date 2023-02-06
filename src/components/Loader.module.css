@@ -1,0 +1,13 @@
+.container {
+  @apply fixed top-0 left-0 h-full w-full z-40;
+}
+.content {
+  @apply h-full w-full;
+}
+.spinner {
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50;
+}
+.blurred {
+  @apply blur-sm;
+}
+

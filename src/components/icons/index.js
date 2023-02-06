@@ -5,8 +5,17 @@ import CloseModalIcon from './CloseModalIcon'
 import RoundCloseIcon from './RoundCloseIcon'
 import RoundCloseHoverIcon from './RoundCloseHoverIcon'
 import MetricsIcon from './MetricsIcon'
+import PuzzleIcon from './PuzzleIcon'
 import PullRequestIcon from './PullRequestIcon'
 
 export default {
-  ApiIcon, ApiIconClosed, ApiEmptyIcon, CloseModalIcon, RoundCloseIcon, RoundCloseHoverIcon, MetricsIcon, PullRequestIcon
+  ApiIcon,
+  ApiIconClosed,
+  ApiEmptyIcon,
+  CloseModalIcon,
+  RoundCloseIcon,
+  RoundCloseHoverIcon,
+  MetricsIcon,
+  PuzzleIcon,
+  PullRequestIcon
 }
