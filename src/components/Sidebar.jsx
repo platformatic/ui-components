@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import PuzzleIcon from './icons/PuzzleIcon'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faPlusCircle, faGear } from '@fortawesome/free-solid-svg-icons'
-import styles from './SideBar.module.css'
+import styles from './Sidebar.module.css'
 import ReactTooltip from 'react-tooltip'
 import Button from './Button'
 import HorizontalSeparator from './HorizontalSeparator'
 
-export default function SideBar (props) {
+export default function Sidebar (props) {
   const {
     title,
     defaultSelected = 0,
