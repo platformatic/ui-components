@@ -30,7 +30,8 @@ export const EmptySideBar = Template.bind({})
 EmptySideBar.args = {
   title: 'SideBar bar empty',
   addTitle: 'Create',
-  onClickAdd: () => alert('clicked on add EmptySideBar')
+  onClickAdd: () => alert('clicked on add EmptySideBar'),
+  onClickSettings: () => alert('settings')
 }
 
 const FullSideBarTemplate = (args) => {
@@ -51,5 +52,6 @@ export const FullSideBar = FullSideBarTemplate.bind({})
 FullSideBar.args = {
   title: 'SideBar bar Full',
   addTitle: 'Create',
-  onClickItemSelected: (index) => alert('selected: ' + index)
+  onClickItemSelected: (index) => alert('selected: ' + index),
+  onClickSettings: () => alert('settings')
 }

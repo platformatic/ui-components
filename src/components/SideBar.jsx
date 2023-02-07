@@ -1,12 +1,22 @@
 import React, { useState } from 'react'
 import PuzzleIcon from './icons/PuzzleIcon'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faPlusCircle, faGear } from '@fortawesome/free-solid-svg-icons'
 import styles from './SideBar.module.css'
 import ReactTooltip from 'react-tooltip'
+import Button from './Button'
 import HorizontalSeparator from './HorizontalSeparator'
+
 export default function SideBar (props) {
-  const { title, defaultSelected = 0, onClickItemSelectedParent = () => {}, items = [], onClickAdd = () => {}, addTitle = 'Add' } = props
+  const {
+    title,
+    defaultSelected = 0,
+    onClickItemSelectedParent = () => {},
+    items = [],
+    onClickAdd = () => {},
+    addTitle = 'Add',
+    onClickSettings = () => {}
+  } = props
   const [collapsed, setCollapsed] = useState(false)
   const [selectedItem, setSelectedItem] = useState(defaultSelected)
 
@@ -49,13 +59,17 @@ export default function SideBar (props) {
               })}
               {/* <Button label='Add' buttonClass='transparent' icon={faPlus} color='white' size='small' inClick={onClickAdd}/> */}
               <button className={`${styles.buttonItem} ${collapsed && styles.buttonItemCollapsed}`} onClick={onClickAdd}>
-                <FontAwesomeIcon color='white' icon={faPlus} data-tip={addTitle} />
+                <FontAwesomeIcon color='white' icon={faPlusCircle} data-tip={addTitle} />
                 {!collapsed && <span className={styles.item}>{addTitle}</span>}
               </button>
             </div>
           </>
           )}
       <HorizontalSeparator marginBottom={2} marginTop={2} />
+
+      <div className={styles.bottom}>
+        <Button color='white' label='Settings' type='button' onClick={() => onClickSettings()} icon={faGear} />
+      </div>
     </div>
   )
 }

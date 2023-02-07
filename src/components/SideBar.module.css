@@ -32,6 +32,13 @@
 .items {
   @apply flex flex-col gap-y-3 py-2;
 }
+.bottom {
+  @apply absolute left-0 bottom-[1rem] w-full px-4;
+}
+
+.bottom button {
+  @apply w-full;
+}
 
 @keyframes fadeIn {
   0% {
