@@ -10,6 +10,16 @@
 .input {
   @apply focus:outline-none focus-within:outline-none focus-visible:outline-none;
 }
+.beforeInputIcon {
+  @apply ml-1 mr-3 cursor-pointer;
+}
+.color-main-dark-blue {
+  @apply text-main-dark-blue;
+}
+.color-error-red{
+  @apply text-error-red;
+}
+
 [type='text']:focus {
   outline: none;
 }
