@@ -1,6 +1,8 @@
 'use strict'
 import React, { useState } from 'react'
 import Input from '../../components/forms/Input'
+import { faAdd, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+
 export default {
   title: 'Platformatic/Forms/Input',
   component: Input
@@ -53,4 +55,14 @@ export const ValuedAndAlertChange = TemplateValuedAndAlertChange.bind({})
 ValuedAndAlertChange.args = {
   name: 'test',
   placeholder: 'Platformatic'
+}
+
+export const IconBeforeAndAfter = Template.bind({})
+
+IconBeforeAndAfter.args = {
+  name: 'test',
+  placeholder: 'Platformatic',
+  beforeInputIcon: faAdd,
+  afterInputIcon: faCheckCircle,
+  afterInputIconColor: 'error-red'
 }

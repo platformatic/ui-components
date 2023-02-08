@@ -1,6 +1,6 @@
 'use strict'
 import { useState } from 'react'
-import SideBar from '../components/SideBar'
+import Sidebar from '../components/Sidebar'
 import BorderedBox from '../components/BorderedBox'
 
 const divStyle = {
@@ -11,8 +11,8 @@ const divStyle = {
 }
 
 export default {
-  title: 'Platformatic/SideBar',
-  component: SideBar,
+  title: 'Platformatic/Sidebar',
+  component: Sidebar,
   decorators: [
     (Story) => (
       <div style={divStyle}>
@@ -23,17 +23,18 @@ export default {
   ]
 }
 
-const Template = (args) => <SideBar {...args} />
+const Template = (args) => <Sidebar {...args} />
 
-export const EmptySideBar = Template.bind({})
+export const EmptySidebar = Template.bind({})
 
-EmptySideBar.args = {
-  title: 'SideBar bar empty',
+EmptySidebar.args = {
+  title: 'Sidebar bar empty',
   addTitle: 'Create',
-  onClickAdd: () => alert('clicked on add EmptySideBar')
+  onClickAdd: () => alert('clicked on add EmptySidebar'),
+  onClickSettings: () => alert('settings')
 }
 
-const FullSideBarTemplate = (args) => {
+const FullSidebarTemplate = (args) => {
   const [items, setItems] = useState(['a very very very very very long title 1', 'Title number 2'])
   function onClickAdd () {
     const tmpItem = items.map(item => item)
@@ -42,14 +43,15 @@ const FullSideBarTemplate = (args) => {
   }
 
   return (
-    <SideBar items={items} onClickAdd={() => onClickAdd()} {...args} />
+    <Sidebar items={items} onClickAdd={() => onClickAdd()} {...args} />
   )
 }
 
-export const FullSideBar = FullSideBarTemplate.bind({})
+export const FullSidebar = FullSidebarTemplate.bind({})
 
-FullSideBar.args = {
-  title: 'SideBar bar Full',
+FullSidebar.args = {
+  title: 'Sidebar bar Full',
   addTitle: 'Create',
-  onClickItemSelected: (index) => alert('selected: ' + index)
+  onClickItemSelected: (index) => alert('selected: ' + index),
+  onClickSettings: () => alert('settings')
 }
