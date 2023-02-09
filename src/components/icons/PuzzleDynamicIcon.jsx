@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styles from './Icons.module.css'
-const PuzzleDynamicIcon = ({ color = 'green', size = 'normal', tip = '' }) => {
+const PuzzleDynamicIcon = ({ color = 'green', size = 'normal' }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   let dimension = 40
   switch (size) {
