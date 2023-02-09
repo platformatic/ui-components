@@ -35,7 +35,11 @@ EmptySidebar.args = {
 }
 
 const FullSidebarTemplate = (args) => {
-  const [items, setItems] = useState(['a very very very very very long title 1', 'Title number 2'])
+  const [items, setItems] = useState([
+    { iconName: 'PuzzleIcon', subTitle: 'Subtitle', title: 'a very very very very very long title 1' },
+    { title: 'Title number 2', subTitle: 'Subtitle 2' },
+    { title: 'Another Title', subTitle: 'Subtitle 3', iconName: 'PuzzleDynamicIcon' }
+  ])
   function onClickAdd () {
     const tmpItem = items.map(item => item)
     tmpItem.push('Title number ' + (items.length + 1))
