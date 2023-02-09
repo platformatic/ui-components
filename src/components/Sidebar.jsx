@@ -142,7 +142,7 @@ Sidebar.propTypes = {
 
 Sidebar.defaultProps = {
   title: '',
-  defaultSelected: -1,
+  defaultSelected: 0,
   onClickItemSelectedParent: () => {},
   items: [],
   onClickAdd: () => {},
