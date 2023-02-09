@@ -32,7 +32,7 @@ export const DefaultInvalid = Template.bind({})
 DefaultInvalid.args = {
   name: 'test',
   placeholder: 'Platformatic',
-  borderColor: 'error-red',
+  borderColor: 'main-dark-blue',
   errorMessage: 'This is an error message'
 }
 

@@ -6,7 +6,9 @@ import commonStyles from '../Common.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Input ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled, beforeInputIcon, beforeInputIconColor, afterInputIcon, afterInputIconColor, onClickBeforeIcon }) {
-  const className = styles.inputContainer + ' ' + commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`] + ' ' + commonStyles.padded
+  let className = styles.inputContainer + ' ' + commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`] + ' ' + commonStyles.padded
+  const showError = errorMessage.length > 0
+  if (showError) className += ' ' + commonStyles['bordered--error-red']
   const classNameBeforeInput = `${styles.beforeInputIcon} ` + styles[`color-${beforeInputIconColor}`]
   return (
     <div className={styles.container}>
@@ -15,7 +17,7 @@ function Input ({ placeholder, value, name, borderColor, errorMessage, onChange,
         <input type='text' name={name} value={value} placeholder={placeholder} className={styles.fullWidth} onChange={onChange} disabled={disabled} />
         {afterInputIcon && <FontAwesomeIcon icon={afterInputIcon} className={styles[`color-${afterInputIconColor}`]} data-testid='after-icon' />}
       </div>
-      {errorMessage.length > 0 && <span className={commonStyles['error-message']}>{errorMessage}</span>}
+      {showError && <span className={commonStyles['error-message']}>{errorMessage}</span>}
     </div>
   )
 }
@@ -36,7 +38,7 @@ Input.propTypes = {
   /**
    * color of border
    */
-  borderColor: PropTypes.oneOf(['main-green', 'main-dark-blue', 'error-red']),
+  borderColor: PropTypes.oneOf(['main-green', 'main-dark-blue']),
   /**
    * onChange
    */
