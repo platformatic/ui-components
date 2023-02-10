@@ -63,5 +63,5 @@ export {
   TextWithLabel,
   TwoColumnsLayout,
   Versions,
-  VerticalSeparator,
+  VerticalSeparator
 }

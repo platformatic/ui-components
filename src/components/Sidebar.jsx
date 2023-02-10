@@ -1,21 +1,21 @@
 import React, { useState } from 'react'
-import PuzzleIcon from './icons/PuzzleIcon'
+import Icons from './icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faPlusCircle, faGear } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 import styles from './Sidebar.module.css'
 import ReactTooltip from 'react-tooltip'
-import Button from './Button'
 import HorizontalSeparator from './HorizontalSeparator'
+import PropTypes from 'prop-types'
 
-export default function Sidebar (props) {
+function Sidebar (props) {
   const {
     title,
-    defaultSelected = 0,
-    onClickItemSelectedParent = () => {},
-    items = [],
-    onClickAdd = () => {},
-    addTitle = 'Add',
-    onClickSettings = () => {}
+    defaultSelected,
+    onClickItemSelectedParent,
+    items,
+    onClickAdd,
+    addTitle,
+    onClickSettings
   } = props
   const [collapsed, setCollapsed] = useState(false)
   const [selectedItem, setSelectedItem] = useState(defaultSelected)
@@ -25,15 +25,37 @@ export default function Sidebar (props) {
     onClickItemSelectedParent(index)
   }
 
+  function renderItemIcon (iconName, title, isSelected) {
+    if (iconName) {
+      return React.createElement(Icons[`${iconName}`], {
+        size: 'small',
+        color: isSelected ? 'green' : 'white',
+        tip: title
+      })
+    }
+    return (<></>)
+  }
+
   return (
     <div className={`${styles.container} ${collapsed && styles.collapsed}`}>
       {collapsed
         ? (
           <>
-            <button type='button' className={styles.buttonPuzzle} onClick={() => { setCollapsed(false) }}>
-              <PuzzleIcon tip='expand' />
+            <button type='button' className={styles.buttonExpand} onClick={() => { setCollapsed(false) }}>
+              <Icons.PuzzleIcon color='white' />
             </button>
-            <ReactTooltip />
+            <div className={styles.titleCollapsed} data-testid='lateral-bar-title'>
+              {title}
+            </div>
+            <HorizontalSeparator marginBottom={2} marginTop={2} />
+            <div className={styles.bottom}>
+              <button type='button' className={styles.buttonSettings} onClick={onClickSettings}>
+                <Icons.GearIcon color='white' />
+              </button>
+              <div className={styles.titleCollapsed} data-testid='lateral-bar-title'>
+                Settings
+              </div>
+            </div>
           </>
           )
         : (
@@ -50,8 +72,11 @@ export default function Sidebar (props) {
                 return (
                   <React.Fragment key={index}>
                     <button className={`${styles.buttonItem} ${collapsed && styles.buttonItemCollapsed}`} type='button' onClick={() => onClickItemSelected(index)}>
-                      <PuzzleIcon size='small' color={isSelected ? 'green' : 'white'} tip={item} />
-                      <span className={`${styles.item} ${isSelected ? styles.itemSelected : ''}`}>{item}</span>
+                      {renderItemIcon(item.iconName, item.title, isSelected)}
+                      <div className={`${styles.item} ${isSelected ? styles.itemSelected : ''}`}>
+                        <span className={styles.itemSubTitle}>{item.subTitle}</span>
+                        <span className={styles.itemTitle}>{item.title}</span>
+                      </div>
                     </button>
                     <ReactTooltip />
                   </React.Fragment>
@@ -63,13 +88,66 @@ export default function Sidebar (props) {
                 {!collapsed && <span className={styles.item}>{addTitle}</span>}
               </button>
             </div>
+            <HorizontalSeparator marginBottom='2' marginTop='2' />
+
+            <div className={styles.bottom}>
+              <button type='button' className={`${styles.buttonSettings} ${styles.buttonSettingsExpanded}`} onClick={onClickSettings}>
+                <Icons.GearIcon color='white' size='small' /> <span className={styles.titleSettings}>Settings</span>
+              </button>
+            </div>
           </>
           )}
-      <HorizontalSeparator marginBottom={2} marginTop={2} />
-
-      <div className={styles.bottom}>
-        <Button color='white' label='Settings' type='button' onClick={() => onClickSettings()} icon={faGear} />
-      </div>
     </div>
   )
 }
+
+Sidebar.propTypes = {
+  /**
+   * title
+   */
+  title: PropTypes.string,
+  /**
+   * defaultSelected
+   */
+  defaultSelected: PropTypes.number,
+  /**
+   * addTitle
+   */
+  addTitle: PropTypes.string,
+  /**
+   * items: array with keys
+   * title: name to display
+   * subtitle: secondary title
+   * icon: what Icon
+   */
+  items: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string,
+    subtitle: PropTypes.string,
+    iconName: PropTypes.string
+  })),
+  /**
+   * Apply onClickItemSelectedParent
+   */
+  onClickItemSelectedParent: PropTypes.func,
+  /**
+   * Apply onClickAdd: function called clicking on plus button
+   */
+  onClickAdd: PropTypes.func,
+  /**
+   * Apply onClickSettings: function called clicking on Settings button
+   */
+  onClickSettings: PropTypes.func
+
+}
+
+Sidebar.defaultProps = {
+  title: '',
+  defaultSelected: 0,
+  onClickItemSelectedParent: () => {},
+  items: [],
+  onClickAdd: () => {},
+  addTitle: 'Add',
+  onClickSettings: () => {}
+}
+
+export default Sidebar

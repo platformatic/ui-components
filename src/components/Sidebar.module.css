@@ -5,8 +5,11 @@
 .collapsed {
   @apply max-w-[96px] text-center;
 }
-.buttonPuzzle {
-  @apply border-0;
+.buttonExpand {
+  @apply border rounded-md p-1 border-white;
+}
+.buttonSettings {
+  @apply border rounded-md p-1 border-white;
 }
 .buttonCollapse {
   @apply absolute border border-white rounded-full h-6 w-6 right-[-0.875rem]; 
@@ -17,15 +20,26 @@
 .title {
   @apply text-white font-bold py-3;
 }
+.titleCollapsed {
+  @apply text-white text-[10px];
+}
 .buttonItem {
-  @apply flex items-center border-0 w-full mx-auto;
+  @apply flex items-center justify-start border-0 w-full;
 }
 .buttonItemCollapsed {
-  @apply w-auto
+  @apply w-auto;
 }
 .item {
-  @apply text-sm text-white ml-2 grow-0;
+  @apply text-white ml-2 grow-0 text-left flex flex-col;
+  width: calc(100% - 28px)
 }
+.itemSubTitle {
+  @apply text-[10px] leading-[10px]; 
+}
+.itemTitle{
+  @apply text-xs text-ellipsis overflow-hidden whitespace-nowrap;
+}
+
 .itemSelected {
   @apply text-light-green;
 }
@@ -35,9 +49,11 @@
 .bottom {
   @apply absolute left-0 bottom-[1rem] w-full px-4;
 }
-
-.bottom button {
-  @apply w-full;
+.titleSettings {
+  @apply text-white font-semibold ml-3;
+}
+.buttonSettingsExpanded {
+  @apply flex items-center justify-center w-full;
 }
 
 @keyframes fadeIn {

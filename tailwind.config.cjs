@@ -7,11 +7,11 @@ module.exports = {
     },
     extend: {
       screens: {
-        'lg': '1440px',
+        lg: '1440px'
         // => @media (min-width: 1440px) { ... }
       },
       boxShadow: {
-        'wrap': '0px 0px 20px rgba(0, 0, 0, 0.6)'
+        wrap: '0px 0px 20px rgba(0, 0, 0, 0.6)'
       }
     },
     colors: {
@@ -24,7 +24,7 @@ module.exports = {
       white: '#FFFFFF',
       'error-red': '#FA2121',
       'tertiary-blue': '#2588E4',
-      'transparent': 'transparent'
+      transparent: 'transparent'
     },
     fontFamily: {
       sans: ['Montserrat']
@@ -37,7 +37,7 @@ module.exports = {
       wider: '.05em',
       widest: '.1em',
       'more-widest': '.15em',
-      'super-widest': '.25em',
+      'super-widest': '.25em'
     }
   },
   safelist: [

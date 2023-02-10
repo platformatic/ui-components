@@ -1,3 +1,9 @@
 .borderedBox {
-  @apply rounded-md p-5 bg-dark-blue text-white flex-1 gap-y-4;
+  @apply rounded-md p-5 text-white flex-1 gap-y-4;
+}
+.background-color-dark-blue{
+  @apply bg-dark-blue !important;
+}
+.background-color-transparent{
+  @apply bg-transparent ;
 }

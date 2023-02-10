@@ -19,6 +19,9 @@
 .color-error-red{
   @apply text-error-red;
 }
+.color-white{
+  @apply text-white;
+}
 
 [type='text']:focus {
   outline: none;

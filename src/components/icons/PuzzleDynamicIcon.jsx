@@ -1,8 +1,8 @@
 import * as React from 'react'
 import styles from './Icons.module.css'
-const PuzzleDynamicIcon = ({ color = 'green', size = 'normal', tip = '' }) => {
+const PuzzleDynamicIcon = ({ color = 'green', size = 'normal' }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
-  let dimension = 40
+  let dimension = 33
   switch (size) {
     case 'small':
       dimension = 24
@@ -14,49 +14,49 @@ const PuzzleDynamicIcon = ({ color = 'green', size = 'normal', tip = '' }) => {
     <svg
       width={dimension}
       height={dimension}
-      viewBox='0 0 24 25'
+      viewBox='0 0 32 33'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
       className={className}
     >
       <rect
-        x={3}
-        y={3.5}
-        width={6}
-        height={7.55245}
+        x={4}
+        y={4.83325}
+        width={8}
+        height={10.0699}
         rx={1}
         stroke='none'
         strokeWidth={1.5}
       />
       <path
-        d='M12 3.5L16.5 7.25L12 11V3.5Z'
+        d='M16 4.83325L22 9.83325L16 14.8333V4.83325Z'
         stroke='none'
-        strokeWidth={1.5}
+        strokeWidth={2}
         strokeLinecap='round'
         strokeLinejoin='round'
       />
       <rect
-        x={21}
-        y={21.5}
-        width={6}
-        height={7.55245}
+        x={28}
+        y={28.8333}
+        width={8}
+        height={10.0699}
         rx={1}
-        transform='rotate(-180 21 21.5)'
+        transform='rotate(-180 28 28.8333)'
         stroke='none'
-        stroke-width={1.5}
+        strokeWidth={1.5}
       />
       <rect
-        x={12}
-        y={21.5}
-        width={9}
-        height={7.55245}
+        x={16}
+        y={28.8333}
+        width={12}
+        height={10.0699}
         rx={1}
-        transform='rotate(-180 12 21.5)'
-        stroke='#21FA90'
-        stroke-width={1.5}
+        transform='rotate(-180 16 28.8333)'
+        stroke='none'
+        strokeWidth={1.5}
       />
       <path
-        d='M16.5 9.5V11L21 7.25L16.5 3.5V5'
+        d='M22 12.8333V14.8333L28 9.83325L22 4.83325V6.83325'
         stroke='none'
         strokeWidth={1.5}
         strokeLinecap='round'

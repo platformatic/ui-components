@@ -5,16 +5,19 @@ import styles from './Input.module.css'
 import commonStyles from '../Common.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function Input ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled, beforeInputIcon, afterInputIcon, afterInputIconColor, onClickBeforeIcon }) {
-  const className = styles.inputContainer + ' ' + commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`] + ' ' + commonStyles.padded
+function Input ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled, beforeInputIcon, beforeInputIconColor, afterInputIcon, afterInputIconColor, onClickBeforeIcon }) {
+  let className = styles.inputContainer + ' ' + commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`] + ' ' + commonStyles.padded
+  const showError = errorMessage.length > 0
+  if (showError) className += ' ' + commonStyles['bordered--error-red']
+  const classNameBeforeInput = `${styles.beforeInputIcon} ` + styles[`color-${beforeInputIconColor}`]
   return (
     <div className={styles.container}>
       <div className={className}>
-        {beforeInputIcon && <FontAwesomeIcon icon={beforeInputIcon} className={styles.beforeInputIcon} data-testid='before-icon' color='white' onClick={() => onClickBeforeIcon()} />}
+        {beforeInputIcon && <FontAwesomeIcon icon={beforeInputIcon} className={classNameBeforeInput} data-testid='before-icon' color='white' onClick={() => onClickBeforeIcon()} />}
         <input type='text' name={name} value={value} placeholder={placeholder} className={styles.fullWidth} onChange={onChange} disabled={disabled} />
         {afterInputIcon && <FontAwesomeIcon icon={afterInputIcon} className={styles[`color-${afterInputIconColor}`]} data-testid='after-icon' />}
       </div>
-      {errorMessage.length > 0 && <span className={commonStyles['error-message']}>{errorMessage}</span>}
+      {showError && <span className={commonStyles['error-message']}>{errorMessage}</span>}
     </div>
   )
 }
@@ -49,13 +52,17 @@ Input.propTypes = {
    */
   beforeInputIcon: PropTypes.object,
   /**
+   * beforeInputIconColor
+   */
+  beforeInputIconColor: PropTypes.oneOf(['error-red', 'main-dark-blue', 'white']),
+  /**
    * afterInputIcon
    */
   afterInputIcon: PropTypes.object,
   /**
    * afterInputIconColor
    */
-  afterInputIconColor: PropTypes.oneOf(['error-red', 'main-dark-blue']),
+  afterInputIconColor: PropTypes.oneOf(['error-red', 'main-dark-blue', 'white']),
   /**
    * onClickBeforeIcon
    */
@@ -71,6 +78,7 @@ Input.defaultProps = {
   onChange: () => {},
   disabled: false,
   beforeInputIcon: null,
+  beforeInputIconColor: 'main-dark-blue',
   afterInputIcon: null,
   onClickBeforeIcon: () => {},
   afterInputIconColor: 'main-dark-blue'
