@@ -49,7 +49,7 @@ function Sidebar (props) {
             </div>
             <HorizontalSeparator marginBottom={2} marginTop={2} />
             <div className={styles.bottom}>
-              <button type='button' className={styles.buttonSettings} onClick={() => onClickSettings()}>
+              <button type='button' className={styles.buttonSettings} onClick={onClickSettings}>
                 <Icons.GearIcon color='white' />
               </button>
               <div className={styles.titleCollapsed} data-testid='lateral-bar-title'>
@@ -88,10 +88,10 @@ function Sidebar (props) {
                 {!collapsed && <span className={styles.item}>{addTitle}</span>}
               </button>
             </div>
-            <HorizontalSeparator marginBottom={2} marginTop={2} />
+            <HorizontalSeparator marginBottom='2' marginTop='2' />
 
             <div className={styles.bottom}>
-              <button type='button' className={`${styles.buttonSettings} ${styles.buttonSettingsExpanded}`} onClick={() => onClickSettings()}>
+              <button type='button' className={`${styles.buttonSettings} ${styles.buttonSettingsExpanded}`} onClick={onClickSettings}>
                 <Icons.GearIcon color='white' size='small' /> <span className={styles.titleSettings}>Settings</span>
               </button>
             </div>

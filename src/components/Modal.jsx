@@ -8,11 +8,13 @@ import HorizontalSeparator from './HorizontalSeparator'
 import styles from './Modal.module.css'
 
 export default function Modal (props) {
-  const { setIsOpen, title, layout = 'info' } = props
+  const { setIsOpen, title, layout = 'info', maxWidth = 50 } = props
   const [isHoverCloseModal, setIsHoverCloseModal] = useState(false)
   useEscapeKey(() => setIsOpen(false))
-
+  const styledMaxWidth = styles[`maxW${maxWidth}`]
+  const classNameFullScreen = `${styles.contentFullscreen} ${styledMaxWidth}`
   let whichModal = <></>
+
   switch (layout) {
     case 'info':
       whichModal = (
@@ -74,7 +76,7 @@ export default function Modal (props) {
                   {isHoverCloseModal ? <RoundCloseHoverIcon color='main-dark-blue' /> : <RoundCloseIcon color='main-dark-blue' />}
                 </div>
               </div>
-              <div className={styles.contentFullscreen}>
+              <div className={classNameFullScreen}>
                 <div className={styles.titleFullscreen}>
                   <Logo width={100} heigth={80} color='main-dark-blue' />
                   <h3>PLATFORMATIC</h3>

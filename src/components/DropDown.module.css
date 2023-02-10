@@ -19,7 +19,7 @@
   @apply border border-transparent rounded-full mr-2;
 }
 .menu {
-  @apply absolute border-solid border border-white px-0 py-1 bg-light-blue mt-8 rounded-md z-[999] text-sm min-w-[175px];
+  @apply absolute border-solid border border-white px-0 py-1 bg-light-blue mt-8 rounded-md z-10 text-sm min-w-[175px];
 }
 .item {
   @apply py-3 px-3 text-main-dark-blue first:border-t-0 text-sm uppercase hover:font-semibold hover:cursor-pointer tracking-more-widest; 
