@@ -3,7 +3,7 @@
 import SimpleMetric from '../components/SimpleMetric'
 
 export default {
-  title: 'Platformatic/SimpleMetric',
+  title: 'Platformatic/Metrics/SimpleMetric',
   component: SimpleMetric
 }
 

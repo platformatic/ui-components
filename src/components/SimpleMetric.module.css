@@ -3,5 +3,5 @@
 }
 
 .title {
-  @apply text-xl;
+  @apply text-base font-semibold;
 }
