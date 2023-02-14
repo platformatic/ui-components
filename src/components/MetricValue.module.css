@@ -1,8 +1,10 @@
 .metric {
-  @apply flex justify-center items-center;
-  gap: 1rem;
+  @apply flex justify-center items-center gap-x-2;
 }
-
 .value {
-  @apply text-5xl
+  @apply text-[32px] font-semibold;
+}
+.unit,
+.pre {
+  @apply text-sm;
 }

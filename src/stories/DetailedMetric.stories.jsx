@@ -3,7 +3,7 @@
 import DetailedMetric from '../components/DetailedMetric'
 
 export default {
-  title: 'Platformatic/DetailedMetric',
+  title: 'Platformatic/Metrics/DetailedMetric',
   component: DetailedMetric
 }
 

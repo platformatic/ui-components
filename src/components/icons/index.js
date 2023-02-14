@@ -2,7 +2,9 @@ import ApiIcon from './ApiIcon'
 import ApiIconClosed from './ApiIconClosed'
 import ApiEmptyIcon from './ApiEmptyIcon'
 import AppIcon from './AppIcon'
+import AppListIcon from './AppListIcon'
 import AppEmptyIcon from './AppEmptyIcon'
+import CircleExclamationIcon from './CircleExclamationIcon'
 import CloseModalIcon from './CloseModalIcon'
 import GearIcon from './GearIcon'
 import RoundCloseIcon from './RoundCloseIcon'
@@ -17,7 +19,9 @@ export default {
   ApiIconClosed,
   ApiEmptyIcon,
   AppIcon,
+  AppListIcon,
   AppEmptyIcon,
+  CircleExclamationIcon,
   CloseModalIcon,
   GearIcon,
   RoundCloseIcon,
