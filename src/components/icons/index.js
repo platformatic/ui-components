@@ -5,11 +5,11 @@ import AppIcon from './AppIcon'
 import AppListIcon from './AppListIcon'
 import AppEmptyIcon from './AppEmptyIcon'
 import CircleExclamationIcon from './CircleExclamationIcon'
+import CircleCloseIcon from './CircleCloseIcon'
+import CircleCloseHoverIcon from './CircleCloseHoverIcon'
 import CloseIcon from './CloseIcon'
 import GearIcon from './GearIcon'
 import MetricsIcon from './MetricsIcon'
-import CircleCloseIcon from './CircleCloseIcon'
-import CircleCloseHoverIcon from './CircleCloseHoverIcon'
 import PuzzleDynamicIcon from './PuzzleDynamicIcon'
 import PuzzleIcon from './PuzzleIcon'
 import PullRequestIcon from './PullRequestIcon'
@@ -23,11 +23,11 @@ export default {
   AppListIcon,
   AppEmptyIcon,
   CircleExclamationIcon,
-  CloseIcon,
-  MetricsIcon,
-  GearIcon,
   CircleCloseIcon,
   CircleCloseHoverIcon,
+  CloseIcon,
+  GearIcon,
+  MetricsIcon,
   PuzzleDynamicIcon,
   PuzzleIcon,
   PullRequestIcon,
