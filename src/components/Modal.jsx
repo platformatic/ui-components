@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import useEscapeKey from '../hooks/useEscapeKey'
-import CloseModalIcon from './icons/CloseModalIcon'
-import RoundCloseIcon from './icons/RoundCloseIcon'
-import RoundCloseHoverIcon from './icons/RoundCloseHoverIcon'
+import CloseIcon from './icons/CloseIcon'
+import CircleCloseIcon from './icons/CircleCloseIcon'
+import CircleCloseHoverIcon from './icons/CircleCloseHoverIcon'
 import Logo from './Logo'
 import HorizontalSeparator from './HorizontalSeparator'
 import styles from './Modal.module.css'
@@ -25,7 +25,7 @@ export default function Modal (props) {
               <div className={styles.header}>
                 <div className={styles.title}>{title}</div>
                 <div className={styles.close} onClick={() => setIsOpen(false)}>
-                  <CloseModalIcon />
+                  <CloseIcon />
                 </div>
               </div>
               <div>
@@ -50,7 +50,7 @@ export default function Modal (props) {
                   onMouseEnter={() => setIsHoverCloseModal(true)}
                   onMouseLeave={() => setIsHoverCloseModal(false)}
                 >
-                  {isHoverCloseModal ? <RoundCloseHoverIcon /> : <RoundCloseIcon />}
+                  {isHoverCloseModal ? <CircleCloseHoverIcon /> : <CircleCloseIcon />}
                 </div>
               </div>
               <p className={styles.titleInvite}>{title}</p>
@@ -73,7 +73,7 @@ export default function Modal (props) {
                   onMouseEnter={() => setIsHoverCloseModal(true)}
                   onMouseLeave={() => setIsHoverCloseModal(false)}
                 >
-                  {isHoverCloseModal ? <RoundCloseHoverIcon color='main-dark-blue' /> : <RoundCloseIcon color='main-dark-blue' />}
+                  {isHoverCloseModal ? <CircleCloseHoverIcon color='main-dark-blue' /> : <CircleCloseIcon color='main-dark-blue' />}
                 </div>
               </div>
               <div className={classNameFullScreen}>
