@@ -1,26 +1,25 @@
 import * as React from 'react'
 import styles from './Icons.module.css'
 
-const RoundCloseIcon = ({ color = 'green' }) => {
+const CloseIcon = ({ color = 'main-dark-blue' }) => {
   const className = styles[`${color}`]
   return (
     <svg
-      width={24}
-      height={24}
-      viewBox='0 0 24 24'
+      width={16}
+      height={16}
+      viewBox='0 0 16 16'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
       className={className}
     >
-      <circle cx={12} cy={12} r={11.5} stroke='none' />
       <path
-        d='M6 6L18 18'
+        d='M2 2L14 14'
         stroke='none'
         strokeLinecap='round'
         strokeLinejoin='round'
       />
       <path
-        d='M6 18L18 6'
+        d='M2 14L14 2'
         stroke='none'
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -29,4 +28,4 @@ const RoundCloseIcon = ({ color = 'green' }) => {
   )
 }
 
-export default RoundCloseIcon
+export default CloseIcon

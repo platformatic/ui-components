@@ -1,8 +1,8 @@
 import * as React from 'react'
 import styles from './Icons.module.css'
 
-const RoundCloseHoverIcon = ({ color = 'green' }) => {
-  const className = styles[`${color}`] + ' ' + styles[`fill-circle-${color}`]
+const CircleCloseIcon = ({ color = 'green' }) => {
+  const className = styles[`${color}`]
   return (
     <svg
       width={24}
@@ -12,26 +12,16 @@ const RoundCloseHoverIcon = ({ color = 'green' }) => {
       xmlns='http://www.w3.org/2000/svg'
       className={className}
     >
-      <circle
-        cx={12}
-        cy={12}
-        r={11.25}
-        fill='none'
-        fillOpacity={0.2}
-        stroke='none'
-        strokeWidth={1.5}
-      />
+      <circle cx={12} cy={12} r={11.5} stroke='none' />
       <path
         d='M6 6L18 18'
         stroke='none'
-        strokeWidth={1.5}
         strokeLinecap='round'
         strokeLinejoin='round'
       />
       <path
         d='M6 18L18 6'
         stroke='none'
-        strokeWidth={1.5}
         strokeLinecap='round'
         strokeLinejoin='round'
       />
@@ -39,4 +29,4 @@ const RoundCloseHoverIcon = ({ color = 'green' }) => {
   )
 }
 
-export default RoundCloseHoverIcon
+export default CircleCloseIcon
