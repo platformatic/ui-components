@@ -5,7 +5,7 @@ import styles from './Button.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Button (props) {
-  const { icon, label, color, backgroundColor, size, disabled, bold, hoverEffect, bordered, ...rest } = props
+  const { icon, label, color, backgroundColor, size, disabled, bold, hoverEffect, bordered, fullWidth, ...rest } = props
   let className = `${styles.button} ${styles['background-color-' + backgroundColor]} ${styles['color-' + color]} ${styles['button-' + size]}`
   if (!bordered) className += ` ${styles['no-border']}`
   if (disabled) {
@@ -18,7 +18,7 @@ function Button (props) {
     }
   }
   if (bold) className += ` ${styles.fontBold}`
-
+  if (fullWidth) className += ` ${styles.fullWidth}`
   return (
     <button className={className} disabled={disabled} alt={label} {...rest}>
       {icon ? <FontAwesomeIcon icon={icon} className={`${styles['margin-right-' + size]}`} data-testid='button-icon' /> : null}
@@ -63,7 +63,11 @@ Button.propTypes = {
   /**
    * Apply border: default true
    */
-  bordered: PropTypes.bool
+  bordered: PropTypes.bool,
+  /**
+   * Full Width: default false
+   */
+  fullWidth: PropTypes.bool
 }
 
 Button.defaultProps = {
@@ -73,7 +77,8 @@ Button.defaultProps = {
   size: 'large',
   bold: false,
   hoverEffect: 'hover',
-  bordered: true
+  bordered: true,
+  fullWidth: false
 }
 
 export default Button

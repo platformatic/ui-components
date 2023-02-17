@@ -123,3 +123,6 @@
 .underline-effect {
   @apply hover:underline;
 }
+.fullWidth {
+  @apply w-full;
+}

@@ -1,12 +1,15 @@
 .container {
   @apply flex flex-col
 }
-.title{
+.title {
   @apply text-sm text-main-dark-blue pb-1;
 }
-.value{
-  @apply text-xl font-semibold text-main-dark-blue;
+.value {
+  @apply text-xl font-semibold text-main-dark-blue inline-flex;
 }
 .link {
   @apply font-semibold;
+}
+.afterIcon {
+  @apply ml-3 cursor-pointer;
 }
