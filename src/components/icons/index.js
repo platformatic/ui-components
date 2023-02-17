@@ -8,12 +8,15 @@ import CircleExclamationIcon from './CircleExclamationIcon'
 import CircleCloseIcon from './CircleCloseIcon'
 import CircleCloseHoverIcon from './CircleCloseHoverIcon'
 import CloseIcon from './CloseIcon'
+import CopyIcon from './CopyIcon'
+import CreatedWorkspaceIcon from './CreatedWorkspaceIcon'
 import GearIcon from './GearIcon'
 import MetricsIcon from './MetricsIcon'
 import DynamicWorkspaceIcon from './DynamicWorkspaceIcon'
 import StaticWorkspaceIcon from './StaticWorkspaceIcon'
 import PullRequestIcon from './PullRequestIcon'
 import TriangleExclamationIcon from './TriangleExclamationIcon'
+import UpgradeIcon from './UpgradeIcon'
 
 export default {
   ApiIcon,
@@ -26,10 +29,13 @@ export default {
   CircleCloseIcon,
   CircleCloseHoverIcon,
   CloseIcon,
+  CopyIcon,
+  CreatedWorkspaceIcon,
   GearIcon,
   MetricsIcon,
   DynamicWorkspaceIcon,
   StaticWorkspaceIcon,
   PullRequestIcon,
-  TriangleExclamationIcon
+  TriangleExclamationIcon,
+  UpgradeIcon
 }
