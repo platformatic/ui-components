@@ -5,13 +5,17 @@ import styles from './Button.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Button (props) {
-  const { icon, label, color, backgroundColor, size, disabled, bold, underlineEffect, bordered, ...rest } = props
+  const { icon, label, color, backgroundColor, size, disabled, bold, hoverEffect, bordered, ...rest } = props
   let className = `${styles.button} ${styles['background-color-' + backgroundColor]} ${styles['color-' + color]} ${styles['button-' + size]}`
   if (!bordered) className += ` ${styles['no-border']}`
   if (disabled) {
     className += ` ${styles.disabled}`
   } else {
-    if (underlineEffect) className += ` ${styles['underline-effect']}`
+    if (hoverEffect === 'hover') {
+      className += ` ${styles['hover-' + backgroundColor]}`
+    } else {
+      className += ` ${styles['underline-effect']}`
+    }
   }
   if (bold) className += ` ${styles.fontBold}`
 
@@ -53,9 +57,9 @@ Button.propTypes = {
    */
   bold: PropTypes.bool,
   /**
-   * Underline effect on hover
+   * Effect on hover
    */
-  underlineEffect: PropTypes.bool,
+  hoverEffect: PropTypes.oneOf(['hover', 'underline']),
   /**
    * Apply border: default true
    */
@@ -68,7 +72,7 @@ Button.defaultProps = {
   disabled: false,
   size: 'large',
   bold: false,
-  underlineEffect: false,
+  hoverEffect: 'hover',
   bordered: true
 }
 

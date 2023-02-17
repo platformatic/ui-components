@@ -40,8 +40,9 @@ export default {
         options: ['small', 'medium', 'large', 'extra-large']
       }
     },
-    underlineEffect: {
-      type: 'boolean'
+    hoverEffect: {
+      type: 'radio',
+      options: ['hover', 'underline']
     },
     bordered: {
       type: 'boolean'
@@ -55,7 +56,7 @@ export const OnlyLabel = Template.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 OnlyLabel.args = {
   label: 'Sample label',
-  backgroundColor: 'light-green'
+  backgroundColor: 'main-green'
 }
 
 export const BorderedRed = Template.bind({})

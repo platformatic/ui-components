@@ -10,8 +10,8 @@ import CircleCloseHoverIcon from './CircleCloseHoverIcon'
 import CloseIcon from './CloseIcon'
 import GearIcon from './GearIcon'
 import MetricsIcon from './MetricsIcon'
-import PuzzleDynamicIcon from './PuzzleDynamicIcon'
-import PuzzleIcon from './PuzzleIcon'
+import DynamicWorkspaceIcon from './DynamicWorkspaceIcon'
+import StaticWorkspaceIcon from './StaticWorkspaceIcon'
 import PullRequestIcon from './PullRequestIcon'
 import TriangleExclamationIcon from './TriangleExclamationIcon'
 
@@ -28,8 +28,8 @@ export default {
   CloseIcon,
   GearIcon,
   MetricsIcon,
-  PuzzleDynamicIcon,
-  PuzzleIcon,
+  DynamicWorkspaceIcon,
+  StaticWorkspaceIcon,
   PullRequestIcon,
   TriangleExclamationIcon
 }

@@ -39,10 +39,10 @@
 .background-color-main-dark-blue{
   @apply bg-main-dark-blue !important;
 }
-.background-color-dark-blue{
+.background-color-dark-blue {
   @apply bg-dark-blue !important;
 }
-.background-color-light-blue{
+.background-color-light-blue {
   @apply bg-light-blue !important;
 }
 .background-color-white{
@@ -92,6 +92,33 @@
 }
 .disabled {
   @apply opacity-30 cursor-default;
+}
+.hover-main-green {
+  @apply hover:shadow-main-green;
+}
+.hover-light-green {
+  @apply hover:shadow-light-green;
+}
+.hover-dark-green {
+  @apply hover:shadow-dark-green;
+}
+.hover-main-dark-blue {
+  @apply hover:shadow-main-dark-blue;
+}
+.hover-dark-blue {
+  @apply hover:shadow-dark-blue;
+}
+.hover-light-blue {
+  @apply hover:shadow-light-blue;
+}
+.hover-white{
+  @apply hover:shadow-wrap;
+}
+.hover-error-red {
+  @apply hover:shadow-error-red;
+}
+.hover-tertiary-blue {
+  @apply hover:shadow-tertiary-blue;
 }
 .underline-effect {
   @apply hover:underline;

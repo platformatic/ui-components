@@ -42,7 +42,7 @@ function Sidebar (props) {
         ? (
           <>
             <button type='button' className={styles.buttonExpand} onClick={() => { setCollapsed(false) }}>
-              <Icons.PuzzleIcon color='white' />
+              <Icons.StaticWorkspaceIcon color='white' />
             </button>
             <div className={styles.titleCollapsed} data-testid='lateral-bar-title'>
               {title}
