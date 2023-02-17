@@ -40,8 +40,9 @@ export default {
         options: ['small', 'medium', 'large', 'extra-large']
       }
     },
-    underlineEffect: {
-      type: 'boolean'
+    hoverEffect: {
+      type: 'radio',
+      options: ['hover', 'underline']
     },
     bordered: {
       type: 'boolean'
