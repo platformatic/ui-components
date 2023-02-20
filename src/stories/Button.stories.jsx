@@ -46,6 +46,9 @@ export default {
     },
     bordered: {
       type: 'boolean'
+    },
+    fullWidth: {
+      type: 'boolean'
     }
   }
 }
