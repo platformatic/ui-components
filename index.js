@@ -13,6 +13,7 @@ import GHLoginButton from './src/components/GHLoginButton'
 import HorizontalSeparator from './src/components/HorizontalSeparator'
 import Forms from './src/components/forms'
 import Icons from './src/components/icons'
+import InfoBox from './src/components/InfoBox'
 import Sidebar from './src/components/Sidebar'
 import Layout from './src/components/layouts/Layout'
 import List from './src/components/List'
@@ -22,6 +23,7 @@ import Loader from './src/components/Loader'
 import LoginButton from './src/components/LoginButton'
 import Logo from './src/components/Logo'
 import Modal from './src/components/Modal'
+import PlatformaticIcon from './src/components/PlatformaticIcon'
 import Playground from './src/components/Playground'
 import SearchBar from './src/components/SearchBar'
 import SimpleMetric from './src/components/SimpleMetric'
@@ -46,6 +48,7 @@ export {
   GHLoginButton,
   Forms,
   Icons,
+  InfoBox,
   Sidebar,
   Layout,
   List,
@@ -55,6 +58,7 @@ export {
   LoginButton,
   Logo,
   Modal,
+  PlatformaticIcon,
   Playground,
   SearchBar,
   SimpleMetric,
