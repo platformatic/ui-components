@@ -3,25 +3,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './InfoBox.module.css'
 import Button from './Button'
-import Icons from './icons'
-
-function renderItemIcon (iconName, color) {
-  if (iconName) {
-    return React.createElement(Icons[`${iconName}`], {
-      size: 'extra-large',
-      color
-    })
-  }
-  return (<></>)
-}
+import PlatformaticIcon from './PlatformaticIcon'
 
 function InfoBox ({ children, iconLogo, helpText, buttonProps }) {
   return (
     <div className={styles.container}>
-      {renderItemIcon(iconLogo)}
+      <PlatformaticIcon size='extra-large' iconName={iconLogo} />
       {children}
       <p className={styles.helpText}>{helpText}</p>
-      {buttonProps && (<Button type='button' size='extra-large' label={buttonProps.label} color={buttonProps.color} backgroundColor={buttonProps.backgroundColor} onClick={() => buttonProps.onClick()} fullWidth />)}
+      {buttonProps && (<Button type='button' size='extra-large' label={buttonProps.label} color={buttonProps.color} backgroundColor={buttonProps.backgroundColor} onClick={() => buttonProps.onClick()} fullWidth bold />)}
     </div>
   )
 }

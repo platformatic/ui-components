@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import Icons from './icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 import styles from './Sidebar.module.css'
 import ReactTooltip from 'react-tooltip'
 import HorizontalSeparator from './HorizontalSeparator'
+import PlatformaticIcon from './PlatformaticIcon'
 import PropTypes from 'prop-types'
 
 function Sidebar (props) {
@@ -23,17 +22,6 @@ function Sidebar (props) {
   function onClickItemSelected (index) {
     setSelectedItem(index)
     onClickItemSelectedParent(index)
-  }
-
-  function renderItemIcon (iconName, title, isSelected) {
-    if (iconName) {
-      return React.createElement(Icons[`${iconName}`], {
-        size: 'small',
-        color: isSelected ? 'green' : 'white',
-        tip: title
-      })
-    }
-    return (<></>)
   }
 
   return (
@@ -61,7 +49,11 @@ function Sidebar (props) {
         : (
           <>
             <button type='button' className={styles.buttonCollapse} onClick={() => { setCollapsed(true) }}>
-              <FontAwesomeIcon icon={faChevronLeft} size='1x' color='white' />
+              <PlatformaticIcon
+                iconName='CircleBackIcon'
+                color='white'
+                size='normal'
+              />
             </button>
             <div className={styles.title} data-testid='lateral-bar-title'>
               {title}
@@ -72,7 +64,11 @@ function Sidebar (props) {
                 return (
                   <React.Fragment key={index}>
                     <button className={`${styles.buttonItem} ${collapsed && styles.buttonItemCollapsed}`} type='button' onClick={() => onClickItemSelected(index)}>
-                      {renderItemIcon(item.iconName, item.title, isSelected)}
+                      {item.iconName && (<PlatformaticIcon
+                        iconName={item.iconName}
+                        color={isSelected ? 'green' : 'white'}
+                        tip={item.title}
+                                         />)}
                       <div className={`${styles.item} ${isSelected ? styles.itemSelected : ''}`}>
                         <span className={styles.itemSubTitle}>{item.subTitle}</span>
                         <span className={styles.itemTitle}>{item.title}</span>
@@ -84,7 +80,11 @@ function Sidebar (props) {
               })}
               {/* <Button label='Add' buttonClass='transparent' icon={faPlus} color='white' size='small' inClick={onClickAdd}/> */}
               <button className={`${styles.buttonItem} ${collapsed && styles.buttonItemCollapsed}`} onClick={onClickAdd}>
-                <FontAwesomeIcon color='white' icon={faPlusCircle} data-tip={addTitle} />
+                <PlatformaticIcon
+                  iconName='CircleAddIcon'
+                  color='white'
+                  tip={addTitle}
+                />
                 {!collapsed && <span className={styles.item}>{addTitle}</span>}
               </button>
             </div>

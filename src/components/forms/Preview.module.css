@@ -11,5 +11,5 @@
   @apply font-semibold;
 }
 .afterIcon {
-  @apply ml-3 cursor-pointer;
+  @apply ml-3;
 }

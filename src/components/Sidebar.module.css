@@ -1,5 +1,5 @@
 .container {
-  @apply max-w-[216px] w-full p-4 border border-white rounded-md h-auto relative;
+  @apply max-w-[216px] w-full p-4 border border-white rounded-md h-auto relative min-h-[80vh];
   transition: max-width 0.2s linear;
 }
 .collapsed {
@@ -12,7 +12,7 @@
   @apply border rounded-md p-1 border-white;
 }
 .buttonCollapse {
-  @apply absolute border border-white rounded-full h-6 w-6 right-[-0.875rem]; 
+  @apply absolute border-0 right-[-0.875rem]; 
   /* Override tailwind dist button[type='button]: background: transparent*/
   @apply bg-main-dark-blue !important;
   top: 1rem;
