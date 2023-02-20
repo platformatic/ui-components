@@ -47,6 +47,9 @@
 .maxW70 {
   @apply max-w-[70%];
 }
+.maxW100 {
+  @apply max-w-[100%];
+}
 .titleFullscreen {
   @apply inline-flex items-center;
 }

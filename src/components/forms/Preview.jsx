@@ -2,38 +2,28 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Preview.module.css'
 import HorizontalSeparator from '../HorizontalSeparator'
-import Icons from '../icons'
-
-function renderItemIcon (iconName, color) {
-  if (iconName) {
-    return React.createElement(Icons[`${iconName}`], {
-      color,
-      size: 'small'
-    })
-  }
-  return (<></>)
-}
+import PlatformaticIcon from '../PlatformaticIcon'
 
 function renderLink (value) {
   return (<a className={styles.link} href={value} target='_blank' rel='noreferrer'>{value}</a>)
 }
 
-function renderParagraph (value, afterValueIcon, afterValueColor, onClickAfterValueIcon) {
+function renderParagraph (value, afterValueIcon, afterValueIconColor, onClickAfterValueIcon) {
   return (
     <>
       <p className={styles.value}>
         {value}
-        {afterValueIcon && (<span className={styles.afterIcon} onClick={onClickAfterValueIcon}>{renderItemIcon(afterValueIcon, afterValueColor)}</span>)}
+        {afterValueIcon && (<PlatformaticIcon iconName={afterValueIcon} color={afterValueIconColor} classes={styles.afterIcon} onClick={() => onClickAfterValueIcon} />)}
       </p>
     </>
   )
 }
-function Preview ({ title, value, isLink, children, afterValueIcon, afterValueColor, onClickAfterValueIcon }) {
+function Preview ({ title, value, isLink, children, afterValueIcon, afterValueIconColor, onClickAfterValueIcon }) {
   return (
     <>
       <div className={styles.container}>
         <p className={styles.title}>{title}</p>
-        {isLink ? renderLink(value) : renderParagraph(value, afterValueIcon, afterValueColor, onClickAfterValueIcon)}
+        {isLink ? renderLink(value) : renderParagraph(value, afterValueIcon, afterValueIconColor, onClickAfterValueIcon)}
       </div>
       {children}
       <HorizontalSeparator color='main-dark-green' opacity={20} marginBottom={10} marginTop={10} />
@@ -49,7 +39,10 @@ Preview.propTypes = {
   /**
    * value
    */
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
   /**
    * isLink
    */
@@ -61,7 +54,7 @@ Preview.propTypes = {
   /**
    * afterValueIcon
    */
-  afterValueIcon: PropTypes.object,
+  afterValueIcon: PropTypes.string,
   /**
    * afterValueIconColor
    */

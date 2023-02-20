@@ -1,5 +1,5 @@
 .container {
-  @apply bg-main-dark-blue border-0 rounded-md p-3 flex flex-col items-center gap-y-2 w-full;
+  @apply bg-main-dark-blue border-0 rounded-md p-4 flex flex-col items-center gap-y-4 w-full;
 }
 .helpText {
   @apply text-sm text-center mx-6 text-white font-normal;
