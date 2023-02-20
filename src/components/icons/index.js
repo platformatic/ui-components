@@ -4,6 +4,8 @@ import ApiEmptyIcon from './ApiEmptyIcon'
 import AppIcon from './AppIcon'
 import AppListIcon from './AppListIcon'
 import AppEmptyIcon from './AppEmptyIcon'
+import CircleAddIcon from './CircleAddIcon'
+import CircleBackIcon from './CircleBackIcon'
 import CircleExclamationIcon from './CircleExclamationIcon'
 import CircleCloseIcon from './CircleCloseIcon'
 import CircleCloseHoverIcon from './CircleCloseHoverIcon'
@@ -25,6 +27,8 @@ export default {
   AppIcon,
   AppListIcon,
   AppEmptyIcon,
+  CircleAddIcon,
+  CircleBackIcon,
   CircleExclamationIcon,
   CircleCloseIcon,
   CircleCloseHoverIcon,
