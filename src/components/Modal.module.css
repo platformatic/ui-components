@@ -41,15 +41,6 @@
 .contentFullscreen {
   @apply h-auto w-full pt-4;
 }
-.maxW50 {
-  @apply max-w-[50%];
-}
-.maxW70 {
-  @apply max-w-[70%];
-}
-.maxW100 {
-  @apply max-w-[100%];
-}
 .titleFullscreen {
   @apply inline-flex items-center;
 }
