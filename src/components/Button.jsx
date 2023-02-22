@@ -2,10 +2,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Button.module.css'
+import PlatformaticIcon from './PlatformaticIcon'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Button (props) {
-  const { icon, label, color, backgroundColor, size, disabled, bold, hoverEffect, bordered, fullWidth, ...rest } = props
+  const { icon, label, color, backgroundColor, size, disabled, bold, hoverEffect, bordered, fullWidth, platformaticIcon, ...rest } = props
   let className = `${styles.button} ${styles['background-color-' + backgroundColor]} ${styles['color-' + color]} ${styles['button-' + size]}`
   if (!bordered) className += ` ${styles['no-border']}`
   if (disabled) {
@@ -22,6 +23,7 @@ function Button (props) {
   return (
     <button className={className} disabled={disabled} alt={label} {...rest}>
       {icon ? <FontAwesomeIcon icon={icon} className={`${styles['margin-right-' + size]}`} data-testid='button-icon' /> : null}
+      {platformaticIcon ? <PlatformaticIcon iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' onClick={null} /> : null}
       <span>{label}</span>
     </button>
   )
@@ -67,7 +69,14 @@ Button.propTypes = {
   /**
    * Full Width: default false
    */
-  fullWidth: PropTypes.bool
+  fullWidth: PropTypes.bool,
+  /**
+   * platformaticIcon: should be removed once we use totally our icons
+   */
+  platformaticIcon: PropTypes.shape({
+    iconName: PropTypes.string,
+    color: PropTypes.string
+  })
 }
 
 Button.defaultProps = {
@@ -78,7 +87,8 @@ Button.defaultProps = {
   bold: false,
   hoverEffect: 'hover',
   bordered: true,
-  fullWidth: false
+  fullWidth: false,
+  platformaticIcon: null
 }
 
 export default Button

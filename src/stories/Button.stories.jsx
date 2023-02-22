@@ -100,9 +100,15 @@ DisabledGreen.args = {
 }
 
 export const DisabledRed = DisabledTemplate.bind({})
-
 DisabledRed.args = {
   label: 'A simple button',
   color: 'error-red',
   disabled: true
+}
+
+export const UsingPlatformaticIcon = Template.bind({})
+UsingPlatformaticIcon.args = {
+  label: 'White',
+  color: 'white',
+  platformaticIcon: { iconName: 'GearIcon', color: 'white' }
 }

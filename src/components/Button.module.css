@@ -1,5 +1,5 @@
 .button {
-  @apply rounded text-center cursor-pointer font-normal rounded-md border border-solid box-border;
+  @apply rounded text-center cursor-pointer font-normal rounded-md border border-solid box-border flex items-center;
 }
 .fontBold {
   @apply font-semibold;
