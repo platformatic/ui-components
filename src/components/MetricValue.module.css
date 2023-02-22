@@ -2,7 +2,7 @@
   @apply flex justify-center items-center gap-x-2;
 }
 .value {
-  @apply text-[32px] font-semibold;
+  @apply text-sm lg:text-base;
 }
 .unit,
 .pre {
