@@ -80,6 +80,7 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
+  label: '',
   color: 'main-dark-blue',
   backgroundColor: 'transparent',
   disabled: false,
