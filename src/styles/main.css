@@ -2,15 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   @apply bg-main-dark-blue;
   font-family: 'Montserrat';
 }
+
 a {
   @apply text-tertiary-blue;
 }
 
 input {
   background-color: transparent;
-
 }
