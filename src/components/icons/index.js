@@ -16,6 +16,7 @@ import CloseIcon from './CloseIcon'
 import CopyIcon from './CopyIcon'
 import CreatedWorkspaceIcon from './CreatedWorkspaceIcon'
 import DynamicWorkspaceIcon from './DynamicWorkspaceIcon'
+import EditIcon from './EditIcon'
 import GearIcon from './GearIcon'
 import LiveIcon from './LiveIcon'
 import MetricsIcon from './MetricsIcon'
@@ -47,6 +48,7 @@ export default {
   CreatedWorkspaceIcon,
   DynamicWorkspaceIcon,
   GearIcon,
+  EditIcon,
   LiveIcon,
   MetricsIcon,
   PlayIcon,
