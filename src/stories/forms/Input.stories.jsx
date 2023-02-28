@@ -1,11 +1,24 @@
 'use strict'
 import React, { useState } from 'react'
 import Input from '../../components/forms/Input'
-import { faAdd, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+
+const divStyle = {
+  width: '100%',
+  height: 'auto',
+  padding: '20px',
+  backgroundColor: 'white'
+}
 
 export default {
   title: 'Platformatic/Forms/Input',
-  component: Input
+  component: Input,
+  decorators: [
+    (Story) => (
+      <div style={divStyle}>
+        <Story />
+      </div>
+    )
+  ]
 }
 
 const Template = (args) => <Input {...args} />
@@ -63,7 +76,14 @@ export const IconBeforeAndAfter = Template.bind({})
 IconBeforeAndAfter.args = {
   name: 'test',
   placeholder: 'Platformatic',
-  beforeInputIcon: faAdd,
-  afterInputIcon: faCheckCircle,
-  afterInputIconColor: 'error-red'
+  beforeIcon: {
+    iconName: 'CopyIcon',
+    color: 'main-dark-blue',
+    size: 'small',
+    onClick: () => { alert('clicked') }
+  },
+  afterIcon: {
+    iconName: 'CircleAddIcon',
+    color: 'red'
+  }
 }

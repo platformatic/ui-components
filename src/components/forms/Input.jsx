@@ -3,19 +3,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Input.module.css'
 import commonStyles from '../Common.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import PlatformaticIcon from '../PlatformaticIcon'
 
-function Input ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled, beforeInputIcon, beforeInputIconColor, afterInputIcon, afterInputIconColor, onClickBeforeIcon }) {
+function Input ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled, beforeIcon, afterIcon }) {
   let className = styles.inputContainer + ' ' + commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`] + ' ' + commonStyles.padded
   const showError = errorMessage.length > 0
   if (showError) className += ' ' + commonStyles['bordered--error-red']
-  const classNameBeforeInput = `${styles.beforeInputIcon} ` + styles[`color-${beforeInputIconColor}`]
+
   return (
     <div className={styles.container}>
       <div className={className}>
-        {beforeInputIcon && <FontAwesomeIcon icon={beforeInputIcon} className={classNameBeforeInput} data-testid='before-icon' color='white' onClick={() => onClickBeforeIcon()} />}
+        {beforeIcon && <PlatformaticIcon iconName={beforeIcon.iconName} classes={styles.beforeInputIcon} size='small' data-testid='before-icon' color={beforeIcon.color} onClick={() => beforeIcon.onClick()} />}
         <input type='text' name={name} value={value} placeholder={placeholder} className={styles.fullWidth} onChange={onChange} disabled={disabled} />
-        {afterInputIcon && <FontAwesomeIcon icon={afterInputIcon} className={styles[`color-${afterInputIconColor}`]} data-testid='after-icon' />}
+        {afterIcon && <PlatformaticIcon iconName={afterIcon.iconName} color={afterIcon.color} data-testid='after-icon' onClick={null} />}
       </div>
       {showError && <span className={commonStyles['error-message']}>{errorMessage}</span>}
     </div>
@@ -48,40 +48,33 @@ Input.propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * beforeInputIcon
+   * beforeIcon: PlatformaticIcon props
    */
-  beforeInputIcon: PropTypes.object,
+  beforeIcon: PropTypes.shape({
+    iconName: PropTypes.string,
+    color: PropTypes.string,
+    onClick: PropTypes.func
+  }),
   /**
-   * beforeInputIconColor
+   * afterIcon: PlatformaticIcon props
    */
-  beforeInputIconColor: PropTypes.oneOf(['error-red', 'main-dark-blue', 'white']),
-  /**
-   * afterInputIcon
-   */
-  afterInputIcon: PropTypes.object,
-  /**
-   * afterInputIconColor
-   */
-  afterInputIconColor: PropTypes.oneOf(['error-red', 'main-dark-blue', 'white']),
-  /**
-   * onClickBeforeIcon
-   */
-  onClickBeforeIcon: PropTypes.func
+  afterIcon: PropTypes.shape({
+    iconName: PropTypes.string,
+    color: PropTypes.string,
+    onClick: PropTypes.func
+  })
 }
 
 Input.defaultProps = {
   placeholder: '',
-  value: null,
+  value: '',
   name: '',
   borderColor: 'main-green',
   errorMessage: '',
   onChange: () => {},
   disabled: false,
-  beforeInputIcon: null,
-  beforeInputIconColor: 'main-dark-blue',
-  afterInputIcon: null,
-  onClickBeforeIcon: () => {},
-  afterInputIconColor: 'main-dark-blue'
+  beforeIcon: null,
+  afterIcon: null
 }
 
 export default Input
