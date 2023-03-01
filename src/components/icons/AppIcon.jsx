@@ -1,5 +1,5 @@
 import React from 'react'
-export default function AppEmptyIcon () {
+export default function AppIcon () {
   return (
     <svg
       width={32}
