@@ -79,3 +79,11 @@ WithInput.args = {
   title: 'Different cases',
   helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 }
+
+export const RedTitledField = SimpleTemplate.bind({})
+
+RedTitledField.args = {
+  title: 'Red Field Title',
+  titleColor: 'error-red',
+  helper: 'A very very very very very very very very very very very very very very simple helper'
+}

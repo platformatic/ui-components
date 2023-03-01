@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Preview.module.css'
-import HorizontalSeparator from '../HorizontalSeparator'
 import PlatformaticIcon from '../PlatformaticIcon'
 
 function renderLink (value) {
@@ -26,7 +25,6 @@ function Preview ({ title, value, isLink, children, afterValueIcon, afterValueIc
         {isLink ? renderLink(value) : renderParagraph(value, afterValueIcon, afterValueIconColor, onClickAfterValueIcon)}
       </div>
       {children}
-      <HorizontalSeparator color='main-dark-green' opacity={20} marginBottom={10} marginTop={10} />
     </>
   )
 }

@@ -10,6 +10,7 @@ import Calendar7Icon from './Calendar7Icon'
 import CircleAddIcon from './CircleAddIcon'
 import CircleBackIcon from './CircleBackIcon'
 import CircleExclamationIcon from './CircleExclamationIcon'
+import CircleCheckMarkIcon from './CircleCheckMarkIcon'
 import CircleCloseIcon from './CircleCloseIcon'
 import CircleCloseHoverIcon from './CircleCloseHoverIcon'
 import CloseIcon from './CloseIcon'
@@ -40,6 +41,7 @@ export default {
   Calendar7Icon,
   CircleAddIcon,
   CircleBackIcon,
+  CircleCheckMarkIcon,
   CircleExclamationIcon,
   CircleCloseIcon,
   CircleCloseHoverIcon,
