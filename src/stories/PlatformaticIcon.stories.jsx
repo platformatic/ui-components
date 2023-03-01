@@ -23,13 +23,29 @@ PlatformaticIconDefault.args = {
 const AllIconsTemplate = (args) => {
   const icons = Object.values(Icons)
   return (
-    <div style={divStyle}>
-      {icons.map(IconComponent => <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} {...args} />)}
-    </div>
+    <>
+      <p className='text-white'> Platformatic all icons size {args.size}</p>
+      <div style={divStyle}>
+        {icons.map(IconComponent => <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} {...args} />)}
+      </div>
+    </>
   )
 }
-export const PlatformaticIconAll = AllIconsTemplate.bind({})
-PlatformaticIconAll.args = {
+export const PlatformaticIconSmall = AllIconsTemplate.bind({})
+PlatformaticIconSmall.args = {
   color: 'white',
-  size: 'small'
+  size: 'small',
+  onClick: null
+}
+
+export const PlatformaticIconNormal = AllIconsTemplate.bind({})
+PlatformaticIconNormal.args = {
+  color: 'white',
+  size: 'normal'
+}
+
+export const PlatformaticIconLarge = AllIconsTemplate.bind({})
+PlatformaticIconLarge.args = {
+  color: 'green',
+  size: 'large'
 }
