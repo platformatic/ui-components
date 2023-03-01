@@ -1,11 +1,17 @@
 .container {
   @apply flex flex-col;
 }
-.title{
-  @apply text-xl font-semibold text-main-dark-blue;
+.title {
+  @apply text-xl font-semibold;
+}
+.text-color-main-dark-blue {
+  @apply text-main-dark-blue;
+}
+.text-color-error-red {
+  @apply text-error-red;
 }
 .helper{
-  @apply text-sm text-main-dark-blue pb-4;
+  @apply text-sm pb-4;
 }
 .content {
   @apply flex gap-x-1 w-full;
