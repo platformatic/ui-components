@@ -1,3 +1,4 @@
+import AddIcon from './AddIcon'
 import ApiIcon from './ApiIcon'
 import ApiIconClosed from './ApiIconClosed'
 import ApiEmptyIcon from './ApiEmptyIcon'
@@ -31,6 +32,7 @@ import Users2Icon from './Users2Icon'
 import UpgradeIcon from './UpgradeIcon'
 
 export default {
+  AddIcon,
   ApiIcon,
   ApiIconClosed,
   ApiEmptyIcon,
