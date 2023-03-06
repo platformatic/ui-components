@@ -1,5 +1,7 @@
 import AddIcon from './AddIcon'
 import AlertIcon from './AlertIcon'
+import AllInOneIcon from './AllInOneIcon'
+import ApiCloudIcon from './ApiCloudIcon'
 import ApiIcon from './ApiIcon'
 import ApiIconClosed from './ApiIconClosed'
 import ApiEmptyIcon from './ApiEmptyIcon'
@@ -34,6 +36,8 @@ import UpgradeIcon from './UpgradeIcon'
 export default {
   AddIcon,
   AlertIcon,
+  AllInOneIcon,
+  ApiCloudIcon,
   ApiIcon,
   ApiIconClosed,
   ApiEmptyIcon,
