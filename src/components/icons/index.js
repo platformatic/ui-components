@@ -1,4 +1,5 @@
 import AddIcon from './AddIcon'
+import AlertIcon from './AlertIcon'
 import ApiIcon from './ApiIcon'
 import ApiIconClosed from './ApiIconClosed'
 import ApiEmptyIcon from './ApiEmptyIcon'
@@ -27,12 +28,12 @@ import PullRequestIcon from './PullRequestIcon'
 import StaticWorkspaceIcon from './StaticWorkspaceIcon'
 import StopIcon from './StopIcon'
 import TerminalIcon from './TerminalIcon'
-import TriangleExclamationIcon from './TriangleExclamationIcon'
 import Users2Icon from './Users2Icon'
 import UpgradeIcon from './UpgradeIcon'
 
 export default {
   AddIcon,
+  AlertIcon,
   ApiIcon,
   ApiIconClosed,
   ApiEmptyIcon,
@@ -61,7 +62,6 @@ export default {
   StaticWorkspaceIcon,
   StopIcon,
   TerminalIcon,
-  TriangleExclamationIcon,
   UpgradeIcon,
   Users2Icon
 }

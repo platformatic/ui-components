@@ -2,7 +2,6 @@ import React from 'react'
 import PullRequestIcon from '../../components/icons/PullRequestIcon'
 import CloseIcon from '../../components/icons/CloseIcon'
 import CircleCloseIcon from '../../components/icons/CircleCloseIcon'
-import TriangleExclamationIcon from '../../components/icons/TriangleExclamationIcon'
 import StaticWorkspaceIcon from '../../components/icons/StaticWorkspaceIcon'
 import CreatedWorkspaceIcon from '../../components/icons/CreatedWorkspaceIcon'
 import UpgradeIcon from '../../components/icons/UpgradeIcon'
@@ -48,10 +47,6 @@ CloseIconDefault.args = {}
 const CircleCloseIconTemplate = (args) => <CircleCloseIcon {...args} />
 export const CircleCloseIconDefault = CircleCloseIconTemplate.bind({})
 CircleCloseIconDefault.args = {}
-
-const TriangleExclamationIconTemplate = (args) => <TriangleExclamationIcon {...args} />
-export const TriangleExclamationIconDefault = TriangleExclamationIconTemplate.bind({})
-TriangleExclamationIconDefault.args = {}
 
 const WorkspaceIconsTemplate = () => (
   [<StaticWorkspaceIcon key='a' />, <DynamicWorkspaceIcon key='b' />].map((component, index) => {
