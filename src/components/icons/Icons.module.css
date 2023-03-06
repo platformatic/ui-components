@@ -1,20 +1,24 @@
 .green > circle,
 .green > rect, 
+.green > line, 
 .green > path {
   @apply stroke-main-green;
 }
 .red > circle,
 .red > rect,
+.red > line, 
 .red > path {
   @apply stroke-error-red;
 }
 .white > circle,
 .white > rect,
+.white > line,
 .white > path {
   @apply stroke-white;
 }
 .main-dark-blue > circle,
 .main-dark-blue > rect,
+.main-dark-blue > line,
 .main-dark-blue > path {
   @apply stroke-main-dark-blue;
 }
