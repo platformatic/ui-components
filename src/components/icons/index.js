@@ -27,6 +27,7 @@ import StaticWorkspaceIcon from './StaticWorkspaceIcon'
 import StopIcon from './StopIcon'
 import TerminalIcon from './TerminalIcon'
 import TriangleExclamationIcon from './TriangleExclamationIcon'
+import Users2Icon from './Users2Icon'
 import UpgradeIcon from './UpgradeIcon'
 
 export default {
@@ -59,5 +60,6 @@ export default {
   StopIcon,
   TerminalIcon,
   TriangleExclamationIcon,
-  UpgradeIcon
+  UpgradeIcon,
+  Users2Icon
 }
