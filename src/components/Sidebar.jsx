@@ -40,9 +40,6 @@ function Sidebar (props) {
               <button type='button' className={styles.buttonSettings} onClick={onClickSettings}>
                 <Icons.GearIcon color='white' />
               </button>
-              <div className={styles.titleCollapsed} data-testid='lateral-bar-title'>
-                Settings
-              </div>
             </div>
           </>
           )
@@ -79,7 +76,7 @@ function Sidebar (props) {
                 )
               })}
               {/* <Button label='Add' buttonClass='transparent' icon={faPlus} color='white' size='small' inClick={onClickAdd}/> */}
-              <button className={`${styles.buttonItem} ${collapsed && styles.buttonItemCollapsed}`} onClick={onClickAdd}>
+              <button className={`${styles.buttonCreate} ${collapsed && styles.buttonItemCollapsed}`} onClick={onClickAdd}>
                 <PlatformaticIcon
                   iconName='CircleAddIcon'
                   color='white'
