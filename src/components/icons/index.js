@@ -24,19 +24,19 @@ import CircleCloseIcon from './CircleCloseIcon'
 import CircleCloseHoverIcon from './CircleCloseHoverIcon'
 import CloseIcon from './CloseIcon'
 import CopyIcon from './CopyIcon'
-import CreatedWorkspaceIcon from './CreatedWorkspaceIcon'
-import DynamicWorkspaceIcon from './DynamicWorkspaceIcon'
 import EditIcon from './EditIcon'
 import GearIcon from './GearIcon'
 import LiveIcon from './LiveIcon'
 import MetricsIcon from './MetricsIcon'
 import PlayIcon from './PlayIcon'
 import PullRequestIcon from './PullRequestIcon'
-import StaticWorkspaceIcon from './StaticWorkspaceIcon'
 import StopIcon from './StopIcon'
 import TerminalIcon from './TerminalIcon'
 import Users2Icon from './Users2Icon'
 import UpgradeIcon from './UpgradeIcon'
+import WorkspaceDynamicIcon from './WorkspaceDynamicIcon'
+import WorkspaceReadyIcon from './WorkspaceReadyIcon'
+import WorkspaceStaticIcon from './WorkspaceStaticIcon'
 
 export default {
   AddIcon,
@@ -65,17 +65,17 @@ export default {
   CircleCloseHoverIcon,
   CloseIcon,
   CopyIcon,
-  CreatedWorkspaceIcon,
-  DynamicWorkspaceIcon,
   GearIcon,
   EditIcon,
   LiveIcon,
   MetricsIcon,
   PlayIcon,
   PullRequestIcon,
-  StaticWorkspaceIcon,
   StopIcon,
   TerminalIcon,
   UpgradeIcon,
-  Users2Icon
+  Users2Icon,
+  WorkspaceDynamicIcon,
+  WorkspaceReadyIcon,
+  WorkspaceStaticIcon
 }

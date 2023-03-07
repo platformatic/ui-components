@@ -30,7 +30,7 @@ function Sidebar (props) {
         ? (
           <>
             <button type='button' className={styles.buttonExpand} onClick={() => { setCollapsed(false) }}>
-              <Icons.StaticWorkspaceIcon color='white' />
+              <Icons.WorkspaceStaticIcon color='white' />
             </button>
             <div className={styles.titleCollapsed} data-testid='lateral-bar-title'>
               {title}
@@ -65,6 +65,7 @@ function Sidebar (props) {
                         iconName={item.iconName}
                         color={isSelected ? 'green' : 'white'}
                         tip={item.title}
+                        size='normal'
                                          />)}
                       <div className={`${styles.item} ${isSelected ? styles.itemSelected : ''}`}>
                         <span className={styles.itemSubTitle}>{item.subTitle}</span>

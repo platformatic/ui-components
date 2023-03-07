@@ -51,7 +51,7 @@ export const WithIcon = Template.bind({})
 WithIcon.args = {
   title: 'My title',
   value: 'My value',
-  afterValueIcon: 'StaticWorkspaceIcon',
+  afterValueIcon: 'WorkspaceStaticIcon',
   afterValueIconColor: 'green',
   onClickAfterValueIcon: () => alert('icon clicked')
 }
