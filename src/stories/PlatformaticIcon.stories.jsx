@@ -16,7 +16,7 @@ export default {
 const Template = (args) => <PlatformaticIcon {...args} />
 export const PlatformaticIconDefault = Template.bind({})
 PlatformaticIconDefault.args = {
-  iconName: 'CopyIcon',
+  iconName: 'CopyPasteIcon',
   onClick: () => alert('clicked')
 }
 

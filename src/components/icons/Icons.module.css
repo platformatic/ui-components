@@ -22,16 +22,16 @@
 .main-dark-blue > path {
   @apply stroke-main-dark-blue;
 }
-.filled-white > path {
+.filled-white {
   @apply fill-white
 }
-.filled-red > path{
+.filled-red{
   @apply fill-error-red;
 }
-.filled-main-dark-blue > path {
+.filled-main-dark-blue {
   @apply fill-main-dark-blue ;
 }
-.filled-green > path {
+.filled-green {
   @apply fill-main-green ;
 }
 

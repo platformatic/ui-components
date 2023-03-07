@@ -14,8 +14,8 @@ import ArrowLeftIcon from './ArrowLeftIcon'
 import ArrowRightIcon from './ArrowRightIcon'
 import ArrowUpIcon from './ArrowUpIcon'
 import CalendarIcon from './CalendarIcon'
-import Calendar1Icon from './Calendar1Icon'
-import Calendar7Icon from './Calendar7Icon'
+import Calendar1DayIcon from './Calendar1DayIcon'
+import Calendar7DaysIcon from './Calendar7DaysIcon'
 import CircleAddIcon from './CircleAddIcon'
 import CircleBackIcon from './CircleBackIcon'
 import CircleExclamationIcon from './CircleExclamationIcon'
@@ -23,7 +23,8 @@ import CircleCheckMarkIcon from './CircleCheckMarkIcon'
 import CircleCloseIcon from './CircleCloseIcon'
 import CircleCloseHoverIcon from './CircleCloseHoverIcon'
 import CloseIcon from './CloseIcon'
-import CopyIcon from './CopyIcon'
+import CopyPasteIcon from './CopyPasteIcon'
+import DatabaseIcon from './DatabaseIcon'
 import EditIcon from './EditIcon'
 import GearIcon from './GearIcon'
 import LiveIcon from './LiveIcon'
@@ -55,8 +56,8 @@ export default {
   ArrowRightIcon,
   ArrowUpIcon,
   CalendarIcon,
-  Calendar1Icon,
-  Calendar7Icon,
+  Calendar1DayIcon,
+  Calendar7DaysIcon,
   CircleAddIcon,
   CircleBackIcon,
   CircleCheckMarkIcon,
@@ -64,7 +65,8 @@ export default {
   CircleCloseIcon,
   CircleCloseHoverIcon,
   CloseIcon,
-  CopyIcon,
+  CopyPasteIcon,
+  DatabaseIcon,
   GearIcon,
   EditIcon,
   LiveIcon,

@@ -77,7 +77,7 @@ IconBeforeAndAfter.args = {
   name: 'test',
   placeholder: 'Platformatic',
   beforeIcon: {
-    iconName: 'CopyIcon',
+    iconName: 'CopyPasteIcon',
     color: 'main-dark-blue',
     size: 'small',
     onClick: () => { alert('clicked') }
