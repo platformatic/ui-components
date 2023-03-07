@@ -8,6 +8,11 @@ import ApiEmptyIcon from './ApiEmptyIcon'
 import AppIcon from './AppIcon'
 import AppListIcon from './AppListIcon'
 import AppEmptyIcon from './AppEmptyIcon'
+import ArrowDownFullIcon from './ArrowDownFullIcon'
+import ArrowDownIcon from './ArrowDownIcon'
+import ArrowLeftIcon from './ArrowLeftIcon'
+import ArrowRightIcon from './ArrowRightIcon'
+import ArrowUpIcon from './ArrowUpIcon'
 import CalendarIcon from './CalendarIcon'
 import Calendar1Icon from './Calendar1Icon'
 import Calendar7Icon from './Calendar7Icon'
@@ -44,6 +49,11 @@ export default {
   AppIcon,
   AppListIcon,
   AppEmptyIcon,
+  ArrowDownFullIcon,
+  ArrowDownIcon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  ArrowUpIcon,
   CalendarIcon,
   Calendar1Icon,
   Calendar7Icon,

@@ -22,6 +22,19 @@
 .main-dark-blue > path {
   @apply stroke-main-dark-blue;
 }
+.filled-white > path {
+  @apply fill-white
+}
+.filled-red > path{
+  @apply fill-error-red;
+}
+.filled-main-dark-blue > path {
+  @apply fill-main-dark-blue ;
+}
+.filled-green > path {
+  @apply fill-main-green ;
+}
+
 .fill-circle-green > circle {
   @apply fill-white;
 }
