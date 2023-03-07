@@ -82,7 +82,7 @@ ApiCloudIcon.propTypes = {
   /**
    * Size
    */
-  size: PropTypes.oneOf(['small', 'medium', 'large', 'extraLarge'])
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large'])
 }
 
 ApiCloudIcon.defaultProps = {

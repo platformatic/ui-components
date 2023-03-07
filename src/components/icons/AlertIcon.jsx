@@ -70,7 +70,7 @@ AlertIcon.propTypes = {
   /**
    * Size
    */
-  size: PropTypes.oneOf(['small', 'medium', 'large', 'extraLarge'])
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large'])
 }
 
 AlertIcon.defaultProps = {

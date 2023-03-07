@@ -73,7 +73,7 @@ Users2Icon.propTypes = {
   /**
    * Size
    */
-  size: PropTypes.oneOf(['small', 'medium', 'large', 'extraLarge'])
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large'])
 }
 
 Users2Icon.defaultProps = {

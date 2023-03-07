@@ -64,7 +64,7 @@ ArrowRightIcon.propTypes = {
   /**
    * Size
    */
-  size: PropTypes.oneOf(['small', 'medium', 'large', 'extraLarge'])
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large'])
 }
 
 ArrowRightIcon.defaultProps = {
