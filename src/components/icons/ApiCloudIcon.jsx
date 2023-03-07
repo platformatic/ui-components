@@ -24,7 +24,6 @@ const ApiCloudIcon = ({ color, size }) => {
           <circle cx={4} cy={12} r={1} stroke='none' />
           <circle cx={12} cy={12} r={1} stroke='none' />
           <circle cx={8} cy={13} r={1} stroke='none' />
-
         </svg>
       )
       break
