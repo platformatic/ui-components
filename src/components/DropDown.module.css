@@ -1,11 +1,9 @@
 .dropDown {
   @apply mx-4 relative flex flex-col;
 }
-
 .right {
   @apply items-end;
 }
-
 .left {
   @apply items-start;
 }
