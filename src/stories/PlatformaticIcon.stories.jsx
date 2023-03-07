@@ -49,3 +49,9 @@ PlatformaticIconLarge.args = {
   color: 'green',
   size: 'large'
 }
+
+export const PlatformaticIconExtraLarge = AllIconsTemplate.bind({})
+PlatformaticIconExtraLarge.args = {
+  color: 'green',
+  size: 'extra-large'
+}
