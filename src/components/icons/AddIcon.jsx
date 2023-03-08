@@ -22,7 +22,7 @@ const AddIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'normal':
+    case 'medium':
       icon = (
         <svg
           width={24}
@@ -72,7 +72,7 @@ AddIcon.propTypes = {
 
 AddIcon.defaultProps = {
   color: 'main-dark-blue',
-  size: 'normal'
+  size: 'medium'
 }
 
 export default AddIcon

@@ -26,7 +26,7 @@ const WorkspaceReadyIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'normal':
+    case 'medium':
       icon = (
         <svg
           width={24}
@@ -138,7 +138,7 @@ WorkspaceReadyIcon.propTypes = {
 
 WorkspaceReadyIcon.defaultProps = {
   color: 'main-dark-blue',
-  size: 'normal'
+  size: 'medium'
 }
 
 export default WorkspaceReadyIcon

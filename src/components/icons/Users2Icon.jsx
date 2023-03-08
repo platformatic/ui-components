@@ -24,7 +24,7 @@ const Users2Icon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'normal':
+    case 'medium':
       icon = (
         <svg
           width={24}
@@ -78,7 +78,7 @@ Users2Icon.propTypes = {
 
 Users2Icon.defaultProps = {
   color: 'main-dark-blue',
-  size: 'normal'
+  size: 'medium'
 }
 
 export default Users2Icon

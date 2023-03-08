@@ -21,7 +21,7 @@ const ArrowLeftIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'normal':
+    case 'medium':
       icon = (
         <svg
           width={24}
@@ -69,7 +69,7 @@ ArrowLeftIcon.propTypes = {
 
 ArrowLeftIcon.defaultProps = {
   color: 'main-dark-blue',
-  size: 'normal'
+  size: 'medium'
 }
 
 export default ArrowLeftIcon
