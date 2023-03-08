@@ -36,9 +36,9 @@ EmptySidebar.args = {
 
 const FullSidebarTemplate = (args) => {
   const [items, setItems] = useState([
-    { iconName: 'StaticWorkspaceIcon', subTitle: 'Subtitle', title: 'a very very very very very long title 1' },
+    { iconName: 'WorkspaceStaticIcon', subTitle: 'Subtitle', title: 'a very very very very very long title 1' },
     { title: 'Title number 2', subTitle: 'Subtitle 2' },
-    { title: 'Another Title', subTitle: 'Subtitle 3', iconName: 'DynamicWorkspaceIcon' }
+    { title: 'Another Title', subTitle: 'Subtitle 3', iconName: 'WorkspaceDynamicIcon' }
   ])
   function onClickAdd () {
     const tmpItem = items.map(item => item)

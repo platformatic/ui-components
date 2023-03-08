@@ -2,7 +2,7 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 
-const CircleAddIcon = ({ color, size }) => {
+const ArrowDownIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   let icon = <></>
 
@@ -17,9 +17,7 @@ const CircleAddIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <circle cx={8} cy={8} r={6} stroke='none' />
-          <line x1={8} y1={5} x2={8} y2={11} stroke='none' strokeLinecap='round' />
-          <line x1={5} y1={8} x2={11} y2={8} stroke='none' strokeLinecap='round' />
+          <path d='M14 11L8 5L2 11' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
@@ -33,9 +31,7 @@ const CircleAddIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <circle cx={12} cy={12} r={9} stroke='none' strokeWidth={1.5} />
-          <line x1={12} y1={7.5} x2={12} y2={16.5} stroke='none' strokeWidth={1.5} strokeLinecap='round' />
-          <line x1={7.5} y1={12} x2={16.5} y2={12} stroke='none' strokeWidth={1.5} strokeLinecap='round' />
+          <path d='M21 16.5L12 7.5L3 16.5' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
@@ -49,9 +45,7 @@ const CircleAddIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <circle cx={20} cy={20} r={15} stroke='none' strokeWidth={2} />
-          <line x1={19.75} y1={12.25} x2={19.75} y2={27.75} stroke='none' strokeWidth={2} strokeLinecap='round' />
-          <line x1={12.25} y1={20.25} x2={27.75} y2={20.25} stroke='none' strokeWidth={2} strokeLinecap='round' />
+          <path d='M35 27.5L20 12.5L5 27.5' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
@@ -62,7 +56,7 @@ const CircleAddIcon = ({ color, size }) => {
   return icon
 }
 
-CircleAddIcon.propTypes = {
+ArrowDownIcon.propTypes = {
   /**
    * color of text, icon and borders
    */
@@ -73,9 +67,9 @@ CircleAddIcon.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large'])
 }
 
-CircleAddIcon.defaultProps = {
+ArrowDownIcon.defaultProps = {
   color: 'main-dark-blue',
   size: 'normal'
 }
 
-export default CircleAddIcon
+export default ArrowDownIcon

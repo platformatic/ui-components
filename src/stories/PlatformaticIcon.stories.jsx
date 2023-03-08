@@ -16,7 +16,7 @@ export default {
 const Template = (args) => <PlatformaticIcon {...args} />
 export const PlatformaticIconDefault = Template.bind({})
 PlatformaticIconDefault.args = {
-  iconName: 'CopyIcon',
+  iconName: 'CopyPasteIcon',
   onClick: () => alert('clicked')
 }
 
@@ -48,4 +48,10 @@ export const PlatformaticIconLarge = AllIconsTemplate.bind({})
 PlatformaticIconLarge.args = {
   color: 'green',
   size: 'large'
+}
+
+export const PlatformaticIconExtraLarge = AllIconsTemplate.bind({})
+PlatformaticIconExtraLarge.args = {
+  color: 'green',
+  size: 'extra-large'
 }

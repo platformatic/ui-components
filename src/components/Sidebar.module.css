@@ -6,7 +6,7 @@
   @apply max-w-[96px] text-center;
 }
 .buttonExpand {
-  @apply border rounded-md p-1 border-white;
+  @apply border rounded-md p-0 border-white;
 }
 .buttonSettings {
   @apply border rounded-md p-1 border-white;
@@ -18,13 +18,17 @@
   top: 1rem;
 }
 .title {
-  @apply text-white font-bold py-3;
+  @apply text-white font-bold pb-6;
 }
 .titleCollapsed {
   @apply text-white text-[10px];
 }
 .buttonItem {
-  @apply flex items-center justify-start border-0 w-full;
+  @apply flex items-center justify-start border-0 w-full py-1;
+}
+
+.buttonCreate {
+  @apply flex items-center justify-start border-0 w-full pt-1 pb-4;
 }
 .buttonItemCollapsed {
   @apply w-auto;
@@ -44,7 +48,7 @@
   @apply text-light-green;
 }
 .items {
-  @apply flex flex-col gap-y-3 py-2;
+  @apply flex flex-col gap-y-4;
 }
 .bottom {
   @apply absolute left-0 bottom-[1rem] w-full px-4;

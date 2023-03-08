@@ -22,7 +22,7 @@ export default function Modal (props) {
               <div className={styles.header}>
                 <div className={styles.title}>{title}</div>
                 <div className={styles.close} onClick={() => setIsOpen(false)}>
-                  <CloseIcon />
+                  <CloseIcon size='small' />
                 </div>
               </div>
               <div>

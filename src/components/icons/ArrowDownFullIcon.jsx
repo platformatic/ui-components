@@ -2,8 +2,9 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 
-const CircleAddIcon = ({ color, size }) => {
-  const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
+const ArrowDownFullIcon = ({ color, size }) => {
+  const className = `${styles.noShrinkForFlex} ` + styles[`${color}`] + ' '
+  const filledClassName = styles[`filled-${color}`]
   let icon = <></>
 
   switch (size) {
@@ -17,9 +18,7 @@ const CircleAddIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <circle cx={8} cy={8} r={6} stroke='none' />
-          <line x1={8} y1={5} x2={8} y2={11} stroke='none' strokeLinecap='round' />
-          <line x1={5} y1={8} x2={11} y2={8} stroke='none' strokeLinecap='round' />
+          <path d='M7.29289 10.2929L3.70711 6.70711C3.07714 6.07714 3.52331 5 4.41421 5H11.5858C12.4767 5 12.9229 6.07714 12.2929 6.70711L8.70711 10.2929C8.31658 10.6834 7.68342 10.6834 7.29289 10.2929Z' fill='none' className={filledClassName} />
         </svg>
       )
       break
@@ -33,9 +32,7 @@ const CircleAddIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <circle cx={12} cy={12} r={9} stroke='none' strokeWidth={1.5} />
-          <line x1={12} y1={7.5} x2={12} y2={16.5} stroke='none' strokeWidth={1.5} strokeLinecap='round' />
-          <line x1={7.5} y1={12} x2={16.5} y2={12} stroke='none' strokeWidth={1.5} strokeLinecap='round' />
+          <path d='M11.2929 15.7929L4.70711 9.20711C4.07714 8.57714 4.52331 7.5 5.41421 7.5H18.5858C19.4767 7.5 19.9229 8.57714 19.2929 9.2071L12.7071 15.7929C12.3166 16.1834 11.6834 16.1834 11.2929 15.7929Z' fill='none' className={filledClassName} />
         </svg>
       )
       break
@@ -49,9 +46,7 @@ const CircleAddIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <circle cx={20} cy={20} r={15} stroke='none' strokeWidth={2} />
-          <line x1={19.75} y1={12.25} x2={19.75} y2={27.75} stroke='none' strokeWidth={2} strokeLinecap='round' />
-          <line x1={12.25} y1={20.25} x2={27.75} y2={20.25} stroke='none' strokeWidth={2} strokeLinecap='round' />
+          <path d='M19.2929 26.7929L6.70711 14.2071C6.07714 13.5771 6.52331 12.5 7.41421 12.5H32.5858C33.4767 12.5 33.9229 13.5771 33.2929 14.2071L20.7071 26.7929C20.3166 27.1834 19.6834 27.1834 19.2929 26.7929Z' fill='none' className={filledClassName} />
         </svg>
       )
       break
@@ -62,7 +57,7 @@ const CircleAddIcon = ({ color, size }) => {
   return icon
 }
 
-CircleAddIcon.propTypes = {
+ArrowDownFullIcon.propTypes = {
   /**
    * color of text, icon and borders
    */
@@ -73,9 +68,9 @@ CircleAddIcon.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large'])
 }
 
-CircleAddIcon.defaultProps = {
+ArrowDownFullIcon.defaultProps = {
   color: 'main-dark-blue',
   size: 'normal'
 }
 
-export default CircleAddIcon
+export default ArrowDownFullIcon

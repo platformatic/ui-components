@@ -2,11 +2,9 @@ import React from 'react'
 import PullRequestIcon from '../../components/icons/PullRequestIcon'
 import CloseIcon from '../../components/icons/CloseIcon'
 import CircleCloseIcon from '../../components/icons/CircleCloseIcon'
-import TriangleExclamationIcon from '../../components/icons/TriangleExclamationIcon'
-import StaticWorkspaceIcon from '../../components/icons/StaticWorkspaceIcon'
-import CreatedWorkspaceIcon from '../../components/icons/CreatedWorkspaceIcon'
+import WorkspaceStaticIcon from '../../components/icons/WorkspaceStaticIcon'
 import UpgradeIcon from '../../components/icons/UpgradeIcon'
-import DynamicWorkspaceIcon from '../../components/icons/DynamicWorkspaceIcon'
+import WorkspaceDynamicIcon from '../../components/icons/WorkspaceDynamicIcon'
 
 const divStyle = {
   display: 'flex',
@@ -49,12 +47,8 @@ const CircleCloseIconTemplate = (args) => <CircleCloseIcon {...args} />
 export const CircleCloseIconDefault = CircleCloseIconTemplate.bind({})
 CircleCloseIconDefault.args = {}
 
-const TriangleExclamationIconTemplate = (args) => <TriangleExclamationIcon {...args} />
-export const TriangleExclamationIconDefault = TriangleExclamationIconTemplate.bind({})
-TriangleExclamationIconDefault.args = {}
-
 const WorkspaceIconsTemplate = () => (
-  [<StaticWorkspaceIcon key='a' />, <DynamicWorkspaceIcon key='b' />].map((component, index) => {
+  [<WorkspaceStaticIcon key='a' />, <WorkspaceDynamicIcon key='b' />].map((component, index) => {
     const listElement = []
     listElement.push(React.cloneElement(component, { key: `0${index}` }))
     listElement.push(React.cloneElement(component, { key: `1${index}`, size: 'small', color: 'green' }))
@@ -69,6 +63,6 @@ const WorkspaceIconsTemplate = () => (
 export const WorkspaceIconsAll = WorkspaceIconsTemplate.bind({})
 WorkspaceIconsAll.args = {}
 
-const LargeIconsTemplate = () => ([<CreatedWorkspaceIcon key='a' size='extra-large' />, <UpgradeIcon key='b' size='extra-large' />].map(component => component))
+const LargeIconsTemplate = () => ([<UpgradeIcon key='b' size='extra-large' />].map(component => component))
 export const LargeIconsDefault = LargeIconsTemplate.bind({})
 LargeIconsDefault.args = {}
