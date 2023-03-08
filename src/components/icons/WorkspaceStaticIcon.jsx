@@ -24,7 +24,7 @@ const WorkspaceStaticIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'normal':
+    case 'medium':
       icon = (
         <svg
           width={24}
@@ -78,7 +78,7 @@ WorkspaceStaticIcon.propTypes = {
 
 WorkspaceStaticIcon.defaultProps = {
   color: 'main-dark-blue',
-  size: 'normal'
+  size: 'medium'
 }
 
 export default WorkspaceStaticIcon

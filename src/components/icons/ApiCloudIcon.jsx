@@ -27,7 +27,7 @@ const ApiCloudIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'normal':
+    case 'medium':
       icon = (
         <svg
           width={24}
@@ -87,7 +87,7 @@ ApiCloudIcon.propTypes = {
 
 ApiCloudIcon.defaultProps = {
   color: 'main-dark-blue',
-  size: 'normal'
+  size: 'medium'
 }
 
 export default ApiCloudIcon

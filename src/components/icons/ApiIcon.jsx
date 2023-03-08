@@ -24,7 +24,7 @@ const ApiIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'normal':
+    case 'medium':
       icon = (
         <svg
           width={24}
@@ -78,7 +78,7 @@ ApiIcon.propTypes = {
 
 ApiIcon.defaultProps = {
   color: 'main-dark-blue',
-  size: 'normal'
+  size: 'medium'
 }
 
 export default ApiIcon

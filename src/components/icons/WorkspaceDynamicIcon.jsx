@@ -25,7 +25,7 @@ const WorkspaceDynamicIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'normal':
+    case 'medium':
       icon = (
         <svg
           width={24}
@@ -81,7 +81,7 @@ WorkspaceDynamicIcon.propTypes = {
 
 WorkspaceDynamicIcon.defaultProps = {
   color: 'main-dark-blue',
-  size: 'normal'
+  size: 'medium'
 }
 
 export default WorkspaceDynamicIcon

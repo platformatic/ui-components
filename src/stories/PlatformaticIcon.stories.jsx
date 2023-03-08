@@ -41,7 +41,7 @@ PlatformaticIconSmall.args = {
 export const PlatformaticIconNormal = AllIconsTemplate.bind({})
 PlatformaticIconNormal.args = {
   color: 'white',
-  size: 'normal'
+  size: 'medium'
 }
 
 export const PlatformaticIconLarge = AllIconsTemplate.bind({})

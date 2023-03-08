@@ -25,7 +25,7 @@ const AppIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'normal':
+    case 'medium':
       icon = (
         <svg
           width={24}
@@ -79,7 +79,7 @@ AppIcon.propTypes = {
 
 AppIcon.defaultProps = {
   color: 'main-dark-blue',
-  size: 'normal'
+  size: 'medium'
 }
 
 export default AppIcon

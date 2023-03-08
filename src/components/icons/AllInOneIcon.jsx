@@ -33,7 +33,7 @@ const AllInOneIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'normal':
+    case 'medium':
       icon = (
         <svg
           width={24}
@@ -105,7 +105,7 @@ AllInOneIcon.propTypes = {
 
 AllInOneIcon.defaultProps = {
   color: 'main-dark-blue',
-  size: 'normal'
+  size: 'medium'
 }
 
 export default AllInOneIcon

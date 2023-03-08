@@ -21,7 +21,7 @@ const ArrowDownIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'normal':
+    case 'medium':
       icon = (
         <svg
           width={24}
@@ -69,7 +69,7 @@ ArrowDownIcon.propTypes = {
 
 ArrowDownIcon.defaultProps = {
   color: 'main-dark-blue',
-  size: 'normal'
+  size: 'medium'
 }
 
 export default ArrowDownIcon

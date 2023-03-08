@@ -23,7 +23,7 @@ const CircleAddIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'normal':
+    case 'medium':
       icon = (
         <svg
           width={24}
@@ -75,7 +75,7 @@ CircleAddIcon.propTypes = {
 
 CircleAddIcon.defaultProps = {
   color: 'main-dark-blue',
-  size: 'normal'
+  size: 'medium'
 }
 
 export default CircleAddIcon

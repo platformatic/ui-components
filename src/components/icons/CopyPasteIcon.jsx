@@ -23,7 +23,7 @@ const CopyPasteIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'normal':
+    case 'medium':
       icon = (
         <svg
           width={24}
@@ -75,7 +75,7 @@ CopyPasteIcon.propTypes = {
 
 CopyPasteIcon.defaultProps = {
   color: 'main-dark-blue',
-  size: 'normal'
+  size: 'medium'
 }
 
 export default CopyPasteIcon

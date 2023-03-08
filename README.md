@@ -28,3 +28,15 @@ $ npm run storybook
 ## Storybook public link
 
 https://ui.platformatic.cloud/
+
+
+## New version: commands list
+
+```
+git checkout main
+git pull
+npm install
+npm version patch
+git push origin main
+npm publish
+```

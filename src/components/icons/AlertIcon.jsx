@@ -23,7 +23,7 @@ const AlertIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'normal':
+    case 'medium':
       icon = (
         <svg
           width={24}
@@ -75,7 +75,7 @@ AlertIcon.propTypes = {
 
 AlertIcon.defaultProps = {
   color: 'red',
-  size: 'small'
+  size: 'medium'
 }
 
 export default AlertIcon

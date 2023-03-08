@@ -27,7 +27,7 @@ const Calendar7DaysIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'normal':
+    case 'medium':
       icon = (
         <svg
           width={24}
@@ -82,7 +82,7 @@ Calendar7DaysIcon.propTypes = {
 
 Calendar7DaysIcon.defaultProps = {
   color: 'main-dark-blue',
-  size: 'normal'
+  size: 'medium'
 }
 
 export default Calendar7DaysIcon
