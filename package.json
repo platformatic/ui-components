@@ -18,7 +18,8 @@
     "tailwind": "tailwindcss -i ./src/styles/main.css -o ./dist/main.css",
     "lint": "standard src | snazzy",
     "lint:fix": "standard src --fix",
-    "test": "vitest run"
+    "test": "vitest run",
+    "prepare": "rm -Rf dist; npm run build; npm run tailwind"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
