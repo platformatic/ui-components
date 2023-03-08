@@ -2,7 +2,7 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 
-const CircleCheckMarkIcon = ({ color, size }) => {
+const BellIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   let icon = <></>
 
@@ -17,8 +17,8 @@ const CircleCheckMarkIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <circle cx={8} cy={8} r={6} stroke='none' />
-          <path d='M5 8L7.5 10L11 6' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M8 2C5.79086 2 4 3.62806 4 5.63636V9.5L2 12H14L12 9V5.63636C12 3.62806 10.2091 2 8 2Z' stroke='none' strokeLinejoin='round' />
+          <path d='M10 12C10 13.1046 9.10457 14 8 14C6.89543 14 6 13.1046 6 12' stroke='none' />
         </svg>
       )
       break
@@ -32,8 +32,8 @@ const CircleCheckMarkIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <circle cx={12} cy={12} r={9} stroke='none' strokeWidth={1.5} />
-          <path d='M7.5 12L11.25 15L16.5 9' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M12 3C8.68629 3 6 5.44208 6 8.45455V14.25L3 18H21L18 13.5V8.45455C18 5.44208 15.3137 3 12 3Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+          <path d='M15 18C15 19.6569 13.6569 21 12 21C10.3431 21 9 19.6569 9 18' stroke='none' strokeWidth={1.5} />
         </svg>
       )
       break
@@ -47,8 +47,8 @@ const CircleCheckMarkIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <circle cx={20} cy={20} r={15} stroke='none' strokeWidth={2} />
-          <path d='M12.5 20L18.75 25L27.5 15' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M20 5C14.4772 5 10 9.07014 10 14.0909V23.75L5 30H35L30 22.5V14.0909C30 9.07014 25.5228 5 20 5Z' stroke='none' strokeWidth={2} strokeLinejoin='round' />
+          <path d='M25 30C25 32.7614 22.7614 35 20 35C17.2386 35 15 32.7614 15 30' stroke='none' strokeWidth={2} />
         </svg>
       )
       break
@@ -59,7 +59,7 @@ const CircleCheckMarkIcon = ({ color, size }) => {
   return icon
 }
 
-CircleCheckMarkIcon.propTypes = {
+BellIcon.propTypes = {
   /**
    * color of text, icon and borders
    */
@@ -70,9 +70,9 @@ CircleCheckMarkIcon.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large'])
 }
 
-CircleCheckMarkIcon.defaultProps = {
+BellIcon.defaultProps = {
   color: 'main-dark-blue',
   size: 'medium'
 }
 
-export default CircleCheckMarkIcon
+export default BellIcon

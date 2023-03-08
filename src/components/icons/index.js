@@ -13,6 +13,8 @@ import ArrowDownIcon from './ArrowDownIcon'
 import ArrowLeftIcon from './ArrowLeftIcon'
 import ArrowRightIcon from './ArrowRightIcon'
 import ArrowUpIcon from './ArrowUpIcon'
+import BellIcon from './BellIcon'
+import BillingIcon from './BillingIcon'
 import CalendarIcon from './CalendarIcon'
 import Calendar1DayIcon from './Calendar1DayIcon'
 import Calendar7DaysIcon from './Calendar7DaysIcon'
@@ -26,6 +28,8 @@ import CloseIcon from './CloseIcon'
 import CopyPasteIcon from './CopyPasteIcon'
 import DatabaseIcon from './DatabaseIcon'
 import EditIcon from './EditIcon'
+import EnlargeIcon from './EnlargeIcon'
+import EntryIcon from './EntryIcon'
 import GearIcon from './GearIcon'
 import LiveIcon from './LiveIcon'
 import MetricsIcon from './MetricsIcon'
@@ -55,6 +59,8 @@ export default {
   ArrowLeftIcon,
   ArrowRightIcon,
   ArrowUpIcon,
+  BellIcon,
+  BillingIcon,
   CalendarIcon,
   Calendar1DayIcon,
   Calendar7DaysIcon,
@@ -69,6 +75,8 @@ export default {
   DatabaseIcon,
   GearIcon,
   EditIcon,
+  EnlargeIcon,
+  EntryIcon,
   LiveIcon,
   MetricsIcon,
   PlayIcon,
