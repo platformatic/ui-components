@@ -12,7 +12,7 @@ function renderParagraph (value, afterValueIcon, afterValueIconColor, onClickAft
     <>
       <p className={styles.value}>
         {value}
-        {afterValueIcon && (<PlatformaticIcon iconName={afterValueIcon} color={afterValueIconColor} size='normal' classes={styles.afterIcon} onClick={() => onClickAfterValueIcon} />)}
+        {afterValueIcon && (<PlatformaticIcon iconName={afterValueIcon} color={afterValueIconColor} size='medium' classes={styles.afterIcon} onClick={() => onClickAfterValueIcon} />)}
       </p>
     </>
   )
