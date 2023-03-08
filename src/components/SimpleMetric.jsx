@@ -15,7 +15,7 @@ export default function SimpleMetric ({ title, pre, color, unit, value, tooltip,
       <BorderedBox>
         <div className={styles.header}>
           <span className={styles.title}>{title}</span>
-          <Icons.CircleExclamationIcon tip={tooltip} />
+          <Icons.CircleExclamationIcon tip={tooltip} size='medium' color='white' />
         </div>
         <div>
           <MetricValue pre={pre} color={color} unit={unit} value={value} />
