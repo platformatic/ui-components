@@ -31,10 +31,22 @@ import EditIcon from './EditIcon'
 import EnlargeIcon from './EnlargeIcon'
 import EntryIcon from './EntryIcon'
 import GearIcon from './GearIcon'
+import GraphQLIcon from './GraphQLIcon'
+import KeyIcon from './KeyIcon'
+import LayersIcon from './LayersIcon'
+import LensIcon from './LensIcon'
 import LiveIcon from './LiveIcon'
+import LogOutIcon from './LogOutIcon'
 import MetricsIcon from './MetricsIcon'
 import PlayIcon from './PlayIcon'
 import PullRequestIcon from './PullRequestIcon'
+import SendIcon from './SendIcon'
+import SocialDiscordIcon from './SocialDiscordIcon'
+import SocialGitHubIcon from './SocialGitHubIcon'
+import SocialGitLabIcon from './SocialGitLabIcon'
+import SocialLinkedInIcon from './SocialLinkedInIcon'
+import SocialNPMIcon from './SocialNPMIcon'
+import SocialTwitterIcon from './SocialTwitterIcon'
 import StopIcon from './StopIcon'
 import TerminalIcon from './TerminalIcon'
 import Users2Icon from './Users2Icon'
@@ -73,15 +85,27 @@ export default {
   CloseIcon,
   CopyPasteIcon,
   DatabaseIcon,
-  GearIcon,
   EditIcon,
   EnlargeIcon,
   EntryIcon,
+  GearIcon,
+  GraphQLIcon,
+  KeyIcon,
+  LayersIcon,
+  LensIcon,
   LiveIcon,
+  LogOutIcon,
   MetricsIcon,
   PlayIcon,
   PullRequestIcon,
+  SendIcon,
   StopIcon,
+  SocialDiscordIcon,
+  SocialGitHubIcon,
+  SocialGitLabIcon,
+  SocialLinkedInIcon,
+  SocialNPMIcon,
+  SocialTwitterIcon,
   TerminalIcon,
   UpgradeIcon,
   Users2Icon,

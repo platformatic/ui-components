@@ -5,7 +5,7 @@ import styles from './Icons.module.css'
 const BillingIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   const filledClassName = styles[`filled-${color}`]
-  
+
   let icon = <></>
 
   switch (size) {
