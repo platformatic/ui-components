@@ -1,22 +1,28 @@
 .green > circle,
+.green > ellipse,
 .green > rect, 
 .green > line, 
 .green > path {
   @apply stroke-main-green;
 }
+
 .red > circle,
+.red > ellipse,
 .red > rect,
 .red > line, 
 .red > path {
   @apply stroke-error-red;
 }
+
 .white > circle,
+.white > ellipse,
 .white > rect,
 .white > line,
 .white > path {
   @apply stroke-white;
 }
 .main-dark-blue > circle,
+.main-dark-blue > ellipse,
 .main-dark-blue > rect,
 .main-dark-blue > line,
 .main-dark-blue > path {

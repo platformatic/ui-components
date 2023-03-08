@@ -2,7 +2,7 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 
-const PlayIcon = ({ color, size }) => {
+const SendIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   let icon = <></>
 
@@ -17,7 +17,7 @@ const PlayIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M2 2L14 8L2 14V2Z' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M3.84615 8L2 13L14 8L2 3L3.84615 8ZM3.84615 8H8.46154' stroke='#21FA90' strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
@@ -31,7 +31,7 @@ const PlayIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M3 3L21 12L3 21V3Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M5.76923 12L3 19.5L21 12L3 4.5L5.76923 12ZM5.76923 12H12.6923' stroke='#21FA90' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
@@ -45,7 +45,7 @@ const PlayIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M5 5L35 20L5 35V5Z' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M9.61538 20L5 32.5L35 20L5 7.5L9.61538 20ZM9.61538 20H21.1538' stroke='#21FA90' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
@@ -56,7 +56,7 @@ const PlayIcon = ({ color, size }) => {
   return icon
 }
 
-PlayIcon.propTypes = {
+SendIcon.propTypes = {
   /**
    * color of text, icon and borders
    */
@@ -67,9 +67,9 @@ PlayIcon.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large'])
 }
 
-PlayIcon.defaultProps = {
+SendIcon.defaultProps = {
   color: 'main-dark-blue',
   size: 'medium'
 }
 
-export default PlayIcon
+export default SendIcon

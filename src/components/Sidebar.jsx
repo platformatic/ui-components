@@ -49,7 +49,7 @@ function Sidebar (props) {
               <PlatformaticIcon
                 iconName='CircleBackIcon'
                 color='white'
-                size='normal'
+                size='medium'
               />
             </button>
             <div className={styles.title} data-testid='lateral-bar-title'>
@@ -65,7 +65,7 @@ function Sidebar (props) {
                         iconName={item.iconName}
                         color={isSelected ? 'green' : 'white'}
                         tip={item.title}
-                        size='normal'
+                        size='medium'
                                          />)}
                       <div className={`${styles.item} ${isSelected ? styles.itemSelected : ''}`}>
                         <span className={styles.itemSubTitle}>{item.subTitle}</span>
