@@ -57,7 +57,7 @@
     "snazzy": "^9.0.0",
     "standard": "^17.0.0",
     "tailwindcss": "^3.1.8",
-    "vite": "^3.1.0",
+    "vite": "^4.0.0",
     "vitest": "^0.24.3"
   },
   "standard": {
