@@ -52,7 +52,7 @@
     "@vitejs/plugin-react": "^2.1.0",
     "babel-loader": "^8.2.5",
     "happy-dom": "^7.6.6",
-    "jsdom": "^20.0.1",
+    "jsdom": "^21.0.0",
     "react-test-renderer": "^18.2.0",
     "snazzy": "^9.0.0",
     "standard": "^17.0.0",
