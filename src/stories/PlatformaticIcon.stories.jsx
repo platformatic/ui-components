@@ -2,15 +2,47 @@ import React from 'react'
 import PlatformaticIcon from '../components/PlatformaticIcon'
 import Icons from '../components/icons'
 
+const colors = ['green', 'white', 'red', 'main-dark-blue']
+
 const divStyle = {
-  width: '100%',
+  width: '100%'
+}
+
+const row = {
   display: 'flex',
-  flexGap: '10px'
+  width: '100%',
+  columnGap: '1rem',
+  alignItems: 'center'
+}
+
+const col = {
+  flex: 1
+}
+
+const paragraph = {
+  color: 'white',
+  fontSize: '12px'
 }
 
 export default {
   title: 'Platformatic/PlatformaticIcon',
-  component: PlatformaticIcon
+  component: PlatformaticIcon,
+  argTypes: {
+    color: {
+      type: 'string',
+      control: {
+        type: 'radio',
+        options: colors
+      }
+    },
+    size: {
+      type: 'string',
+      control: {
+        type: 'radio',
+        options: ['small', 'medium', 'large', 'extra-large']
+      }
+    }
+  }
 }
 
 const Template = (args) => <PlatformaticIcon {...args} />
@@ -22,36 +54,36 @@ PlatformaticIconDefault.args = {
 
 const AllIconsTemplate = (args) => {
   const icons = Object.values(Icons)
+
   return (
     <>
-      <p className='text-white'> Platformatic all icons size {args.size}</p>
       <div style={divStyle}>
-        {icons.map(IconComponent => <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} {...args} />)}
+        <p style={paragraph}> All Platformatic Icons: {icons.length} </p>
+        {icons.map((IconComponent, index) => (
+          <div style={row} key={index}>
+            <div style={col}>
+              <p style={paragraph}>#{index + 1}: {IconComponent.name}</p>
+            </div>
+            <div style={col}>
+              <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size='small' {...args} />
+            </div>
+            <div style={col}>
+              <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size='medium' {...args} />
+            </div>
+            <div style={col}>
+              <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size='large' {...args} />
+            </div>
+            <div style={col}>
+              <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size='extra-large' {...args} />
+            </div>
+          </div>
+        ))}
       </div>
     </>
   )
 }
-export const PlatformaticIconSmall = AllIconsTemplate.bind({})
-PlatformaticIconSmall.args = {
+export const PlatformaticIconAll = AllIconsTemplate.bind({})
+PlatformaticIconAll.args = {
   color: 'white',
-  size: 'small',
   onClick: null
-}
-
-export const PlatformaticIconNormal = AllIconsTemplate.bind({})
-PlatformaticIconNormal.args = {
-  color: 'white',
-  size: 'medium'
-}
-
-export const PlatformaticIconLarge = AllIconsTemplate.bind({})
-PlatformaticIconLarge.args = {
-  color: 'green',
-  size: 'large'
-}
-
-export const PlatformaticIconExtraLarge = AllIconsTemplate.bind({})
-PlatformaticIconExtraLarge.args = {
-  color: 'green',
-  size: 'extra-large'
 }

@@ -6,7 +6,7 @@
   @apply max-w-[96px] text-center;
 }
 .buttonExpand {
-  @apply border rounded-md p-0 border-white;
+  @apply border rounded-md p-1 border-white;
 }
 .buttonSettings {
   @apply border rounded-md p-1 border-white;

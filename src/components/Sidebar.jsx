@@ -29,8 +29,15 @@ function Sidebar (props) {
       {collapsed
         ? (
           <>
+            <button type='button' className={styles.buttonCollapse} onClick={() => { setCollapsed(false) }}>
+              <PlatformaticIcon
+                iconName='CircleArrowRightIcon'
+                color='white'
+                size='medium'
+              />
+            </button>
             <button type='button' className={styles.buttonExpand} onClick={() => { setCollapsed(false) }}>
-              <Icons.WorkspaceStaticIcon color='white' />
+              <Icons.WorkspaceStaticIcon color='white' size='large' />
             </button>
             <div className={styles.titleCollapsed} data-testid='lateral-bar-title'>
               {title}
@@ -38,7 +45,7 @@ function Sidebar (props) {
             <HorizontalSeparator marginBottom={2} marginTop={2} />
             <div className={styles.bottom}>
               <button type='button' className={styles.buttonSettings} onClick={onClickSettings}>
-                <Icons.GearIcon color='white' />
+                <Icons.GearIcon color='white' size='large' />
               </button>
             </div>
           </>
@@ -47,7 +54,7 @@ function Sidebar (props) {
           <>
             <button type='button' className={styles.buttonCollapse} onClick={() => { setCollapsed(true) }}>
               <PlatformaticIcon
-                iconName='CircleBackIcon'
+                iconName='CircleArrowLeftIcon'
                 color='white'
                 size='medium'
               />
