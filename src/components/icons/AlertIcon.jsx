@@ -19,7 +19,7 @@ const AlertIcon = ({ color, size }) => {
         >
           <path d='M14 14H2L8 2L14 14Z' stroke='none' strokeLinejoin='round' />
           <path d='M8 6V10.5' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
-          <circle cx='8' cy='12' r='0.5' fill='none' />
+          <circle cx={8} cy={12} r='0.5' fill='none' />
         </svg>
       )
       break

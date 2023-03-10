@@ -2,7 +2,7 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 
-const Users2Icon = ({ color, size }) => {
+const TwoUsersIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   let icon = <></>
 
@@ -65,7 +65,7 @@ const Users2Icon = ({ color, size }) => {
   return icon
 }
 
-Users2Icon.propTypes = {
+TwoUsersIcon.propTypes = {
   /**
    * color of text, icon and borders
    */
@@ -76,9 +76,9 @@ Users2Icon.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large'])
 }
 
-Users2Icon.defaultProps = {
+TwoUsersIcon.defaultProps = {
   color: 'main-dark-blue',
   size: 'medium'
 }
 
-export default Users2Icon
+export default TwoUsersIcon

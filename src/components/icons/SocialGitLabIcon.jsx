@@ -31,7 +31,7 @@ const SocialGitLabIcon = ({ color, size }) => {
           </g>
           <defs>
             <clipPath id='clip0_852_2118'>
-              <rect width='13.3333' height='12.1637' fill='white' transform='translate(1.33337 2)' />
+              <rect width={13.3333} height={12.1637} fill='none' className={filledClassName} transform='translate(1.33337 2)' />
             </clipPath>
           </defs>
 
@@ -61,7 +61,7 @@ const SocialGitLabIcon = ({ color, size }) => {
           </g>
           <defs>
             <clipPath id='clip0_315_245'>
-              <rect width='20' height='18.2456' fill='white' transform='translate(2 3)' />
+              <rect width={20} height={18.2456} fill='none' className={filledClassName} transform='translate(2 3)' />
             </clipPath>
           </defs>
         </svg>
@@ -90,7 +90,7 @@ const SocialGitLabIcon = ({ color, size }) => {
           </g>
           <defs>
             <clipPath id='clip0_852_2190'>
-              <rect width='33.3333' height='30.4094' fill='white' transform='translate(3.33337 5)' />
+              <rect width={33.3333} height={30.4094} fill='none' className={filledClassName} transform='translate(3.33337 5)' />
             </clipPath>
           </defs>
         </svg>

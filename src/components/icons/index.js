@@ -19,15 +19,19 @@ import CalendarIcon from './CalendarIcon'
 import Calendar1DayIcon from './Calendar1DayIcon'
 import Calendar7DaysIcon from './Calendar7DaysIcon'
 import CircleAddIcon from './CircleAddIcon'
-import CircleBackIcon from './CircleBackIcon'
+import CircleArrowLeftIcon from './CircleArrowLeftIcon'
+import CircleArrowRightIcon from './CircleArrowRightIcon'
 import CircleExclamationIcon from './CircleExclamationIcon'
 import CircleCheckMarkIcon from './CircleCheckMarkIcon'
 import CircleCloseIcon from './CircleCloseIcon'
 import CircleCloseHoverIcon from './CircleCloseHoverIcon'
+import CircleTwoArrowsDownIcon from './CircleTwoArrowsDownIcon'
+import CircleTwoArrowsUpIcon from './CircleTwoArrowsUpIcon'
 import CloseIcon from './CloseIcon'
 import CopyPasteIcon from './CopyPasteIcon'
 import DatabaseIcon from './DatabaseIcon'
 import EditIcon from './EditIcon'
+import ExploreDocIcon from './ExploreDocIcon'
 import EnlargeIcon from './EnlargeIcon'
 import EntryIcon from './EntryIcon'
 import GearIcon from './GearIcon'
@@ -49,9 +53,10 @@ import SocialNPMIcon from './SocialNPMIcon'
 import SocialTwitterIcon from './SocialTwitterIcon'
 import StopIcon from './StopIcon'
 import TerminalIcon from './TerminalIcon'
-import Users2Icon from './Users2Icon'
+import TwoUsersIcon from './TwoUsersIcon'
 import UpgradeIcon from './UpgradeIcon'
 import WorkspaceDynamicIcon from './WorkspaceDynamicIcon'
+import WorkspaceFailIcon from './WorkspaceFailIcon'
 import WorkspaceReadyIcon from './WorkspaceReadyIcon'
 import WorkspaceStaticIcon from './WorkspaceStaticIcon'
 
@@ -77,15 +82,19 @@ export default {
   Calendar1DayIcon,
   Calendar7DaysIcon,
   CircleAddIcon,
-  CircleBackIcon,
+  CircleArrowLeftIcon,
+  CircleArrowRightIcon,
   CircleCheckMarkIcon,
   CircleExclamationIcon,
   CircleCloseIcon,
   CircleCloseHoverIcon,
+  CircleTwoArrowsDownIcon,
+  CircleTwoArrowsUpIcon,
   CloseIcon,
   CopyPasteIcon,
   DatabaseIcon,
   EditIcon,
+  ExploreDocIcon,
   EnlargeIcon,
   EntryIcon,
   GearIcon,
@@ -108,8 +117,9 @@ export default {
   SocialTwitterIcon,
   TerminalIcon,
   UpgradeIcon,
-  Users2Icon,
+  TwoUsersIcon,
   WorkspaceDynamicIcon,
+  WorkspaceFailIcon,
   WorkspaceReadyIcon,
   WorkspaceStaticIcon
 }
