@@ -76,12 +76,12 @@ const WorkspaceFailIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <rect x={15} y={15} width={37.5} height={37.5} rx={1} stroke='none' stroke-width={6} />
-          <rect x={45} y={105} width={30} height={37.7622} rx={1} transform='rotate(-180 45 105)' stroke='none' stroke-width={6} />
-          <rect x={105} y={105} width={45} height={37.7622} rx={1} transform='rotate(-180 105 105)' stroke='none' stroke-width={6} />
-          <circle cx={86.25} cy={33.75} r={18.75} stroke='none' stroke-width={6} />
-          <path d='M82.2188 39.2499L91.2812 29.25' stroke='none' stroke-width={6} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M91.7499 38.781L81.75 29.7185' stroke='none' stroke-width={6} strokeLinecap='round' strokeLinejoin='round' />
+          <rect x={15} y={15} width={37.5} height={37.5} rx={1} stroke='none' strokeWidth={6} />
+          <rect x={45} y={105} width={30} height={37.7622} rx={1} transform='rotate(-180 45 105)' stroke='none' strokeWidth={6} />
+          <rect x={105} y={105} width={45} height={37.7622} rx={1} transform='rotate(-180 105 105)' stroke='none' strokeWidth={6} />
+          <circle cx={86.25} cy={33.75} r={18.75} stroke='none' strokeWidth={6} />
+          <path d='M82.2188 39.2499L91.2812 29.25' stroke='none' strokeWidth={6} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M91.7499 38.781L81.75 29.7185' stroke='none' strokeWidth={6} strokeLinecap='round' strokeLinejoin='round' />
 
         </svg>
       )
