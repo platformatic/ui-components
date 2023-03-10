@@ -5,15 +5,18 @@ import Icons from './icons'
 import styles from './PlatformaticIcon.module.css'
 
 function PlatformaticIcon ({ iconName, color, onClick, size, classes, tip }) {
-  let icon = React.createElement(Icons[`${iconName}`], {
-    color,
-    size,
-    tip
-  })
-  if (onClick) {
-    let className = styles.cursorPointer
-    if (classes) className += ` ${classes}`
-    icon = (<span className={className} onClick={onClick}>{icon}</span>)
+  let icon = <></>
+  if (iconName) {
+    icon = React.createElement(Icons[`${iconName}`], {
+      color,
+      size,
+      tip
+    })
+    if (onClick) {
+      let className = styles.cursorPointer
+      if (classes) className += ` ${classes}`
+      icon = (<span className={className} onClick={onClick}>{icon}</span>)
+    }
   }
   return icon
 }
@@ -46,12 +49,12 @@ PlatformaticIcon.propTypes = {
 }
 
 PlatformaticIcon.defaultProps = {
-  iconName: null,
+  iconName: '',
   color: 'green',
   size: 'small',
   onClick: () => {},
   classes: null,
-  tip: null
+  tip: ''
 }
 
 export default PlatformaticIcon

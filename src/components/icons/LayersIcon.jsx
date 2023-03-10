@@ -2,7 +2,7 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 
-const AddIcon = ({ color, size }) => {
+const LayersIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   let icon = <></>
 
@@ -62,7 +62,7 @@ const AddIcon = ({ color, size }) => {
   return icon
 }
 
-AddIcon.propTypes = {
+LayersIcon.propTypes = {
   /**
    * color of text, icon and borders
    */
@@ -73,9 +73,9 @@ AddIcon.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large'])
 }
 
-AddIcon.defaultProps = {
+LayersIcon.defaultProps = {
   color: 'main-dark-blue',
   size: 'medium'
 }
 
-export default AddIcon
+export default LayersIcon
