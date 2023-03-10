@@ -2,7 +2,7 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 
-const ArrowDownIcon = ({ color, size }) => {
+const ArrowUpIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   let icon = <></>
 
@@ -56,7 +56,7 @@ const ArrowDownIcon = ({ color, size }) => {
   return icon
 }
 
-ArrowDownIcon.propTypes = {
+ArrowUpIcon.propTypes = {
   /**
    * color of text, icon and borders
    */
@@ -67,9 +67,9 @@ ArrowDownIcon.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large'])
 }
 
-ArrowDownIcon.defaultProps = {
+ArrowUpIcon.defaultProps = {
   color: 'main-dark-blue',
   size: 'medium'
 }
 
-export default ArrowDownIcon
+export default ArrowUpIcon
