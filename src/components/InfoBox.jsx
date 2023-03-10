@@ -5,10 +5,10 @@ import styles from './InfoBox.module.css'
 import Button from './Button'
 import PlatformaticIcon from './PlatformaticIcon'
 
-function InfoBox ({ children, iconLogo, helpText, buttonProps }) {
+function InfoBox ({ children, iconName, iconColor, helpText, buttonProps }) {
   return (
     <div className={styles.container}>
-      <PlatformaticIcon size='extra-large' iconName={iconLogo} />
+      <PlatformaticIcon size='extra-large' iconName={iconName} color={iconColor} />
       {children}
       <p className={styles.helpText}>{helpText}</p>
       {buttonProps && (<Button type='button' size='extra-large' label={buttonProps.label} color={buttonProps.color} backgroundColor={buttonProps.backgroundColor} onClick={() => buttonProps.onClick()} fullWidth bold />)}
@@ -22,9 +22,13 @@ InfoBox.propTypes = {
    */
   children: PropTypes.node,
   /**
-   * iconLogo
+   * iconName
    */
-  iconLogo: PropTypes.string,
+  iconName: PropTypes.string,
+  /**
+   * iconColor
+   */
+  iconColor: PropTypes.oneOf(['green', 'white', 'main-dark-blue', 'red']),
   /**
    * helpText
    */
@@ -42,8 +46,9 @@ InfoBox.propTypes = {
 
 InfoBox.defaultProps = {
   children: null,
-  iconLogo: null,
-  helpText: null,
+  iconName: '',
+  iconColor: 'green',
+  helpText: '',
   buttonProps: null
 }
 
