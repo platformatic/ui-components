@@ -15,7 +15,7 @@ ListWithNoElements.args = {
 
 const TemplateWithElements = (args) => (
   <List {...args}>
-    <ListElement title='List Element 1' detail='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et dui facilisis, molestie urna sed, volutpat nibh.' />
+    <ListElement title='List Element 1' detail='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et dui facilisis, molestie urna sed, volutpat nibh.' titleAspect='boldAndGreen' />
     <ListElement title='List Element 2' detail='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et dui facilisis, molestie urna sed, volutpat nibh.' />
   </List>
 )
@@ -27,3 +27,15 @@ ListWithElements.args = {
 
 export const ListWithElementsNoTitle = TemplateWithElements.bind({})
 ListWithElementsNoTitle.args = {}
+
+const TemplateWithElementsVariants = (args) => (
+  <List {...args}>
+    <ListElement title='List Element 1' titleAspect='boldAndGreen' marginSize='small' />
+    <ListElement title='List Element 2' titleAspect='lightAndWhite' marginSize='small' />
+  </List>
+)
+
+export const ListWithElementsVariants = TemplateWithElementsVariants.bind({})
+ListWithElementsVariants.args = {
+  title: 'List Title'
+}
