@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Icons from './icons'
 import styles from './Sidebar.module.css'
 import ReactTooltip from 'react-tooltip'
@@ -17,12 +17,16 @@ function Sidebar (props) {
     onClickSettings
   } = props
   const [collapsed, setCollapsed] = useState(false)
-  const [selectedItem, setSelectedItem] = useState(defaultSelected)
+  const [selectedItem, setSelectedItem] = useState(null)
 
-  function onClickItemSelected (index) {
-    setSelectedItem(index)
-    onClickItemSelectedParent(index)
+  function onClickItemSelected (item) {
+    setSelectedItem(item.id)
+    onClickItemSelectedParent(item.id)
   }
+
+  useEffect(() => {
+    setSelectedItem(defaultSelected)
+  }, [defaultSelected])
 
   return (
     <div className={`${styles.container} ${collapsed && styles.collapsed}`}>
@@ -63,11 +67,11 @@ function Sidebar (props) {
               {title}
             </div>
             <div className={styles.items} data-test-id='lateral-bar-items'>
-              {items.map((item, index) => {
-                const isSelected = selectedItem === index
+              {items.map(item => {
+                const isSelected = selectedItem === item.id
                 return (
-                  <React.Fragment key={index}>
-                    <button className={`${styles.buttonItem} ${collapsed && styles.buttonItemCollapsed}`} type='button' onClick={() => onClickItemSelected(index)}>
+                  <React.Fragment key={item.id}>
+                    <button className={`${styles.buttonItem} ${collapsed && styles.buttonItemCollapsed}`} type='button' onClick={() => onClickItemSelected(item)}>
                       {item.iconName && (<PlatformaticIcon
                         iconName={item.iconName}
                         color={isSelected ? 'green' : 'white'}
@@ -114,18 +118,20 @@ Sidebar.propTypes = {
   /**
    * defaultSelected
    */
-  defaultSelected: PropTypes.number,
+  defaultSelected: PropTypes.string,
   /**
    * addTitle
    */
   addTitle: PropTypes.string,
   /**
    * items: array with keys
+   * id: id of the worspacedSeleted
    * title: name to display
    * subtitle: secondary title
    * icon: what Icon
    */
   items: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
     title: PropTypes.string,
     subtitle: PropTypes.string,
     iconName: PropTypes.string
@@ -147,7 +153,7 @@ Sidebar.propTypes = {
 
 Sidebar.defaultProps = {
   title: '',
-  defaultSelected: 0,
+  defaultSelected: null,
   onClickItemSelectedParent: () => {},
   items: [],
   onClickAdd: () => {},

@@ -36,9 +36,9 @@ EmptySidebar.args = {
 
 const FullSidebarTemplate = (args) => {
   const [items, setItems] = useState([
-    { iconName: 'WorkspaceStaticIcon', subTitle: 'Subtitle', title: 'a very very very very very long title 1' },
-    { title: 'Title number 2', subTitle: 'Subtitle 2' },
-    { title: 'Another Title', subTitle: 'Subtitle 3', iconName: 'WorkspaceDynamicIcon' }
+    { id: '1', iconName: 'WorkspaceStaticIcon', subTitle: 'Subtitle', title: 'a very very very very very long title 1' },
+    { id: '2', title: 'Title number 2', subTitle: 'Subtitle 2' },
+    { id: '3', title: 'Another Title', subTitle: 'Subtitle 3', iconName: 'WorkspaceDynamicIcon' }
   ])
   function onClickAdd () {
     const tmpItem = items.map(item => item)
@@ -56,6 +56,21 @@ export const FullSidebar = FullSidebarTemplate.bind({})
 FullSidebar.args = {
   title: 'Sidebar bar Full',
   addTitle: 'Create',
+  onClickItemSelected: (index) => alert('selected: ' + index),
+  onClickSettings: () => alert('settings')
+}
+
+export const AlreadySelected = Template.bind({})
+
+AlreadySelected.args = {
+  title: 'Sidebar bar Full',
+  addTitle: 'Create',
+  defaultSelected: '3',
+  items: [
+    { id: '1', iconName: 'WorkspaceStaticIcon', title: 'Static 1', subTitle: 'Subtitle 1' },
+    { id: '2', iconName: 'WorkspaceStaticIcon', title: 'Static 2', subTitle: 'Subtitle 2' },
+    { id: '3', iconName: 'WorkspaceDynamicIcon', title: 'Dynamic', subTitle: 'Subtitle 3' }
+  ],
   onClickItemSelected: (index) => alert('selected: ' + index),
   onClickSettings: () => alert('settings')
 }
