@@ -9,6 +9,7 @@ function Input ({ placeholder, value, name, borderColor, errorMessage, onChange,
   let className = styles.inputContainer + ' ' + commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`] + ' ' + commonStyles.padded
   const showError = errorMessage.length > 0
   if (showError) className += ' ' + commonStyles['bordered--error-red']
+  if (disabled) className += ' ' + commonStyles['apply-opacity-30']
 
   return (
     <div className={styles.container}>

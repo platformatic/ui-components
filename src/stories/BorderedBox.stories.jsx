@@ -1,13 +1,14 @@
 'use strict'
 import BorderedBox from '../components/BorderedBox'
+import { COLORS_BORDERED_BOX } from '../components/constants'
 export default {
   title: 'Platformatic/BorderedBox',
   component: BorderedBox,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     color: {
-      options: ['green', 'red', 'white'],
-      control: { type: ' radio' }
+      options: COLORS_BORDERED_BOX,
+      type: 'radio',
     }
   }
 }
@@ -18,16 +19,15 @@ const Template = (args) => <BorderedBox {...args}>Hello Platformatic</BorderedBo
 export const Green = Template.bind({})
 
 Green.args = {
-  color: 'green'
+  color: 'main-green'
 }
 export const Red = Template.bind({})
 
 Red.args = {
-  color: 'red'
+  color: 'error-red'
 }
 
 export const White = Template.bind({})
-
 White.args = {
   color: 'white'
 }

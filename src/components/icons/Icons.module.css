@@ -6,6 +6,7 @@
   @apply stroke-main-green;
 }
 
+
 .red > circle,
 .red > ellipse,
 .red > rect,
@@ -28,6 +29,14 @@
 .main-dark-blue > path {
   @apply stroke-main-dark-blue;
 }
+.warning-yellow > circle,
+.warning-yellow > ellipse,
+.warning-yellow > rect,
+.warning-yellow > line,
+.warning-yellow > path {
+  @apply stroke-warning-yellow;
+}
+
 .filled-white {
   @apply fill-white
 }
@@ -39,6 +48,9 @@
 }
 .filled-green {
   @apply fill-main-green ;
+}
+.filled-warning-yellow {
+  @apply fill-warning-yellow ;
 }
 
 .fill-circle-green > circle {

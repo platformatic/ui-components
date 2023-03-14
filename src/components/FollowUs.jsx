@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './FollowUs.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faTwitter, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons'
+import Icons from './icons'
 
 export default function FollowUs ({ label = 'FOLLOW US ON' }) {
   return (
@@ -11,22 +10,22 @@ export default function FollowUs ({ label = 'FOLLOW US ON' }) {
       </div>
       <div className={styles.icon}>
         <a href='https://twitter.com/platformatic' target='_blank' rel='noopener noreferrer'>
-          <FontAwesomeIcon icon={faTwitter} className='mr-3 text-white' />
+          <Icons.SocialTwitterIcon color='white' size='medium' />
         </a>
       </div>
       <div className={styles.icon}>
         <a href='https://www.linkedin.com/company/platformatic/' target='_blank' rel='noopener noreferrer'>
-          <FontAwesomeIcon icon={faLinkedin} className='mr-3 text-white' />
+          <Icons.SocialLinkedInIcon color='white' size='medium' />
         </a>
       </div>
       <div className={styles.icon}>
         <a href='https://github.com/platformatic' target='_blank' rel='noopener noreferrer'>
-          <FontAwesomeIcon icon={faGithub} className='mr-2 text-white' />
+          <Icons.SocialGitHubIcon color='white' size='medium' />
         </a>
       </div>
       <div className={styles.icon}>
         <a href='https://discord.gg/platformatic' target='_blank' rel='noopener noreferrer'>
-          <FontAwesomeIcon icon={faDiscord} className='mr-2 text-white' />
+          <Icons.SocialDiscordIcon color='white' size='medium' />
         </a>
       </div>
 
