@@ -13,7 +13,7 @@ function List ({ title, detail, marginSize, titleAspect }) {
   return (
     <div className={className}>
       <div className={styles.row}>
-        <PlatformaticIcon iconName='CircleCheckMarkIcon' color='green' data-testid='list-element-title-icon' onClick={null} />
+        <PlatformaticIcon iconName='CircleCheckMarkIcon' color='green' data-testid='list-element-title-icon' onClick={null} size='medium' />
         <div className={classNameTitle} data-testid='list-element-title'>
           {title}
         </div>

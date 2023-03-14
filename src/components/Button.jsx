@@ -2,12 +2,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Button.module.css'
+import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { SIZES, COLORS_BUTTON } from './constants'
 
 function Button (props) {
   const { icon, label, color, backgroundColor, size, disabled, bold, hoverEffect, bordered, fullWidth, platformaticIcon, ...rest } = props
-  let className = `${styles.button} ${styles['background-color-' + backgroundColor]} ${styles['color-' + color]} ${styles['button-' + size]}`
+  let className = `${styles.button} ${commonStyles['background-color-' + backgroundColor]} ${styles['color-' + color]} ${styles['button-' + size]}`
   if (!bordered) className += ` ${styles['no-border']}`
   if (disabled) {
     className += ` ${styles.disabled}`
@@ -41,15 +43,15 @@ Button.propTypes = {
   /**
    * color of text, icon and borders
    */
-  color: PropTypes.oneOf(['main-green', 'dark-green', 'light-green', 'main-dark-blue', 'dark-blue', 'light-blue', 'white', 'error-red', 'tertiary-blue', 'transparent']),
+  color: PropTypes.oneOf(COLORS_BUTTON),
   /**
    * background color of the button
    */
-  backgroundColor: PropTypes.oneOf(['main-green', 'dark-green', 'light-green', 'main-dark-blue', 'dark-blue', 'light-blue', 'white', 'error-red', 'tertiary-blue', 'transparent']),
+  backgroundColor: PropTypes.oneOf(COLORS_BUTTON),
   /**
    * Size
    */
-  size: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large']),
+  size: PropTypes.oneOf(SIZES),
   /**
    * Disabled
    */

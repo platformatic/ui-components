@@ -10,6 +10,15 @@
 .bordered--error-red {
   @apply border-error-red;
 }
+.bordered--warning-yellow {
+  @apply border-warning-yellow;
+}
+.bordered--dark-blue {
+  @apply border-dark-blue;
+}
+.bordered--white {
+  @apply border-white;
+}
 
 .error-message {
   @apply absolute -bottom-5 text-error-red text-xs px-2;
@@ -26,3 +35,36 @@
   @apply text-main-dark-blue;
 }
 
+.background-color-main-green {
+  @apply bg-main-green !important;
+}
+.background-color-light-green {
+  @apply bg-light-green !important;
+}
+.background-color-dark-green {
+  @apply bg-dark-green !important;
+}
+.background-color-main-dark-blue{
+  @apply bg-main-dark-blue !important;
+}
+.background-color-dark-blue {
+  @apply bg-dark-blue !important;
+}
+.background-color-light-blue {
+  @apply bg-light-blue !important;
+}
+.background-color-white{
+  @apply bg-white !important;
+}
+.background-color-error-red{
+  @apply bg-error-red !important;
+}
+.background-color-tertiary-blue{
+  @apply bg-tertiary-blue !important;
+}
+.background-color-transparent{
+  @apply bg-transparent;
+}
+.apply-opacity-30 {
+  @apply opacity-30;
+}

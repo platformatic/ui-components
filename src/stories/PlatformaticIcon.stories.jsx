@@ -1,8 +1,7 @@
 import React from 'react'
 import PlatformaticIcon from '../components/PlatformaticIcon'
 import Icons from '../components/icons'
-
-const colors = ['green', 'white', 'red', 'main-dark-blue']
+import { COLORS_ICON } from '../components/constants'
 
 const divStyle = {
   width: '100%'
@@ -32,7 +31,7 @@ export default {
       type: 'string',
       control: {
         type: 'radio',
-        options: colors
+        options: COLORS_ICON
       }
     },
     size: {

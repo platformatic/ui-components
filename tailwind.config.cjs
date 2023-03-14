@@ -12,14 +12,14 @@ module.exports = {
       },
       boxShadow: {
         wrap: '0px 0px 20px rgba(0, 0, 0, 0.6)',
-        'main-green': '0px 0px 10px rgba(33, 250, 144, 0.5)',
-        'dark-green': '0px 0px 10px rgba(2, 120, 63, 1)',
-        'light-green': '0px 0px 10px rgba(33, 241, 144, 0.5)',
-        'main-dark-blue': '0px 0px 10px rgba(33, 250, 144, 0.5)',
-        'dark-blue': '0px 0px 10px rgba(0, 52, 79, 0.5)',
-        'light-blue': '0px 0px 10px rgba(233, 247, 255, 0.5)',
-        'error-red': '0px 0px 10px rgba(250, 33, 33, 0.5)',
-        'tertiary-blue': '0px 0px 10px rgba(37, 136, 228, 0.5)'
+        'main-green': '0px 0px 6px rgba(33, 250, 144, 0.5)',
+        'dark-green': '0px 0px 6px rgba(2, 120, 63, 1)',
+        'light-green': '0px 0px 6px rgba(33, 241, 144, 0.5)',
+        'main-dark-blue': '0px 0px 6px rgba(33, 250, 144, 0.5)',
+        'dark-blue': '0px 0px 6px rgba(0, 52, 79, 0.5)',
+        'light-blue': '0px 0px 6px rgba(233, 247, 255, 0.5)',
+        'error-red': '0px 0px 6px rgba(250, 33, 33, 0.5)',
+        'tertiary-blue': '0px 0px 6px rgba(37, 136, 228, 0.5)'
       }
     },
     colors: {
@@ -32,7 +32,8 @@ module.exports = {
       white: '#FFFFFF',
       'error-red': '#FA2121',
       'tertiary-blue': '#2588E4',
-      transparent: 'transparent'
+      transparent: 'transparent',
+      'warning-yellow': '#FEB928'
     },
     fontFamily: {
       sans: ['Montserrat']
@@ -49,8 +50,6 @@ module.exports = {
     }
   },
   safelist: [
-    'border-error-red',
-    'border-main-green',
     'text-3xl',
     'text-4xl',
     'text-5xl',

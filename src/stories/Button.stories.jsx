@@ -2,8 +2,7 @@
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import Button from '../components/Button'
-
-const colors = ['main-green', 'dark-green', 'light-green', 'main-dark-blue', 'dark-blue', 'light-blue', 'white', 'error-red', 'tertiary-blue', 'transparent']
+import { COLORS_BUTTON, SIZES } from '../components/constants'
 
 export default {
   title: 'Platformatic/Button',
@@ -20,14 +19,14 @@ export default {
       type: 'string',
       control: {
         type: 'radio',
-        options: colors
+        options: COLORS_BUTTON
       }
     },
     color: {
       type: 'string',
       control: {
         type: 'radio',
-        options: colors
+        options: COLORS_BUTTON
       }
     },
     disabled: {
@@ -37,7 +36,7 @@ export default {
       type: 'string',
       control: {
         type: 'radio',
-        options: ['small', 'medium', 'large', 'extra-large']
+        options: SIZES
       }
     },
     hoverEffect: {

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
+import { COLORS_ICON, SIZES } from '../constants'
 
 const CircleArrowRightIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
@@ -83,11 +84,11 @@ CircleArrowRightIcon.propTypes = {
   /**
    * color of text, icon and borders
    */
-  color: PropTypes.oneOf(['green', 'white', 'main-dark-blue', 'red']),
+  color: PropTypes.oneOf(COLORS_ICON),
   /**
    * Size
    */
-  size: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large'])
+  size: PropTypes.oneOf(SIZES)
 }
 
 CircleArrowRightIcon.defaultProps = {
