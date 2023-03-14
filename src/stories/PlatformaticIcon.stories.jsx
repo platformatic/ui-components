@@ -3,7 +3,6 @@ import PlatformaticIcon from '../components/PlatformaticIcon'
 import Icons from '../components/icons'
 import { COLORS_ICON } from '../components/constants'
 
-
 const divStyle = {
   width: '100%'
 }

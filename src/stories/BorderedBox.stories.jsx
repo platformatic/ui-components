@@ -8,7 +8,7 @@ export default {
   argTypes: {
     color: {
       options: COLORS_BORDERED_BOX,
-      type: 'radio',
+      type: 'radio'
     }
   }
 }
