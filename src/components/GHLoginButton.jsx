@@ -1,13 +1,12 @@
 import React from 'react'
 import LoginButton from './LoginButton'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 export default function GHLoginButton ({ onClick, ...props }) {
   return (
     <LoginButton
       label='Continue with Github'
       onClick={onClick}
-      icon={faGithub}
+      iconName='SocialGitHubIcon'
       {...props}
     />
   )

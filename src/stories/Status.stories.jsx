@@ -19,13 +19,13 @@ White.args = {
 export const Green = Template.bind({})
 
 Green.args = {
-  color: 'green',
+  color: 'main-green',
   status: 'online'
 }
 
 export const Red = Template.bind({})
 
 Red.args = {
-  color: 'red',
+  color: 'error-red',
   status: 'offline'
 }

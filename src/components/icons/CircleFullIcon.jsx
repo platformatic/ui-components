@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES } from '../constants'
 
-const AlertIcon = ({ color, size }) => {
+const CircleFullIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
+  const filledClassName = styles[`filled-${color}`]
   let icon = <></>
 
   switch (size) {
@@ -18,9 +19,7 @@ const AlertIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M14 14H2L8 2L14 14Z' stroke='none' strokeLinejoin='round' />
-          <path d='M8 6V10.5' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
-          <circle cx={8} cy={12} r='0.5' fill='none' />
+          <circle cx={8} cy={8} r={6} fill='none' className={filledClassName} />
         </svg>
       )
       break
@@ -34,9 +33,7 @@ const AlertIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M21 21H3L12 3L21 21Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
-          <path d='M12 9V15.75' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
-          <circle cx={12} cy={18} r={0.75} fill='none' />
+          <circle cx={12} cy={12} r={9} fill='none' className={filledClassName} />
         </svg>
       )
       break
@@ -50,9 +47,7 @@ const AlertIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M35 35H5L20 5L35 35Z' stroke='none' strokeWidth={2} strokeLinejoin='round' />
-          <path d='M20 15V26.25' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
-          <circle cx={20} cy={30} r={1.25} fill='none' />
+          <circle cx={20} cy={20} r={15} fill='none' className={filledClassName} />
         </svg>
       )
       break
@@ -63,7 +58,7 @@ const AlertIcon = ({ color, size }) => {
   return icon
 }
 
-AlertIcon.propTypes = {
+CircleFullIcon.propTypes = {
   /**
    * color of text, icon and borders
    */
@@ -74,9 +69,9 @@ AlertIcon.propTypes = {
   size: PropTypes.oneOf(SIZES)
 }
 
-AlertIcon.defaultProps = {
-  color: 'error-red',
+CircleFullIcon.defaultProps = {
+  color: 'main-dark-blue',
   size: 'medium'
 }
 
-export default AlertIcon
+export default CircleFullIcon

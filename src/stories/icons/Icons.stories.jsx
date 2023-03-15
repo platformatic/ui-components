@@ -5,6 +5,7 @@ import CircleCloseIcon from '../../components/icons/CircleCloseIcon'
 import WorkspaceStaticIcon from '../../components/icons/WorkspaceStaticIcon'
 import UpgradeIcon from '../../components/icons/UpgradeIcon'
 import WorkspaceDynamicIcon from '../../components/icons/WorkspaceDynamicIcon'
+import { COLORS_ICON } from '../../components/constants'
 
 const divStyle = {
   display: 'flex',
@@ -29,7 +30,7 @@ export default {
       type: 'string',
       control: {
         type: 'radio',
-        options: ['green', 'white', 'red']
+        options: [COLORS_ICON]
       }
     }
   }
@@ -51,9 +52,9 @@ const WorkspaceIconsTemplate = () => (
   [<WorkspaceStaticIcon key='a' />, <WorkspaceDynamicIcon key='b' />].map((component, index) => {
     const listElement = []
     listElement.push(React.cloneElement(component, { key: `0${index}` }))
-    listElement.push(React.cloneElement(component, { key: `1${index}`, size: 'small', color: 'green' }))
-    listElement.push(React.cloneElement(component, { key: `2${index}`, color: 'red' }))
-    listElement.push(React.cloneElement(component, { key: `3${index}`, size: 'small', color: 'red' }))
+    listElement.push(React.cloneElement(component, { key: `1${index}`, size: 'small', color: 'main-green' }))
+    listElement.push(React.cloneElement(component, { key: `2${index}`, color: 'error-red' }))
+    listElement.push(React.cloneElement(component, { key: `3${index}`, size: 'small', color: 'error-red' }))
     listElement.push(React.cloneElement(component, { key: `4${index}`, color: 'main-dark-blue' }))
     listElement.push(React.cloneElement(component, { key: `5${index}`, size: 'small', color: 'main-dark-blue' }))
     return listElement

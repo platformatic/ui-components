@@ -68,3 +68,17 @@
 .apply-opacity-30 {
   @apply opacity-30;
 }
+
+.padding--small {
+  @apply p-1 ;
+}
+.padding--medium {
+  @apply p-2;
+}
+.padding--large {
+  @apply p-4;
+}
+.padding--extra-large {
+  @apply p-6;
+}
+

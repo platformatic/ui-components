@@ -1,9 +1,8 @@
 'use strict'
 import React, { useRef, useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import styles from './SearchBar.module.css'
 import commonStyles from './Common.module.css'
+import PlatformaticIcon from './PlatformaticIcon'
 export default function SearchBar (props) {
   const inputRef = useRef()
   const [wrapperClassName, setWrapperClassName] = useState(normalClassName())
@@ -44,17 +43,13 @@ export default function SearchBar (props) {
     return `${styles.input} ${commonStyles.padded} ${styles.onBlur}`
   }
 
-  function iconClassName () {
-    return isOnFocus ? 'text-main-green' : 'text-white'
-  }
-
   return (
     <div>
       {title && <h1 className={styles.title}>{title}</h1>}
       <div className={wrapperClassName}>
         <input type='text' placeholder='Search' className='grow' ref={inputRef} onChange={handleChange} onFocus={onFocus} onBlur={onBlur} />
         <button onClick={handleSearch} onFocus={onFocus} onBlur={onBlur}>
-          <FontAwesomeIcon className={iconClassName()} icon={faSearch} />
+          <PlatformaticIcon iconName='LensIcon' color={isOnFocus ? 'main-green' : 'white'} size='medium' />
         </button>
       </div>
     </div>

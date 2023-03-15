@@ -25,7 +25,7 @@ const Template = (args) => {
     <main>
       <BorderedBox>This Is another Content</BorderedBox>
       <ContentThatLoads />
-      <Button color='green' buttonClass='primary' onClick={() => setIsOpen(true)} label='Open Modal' />
+      <Button color='main-green' buttonClass='primary' onClick={() => setIsOpen(true)} label='Open Modal' />
       {isOpen && <Modal setIsOpen={setIsOpen} {...rest}>{text}</Modal>}
     </main>
   )
@@ -37,7 +37,7 @@ const TemplateInvite = (args) => {
     <main>
       <BorderedBox>This Is another Content</BorderedBox>
       <ContentThatLoads />
-      <Button color='green' buttonClass='primary' onClick={() => setIsOpen(true)} label='Open Modal' />
+      <Button color='main-green' buttonClass='primary' onClick={() => setIsOpen(true)} label='Open Modal' />
       {isOpen && <Modal setIsOpen={setIsOpen} {...args}><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p><Button buttonClass='primary' onClick={() => setIsOpen(false)} label='Discard invite' /></Modal>}
     </main>
   )

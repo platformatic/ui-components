@@ -47,7 +47,7 @@ export default function Modal (props) {
                   onMouseEnter={() => setIsHoverCloseModal(true)}
                   onMouseLeave={() => setIsHoverCloseModal(false)}
                 >
-                  {isHoverCloseModal ? <CircleCloseHoverIcon color='green' /> : <CircleCloseIcon color='green' />}
+                  {isHoverCloseModal ? <CircleCloseHoverIcon color='main-green' /> : <CircleCloseIcon color='main-green' />}
                 </div>
               </div>
               <p className={styles.titleInvite}>{title}</p>

@@ -1,28 +1,6 @@
 .buttonRoundedFull {
-  @apply rounded-full flex justify-center cursor-pointer font-normal bg-main-dark-blue border items-center;
+  @apply rounded-full flex justify-center cursor-pointer bg-main-dark-blue border items-center;
 }
-
-
-.button-small {
-  @apply p-0 text-sm h-5 w-5;
-}
-.button-medium {
-  @apply p-1 h-6 w-6;
-}
-.button-large {
-  @apply p-2 h-7 w-7;
-}
-
-.green {
-  @apply border-light-green text-light-green ;
-}
-.red {
-  @apply border-error-red text-error-red;
-}
-.white {
-  @apply border-white text-white;
-}
-
 .disabled {
   @apply bg-opacity-30 cursor-default;
 }

@@ -1,26 +1,33 @@
 'use strict'
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircle } from '@fortawesome/free-solid-svg-icons'
-export default function Status (props) {
-  const { color, status } = props
+import PropTypes from 'prop-types'
+import PlatformaticIcon from './PlatformaticIcon'
+import { COLORS_ICON } from './constants'
 
-  function getColorClass (color) {
-    switch (color) {
-      case 'green':
-        return 'text-main-green'
-      case 'red':
-        return 'text-error-red'
-      case 'white':
-      default:
-        return 'text-white'
-    }
-  }
-  const colorClass = getColorClass(color)
+function Status ({ color, status }) {
+  const className = `inline-flex text-${color}`
   return (
-    <div className={colorClass}>
-      <FontAwesomeIcon icon={faCircle} size='2xs' className={`text-${colorClass} mr-2`} />
-      {status}
+    <div className={className}>
+      <PlatformaticIcon iconName='CircleFullIcon' size='medium' />
+      <span className='ml-2'>{status}</span>
     </div>
   )
 }
+
+Status.propTypes = {
+  /**
+   * color
+   */
+  color: PropTypes.oneOf(COLORS_ICON),
+  /**
+   * status
+   */
+  status: PropTypes.string
+}
+
+Status.defaultProps = {
+  color: 'white',
+  status: ''
+}
+
+export default Status

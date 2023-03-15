@@ -84,6 +84,6 @@ IconBeforeAndAfter.args = {
   },
   afterIcon: {
     iconName: 'CircleAddIcon',
-    color: 'red'
+    color: 'error-red'
   }
 }
