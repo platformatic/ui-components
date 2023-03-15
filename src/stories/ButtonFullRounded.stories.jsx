@@ -17,14 +17,14 @@ export default {
       type: 'string',
       control: {
         type: 'radio',
-        options: [COLORS_ICON]
+        options: COLORS_ICON
       }
     },
     size: {
       type: 'string',
       control: {
         type: 'radio',
-        options: [SIZES]
+        options: SIZES
       }
     }
   }

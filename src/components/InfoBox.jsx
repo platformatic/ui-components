@@ -29,7 +29,7 @@ InfoBox.propTypes = {
   /**
    * iconColor
    */
-  iconColor: PropTypes.oneOf([COLORS_ICON]),
+  iconColor: PropTypes.oneOf(COLORS_ICON),
   /**
    * helpText
    */
@@ -40,7 +40,7 @@ InfoBox.propTypes = {
   buttonProps: PropTypes.shape({
     label: PropTypes.string,
     backgroundColor: PropTypes.string,
-    color: PropTypes.oneOf([COLORS_BUTTON]),
+    color: PropTypes.oneOf(COLORS_BUTTON),
     onClick: PropTypes.func
   })
 }
