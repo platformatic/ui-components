@@ -1,17 +1,17 @@
-.green > circle,
-.green > ellipse,
-.green > rect, 
-.green > line, 
-.green > path {
+.main-green > circle,
+.main-green > ellipse,
+.main-green > rect, 
+.main-green > line, 
+.main-green > path {
   @apply stroke-main-green;
 }
 
 
-.red > circle,
-.red > ellipse,
-.red > rect,
-.red > line, 
-.red > path {
+.error-red > circle,
+.error-red > ellipse,
+.error-red > rect,
+.error-red > line, 
+.error-red > path {
   @apply stroke-error-red;
 }
 

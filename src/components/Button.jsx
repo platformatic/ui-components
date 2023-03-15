@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import styles from './Button.module.css'
 import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { SIZES, COLORS_BUTTON } from './constants'
 
 function Button (props) {
@@ -24,7 +23,6 @@ function Button (props) {
   if (fullWidth) className += ` ${styles.fullWidth}`
   return (
     <button className={className} disabled={disabled} alt={label} {...rest}>
-      {icon ? <FontAwesomeIcon icon={icon} className={`${styles['margin-right-' + size]}`} data-testid='button-icon' /> : null}
       {platformaticIcon ? <PlatformaticIcon iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' onClick={null} /> : null}
       <span>{label}</span>
     </button>

@@ -3,6 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Icons from './icons'
 import styles from './PlatformaticIcon.module.css'
+import { COLORS_ICON, SIZES } from './constants'
 
 function PlatformaticIcon ({ iconName, color, onClick, size, classes, tip }) {
   let icon = <></>
@@ -29,11 +30,11 @@ PlatformaticIcon.propTypes = {
   /**
    * color
    */
-  color: PropTypes.string,
+  color: PropTypes.oneOf(COLORS_ICON),
   /**
    * size
    */
-  size: PropTypes.string,
+  size: PropTypes.oneOf(SIZES),
   /**
    * onClick
    */
@@ -50,7 +51,7 @@ PlatformaticIcon.propTypes = {
 
 PlatformaticIcon.defaultProps = {
   iconName: '',
-  color: 'green',
+  color: 'main-green',
   size: 'small',
   onClick: () => {},
   classes: null,

@@ -28,7 +28,6 @@ InfoBoxSample.args = {
   buttonProps: {
     label: 'Sample button',
     backgroundColor: 'main-green',
-    color: 'red',
     onClick: () => alert('Clicked InfoBoxSample')
   }
 }
@@ -48,7 +47,7 @@ InfoBoxContained.args = {
 export const InfoBoxErrorContained = ContainedTemplate.bind({})
 InfoBoxErrorContained.args = {
   iconName: 'WorkspaceFailIcon',
-  iconColor: 'red',
+  iconColor: 'error-red',
   helpText: 'Write your own content',
   buttonProps: {
     label: 'Sample button',

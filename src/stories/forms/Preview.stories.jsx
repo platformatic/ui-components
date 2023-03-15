@@ -52,6 +52,6 @@ WithIcon.args = {
   title: 'My title',
   value: 'My value',
   afterValueIcon: 'WorkspaceStaticIcon',
-  afterValueIconColor: 'green',
+  afterValueIconColor: 'main-green',
   onClickAfterValueIcon: () => alert('icon clicked')
 }

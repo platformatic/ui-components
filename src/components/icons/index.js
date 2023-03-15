@@ -25,6 +25,7 @@ import CircleExclamationIcon from './CircleExclamationIcon'
 import CircleCheckMarkIcon from './CircleCheckMarkIcon'
 import CircleCloseIcon from './CircleCloseIcon'
 import CircleCloseHoverIcon from './CircleCloseHoverIcon'
+import CircleFullIcon from './CircleFullIcon'
 import CircleTwoArrowsDownIcon from './CircleTwoArrowsDownIcon'
 import CircleTwoArrowsUpIcon from './CircleTwoArrowsUpIcon'
 import CloseIcon from './CloseIcon'
@@ -88,6 +89,7 @@ export default {
   CircleExclamationIcon,
   CircleCloseIcon,
   CircleCloseHoverIcon,
+  CircleFullIcon,
   CircleTwoArrowsDownIcon,
   CircleTwoArrowsUpIcon,
   CloseIcon,

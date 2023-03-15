@@ -1,6 +1,6 @@
 'use strict'
-import { faStop, faRefresh } from '@fortawesome/free-solid-svg-icons'
 import ButtonFullRounded from '../components/ButtonFullRounded'
+import { COLORS_ICON, SIZES } from '../components/constants'
 
 export default {
   title: 'Platformatic/ButtonFullRounded',
@@ -17,14 +17,14 @@ export default {
       type: 'string',
       control: {
         type: 'radio',
-        options: ['green', 'red', 'white']
+        options: [COLORS_ICON]
       }
     },
     size: {
       type: 'string',
       control: {
         type: 'radio',
-        options: ['small', 'medium', 'large']
+        options: [SIZES]
       }
     }
   }
@@ -34,28 +34,28 @@ const Template = (args) => <ButtonFullRounded {...args} />
 
 export const WhiteLarge = Template.bind({})
 WhiteLarge.args = {
-  icon: faStop,
-  size: 'large'
+  iconName: 'PlayIcon',
+  iconSize: 'large'
 }
 
 export const GreenSmall = Template.bind({})
 GreenSmall.args = {
-  icon: faStop,
-  color: 'green',
-  size: 'small'
+  iconName: 'StopIcon',
+  iconColor: 'main-green',
+  iconSize: 'small'
 }
 
 export const Disabled = Template.bind({})
 
 Disabled.args = {
-  icon: faRefresh,
+  iconName: 'BellIcon',
   disabled: true
 }
 
 export const DisabledRed = Template.bind({})
 
 DisabledRed.args = {
-  icon: faRefresh,
-  color: 'red',
+  iconName: 'StopIcon',
+  iconColor: 'error-red',
   disabled: true
 }

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import styles from './InfoBox.module.css'
 import Button from './Button'
 import PlatformaticIcon from './PlatformaticIcon'
+import { COLORS_BUTTON, COLORS_ICON } from './constants'
 
 function InfoBox ({ children, iconName, iconColor, helpText, buttonProps }) {
   return (
@@ -28,7 +29,7 @@ InfoBox.propTypes = {
   /**
    * iconColor
    */
-  iconColor: PropTypes.oneOf(['green', 'white', 'main-dark-blue', 'red']),
+  iconColor: PropTypes.oneOf([COLORS_ICON]),
   /**
    * helpText
    */
@@ -39,7 +40,7 @@ InfoBox.propTypes = {
   buttonProps: PropTypes.shape({
     label: PropTypes.string,
     backgroundColor: PropTypes.string,
-    color: PropTypes.string,
+    color: PropTypes.oneOf([COLORS_BUTTON]),
     onClick: PropTypes.func
   })
 }
@@ -47,7 +48,7 @@ InfoBox.propTypes = {
 InfoBox.defaultProps = {
   children: null,
   iconName: '',
-  iconColor: 'green',
+  iconColor: 'main-green',
   helpText: '',
   buttonProps: null
 }

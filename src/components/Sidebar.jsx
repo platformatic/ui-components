@@ -74,7 +74,7 @@ function Sidebar (props) {
                     <button className={`${styles.buttonItem} ${collapsed && styles.buttonItemCollapsed}`} type='button' onClick={() => onClickItemSelected(item)}>
                       {item.iconName && (<PlatformaticIcon
                         iconName={item.iconName}
-                        color={isSelected ? 'green' : 'white'}
+                        color={isSelected ? 'main-green' : 'white'}
                         tip={item.title}
                         size='medium'
                                          />)}

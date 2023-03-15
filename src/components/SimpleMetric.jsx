@@ -1,8 +1,6 @@
 'use strict'
 
 import React from 'react'
-// The icon that is in design is not in the free version of fontawesome
-// Temporary using this one
 import ReactTooltip from 'react-tooltip'
 import BorderedBox from './BorderedBox'
 import styles from './SimpleMetric.module.css'

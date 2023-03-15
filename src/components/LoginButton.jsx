@@ -1,17 +1,8 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import styles from './LoginButton.module.css'
+import Button from './Button'
 
-export default function LoginButton ({ icon, label, onClick, ...props }) {
+export default function LoginButton ({ iconName, label, onClick, ...props }) {
   return (
-    <div className={styles.container} onClick={onClick}>
-      <div
-        className={styles.button}
-        data-testid='login-button'
-        {...props}
-      >
-        {icon ? <FontAwesomeIcon icon={icon} className='mr-2' data-testid='login-button-icon' /> : null} {label}
-      </div>
-    </div>
+    <Button backgroundColor='main-green' alt={label} label={label} platformaticIcon={{ iconName, size: 'medium', color: 'main-dark-blue' }} data-testid='login-button' size='extra-large' onClick={onClick} {...props} bold />
   )
 }
