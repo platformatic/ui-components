@@ -8,7 +8,7 @@ function Status ({ color, status }) {
   const className = `inline-flex text-${color}`
   return (
     <div className={className}>
-      <PlatformaticIcon iconName='CircleFullIcon' size='medium' />
+      <PlatformaticIcon iconName='CircleFullIcon' size='medium' color={color} />
       <span className='ml-2'>{status}</span>
     </div>
   )

@@ -40,13 +40,13 @@
 .filled-white {
   @apply fill-white
 }
-.filled-red{
+.filled-error-red{
   @apply fill-error-red;
 }
 .filled-main-dark-blue {
   @apply fill-main-dark-blue ;
 }
-.filled-green {
+.filled-main-green {
   @apply fill-main-green ;
 }
 .filled-warning-yellow {
