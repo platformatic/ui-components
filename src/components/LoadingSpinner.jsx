@@ -3,31 +3,20 @@ import PropTypes from 'prop-types'
 import styles from './LoadingSpinner.module.css'
 import { SpinnerCircular } from 'spinners-react'
 
-function LoadingSpinner ({ loading, children }) {
+function LoadingSpinner ({ loading }) {
   // If null then loading not started, if true then loading, if false then done loading
-  return (
-    <div className={styles.container} data-testid='loadable-v2'>
-      {
-        loading
-          ? (
-            <>
-              <div data-testid='loadable-v2-content' className={styles.relative}>
-                <SpinnerCircular className={styles.spinner} thickness={180} size={60} />
-                <div className={styles.blurred}>{children}</div>
-              </div>
-            </>
-            )
-          : <>{children}</>
-      }
-    </div>
-  )
+  return loading
+    ? (
+      <div className={styles.container} data-testid='loadable-v2'>
+        <div data-testid='loading-spinner-content' className={styles.relative}>
+          <SpinnerCircular className={styles.spinner} thickness={180} size={60} />
+        </div>
+      </div>
+      )
+    : <></>
 }
 
 LoadingSpinner.propTypes = {
-  /**
-   * children
-   */
-  children: PropTypes.node,
   /**
    * loading
    */
@@ -35,7 +24,6 @@ LoadingSpinner.propTypes = {
 }
 
 LoadingSpinner.defaultProps = {
-  children: null,
   loading: false
 }
 
