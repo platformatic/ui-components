@@ -1,7 +1,6 @@
 'use strict'
 
 import BorderedBox from './src/components/BorderedBox'
-import BorderedText from './src/components/BorderedText'
 import Box from './src/components/Box'
 import Button from './src/components/Button'
 import ButtonFullRounded from './src/components/ButtonFullRounded'
@@ -29,6 +28,7 @@ import SearchBar from './src/components/SearchBar'
 import SimpleMetric from './src/components/SimpleMetric'
 import Status from './src/components/Status'
 import TabbedWindow from './src/components/TabbedWindow'
+import Tag from './src/components/Tag'
 import TextWithLabel from './src/components/TextWithLabel'
 import TwoColumnsLayout from './src/components/layouts/TwoColumnsLayout'
 import Versions from './src/components/Versions'
@@ -36,7 +36,6 @@ import VerticalSeparator from './src/components/VerticalSeparator'
 
 export {
   BorderedBox,
-  BorderedText,
   Box,
   Button,
   ButtonFullRounded,
@@ -64,6 +63,7 @@ export {
   SimpleMetric,
   Status,
   TabbedWindow,
+  Tag,
   TextWithLabel,
   TwoColumnsLayout,
   Versions,
