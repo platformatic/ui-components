@@ -30,7 +30,7 @@ export default {
       type: 'string',
       control: {
         type: 'radio',
-        options: [COLORS_ICON]
+        options: COLORS_ICON
       }
     }
   }
