@@ -1,0 +1,7 @@
+.tag {
+  @apply rounded-md px-2 py-1 tracking-super-widest;
+}
+
+.bordered {
+  @apply border border-solid;
+}

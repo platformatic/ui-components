@@ -28,7 +28,13 @@
   @apply px-2 py-2.5;
 }
 
-.text--green {
+.text--error-red {
+  @apply text-error-red
+}
+.text--white {
+  @apply text-white
+}
+.text--main-green {
   @apply text-main-green
 }
 .text--main-dark-blue {
@@ -65,10 +71,18 @@
 .background-color-transparent{
   @apply bg-transparent;
 }
+.background-color-opaque-100 {
+  @apply bg-opacity-100 !important;
+}
+.background-color-opaque-60 {
+  @apply bg-opacity-60 !important;
+}
+.background-color-opaque-30 {
+  @apply bg-opacity-30 !important;
+}
 .apply-opacity-30 {
   @apply opacity-30;
 }
-
 .padding--small {
   @apply p-1 ;
 }
