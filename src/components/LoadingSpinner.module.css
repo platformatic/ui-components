@@ -1,0 +1,8 @@
+.container {
+  @apply fixed top-0 left-0 h-screen w-full min-h-screen min-w-full overflow-y-auto bg-main-dark-blue z-50 bg-opacity-70;
+}
+.spinner {
+  @apply z-50 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+}
+
+
