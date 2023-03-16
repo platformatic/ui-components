@@ -7,7 +7,7 @@ function LoadingSpinner ({ loading }) {
   // If null then loading not started, if true then loading, if false then done loading
   return loading
     ? (
-      <div className={styles.container} data-testid='loadable-v2'>
+      <div className={styles.container} data-testid='loading-spinner'>
         <div data-testid='loading-spinner-content' className={styles.relative}>
           <SpinnerCircular className={styles.spinner} thickness={180} size={60} />
         </div>
