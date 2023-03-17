@@ -92,6 +92,7 @@ function Sidebar (props) {
                 <PlatformaticIcon
                   iconName='CircleAddIcon'
                   color='white'
+                  size='medium'
                   tip={addTitle}
                 />
                 {!collapsed && <span className={styles.item}>{addTitle}</span>}
