@@ -1,4 +1,10 @@
 export const COLORS_ICON = ['main-green', 'white', 'main-dark-blue', 'error-red', 'warning-yellow']
-export const SIZES = ['small', 'medium', 'large', 'extra-large']
 export const COLORS_BUTTON = ['main-green', 'dark-green', 'light-green', 'main-dark-blue', 'dark-blue', 'light-blue', 'white', 'error-red', 'tertiary-blue', 'transparent']
 export const COLORS_BORDERED_BOX = ['main-green', 'error-red', 'white', 'dark-blue', 'warning-yellow', 'transparent']
+export const WHITE = 'white'
+export const MAIN_DARK_BLUE = 'main-dark-blue'
+export const SMALL = 'small'
+export const MEDIUM = 'medium'
+export const LARGE = 'large'
+export const EXTRA_LARGE = 'extra-large'
+export const SIZES = [SMALL, MEDIUM, LARGE, EXTRA_LARGE]

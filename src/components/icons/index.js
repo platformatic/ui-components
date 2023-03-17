@@ -41,6 +41,7 @@ import KeyIcon from './KeyIcon'
 import LayersIcon from './LayersIcon'
 import LensIcon from './LensIcon'
 import LiveIcon from './LiveIcon'
+import LoadingAppIcon from './LoadingAppIcon'
 import LogOutIcon from './LogOutIcon'
 import MetricsIcon from './MetricsIcon'
 import PlayIcon from './PlayIcon'
@@ -57,6 +58,7 @@ import TerminalIcon from './TerminalIcon'
 import TwoUsersIcon from './TwoUsersIcon'
 import UpgradeIcon from './UpgradeIcon'
 import WorkspaceDynamicIcon from './WorkspaceDynamicIcon'
+import WorkspaceGitHubIcon from './WorkspaceGitHubIcon'
 import WorkspaceFailIcon from './WorkspaceFailIcon'
 import WorkspaceReadyIcon from './WorkspaceReadyIcon'
 import WorkspaceStaticIcon from './WorkspaceStaticIcon'
@@ -105,6 +107,7 @@ export default {
   LayersIcon,
   LensIcon,
   LiveIcon,
+  LoadingAppIcon,
   LogOutIcon,
   MetricsIcon,
   PlayIcon,
@@ -122,6 +125,7 @@ export default {
   TwoUsersIcon,
   WorkspaceDynamicIcon,
   WorkspaceFailIcon,
+  WorkspaceGitHubIcon,
   WorkspaceReadyIcon,
   WorkspaceStaticIcon
 }
