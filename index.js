@@ -21,6 +21,7 @@ import Loadable from './src/components/Loadable'
 import LoadingSpinner from './src/components/LoadingSpinner'
 import LoginButton from './src/components/LoginButton'
 import Logo from './src/components/Logo'
+import Logos from './src/components/logs'
 import Modal from './src/components/Modal'
 import PlatformaticIcon from './src/components/PlatformaticIcon'
 import Playground from './src/components/Playground'
@@ -47,6 +48,7 @@ export {
   GHLoginButton,
   Forms,
   Icons,
+  Logos,
   InfoBox,
   Sidebar,
   Layout,
