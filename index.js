@@ -4,6 +4,7 @@ import BorderedBox from './src/components/BorderedBox'
 import Box from './src/components/Box'
 import Button from './src/components/Button'
 import ButtonFullRounded from './src/components/ButtonFullRounded'
+import CopyAndPaste from './src/components/CopyAndPaste'
 import Checkbox from './src/components/Checkbox'
 import DetailedMetric from './src/components/DetailedMetric'
 import DropDown from './src/components/DropDown'
@@ -41,6 +42,7 @@ export {
   Button,
   ButtonFullRounded,
   Checkbox,
+  CopyAndPaste,
   DetailedMetric,
   DropDown,
   FollowUs,

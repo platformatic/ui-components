@@ -8,7 +8,13 @@ export default {
 
 const Template = (args) => <FollowUs {...args} />
 
-export const FollowUsDefault = Template.bind({})
-FollowUsDefault.args = {
+export const FollowUsFrontpage = Template.bind({})
+FollowUsFrontpage.args = {
   label: 'Follow us on'
+}
+
+export const FollowUsDashboard = Template.bind({})
+FollowUsDashboard.args = {
+  label: 'Follow us:',
+  useOnFrontpage: false
 }

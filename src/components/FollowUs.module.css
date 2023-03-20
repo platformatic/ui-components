@@ -1,11 +1,18 @@
-.container {
+.containerFrontpage {
   @apply flex w-full items-center;
 }
-
-.label {
+.containerDashboard {
+  @apply flex items-center;
+}
+.labelFrontpage {
   @apply uppercase text-light-green tracking-more-widest text-sm mr-8;
 }
-
-.icon {
+.labelDashboard {
+  @apply text-white text-xs mr-2;
+}
+.iconFrontpage {
   @apply text-white mx-4 text-xl;
+}
+.iconDashboard {
+  @apply mx-2;
 }

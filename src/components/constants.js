@@ -3,6 +3,7 @@ export const COLORS_BUTTON = ['main-green', 'dark-green', 'light-green', 'main-d
 export const COLORS_BORDERED_BOX = ['main-green', 'error-red', 'white', 'dark-blue', 'warning-yellow', 'transparent']
 export const WHITE = 'white'
 export const MAIN_DARK_BLUE = 'main-dark-blue'
+export const MAIN_GREEN = 'main-green'
 export const SMALL = 'small'
 export const MEDIUM = 'medium'
 export const LARGE = 'large'

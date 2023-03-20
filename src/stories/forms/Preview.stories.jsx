@@ -46,12 +46,28 @@ WithChildren.args = {
   value: 'My value'
 }
 
-export const WithIcon = Template.bind({})
+export const WithPlatformaticIcon = Template.bind({})
 
-WithIcon.args = {
+WithPlatformaticIcon.args = {
   title: 'My title',
   value: 'My value',
-  afterValueIcon: 'WorkspaceStaticIcon',
-  afterValueIconColor: 'main-green',
-  onClickAfterValueIcon: () => alert('icon clicked')
+  usePlatformaticIcon: true,
+  platformaticIcon: {
+    iconName: 'WorkspaceStaticIcon',
+    color: 'main-green',
+    onClick: () => alert('icon clicked')
+  }
+}
+
+export const WithCopyAndPasteIcon = Template.bind({})
+
+WithCopyAndPasteIcon.args = {
+  title: 'My title',
+  value: 'My value',
+  useCopyAndPaste: true,
+  copyAndPaste: {
+    color: 'main-dark-blue',
+    value: 'My value',
+    tooltipLabel: 'Great! My Value copied!!'
+  }
 }

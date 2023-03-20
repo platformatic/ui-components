@@ -2,27 +2,30 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Preview.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
+import CopyAndPaste from '../CopyAndPaste'
+import { SIZES, COLORS_ICON } from '../constants'
 
 function renderLink (value) {
   return (<a className={styles.link} href={value} target='_blank' rel='noreferrer'>{value}</a>)
 }
 
-function renderParagraph (value, afterValueIcon, afterValueIconColor, onClickAfterValueIcon) {
+function renderParagraph (value, useCopyAndPaste, copyAndPaste, usePlatformaticIcon, platformaticIcon) {
   return (
     <>
       <p className={styles.value}>
         {value}
-        {afterValueIcon && (<PlatformaticIcon iconName={afterValueIcon} color={afterValueIconColor} size='medium' classes={styles.afterIcon} onClick={() => onClickAfterValueIcon} />)}
+        {useCopyAndPaste && (<CopyAndPaste {...copyAndPaste} />)}
+        {usePlatformaticIcon && (<PlatformaticIcon {...platformaticIcon} />)}
       </p>
     </>
   )
 }
-function Preview ({ title, value, isLink, children, afterValueIcon, afterValueIconColor, onClickAfterValueIcon }) {
+function Preview ({ title, value, isLink, children, useCopyAndPaste, copyAndPaste, usePlatformaticIcon, platformaticIcon }) {
   return (
     <>
       <div className={styles.container}>
         <p className={styles.title}>{title}</p>
-        {isLink ? renderLink(value) : renderParagraph(value, afterValueIcon, afterValueIconColor, onClickAfterValueIcon)}
+        {isLink ? renderLink(value) : renderParagraph(value, useCopyAndPaste, copyAndPaste, usePlatformaticIcon, platformaticIcon)}
       </div>
       {children}
     </>
@@ -50,26 +53,43 @@ Preview.propTypes = {
    */
   children: PropTypes.node,
   /**
-   * afterValueIcon
+   * useCopyAndPaste
    */
-  afterValueIcon: PropTypes.string,
+  useCopyAndPaste: PropTypes.bool,
   /**
-   * afterValueIconColor
+   * copyAndPaste
    */
-  afterValueIconColor: PropTypes.oneOf(['error-red', 'main-dark-blue', 'white']),
+  copyAndPaste: PropTypes.shape({
+    value: PropTypes.string,
+    tooltipLabel: PropTypes.string,
+    iconSize: PropTypes.oneOf(SIZES),
+    iconColor: PropTypes.oneOf(COLORS_ICON),
+    timeout: PropTypes.number
+  }),
   /**
-   * onClickAfterValueIcon
+   * usePlatformaticIcon
    */
-  onClickAfterValueIcon: PropTypes.func
+  usePlatformaticIcon: PropTypes.bool,
+  /**
+   * platformaticIcon
+   */
+  platformaticIcon: PropTypes.shape({
+    iconName: PropTypes.string.isRequired,
+    color: PropTypes.oneOf(COLORS_ICON),
+    size: PropTypes.oneOf(SIZES),
+    onClick: PropTypes.func
+  })
 }
 
 Preview.defaultProps = {
   title: '',
   value: '',
   isLink: false,
-  afterValueIconColor: 'main-dark-blue',
-  afterValueIcon: null,
-  onClickAfterValueIcon: () => {}
+  children: null,
+  useCopyAndPaste: false,
+  copyAndPaste: null,
+  platformaticIcon: null,
+  usePlatformaticIcon: false
 }
 
 export default Preview
