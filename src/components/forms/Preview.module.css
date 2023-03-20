@@ -5,7 +5,7 @@
   @apply text-sm text-main-dark-blue pb-1;
 }
 .value {
-  @apply text-xl font-semibold text-main-dark-blue inline-flex;
+  @apply text-xl font-semibold text-main-dark-blue flex items-center gap-x-2;
 }
 .link {
   @apply font-semibold;
