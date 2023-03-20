@@ -20,9 +20,9 @@ function CopyAndPaste ({ value, tooltipLabel, color, timeout, size }) {
     ? (<PlatformaticIcon size={size} iconName='CopyPasteIcon' color={color} onClick={() => copy()} />)
     : (
       <>
-        <div data-tip={tooltipLabel} data-place='top'>
+        <span data-tip={tooltipLabel} data-place='top'>
           <PlatformaticIcon size={size} iconName='CircleCheckMarkIcon' color={color} onClick={null} />
-        </div>
+        </span>
         <ReactTooltip place='top' type='info' />
       </>
       )
