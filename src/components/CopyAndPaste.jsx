@@ -1,7 +1,7 @@
-
+'use strict'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { COLORS_ICON, MEDIUM, SIZES } from './constants'
-import { useState } from 'react'
 import PlatformaticIcon from './PlatformaticIcon'
 import ReactTooltip from 'react-tooltip'
 
