@@ -1,11 +1,11 @@
 
 import PropTypes from 'prop-types'
-import { COLORS_ICON } from './constants'
+import { COLORS_ICON, MEDIUM, SIZES } from './constants'
 import { useState } from 'react'
 import PlatformaticIcon from './PlatformaticIcon'
 import ReactTooltip from 'react-tooltip'
 
-function CopyAndPaste ({ id, value, tooltipLabel, iconColor, timeout }) {
+function CopyAndPaste ({ value, tooltipLabel, color, timeout, size }) {
   const [copied, setCopied] = useState(false)
 
   function copy () {
@@ -17,11 +17,11 @@ function CopyAndPaste ({ id, value, tooltipLabel, iconColor, timeout }) {
   }
 
   return !copied
-    ? (<PlatformaticIcon size='medium' iconName='CopyPasteIcon' color={iconColor} onClick={() => copy()} />)
+    ? (<PlatformaticIcon size={size} iconName='CopyPasteIcon' color={color} onClick={() => copy()} />)
     : (
       <>
         <div data-tip={tooltipLabel} data-place='top'>
-          <PlatformaticIcon size='medium' iconName='CircleCheckMarkIcon' color={iconColor} onClick={null} />
+          <PlatformaticIcon size={size} iconName='CircleCheckMarkIcon' color={color} onClick={null} />
         </div>
         <ReactTooltip place='top' type='info' />
       </>
@@ -29,11 +29,6 @@ function CopyAndPaste ({ id, value, tooltipLabel, iconColor, timeout }) {
 }
 
 CopyAndPaste.propTypes = {
-  /**
-   * id
-   */
-  id: PropTypes.string,
-  /**
   /**
    * value
    */
@@ -43,9 +38,13 @@ CopyAndPaste.propTypes = {
    */
   tooltipLabel: PropTypes.string,
   /**
-   * iconColor
+   * size
    */
-  iconColor: PropTypes.oneOf(COLORS_ICON),
+  size: PropTypes.oneOf(SIZES),
+  /**
+   * color
+   */
+  color: PropTypes.oneOf(COLORS_ICON),
   /**
    * timeout
    */
@@ -55,8 +54,9 @@ CopyAndPaste.propTypes = {
 CopyAndPaste.defaultProps = {
   value: 'app',
   tooltipLabel: 'Create your app now',
-  iconColor: 'main-dark-blue',
-  timeout: 1500
+  color: 'main-dark-blue',
+  timeout: 1500,
+  size: MEDIUM
 }
 
 export default CopyAndPaste
