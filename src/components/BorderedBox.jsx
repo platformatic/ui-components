@@ -5,10 +5,11 @@ import commonStyles from './Common.module.css'
 import React from 'react'
 import { COLORS_BORDERED_BOX } from './constants'
 function BorderedBox (props) {
-  const { classes, color, children, backgroundColor } = props
+  const { classes, color, children, backgroundColor, opaque } = props
   const borderColor = commonStyles[`bordered--${color}`]
   const styledBackgroundColor = commonStyles[`background-color-${backgroundColor}`]
-  const className = `${styles.borderedBox} ${commonStyles.bordered} ${classes} ${borderColor} ${styledBackgroundColor}`
+  const opacity = commonStyles[`background-color-opaque-${opaque}`]
+  const className = `${styles.borderedBox} ${commonStyles.bordered} ${classes} ${borderColor} ${styledBackgroundColor} ${opacity}`
 
   return (
     <div className={className}>
@@ -33,14 +34,19 @@ BorderedBox.propTypes = {
   /**
    * classes
    */
-  classes: PropTypes.string
+  classes: PropTypes.string,
+  /**
+   * opaque
+   */
+  opaque: PropTypes.oneOf([100, 60, 30, 20])
 }
 
 BorderedBox.defaultProps = {
   children: null,
   color: 'main-green',
   backgroundColor: 'dark-blue',
-  classes: ''
+  classes: '',
+  opaque: 100
 }
 
 export default BorderedBox

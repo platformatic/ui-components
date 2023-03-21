@@ -40,7 +40,7 @@ Tag.propTypes = {
   /**
    * opaque
    */
-  opaque: PropTypes.oneOf([100, 60, 30])
+  opaque: PropTypes.oneOf([100, 60, 30, 20])
 
 }
 

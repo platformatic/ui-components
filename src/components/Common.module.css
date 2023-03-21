@@ -68,6 +68,9 @@
 .background-color-tertiary-blue{
   @apply bg-tertiary-blue !important;
 }
+.background-color-warning-yellow{
+  @apply bg-warning-yellow !important ;
+}
 .background-color-transparent{
   @apply bg-transparent;
 }
