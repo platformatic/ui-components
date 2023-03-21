@@ -2,7 +2,7 @@
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import Button from '../components/Button'
-import { COLORS_BUTTON, SIZES } from '../components/constants'
+import { COLORS_BUTTON, HOVER_EFFECTS_BUTTONS, SIZES } from '../components/constants'
 
 export default {
   title: 'Platformatic/Button',
@@ -41,7 +41,7 @@ export default {
     },
     hoverEffect: {
       type: 'radio',
-      options: ['hover', 'underline']
+      options: HOVER_EFFECTS_BUTTONS
     },
     bordered: {
       type: 'boolean'

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import styles from './InfoBox.module.css'
 import Button from './Button'
 import PlatformaticIcon from './PlatformaticIcon'
-import { COLORS_BUTTON, COLORS_ICON } from './constants'
+import { COLORS_BUTTON, COLORS_ICON, HOVER_EFFECTS_BUTTONS } from './constants'
 
 function InfoBox ({ children, iconName, iconColor, helpText, buttonProps }) {
   return (
@@ -12,7 +12,7 @@ function InfoBox ({ children, iconName, iconColor, helpText, buttonProps }) {
       <PlatformaticIcon size='extra-large' iconName={iconName} color={iconColor} />
       {children}
       <p className={styles.helpText}>{helpText}</p>
-      {buttonProps && (<Button type='button' size='extra-large' label={buttonProps.label} color={buttonProps.color} backgroundColor={buttonProps.backgroundColor} onClick={() => buttonProps.onClick()} fullWidth bold />)}
+      {buttonProps && (<Button type='button' size='extra-large' label={buttonProps.label} color={buttonProps.color} backgroundColor={buttonProps.backgroundColor} onClick={() => buttonProps.onClick()} fullWidth bold bordered={buttonProps.bordered} hoverEffect={buttonProps.hoverEffect} />)}
     </div>
   )
 }
@@ -41,6 +41,8 @@ InfoBox.propTypes = {
     label: PropTypes.string,
     backgroundColor: PropTypes.string,
     color: PropTypes.oneOf(COLORS_BUTTON),
+    hoverEffect: PropTypes.oneOf(HOVER_EFFECTS_BUTTONS),
+    bordered: PropTypes.bool,
     onClick: PropTypes.func
   })
 }

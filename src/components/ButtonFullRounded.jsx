@@ -4,17 +4,30 @@ import PropTypes from 'prop-types'
 import commonStyles from './Common.module.css'
 import styles from './ButtonFullRounded.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
-import { COLORS_ICON, SIZES } from './constants'
-function ButtonFullRounded ({ iconName, iconSize, iconColor, disabled, paddingSize, alt, onClick }) {
-  const borderColor = commonStyles[`bordered--${iconColor}`]
+import { COLORS_ICON, SIZES, BACKGROUND_COLOR_OPAQUE, PADDING_SIZES, SMALL, WHITE, NONE } from './constants'
+function ButtonFullRounded ({ className, iconName, iconSize, iconColor, disabled, paddingSize, alt, onClick, hoverEffect, bordered }) {
   const padding = commonStyles[`padding--${paddingSize}`]
-  let className = `${styles.buttonRoundedFull} ${borderColor} ${padding}`
-  if (disabled) className += ` ${styles.disabled}`
+  const containerClassName = `${className} ${styles.roundedFull} ` + commonStyles['background-color-main-dark-blue']
+  let buttonClassName = `${styles.roundedFull} ${styles.buttonRoundedFull} ${padding}`
+  if (bordered) buttonClassName += ' ' + commonStyles[`bordered--${iconColor}`]
+  if (disabled) {
+    buttonClassName += ` ${styles.disabled}`
+  } else {
+    switch (hoverEffect) {
+      case BACKGROUND_COLOR_OPAQUE:
+        buttonClassName += ' ' + commonStyles[`hover-${BACKGROUND_COLOR_OPAQUE}-${iconColor}`]
+        break
+      default:
+        break
+    }
+  }
 
   return (
-    <button className={className} disabled={disabled} onClick={onClick} alt={alt}>
-      <PlatformaticIcon iconName={iconName} size={iconSize} color={iconColor} data-testid='button-icon' onClick={null} />
-    </button>
+    <div className={containerClassName}>
+      <button className={buttonClassName} disabled={disabled} onClick={onClick} alt={alt}>
+        <PlatformaticIcon iconName={iconName} size={iconSize} color={iconColor} data-testid='button-icon' onClick={null} />
+      </button>
+    </div>
   )
 }
 
@@ -38,7 +51,7 @@ ButtonFullRounded.propTypes = {
   /**
    * paddingSize
    */
-  paddingSize: PropTypes.oneOf(SIZES),
+  paddingSize: PropTypes.oneOf(PADDING_SIZES),
   /**
    * alt
    */
@@ -46,17 +59,28 @@ ButtonFullRounded.propTypes = {
   /**
    * onClick
    */
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  /**
+   * Effect on hover
+   */
+  hoverEffect: PropTypes.oneOf([BACKGROUND_COLOR_OPAQUE]),
+  /**
+   * bordered
+   */
+  bordered: PropTypes.bool
+
 }
 
 ButtonFullRounded.defaultProps = {
   iconName: '',
-  iconColor: 'white',
-  iconSize: 'small',
+  iconColor: WHITE,
+  iconSize: SMALL,
   disabled: false,
-  paddingSize: 'small',
+  paddingSize: NONE,
   alt: 'ButtonFullRounded',
-  onClick: () => {}
+  onClick: () => {},
+  hoverEffect: '',
+  bordered: true
 }
 
 export default ButtonFullRounded

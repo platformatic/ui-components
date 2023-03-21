@@ -1,6 +1,9 @@
 .buttonRoundedFull {
-  @apply rounded-full flex justify-center cursor-pointer bg-main-dark-blue border items-center;
+  @apply flex justify-center cursor-pointer bg-main-dark-blue border items-center;
 }
 .disabled {
   @apply bg-opacity-30 cursor-default;
+}
+.roundedFull {
+  @apply rounded-full 
 }
