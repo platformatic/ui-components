@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import commonStyles from './Common.module.css'
 import styles from './ButtonFullRounded.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
-import { COLORS_ICON, SIZES, BACKGROUND_COLOR_OPAQUE, PADDING_SIZES } from './constants'
+import { COLORS_ICON, SIZES, BACKGROUND_COLOR_OPAQUE, PADDING_SIZES, SMALL, WHITE, NONE } from './constants'
 function ButtonFullRounded ({ className, iconName, iconSize, iconColor, disabled, paddingSize, alt, onClick, hoverEffect, bordered }) {
   const padding = commonStyles[`padding--${paddingSize}`]
   const containerClassName = `${className} ${styles.roundedFull} ` + commonStyles['background-color-main-dark-blue']
@@ -73,10 +73,10 @@ ButtonFullRounded.propTypes = {
 
 ButtonFullRounded.defaultProps = {
   iconName: '',
-  iconColor: 'white',
-  iconSize: 'small',
+  iconColor: WHITE,
+  iconSize: SMALL,
   disabled: false,
-  paddingSize: 'none',
+  paddingSize: NONE,
   alt: 'ButtonFullRounded',
   onClick: () => {},
   hoverEffect: '',

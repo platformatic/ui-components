@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import styles from './Button.module.css'
 import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
-import { SIZES, COLORS_BUTTON, BOX_SHADOW, UNDERLINE, HOVER_EFFECTS_BUTTONS, BACKGROUND_COLOR_OPAQUE } from './constants'
+import { SIZES, COLORS_BUTTON, BOX_SHADOW, UNDERLINE, HOVER_EFFECTS_BUTTONS, BACKGROUND_COLOR_OPAQUE, MAIN_DARK_BLUE, LARGE } from './constants'
 
 function Button (props) {
   const { icon, label, color, backgroundColor, size, disabled, bold, hoverEffect, bordered, fullWidth, platformaticIcon, ...rest } = props
@@ -89,12 +89,12 @@ Button.propTypes = {
 
 Button.defaultProps = {
   label: '',
-  color: 'main-dark-blue',
+  color: MAIN_DARK_BLUE,
   backgroundColor: 'transparent',
   disabled: false,
-  size: 'large',
+  size: LARGE,
   bold: false,
-  hoverEffect: 'hover',
+  hoverEffect: BACKGROUND_COLOR_OPAQUE,
   bordered: true,
   fullWidth: false,
   platformaticIcon: null

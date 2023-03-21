@@ -63,31 +63,31 @@
 .disabled {
   @apply opacity-30 cursor-default;
 }
-.hover-shadow-main-green {
+.hover-box-shadow-main-green {
   @apply hover:shadow-main-green;
 }
-.hover-shadow-light-green {
+.hover-box-shadow-light-green {
   @apply hover:shadow-light-green;
 }
-.hover-shadow-dark-green {
+.hover-box-shadow-dark-green {
   @apply hover:shadow-dark-green;
 }
-.hover-shadow-main-dark-blue {
+.hover-box-shadow-main-dark-blue {
   @apply hover:shadow-main-dark-blue;
 }
-.hover-shadow-dark-blue {
+.hover-box-shadow-dark-blue {
   @apply hover:shadow-dark-blue;
 }
-.hover-shadow-light-blue {
+.hover-box-shadow-light-blue {
   @apply hover:shadow-light-blue;
 }
-.hover-shadow-white{
+.hover-box-shadow-white{
   @apply hover:shadow-wrap;
 }
-.hover-shadow-error-red {
+.hover-box-shadow-error-red {
   @apply hover:shadow-error-red;
 }
-.hover-shadow-tertiary-blue {
+.hover-box-shadow-tertiary-blue {
   @apply hover:shadow-tertiary-blue;
 }
 .underline-effect {
