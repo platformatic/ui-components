@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import styles from './Button.module.css'
 import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
-import { SIZES, COLORS_BUTTON } from './constants'
+import { SIZES, COLORS_BUTTON, BOX_SHADOW, UNDERLINE, HOVER_EFFECTS_BUTTONS, BACKGROUND_COLOR_OPAQUE } from './constants'
 
 function Button (props) {
   const { icon, label, color, backgroundColor, size, disabled, bold, hoverEffect, bordered, fullWidth, platformaticIcon, ...rest } = props
@@ -13,10 +13,18 @@ function Button (props) {
   if (disabled) {
     className += ` ${styles.disabled}`
   } else {
-    if (hoverEffect === 'hover') {
-      className += ` ${styles['hover-' + backgroundColor]}`
-    } else {
-      className += ` ${styles['underline-effect']}`
+    switch (hoverEffect) {
+      case BACKGROUND_COLOR_OPAQUE:
+        className += ' ' + commonStyles[`hover-${BACKGROUND_COLOR_OPAQUE}-${color}`]
+        break
+      case BOX_SHADOW:
+        className += ' ' + styles[`hover-${BOX_SHADOW}-${backgroundColor}`]
+        break
+      case UNDERLINE:
+        className += ` ${styles['underline-effect']}`
+        break
+      default:
+        break
     }
   }
   if (bold) className += ` ${styles.fontBold}`
@@ -61,7 +69,7 @@ Button.propTypes = {
   /**
    * Effect on hover
    */
-  hoverEffect: PropTypes.oneOf(['hover', 'underline']),
+  hoverEffect: PropTypes.oneOf(HOVER_EFFECTS_BUTTONS),
   /**
    * Apply border: default true
    */

@@ -80,8 +80,14 @@
 .background-color-opaque-30 {
   @apply bg-opacity-30 !important;
 }
+.background-color-opaque-20 {
+  @apply bg-opacity-20 !important;
+}
 .apply-opacity-30 {
   @apply opacity-30;
+}
+.padding--none {
+  @apply p-0 ;
 }
 .padding--small {
   @apply p-1 ;
@@ -94,5 +100,32 @@
 }
 .padding--extra-large {
   @apply p-6;
+}
+.hover-background-color-opaque-main-green {
+  @apply hover:bg-main-green hover:bg-opacity-20;
+}
+.hover-background-color-opaque-light-green {
+  @apply hover:bg-light-green hover:bg-opacity-20;
+}
+.hover-background-color-opaque-dark-green {
+  @apply hover:bg-dark-green hover:bg-opacity-20;
+}
+.hover-background-color-opaque-main-dark-blue{
+  @apply hover:bg-main-dark-blue hover:bg-opacity-20;
+}
+.hover-background-color-opaque-dark-blue {
+  @apply hover:bg-dark-blue hover:bg-opacity-20;
+}
+.hover-background-color-opaque-light-blue {
+  @apply hover:bg-light-blue hover:bg-opacity-20;
+}
+.hover-background-color-opaque-white{
+  @apply hover:bg-white hover:bg-opacity-20;
+}
+.hover-background-color-opaque-error-red{
+  @apply hover:bg-error-red hover:bg-opacity-20;
+}
+.hover-background-color-opaque-tertiary-blue{
+  @apply hover:bg-tertiary-blue hover:bg-opacity-20;
 }
 

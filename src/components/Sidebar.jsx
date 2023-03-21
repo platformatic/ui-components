@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import Icons from './icons'
+import Button from './Button'
 import styles from './Sidebar.module.css'
 import ReactTooltip from 'react-tooltip'
 import HorizontalSeparator from './HorizontalSeparator'
 import PlatformaticIcon from './PlatformaticIcon'
 import PropTypes from 'prop-types'
+import { BACKGROUND_COLOR_OPAQUE, MEDIUM, WHITE } from './constants'
+import ButtonFullRounded from './ButtonFullRounded'
 
 function Sidebar (props) {
   const {
     title,
+    labelButtonSettings,
     defaultSelected,
     onClickItemSelectedParent,
     items,
@@ -33,13 +37,15 @@ function Sidebar (props) {
       {collapsed
         ? (
           <>
-            <button type='button' className={styles.buttonCollapse} onClick={() => { setCollapsed(false) }}>
-              <PlatformaticIcon
-                iconName='CircleArrowRightIcon'
-                color='white'
-                size='medium'
-              />
-            </button>
+            <ButtonFullRounded
+              className={styles.buttonCollapse}
+              iconName='CircleArrowRightIcon'
+              iconSize={MEDIUM}
+              iconColor={WHITE}
+              hoverEffect={BACKGROUND_COLOR_OPAQUE}
+              onClick={() => { setCollapsed(false) }}
+              bordered={false}
+            />
             <button type='button' className={styles.buttonExpand} onClick={() => { setCollapsed(false) }}>
               <Icons.WorkspaceStaticIcon color='white' size='large' />
             </button>
@@ -56,13 +62,15 @@ function Sidebar (props) {
           )
         : (
           <>
-            <button type='button' className={styles.buttonCollapse} onClick={() => { setCollapsed(true) }}>
-              <PlatformaticIcon
-                iconName='CircleArrowLeftIcon'
-                color='white'
-                size='medium'
-              />
-            </button>
+            <ButtonFullRounded
+              className={styles.buttonCollapse}
+              iconName='CircleArrowLeftIcon'
+              iconSize={MEDIUM}
+              iconColor={WHITE}
+              hoverEffect={BACKGROUND_COLOR_OPAQUE}
+              onClick={() => { setCollapsed(true) }}
+              bordered={false}
+            />
             <div className={styles.title} data-testid='lateral-bar-title'>
               {title}
             </div>
@@ -101,9 +109,7 @@ function Sidebar (props) {
             <HorizontalSeparator marginBottom='2' marginTop='2' />
 
             <div className={styles.bottom}>
-              <button type='button' className={`${styles.buttonSettings} ${styles.buttonSettingsExpanded}`} onClick={onClickSettings}>
-                <Icons.GearIcon color='white' size='small' /> <span className={styles.titleSettings}>Settings</span>
-              </button>
+              <Button label={labelButtonSettings} color={WHITE} onClick={onClickSettings} platformaticIcon={{ iconName: 'GearIcon', color: WHITE }} fullWidth bold size={MEDIUM} hoverEffect={BACKGROUND_COLOR_OPAQUE} />
             </div>
           </>
           )}
@@ -116,6 +122,10 @@ Sidebar.propTypes = {
    * title
    */
   title: PropTypes.string,
+  /**
+   * title
+   */
+  labelButtonSettings: PropTypes.string,
   /**
    * defaultSelected
    */
@@ -154,6 +164,7 @@ Sidebar.propTypes = {
 
 Sidebar.defaultProps = {
   title: '',
+  labelButtonSettings: 'Settings',
   defaultSelected: null,
   onClickItemSelectedParent: () => {},
   items: [],
