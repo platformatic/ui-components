@@ -14,4 +14,10 @@ export const PADDING_SIZES = [NONE, ...SIZES]
 export const BOX_SHADOW = 'box-shadow'
 export const BACKGROUND_COLOR_OPAQUE = 'background-color-opaque'
 export const UNDERLINE = 'underline'
+export const FULL_WIDTH = 'full-width'
 export const HOVER_EFFECTS_BUTTONS = [BOX_SHADOW, BACKGROUND_COLOR_OPAQUE, UNDERLINE]
+export const MODAL_SIZES = [SMALL, MEDIUM, FULL_WIDTH]
+
+export const MODAL_POPUP = 'popup'
+export const MODAL_COVER = 'cover'
+export const MODAL_LAYOUTS = [MODAL_POPUP, MODAL_COVER]

@@ -4,6 +4,7 @@ import Button from '../components/Button'
 import BorderedBox from '../components/BorderedBox'
 import DropDown from '../components/DropDown'
 import HorizontalSeparator from '../components/HorizontalSeparator'
+import { FULL_WIDTH, MAIN_DARK_BLUE, MAIN_GREEN, MODAL_COVER, MODAL_LAYOUTS, MODAL_SIZES } from '../components/constants'
 export default {
   title: 'Platformatic/Modal',
   component: Modal,
@@ -12,7 +13,14 @@ export default {
       type: 'string',
       control: {
         type: 'radio',
-        options: ['info', 'invite', 'fullscreen']
+        options: MODAL_LAYOUTS
+      }
+    },
+    size: {
+      type: 'string',
+      control: {
+        type: 'radio',
+        options: MODAL_SIZES
       }
     }
   }
@@ -25,20 +33,8 @@ const Template = (args) => {
     <main>
       <BorderedBox>This Is another Content</BorderedBox>
       <ContentThatLoads />
-      <Button color='main-green' buttonClass='primary' onClick={() => setIsOpen(true)} label='Open Modal' />
+      <Button color={MAIN_GREEN} backgroundColor={MAIN_DARK_BLUE} onClick={() => setIsOpen(true)} label='Open Modal' />
       {isOpen && <Modal setIsOpen={setIsOpen} {...rest}>{text}</Modal>}
-    </main>
-  )
-}
-
-const TemplateInvite = (args) => {
-  const [isOpen, setIsOpen] = useState(false)
-  return (
-    <main>
-      <BorderedBox>This Is another Content</BorderedBox>
-      <ContentThatLoads />
-      <Button color='main-green' buttonClass='primary' onClick={() => setIsOpen(true)} label='Open Modal' />
-      {isOpen && <Modal setIsOpen={setIsOpen} {...args}><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p><Button buttonClass='primary' onClick={() => setIsOpen(false)} label='Discard invite' /></Modal>}
     </main>
   )
 }
@@ -55,8 +51,7 @@ const ContentThatLoads = () => {
 export const Default = Template.bind({})
 Default.args = {
   title: 'List Title',
-  text: 'Hello World',
-  layout: 'info'
+  text: 'Hello World'
 }
 
 export const WithLongText = Template.bind({})
@@ -87,14 +82,9 @@ const MenuTemplate = () => {
 }
 export const WithDropDown = MenuTemplate.bind({})
 
-export const InviteLayout = TemplateInvite.bind({})
-InviteLayout.args = {
-  title: 'Give me an invite',
-  layout: 'invite'
-}
-
 export const FullscreenLayout = Template.bind({})
 FullscreenLayout.args = {
   title: 'Give me an invite',
-  layout: 'fullscreen'
+  size: FULL_WIDTH,
+  layout: MODAL_COVER
 }

@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import Icons from './icons'
 import Button from './Button'
+import ButtonFullRounded from './ButtonFullRounded'
+import commonStyles from './Common.module.css'
 import styles from './Sidebar.module.css'
 import ReactTooltip from 'react-tooltip'
 import HorizontalSeparator from './HorizontalSeparator'
 import PlatformaticIcon from './PlatformaticIcon'
 import PropTypes from 'prop-types'
 import { BACKGROUND_COLOR_OPAQUE, MEDIUM, WHITE } from './constants'
-import ButtonFullRounded from './ButtonFullRounded'
 
 function Sidebar (props) {
   const {
@@ -24,6 +25,8 @@ function Sidebar (props) {
   const [collapsed, setCollapsed] = useState(false)
   const [selectedItem, setSelectedItem] = useState(null)
   const disabledCreateButton = disableClickAdd ? styles.disabled : ''
+  let buttonFullRoundedClassName = `${styles.buttonCollapse} `
+  buttonFullRoundedClassName += commonStyles['background-color-main-dark-blue']
 
   function onClickItemSelected (item) {
     setSelectedItem(item.id)
@@ -40,7 +43,7 @@ function Sidebar (props) {
         ? (
           <>
             <ButtonFullRounded
-              className={styles.buttonCollapse}
+              className={buttonFullRoundedClassName}
               iconName='CircleArrowRightIcon'
               iconSize={MEDIUM}
               iconColor={WHITE}
@@ -65,7 +68,7 @@ function Sidebar (props) {
         : (
           <>
             <ButtonFullRounded
-              className={styles.buttonCollapse}
+              className={buttonFullRoundedClassName}
               iconName='CircleArrowLeftIcon'
               iconSize={MEDIUM}
               iconColor={WHITE}

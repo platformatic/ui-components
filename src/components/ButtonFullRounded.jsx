@@ -7,7 +7,7 @@ import PlatformaticIcon from './PlatformaticIcon'
 import { COLORS_ICON, SIZES, BACKGROUND_COLOR_OPAQUE, PADDING_SIZES, SMALL, WHITE, NONE } from './constants'
 function ButtonFullRounded ({ className, iconName, iconSize, iconColor, disabled, paddingSize, alt, onClick, hoverEffect, bordered }) {
   const padding = commonStyles[`padding--${paddingSize}`]
-  const containerClassName = `${className} ${styles.roundedFull} ` + commonStyles['background-color-main-dark-blue']
+  const containerClassName = `${className} ${styles.roundedFull}`
   let buttonClassName = `${styles.roundedFull} ${styles.buttonRoundedFull} ${padding}`
   if (bordered) buttonClassName += ' ' + commonStyles[`bordered--${iconColor}`]
   if (disabled) {
