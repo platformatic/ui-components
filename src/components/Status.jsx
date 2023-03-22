@@ -5,11 +5,11 @@ import PlatformaticIcon from './PlatformaticIcon'
 import { COLORS_ICON } from './constants'
 
 function Status ({ color, status }) {
-  const className = `inline-flex text-${color}`
+  const className = `inline-flex items-center text-${color}`
   return (
     <div className={className}>
       <PlatformaticIcon iconName='CircleFullIcon' size='small' color={color} />
-      <span className='ml-0'>{status}</span>
+      <span className='ml-2'>{status}</span>
     </div>
   )
 }
