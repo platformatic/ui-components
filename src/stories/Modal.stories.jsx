@@ -4,7 +4,7 @@ import Button from '../components/Button'
 import BorderedBox from '../components/BorderedBox'
 import DropDown from '../components/DropDown'
 import HorizontalSeparator from '../components/HorizontalSeparator'
-import { FULL_WIDTH, MODAL_COVERING, MODAL_LAYOUTS, MODAL_SIZES } from '../components/constants'
+import { FULL_WIDTH, MAIN_DARK_BLUE, MAIN_GREEN, MODAL_COVER, MODAL_LAYOUTS, MODAL_SIZES } from '../components/constants'
 export default {
   title: 'Platformatic/Modal',
   component: Modal,
@@ -33,7 +33,7 @@ const Template = (args) => {
     <main>
       <BorderedBox>This Is another Content</BorderedBox>
       <ContentThatLoads />
-      <Button color='main-green' buttonClass='primary' onClick={() => setIsOpen(true)} label='Open Modal' />
+      <Button color={MAIN_GREEN} backgroundColor={MAIN_DARK_BLUE} onClick={() => setIsOpen(true)} label='Open Modal' />
       {isOpen && <Modal setIsOpen={setIsOpen} {...rest}>{text}</Modal>}
     </main>
   )
@@ -86,5 +86,5 @@ export const FullscreenLayout = Template.bind({})
 FullscreenLayout.args = {
   title: 'Give me an invite',
   size: FULL_WIDTH,
-  layout: MODAL_COVERING
+  layout: MODAL_COVER
 }

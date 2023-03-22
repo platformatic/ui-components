@@ -23,9 +23,6 @@
 .header--cover {
   @apply flex justify-end;
 }
-.close {
-  @apply hover:cursor-pointer;
-}
 .hr {
   @apply text-[#00283D] my-2 opacity-20;
 }
@@ -49,5 +46,8 @@
 }
 .modal--full-width {
   @apply w-screen min-w-full;
+}
+.close--cover {
+  @apply h-6 w-6;
 }
 

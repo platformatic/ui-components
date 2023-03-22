@@ -19,5 +19,5 @@ export const HOVER_EFFECTS_BUTTONS = [BOX_SHADOW, BACKGROUND_COLOR_OPAQUE, UNDER
 export const MODAL_SIZES = [SMALL, MEDIUM, FULL_WIDTH]
 
 export const MODAL_POPUP = 'popup'
-export const MODAL_COVERING = 'cover'
-export const MODAL_LAYOUTS = [MODAL_POPUP, MODAL_COVERING]
+export const MODAL_COVER = 'cover'
+export const MODAL_LAYOUTS = [MODAL_POPUP, MODAL_COVER]
