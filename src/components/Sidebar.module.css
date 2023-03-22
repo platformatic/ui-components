@@ -26,7 +26,10 @@
   @apply flex items-center justify-start border-0 rounded-md w-full py-1 hover:bg-white hover:bg-opacity-20;
 }
 .buttonCreate {
-  @apply flex items-center justify-start border-0 w-full pt-1 pb-4;
+  @apply flex items-center justify-start border-0 w-full pt-1 pb-4 cursor-pointer;
+}
+.disabled {
+  @apply opacity-30 cursor-default;
 }
 .buttonItemCollapsed {
   @apply w-auto;
