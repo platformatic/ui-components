@@ -18,10 +18,12 @@ function Sidebar (props) {
     items,
     onClickAdd,
     addTitle,
-    onClickSettings
+    onClickSettings,
+    disableClickAdd
   } = props
   const [collapsed, setCollapsed] = useState(false)
   const [selectedItem, setSelectedItem] = useState(null)
+  const disabledCreateButton = disableClickAdd ? styles.disabled : ''
 
   function onClickItemSelected (item) {
     setSelectedItem(item.id)
@@ -95,13 +97,13 @@ function Sidebar (props) {
                   </React.Fragment>
                 )
               })}
-              {/* <Button label='Add' buttonClass='transparent' icon={faPlus} color='white' size='small' inClick={onClickAdd}/> */}
-              <button className={`${styles.buttonCreate} ${collapsed && styles.buttonItemCollapsed}`} onClick={onClickAdd}>
+              <button className={`${styles.buttonCreate} ${collapsed && styles.buttonItemCollapsed} ${disabledCreateButton}`} onClick={onClickAdd} disabled={disableClickAdd}>
                 <PlatformaticIcon
                   iconName='CircleAddIcon'
                   color='white'
                   size='medium'
                   tip={addTitle}
+                  onClick={null}
                 />
                 {!collapsed && <span className={styles.item}>{addTitle}</span>}
               </button>
@@ -158,8 +160,11 @@ Sidebar.propTypes = {
   /**
    * Apply onClickSettings: function called clicking on Settings button
    */
-  onClickSettings: PropTypes.func
-
+  onClickSettings: PropTypes.func,
+  /**
+   * disableClickAdd
+   */
+  disableClickAdd: PropTypes.bool
 }
 
 Sidebar.defaultProps = {
@@ -170,7 +175,8 @@ Sidebar.defaultProps = {
   items: [],
   onClickAdd: () => {},
   addTitle: 'Add',
-  onClickSettings: () => {}
+  onClickSettings: () => {},
+  disableClickAdd: false
 }
 
 export default Sidebar

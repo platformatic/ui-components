@@ -57,7 +57,8 @@ FullSidebar.args = {
   title: 'Sidebar bar Full',
   addTitle: 'Create',
   onClickItemSelected: (index) => alert('selected: ' + index),
-  onClickSettings: () => alert('settings')
+  onClickSettings: () => alert('settings'),
+  disableClickAdd: true
 }
 
 export const AlreadySelected = Template.bind({})
