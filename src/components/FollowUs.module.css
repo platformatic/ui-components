@@ -14,5 +14,5 @@
   @apply text-white mx-4 text-xl;
 }
 .iconDashboard {
-  @apply mx-2;
+  @apply mx-1;
 }
