@@ -39,10 +39,10 @@
   @apply text-[22px] text-dark-blue font-bold tracking-widest mx-3;
 }
 .modal--small {
-  @apply min-w-[480px];
+  @apply min-w-[480px] max-w-[480px];
 }
 .modal--medium {
-  @apply min-w-[880px];
+  @apply min-w-[880px] max-w-[880px];
 }
 .modal--full-width {
   @apply w-screen min-w-full;
