@@ -13,5 +13,5 @@
 }
 
 .tabs-content {
-  @apply h-screen
+  @apply min-h-screen
 }
