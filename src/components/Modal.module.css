@@ -48,6 +48,6 @@
   @apply w-screen min-w-full;
 }
 .close--cover {
-  @apply h-6 w-6;
+  @apply mt-4 mr-4;
 }
 
