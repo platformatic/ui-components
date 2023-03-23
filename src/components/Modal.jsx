@@ -7,7 +7,7 @@ import CloseIcon from './icons/CloseIcon'
 import Logo from './Logo'
 import styles from './Modal.module.css'
 import commonStyles from './Common.module.css'
-import { MODAL_SIZES, SMALL, MODAL_LAYOUTS, MODAL_COVER, MODAL_POPUP, MAIN_DARK_BLUE, BACKGROUND_COLOR_OPAQUE, MEDIUM } from './constants'
+import { MODAL_SIZES, SMALL, MODAL_LAYOUTS, MODAL_COVER, MODAL_POPUP, MAIN_DARK_BLUE, BACKGROUND_COLOR_OPAQUE, LARGE } from './constants'
 
 function Modal ({ setIsOpen, title, layout, children, size }) {
   let contentFullscreen
@@ -58,7 +58,7 @@ function Modal ({ setIsOpen, title, layout, children, size }) {
             <ButtonFullRounded
               className={buttonFullRoundedClassName}
               iconName='CircleCloseIcon'
-              iconSize={MEDIUM}
+              iconSize={LARGE}
               iconColor={MAIN_DARK_BLUE}
               hoverEffect={BACKGROUND_COLOR_OPAQUE}
               onClick={() => { setIsOpen(false) }}
