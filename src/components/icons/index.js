@@ -44,6 +44,7 @@ import LiveIcon from './LiveIcon'
 import LoadingAppIcon from './LoadingAppIcon'
 import LogOutIcon from './LogOutIcon'
 import MetricsIcon from './MetricsIcon'
+import RestartIcon from './RestartIcon'
 import PlayIcon from './PlayIcon'
 import PullRequestIcon from './PullRequestIcon'
 import SendIcon from './SendIcon'
@@ -112,6 +113,7 @@ export default {
   MetricsIcon,
   PlayIcon,
   PullRequestIcon,
+  RestartIcon,
   SendIcon,
   StopIcon,
   SocialDiscordIcon,
