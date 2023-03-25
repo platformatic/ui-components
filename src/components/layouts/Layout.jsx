@@ -1,11 +1,30 @@
 'use strict'
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export default function Layout (props) {
+function Layout ({ className, children }) {
   return (
-    <div className='container mx-auto px-5 my-5 flex flex-col gap-10 h-screen'>
-      {props.children}
+    <div className={className}>
+      {children}
     </div>
 
   )
 }
+
+Layout.propTypes = {
+  /**
+   * className
+   */
+  className: PropTypes.string,
+  /**
+   * children
+   */
+  children: PropTypes.node
+}
+
+Layout.defaultProps = {
+  className: 'container mx-auto px-5 my-5 flex flex-col gap-10 h-screen',
+  children: null
+}
+
+export default Layout
