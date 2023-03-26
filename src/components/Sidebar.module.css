@@ -1,5 +1,5 @@
 .container {
-  @apply max-w-[216px] w-full p-4 border border-white rounded-md h-auto relative min-h-[80vh] z-10;
+  @apply max-w-[216px] w-full p-4 border border-white rounded-md h-auto relative min-h-[80vh] z-10 bg-dark-blue;
   transition: max-width 0.2s linear;
 }
 .collapsed {
