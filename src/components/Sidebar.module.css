@@ -17,7 +17,7 @@
   top: 1rem;
 }
 .title {
-  @apply text-white font-bold pb-6;
+  @apply text-white font-semibold pb-6;
 }
 .titleCollapsed {
   @apply text-white text-[10px];

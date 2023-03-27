@@ -10,96 +10,21 @@ const AppEmptyIcon = ({ color, size }) => {
   switch (size) {
     case 'extra-large':
       icon = (
-        <svg
-          width={81}
-          height={80}
-          viewBox='0 0 81 80'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'
-          className={className}
-        >
-          <path
-            d='M34.8199 45.5671H24.4589C23.9066 45.5671 23.4589 46.0149 23.4589 46.5671V66.3802C23.4589 66.9324 23.9066 67.3802 24.4589 67.3802H56.5418C57.0941 67.3802 57.5418 66.9324 57.5418 66.3802V46.5671C57.5418 46.0149 57.0941 45.5671 56.5418 45.5671H46.1808'
-            stroke='none'
-            strokeWidth={3}
-            strokeLinecap='round'
-          />
-          <rect
-            x={34.8199}
-            y={67.3799}
-            width={11.3609}
-            height={5.45325}
-            stroke='none'
-            strokeWidth={3}
-          />
-          <path
-            d='M29.1394 73.8333C29.1394 73.281 29.5871 72.8333 30.1394 72.8333H50.8613C51.4136 72.8333 51.8613 73.281 51.8613 73.8333V76.9232H29.1394V73.8333Z'
-            stroke='none'
-            strokeWidth={3}
-          />
-          <path
-            d='M40.5004 42.8403L43.051 50.3765L51.3053 50.3765L44.6275 55.0342L47.1782 62.5704L40.5004 57.9128L33.8226 62.5704L36.3732 55.0342L29.6954 50.3765L37.9497 50.3765L40.5004 42.8403Z'
-            stroke='none'
-            strokeWidth={3}
-            strokeLinejoin='round'
-          />
-          <path
-            d='M19.1982 57.0413H9.25739V37.1597'
-            stroke='none'
-            strokeWidth={3}
-            strokeLinecap='round'
-            strokeLinejoin='round'
-          />
-          <path
-            d='M29.139 39.9999V14.4377'
-            stroke='none'
-            strokeWidth={3}
-            strokeLinecap='round'
-            strokeLinejoin='round'
-          />
-          <path
-            d='M61.8018 57.0414H71.7426V45.6804'
-            stroke='none'
-            strokeWidth={3}
-            strokeLinecap='round'
-            strokeLinejoin='round'
-          />
-          <path
-            d='M49.0207 41.4201V32.8994H58.9615V17.2781'
-            stroke='none'
-            strokeWidth={3}
-            strokeLinecap='round'
-            strokeLinejoin='round'
-          />
-          <circle
-            cx={9.25738}
-            cy={31.4793}
-            r={5.68047}
-            stroke='none'
-            strokeWidth={3}
-          />
-          <circle
-            cx={29.139}
-            cy={8.75738}
-            r={5.68047}
-            stroke='none'
-            strokeWidth={3}
-          />
-          <circle
-            cx={58.9615}
-            cy={11.5977}
-            r={5.68047}
-            stroke='none'
-            strokeWidth={3}
-          />
-          <circle
-            cx={71.7426}
-            cy={40.0001}
-            r={5.68047}
-            stroke='none'
-            strokeWidth={3}
-          />
+        <svg width={105} height={105} viewBox='0 0 105 105' fill='none' xmlns='http://www.w3.org/2000/svg' className={className}>
+          <path d='M45.1159 59.7372H31.3467C30.7944 59.7372 30.3467 60.1849 30.3467 60.7372V87.0941C30.3467 87.6464 30.7944 88.0941 31.3467 88.0941H73.6544C74.2067 88.0941 74.6544 87.6464 74.6544 87.0941V60.7372C74.6544 60.1849 74.2067 59.7372 73.6544 59.7372H59.8851' stroke='none' strokeWidth={3} strokeLinecap='round' />
+          <rect x={45.116} y={88.0939} width={14.7692} height={7.08923} stroke='none' strokeWidth={3} />
+          <path d='M37.7312 96.1831C37.7312 95.6308 38.1789 95.1831 38.7312 95.1831H66.2697C66.8219 95.1831 67.2697 95.6308 67.2697 96.1831V100.5H37.7312V96.1831Z' stroke='none' strokeWidth={3} />
+          <path d='M52.5004 56.1924L55.8163 65.9895H66.5468L57.8657 72.0444L61.1816 81.8415L52.5004 75.7865L43.8193 81.8415L47.1352 72.0444L38.4541 65.9895H49.1845L52.5004 56.1924Z' stroke='none' strokeWidth={3} strokeLinejoin='round' />
+          <path d='M24.8076 74.6539H11.8845V48.8077' stroke='none' strokeWidth={3} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M37.7307 52.5001V19.2693' stroke='none' strokeWidth={3} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M80.1924 74.6539H93.1155V59.8846' stroke='none' strokeWidth={3} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M63.5769 54.3462V43.2692H76.5V22.9615' stroke='none' strokeWidth={3} strokeLinecap='round' strokeLinejoin='round' />
+          <ellipse cx={11.8846} cy={41.4231} rx={7.38462} ry={7.38462} stroke='none' strokeWidth={3} />
+          <ellipse cx={37.7308} cy={11.8846} rx={7.38461} ry={7.38462} stroke='none' strokeWidth={3} />
+          <ellipse cx={76.5001} cy={15.5769} rx={7.38462} ry={7.38461} stroke='none' strokeWidth={3} />
+          <ellipse cx={93.1153} cy={52.5} rx={7.38462} ry={7.38461} stroke='none' strokeWidth={3} />
         </svg>
+
       )
       break
 

@@ -21,11 +21,12 @@ import Calendar7DaysIcon from './Calendar7DaysIcon'
 import CircleAddIcon from './CircleAddIcon'
 import CircleArrowLeftIcon from './CircleArrowLeftIcon'
 import CircleArrowRightIcon from './CircleArrowRightIcon'
-import CircleExclamationIcon from './CircleExclamationIcon'
 import CircleCheckMarkIcon from './CircleCheckMarkIcon'
 import CircleCloseIcon from './CircleCloseIcon'
 import CircleCloseHoverIcon from './CircleCloseHoverIcon'
+import CircleExclamationIcon from './CircleExclamationIcon'
 import CircleFullIcon from './CircleFullIcon'
+import CircleGearIcon from './CircleGearIcon'
 import CircleTwoArrowsDownIcon from './CircleTwoArrowsDownIcon'
 import CircleTwoArrowsUpIcon from './CircleTwoArrowsUpIcon'
 import CloseIcon from './CloseIcon'
@@ -59,6 +60,7 @@ import TerminalIcon from './TerminalIcon'
 import TwoUsersIcon from './TwoUsersIcon'
 import UpgradeIcon from './UpgradeIcon'
 import WorkspaceDynamicIcon from './WorkspaceDynamicIcon'
+import WorkspaceEmptyIcon from './WorkspaceEmptyIcon'
 import WorkspaceGitHubIcon from './WorkspaceGitHubIcon'
 import WorkspaceFailIcon from './WorkspaceFailIcon'
 import WorkspaceReadyIcon from './WorkspaceReadyIcon'
@@ -93,6 +95,7 @@ export default {
   CircleCloseIcon,
   CircleCloseHoverIcon,
   CircleFullIcon,
+  CircleGearIcon,
   CircleTwoArrowsDownIcon,
   CircleTwoArrowsUpIcon,
   CloseIcon,
@@ -126,6 +129,7 @@ export default {
   UpgradeIcon,
   TwoUsersIcon,
   WorkspaceDynamicIcon,
+  WorkspaceEmptyIcon,
   WorkspaceFailIcon,
   WorkspaceGitHubIcon,
   WorkspaceReadyIcon,
