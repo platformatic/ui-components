@@ -57,7 +57,7 @@ function Sidebar (props) {
             <div className={styles.titleCollapsed} data-testid='lateral-bar-title'>
               {title}
             </div>
-            <HorizontalSeparator marginBottom={2} marginTop={2} />
+            <HorizontalSeparator marginBottom={0} marginTop={0} />
             <div className={styles.bottom}>
               <button type='button' className={styles.buttonSettings} onClick={onClickSettings}>
                 <Icons.GearIcon color='white' size='large' />
