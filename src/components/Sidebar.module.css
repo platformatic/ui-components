@@ -6,10 +6,10 @@
   @apply max-w-[96px] text-center;
 }
 .buttonExpand {
-  @apply border rounded-md p-1 border-white;
+  @apply border rounded-md p-1 border-white hover:bg-white hover:bg-opacity-20;
 }
 .buttonSettings {
-  @apply border rounded-md p-1 border-white;
+  @apply border rounded-md p-1 border-white hover:bg-white hover:bg-opacity-20;
 }
 .buttonCollapse {
   @apply absolute right-[-0.875rem] border-0 z-20 bg-main-dark-blue; 
@@ -20,7 +20,7 @@
   @apply text-white font-semibold pb-6;
 }
 .titleCollapsed {
-  @apply text-white text-[10px];
+  @apply text-white text-[10px] pt-2 pb-6;
 }
 .buttonItem {
   @apply flex items-center justify-start border-0 rounded-md w-full py-1 hover:bg-white hover:bg-opacity-20;
