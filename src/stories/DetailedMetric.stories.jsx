@@ -1,5 +1,6 @@
 'use strict'
 
+import { MAIN_GREEN } from '../components/constants'
 import DetailedMetric from '../components/DetailedMetric'
 
 export default {
@@ -13,7 +14,7 @@ export const Default = Template.bind({})
 
 Default.args = {
   title: 'Requests',
-  color: 'green',
+  color: MAIN_GREEN,
   unit: 'ms',
   value: 120,
   pre: 'P90',
@@ -21,13 +22,13 @@ Default.args = {
   leftDetail: {
     value: 600,
     unit: 'ms',
-    color: 'green',
+    color: MAIN_GREEN,
     pre: 'P99'
   },
   rightDetail: {
     value: 4.42,
     unit: 's',
-    color: 'green',
+    color: MAIN_GREEN,
     pre: 'P95'
   }
 }

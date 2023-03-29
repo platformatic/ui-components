@@ -2,9 +2,21 @@
   @apply flex justify-center items-center gap-x-2;
 }
 .value {
-  @apply text-sm lg:text-base;
+  @apply font-semibold;
 }
 .unit,
 .pre {
   @apply text-sm;
+}
+.value-small {
+  @apply text-[22px];
+}
+.value-large {
+  @apply text-[32px];
+}
+.flex-direction-row {
+  @apply flex-row;
+}
+.flex-direction-col {
+  @apply flex-col;
 }

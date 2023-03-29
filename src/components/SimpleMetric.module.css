@@ -1,7 +1,10 @@
 .header {
   @apply flex justify-between items-center font-bold;
 }
-
 .title {
   @apply text-base font-semibold;
+}
+.centerMetric {
+  @apply flex flex-col justify-center;
+  height: calc(100% - 1rem);
 }

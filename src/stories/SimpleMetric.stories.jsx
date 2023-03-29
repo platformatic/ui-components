@@ -1,5 +1,6 @@
 'use strict'
 
+import { ERROR_RED, MAIN_GREEN } from '../components/constants'
 import SimpleMetric from '../components/SimpleMetric'
 
 export default {
@@ -13,7 +14,7 @@ export const Green = Template.bind({})
 
 Green.args = {
   title: 'Requests',
-  color: 'green',
+  color: MAIN_GREEN,
   unit: 'ms',
   value: 120,
   tooltip: 'This is a tooltip for the metric'
@@ -23,7 +24,7 @@ export const Red = Template.bind({})
 
 Red.args = {
   title: 'Requests',
-  color: 'red',
+  color: ERROR_RED,
   unit: 'ms',
   value: 120,
   tooltip: 'This is a tooltip for the metric'
@@ -33,7 +34,7 @@ export const WithPrefix = Template.bind({})
 
 WithPrefix.args = {
   title: 'Requests',
-  color: 'green',
+  color: MAIN_GREEN,
   unit: 'ms',
   value: 120,
   pre: 'P90',
