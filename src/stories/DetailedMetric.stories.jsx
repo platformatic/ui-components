@@ -22,8 +22,7 @@ Default.args = {
   leftDetail: {
     value: 600,
     unit: 'ms',
-    color: MAIN_GREEN,
-    pre: 'P99'
+    color: MAIN_GREEN
   },
   rightDetail: {
     value: 4.42,
