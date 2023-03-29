@@ -4,6 +4,7 @@ export const COLORS_BORDERED_BOX = ['main-green', 'error-red', 'white', 'dark-bl
 export const WHITE = 'white'
 export const MAIN_DARK_BLUE = 'main-dark-blue'
 export const MAIN_GREEN = 'main-green'
+export const ERROR_RED = 'error-red'
 export const NONE = 'none'
 export const SMALL = 'small'
 export const MEDIUM = 'medium'

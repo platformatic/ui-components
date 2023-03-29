@@ -96,7 +96,7 @@ function Sidebar (props) {
                         <span className={styles.itemTitle}>{item.title}</span>
                       </div>
                     </button>
-                    <ReactTooltip />
+                    <ReactTooltip place='top' type='info' />
                   </React.Fragment>
                 )
               })}

@@ -5,7 +5,7 @@ import commonStyles from './Common.module.css'
 import styles from './ButtonFullRounded.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
 import { COLORS_ICON, SIZES, BACKGROUND_COLOR_OPAQUE, PADDING_SIZES, SMALL, WHITE, NONE } from './constants'
-function ButtonFullRounded ({ className, iconName, iconSize, iconColor, disabled, paddingSize, alt, onClick, hoverEffect, bordered }) {
+function ButtonFullRounded ({ className, iconName, iconSize, iconColor, disabled, paddingSize, alt, onClick, hoverEffect, bordered, tip }) {
   const padding = commonStyles[`padding--${paddingSize}`]
   const containerClassName = `${className} ${styles.roundedFull}`
   let buttonClassName = `${styles.roundedFull} ${styles.buttonRoundedFull} ${padding}`
@@ -25,7 +25,7 @@ function ButtonFullRounded ({ className, iconName, iconSize, iconColor, disabled
   return (
     <div className={containerClassName}>
       <button className={buttonClassName} disabled={disabled} onClick={onClick} alt={alt}>
-        <PlatformaticIcon iconName={iconName} size={iconSize} color={iconColor} data-testid='button-icon' onClick={null} />
+        <PlatformaticIcon iconName={iconName} size={iconSize} color={iconColor} data-testid='button-icon' onClick={null} tip={tip} />
       </button>
     </div>
   )
@@ -67,7 +67,11 @@ ButtonFullRounded.propTypes = {
   /**
    * bordered
    */
-  bordered: PropTypes.bool
+  bordered: PropTypes.bool,
+  /**
+   * tip
+   */
+  tip: PropTypes.string
 
 }
 
@@ -80,7 +84,8 @@ ButtonFullRounded.defaultProps = {
   alt: 'ButtonFullRounded',
   onClick: () => {},
   hoverEffect: '',
-  bordered: true
+  bordered: true,
+  tip: ''
 }
 
 export default ButtonFullRounded

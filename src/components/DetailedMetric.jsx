@@ -17,6 +17,7 @@ export default function DetailedMetric (props) {
           unit={leftDetail.unit}
           color={leftDetail.color}
           value={leftDetail.value}
+          flexDirectionMetric='col'
         />
         <VerticalSeparator />
         <MetricValue
@@ -24,6 +25,7 @@ export default function DetailedMetric (props) {
           unit={rightDetail.unit}
           color={rightDetail.color}
           value={rightDetail.value}
+          flexDirectionMetric='col'
         />
       </div>
     </SimpleMetric>
