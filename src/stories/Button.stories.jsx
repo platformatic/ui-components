@@ -1,12 +1,25 @@
 'use strict'
-import { faCheck } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
+import React from 'react'
 import Button from '../components/Button'
-import { COLORS_BUTTON, HOVER_EFFECTS_BUTTONS, SIZES } from '../components/constants'
+import { BOX_SHADOW, COLORS_BUTTON, HOVER_EFFECTS_BUTTONS, LARGE, SIZES, WHITE } from '../components/constants'
+
+const divStyle = {
+  width: '100%',
+  height: 'auto',
+  padding: '2px',
+  backgroundColor: 'white'
+}
 
 export default {
   title: 'Platformatic/Button',
   component: Button,
+  decorators: [
+    (Story) => (
+      <div style={divStyle}>
+        <Story />
+      </div>
+    )
+  ],
   argTypes: {
     label: {
       type: 'string',
@@ -61,53 +74,54 @@ OnlyLabel.args = {
   backgroundColor: 'main-green'
 }
 
-export const BorderedRed = Template.bind({})
-BorderedRed.args = {
-  label: 'Borderer Red',
-  color: 'error-red'
-}
-
-export const TransparentWhite = Template.bind({})
-TransparentWhite.args = {
-  label: 'White',
-  color: 'white',
-  icon: faCheck
-}
-
-const DisabledTemplate = (args) => {
-  const [enabled, setEnabled] = useState(false)
+const AllBorderedTemplate = (args) => {
   return (
-    <div className='flex flex-col gap-y-6 text-white'>
-      <div>
-        <Button {...args} disabled={!enabled} onClick={() => alert('clicked')} />
-        <span className='ml-4 text-xl'>👈 This button is {enabled ? 'enabled' : 'disabled'}</span>
-      </div>
-      <div>
-        <Button label='Toggle Disabled' backgroundColor='main-green' onClick={() => setEnabled(!enabled)} />
-      </div>
-    </div>
+    <>
+      {COLORS_BUTTON.map(color => (
+        <React.Fragment key={color}>
+          <div className='grid grid-cols-6 gap-2 items-center' key={color}>
+            <span className='text-sm'>{color}</span>
+            <Button color={color} onClick={() => alert('clicked ' + color)} {...args} />
+            <Button color={color} onClick={() => alert('clicked ' + color)} disabled {...args} />
+          </div>
+          <br />
+        </React.Fragment>
+      ))}
+    </>
   )
 }
 
-export const DisabledGreen = DisabledTemplate.bind({})
+export const AllBordered = AllBorderedTemplate.bind({})
 
-DisabledGreen.args = {
-  backgroundColor: 'main-green',
-  label: 'A simple button',
-  color: 'main-dark-blue',
-  disabled: true
+AllBordered.args = {
+  label: 'Sample label',
+  size: LARGE
 }
 
-export const DisabledRed = DisabledTemplate.bind({})
-DisabledRed.args = {
-  label: 'A simple button',
-  color: 'error-red',
-  disabled: true
+const AllFilledTemplate = (args) => {
+  return (
+    <>
+      {COLORS_BUTTON.map(color => (
+        <React.Fragment key={color}>
+          <div className='grid grid-cols-6 gap-2 items-center'>
+            <span className='text-sm'>{color}</span>
+            <Button backgroundColor={color} onClick={() => alert('clicked ' + color)} {...args} />
+            <Button backgroundColor={color} onClick={() => alert('clicked ' + color)} disabled {...args} />
+          </div>
+          <br />
+        </React.Fragment>
+      ))}
+    </>
+  )
 }
 
-export const UsingPlatformaticIcon = Template.bind({})
-UsingPlatformaticIcon.args = {
-  label: 'White',
-  color: 'white',
-  platformaticIcon: { iconName: 'GearIcon', color: 'white' }
+export const AllFilled = AllFilledTemplate.bind({})
+
+AllFilled.args = {
+  label: 'Sample label',
+  size: LARGE,
+  color: WHITE,
+  bordered: false,
+  hoverEffect: BOX_SHADOW,
+  bold: true
 }
