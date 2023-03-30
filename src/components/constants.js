@@ -1,10 +1,8 @@
-export const COLORS_ICON = ['main-green', 'white', 'main-dark-blue', 'error-red', 'warning-yellow']
-export const COLORS_BUTTON = ['main-green', 'dark-green', 'light-green', 'main-dark-blue', 'dark-blue', 'light-blue', 'white', 'error-red', 'tertiary-blue', 'transparent']
-export const COLORS_BORDERED_BOX = ['main-green', 'error-red', 'white', 'dark-blue', 'warning-yellow', 'transparent']
 export const WHITE = 'white'
 export const MAIN_DARK_BLUE = 'main-dark-blue'
 export const MAIN_GREEN = 'main-green'
 export const ERROR_RED = 'error-red'
+export const WARNING_YELLOW = 'warning-yellow'
 export const NONE = 'none'
 export const SMALL = 'small'
 export const MEDIUM = 'medium'
@@ -19,6 +17,14 @@ export const FULL_WIDTH = 'full-width'
 export const HOVER_EFFECTS_BUTTONS = [BOX_SHADOW, BACKGROUND_COLOR_OPAQUE, UNDERLINE]
 export const MODAL_SIZES = [SMALL, MEDIUM, FULL_WIDTH]
 
+export const COLORS_ICON = [MAIN_GREEN, WHITE, MAIN_DARK_BLUE, ERROR_RED, WARNING_YELLOW]
+export const COLORS_BUTTON = [MAIN_GREEN, 'dark-green', 'light-green', MAIN_DARK_BLUE, 'dark-blue', 'light-blue', WHITE, ERROR_RED, 'tertiary-blue', 'transparent']
+export const COLORS_BORDERED_BOX = [MAIN_GREEN, ERROR_RED, WHITE, 'dark-blue', WARNING_YELLOW, 'transparent']
+
 export const MODAL_POPUP = 'popup'
 export const MODAL_COVER = 'cover'
 export const MODAL_LAYOUTS = [MODAL_POPUP, MODAL_COVER]
+
+export const FREE = 'free'
+export const BASIC = 'basic'
+export const PROFILE = ['', FREE, BASIC]
