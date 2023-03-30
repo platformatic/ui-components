@@ -27,7 +27,7 @@
   @apply text-[#00283D] my-2 opacity-20;
 }
 .title {
-  @apply font-bold text-lg;
+  @apply font-bold text-[20px];
 }
 .content--cover {
   @apply h-auto w-full mt-4 mb-10;
