@@ -3,13 +3,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ButtonFullRounded from './ButtonFullRounded'
 import useEscapeKey from '../hooks/useEscapeKey'
-import CloseIcon from './icons/CloseIcon'
 import Logo from './Logo'
+import Logos from './logos'
 import styles from './Modal.module.css'
 import commonStyles from './Common.module.css'
-import { MODAL_SIZES, SMALL, MODAL_LAYOUTS, MODAL_COVER, MODAL_POPUP, MAIN_DARK_BLUE, BACKGROUND_COLOR_OPAQUE, LARGE } from './constants'
+import { MODAL_SIZES, SMALL, MODAL_LAYOUTS, MODAL_COVER, MODAL_POPUP, MAIN_DARK_BLUE, BACKGROUND_COLOR_OPAQUE, LARGE, PROFILE, FREE, BASIC } from './constants'
+import PlatformaticIcon from './PlatformaticIcon'
 
-function Modal ({ setIsOpen, title, layout, children, size }) {
+function Modal ({ setIsOpen, title, layout, children, size, profile }) {
   let contentFullscreen
   let titleFullscreen
   let modalClassName = `${styles.modal}`
@@ -29,6 +30,16 @@ function Modal ({ setIsOpen, title, layout, children, size }) {
   useEscapeKey(() => setIsOpen(false))
   let whichModal = <></>
 
+  function renderLogo () {
+    if (profile === FREE) {
+      return <Logos.FreeLogo width={143} height={63} />
+    }
+    if (profile === BASIC) {
+      return <Logos.BasicLogo width={143} height={63} />
+    }
+    return <Logo width={100} heigth={80} color={MAIN_DARK_BLUE} />
+  }
+
   switch (layout) {
     case MODAL_POPUP:
       whichModal = (
@@ -38,9 +49,7 @@ function Modal ({ setIsOpen, title, layout, children, size }) {
             <div className={modalClassName}>
               <div className={headerClassName}>
                 <div className={styles.title}>{title}</div>
-                <div className={styles.close} onClick={() => setIsOpen(false)}>
-                  <CloseIcon size={SMALL} />
-                </div>
+                <PlatformaticIcon iconName='CloseIcon' color={MAIN_DARK_BLUE} size={SMALL} onClick={() => setIsOpen(false)} />
               </div>
               <div>
                 {children}
@@ -68,7 +77,7 @@ function Modal ({ setIsOpen, title, layout, children, size }) {
           </div>
           <div className={contentFullscreen}>
             <div className={titleFullscreen}>
-              <Logo width={100} heigth={80} color={MAIN_DARK_BLUE} />
+              {renderLogo()}
               <h3>PLATFORMATIC</h3>
             </div>
             <div>{children}</div>
@@ -103,7 +112,11 @@ Modal.propTypes = {
   /**
    * Size
    */
-  size: PropTypes.oneOf(MODAL_SIZES)
+  size: PropTypes.oneOf(MODAL_SIZES),
+  /**
+   * profile
+   */
+  profile: PropTypes.oneOf(PROFILE)
 }
 
 Modal.defaultProps = {
@@ -111,7 +124,8 @@ Modal.defaultProps = {
   setIsOpen: () => {},
   title: '',
   layout: MODAL_POPUP,
-  size: SMALL
+  size: SMALL,
+  profile: ''
 }
 
 export default Modal

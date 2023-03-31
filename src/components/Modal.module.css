@@ -27,10 +27,10 @@
   @apply text-[#00283D] my-2 opacity-20;
 }
 .title {
-  @apply font-bold text-lg;
+  @apply font-bold text-[20px];
 }
 .content--cover {
-  @apply h-auto w-full pt-4;
+  @apply h-auto w-full mt-4 mb-10;
 }
 .title--cover {
   @apply inline-flex items-center;
