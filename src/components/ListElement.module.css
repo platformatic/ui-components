@@ -20,7 +20,7 @@
   @apply flex gap-x-2 items-center w-full;
 }
 .textCol {
-  @apply flex flex-col text-white text-justify w-full ml-6;
+  @apply flex flex-col text-white text-justify w-full ml-8;
 }
 
 .detailSpace {
