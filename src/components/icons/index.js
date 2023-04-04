@@ -63,7 +63,7 @@ import WorkspaceDynamicIcon from './WorkspaceDynamicIcon'
 import WorkspaceEmptyIcon from './WorkspaceEmptyIcon'
 import WorkspaceGitHubIcon from './WorkspaceGitHubIcon'
 import WorkspaceFailIcon from './WorkspaceFailIcon'
-import WorkpaceLoadingIcon from './WorkpaceLoadingIcon'
+import WorkspaceLoadingIcon from './WorkspaceLoadingIcon'
 import WorkspaceReadyIcon from './WorkspaceReadyIcon'
 import WorkspaceStaticIcon from './WorkspaceStaticIcon'
 
@@ -133,7 +133,7 @@ export default {
   WorkspaceEmptyIcon,
   WorkspaceFailIcon,
   WorkspaceGitHubIcon,
-  WorkpaceLoadingIcon,
+  WorkspaceLoadingIcon,
   WorkspaceReadyIcon,
   WorkspaceStaticIcon
 }
