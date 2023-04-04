@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES } from '../constants'
 
-const WorkpaceLoadingIcon = ({ color, size }) => {
+const WorkspaceLoadingIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   const filledClassName = styles[`filled-${color}`]
 
@@ -38,7 +38,7 @@ const WorkpaceLoadingIcon = ({ color, size }) => {
   return icon
 }
 
-WorkpaceLoadingIcon.propTypes = {
+WorkspaceLoadingIcon.propTypes = {
   /**
    * color of text, icon and borders
    */
@@ -49,9 +49,9 @@ WorkpaceLoadingIcon.propTypes = {
   size: PropTypes.oneOf(SIZES)
 }
 
-WorkpaceLoadingIcon.defaultProps = {
+WorkspaceLoadingIcon.defaultProps = {
   color: 'main-dark-blue',
   size: 'medium'
 }
 
-export default WorkpaceLoadingIcon
+export default WorkspaceLoadingIcon
