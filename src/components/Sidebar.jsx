@@ -100,7 +100,7 @@ function Sidebar (props) {
                   </React.Fragment>
                 )
               })}
-              <button className={`${styles.buttonCreate} ${collapsed && styles.buttonItemCollapsed} ${disabledCreateButton}`} onClick={onClickAdd} disabled={disableClickAdd}>
+              <button className={`${styles.buttonCreate} ${collapsed && styles.buttonItemCollapsed} ${disabledCreateButton} ${!disableClickAdd && styles.hoverSemibold}`} onClick={onClickAdd} disabled={disableClickAdd}>
                 <PlatformaticIcon
                   iconName='CircleAddIcon'
                   color='white'
