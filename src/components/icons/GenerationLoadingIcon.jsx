@@ -20,15 +20,14 @@ const GenerationLoadingIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <rect x={15.9297} y={8} width={24.381} height={26.8531} rx={4} stroke='none' strokeWidth={3} />
-          <path d='M48.5 12C48.5 9.79086 50.2909 8 52.5 8H85.0714C87.2806 8 89.0714 9.79086 89.0714 12V30.8531C89.0714 33.0623 87.2806 34.8531 85.0714 34.8531H52.5C50.2909 34.8531 48.5 33.0623 48.5 30.8531V12Z' stroke='none' strokeWidth={3} />
-          <path d='M52.5 68C52.5 70.2091 50.7091 72 48.5 72L19.9286 72C17.7194 72 15.9286 70.2091 15.9286 68L15.9286 49.1468C15.9286 46.9377 17.7194 45.1468 19.9286 45.1468L48.5 45.1469C50.7091 45.1469 52.5 46.9377 52.5 49.1469L52.5 68Z' stroke='none' strokeWidth={3} />
-          <circle cx={71.5344} cy={55.0305} r={11.0305} stroke='none' strokeWidth={3} />
-          <path d='M86.9777 70.4728L80.3594 63.8545' stroke='none' strokeWidth={3} strokeLinecap='round' strokeLinejoin='round' />
           <rect x={4.5} y={84} width={96} height={16} rx={8} stroke='none' strokeWidth={3} />
           <rect x={8.5} y={88} width={68} height={8} rx={4} fill='none' className={filledClassName} />
+          <path d='M16.5 57.882L15.9114 56.5023C15.3713 56.7327 15.0153 57.2571 15.0005 57.8442C14.9857 58.4312 15.3148 58.9729 15.8426 59.2303L16.5 57.882ZM53.6613 75.9999L53.0039 77.3482C53.4311 77.5565 53.9317 77.55 54.3534 77.3307L53.6613 75.9999ZM61.7122 73.5038C62.4471 73.1216 62.7331 72.2159 62.3509 71.4809C61.9686 70.7459 61.063 70.46 60.328 70.8422L61.7122 73.5038ZM15.8426 59.2303L53.0039 77.3482L54.3186 74.6516L17.1574 56.5337L15.8426 59.2303ZM38.8994 46.6955L15.9114 56.5023L17.0886 59.2617L40.0765 49.4549L38.8994 46.6955ZM54.3534 77.3307L61.7122 73.5038L60.328 70.8422L52.9692 74.6691L54.3534 77.3307Z' fill='none' className={filledClassName} />
+          <circle cx={71.5325} cy={59.0305} r={11.0305} stroke='none' strokeWidth={3} />
+          <path d='M86.9757 74.4733L80.3574 67.855' stroke='none' strokeWidth={3} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M53.6613 55.5231L16.5 37.4051L35.0806 29.4785M71.0806 29.4785L88.5 37.4051L76.5 43.6457' stroke='none' strokeWidth={3} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M53.6613 37.9712L16.5 19.8532L53.6613 4L88.5 19.8532L53.6613 37.9712Z' stroke='none' strokeWidth={3} strokeLinejoin='round' />
         </svg>
-
       )
       break
 
