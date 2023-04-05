@@ -8,6 +8,7 @@ import ApiEmptyIcon from './ApiEmptyIcon'
 import AppIcon from './AppIcon'
 import AppListIcon from './AppListIcon'
 import AppEmptyIcon from './AppEmptyIcon'
+import AppWorkspace from './AppWorkspace'
 import ArrowDownFullIcon from './ArrowDownFullIcon'
 import ArrowDownIcon from './ArrowDownIcon'
 import ArrowLeftIcon from './ArrowLeftIcon'
@@ -37,6 +38,7 @@ import ExploreDocIcon from './ExploreDocIcon'
 import EnlargeIcon from './EnlargeIcon'
 import EntryIcon from './EntryIcon'
 import GearIcon from './GearIcon'
+import GenerationLoadingIcon from './GenerationLoadingIcon'
 import GraphQLIcon from './GraphQLIcon'
 import KeyIcon from './KeyIcon'
 import LayersIcon from './LayersIcon'
@@ -48,6 +50,7 @@ import MetricsIcon from './MetricsIcon'
 import RestartIcon from './RestartIcon'
 import PlayIcon from './PlayIcon'
 import PullRequestIcon from './PullRequestIcon'
+import PullRequestLoadingIcon from './PullRequestLoadingIcon'
 import SendIcon from './SendIcon'
 import SocialDiscordIcon from './SocialDiscordIcon'
 import SocialGitHubIcon from './SocialGitHubIcon'
@@ -78,6 +81,7 @@ export default {
   AppIcon,
   AppListIcon,
   AppEmptyIcon,
+  AppWorkspace,
   ArrowDownFullIcon,
   ArrowDownIcon,
   ArrowLeftIcon,
@@ -107,6 +111,7 @@ export default {
   EnlargeIcon,
   EntryIcon,
   GearIcon,
+  GenerationLoadingIcon,
   GraphQLIcon,
   KeyIcon,
   LayersIcon,
@@ -117,6 +122,7 @@ export default {
   MetricsIcon,
   PlayIcon,
   PullRequestIcon,
+  PullRequestLoadingIcon,
   RestartIcon,
   SendIcon,
   StopIcon,
