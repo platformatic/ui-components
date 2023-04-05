@@ -61,6 +61,9 @@ export default {
     },
     fullWidth: {
       type: 'boolean'
+    },
+    selected: {
+      type: 'boolean'
     }
   }
 }

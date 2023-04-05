@@ -1,6 +1,27 @@
 'use strict'
 import ButtonFullRounded from '../components/ButtonFullRounded'
-import { COLORS_ICON, SIZES } from '../components/constants'
+import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE } from '../components/constants'
+import Icons from '../components/icons'
+
+const divStyle = {
+  width: '100%'
+}
+
+const row = {
+  display: 'flex',
+  width: '100%',
+  columnGap: '1rem',
+  alignItems: 'center'
+}
+
+const col = {
+  flex: 1
+}
+
+const paragraph = {
+  color: 'white',
+  fontSize: '12px'
+}
 
 export default {
   title: 'Platformatic/ButtonFullRounded',
@@ -13,49 +34,62 @@ export default {
     bold: {
       type: 'boolean'
     },
-    color: {
+    iconColor: {
       type: 'string',
       control: {
         type: 'radio',
         options: COLORS_ICON
       }
     },
-    size: {
+    iconSize: {
       type: 'string',
       control: {
         type: 'radio',
         options: SIZES
       }
+    },
+    selected: {
+      type: 'boolean'
     }
   }
 }
 
 const Template = (args) => <ButtonFullRounded {...args} />
 
-export const WhiteLarge = Template.bind({})
-WhiteLarge.args = {
-  iconName: 'PlayIcon',
-  iconSize: 'large'
+export const SingleButton = Template.bind({})
+SingleButton.args = {
+  iconName: 'PlayIcon'
 }
 
-export const GreenSmall = Template.bind({})
-GreenSmall.args = {
-  iconName: 'StopIcon',
-  iconColor: 'main-green',
-  iconSize: 'small'
+const AllCircleButtonsTemplate = (args) => {
+  const icons = Object.values(Icons).filter(icon => icon.name.indexOf('Circle') > -1)
+
+  return (
+    <>
+      <div style={divStyle}>
+        <p style={paragraph}>All Buttons with Circle Icons: {icons.length} </p>
+        {icons.map((IconComponent, index) => (
+          <div style={row} key={index}>
+            <div style={col}>
+              <p style={paragraph}>#{index + 1}: {IconComponent.name}</p>
+            </div>
+            <div style={col}>
+              <ButtonFullRounded key={IconComponent.name} iconName={IconComponent.name} iconSize={SMALL} {...args} />
+            </div>
+            <div style={col}>
+              <ButtonFullRounded key={IconComponent.name} iconName={IconComponent.name} iconSize={MEDIUM} {...args} />
+            </div>
+            <div style={col}>
+              <ButtonFullRounded key={IconComponent.name} iconName={IconComponent.name} iconSize={LARGE} {...args} />
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  )
 }
-
-export const Disabled = Template.bind({})
-
-Disabled.args = {
-  iconName: 'BellIcon',
-  disabled: true
-}
-
-export const DisabledRed = Template.bind({})
-
-DisabledRed.args = {
-  iconName: 'StopIcon',
-  iconColor: 'error-red',
-  disabled: true
+export const AllButtonFullRounded = AllCircleButtonsTemplate.bind({})
+AllButtonFullRounded.args = {
+  iconColor: 'white',
+  onClick: null
 }

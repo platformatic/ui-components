@@ -6,8 +6,21 @@ import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
 import { SIZES, COLORS_BUTTON, BOX_SHADOW, UNDERLINE, HOVER_EFFECTS_BUTTONS, BACKGROUND_COLOR_OPAQUE, MAIN_DARK_BLUE, LARGE } from './constants'
 
-function Button (props) {
-  const { icon, label, color, backgroundColor, size, disabled, bold, hoverEffect, bordered, fullWidth, platformaticIcon, ...rest } = props
+function Button ({
+  icon,
+  label,
+  color,
+  backgroundColor,
+  size,
+  disabled,
+  bold,
+  hoverEffect,
+  bordered,
+  fullWidth,
+  platformaticIcon,
+  selected,
+  ...rest
+}) {
   let className = `${styles.button} ${commonStyles['background-color-' + backgroundColor]} ${styles['color-' + color]} ${styles['button-' + size]}`
   if (!bordered) className += ` ${styles['no-border']}`
   if (disabled) {
@@ -29,6 +42,7 @@ function Button (props) {
   }
   if (bold) className += ` ${styles.fontBold}`
   if (fullWidth) className += ` ${styles.fullWidth}`
+  if (selected) className += ' ' + commonStyles[`selected-background-color-${color}`]
   return (
     <button className={className} disabled={disabled} alt={label} {...rest}>
       {platformaticIcon ? <PlatformaticIcon iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' onClick={null} /> : null}
@@ -84,7 +98,11 @@ Button.propTypes = {
   platformaticIcon: PropTypes.shape({
     iconName: PropTypes.string,
     color: PropTypes.string
-  })
+  }),
+  /**
+   * Selected: default false
+   */
+  selected: PropTypes.bool
 }
 
 Button.defaultProps = {
@@ -97,7 +115,8 @@ Button.defaultProps = {
   hoverEffect: BACKGROUND_COLOR_OPAQUE,
   bordered: true,
   fullWidth: false,
-  platformaticIcon: null
+  platformaticIcon: null,
+  selected: false
 }
 
 export default Button

@@ -1,7 +1,7 @@
 import React from 'react'
 import PlatformaticIcon from '../components/PlatformaticIcon'
 import Icons from '../components/icons'
-import { COLORS_ICON } from '../components/constants'
+import { COLORS_ICON, EXTRA_LARGE, EXTRA_SMALL, LARGE, MEDIUM, SMALL } from '../components/constants'
 
 const divStyle = {
   width: '100%'
@@ -64,16 +64,19 @@ const AllIconsTemplate = (args) => {
               <p style={paragraph}>#{index + 1}: {IconComponent.name}</p>
             </div>
             <div style={col}>
-              <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size='small' {...args} />
+              <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size={EXTRA_SMALL} {...args} />
             </div>
             <div style={col}>
-              <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size='medium' {...args} />
+              <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size={SMALL} {...args} />
             </div>
             <div style={col}>
-              <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size='large' {...args} />
+              <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size={MEDIUM} {...args} />
             </div>
             <div style={col}>
-              <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size='extra-large' {...args} />
+              <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size={LARGE} {...args} />
+            </div>
+            <div style={col}>
+              <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size={EXTRA_LARGE} {...args} />
             </div>
           </div>
         ))}

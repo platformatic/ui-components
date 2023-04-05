@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES } from '../constants'
+import { COLORS_ICON, EXTRA_SMALL, LARGE, MEDIUM, SIZES, SMALL } from '../constants'
 
 const CircleFullIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
@@ -9,7 +9,21 @@ const CircleFullIcon = ({ color, size }) => {
   let icon = <></>
 
   switch (size) {
-    case 'small':
+    case EXTRA_SMALL:
+      icon = (
+        <svg
+          width={8}
+          height={8}
+          viewBox='0 0 8 8'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+          className={className}
+        >
+          <circle cx={4} cy={4} r={3} fill='none' className={filledClassName} />
+        </svg>
+      )
+      break
+    case SMALL:
       icon = (
         <svg
           width={16}
@@ -23,7 +37,7 @@ const CircleFullIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'medium':
+    case MEDIUM:
       icon = (
         <svg
           width={24}
@@ -37,7 +51,7 @@ const CircleFullIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'large':
+    case LARGE:
       icon = (
         <svg
           width={40}

@@ -131,4 +131,31 @@
 .hover-background-color-opaque-tertiary-blue{
   @apply hover:bg-tertiary-blue hover:bg-opacity-15;
 }
+.selected-background-color-main-green {
+  @apply bg-main-green bg-opacity-15;
+}
+.selected-background-color-light-green {
+  @apply bg-light-green bg-opacity-15;
+}
+.selected-background-color-dark-green {
+  @apply bg-dark-green bg-opacity-15;
+}
+.selected-background-color-main-dark-blue{
+  @apply bg-main-dark-blue bg-opacity-10;
+}
+.selected-background-color-dark-blue {
+  @apply bg-dark-blue bg-opacity-15;
+}
+.selected-background-color-light-blue {
+  @apply bg-light-blue bg-opacity-15;
+}
+.selected-background-color-white{
+  @apply bg-white bg-opacity-15;
+}
+.selected-background-color-error-red{
+  @apply bg-error-red bg-opacity-15;
+}
+.selected-background-color-tertiary-blue{
+  @apply bg-tertiary-blue bg-opacity-15;
+}
 
