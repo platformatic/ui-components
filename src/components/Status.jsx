@@ -27,7 +27,7 @@ Status.propTypes = {
    * Size
    */
   size: PropTypes.oneOf(SIZES)
-  
+
 }
 
 Status.defaultProps = {
