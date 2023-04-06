@@ -2,13 +2,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import PlatformaticIcon from './PlatformaticIcon'
-import { COLORS_ICON, EXTRA_SMALL } from './constants'
+import { COLORS_ICON, EXTRA_SMALL, SIZES, WHITE } from './constants'
 
-function Status ({ color, status }) {
+function Status ({ color, status, size }) {
   const className = `inline-flex items-center text-${color}`
   return (
     <div className={className}>
-      <PlatformaticIcon iconName='CircleFullIcon' size={EXTRA_SMALL} color={color} />
+      <PlatformaticIcon iconName='CircleFullIcon' size={size} color={color} />
       <span className='ml-2'>{status}</span>
     </div>
   )
@@ -22,12 +22,18 @@ Status.propTypes = {
   /**
    * status
    */
-  status: PropTypes.string
+  status: PropTypes.string,
+  /**
+   * Size
+   */
+  size: PropTypes.oneOf(SIZES)
+
 }
 
 Status.defaultProps = {
-  color: 'white',
-  status: ''
+  color: WHITE,
+  status: '',
+  size: EXTRA_SMALL
 }
 
 export default Status
