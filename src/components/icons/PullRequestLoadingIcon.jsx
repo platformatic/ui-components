@@ -24,12 +24,12 @@ const PullRequestLoadingIcon = ({ color, size }) => {
           <rect x={8.5} y={88} width={68} height={8} rx={4} fill='none' className={filledClassName} />
           <ellipse cx={48.776} cy={48.6901} rx={4.9655} ry={4.96554} stroke='none' strokeWidth={3} />
           <ellipse cx={48.776} cy={18.8977} rx={4.9655} ry={4.96554} stroke='none' strokeWidth={3} />
-          <path d='M48.7754 43.7254V23.8633' stroke='none' strokeWidth={3} stroke-linecap='round' stroke-linejoin='round' />
+          <path d='M48.7754 43.7254V23.8633' stroke='none' strokeWidth={3} strokeLinecap='round' strokeLinejoin='round' />
           <ellipse cx={68.6393} cy={48.6901} rx={4.9655} ry={4.96554} stroke='none' strokeWidth={3} />
-          <path d='M68.638 43.725V21.3626C68.638 19.3884 67.0377 17.7881 65.0636 17.7881H58.707' stroke='none' strokeWidth={3} stroke-linecap='round' stroke-linejoin='round' />
-          <path d='M61.2956 13.1924L56.3301 18.1579L61.2956 23.1235' stroke='none' strokeWidth={3} stroke-linecap='round' stroke-linejoin='round' />
+          <path d='M68.638 43.725V21.3626C68.638 19.3884 67.0377 17.7881 65.0636 17.7881H58.707' stroke='none' strokeWidth={3} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M61.2956 13.1924L56.3301 18.1579L61.2956 23.1235' stroke='none' strokeWidth={3} strokeLinecap='round' strokeLinejoin='round' />
           <ellipse cx={58.7071} cy={33.7932} rx={29.793} ry={29.7932} stroke='none' strokeWidth={3} />
-          <path d='M36.588 55.9116L16.5 75.9995' stroke='none' strokeWidth={3} stroke-linecap='round' stroke-linejoin='round' />
+          <path d='M36.588 55.9116L16.5 75.9995' stroke='none' strokeWidth={3} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
 
       )
