@@ -41,6 +41,7 @@ import GearIcon from './GearIcon'
 import GenerationLoadingIcon from './GenerationLoadingIcon'
 import GraphQLIcon from './GraphQLIcon'
 import KeyIcon from './KeyIcon'
+import LabelIcon from './LabelIcon'
 import LayersIcon from './LayersIcon'
 import LensIcon from './LensIcon'
 import LiveIcon from './LiveIcon'
@@ -114,6 +115,7 @@ export default {
   GenerationLoadingIcon,
   GraphQLIcon,
   KeyIcon,
+  LabelIcon,
   LayersIcon,
   LensIcon,
   LiveIcon,
