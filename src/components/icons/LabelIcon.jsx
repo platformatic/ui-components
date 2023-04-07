@@ -1,14 +1,14 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES } from '../constants'
+import { COLORS_ICON, LARGE, MEDIUM, SIZES, SMALL } from '../constants'
 
 const LabelIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   let icon = <></>
 
   switch (size) {
-    case 'small':
+    case SMALL:
       icon = (
         <svg
           width={16}
@@ -24,7 +24,7 @@ const LabelIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'medium':
+    case MEDIUM:
       icon = (
         <svg
           width={24}
@@ -34,13 +34,13 @@ const LabelIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M4.55169 12.0459C4.51224 11.7566 4.60115 11.4646 4.79509 11.2464L12.7938 2.24731C13.1607 1.83452 13.7928 1.79732 14.2056 2.16422L20.5587 7.81112C20.9715 8.17803 21.0087 8.8101 20.6418 9.22289L12.6431 18.222C12.4492 18.4402 12.1696 18.5627 11.8777 18.5575L6.28101 18.4568C5.78786 18.4479 5.37482 18.0808 5.30817 17.5921L4.55169 12.0459Z' stroke='none' stroke-width='1.5' />
+          <path d='M4.55169 12.0459C4.51224 11.7566 4.60115 11.4646 4.79509 11.2464L12.7938 2.24731C13.1607 1.83452 13.7928 1.79732 14.2056 2.16422L20.5587 7.81112C20.9715 8.17803 21.0087 8.8101 20.6418 9.22289L12.6431 18.222C12.4492 18.4402 12.1696 18.5627 11.8777 18.5575L6.28101 18.4568C5.78786 18.4479 5.37482 18.0808 5.30817 17.5921L4.55169 12.0459Z' stroke='none' strokeWidth={1.5} />
           <circle cx={9.90817} cy={13.3963} r={2.25} transform='rotate(-48.3682 9.90817 13.3963)' stroke='none' strokeWidth={1.5} />
 
         </svg>
       )
       break
-    case 'large':
+    case LARGE:
       icon = (
         <svg
           width={40}
@@ -50,9 +50,7 @@ const LabelIcon = ({ color, size }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M7.54472 19.7728C7.50526 19.4836 7.59417 19.1916 7.78811 18.9734L21.7659 3.2474C22.1328 2.8346 22.7649 2.7974 23.1777 3.16431L34.7628 13.4616C35.1756 13.8285 35.2128 14.4606 34.8459 14.8734L20.8681 30.5993C20.6742 30.8175 20.3946 30.9401 20.1027 30.9348L9.89701 30.7513C9.40386 30.7424 8.99083 30.3753 8.92417 29.8866L7.54472 19.7728Z' stroke='none' stroke-width='2' />
-          <circle cx={16.5136} cy={22.3273} r={3.75} transform='rotate(-48.3682 16.5136 22.3273)' stroke='none' strokeWidth={2} />
-
+          <path d='M7.54472 19.7728C7.50526 19.4836 7.59417 19.1916 7.78811 18.9734L21.7659 3.2474C22.1328 2.8346 22.7649 2.7974 23.1777 3.16431L34.7628 13.4616C35.1756 13.8285 35.2128 14.4606 34.8459 14.8734L20.8681 30.5993C20.6742 30.8175 20.3946 30.9401 20.1027 30.9348L9.89701 30.7513C9.40386 30.7424 8.99083 30.3753 8.92417 29.8866L7.54472 19.7728Z' stroke='none' strokeWidth={2} />
         </svg>
       )
       break
