@@ -48,10 +48,11 @@ import LiveIcon from './LiveIcon'
 import LoadingAppIcon from './LoadingAppIcon'
 import LogOutIcon from './LogOutIcon'
 import MetricsIcon from './MetricsIcon'
-import RestartIcon from './RestartIcon'
 import PlayIcon from './PlayIcon'
 import PullRequestIcon from './PullRequestIcon'
 import PullRequestLoadingIcon from './PullRequestLoadingIcon'
+import RestartIcon from './RestartIcon'
+import RocketIcon from './RocketIcon'
 import SendIcon from './SendIcon'
 import SocialDiscordIcon from './SocialDiscordIcon'
 import SocialGitHubIcon from './SocialGitHubIcon'
@@ -126,6 +127,7 @@ export default {
   PullRequestIcon,
   PullRequestLoadingIcon,
   RestartIcon,
+  RocketIcon,
   SendIcon,
   StopIcon,
   SocialDiscordIcon,
