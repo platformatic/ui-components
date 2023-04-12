@@ -97,3 +97,6 @@
 .fullWidth {
   @apply w-full;
 }
+.label {
+  @apply w-max;
+}
