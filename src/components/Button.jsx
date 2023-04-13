@@ -46,7 +46,7 @@ function Button ({
   return (
     <button className={className} disabled={disabled} alt={label} {...rest}>
       {platformaticIcon ? <PlatformaticIcon iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' onClick={null} /> : null}
-      <span>{label}</span>
+      <span className={styles.label}>{label}</span>
     </button>
   )
 }
