@@ -1,5 +1,5 @@
 .dropDown {
-  @apply mx-4 relative flex flex-col;
+  @apply relative flex flex-col;
 }
 .right {
   @apply items-end;
