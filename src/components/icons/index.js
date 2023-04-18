@@ -39,6 +39,7 @@ import EnlargeIcon from './EnlargeIcon'
 import EntryIcon from './EntryIcon'
 import GearIcon from './GearIcon'
 import GenerationLoadingIcon from './GenerationLoadingIcon'
+import GiveOwnership from './GiveOwnership'
 import GraphQLIcon from './GraphQLIcon'
 import KeyIcon from './KeyIcon'
 import LabelIcon from './LabelIcon'
@@ -48,9 +49,11 @@ import LiveIcon from './LiveIcon'
 import LoadingAppIcon from './LoadingAppIcon'
 import LogOutIcon from './LogOutIcon'
 import MetricsIcon from './MetricsIcon'
+import Organization from './Organization'
 import PlayIcon from './PlayIcon'
 import PullRequestIcon from './PullRequestIcon'
 import PullRequestLoadingIcon from './PullRequestLoadingIcon'
+import RequestOwnership from './RequestOwnership'
 import RestartIcon from './RestartIcon'
 import RocketIcon from './RocketIcon'
 import SendIcon from './SendIcon'
@@ -64,6 +67,8 @@ import StopIcon from './StopIcon'
 import TerminalIcon from './TerminalIcon'
 import TwoUsersIcon from './TwoUsersIcon'
 import UpgradeIcon from './UpgradeIcon'
+import UserRemove from './UserRemove'
+import UserRole from './UserRole'
 import WorkspaceDynamicIcon from './WorkspaceDynamicIcon'
 import WorkspaceEmptyIcon from './WorkspaceEmptyIcon'
 import WorkspaceGitHubIcon from './WorkspaceGitHubIcon'
@@ -114,6 +119,7 @@ export default {
   EntryIcon,
   GearIcon,
   GenerationLoadingIcon,
+  GiveOwnership,
   GraphQLIcon,
   KeyIcon,
   LabelIcon,
@@ -123,9 +129,11 @@ export default {
   LoadingAppIcon,
   LogOutIcon,
   MetricsIcon,
+  Organization,
   PlayIcon,
   PullRequestIcon,
   PullRequestLoadingIcon,
+  RequestOwnership,
   RestartIcon,
   RocketIcon,
   SendIcon,
@@ -138,6 +146,8 @@ export default {
   SocialTwitterIcon,
   TerminalIcon,
   UpgradeIcon,
+  UserRemove,
+  UserRole,
   TwoUsersIcon,
   WorkspaceDynamicIcon,
   WorkspaceEmptyIcon,
