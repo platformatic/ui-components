@@ -38,6 +38,7 @@ import Versions from './src/components/Versions'
 import VerticalSeparator from './src/components/VerticalSeparator'
 
 export {
+  Backgrounds,
   BorderedBox,
   Box,
   Button,
