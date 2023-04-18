@@ -86,6 +86,9 @@
 .background-color-opaque-20 {
   @apply bg-opacity-20 !important;
 }
+.background-color-opaque-10 {
+  @apply bg-opacity-10 !important;
+}
 .apply-opacity-30 {
   @apply opacity-30;
 }

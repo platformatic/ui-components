@@ -87,3 +87,12 @@ IconBeforeAndAfter.args = {
     color: 'error-red'
   }
 }
+
+export const Focused = TemplateBorderMainDarkBlue.bind({})
+
+Focused.args = {
+  name: 'test',
+  placeholder: 'Platformatic',
+  borderColor: 'main-dark-blue',
+  focused: true
+}

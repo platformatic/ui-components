@@ -22,6 +22,9 @@
 .color-white{
   @apply text-white;
 }
+.paddingFocused {
+  @apply p-4;
+}
 
 [type='text']:focus {
   outline: none;

@@ -38,7 +38,7 @@ BorderedBox.propTypes = {
   /**
    * opaque
    */
-  opaque: PropTypes.oneOf([100, 60, 30, 20])
+  opaque: PropTypes.oneOf([100, 60, 30, 20, 10])
 }
 
 BorderedBox.defaultProps = {

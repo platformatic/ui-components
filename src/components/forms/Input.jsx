@@ -4,14 +4,16 @@ import PropTypes from 'prop-types'
 import styles from './Input.module.css'
 import commonStyles from '../Common.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
+import { MAIN_GREEN } from '../constants'
+import BorderedBox from '../BorderedBox'
 
-function Input ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled, beforeIcon, afterIcon }) {
+function Input ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled, beforeIcon, afterIcon, focused }) {
   let className = styles.inputContainer + ' ' + commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`] + ' ' + commonStyles.padded
   const showError = errorMessage.length > 0
   if (showError) className += ' ' + commonStyles['bordered--error-red']
   if (disabled) className += ' ' + commonStyles['apply-opacity-30']
 
-  return (
+  const cmp = (
     <div className={styles.container}>
       <div className={className}>
         {beforeIcon && <PlatformaticIcon iconName={beforeIcon.iconName} classes={styles.beforeInputIcon} size='small' data-testid='before-icon' color={beforeIcon.color} onClick={() => beforeIcon.onClick()} />}
@@ -21,6 +23,8 @@ function Input ({ placeholder, value, name, borderColor, errorMessage, onChange,
       {showError && <span className={commonStyles['error-message']}>{errorMessage}</span>}
     </div>
   )
+
+  return focused ? (<BorderedBox classes={styles.paddingFocused} color={MAIN_GREEN} backgroundColor={MAIN_GREEN} opaque={10}>{cmp}</BorderedBox>) : cmp
 }
 
 Input.propTypes = {
@@ -63,7 +67,11 @@ Input.propTypes = {
     iconName: PropTypes.string,
     color: PropTypes.string,
     onClick: PropTypes.func
-  })
+  }),
+  /**
+   * addFocus
+   */
+  focused: PropTypes.bool
 }
 
 Input.defaultProps = {
@@ -75,7 +83,8 @@ Input.defaultProps = {
   onChange: () => {},
   disabled: false,
   beforeIcon: null,
-  afterIcon: null
+  afterIcon: null,
+  focused: false
 }
 
 export default Input
