@@ -111,7 +111,7 @@ function Sidebar (props) {
                 {!collapsed && <span className={styles.item}>{addTitle}</span>}
               </button>
             </div>
-            <HorizontalSeparator marginBottom='2' marginTop='2' />
+            <HorizontalSeparator marginBottom={2} marginTop={2} />
 
             <div className={styles.bottom}>
               <Button label={labelButtonSettings} color={WHITE} onClick={onClickSettings} platformaticIcon={{ iconName: 'GearIcon', color: WHITE }} fullWidth bold size={MEDIUM} hoverEffect={BACKGROUND_COLOR_OPAQUE} />

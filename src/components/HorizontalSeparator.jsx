@@ -1,9 +1,12 @@
 'use strict'
 import React from 'react'
+import PropTypes from 'prop-types'
+import commonStyles from './Common.module.css'
+import { DARK_GREEN, MAIN_DARK_BLUE } from './constants'
 import styles from './HorizontalSeparator.module.css'
-export default function HorizontalSeparator ({ marginTop = 4, marginBottom = 4, color = 'dark-green', opacity = 1 }) {
+function HorizontalSeparator ({ marginTop, marginBottom, color, opacity }) {
   function getClassName () {
-    let className = `text-${color} `
+    let className = commonStyles[`text--${color}`] + ' '
     // margin
     className += (marginTop === marginBottom ? `${styles['marginY-' + marginTop]}` : `${styles['marginT-' + marginTop]} ${styles['marginB-' + marginBottom]}`)
     // opacity
@@ -13,3 +16,31 @@ export default function HorizontalSeparator ({ marginTop = 4, marginBottom = 4, 
 
   return <hr className={getClassName()} />
 }
+
+HorizontalSeparator.propTypes = {
+  /**
+   * marginTop
+   */
+  marginTop: PropTypes.number,
+  /**
+   * marginBottom
+   */
+  marginBottom: PropTypes.number,
+  /**
+   * color
+   */
+  color: PropTypes.oneOf([DARK_GREEN, MAIN_DARK_BLUE]),
+  /**
+   * opacity
+   */
+  opacity: PropTypes.number
+}
+
+HorizontalSeparator.defaultProps = {
+  marginTop: 4,
+  marginBottom: 4,
+  color: DARK_GREEN,
+  opacity: 1
+}
+
+export default HorizontalSeparator

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES } from '../constants'
 
-const Organization = ({ color, size }) => {
+const OrganizationIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   let icon = <></>
 
@@ -71,7 +71,7 @@ const Organization = ({ color, size }) => {
   return icon
 }
 
-Organization.propTypes = {
+OrganizationIcon.propTypes = {
   /**
    * color of text, icon and borders
    */
@@ -82,9 +82,9 @@ Organization.propTypes = {
   size: PropTypes.oneOf(SIZES)
 }
 
-Organization.defaultProps = {
+OrganizationIcon.defaultProps = {
   color: 'main-dark-blue',
   size: 'medium'
 }
 
-export default Organization
+export default OrganizationIcon

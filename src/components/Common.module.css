@@ -34,11 +34,21 @@
 .text--white {
   @apply text-white
 }
+.text--dark-green {
+  @apply text-dark-green;
+}
 .text--main-green {
-  @apply text-main-green
+  @apply text-main-green;
 }
 .text--main-dark-blue {
   @apply text-main-dark-blue;
+}
+
+.text--base {
+  @apply text-base
+}
+.text--xs {
+  @apply text-xs
 }
 
 .background-color-main-green {

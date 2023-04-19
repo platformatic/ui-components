@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES } from '../constants'
 
-const UserRemove = ({ color, size }) => {
+const UserRemoveIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   let icon = <></>
 
@@ -70,7 +70,7 @@ const UserRemove = ({ color, size }) => {
   return icon
 }
 
-UserRemove.propTypes = {
+UserRemoveIcon.propTypes = {
   /**
    * color of text, icon and borders
    */
@@ -81,9 +81,9 @@ UserRemove.propTypes = {
   size: PropTypes.oneOf(SIZES)
 }
 
-UserRemove.defaultProps = {
+UserRemoveIcon.defaultProps = {
   color: 'main-dark-blue',
   size: 'medium'
 }
 
-export default UserRemove
+export default UserRemoveIcon

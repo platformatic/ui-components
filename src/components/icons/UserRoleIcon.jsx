@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES } from '../constants'
 
-const UserRole = ({ color, size }) => {
+const UserRoleIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   let icon = <></>
 
@@ -69,7 +69,7 @@ const UserRole = ({ color, size }) => {
   return icon
 }
 
-UserRole.propTypes = {
+UserRoleIcon.propTypes = {
   /**
    * color of text, icon and borders
    */
@@ -80,9 +80,9 @@ UserRole.propTypes = {
   size: PropTypes.oneOf(SIZES)
 }
 
-UserRole.defaultProps = {
+UserRoleIcon.defaultProps = {
   color: 'main-dark-blue',
   size: 'medium'
 }
 
-export default UserRole
+export default UserRoleIcon

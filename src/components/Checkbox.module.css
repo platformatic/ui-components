@@ -1,9 +1,21 @@
 .checkbox {
-  @apply border border-light-green p-2 rounded-sm bg-main-dark-blue relative inline-block h-2 w-2;
+  @apply border p-2 rounded-sm relative inline-block h-2 w-2;
   -webkit-appearance: none;
 }
 
-.checkbox:checked {
+.checkbox--main-dark-blue {
+  @apply border-light-green bg-main-dark-blue
+}
+
+.checkbox--white {
+  @apply border-main-dark-blue bg-white
+}
+
+.checkbox--white:checked {
+  @apply bg-main-dark-blue text-white;
+}
+
+.checkbox--main-dark-blue:checked {
 	@apply bg-light-green text-main-dark-blue;
 }
 

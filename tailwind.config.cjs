@@ -54,6 +54,7 @@ module.exports = {
   },
   safelist: [
     'text-error-red',
+    'text-dark-green',
     'text-3xl',
     'text-4xl',
     'text-5xl',
