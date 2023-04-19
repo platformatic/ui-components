@@ -1,9 +1,23 @@
 'use strict'
 import Checkbox from '../components/Checkbox'
+import { WHITE } from '../components/constants'
+const divStyle = {
+  width: '100%',
+  height: 'auto',
+  padding: '50px',
+  backgroundColor: 'white'
+}
 
 export default {
   title: 'Platformatic/Checkbox',
   component: Checkbox,
+  decorators: [
+    (Story) => (
+      <div style={divStyle}>
+        <Story />
+      </div>
+    )
+  ],
   argTypes: {
     id: {
       type: 'string',
@@ -24,4 +38,9 @@ CheckboxRegular.args = {}
 export const CheckboxDisabled = Template.bind({})
 CheckboxDisabled.args = {
   disabled: true
+}
+
+export const CheckboxWhite = Template.bind({})
+CheckboxWhite.args = {
+  color: WHITE
 }

@@ -7,7 +7,7 @@ import PlatformaticIcon from './PlatformaticIcon'
 import { SIZES, COLORS_BUTTON, BOX_SHADOW, UNDERLINE, HOVER_EFFECTS_BUTTONS, BACKGROUND_COLOR_OPAQUE, MAIN_DARK_BLUE, LARGE } from './constants'
 
 function Button ({
-  icon,
+  classes,
   label,
   color,
   backgroundColor,
@@ -21,30 +21,31 @@ function Button ({
   selected,
   ...rest
 }) {
-  let className = `${styles.button} ${commonStyles['background-color-' + backgroundColor]} ${styles['color-' + color]} ${styles['button-' + size]}`
-  if (!bordered) className += ` ${styles['no-border']}`
+  let buttonClassName = classes
+  buttonClassName += ` ${styles.button} ${commonStyles['background-color-' + backgroundColor]} ${styles['color-' + color]} ${styles['button-' + size]}`
+  if (!bordered) buttonClassName += ` ${styles['no-border']}`
   if (disabled) {
-    className += ` ${styles.disabled}`
+    buttonClassName += ` ${styles.disabled}`
   } else {
     switch (hoverEffect) {
       case BACKGROUND_COLOR_OPAQUE:
-        className += ' ' + commonStyles[`hover-${BACKGROUND_COLOR_OPAQUE}-${color}`]
+        buttonClassName += ' ' + commonStyles[`hover-${BACKGROUND_COLOR_OPAQUE}-${color}`]
         break
       case BOX_SHADOW:
-        className += ' ' + styles[`hover-${BOX_SHADOW}-${backgroundColor}`]
+        buttonClassName += ' ' + styles[`hover-${BOX_SHADOW}-${backgroundColor}`]
         break
       case UNDERLINE:
-        className += ` ${styles['underline-effect']}`
+        buttonClassName += ` ${styles['underline-effect']}`
         break
       default:
         break
     }
   }
-  if (bold) className += ` ${styles.fontBold}`
-  if (fullWidth) className += ` ${styles.fullWidth}`
-  if (selected) className += ' ' + commonStyles[`selected-background-color-${color}`]
+  if (bold) buttonClassName += ` ${styles.fontBold}`
+  if (fullWidth) buttonClassName += ` ${styles.fullWidth}`
+  if (selected) buttonClassName += ' ' + commonStyles[`selected-background-color-${color}`]
   return (
-    <button className={className} disabled={disabled} alt={label} {...rest}>
+    <button className={buttonClassName} disabled={disabled} alt={label} {...rest}>
       {platformaticIcon ? <PlatformaticIcon iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' onClick={null} /> : null}
       <span className={styles.label}>{label}</span>
     </button>
@@ -53,9 +54,9 @@ function Button ({
 
 Button.propTypes = {
   /**
-   * Icon
+   * classes
    */
-  icon: PropTypes.object,
+  classes: PropTypes.string,
   /**
    * label
    */
@@ -106,6 +107,7 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
+  classes: '',
   label: '',
   color: MAIN_DARK_BLUE,
   backgroundColor: 'transparent',

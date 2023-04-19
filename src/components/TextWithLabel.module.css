@@ -1,6 +1,3 @@
-.container {
-  @apply text-white
-}
 .label {
   @apply font-thin mr-2;
 }

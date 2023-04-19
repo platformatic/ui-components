@@ -1,11 +1,31 @@
 'use strict'
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from './Checkbox.module.css'
-export default function Checkbox (props) {
-  const { disabled, ...rest } = props
-  let className = `${styles.checkbox}`
+import { MAIN_DARK_BLUE, WHITE } from './constants'
+function Checkbox ({ disabled, color, ...rest }) {
+  let className = `${styles.checkbox} `
+  className += styles[`checkbox--${color}`]
   if (disabled) className += ` ${styles.disabled}`
   return (
     <input type='checkbox' className={className} disabled={disabled} {...rest} />
   )
 }
+
+Checkbox.propTypes = {
+  /**
+   * disabled
+   */
+  disabled: PropTypes.bool,
+  /**
+   * color
+   */
+  color: PropTypes.oneOf([WHITE, MAIN_DARK_BLUE])
+}
+
+Checkbox.defaultProps = {
+  disabled: false,
+  color: MAIN_DARK_BLUE
+}
+
+export default Checkbox
