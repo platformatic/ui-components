@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES } from '../constants'
 
-const UserRemoveIcon = ({ color, size }) => {
+const UserRemoveIcon = ({ color, size, tip }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   let icon = <></>
 
@@ -16,6 +16,7 @@ const UserRemoveIcon = ({ color, size }) => {
           viewBox='0 0 16 16'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
+          data-tip={tip}
           className={className}
         >
           <path d='M7 10.0553C4.16229 10.3727 2 12.018 2 14H8' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
@@ -35,6 +36,7 @@ const UserRemoveIcon = ({ color, size }) => {
           viewBox='0 0 24 24'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
+          data-tip={tip}
           className={className}
         >
           <path d='M10.5 15.083C6.24343 15.559 3 18.027 3 21H12' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
@@ -53,6 +55,7 @@ const UserRemoveIcon = ({ color, size }) => {
           viewBox='0 0 40 40'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
+          data-tip={tip}
           className={className}
         >
           <path d='M17.5 25.1383C10.4057 25.9317 5 30.045 5 35H20' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
@@ -78,12 +81,17 @@ UserRemoveIcon.propTypes = {
   /**
    * Size
    */
-  size: PropTypes.oneOf(SIZES)
+  size: PropTypes.oneOf(SIZES),
+  /**
+   * tip
+   */
+  tip: PropTypes.string
 }
 
 UserRemoveIcon.defaultProps = {
   color: 'main-dark-blue',
-  size: 'medium'
+  size: 'medium',
+  tip: ''
 }
 
 export default UserRemoveIcon

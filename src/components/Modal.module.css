@@ -35,9 +35,6 @@
 .title--cover {
   @apply inline-flex items-center;
 }
-.title--cover h3 {
-  @apply text-[22px] text-dark-blue font-bold tracking-widest mx-3;
-}
 .modal--small {
   @apply min-w-[480px] max-w-[480px];
 }

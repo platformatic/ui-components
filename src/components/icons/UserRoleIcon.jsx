@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES } from '../constants'
 
-const UserRoleIcon = ({ color, size }) => {
+const UserRoleIcon = ({ color, size, tip }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   let icon = <></>
 
@@ -16,6 +16,7 @@ const UserRoleIcon = ({ color, size }) => {
           viewBox='0 0 16 16'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
+          data-tip={tip}
           className={className}
         >
           <path d='M7.5 14H2C2 12.325 3.34521 10.8745 5.30604 10.1695C5.89513 9.95773 6.53978 9.81323 7.22021 9.75015' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
@@ -34,6 +35,7 @@ const UserRoleIcon = ({ color, size }) => {
           viewBox='0 0 24 24'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
+          data-tip={tip}
           className={className}
         >
           <path d='M11.25 21H3C3 18.4876 5.01782 16.3117 7.95906 15.2543C8.84269 14.9366 9.80967 14.7198 10.8303 14.6252' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
@@ -52,6 +54,7 @@ const UserRoleIcon = ({ color, size }) => {
           viewBox='0 0 40 40'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
+          data-tip={tip}
           className={className}
         >
           <path d='M18.75 35H5C5 30.8126 8.36304 27.1862 13.2651 25.4238C14.7378 24.8943 16.3495 24.5331 18.0505 24.3754' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
@@ -77,12 +80,17 @@ UserRoleIcon.propTypes = {
   /**
    * Size
    */
-  size: PropTypes.oneOf(SIZES)
+  size: PropTypes.oneOf(SIZES),
+  /**
+   * tip
+   */
+  tip: PropTypes.string
 }
 
 UserRoleIcon.defaultProps = {
   color: 'main-dark-blue',
-  size: 'medium'
+  size: 'medium',
+  tip: ''
 }
 
 export default UserRoleIcon

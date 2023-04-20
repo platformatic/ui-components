@@ -1,6 +1,7 @@
 'use strict'
 import React from 'react'
 import PropTypes from 'prop-types'
+import ReactTooltip from 'react-tooltip'
 import Icons from './icons'
 import styles from './PlatformaticIcon.module.css'
 import { COLORS_ICON, SIZES } from './constants'
@@ -19,7 +20,12 @@ function PlatformaticIcon ({ iconName, color, onClick, size, classes, tip }) {
       icon = (<span className={className} onClick={onClick}>{icon}</span>)
     }
   }
-  return icon
+  return (
+    <>
+      {icon}
+      {tip && <ReactTooltip place='top' type='info' />}
+    </>
+  )
 }
 
 PlatformaticIcon.propTypes = {
