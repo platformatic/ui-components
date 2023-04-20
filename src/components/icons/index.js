@@ -31,6 +31,7 @@ import CircleGearIcon from './CircleGearIcon'
 import CircleTwoArrowsDownIcon from './CircleTwoArrowsDownIcon'
 import CircleTwoArrowsUpIcon from './CircleTwoArrowsUpIcon'
 import CloseIcon from './CloseIcon'
+import CreditCardIcon from './CreditCardIcon'
 import CopyPasteIcon from './CopyPasteIcon'
 import DatabaseIcon from './DatabaseIcon'
 import EditIcon from './EditIcon'
@@ -112,6 +113,7 @@ export default {
   CircleTwoArrowsDownIcon,
   CircleTwoArrowsUpIcon,
   CloseIcon,
+  CreditCardIcon,
   CopyPasteIcon,
   DatabaseIcon,
   EditIcon,
