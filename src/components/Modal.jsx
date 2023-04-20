@@ -78,7 +78,6 @@ function Modal ({ setIsOpen, title, layout, children, size, profile }) {
           <div className={contentFullscreen}>
             <div className={titleFullscreen}>
               {renderLogo()}
-              <h3>PLATFORMATIC</h3>
             </div>
             <div>{children}</div>
           </div>
