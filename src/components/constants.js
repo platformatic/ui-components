@@ -37,3 +37,6 @@ export const FONT_XS = 'xs'
 export const ROLE_ADMIN = 'admin'
 export const ROLE_USER = 'user'
 export const ROLE_OWNER = 'owner'
+
+export const MARGIN_10 = 10
+export const MARGIN_0 = 0
