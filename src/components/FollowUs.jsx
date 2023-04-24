@@ -1,16 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import commonStyles from './Common.module.css'
 import styles from './FollowUs.module.css'
 import Icons from './icons'
-import { MAIN_GREEN, WHITE, MEDIUM, SMALL } from './constants'
+import { MAIN_GREEN, WHITE, MEDIUM, SMALL, MAIN_DARK_BLUE, LIGHT_GREEN } from './constants'
 
-function FollowUs ({ label, useOnFrontpage }) {
+function FollowUs ({ label, useOnFrontpage, iconColor, iconSize, labelColor }) {
   const suffix = useOnFrontpage ? 'Frontpage' : 'Dashboard'
-  const iconColor = useOnFrontpage ? WHITE : MAIN_GREEN
-  const iconSize = useOnFrontpage ? MEDIUM : SMALL
   const className = styles[`container${suffix}`]
   const iconClassName = styles[`icon${suffix}`]
-  const labelClassName = styles[`label${suffix}`]
+  let labelClassName = styles[`label${suffix}`]
+  labelClassName += ' ' + commonStyles[`text--${labelColor}`]
 
   return (
     <div className={className}>
@@ -49,11 +49,26 @@ FollowUs.propTypes = {
   /**
    * frontPageAspect
    */
-  frontPageAspect: PropTypes.bool
+  frontPageAspect: PropTypes.bool,
+  /**
+   * labelColor
+   */
+  labelColor: PropTypes.oneOf([LIGHT_GREEN, WHITE, MAIN_DARK_BLUE]),
+  /**
+   * iconColor
+   */
+  iconColor: PropTypes.oneOf([MAIN_DARK_BLUE, WHITE, MAIN_GREEN]),
+  /**
+   * iconSize
+   */
+  iconSize: PropTypes.oneOf([MEDIUM, SMALL])
 }
 
 FollowUs.defaultProps = {
   label: 'Follow us on',
-  useOnFrontpage: true
+  useOnFrontpage: true,
+  labelColor: LIGHT_GREEN,
+  iconColor: WHITE,
+  iconSize: MEDIUM
 }
 export default FollowUs
