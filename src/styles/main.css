@@ -10,7 +10,7 @@
 }
 
 :root {
-  @apply bg-main-dark-blue;
+  @apply bg-transparent;
   font-family: 'Montserrat';
 }
 
@@ -20,4 +20,11 @@ a {
 
 input {
   background-color: transparent;
+}
+
+.body--light-blue {
+  @apply bg-light-blue;
+}
+.body--main-dark-blue {
+  @apply bg-main-dark-blue;
 }

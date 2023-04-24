@@ -5,10 +5,10 @@
   @apply flex items-center;
 }
 .labelFrontpage {
-  @apply uppercase text-light-green tracking-more-widest text-sm mr-8;
+  @apply uppercase tracking-more-widest text-sm mr-8;
 }
 .labelDashboard {
-  @apply text-white text-xs mr-2;
+  @apply text-xs mr-2;
 }
 .iconFrontpage {
   @apply text-white mx-4 text-xl hover:cursor-pointer hover:scale-125;

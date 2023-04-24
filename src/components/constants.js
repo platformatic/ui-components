@@ -1,5 +1,7 @@
 export const WHITE = 'white'
 export const MAIN_DARK_BLUE = 'main-dark-blue'
+export const LIGHT_GREEN = 'light-green'
+export const LIGHT_BLUE = 'light-blue'
 export const DARK_GREEN = 'dark-green'
 export const MAIN_GREEN = 'main-green'
 export const ERROR_RED = 'error-red'
@@ -10,6 +12,7 @@ export const SMALL = 'small'
 export const MEDIUM = 'medium'
 export const LARGE = 'large'
 export const EXTRA_LARGE = 'extra-large'
+
 export const SIZES = [EXTRA_SMALL, SMALL, MEDIUM, LARGE, EXTRA_LARGE]
 export const PADDING_SIZES = [NONE, ...SIZES]
 export const BOX_SHADOW = 'box-shadow'
@@ -20,7 +23,7 @@ export const HOVER_EFFECTS_BUTTONS = [BOX_SHADOW, BACKGROUND_COLOR_OPAQUE, UNDER
 export const MODAL_SIZES = [SMALL, MEDIUM, FULL_WIDTH]
 
 export const COLORS_ICON = [MAIN_GREEN, WHITE, MAIN_DARK_BLUE, ERROR_RED, WARNING_YELLOW]
-export const COLORS_BUTTON = [MAIN_GREEN, 'dark-green', 'light-green', MAIN_DARK_BLUE, 'dark-blue', 'light-blue', WHITE, ERROR_RED, 'tertiary-blue', 'transparent']
+export const COLORS_BUTTON = [MAIN_GREEN, DARK_GREEN, LIGHT_GREEN, MAIN_DARK_BLUE, 'dark-blue', LIGHT_BLUE, WHITE, ERROR_RED, 'tertiary-blue', 'transparent']
 export const COLORS_BORDERED_BOX = [MAIN_GREEN, ERROR_RED, WHITE, 'dark-blue', MAIN_DARK_BLUE, WARNING_YELLOW, 'transparent']
 
 export const MODAL_POPUP = 'popup'

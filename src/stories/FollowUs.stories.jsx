@@ -1,4 +1,5 @@
 import React from 'react'
+import { MAIN_GREEN, SMALL, WHITE } from '../components/constants'
 import FollowUs from '../components/FollowUs'
 
 export default {
@@ -16,5 +17,8 @@ FollowUsFrontpage.args = {
 export const FollowUsDashboard = Template.bind({})
 FollowUsDashboard.args = {
   label: 'Follow us:',
-  useOnFrontpage: false
+  useOnFrontpage: false,
+  labelColor: WHITE,
+  iconSize: SMALL,
+  iconColor: MAIN_GREEN
 }
