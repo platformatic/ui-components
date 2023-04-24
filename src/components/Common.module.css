@@ -40,6 +40,9 @@
 .text--main-green {
   @apply text-main-green;
 }
+.text--light-green {
+  @apply text-light-green;
+}
 .text--main-dark-blue {
   @apply text-main-dark-blue;
 }
