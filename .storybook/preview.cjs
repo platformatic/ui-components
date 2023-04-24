@@ -11,5 +11,18 @@ export const parameters = {
     storySort: {
       method: 'alphabetical'
     }
+  },
+  backgrounds: {
+    default: 'main-dark-blue',
+    values: [
+      {
+        name: 'main-dark-blue',
+        value: '#00283D',
+      },
+      {
+        name: 'light-blue',
+        value: '#E9F7FF',
+      },
+    ],
   }
 }
