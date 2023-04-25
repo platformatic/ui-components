@@ -20,5 +20,5 @@
   @apply absolute border-solid border p-0  mt-8 rounded-md z-10 text-sm min-w-[190px];
 }
 .item {
-  @apply py-2 px-3 first:border-t-0 text-sm leading-4 uppercase hover:font-semibold hover:cursor-pointer tracking-more-widest border-t; 
+  @apply py-2 px-3 first:border-t-0 text-sm leading-4 uppercase hover:font-semibold hover:cursor-pointer tracking-more-widest border-t;
 }

@@ -5,7 +5,7 @@ import styles from './DropDown.module.css'
 import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
 import { LIGHT_BLUE, MAIN_DARK_BLUE, WHITE } from './constants'
-function DropDown ({ pictureUrl, header, items, align, backgroundColor, textColor, borderColor }) {
+function DropDown ({ pictureUrl, header, items, align, backgroundColor, textColor, borderColor, headerColor }) {
   const [open, setOpen] = useState(false)
 
   let classNameMenu = `${styles.menu} `
@@ -16,7 +16,7 @@ function DropDown ({ pictureUrl, header, items, align, backgroundColor, textColo
   classNameItem += commonStyles[`text--${textColor}`]
 
   let headerClassNamme = `${styles.header} `
-  headerClassNamme += commonStyles[`text--${borderColor}`]
+  headerClassNamme += commonStyles[`text--${headerColor}`]
 
   function handleOpen () {
     setOpen(!open)
@@ -27,8 +27,8 @@ function DropDown ({ pictureUrl, header, items, align, backgroundColor, textColo
       <span className={headerClassNamme} onClick={handleOpen}>
         {pictureUrl && <img src={pictureUrl} height={32} width={32} className={styles.picture} />}
         {header}
-        {!open && <div className={styles.arrow}><PlatformaticIcon iconName='ArrowRightIcon' color={borderColor} onClick={null} /></div>}
-        {open && <div className={styles.arrow}><PlatformaticIcon iconName='ArrowDownIcon' color={borderColor} onClick={null} /></div>}
+        {!open && <div className={styles.arrow}><PlatformaticIcon iconName='ArrowRightIcon' color={headerColor} onClick={null} /></div>}
+        {open && <div className={styles.arrow}><PlatformaticIcon iconName='ArrowDownIcon' color={headerColor} onClick={null} /></div>}
       </span>
       {open && (
         <div className={classNameMenu}>
@@ -73,7 +73,11 @@ DropDown.propTypes = {
   /**
    * borderColor
    */
-  borderColor: PropTypes.oneOf([MAIN_DARK_BLUE, WHITE])
+  borderColor: PropTypes.oneOf([MAIN_DARK_BLUE, WHITE]),
+  /**
+   * headerColor
+   */
+  headerColor: PropTypes.oneOf([MAIN_DARK_BLUE, WHITE])
 }
 
 DropDown.defaultProps = {
@@ -83,6 +87,7 @@ DropDown.defaultProps = {
   items: [],
   backgroundColor: LIGHT_BLUE,
   textColor: MAIN_DARK_BLUE,
+  headerColor: WHITE,
   borderColor: WHITE
 }
 export default DropDown
