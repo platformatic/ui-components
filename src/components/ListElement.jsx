@@ -1,26 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import PlatformaticIcon from './PlatformaticIcon'
+import commonStyles from './Common.module.css'
 import styles from './ListElement.module.css'
+import { MAIN_DARK_BLUE, MEDIUM, SMALL, WHITE, MAIN_GREEN } from './constants'
 
-function List ({ title, detail, marginSize, titleAspect }) {
+function List ({ title, detail, marginSize, detailColor, titleColor, semiBold }) {
   let className = `${styles.container} `
   className += styles[`margin-${marginSize}`]
 
-  let classNameTitle = `${styles.title} `
-  classNameTitle += styles[`${titleAspect}`]
+  let classNameTitle = `${styles.title} ${semiBold ? commonStyles.fontSemiBold : commonStyles.fontLight} `
+  classNameTitle += commonStyles[`text--${titleColor}`]
+
+  let detailClassName = `${styles.textCol} `
+  detailClassName += commonStyles[`text--${detailColor}`]
 
   return (
     <div className={className}>
       <div className={styles.row}>
-        <PlatformaticIcon iconName='CircleCheckMarkIcon' color='main-green' data-testid='list-element-title-icon' onClick={null} size='medium' />
+        <PlatformaticIcon iconName='CircleCheckMarkIcon' color={titleColor} data-testid='list-element-title-icon' onClick={null} size='medium' />
         <div className={classNameTitle} data-testid='list-element-title'>
           {title}
         </div>
       </div>
       {detail &&
         (
-          <div className={styles.textCol} data-test-id='list-element-detail'>
+          <div className={detailClassName} data-test-id='list-element-detail'>
             {detail}
           </div>
         )}
@@ -39,18 +44,28 @@ List.propTypes = {
   /**
    * marginSize
    */
-  marginSize: PropTypes.oneOf(['small', 'medium']),
+  marginSize: PropTypes.oneOf([SMALL, MEDIUM]),
   /**
-   * titleAspect
+   * color
    */
-  titleAspect: PropTypes.oneOf(['boldAndGreen', 'lightAndWhite'])
+  titleColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE]),
+  /**
+   * titleColor
+   */
+  detailColor: PropTypes.oneOf([WHITE, MAIN_DARK_BLUE]),
+  /**
+   * semiBold
+   */
+  semiBold: PropTypes.bool
 }
 
 List.defaultProps = {
   title: '',
   detail: '',
-  marginSize: 'medium',
-  titleAspect: 'boldAndGreen'
+  marginSize: MEDIUM,
+  detailColor: WHITE,
+  titleColor: MAIN_GREEN,
+  semiBold: true
 }
 
 export default List

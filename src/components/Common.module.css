@@ -178,3 +178,9 @@
   @apply !bg-tertiary-blue bg-opacity-15;
 }
 
+.fontSemiBold {
+  @apply font-semibold;
+}
+.fontLight {
+  @apply font-light;
+}

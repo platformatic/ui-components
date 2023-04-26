@@ -10,19 +10,9 @@
 .title {
   @apply w-full;
 }
-.boldAndGreen {
-  @apply text-light-green font-bold;
-}
-.lightAndWhite {
-  @apply text-white font-light;
-}
 .row {
   @apply flex gap-x-2 items-center w-full;
 }
 .textCol {
-  @apply flex flex-col text-white text-justify w-full ml-8;
-}
-
-.detailSpace {
-  @apply w-6
+  @apply flex flex-col text-justify w-full ml-8;
 }
