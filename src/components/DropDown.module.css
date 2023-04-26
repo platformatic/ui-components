@@ -17,10 +17,8 @@
   @apply border border-transparent rounded-full mr-2;
 }
 .menu {
-  @apply absolute border-solid border border-white p-0 bg-light-blue mt-8 rounded-md z-10 text-sm min-w-[190px];
+  @apply absolute border-solid border p-0  mt-8 rounded-md z-10 text-sm min-w-[190px];
 }
 .item {
-  @apply py-2 px-3 text-main-dark-blue first:border-t-0 text-sm leading-4 uppercase hover:font-semibold hover:cursor-pointer tracking-more-widest; 
-  /* it's a workaround due to opacity... */
-  border-top: 1px solid rgba(0, 40, 61, 0.2);;
+  @apply py-2 px-3 first:border-t-0 text-sm leading-4 uppercase hover:font-semibold hover:cursor-pointer tracking-more-widest border-t;
 }

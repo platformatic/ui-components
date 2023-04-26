@@ -46,6 +46,9 @@
 .text--main-dark-blue {
   @apply text-main-dark-blue;
 }
+.text--light-blue {
+  @apply text-light-blue;
+}
 
 .text--base {
   @apply text-base
