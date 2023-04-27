@@ -5,7 +5,7 @@ import commonStyles from './Common.module.css'
 import styles from './ListElement.module.css'
 import { MAIN_DARK_BLUE, MEDIUM, SMALL, WHITE, MAIN_GREEN } from './constants'
 
-function List ({ title, detail, marginSize, detailColor, titleColor, semiBold }) {
+function List ({ title, detail, marginSize, detailColor, titleColor, semiBold, iconColor }) {
   let className = `${styles.container} `
   className += styles[`margin-${marginSize}`]
 
@@ -18,7 +18,7 @@ function List ({ title, detail, marginSize, detailColor, titleColor, semiBold })
   return (
     <div className={className}>
       <div className={styles.row}>
-        <PlatformaticIcon iconName='CircleCheckMarkIcon' color={titleColor} data-testid='list-element-title-icon' onClick={null} size='medium' />
+        <PlatformaticIcon iconName='CircleCheckMarkIcon' color={iconColor} data-testid='list-element-title-icon' onClick={null} size={MEDIUM} />
         <div className={classNameTitle} data-testid='list-element-title'>
           {title}
         </div>
@@ -48,7 +48,11 @@ List.propTypes = {
   /**
    * color
    */
-  titleColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE]),
+  titleColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE, WHITE]),
+  /**
+   * color
+   */
+  iconColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE]),
   /**
    * titleColor
    */
@@ -65,6 +69,7 @@ List.defaultProps = {
   marginSize: MEDIUM,
   detailColor: WHITE,
   titleColor: MAIN_GREEN,
+  iconColor: MAIN_GREEN,
   semiBold: true
 }
 
