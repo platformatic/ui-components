@@ -4,7 +4,7 @@ import Button from '../components/Button'
 import BorderedBox from '../components/BorderedBox'
 import DropDown from '../components/DropDown'
 import HorizontalSeparator from '../components/HorizontalSeparator'
-import { FULL_WIDTH, MAIN_DARK_BLUE, MAIN_GREEN, MODAL_COVER, MODAL_LAYOUTS, MODAL_SIZES } from '../components/constants'
+import { FULL_WIDTH, MAIN_DARK_BLUE, MAIN_GREEN, MODAL_COVER, MODAL_FULL_DARK, MODAL_FULL_LIGHT, MODAL_LAYOUTS, MODAL_SIZES } from '../components/constants'
 export default {
   title: 'Platformatic/Modal',
   component: Modal,
@@ -82,9 +82,21 @@ const MenuTemplate = () => {
 }
 export const WithDropDown = MenuTemplate.bind({})
 
-export const FullscreenLayout = Template.bind({})
-FullscreenLayout.args = {
+export const FullscreenLayoutLightBlue = Template.bind({})
+FullscreenLayoutLightBlue.args = {
   title: 'Give me an invite',
   size: FULL_WIDTH,
   layout: MODAL_COVER
+}
+
+export const FullscreenLayoutDark = Template.bind({})
+FullscreenLayoutDark.args = {
+  size: FULL_WIDTH,
+  layout: MODAL_FULL_DARK
+}
+
+export const FullscreenLayoutLight = Template.bind({})
+FullscreenLayoutLight.args = {
+  size: FULL_WIDTH,
+  layout: MODAL_FULL_LIGHT
 }
