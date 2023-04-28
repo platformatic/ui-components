@@ -1,7 +1,9 @@
 import React from 'react'
 import styles from './Logo.module.css'
-export default function Logo ({ width = 107, heigth = 86, color = 'white' }) {
+export default function Logo ({ width = 107, heigth = 86, color = 'white', fillColor = 'none' }) {
   const className = styles[`${color}`]
+  const filledClassName = styles[`filled--${fillColor}`]
+
   return (
     <svg
       width={width}
@@ -18,6 +20,8 @@ export default function Logo ({ width = 107, heigth = 86, color = 'white' }) {
         strokeWidth={4.21053}
         strokeLinecap='round'
         strokeLinejoin='round'
+        fill='none'
+        className={filledClassName}
       />
       <path
         d='M41.4979 35.2219L33.6299 37.9838L37.0924 45.3197'

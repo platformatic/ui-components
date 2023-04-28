@@ -1,0 +1,27 @@
+.container {
+  @apply relative w-[380px];
+}
+.menuContainer {
+  @apply w-[380px] absolute top-[65px];
+}
+.dropDown {
+  @apply relative flex items-center;
+}
+.logoContainer {
+  @apply relative z-10;
+}
+.selectorContainer {
+  @apply absolute top-[50%] translate-y-[-50%] flex items-center gap-x-2 bg-white pr-3 py-2 rounded-full mt-[3.5px] cursor-pointer;
+}
+.header {
+  @apply flex items-center hover:cursor-pointer pr-6 tracking-more-widest text-sm font-normal text-main-dark-blue ml-6 overflow-hidden whitespace-nowrap;
+}
+.picture {
+  @apply border border-transparent rounded-full mr-2;
+}
+.menu {
+  @apply absolute top-0 right-0 border border-main-dark-blue p-0 z-10 text-sm bg-white rounded-md w-fit;
+}
+.item {
+  @apply inline-flex gap-x-2 py-2 px-5 first:border-t-0 tracking-wide text-sm font-normal leading-4 hover:font-semibold hover:cursor-pointer border-t text-main-dark-blue w-full;
+}
