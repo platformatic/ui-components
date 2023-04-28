@@ -7,10 +7,25 @@ import Logo from './Logo'
 import Logos from './logos'
 import styles from './Modal.module.css'
 import commonStyles from './Common.module.css'
-import { MODAL_SIZES, SMALL, MODAL_LAYOUTS, MODAL_COVER, MODAL_POPUP, MAIN_DARK_BLUE, BACKGROUND_COLOR_OPAQUE, LARGE, PROFILE, FREE, BASIC } from './constants'
+import {
+  MODAL_SIZES,
+  SMALL,
+  MODAL_LAYOUTS,
+  MODAL_COVER,
+  MODAL_POPUP,
+  MAIN_DARK_BLUE,
+  BACKGROUND_COLOR_OPAQUE,
+  LARGE,
+  PROFILES,
+  FREE,
+  BASIC,
+  MODAL_FULL_DARK,
+  MODAL_FULL_LIGHT,
+  WHITE
+} from './constants'
 import PlatformaticIcon from './PlatformaticIcon'
 
-function Modal ({ setIsOpen, title, layout, children, size, profile }) {
+function Modal ({ setIsOpen, title, layout, children, size, profile, backgroundClassName }) {
   let contentFullscreen
   let titleFullscreen
   let modalClassName = `${styles.modal}`
@@ -20,11 +35,26 @@ function Modal ({ setIsOpen, title, layout, children, size, profile }) {
   let buttonFullRoundedClassName
 
   const headerClassName = styles[`header--${layout}`]
-  if (MODAL_COVER === layout) {
-    contentFullscreen = styles[`content--${layout}`]
-    titleFullscreen = styles[`title--${layout}`]
-    buttonFullRoundedClassName = `${styles['close--cover']} `
-    buttonFullRoundedClassName += commonStyles['background-color-light-blue']
+  let modalCoverClassName = `${styles.container} ${styles.fullscreen} `
+  switch (layout) {
+    case MODAL_COVER:
+      contentFullscreen = styles[`content--${layout}`]
+      titleFullscreen = styles[`title--${layout}`]
+      buttonFullRoundedClassName = `${styles['close--cover']} `
+      buttonFullRoundedClassName += commonStyles['background-color-light-blue']
+      modalCoverClassName += commonStyles['background-color-light-blue']
+      break
+
+    case MODAL_FULL_DARK:
+      modalCoverClassName += commonStyles['background-color-main-dark-blue']
+      modalCoverClassName += ` ${backgroundClassName}`
+      break
+    case MODAL_FULL_LIGHT:
+      modalCoverClassName += commonStyles['background-color-light-blue']
+      break
+
+    default:
+      break
   }
 
   useEscapeKey(() => setIsOpen(false))
@@ -62,7 +92,7 @@ function Modal ({ setIsOpen, title, layout, children, size, profile }) {
 
     case MODAL_COVER:
       whichModal = (
-        <div className={`${styles.container} ${styles.fullscreen}`}>
+        <div className={modalCoverClassName}>
           <div className={headerClassName}>
             <ButtonFullRounded
               className={buttonFullRoundedClassName}
@@ -79,6 +109,29 @@ function Modal ({ setIsOpen, title, layout, children, size, profile }) {
             <div className={titleFullscreen}>
               {renderLogo()}
             </div>
+            <div>{children}</div>
+          </div>
+        </div>
+      )
+      break
+
+    case MODAL_FULL_LIGHT:
+    case MODAL_FULL_DARK:
+      whichModal = (
+        <div className={modalCoverClassName}>
+          <div className={headerClassName}>
+            <ButtonFullRounded
+              className={buttonFullRoundedClassName}
+              iconName='CircleCloseIcon'
+              iconSize={LARGE}
+              iconColor={layout === MODAL_FULL_LIGHT ? MAIN_DARK_BLUE : WHITE}
+              hoverEffect={BACKGROUND_COLOR_OPAQUE}
+              onClick={() => { setIsOpen(false) }}
+              bordered={false}
+              alt='Close'
+            />
+          </div>
+          <div className={contentFullscreen}>
             <div>{children}</div>
           </div>
         </div>
@@ -115,7 +168,11 @@ Modal.propTypes = {
   /**
    * profile
    */
-  profile: PropTypes.oneOf(PROFILE)
+  profile: PropTypes.oneOf(PROFILES),
+  /**
+   * backgroundClassName
+   */
+  backgroundClassName: PropTypes.string
 }
 
 Modal.defaultProps = {
@@ -124,7 +181,8 @@ Modal.defaultProps = {
   title: '',
   layout: MODAL_POPUP,
   size: SMALL,
-  profile: ''
+  profile: '',
+  backgroundClassName: ''
 }
 
 export default Modal
