@@ -1,10 +1,10 @@
-import AdvanceLogo from './AdvanceLogo'
+import AdvancedLogo from './AdvancedLogo'
 import BasicLogo from './BasicLogo'
 import FreeLogo from './FreeLogo'
 import ProLogo from './ProLogo'
 
 export default {
-  AdvanceLogo,
+  AdvancedLogo,
   BasicLogo,
   FreeLogo,
   ProLogo
