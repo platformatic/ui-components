@@ -23,6 +23,7 @@ import Loadable from './src/components/Loadable'
 import LoadingSpinner from './src/components/LoadingSpinner'
 import LoginButton from './src/components/LoginButton'
 import Logo from './src/components/Logo'
+import LogoDropDown from './src/components/LogoDropDown'
 import Logos from './src/components/logos'
 import Modal from './src/components/Modal'
 import PlatformaticIcon from './src/components/PlatformaticIcon'
@@ -62,6 +63,7 @@ export {
   LoadingSpinner,
   LoginButton,
   Logo,
+  LogoDropDown,
   Modal,
   PlatformaticIcon,
   Playground,
