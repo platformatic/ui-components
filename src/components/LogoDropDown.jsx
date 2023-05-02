@@ -12,6 +12,10 @@ function LogoDropDown ({ itemSelected, items, width, height }) {
     setOpen(!open)
   }
 
+  function getItemsSelected () {
+    return items.find(item => item.id === itemSelected)?.name
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.dropDown}>
@@ -19,7 +23,7 @@ function LogoDropDown ({ itemSelected, items, width, height }) {
           <Logo width={width} height={height} color={WHITE} fillColor={MAIN_DARK_BLUE} />
         </div>
         <div className={styles.selectorContainer} style={{ left: width / 2, paddingLeft: width / 3 }} onClick={() => handleOpen()}>
-          <span className={styles.header}>{itemSelected}</span>
+          <p className={styles.header}>{getItemsSelected()}</p>
           {!open && <PlatformaticIcon iconName='ArrowDownIcon' color={MAIN_DARK_BLUE} onClick={null} />}
           {open && <PlatformaticIcon iconName='ArrowUpIcon' color={MAIN_DARK_BLUE} onClick={null} />}
         </div>
@@ -29,8 +33,8 @@ function LogoDropDown ({ itemSelected, items, width, height }) {
           <div className={styles.menu} style={{ width: `calc(100% - ${width}px)` }}>
             {items.map((item, index) => {
               return (
-                <div className={styles.item} key={index}>
-                  <PlatformaticIcon iconName='OrganizationIcon' color={MAIN_DARK_BLUE} size={SMALL} onClick={handleOpen} /> {item}
+                <div className={styles.item} key={index} onClick={item.handleClick}>
+                  <PlatformaticIcon iconName='OrganizationIcon' color={MAIN_DARK_BLUE} size={SMALL} onClick={null} /><span className={styles.itemName}>{item.name}</span>
                 </div>
               )
             })}
@@ -57,7 +61,11 @@ LogoDropDown.propTypes = {
   /**
    * items
    */
-  items: PropTypes.array
+  items: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string,
+    handleClick: PropTypes.func
+  }))
 }
 
 LogoDropDown.defaultProps = {
