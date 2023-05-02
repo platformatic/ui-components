@@ -1,8 +1,5 @@
 'use strict'
 import LogoDropDown from '../components/LogoDropDown'
-import BorderedBox from '../components/BorderedBox'
-import HorizontalSeparator from '../components/HorizontalSeparator'
-import { useState } from 'react'
 export default {
   title: 'Platformatic/LogoDropDown',
   component: LogoDropDown,
@@ -12,19 +9,8 @@ export default {
 const Template = (args) => (
   <div>
     <LogoDropDown {...args} />
-    <HorizontalSeparator />
-    <ContentThatLoads />
   </div>
 )
-
-const ContentThatLoads = () => {
-  const [content, setContent] = useState(null)
-  setTimeout(() => {
-    setContent(<div className='mt-4'><BorderedBox>This is rendered after</BorderedBox></div>)
-  }, 1000)
-
-  return content
-}
 
 export const Default = Template.bind({})
 

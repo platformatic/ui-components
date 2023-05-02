@@ -18,7 +18,7 @@ function LogoDropDown ({ itemSelected, items, width, height }) {
         <div className={styles.logoContainer}>
           <Logo width={width} height={height} color={WHITE} fillColor={MAIN_DARK_BLUE} />
         </div>
-        <div className={styles.selectorContainer} style={{ left: width / 2, paddingLeft: width / 2, width: `calc(100% - ${width / 2}px)` }} onClick={() => handleOpen()}>
+        <div className={styles.selectorContainer} style={{ left: width / 2, paddingLeft: width / 3 }} onClick={() => handleOpen()}>
           <span className={styles.header}>{itemSelected}</span>
           {!open && <PlatformaticIcon iconName='ArrowDownIcon' color={MAIN_DARK_BLUE} onClick={null} />}
           {open && <PlatformaticIcon iconName='ArrowUpIcon' color={MAIN_DARK_BLUE} onClick={null} />}
@@ -61,8 +61,8 @@ LogoDropDown.propTypes = {
 }
 
 LogoDropDown.defaultProps = {
-  width: 107,
-  height: 86,
+  width: 71,
+  height: 56,
   itemSelected: '',
   items: []
 }
