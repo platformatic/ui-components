@@ -16,6 +16,11 @@ function LogoDropDown ({ itemSelected, items, width, height }) {
     return items.find(item => item.id === itemSelected)?.name
   }
 
+  function onClick (callback) {
+    handleOpen()
+    callback()
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.dropDown}>
@@ -33,7 +38,7 @@ function LogoDropDown ({ itemSelected, items, width, height }) {
           <div className={styles.menu} style={{ width: `calc(100% - ${width}px)` }}>
             {items.map((item, index) => {
               return (
-                <div className={styles.item} key={index} onClick={item.handleClick}>
+                <div className={styles.item} key={index} onClick={() => onClick(item.handleClick)}>
                   <PlatformaticIcon iconName='OrganizationIcon' color={MAIN_DARK_BLUE} size={SMALL} onClick={null} /><span className={styles.itemName}>{item.name}</span>
                 </div>
               )
