@@ -38,7 +38,7 @@ export default function Logo ({ width = 107, heigth = 86, color = 'white', fillC
         strokeLinejoin='round'
       />
       <path
-        opacity='0.2'
+        opacity={0.2}
         d='M24.498 79.7146V83.0001'
         stroke='#21FA90'
         strokeWidth={4.21053}
@@ -46,7 +46,7 @@ export default function Logo ({ width = 107, heigth = 86, color = 'white', fillC
         strokeLinejoin='round'
       />
       <path
-        opacity='0.4'
+        opacity={0.4}
         d='M24.5283 69.3757V74.5658'
         stroke='#21FA90'
         strokeWidth={4.21053}
@@ -54,7 +54,7 @@ export default function Logo ({ width = 107, heigth = 86, color = 'white', fillC
         strokeLinejoin='round'
       />
       <path
-        opacity='0.7'
+        opacity={0.7}
         d='M24.498 55.3254V64.0028'
         stroke='#21FA90'
         strokeWidth={4.21053}
