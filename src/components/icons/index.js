@@ -19,6 +19,8 @@ import BillingIcon from './BillingIcon'
 import CalendarIcon from './CalendarIcon'
 import Calendar1DayIcon from './Calendar1DayIcon'
 import Calendar7DaysIcon from './Calendar7DaysIcon'
+import CheckListIcon from './CheckListIcon'
+
 import CircleAddIcon from './CircleAddIcon'
 import CircleArrowLeftIcon from './CircleArrowLeftIcon'
 import CircleArrowRightIcon from './CircleArrowRightIcon'
@@ -58,6 +60,7 @@ import RequestOwnershipIcon from './RequestOwnershipIcon'
 import RestartIcon from './RestartIcon'
 import RocketIcon from './RocketIcon'
 import SendIcon from './SendIcon'
+import SlotIcon from './SlotIcon'
 import SocialDiscordIcon from './SocialDiscordIcon'
 import SocialGitHubIcon from './SocialGitHubIcon'
 import SocialGitLabIcon from './SocialGitLabIcon'
@@ -67,6 +70,7 @@ import SocialTwitterIcon from './SocialTwitterIcon'
 import StopIcon from './StopIcon'
 import TerminalIcon from './TerminalIcon'
 import TwoUsersIcon from './TwoUsersIcon'
+import TeamsIcon from './TeamsIcon'
 import UpgradeIcon from './UpgradeIcon'
 import UserIcon from './UserIcon'
 import UserRemoveIcon from './UserRemoveIcon'
@@ -101,6 +105,7 @@ export default {
   CalendarIcon,
   Calendar1DayIcon,
   Calendar7DaysIcon,
+  CheckListIcon,
   CircleAddIcon,
   CircleArrowLeftIcon,
   CircleArrowRightIcon,
@@ -141,6 +146,7 @@ export default {
   RocketIcon,
   SendIcon,
   StopIcon,
+  SlotIcon,
   SocialDiscordIcon,
   SocialGitHubIcon,
   SocialGitLabIcon,
@@ -152,6 +158,7 @@ export default {
   UserIcon,
   UserRemoveIcon,
   UserRoleIcon,
+  TeamsIcon,
   TwoUsersIcon,
   WorkspaceDynamicIcon,
   WorkspaceEmptyIcon,
