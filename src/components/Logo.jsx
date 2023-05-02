@@ -1,13 +1,13 @@
 import React from 'react'
 import styles from './Logo.module.css'
-export default function Logo ({ width = 107, heigth = 86, color = 'white', fillColor = 'none' }) {
+export default function Logo ({ width = 107, height = 86, color = 'white', fillColor = 'none' }) {
   const className = styles[`${color}`]
   const filledClassName = styles[`filled--${fillColor}`]
 
   return (
     <svg
       width={width}
-      height={heigth}
+      height={height}
       viewBox='0 0 107 86'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
