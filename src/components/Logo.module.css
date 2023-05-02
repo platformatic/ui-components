@@ -4,3 +4,6 @@
 .main-dark-blue > path[id='platformatic-cloud']{
   @apply stroke-main-dark-blue
 }
+.filled--main-dark-blue {
+  @apply fill-main-dark-blue;
+}

@@ -1,11 +1,13 @@
 import React from 'react'
 import styles from './Logo.module.css'
-export default function Logo ({ width = 107, heigth = 86, color = 'white' }) {
+export default function Logo ({ width = 107, height = 86, color = 'white', fillColor = 'none' }) {
   const className = styles[`${color}`]
+  const filledClassName = styles[`filled--${fillColor}`]
+
   return (
     <svg
       width={width}
-      height={heigth}
+      height={height}
       viewBox='0 0 107 86'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
@@ -18,6 +20,8 @@ export default function Logo ({ width = 107, heigth = 86, color = 'white' }) {
         strokeWidth={4.21053}
         strokeLinecap='round'
         strokeLinejoin='round'
+        fill='none'
+        className={filledClassName}
       />
       <path
         d='M41.4979 35.2219L33.6299 37.9838L37.0924 45.3197'
@@ -34,7 +38,7 @@ export default function Logo ({ width = 107, heigth = 86, color = 'white' }) {
         strokeLinejoin='round'
       />
       <path
-        opacity='0.2'
+        opacity={0.2}
         d='M24.498 79.7146V83.0001'
         stroke='#21FA90'
         strokeWidth={4.21053}
@@ -42,7 +46,7 @@ export default function Logo ({ width = 107, heigth = 86, color = 'white' }) {
         strokeLinejoin='round'
       />
       <path
-        opacity='0.4'
+        opacity={0.4}
         d='M24.5283 69.3757V74.5658'
         stroke='#21FA90'
         strokeWidth={4.21053}
@@ -50,7 +54,7 @@ export default function Logo ({ width = 107, heigth = 86, color = 'white' }) {
         strokeLinejoin='round'
       />
       <path
-        opacity='0.7'
+        opacity={0.7}
         d='M24.498 55.3254V64.0028'
         stroke='#21FA90'
         strokeWidth={4.21053}

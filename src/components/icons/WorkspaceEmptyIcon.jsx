@@ -25,7 +25,7 @@ const WorkspaceEmptyIcon = ({ color, size }) => {
           <rect x={36} y={52.8334} width={10.6667} height={11.7483} rx={1} stroke='none' strokeWidth={3} />
           <rect x={52} y={52.8334} width={16} height={11.7483} rx={1} stroke='none' strokeWidth={3} />
           <rect x={68} y={80.8334} width={10.6667} height={11.7483} rx={1} transform='rotate(-180 68 80.8334)' stroke='none' strokeWidth={3} />
-          <rect x={52} y={80.8334} width={16} height={11.7483} rx='1' transform='rotate(-180 52 80.8334)' stroke='none' strokeWidth={3} />
+          <rect x={52} y={80.8334} width={16} height={11.7483} rx={1} transform='rotate(-180 52 80.8334)' stroke='none' strokeWidth={3} />
         </svg>
       )
       break
