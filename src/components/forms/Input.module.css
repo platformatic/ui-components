@@ -2,13 +2,10 @@
   @apply flex flex-col w-full relative;
 }
 .inputContainer {
-  @apply flex h-10 border border-solid box-border rounded-md;
-}
-.fullWidth {
-  @apply w-full;
+  @apply flex h-10 border border-solid box-border rounded-md relative;
 }
 .input {
-  @apply focus:outline-none focus-within:outline-none focus-visible:outline-none;
+  @apply z-10;
 }
 .beforeInputIcon {
   @apply ml-1 mr-3;
@@ -25,7 +22,9 @@
 .paddingFocused {
   @apply p-4;
 }
-
+.placeholderAPart {
+  @apply absolute top-[50%] right-0 translate-y-[-50%] left-0 text-main-dark-blue text-opacity-20 ml-2 z-0;
+}
 [type='text']:focus {
   outline: none;
 }

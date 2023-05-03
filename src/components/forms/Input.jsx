@@ -4,20 +4,23 @@ import PropTypes from 'prop-types'
 import styles from './Input.module.css'
 import commonStyles from '../Common.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
-import { MAIN_GREEN } from '../constants'
+import { MAIN_DARK_BLUE, MAIN_GREEN } from '../constants'
 import BorderedBox from '../BorderedBox'
 
-function Input ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled, beforeIcon, afterIcon, focused }) {
+function Input ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled, beforeIcon, afterIcon, focused, placeholderApart }) {
   let className = styles.inputContainer + ' ' + commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`] + ' ' + commonStyles.padded
   const showError = errorMessage.length > 0
   if (showError) className += ' ' + commonStyles['bordered--error-red']
   if (disabled) className += ' ' + commonStyles['apply-opacity-30']
+  const inputPlaceholder = placeholderApart ? '' : placeholder
+  const inputClassName = `${commonStyles.fullWidth} ${styles.input}`
 
   const cmp = (
     <div className={styles.container}>
       <div className={className}>
         {beforeIcon && <PlatformaticIcon iconName={beforeIcon.iconName} classes={styles.beforeInputIcon} size='small' data-testid='before-icon' color={beforeIcon.color} onClick={() => beforeIcon.onClick()} />}
-        <input type='text' name={name} value={value} placeholder={placeholder} className={styles.fullWidth} onChange={onChange} disabled={disabled} />
+        <input type='text' name={name} value={value} className={inputClassName} onChange={onChange} disabled={disabled} placeholder={inputPlaceholder} />
+        {placeholderApart && <p className={styles.placeholderAPart}>{placeholder}</p>}
         {afterIcon && <PlatformaticIcon iconName={afterIcon.iconName} color={afterIcon.color} data-testid='after-icon' onClick={null} />}
       </div>
       {showError && <span className={commonStyles['error-message']}>{errorMessage}</span>}
@@ -43,7 +46,7 @@ Input.propTypes = {
   /**
    * color of border
    */
-  borderColor: PropTypes.oneOf(['main-green', 'main-dark-blue']),
+  borderColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE]),
   /**
    * onChange
    */
@@ -71,20 +74,25 @@ Input.propTypes = {
   /**
    * addFocus
    */
-  focused: PropTypes.bool
+  focused: PropTypes.bool,
+  /**
+   * placeholderApart
+   */
+  placeholderApart: PropTypes.bool
 }
 
 Input.defaultProps = {
   placeholder: '',
   value: '',
   name: '',
-  borderColor: 'main-green',
+  borderColor: MAIN_GREEN,
   errorMessage: '',
   onChange: () => {},
   disabled: false,
   beforeIcon: null,
   afterIcon: null,
-  focused: false
+  focused: false,
+  shadowPlaceholder: false
 }
 
 export default Input

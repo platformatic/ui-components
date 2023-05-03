@@ -61,6 +61,7 @@ import RestartIcon from './RestartIcon'
 import RocketIcon from './RocketIcon'
 import SendIcon from './SendIcon'
 import SlotIcon from './SlotIcon'
+import SwitchIcon from './SwitchIcon'
 import SocialDiscordIcon from './SocialDiscordIcon'
 import SocialGitHubIcon from './SocialGitHubIcon'
 import SocialGitLabIcon from './SocialGitLabIcon'
@@ -147,6 +148,7 @@ export default {
   SendIcon,
   StopIcon,
   SlotIcon,
+  SwitchIcon,
   SocialDiscordIcon,
   SocialGitHubIcon,
   SocialGitLabIcon,
