@@ -1,0 +1,24 @@
+.chunkContent {
+  @apply flex gap-x-2 w-full items-center;
+}
+.chunkText {
+  @apply text-sm text-main-dark-blue;
+}
+.inputContainer {
+  @apply flex min-h-[46px] border border-solid box-border rounded-md items-center gap-[0.1rem] flex-wrap relative;
+}
+.smallPadding {
+  @apply p-1 !important
+} 
+.flexNone {
+  @apply flex-none !important;
+}
+.noGrow {
+  @apply grow-0
+}
+.smallMargin {
+  @apply my-0;
+}
+.iconContainer {
+  @apply absolute top-[14px] right-[0.5rem]
+}
