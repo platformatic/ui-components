@@ -50,7 +50,7 @@ DefaultInvalid.args = {
 }
 
 const TemplateValuedAndAlertChange = (args) => {
-  const [value, setValue] = useState('Initial value')
+  const [value, setValue] = useState('')
 
   function handleChange (event) {
     setValue(event.target.value)
@@ -95,4 +95,13 @@ Focused.args = {
   placeholder: 'Platformatic',
   borderColor: 'main-dark-blue',
   focused: true
+}
+
+export const PlaceholderAPart = TemplateValuedAndAlertChange.bind({})
+
+PlaceholderAPart.args = {
+  name: 'test',
+  placeholder: 'Give me some loving',
+  borderColor: 'main-dark-blue',
+  placeholderApart: true
 }
