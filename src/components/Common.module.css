@@ -184,3 +184,6 @@
 .fontLight {
   @apply font-light;
 }
+.fullWidth {
+  @apply w-full;
+}
