@@ -1,12 +1,3 @@
-.main-green > circle,
-.main-green > ellipse,
-.main-green > rect, 
-.main-green > line, 
-.main-green > path {
-  @apply stroke-main-green;
-}
-
-
 .error-red > circle,
 .error-red > ellipse,
 .error-red > rect,
@@ -15,13 +6,6 @@
   @apply stroke-error-red;
 }
 
-.white > circle,
-.white > ellipse,
-.white > rect,
-.white > line,
-.white > path {
-  @apply stroke-white;
-}
 .main-dark-blue > circle,
 .main-dark-blue > ellipse,
 .main-dark-blue > rect,
@@ -29,12 +13,37 @@
 .main-dark-blue > path {
   @apply stroke-main-dark-blue;
 }
+
+.main-green > circle,
+.main-green > ellipse,
+.main-green > rect, 
+.main-green > line, 
+.main-green > path {
+  @apply stroke-main-green;
+}
+
+.tertiary-blue > circle,
+.tertiary-blue > ellipse,
+.tertiary-blue > rect,
+.tertiary-blue > line,
+.tertiary-blue > path {
+  @apply stroke-tertiary-blue;
+}
+
 .warning-yellow > circle,
 .warning-yellow > ellipse,
 .warning-yellow > rect,
 .warning-yellow > line,
 .warning-yellow > path {
   @apply stroke-warning-yellow;
+}
+
+.white > circle,
+.white > ellipse,
+.white > rect,
+.white > line,
+.white > path {
+  @apply stroke-white;
 }
 
 .filled-white {
@@ -51,6 +60,9 @@
 }
 .filled-warning-yellow {
   @apply fill-warning-yellow ;
+}
+.filled-tertiary-blue {
+  @apply fill-tertiary-blue;
 }
 
 .fill-circle-green > circle {
