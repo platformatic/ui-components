@@ -2,7 +2,7 @@
   @apply flex justify-center cursor-pointer border-0 items-center;
 }
 .disabled {
-  @apply bg-opacity-30 cursor-default;
+  @apply opacity-30 cursor-default;
 }
 .roundedFull {
   @apply rounded-full 

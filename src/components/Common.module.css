@@ -19,6 +19,43 @@
 .bordered--white {
   @apply border-white;
 }
+.bordered--main-green-100 {
+  @apply border-main-green/100;
+}
+.bordered--main-dark-blue-100 {
+  @apply border-main-dark-blue/100;
+}
+.bordered--error-red-100 {
+  @apply border-error-red/100;
+}
+.bordered--warning-yellow-100 {
+  @apply border-warning-yellow/100;
+}
+.bordered--dark-blue-100 {
+  @apply border-dark-blue/100;
+}
+.bordered--white-100 {
+  @apply border-white/100;
+}
+
+.bordered--main-green-20 {
+  @apply border-main-green/20;
+}
+.bordered--main-dark-blue-20 {
+  @apply border-main-dark-blue/20;
+}
+.bordered--error-red-20 {
+  @apply border-error-red/20;
+}
+.bordered--warning-yellow-20 {
+  @apply border-warning-yellow/20;
+}
+.bordered--dark-blue-20 {
+  @apply border-dark-blue/20;
+}
+.bordered--white-20 {
+  @apply border-white/20;
+}
 
 .error-message {
   @apply absolute -bottom-5 text-error-red text-xs px-2;
