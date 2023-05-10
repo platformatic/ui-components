@@ -20,7 +20,8 @@ function Sidebar (props) {
     onClickAdd,
     addTitle,
     onClickSettings,
-    disableClickAdd
+    disableClickAdd,
+    disableClickSettings
   } = props
   const [collapsed, setCollapsed] = useState(false)
   const [selectedItem, setSelectedItem] = useState(null)
@@ -114,7 +115,17 @@ function Sidebar (props) {
             <HorizontalSeparator marginBottom={2} marginTop={2} />
 
             <div className={styles.bottom}>
-              <Button label={labelButtonSettings} color={WHITE} onClick={onClickSettings} platformaticIcon={{ iconName: 'GearIcon', color: WHITE }} fullWidth bold size={MEDIUM} hoverEffect={BACKGROUND_COLOR_OPAQUE} />
+              <Button
+                label={labelButtonSettings}
+                color={WHITE}
+                onClick={onClickSettings}
+                platformaticIcon={{ iconName: 'GearIcon', color: WHITE }}
+                fullWidth
+                bold
+                size={MEDIUM}
+                disabled={disableClickSettings}
+                hoverEffect={BACKGROUND_COLOR_OPAQUE}
+              />
             </div>
           </>
           )}
@@ -167,7 +178,11 @@ Sidebar.propTypes = {
   /**
    * disableClickAdd
    */
-  disableClickAdd: PropTypes.bool
+  disableClickAdd: PropTypes.bool,
+  /**
+   * disableClickSettings
+   */
+  disableClickSettings: PropTypes.bool
 }
 
 Sidebar.defaultProps = {
@@ -179,7 +194,8 @@ Sidebar.defaultProps = {
   onClickAdd: () => {},
   addTitle: 'Add',
   onClickSettings: () => {},
-  disableClickAdd: false
+  disableClickAdd: false,
+  disableClickSettings: false
 }
 
 export default Sidebar
