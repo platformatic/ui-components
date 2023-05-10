@@ -77,7 +77,7 @@ ButtonFullRounded.propTypes = {
   /**
    * Effect on hover
    */
-  hoverEffect: PropTypes.oneOf([BACKGROUND_COLOR_OPAQUE]),
+  hoverEffect: PropTypes.oneOf(['', BACKGROUND_COLOR_OPAQUE]),
   /**
    * bordered
    */
