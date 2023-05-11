@@ -20,7 +20,6 @@ import CalendarIcon from './CalendarIcon'
 import Calendar1DayIcon from './Calendar1DayIcon'
 import Calendar7DaysIcon from './Calendar7DaysIcon'
 import CheckListIcon from './CheckListIcon'
-
 import CircleAddIcon from './CircleAddIcon'
 import CircleArrowLeftIcon from './CircleArrowLeftIcon'
 import CircleArrowRightIcon from './CircleArrowRightIcon'
@@ -60,6 +59,7 @@ import RequestOwnershipIcon from './RequestOwnershipIcon'
 import RestartIcon from './RestartIcon'
 import RocketIcon from './RocketIcon'
 import SendIcon from './SendIcon'
+import ServiceIcon from './ServiceIcon'
 import SlotIcon from './SlotIcon'
 import SwitchIcon from './SwitchIcon'
 import SocialDiscordIcon from './SocialDiscordIcon'
@@ -146,6 +146,7 @@ export default {
   RestartIcon,
   RocketIcon,
   SendIcon,
+  ServiceIcon,
   StopIcon,
   SlotIcon,
   SwitchIcon,
