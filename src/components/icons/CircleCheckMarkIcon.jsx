@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES } from '../constants'
 
-const CircleCheckMarkIcon = ({ color, size }) => {
+const CircleCheckMarkIcon = ({ color, size, checked }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   let icon = <></>
 
@@ -19,7 +19,7 @@ const CircleCheckMarkIcon = ({ color, size }) => {
           className={className}
         >
           <circle cx={8} cy={8} r={6} stroke='none' />
-          <path d='M5 8L7.5 10L11 6' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          {checked && <path d='M5 8L7.5 10L11 6' stroke='none' strokeLinecap='round' strokeLinejoin='round' />}
         </svg>
       )
       break
@@ -34,7 +34,7 @@ const CircleCheckMarkIcon = ({ color, size }) => {
           className={className}
         >
           <circle cx={12} cy={12} r={9} stroke='none' strokeWidth={1.5} />
-          <path d='M7.5 12L11.25 15L16.5 9' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          {checked && <path d='M7.5 12L11.25 15L16.5 9' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />}
         </svg>
       )
       break
@@ -49,7 +49,7 @@ const CircleCheckMarkIcon = ({ color, size }) => {
           className={className}
         >
           <circle cx={20} cy={20} r={15} stroke='none' strokeWidth={2} />
-          <path d='M12.5 20L18.75 25L27.5 15' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          {checked && <path d='M12.5 20L18.75 25L27.5 15' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />}
         </svg>
       )
       break
@@ -73,7 +73,8 @@ CircleCheckMarkIcon.propTypes = {
 
 CircleCheckMarkIcon.defaultProps = {
   color: 'main-dark-blue',
-  size: 'medium'
+  size: 'medium',
+  checked: true
 }
 
 export default CircleCheckMarkIcon

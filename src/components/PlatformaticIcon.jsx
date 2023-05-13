@@ -6,13 +6,14 @@ import Icons from './icons'
 import styles from './PlatformaticIcon.module.css'
 import { COLORS_ICON, SIZES } from './constants'
 
-function PlatformaticIcon ({ iconName, color, onClick, size, classes, tip }) {
+function PlatformaticIcon ({ iconName, color, onClick, size, classes, tip, ...rest }) {
   let icon = <></>
   if (iconName) {
     icon = React.createElement(Icons[`${iconName}`], {
       color,
       size,
-      tip
+      tip,
+      ...rest
     })
     if (onClick) {
       let className = styles.cursorPointer
