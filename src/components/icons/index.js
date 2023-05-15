@@ -51,6 +51,7 @@ import LiveIcon from './LiveIcon'
 import LoadingAppIcon from './LoadingAppIcon'
 import LogOutIcon from './LogOutIcon'
 import MetricsIcon from './MetricsIcon'
+import MetricsLoadingIcon from './MetricsLoadingIcon'
 import OrganizationIcon from './OrganizationIcon'
 import PlayIcon from './PlayIcon'
 import PullRequestIcon from './PullRequestIcon'
@@ -138,6 +139,7 @@ export default {
   LoadingAppIcon,
   LogOutIcon,
   MetricsIcon,
+  MetricsLoadingIcon,
   OrganizationIcon,
   PlayIcon,
   PullRequestIcon,
