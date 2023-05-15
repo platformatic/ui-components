@@ -40,6 +40,12 @@ export default {
         type: 'radio',
         options: ['small', 'medium', 'large', 'extra-large']
       }
+    },
+    checked: {
+      type: 'boolean',
+      control: {
+        type: 'boolean'
+      }
     }
   }
 }
