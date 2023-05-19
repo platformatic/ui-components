@@ -51,7 +51,7 @@ function InputWithSeparator ({ placeholder, name, borderColor, errorMessage, onC
 
   function renderChunk (chunk, index) {
     return (
-      <BorderedBox color={TRANSPARENT} backgroundColor={MAIN_DARK_BLUE} opaque={20} classes={chunkClasses} key={index}>
+      <BorderedBox color={TRANSPARENT} backgroundColor={MAIN_DARK_BLUE} backgroundColorOpacity={20} classes={chunkClasses} key={index}>
         <div className={styles.chunkContent}>
           <span className={styles.chunkText}>{chunk}</span>
           <ButtonFullRounded
