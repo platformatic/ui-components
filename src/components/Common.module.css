@@ -58,7 +58,7 @@
 }
 
 .error-message {
-  @apply absolute -bottom-5 text-error-red text-xs px-2;
+  @apply absolute -bottom-5 text-error-red text-xs px-2 w-max;
 }
 
 .padded {
