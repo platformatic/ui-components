@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import inputStyles from './Input.module.css'
 import styles from './InputWithSeparator.module.css'
 import commonStyles from '../Common.module.css'
-import PlatformaticIcon from '../PlatformaticIcon'
 import { BACKGROUND_COLOR_OPAQUE, MAIN_DARK_BLUE, MAIN_GREEN, MEDIUM, TRANSPARENT } from '../constants'
 import BorderedBox from '../BorderedBox'
 import ButtonFullRounded from '../ButtonFullRounded'
@@ -55,7 +54,6 @@ function InputWithSeparator ({ placeholder, name, borderColor, errorMessage, onC
         <div className={styles.chunkContent}>
           <span className={styles.chunkText}>{chunk}</span>
           <ButtonFullRounded
-            className=''
             iconName='CircleCloseIcon'
             iconSize={MEDIUM}
             iconColor={MAIN_DARK_BLUE}
@@ -70,11 +68,25 @@ function InputWithSeparator ({ placeholder, name, borderColor, errorMessage, onC
   }
   return (
     <div className={inputStyles.container}>
-      <div className={className}>
-        {chunks.map((value, index) => renderChunk(value, index))}
-        <input type='text' name={name} value={value} placeholder={placeholder} className={inputClassName} onChange={handleChange} disabled={disabled} />
+      <div className={styles.container}>
+        <div className={className}>
+          {chunks.map((value, index) => renderChunk(value, index))}
+          <input type='text' name={name} value={value} placeholder={placeholder} className={inputClassName} onChange={handleChange} disabled={disabled} />
+        </div>
+        {afterIcon &&
+          (
+            <ButtonFullRounded
+              className={styles.smallPadding}
+              iconName={afterIcon.iconName}
+              iconColor={afterIcon.color}
+              data-testid='after-icon'
+              onClick={afterIcon.handleClick}
+              iconSize={MEDIUM}
+              hoverEffect={BACKGROUND_COLOR_OPAQUE}
+              disabled={afterIcon.disabled}
+            />
+          )}
       </div>
-      {afterIcon && <div className={styles.iconContainer}><PlatformaticIcon iconName={afterIcon.iconName} color={afterIcon.color} data-testid='after-icon' onClick={afterIcon.handleClick} /></div>}
       {showError && <span className={commonStyles['error-message']}>{errorMessage}</span>}
     </div>
   )
@@ -115,7 +127,8 @@ InputWithSeparator.propTypes = {
   afterIcon: PropTypes.shape({
     iconName: PropTypes.string,
     color: PropTypes.string,
-    handleClick: PropTypes.func
+    handleClick: PropTypes.func,
+    disabled: PropTypes.bool
   })
 }
 

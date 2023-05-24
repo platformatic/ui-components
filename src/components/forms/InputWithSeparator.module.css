@@ -5,7 +5,7 @@
   @apply text-sm text-main-dark-blue;
 }
 .inputContainer {
-  @apply flex min-h-[46px] border border-solid box-border rounded-md items-center gap-[0.1rem] flex-wrap relative;
+  @apply flex min-h-[46px] border border-solid box-border rounded-md items-center gap-[0.1rem] flex-wrap relative grow;
 }
 .smallPadding {
   @apply p-1 !important
@@ -21,4 +21,7 @@
 }
 .iconContainer {
   @apply absolute top-[14px] right-[0.5rem]
+}
+.container {
+  @apply flex w-full items-center;
 }
