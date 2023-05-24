@@ -25,6 +25,8 @@ export default {
 const TemplateDefault = (args) => {
   const [value, setValue] = useState('')
   const [chunks, setChunks] = useState('')
+  const [errorMessage, setErrorMessage] = useState('')
+  // errorMessage: 'error message displayed just for to be see',
 
   function handleChange ({ value, chunks }) {
     setValue(value)
@@ -35,7 +37,8 @@ const TemplateDefault = (args) => {
     <>
       <p>Chunks: {chunks.toString()} </p>
       <p>Value inserted: {value} </p>
-      <InputWithSeparator {...args} value={value} onChange={handleChange} />
+      <label>Add Error message: <input type='checkbox' onChange={() => setErrorMessage(errorMessage === '' ? 'custom message' : '')} /></label>
+      <InputWithSeparator {...args} value={value} onChange={handleChange} errorMessage={errorMessage} />
     </>
   )
 }
