@@ -13,7 +13,7 @@ function LogoDropDown ({ itemSelected, items, width, height, onClickItemSelected
   }
 
   function getItemsSelected () {
-    return items.find(item => item.id === itemSelected)?.name
+    return items.find(item => item.id === itemSelected)?.name || '...'
   }
 
   function onClick (callback) {
