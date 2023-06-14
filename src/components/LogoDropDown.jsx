@@ -40,7 +40,7 @@ function LogoDropDown ({ itemSelected, items, width, height, onClickItemSelected
       </div>
       {open && (
         <div className={styles.menuContainer}>
-          <div className={styles.menu} style={{ width: `calc(100% - ${width}px)` }}>
+          <div className={styles.menu}>
             {items.map((item, index) => {
               return (
                 <div className={styles.item} key={index} onClick={() => onClick(item.handleClick)}>

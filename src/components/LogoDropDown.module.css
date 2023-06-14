@@ -23,10 +23,10 @@
   @apply border border-transparent rounded-full mr-2;
 }
 .menu {
-  @apply absolute top-0 right-0 border border-main-dark-blue p-0 z-10 text-sm bg-white rounded-md w-fit z-20;
+  @apply absolute top-0 left-[62px] border border-main-dark-blue p-0 z-10 text-sm bg-white rounded-md w-full z-20;
 }
 .item {
-  @apply inline-flex gap-x-2 py-2 px-5 first:border-t-0 tracking-wide text-sm font-normal leading-4 hover:font-semibold hover:cursor-pointer border-t text-main-dark-blue w-full;
+  @apply inline-flex gap-x-2 p-2 first:border-t-0 tracking-wide text-sm font-normal leading-4 hover:font-semibold hover:cursor-pointer border-t text-main-dark-blue w-full;
 }
 .itemName {
   @apply text-ellipsis overflow-hidden whitespace-nowrap;

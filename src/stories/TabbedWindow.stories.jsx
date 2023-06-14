@@ -25,9 +25,13 @@ Default.args = {
     key: 'second',
     component: () => <TextWithLabel label='Second component' text='Sed et dui facilisis, molestie urna sed, volutpat nibh' />
   }, {
-    label: 'Third',
+    label: 'Third Third Third',
     key: 'third',
     component: () => <TextWithLabel label='Third component' text='ivamus est nisl, maximus aliquet urna eu, consequat semper nisi' />
+  }, {
+    label: 'Fourth',
+    key: 'fourth',
+    component: () => <TextWithLabel label='Fourth component' text='Ipse dixit' />
   }]
 }
 
