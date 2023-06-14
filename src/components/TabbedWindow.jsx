@@ -30,9 +30,11 @@ function TabbedWindow ({ tabs, keySelected, callbackSelected }) {
       <div className={styles['tabs-header']}>
         {headers.map((header, index) => {
           return (
-            <span onClick={() => setCurrentTab(index)} key={index} className={`${styles.tab} ${selected === keys[index] ? styles['selected-tab'] : ''}`}>
-              {header}
-            </span>
+            <React.Fragment key={index}>
+              <span onClick={() => setCurrentTab(index)} className={`${styles.tab} ${selected === keys[index] ? styles['selected-tab'] : ''}`} title={header}>
+                {header}
+              </span>
+            </React.Fragment>
           )
         })}
       </div>
