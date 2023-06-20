@@ -1,7 +1,7 @@
 'use strict'
 import React from 'react'
 import PropTypes from 'prop-types'
-import ReactTooltip from 'react-tooltip'
+import { Tooltip as ReactTooltip } from 'react-tooltip'
 import Icons from './icons'
 import styles from './PlatformaticIcon.module.css'
 import { COLORS_ICON, SIZES } from './constants'
