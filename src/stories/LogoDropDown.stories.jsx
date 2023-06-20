@@ -15,15 +15,24 @@ const Template = ({ items }) => {
   }
   return (
     <div>
-      <LogoDropDown items={getItems()} itemSelected={selected} />
+      <LogoDropDown items={getItems()} itemSelected={selected} onClickItemSelected={() => alert(`id selected ${selected}`)} />
     </div>
 
   )
 }
 
-export const Default = Template.bind({})
+export const SingleItem = Template.bind({})
 
-Default.args = {
+SingleItem.args = {
+  items: [{
+    id: '1',
+    name: 'Single-item'
+  }]
+}
+
+export const MultipleItem = Template.bind({})
+
+MultipleItem.args = {
   items: [{
     id: '1',
     name: 'Organization-name-1'
