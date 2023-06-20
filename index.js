@@ -26,6 +26,7 @@ import Logo from './src/components/Logo'
 import LogoDropDown from './src/components/LogoDropDown'
 import Logos from './src/components/logos'
 import Modal from './src/components/Modal'
+import ModalStepsForward from './src/components/ModalStepsForward'
 import PlatformaticIcon from './src/components/PlatformaticIcon'
 import Playground from './src/components/Playground'
 import SearchBar from './src/components/SearchBar'
@@ -65,6 +66,7 @@ export {
   Logo,
   LogoDropDown,
   Modal,
+  ModalStepsForward,
   PlatformaticIcon,
   Playground,
   SearchBar,

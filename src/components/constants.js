@@ -50,3 +50,5 @@ export const ROLE_OWNER = 'owner'
 
 export const MARGIN_10 = 10
 export const MARGIN_0 = 0
+
+export const OPACITY_20 = 20
