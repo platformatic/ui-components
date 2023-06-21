@@ -43,7 +43,7 @@
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.1.0",
+    "@vitejs/plugin-react": "^4.0.0",
     "babel-loader": "^9.0.0",
     "happy-dom": "^7.6.6",
     "jsdom": "^22.0.0",
