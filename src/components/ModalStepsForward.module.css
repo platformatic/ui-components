@@ -8,15 +8,10 @@
   @apply flex justify-between w-full;
 }
 .headerRight {
-  @apply flex justify-end;
+  @apply flex justify-end mb-12;
 }
 .modal--full-width {
   @apply w-screen min-w-full;
-}
-.close--full-dark,
-.header--full-light,
-.close--cover {
-  @apply mt-4 mr-4;
 }
 
 .left {
@@ -30,5 +25,5 @@
 
 .left,
 .right {
-  @apply px-20 py-10 flex flex-col gap-y-5;
+  @apply px-20 py-10 flex flex-col gap-y-10;
 }

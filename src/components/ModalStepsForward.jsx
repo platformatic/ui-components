@@ -21,9 +21,7 @@ import {
 } from './constants'
 
 function ModalStepsForward ({ setIsOpen, right, stepper, left }) {
-  let buttonFullRoundedClassName = `${styles['close--cover']} `
-  buttonFullRoundedClassName += commonStyles['background-color-white']
-
+  const buttonFullRoundedClassName = commonStyles['background-color-white']
   let modalCoverClassName = `${styles.container} ${styles.fullscreen} `
   modalCoverClassName += commonStyles['background-color-light-blue']
 
