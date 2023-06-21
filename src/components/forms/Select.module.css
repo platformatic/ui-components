@@ -1,0 +1,48 @@
+.container {
+  @apply flex flex-col w-full relative;
+}
+.selectContainer {
+  @apply w-full;
+}
+.select {
+  @apply pl-2 border border-solid box-border rounded-md h-10 w-full bg-transparent;
+  appearance: none;
+  box-sizing: border-box;
+  /* This will create a positioning context for the list of options;
+     adding this to .select:focus-within will be a better option when fully supported
+  */
+  position: relative;
+
+  /* This will make our control become part of the text flow and sizable at the same time */
+  display: inline-block;
+}
+.arrowIcon {
+  @apply absolute top-[50%] right-[0.5rem] translate-y-[-50%];
+}
+.color-main-dark-blue {
+  @apply text-main-dark-blue;
+}
+.color-error-red{
+  @apply text-error-red;
+}
+.color-white{
+  @apply text-white;
+}
+.paddingFocused {
+  @apply p-4;
+}
+.placeholderAPart {
+  @apply absolute top-[50%] right-0 translate-y-[-50%] left-0 text-main-dark-blue text-opacity-20 ml-2 z-0;
+}
+[type='select']:focus {
+  outline: none;
+}
+.select.active,
+.select:focus {
+  @apply shadow-main-dark-blue outline-none;
+}
+
+.select .options {
+  @apply absolute left-0;
+  top: 100%;
+}
