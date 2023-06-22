@@ -65,7 +65,7 @@ function Select ({ placeholder, name, value, options, borderColor, errorMessage,
           <PlatformaticIcon iconName={showOptions ? 'ArrowUpIcon' : 'ArrowDownIcon'} color={borderColor} onClick={() => setShowOptions(!showOptions)} />
         </div>
       </div>
-      {showOptions && renderOptions()}
+      {showOptions && !showError && renderOptions()}
       {showError && <span className={commonStyles['error-message']}>{errorMessage}</span>}
     </div>
   )
