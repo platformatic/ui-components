@@ -28,83 +28,44 @@ export const Default = Template.bind({})
 
 Default.args = {
   name: 'test',
-  defaultOption: 'Platformatic empty select'
+  placeholder: 'Platformatic empty select',
+  borderColor: MAIN_GREEN
 }
 
-const TemplateBorderMainDarkBlue = (args) => <div style={{ backgroundColor: 'white', padding: '2px' }}><Select {...args} /></div>
-
-export const BorderMainDarkBlue = TemplateBorderMainDarkBlue.bind({})
-
-BorderMainDarkBlue.args = {
-  name: 'test',
-  defaultOption: 'Defaul option',
-  options: [{ label: 'Option 1', value: '1' }, { label: 'Option 2', value: '2' }, { label: 'Option 3', value: '3' }],
-  borderColor: MAIN_DARK_BLUE
-}
-
-export const DefaultInvalid = Template.bind({})
-
-DefaultInvalid.args = {
-  name: 'test',
-  defaultOption: 'Platformatic empty select',
-  options: [{ label: 'Option 1', value: '1' }, { label: 'Option 2', value: '2' }, { label: 'Option 3', value: '3' }],
-  borderColor: MAIN_GREEN,
-  errorMessage: 'This is an error message'
-}
-
-const TemplateValuedAndAlertChange = (args) => {
+const TemplateBorderMainDarkBlue = (args) => {
   const [value, setValue] = useState('')
 
   function handleChange (event) {
     setValue(event.target.value)
   }
 
+  function handleSelect (event) {
+    setValue(event.detail.label)
+  }
+
   return (
-    <>
+    <div style={{ backgroundColor: 'white', padding: '20px 10px' }}>
       <p>Value of the input {value}</p>
-      <Select {...args} value={value} onChange={handleChange} />
-    </>
+      <Select {...args} value={value} onChange={handleChange} onSelect={handleSelect} />
+    </div>
   )
 }
 
-export const ValuedAndAlertChange = TemplateValuedAndAlertChange.bind({})
+export const BorderMainDarkBlue = TemplateBorderMainDarkBlue.bind({})
 
-ValuedAndAlertChange.args = {
+BorderMainDarkBlue.args = {
   name: 'test',
-  placeholder: 'Platformatic'
+  placeholder: 'Defaul option',
+  options: [...Array(20).keys()].map(ele => ({ label: `Option ${ele}`, value: `Value${ele}` })),
+  borderColor: MAIN_DARK_BLUE
 }
 
-export const IconBeforeAndAfter = Template.bind({})
+export const DefaultInvalid = TemplateBorderMainDarkBlue.bind({})
 
-IconBeforeAndAfter.args = {
+DefaultInvalid.args = {
   name: 'test',
-  placeholder: 'Platformatic',
-  beforeIcon: {
-    iconName: 'CopyPasteIcon',
-    color: 'main-dark-blue',
-    size: 'small',
-    onClick: () => { alert('clicked') }
-  },
-  afterIcon: {
-    iconName: 'CircleAddIcon',
-    color: 'error-red'
-  }
-}
-
-export const Focused = TemplateBorderMainDarkBlue.bind({})
-
-Focused.args = {
-  name: 'test',
-  placeholder: 'Platformatic',
-  borderColor: 'main-dark-blue',
-  focused: true
-}
-
-export const PlaceholderAPart = TemplateValuedAndAlertChange.bind({})
-
-PlaceholderAPart.args = {
-  name: 'test',
-  placeholder: 'Give me some loving',
-  borderColor: 'main-dark-blue',
-  placeholderApart: true
+  placeholder: 'Platformatic empty select',
+  options: [{ label: 'Option 1', value: '1' }, { label: 'Option 2', value: '2' }, { label: 'Option 3', value: '3' }],
+  borderColor: MAIN_GREEN,
+  errorMessage: 'This is an error message'
 }
