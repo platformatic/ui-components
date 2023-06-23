@@ -59,6 +59,7 @@ import PullRequestLoadingIcon from './PullRequestLoadingIcon'
 import RequestOwnershipIcon from './RequestOwnershipIcon'
 import RestartIcon from './RestartIcon'
 import RocketIcon from './RocketIcon'
+import RunningIcon from './RunningIcon'
 import SendIcon from './SendIcon'
 import ServiceIcon from './ServiceIcon'
 import SlotIcon from './SlotIcon'
@@ -147,6 +148,7 @@ export default {
   RequestOwnershipIcon,
   RestartIcon,
   RocketIcon,
+  RunningIcon,
   SendIcon,
   ServiceIcon,
   StopIcon,
