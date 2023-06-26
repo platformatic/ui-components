@@ -2,7 +2,7 @@
   @apply z-20 flex;
 }
 .fullscreen {
-  @apply fixed top-0 left-0 h-screen w-full min-h-screen min-w-full overflow-y-auto;
+  @apply fixed top-0 left-0 min-h-screen w-full min-w-full overflow-y-auto;
 }
 .headerLeft {
   @apply flex justify-between w-full;
