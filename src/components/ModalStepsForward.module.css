@@ -5,7 +5,7 @@
   @apply fixed top-0 left-0 min-h-screen w-full min-w-full overflow-y-auto;
 }
 .headerLeft {
-  @apply flex justify-between w-full;
+  @apply flex justify-between w-full mb-10;
 }
 .headerRight {
   @apply flex justify-end mb-12;
@@ -14,7 +14,8 @@
   @apply w-screen min-w-full;
 }
 .leftWrapper {
-  @apply h-screen overflow-y-auto w-full;
+  @apply overflow-y-auto w-full h-full pb-40;
+  max-height: calc(100vh - 200px)
 }
 .left {
   @apply min-w-[60%] max-w-[60%] w-full ; 
