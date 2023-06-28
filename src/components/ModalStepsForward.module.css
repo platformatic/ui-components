@@ -13,9 +13,11 @@
 .modal--full-width {
   @apply w-screen min-w-full;
 }
-
+.leftWrapper {
+  @apply h-screen overflow-y-auto w-full;
+}
 .left {
-  @apply min-w-[60%] max-w-[60%] w-full; 
+  @apply min-w-[60%] max-w-[60%] w-full ; 
 }
 .right {
   @apply w-full bg-white;

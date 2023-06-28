@@ -33,7 +33,9 @@ function ModalStepsForward ({ setIsOpen, right, stepper, left }) {
         <Logo width={100} heigth={80} color={MAIN_DARK_BLUE} />
         <HorizontalSeparator marginTop={MARGIN_0} marginBottom={MARGIN_0} color={MAIN_DARK_BLUE} opacity={OPACITY_20} />
         {stepper}
-        {left}
+        <div className={styles.leftWrapper}>
+          {left}
+        </div>
       </div>
       <div className={styles.right}>
         <div className={styles.headerRight}>
