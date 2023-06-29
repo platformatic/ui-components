@@ -24,6 +24,7 @@ import CircleAddIcon from './CircleAddIcon'
 import CircleArrowLeftIcon from './CircleArrowLeftIcon'
 import CircleArrowRightIcon from './CircleArrowRightIcon'
 import CircleCheckMarkIcon from './CircleCheckMarkIcon'
+import CircleCheckMarkFullIcon from './CircleCheckMarkFullIcon'
 import CircleCloseIcon from './CircleCloseIcon'
 import CircleCloseHoverIcon from './CircleCloseHoverIcon'
 import CircleExclamationIcon from './CircleExclamationIcon'
@@ -35,6 +36,8 @@ import CloseIcon from './CloseIcon'
 import CreditCardIcon from './CreditCardIcon'
 import CopyPasteIcon from './CopyPasteIcon'
 import DatabaseIcon from './DatabaseIcon'
+import EyeClosedIcon from './EyeClosedIcon'
+import EyeOpenedIcon from './EyeOpenedIcon'
 import EditIcon from './EditIcon'
 import ExploreDocIcon from './ExploreDocIcon'
 import EnlargeIcon from './EnlargeIcon'
@@ -113,6 +116,7 @@ export default {
   CircleArrowLeftIcon,
   CircleArrowRightIcon,
   CircleCheckMarkIcon,
+  CircleCheckMarkFullIcon,
   CircleExclamationIcon,
   CircleCloseIcon,
   CircleCloseHoverIcon,
@@ -125,6 +129,8 @@ export default {
   CopyPasteIcon,
   DatabaseIcon,
   EditIcon,
+  EyeClosedIcon,
+  EyeOpenedIcon,
   ExploreDocIcon,
   EnlargeIcon,
   EntryIcon,
