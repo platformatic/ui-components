@@ -1,0 +1,16 @@
+.container {
+  @apply flex flex-col w-full relative z-10;
+}
+.textAreaContainer {
+  @apply w-full flex items-center relative;
+}
+.textarea {
+  @apply p-3 h-full border border-solid box-border rounded-md ;
+}
+.textarea.active,
+.textarea:focus {
+  @apply shadow-main-dark-blue outline-none;
+}
+.afterIcon {
+  @apply absolute top-[1.25rem] right-[1.25rem]
+}
