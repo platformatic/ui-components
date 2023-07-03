@@ -35,7 +35,10 @@ import CircleTwoArrowsUpIcon from './CircleTwoArrowsUpIcon'
 import CloseIcon from './CloseIcon'
 import CreditCardIcon from './CreditCardIcon'
 import CopyPasteIcon from './CopyPasteIcon'
+import ConfigureDatabaseIcon from './ConfigureDatabaseIcon'
+import CreatingAppIcon from './CreatingAppIcon'
 import DatabaseIcon from './DatabaseIcon'
+import DatabaseMigrationIcon from './DatabaseMigrationIcon'
 import EyeClosedIcon from './EyeClosedIcon'
 import EyeOpenedIcon from './EyeOpenedIcon'
 import EditIcon from './EditIcon'
@@ -45,6 +48,7 @@ import EntryIcon from './EntryIcon'
 import GearIcon from './GearIcon'
 import GenerationLoadingIcon from './GenerationLoadingIcon'
 import GiveOwnershipIcon from './GiveOwnershipIcon'
+import GitHubRepoIcon from './GitHubRepoIcon'
 import GraphQLIcon from './GraphQLIcon'
 import KeyIcon from './KeyIcon'
 import LabelIcon from './LabelIcon'
@@ -55,6 +59,7 @@ import LoadingAppIcon from './LoadingAppIcon'
 import LogOutIcon from './LogOutIcon'
 import MetricsIcon from './MetricsIcon'
 import MetricsLoadingIcon from './MetricsLoadingIcon'
+import NameAppIcon from './NameAppIcon'
 import OrganizationIcon from './OrganizationIcon'
 import PlayIcon from './PlayIcon'
 import PullRequestIcon from './PullRequestIcon'
@@ -127,7 +132,10 @@ export default {
   CloseIcon,
   CreditCardIcon,
   CopyPasteIcon,
+  ConfigureDatabaseIcon,
+  CreatingAppIcon,
   DatabaseIcon,
+  DatabaseMigrationIcon,
   EditIcon,
   EyeClosedIcon,
   EyeOpenedIcon,
@@ -137,6 +145,7 @@ export default {
   GearIcon,
   GenerationLoadingIcon,
   GiveOwnershipIcon,
+  GitHubRepoIcon,
   GraphQLIcon,
   KeyIcon,
   LabelIcon,
@@ -147,6 +156,7 @@ export default {
   LogOutIcon,
   MetricsIcon,
   MetricsLoadingIcon,
+  NameAppIcon,
   OrganizationIcon,
   PlayIcon,
   PullRequestIcon,
