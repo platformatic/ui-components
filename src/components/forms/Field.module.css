@@ -2,7 +2,7 @@
   @apply flex flex-col w-full;
 }
 .title {
-  @apply text-xl font-semibold pb-2;
+  @apply font-semibold pb-2;
 }
 .text-color-main-dark-blue {
   @apply text-main-dark-blue;
