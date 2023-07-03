@@ -16,7 +16,6 @@ function Input ({ placeholder, value, name, borderColor, errorMessage, onChange,
   if (beforeIcon) inputClassName += ' ' + styles.beforeIconPadding
   if (afterIcon) inputClassName += ' ' + styles.afterIconPadding
   const inputPlaceholder = placeholderApart ? '' : placeholder
-  
 
   const cmp = (
     <div className={styles.container}>
