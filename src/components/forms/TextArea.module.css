@@ -5,7 +5,7 @@
   @apply w-full flex items-center relative;
 }
 .textarea {
-  @apply p-3 h-full border border-solid box-border rounded-md ;
+  @apply p-3 h-full border border-solid box-border rounded-md bg-transparent;
 }
 .textarea.active,
 .textarea:focus {

@@ -7,7 +7,7 @@ import PlatformaticIcon from '../PlatformaticIcon'
 import { MAIN_DARK_BLUE, MAIN_GREEN } from '../constants'
 
 function TextArea ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled, afterIcon, rows, cols }) {
-  let className = styles.textAreaContainer + ' ' + commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`] + ' ' + commonStyles.padded
+  let className = styles.textAreaContainer + ' ' + commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`]
   const showError = errorMessage.length > 0
   if (showError) className += ' ' + commonStyles['bordered--error-red']
   if (disabled) className += ' ' + commonStyles['apply-opacity-30']
