@@ -1,0 +1,37 @@
+.container {
+  @apply flex flex-col w-full relative;
+}
+.radioGroupContainer {
+  @apply flex gap-x-3;
+}
+.radioContainer {
+  @apply flex items-center;
+}
+.radio {
+  @apply z-10 m-0 border border-main-dark-blue rounded-full bg-white h-[16px] w-[16px];
+  appearance: none;
+  -webkit-appearance: none;
+}
+.label {
+  @apply text-main-dark-blue ml-1;
+}
+.radio.active,
+.radio:focus {
+  @apply shadow-main-dark-blue outline-none;
+}
+
+input[type="radio"] {
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  @apply bg-main-dark-blue h-[12px] w-[12px] rounded-full ;
+  content: "";
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
