@@ -5,7 +5,7 @@ import styles from './RadioGroup.module.css'
 import commonStyles from '../Common.module.css'
 import { MAIN_DARK_BLUE, MAIN_GREEN } from '../constants'
 
-function RadioGroup ({ name, radios, errorMessage, onChange, disabled, color }) {
+function RadioGroup ({ name, radios, errorMessage, onChange, disabled, value }) {
   let radioContainerClass = styles.radioContainer
   const showError = errorMessage.length > 0
   if (disabled) radioContainerClass += ' ' + commonStyles['apply-opacity-30']
@@ -15,7 +15,7 @@ function RadioGroup ({ name, radios, errorMessage, onChange, disabled, color }) 
       <div className={styles.radioGroupContainer}>
         {radios.map(radio => (
           <div className={radioContainerClass} key={radio.value}>
-            <input className={styles.radio} type='radio' name={name} value={radio.value} onChange={onChange} disabled={disabled} />
+            <input className={styles.radio} type='radio' name={name} value={radio.value} onChange={onChange} disabled={disabled} checked={radio.value === value} />
             <label className={styles.label} for={radio.name}>{radio.label}</label>
           </div>
         ))}
@@ -52,7 +52,11 @@ RadioGroup.propTypes = {
   /**
    * color
    */
-  color: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE])
+  color: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE]),
+  /**
+   * value
+   */
+  value: PropTypes.string
 }
 
 RadioGroup.defaultProps = {
@@ -61,7 +65,8 @@ RadioGroup.defaultProps = {
   errorMessage: '',
   onChange: () => {},
   disabled: false,
-  color: MAIN_DARK_BLUE
+  color: MAIN_DARK_BLUE,
+  value: ''
 }
 
 export default RadioGroup

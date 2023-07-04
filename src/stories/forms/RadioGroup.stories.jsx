@@ -24,7 +24,7 @@ export default {
 }
 
 const Template = (args) => {
-  const [value, setValue] = useState('')
+  const [value, setValue] = useState(args.value || '')
 
   function handleChange (event) {
     setValue(event.target.value)
@@ -66,4 +66,12 @@ export const Empty = Template.bind({})
 Empty.args = {
   name: 'test',
   radios: []
+}
+
+export const ValueSelected = Template.bind({})
+
+ValueSelected.args = {
+  name: 'test',
+  radios,
+  value: '3'
 }
