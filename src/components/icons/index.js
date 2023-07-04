@@ -24,6 +24,7 @@ import CircleAddIcon from './CircleAddIcon'
 import CircleArrowLeftIcon from './CircleArrowLeftIcon'
 import CircleArrowRightIcon from './CircleArrowRightIcon'
 import CircleCheckMarkIcon from './CircleCheckMarkIcon'
+import CircleCheckMarkFullIcon from './CircleCheckMarkFullIcon'
 import CircleCloseIcon from './CircleCloseIcon'
 import CircleCloseHoverIcon from './CircleCloseHoverIcon'
 import CircleExclamationIcon from './CircleExclamationIcon'
@@ -34,7 +35,12 @@ import CircleTwoArrowsUpIcon from './CircleTwoArrowsUpIcon'
 import CloseIcon from './CloseIcon'
 import CreditCardIcon from './CreditCardIcon'
 import CopyPasteIcon from './CopyPasteIcon'
+import ConfigureDatabaseIcon from './ConfigureDatabaseIcon'
+import CreatingAppIcon from './CreatingAppIcon'
 import DatabaseIcon from './DatabaseIcon'
+import DatabaseMigrationIcon from './DatabaseMigrationIcon'
+import EyeClosedIcon from './EyeClosedIcon'
+import EyeOpenedIcon from './EyeOpenedIcon'
 import EditIcon from './EditIcon'
 import ExploreDocIcon from './ExploreDocIcon'
 import EnlargeIcon from './EnlargeIcon'
@@ -42,6 +48,7 @@ import EntryIcon from './EntryIcon'
 import GearIcon from './GearIcon'
 import GenerationLoadingIcon from './GenerationLoadingIcon'
 import GiveOwnershipIcon from './GiveOwnershipIcon'
+import GitHubRepoIcon from './GitHubRepoIcon'
 import GraphQLIcon from './GraphQLIcon'
 import KeyIcon from './KeyIcon'
 import LabelIcon from './LabelIcon'
@@ -52,6 +59,7 @@ import LoadingAppIcon from './LoadingAppIcon'
 import LogOutIcon from './LogOutIcon'
 import MetricsIcon from './MetricsIcon'
 import MetricsLoadingIcon from './MetricsLoadingIcon'
+import NameAppIcon from './NameAppIcon'
 import OrganizationIcon from './OrganizationIcon'
 import PlayIcon from './PlayIcon'
 import PullRequestIcon from './PullRequestIcon'
@@ -59,6 +67,7 @@ import PullRequestLoadingIcon from './PullRequestLoadingIcon'
 import RequestOwnershipIcon from './RequestOwnershipIcon'
 import RestartIcon from './RestartIcon'
 import RocketIcon from './RocketIcon'
+import RunningIcon from './RunningIcon'
 import SendIcon from './SendIcon'
 import ServiceIcon from './ServiceIcon'
 import SlotIcon from './SlotIcon'
@@ -112,6 +121,7 @@ export default {
   CircleArrowLeftIcon,
   CircleArrowRightIcon,
   CircleCheckMarkIcon,
+  CircleCheckMarkFullIcon,
   CircleExclamationIcon,
   CircleCloseIcon,
   CircleCloseHoverIcon,
@@ -122,14 +132,20 @@ export default {
   CloseIcon,
   CreditCardIcon,
   CopyPasteIcon,
+  ConfigureDatabaseIcon,
+  CreatingAppIcon,
   DatabaseIcon,
+  DatabaseMigrationIcon,
   EditIcon,
+  EyeClosedIcon,
+  EyeOpenedIcon,
   ExploreDocIcon,
   EnlargeIcon,
   EntryIcon,
   GearIcon,
   GenerationLoadingIcon,
   GiveOwnershipIcon,
+  GitHubRepoIcon,
   GraphQLIcon,
   KeyIcon,
   LabelIcon,
@@ -140,6 +156,7 @@ export default {
   LogOutIcon,
   MetricsIcon,
   MetricsLoadingIcon,
+  NameAppIcon,
   OrganizationIcon,
   PlayIcon,
   PullRequestIcon,
@@ -147,6 +164,7 @@ export default {
   RequestOwnershipIcon,
   RestartIcon,
   RocketIcon,
+  RunningIcon,
   SendIcon,
   ServiceIcon,
   StopIcon,

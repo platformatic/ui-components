@@ -11,7 +11,7 @@ function Field ({ title, titleColor, helper, children, disabled }) {
   return (
     <div className={className}>
       <p className={classnameTitle}>{title}</p>
-      <p className={styles.helper}>{helper}</p>
+      {helper && <p className={styles.helper}>{helper}</p>}
       <div className={styles.content}>
         {children}
       </div>

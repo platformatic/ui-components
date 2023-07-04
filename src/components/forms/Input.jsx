@@ -8,20 +8,22 @@ import { MAIN_DARK_BLUE, MAIN_GREEN } from '../constants'
 import BorderedBox from '../BorderedBox'
 
 function Input ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled, beforeIcon, afterIcon, focused, placeholderApart }) {
-  let className = styles.inputContainer + ' ' + commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`] + ' ' + commonStyles.padded
+  let inputClassName = `${commonStyles.fullWidth} ${styles.input} `
+  inputClassName += commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`]
   const showError = errorMessage.length > 0
-  if (showError) className += ' ' + commonStyles['bordered--error-red']
-  if (disabled) className += ' ' + commonStyles['apply-opacity-30']
+  if (showError) inputClassName += ' ' + commonStyles['bordered--error-red']
+  if (disabled) inputClassName += ' ' + commonStyles['apply-opacity-30']
+  if (beforeIcon) inputClassName += ' ' + styles.beforeIconPadding
+  if (afterIcon) inputClassName += ' ' + styles.afterIconPadding
   const inputPlaceholder = placeholderApart ? '' : placeholder
-  const inputClassName = `${commonStyles.fullWidth} ${styles.input}`
 
   const cmp = (
     <div className={styles.container}>
-      <div className={className}>
-        {beforeIcon && <PlatformaticIcon iconName={beforeIcon.iconName} classes={styles.beforeInputIcon} size='small' data-testid='before-icon' color={beforeIcon.color} onClick={() => beforeIcon.onClick()} />}
+      <div className={styles.inputContainer}>
+        {beforeIcon && <div className={styles.beforeInputIcon}><PlatformaticIcon iconName={beforeIcon.iconName} size='small' data-testid='before-icon' color={beforeIcon.color} onClick={() => beforeIcon.onClick()} /></div>}
         <input type='text' name={name} value={value} className={inputClassName} onChange={onChange} disabled={disabled} placeholder={inputPlaceholder} />
         {placeholderApart && <p className={styles.placeholderAPart}>{placeholder}</p>}
-        {afterIcon && <PlatformaticIcon iconName={afterIcon.iconName} color={afterIcon.color} data-testid='after-icon' onClick={null} />}
+        {afterIcon && <div className={styles.afterInputIcon}><PlatformaticIcon iconName={afterIcon.iconName} color={afterIcon.color} data-testid='after-icon' onClick={null} /></div>}
       </div>
       {showError && <span className={commonStyles['error-message']}>{errorMessage}</span>}
     </div>
