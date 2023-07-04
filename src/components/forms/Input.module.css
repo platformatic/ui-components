@@ -2,14 +2,14 @@
   @apply flex flex-col w-full relative;
 }
 .inputContainer {
-  @apply flex h-10 relative z-10;
+  @apply flex h-10 relative z-20;
 }
 .input {
-  @apply border border-solid box-border rounded-md px-2 py-2.5;
+  @apply border border-solid box-border rounded-md px-2 py-2.5 z-10;
 }
 .afterInputIcon,
 .beforeInputIcon {
-  @apply absolute top-[50%] translate-y-[-50%] z-10;
+  @apply absolute top-[50%] translate-y-[-50%] z-20;
 }
 .beforeInputIcon {
   @apply left-0 ml-2
