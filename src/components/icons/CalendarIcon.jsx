@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES } from '../constants'
+import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
 
 const CalendarIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
@@ -9,7 +9,7 @@ const CalendarIcon = ({ color, size }) => {
   let icon = <></>
 
   switch (size) {
-    case 'small':
+    case SMALL:
       icon = (
         <svg
           width={16}
@@ -32,7 +32,7 @@ const CalendarIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'medium':
+    case MEDIUM:
       icon = (
         <svg
           width={24}
@@ -55,7 +55,7 @@ const CalendarIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'large':
+    case LARGE:
       icon = (
         <svg
           width={40}
@@ -96,8 +96,8 @@ CalendarIcon.propTypes = {
 }
 
 CalendarIcon.defaultProps = {
-  color: 'main-dark-blue',
-  size: 'medium'
+  color: MAIN_DARK_BLUE,
+  size: MEDIUM
 }
 
 export default CalendarIcon

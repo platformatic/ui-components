@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES } from '../constants'
+import { COLORS_ICON, SIZES, MEDIUM, MAIN_DARK_BLUE } from '../constants'
 
 const CircleCheckMarkFullIcon = ({ color, size }) => {
   const className = styles.noShrinkForFlex
@@ -9,7 +9,7 @@ const CircleCheckMarkFullIcon = ({ color, size }) => {
   let icon = <></>
 
   switch (size) {
-    case 'medium':
+    case MEDIUM:
       icon = (
         <svg
           width={24}
@@ -43,8 +43,8 @@ CircleCheckMarkFullIcon.propTypes = {
 }
 
 CircleCheckMarkFullIcon.defaultProps = {
-  color: 'main-dark-blue',
-  size: 'medium'
+  color: MAIN_DARK_BLUE,
+  size: MEDIUM
 }
 
 export default CircleCheckMarkFullIcon

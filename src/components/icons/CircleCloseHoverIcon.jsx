@@ -1,14 +1,14 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES } from '../constants'
+import { COLORS_ICON, SIZES, MEDIUM, MAIN_DARK_BLUE } from '../constants'
 
 const CircleCloseHoverIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   let icon = <></>
 
   switch (size) {
-    case 'medium':
+    case MEDIUM:
       icon = (
         <svg
           width={24}
@@ -62,8 +62,8 @@ CircleCloseHoverIcon.propTypes = {
 }
 
 CircleCloseHoverIcon.defaultProps = {
-  color: 'main-dark-blue',
-  size: 'medium'
+  color: MAIN_DARK_BLUE,
+  size: MEDIUM
 }
 
 export default CircleCloseHoverIcon

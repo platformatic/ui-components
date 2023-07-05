@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES } from '../constants'
+import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, EXTRA_LARGE, MAIN_DARK_BLUE } from '../constants'
 
 const WorkspaceGitHubIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
@@ -9,7 +9,7 @@ const WorkspaceGitHubIcon = ({ color, size }) => {
   let icon = <></>
 
   switch (size) {
-    case 'small':
+    case SMALL:
       icon = (
         <svg
           width={16}
@@ -33,7 +33,7 @@ const WorkspaceGitHubIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'medium':
+    case MEDIUM:
       icon = (
         <svg
           width={24}
@@ -57,7 +57,7 @@ const WorkspaceGitHubIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'large':
+    case LARGE:
       icon = (
         <svg
           width={40}
@@ -82,7 +82,7 @@ const WorkspaceGitHubIcon = ({ color, size }) => {
       )
       break
 
-    case 'extra-large':
+    case EXTRA_LARGE:
       icon = (
         <svg
           width={120}
@@ -125,8 +125,8 @@ WorkspaceGitHubIcon.propTypes = {
 }
 
 WorkspaceGitHubIcon.defaultProps = {
-  color: 'main-dark-blue',
-  size: 'medium'
+  color: MAIN_DARK_BLUE,
+  size: MEDIUM
 }
 
 export default WorkspaceGitHubIcon

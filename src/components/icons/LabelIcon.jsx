@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, LARGE, MEDIUM, SIZES, SMALL } from '../constants'
+import { COLORS_ICON, LARGE, MEDIUM, SIZES, MAIN_DARK_BLUE, SMALL } from '../constants'
 
 const LabelIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
@@ -73,8 +73,8 @@ LabelIcon.propTypes = {
 }
 
 LabelIcon.defaultProps = {
-  color: 'main-dark-blue',
-  size: 'medium'
+  color: MAIN_DARK_BLUE,
+  size: MEDIUM
 }
 
 export default LabelIcon

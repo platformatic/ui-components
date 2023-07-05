@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, EXTRA_SMALL, LARGE, MEDIUM, SIZES, SMALL } from '../constants'
+import { COLORS_ICON, EXTRA_SMALL, LARGE, MEDIUM, SIZES, SMALL, MAIN_DARK_BLUE } from '../constants'
 
 const CircleFullIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
@@ -84,8 +84,8 @@ CircleFullIcon.propTypes = {
 }
 
 CircleFullIcon.defaultProps = {
-  color: 'main-dark-blue',
-  size: 'medium'
+  color: MAIN_DARK_BLUE,
+  size: MEDIUM
 }
 
 export default CircleFullIcon

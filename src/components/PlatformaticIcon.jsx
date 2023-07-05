@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import ReactTooltip from 'react-tooltip'
 import Icons from './icons'
 import styles from './PlatformaticIcon.module.css'
-import { COLORS_ICON, SIZES } from './constants'
+import { COLORS_ICON, MAIN_GREEN, SIZES, SMALL } from './constants'
 
 function PlatformaticIcon ({ iconName, color, onClick, size, classes, tip, ...rest }) {
   let icon = <></>
@@ -58,8 +58,8 @@ PlatformaticIcon.propTypes = {
 
 PlatformaticIcon.defaultProps = {
   iconName: '',
-  color: 'main-green',
-  size: 'small',
+  color: MAIN_GREEN,
+  size: SMALL,
   onClick: () => {},
   classes: '',
   tip: ''

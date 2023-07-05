@@ -1,14 +1,14 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES } from '../constants'
+import { COLORS_ICON, SIZES, MEDIUM, EXTRA_LARGE, MAIN_DARK_BLUE } from '../constants'
 
 const WorkspaceEmptyIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   let icon = <></>
 
   switch (size) {
-    case 'extra-large':
+    case EXTRA_LARGE:
       icon = (
         <svg width={104} height={105} viewBox='0 0 104 105' fill='none' xmlns='http://www.w3.org/2000/svg' className={className}>
           <path d='M29.8467 60.0705V87.4275C29.8467 87.9797 30.2944 88.4275 30.8467 88.4275H73.1544C73.7067 88.4275 74.1544 87.9797 74.1544 87.4275V60.0705' stroke='none' strokeWidth={3} strokeLinecap='round' />
@@ -48,8 +48,8 @@ WorkspaceEmptyIcon.propTypes = {
 }
 
 WorkspaceEmptyIcon.defaultProps = {
-  color: 'main-dark-blue',
-  size: 'medium'
+  color: MAIN_DARK_BLUE,
+  size: MEDIUM
 }
 
 export default WorkspaceEmptyIcon
