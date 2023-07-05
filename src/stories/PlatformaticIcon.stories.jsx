@@ -65,7 +65,7 @@ const AllIconsTemplate = (args) => {
       <div style={divStyle}>
         <p style={paragraph}> All Platformatic Icons: {icons.length} </p>
         {icons.map((IconComponent, index) => {
-          console.log('IconComponent', IconComponent.name)
+          console.log('IconComponent', IconComponent)
           return (
             <div style={row} key={index}>
               <div style={col}>
