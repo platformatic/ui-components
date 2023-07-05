@@ -1,14 +1,14 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES } from '../constants'
+import { COLORS_ICON, SIZES, MEDIUM, EXTRA_LARGE, MAIN_DARK_BLUE } from '../constants'
 
 const AppEmptyIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   let icon = <></>
 
   switch (size) {
-    case 'extra-large':
+    case EXTRA_LARGE:
       icon = (
         <svg width={105} height={105} viewBox='0 0 105 105' fill='none' xmlns='http://www.w3.org/2000/svg' className={className}>
           <path d='M45.1159 59.7372H31.3467C30.7944 59.7372 30.3467 60.1849 30.3467 60.7372V87.0941C30.3467 87.6464 30.7944 88.0941 31.3467 88.0941H73.6544C74.2067 88.0941 74.6544 87.6464 74.6544 87.0941V60.7372C74.6544 60.1849 74.2067 59.7372 73.6544 59.7372H59.8851' stroke='none' strokeWidth={3} strokeLinecap='round' />
@@ -46,8 +46,8 @@ AppEmptyIcon.propTypes = {
 }
 
 AppEmptyIcon.defaultProps = {
-  color: 'main-dark-blue',
-  size: 'medium'
+  color: MAIN_DARK_BLUE,
+  size: MEDIUM
 }
 
 export default AppEmptyIcon

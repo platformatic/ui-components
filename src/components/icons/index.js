@@ -19,6 +19,7 @@ import BillingIcon from './BillingIcon'
 import CalendarIcon from './CalendarIcon'
 import Calendar1DayIcon from './Calendar1DayIcon'
 import Calendar7DaysIcon from './Calendar7DaysIcon'
+import ChatGPTIcon from './ChatGPTIcon'
 import CheckListIcon from './CheckListIcon'
 import CircleAddIcon from './CircleAddIcon'
 import CircleArrowLeftIcon from './CircleArrowLeftIcon'
@@ -116,6 +117,7 @@ export default {
   CalendarIcon,
   Calendar1DayIcon,
   Calendar7DaysIcon,
+  ChatGPTIcon,
   CheckListIcon,
   CircleAddIcon,
   CircleArrowLeftIcon,

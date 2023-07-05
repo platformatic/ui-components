@@ -1,14 +1,14 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES } from '../constants'
+import { COLORS_ICON, SIZES, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
 
 const CircleCloseIcon = ({ color, size }) => {
   const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
   let icon = <></>
 
   switch (size) {
-    case 'medium':
+    case MEDIUM:
       icon = (
         <svg
           width={24}
@@ -34,7 +34,7 @@ const CircleCloseIcon = ({ color, size }) => {
         </svg>
       )
       break
-    case 'large':
+    case LARGE:
       icon = (
         <svg
           width={40}
@@ -69,8 +69,8 @@ CircleCloseIcon.propTypes = {
 }
 
 CircleCloseIcon.defaultProps = {
-  color: 'main-dark-blue',
-  size: 'medium'
+  color: MAIN_DARK_BLUE,
+  size: MEDIUM
 }
 
 export default CircleCloseIcon

@@ -16,7 +16,7 @@ function TextArea ({ placeholder, value, name, borderColor, errorMessage, onChan
   return (
     <div className={styles.container}>
       <div className={className}>
-        <textarea name={name} className={textAreaClassName} onChange={onChange} disabled={disabled} placeholder={placeholder} rows={rows} cols={cols}>{value}</textarea>
+        <textarea name={name} className={textAreaClassName} onChange={onChange} disabled={disabled} placeholder={placeholder} rows={rows} cols={cols} value={value} />
         {afterIcon && <div className={styles.afterIcon}><PlatformaticIcon iconName={afterIcon.iconName} color={afterIcon.color} data-testid='after-icon' onClick={null} /></div>}
       </div>
       {showError && <span className={commonStyles['error-message']}>{errorMessage}</span>}
