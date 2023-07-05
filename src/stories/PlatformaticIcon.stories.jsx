@@ -37,23 +37,17 @@ export default {
       type: 'string'
     },
     color: {
-      type: 'string',
-      control: {
-        type: 'radio',
-        options: COLORS_ICON
-      }
+      options: COLORS_ICON,
+      control: { type: 'radio' }
     },
     onClick: {
       type: 'function'
     },
     size: {
-      type: 'string',
-      control: {
-        type: 'radio',
-        options: SIZES
-      }
+      options: SIZES,
+      control: { type: 'radio' }
     },
-    typ: {
+    tip: {
       type: 'string'
     }
   }
