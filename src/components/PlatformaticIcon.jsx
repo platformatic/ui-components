@@ -61,7 +61,7 @@ PlatformaticIcon.defaultProps = {
   color: 'main-green',
   size: 'small',
   onClick: () => {},
-  classes: null,
+  classes: '',
   tip: ''
 }
 

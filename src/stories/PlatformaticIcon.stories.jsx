@@ -1,7 +1,7 @@
 import React from 'react'
 import PlatformaticIcon from '../components/PlatformaticIcon'
 import Icons from '../components/icons'
-import { COLORS_ICON, EXTRA_LARGE, EXTRA_SMALL, LARGE, MEDIUM, SMALL } from '../components/constants'
+import { COLORS_ICON, EXTRA_LARGE, EXTRA_SMALL, LARGE, MEDIUM, SIZES, SMALL } from '../components/constants'
 
 const divStyle = {
   width: '100%'
@@ -38,7 +38,7 @@ export default {
       type: 'string',
       control: {
         type: 'radio',
-        options: ['small', 'medium', 'large', 'extra-large']
+        options: SIZES
       }
     },
     checked: {
@@ -65,7 +65,6 @@ const AllIconsTemplate = (args) => {
       <div style={divStyle}>
         <p style={paragraph}> All Platformatic Icons: {icons.length} </p>
         {icons.map((IconComponent, index) => {
-          console.log('IconComponent', IconComponent)
           return (
             <div style={row} key={index}>
               <div style={col}>
@@ -96,5 +95,7 @@ const AllIconsTemplate = (args) => {
 export const PlatformaticIconAll = AllIconsTemplate.bind({})
 PlatformaticIconAll.args = {
   color: 'white',
-  onClick: null
+  classes: '',
+  onClick: null,
+  tip: ''
 }
