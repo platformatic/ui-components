@@ -64,28 +64,31 @@ const AllIconsTemplate = (args) => {
     <>
       <div style={divStyle}>
         <p style={paragraph}> All Platformatic Icons: {icons.length} </p>
-        {icons.map((IconComponent, index) => (
-          <div style={row} key={index}>
-            <div style={col}>
-              <p style={paragraph}>#{index + 1}: {IconComponent.name}</p>
+        {icons.map((IconComponent, index) => {
+          console.log('IconComponent', IconComponent.name)
+          return (
+            <div style={row} key={index}>
+              <div style={col}>
+                <p style={paragraph}>#{index + 1}: {IconComponent.name}</p>
+              </div>
+              <div style={col}>
+                <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size={EXTRA_SMALL} {...args} />
+              </div>
+              <div style={col}>
+                <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size={SMALL} {...args} />
+              </div>
+              <div style={col}>
+                <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size={MEDIUM} {...args} />
+              </div>
+              <div style={col}>
+                <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size={LARGE} {...args} />
+              </div>
+              <div style={col}>
+                <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size={EXTRA_LARGE} {...args} />
+              </div>
             </div>
-            <div style={col}>
-              <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size={EXTRA_SMALL} {...args} />
-            </div>
-            <div style={col}>
-              <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size={SMALL} {...args} />
-            </div>
-            <div style={col}>
-              <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size={MEDIUM} {...args} />
-            </div>
-            <div style={col}>
-              <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size={LARGE} {...args} />
-            </div>
-            <div style={col}>
-              <PlatformaticIcon key={IconComponent.name} iconName={IconComponent.name} size={EXTRA_LARGE} {...args} />
-            </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </>
   )
