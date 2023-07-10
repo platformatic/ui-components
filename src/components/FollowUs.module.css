@@ -1,5 +1,5 @@
 .containerFrontpage {
-  @apply flex w-full items-center;
+  @apply flex w-full items-center gap-x-2 md:gap-x-8;
 }
 .containerDashboard {
   @apply flex items-center;
@@ -11,7 +11,7 @@
   @apply text-xs mr-2;
 }
 .iconFrontpage {
-  @apply text-white mx-4 text-xl hover:cursor-pointer hover:scale-125;
+  @apply text-white text-xl hover:cursor-pointer hover:scale-125;
 }
 .iconDashboard {
   @apply mx-1 hover:cursor-pointer hover:scale-125;
