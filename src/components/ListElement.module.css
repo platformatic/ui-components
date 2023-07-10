@@ -1,5 +1,5 @@
 .container {
-  @apply flex flex-col my-4
+  @apply flex flex-col my-4 w-full;
 }
 .margin-medium {
   @apply my-4
@@ -14,5 +14,5 @@
   @apply flex gap-x-2 items-center w-full;
 }
 .textCol {
-  @apply flex flex-col text-justify w-full ml-8;
+  @apply flex flex-col text-justify w-full pl-8;
 }
