@@ -62,6 +62,7 @@ import MetricsIcon from './MetricsIcon'
 import MetricsLoadingIcon from './MetricsLoadingIcon'
 import NameAppIcon from './NameAppIcon'
 import OrganizationIcon from './OrganizationIcon'
+import OpenAIIcon from './OpenAIIcon'
 import PlayIcon from './PlayIcon'
 import PullRequestIcon from './PullRequestIcon'
 import PullRequestLoadingIcon from './PullRequestLoadingIcon'
@@ -160,6 +161,7 @@ export default {
   MetricsLoadingIcon,
   NameAppIcon,
   OrganizationIcon,
+  OpenAIIcon,
   PlayIcon,
   PullRequestIcon,
   PullRequestLoadingIcon,
