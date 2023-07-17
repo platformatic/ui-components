@@ -39,7 +39,10 @@ function Select ({ placeholder, name, value, options, borderColor, errorMessage,
   }, [value])
 
   function renderOptions () {
-    const filteredOptions = value.length > 0 ? options.filter(option => option.label.toLowerCase().includes(value.toLowerCase())) : options
+    if (value.length === 0) {
+      return <></>
+    }
+    const filteredOptions = options.filter(option => option.label.toLowerCase().includes(value.toLowerCase()))
     return (
       <ul className={styles.options}>
         {filteredOptions.length > 0 ? filteredOptions.map((option, index) => <li key={index} className={styles.option} onClick={() => setSelected(option)}>{option.label}</li>) : <li className={styles.option}>No data found</li>}
