@@ -17,8 +17,20 @@
   @apply border border-transparent rounded-full mr-2;
 }
 .menu {
-  @apply absolute border-solid border p-0  mt-8 rounded-md z-10 text-sm min-w-[190px];
+  @apply absolute border-solid border p-0 mt-8 rounded-md z-10 text-sm min-w-[190px];
 }
 .item {
-  @apply py-2 px-3 first:border-t-0 text-sm leading-4 uppercase hover:font-semibold hover:cursor-pointer tracking-more-widest border-t;
+  @apply py-2 px-3 text-sm leading-4 hover:cursor-pointer;
+}
+.lastButton {
+  @apply border-t py-2 text-center mx-auto;
+  width: calc(100% - 1.5rem);
+}
+
+.hover--main-dark-blue {
+  @apply hover:bg-main-dark-blue hover:bg-opacity-10;
+}
+
+.hover--white {
+  @apply hover:bg-white hover:bg-opacity-10;
 }
