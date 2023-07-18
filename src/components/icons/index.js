@@ -19,7 +19,6 @@ import BillingIcon from './BillingIcon'
 import CalendarIcon from './CalendarIcon'
 import Calendar1DayIcon from './Calendar1DayIcon'
 import Calendar7DaysIcon from './Calendar7DaysIcon'
-import ChatGPTIcon from './ChatGPTIcon'
 import CheckListIcon from './CheckListIcon'
 import CircleAddIcon from './CircleAddIcon'
 import CircleArrowLeftIcon from './CircleArrowLeftIcon'
@@ -62,7 +61,6 @@ import MetricsIcon from './MetricsIcon'
 import MetricsLoadingIcon from './MetricsLoadingIcon'
 import NameAppIcon from './NameAppIcon'
 import OrganizationIcon from './OrganizationIcon'
-import OpenAIIcon from './OpenAIIcon'
 import PlayIcon from './PlayIcon'
 import PullRequestIcon from './PullRequestIcon'
 import PullRequestLoadingIcon from './PullRequestLoadingIcon'
@@ -118,7 +116,6 @@ export default {
   CalendarIcon,
   Calendar1DayIcon,
   Calendar7DaysIcon,
-  ChatGPTIcon,
   CheckListIcon,
   CircleAddIcon,
   CircleArrowLeftIcon,
@@ -161,7 +158,6 @@ export default {
   MetricsLoadingIcon,
   NameAppIcon,
   OrganizationIcon,
-  OpenAIIcon,
   PlayIcon,
   PullRequestIcon,
   PullRequestLoadingIcon,
