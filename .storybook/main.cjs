@@ -32,5 +32,6 @@ module.exports = {
   },
   docs: {
     autodocs: true
-  }
+  },
+  "staticDirs": [{ from: '../fonts', to: '/fonts' }]
 };
