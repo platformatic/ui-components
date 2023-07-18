@@ -1,8 +1,10 @@
 'use strict'
 import DropDown from '../components/DropDown'
 import BorderedBox from '../components/BorderedBox'
+import Button from '../components/Button'
 import HorizontalSeparator from '../components/HorizontalSeparator'
 import { useState } from 'react'
+import { BOX_SHADOW, LIGHT_BLUE, MAIN_DARK_BLUE, WHITE } from '../components/constants'
 export default {
   title: 'Platformatic/DropDown',
   component: DropDown,
@@ -31,9 +33,9 @@ export const DefaultAlignment = Template.bind({})
 DefaultAlignment.args = {
   header: 'My Menu',
   items: [
-    <span key='1'>Menu 1</span>,
-    <span key='2'>Menu 2</span>,
-    <span key='3'>This is a very long menu item</span>
+    <span className='text-white' key='1'>Menu 1</span>,
+    <span className='text-white' key='2'>Menu 2</span>,
+    <span className='text-white' key='3'>This is a very long menu item</span>
   ]
 }
 
@@ -46,17 +48,30 @@ AlignRight.args = {
     <span key='1'>Menu 1</span>,
     <span key='2'>Menu 2</span>,
     <span key='3'>This is a very long menu item</span>
-  ]
+  ],
+  backgroundColor: LIGHT_BLUE
 }
 
-export const AlignLeft = Template.bind({})
+export const withButton = Template.bind({})
 
-AlignLeft.args = {
+withButton.args = {
   header: 'My Menu',
-  align: 'left',
+  backgroundColor: LIGHT_BLUE,
   items: [
     <span key='1'>Menu 1</span>,
     <span key='2'>Menu 2</span>,
     <span key='3'>This is a very long menu item</span>
-  ]
+  ],
+  lastButton: <Button
+    backgroundColor={MAIN_DARK_BLUE}
+    color={WHITE}
+    label='Test'
+    platformaticIcon={{ iconName: 'WorkspaceStaticIcon', color: WHITE }}
+    fullWidth
+    bold
+    bordered={false}
+    hoverEffect={BOX_SHADOW}
+              />,
+  borderColor: MAIN_DARK_BLUE
+
 }
