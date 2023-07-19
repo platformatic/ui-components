@@ -1,7 +1,7 @@
 {
   "name": "@platformatic/ui-components",
   "description": "Platformatic UI Components",
-  "version": "0.1.110",
+  "version": "0.1.111",
   "type": "module",
   "license": "Apache-2.0",
   "repository": {
