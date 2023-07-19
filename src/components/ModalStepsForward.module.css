@@ -1,5 +1,5 @@
 .container {
-  @apply z-20 flex;
+  @apply z-10 flex;
 }
 .fullscreen {
   @apply fixed top-0 left-0 min-h-screen w-full min-w-full overflow-y-auto;
