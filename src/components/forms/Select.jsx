@@ -3,10 +3,10 @@ import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import styles from './Select.module.css'
 import commonStyles from '../Common.module.css'
-import { MAIN_DARK_BLUE, MAIN_GREEN } from '../constants'
+import { MAIN_DARK_BLUE, MAIN_GREEN, SMALL } from '../constants'
 import PlatformaticIcon from '../PlatformaticIcon'
 
-function Select ({ placeholder, name, value, options, borderColor, errorMessage, onChange, onSelect, disabled }) {
+function Select ({ placeholder, name, value, options, borderColor, errorMessage, onChange, onSelect, onClear, disabled, optionsIconColor }) {
   const inputRef = useRef()
   const [showOptions, setShowOptions] = useState(false)
   const [isSelected, setIsSelected] = useState(false)
@@ -16,6 +16,11 @@ function Select ({ placeholder, name, value, options, borderColor, errorMessage,
   if (showError) inputClassName += ' ' + commonStyles['bordered--error-red']
   if (disabled) inputClassName += ' ' + commonStyles['apply-opacity-30']
 
+  function handleNotSelectable (callback = () => {}) {
+    setIsSelected(true)
+    setShowOptions(false)
+    callback()
+  }
   function setSelected ({ label, value }) {
     setIsSelected(true)
     setShowOptions(false)
@@ -38,14 +43,34 @@ function Select ({ placeholder, name, value, options, borderColor, errorMessage,
     }
   }, [value])
 
+  function renderLi (option, index) {
+    return (
+      <li
+        key={index} className={styles.option} onClick={() => {
+          if (option.notSelectable) {
+            return handleNotSelectable(option.onClick && option.onClick())
+          }
+          return setSelected(option)
+        }}
+      >
+        {option.iconName && <PlatformaticIcon iconName={option.iconName} color={optionsIconColor} size={SMALL} onClick={null} />}
+        <span>{option.label}</span>
+      </li>
+    )
+  }
+
   function renderOptions () {
     if (value.length === 0) {
-      return <></>
+      return (
+        <ul className={styles.options}>
+          {options.length > 0 ? options.map((option, index) => renderLi(option, index)) : <li className={styles.option}>No data found</li>}
+        </ul>
+      )
     }
     const filteredOptions = options.filter(option => option.label.toLowerCase().includes(value.toLowerCase()))
     return (
       <ul className={styles.options}>
-        {filteredOptions.length > 0 ? filteredOptions.map((option, index) => <li key={index} className={styles.option} onClick={() => setSelected(option)}>{option.label}</li>) : <li className={styles.option}>No data found</li>}
+        {filteredOptions.length > 0 ? filteredOptions.map((option, index) => renderLi(option, index)) : <li className={styles.option}>No data found</li>}
       </ul>
     )
   }
@@ -57,6 +82,7 @@ function Select ({ placeholder, name, value, options, borderColor, errorMessage,
     const ev2 = new Event('input', { bubbles: true })
     ev2.simulated = true
     inputRef.current.dispatchEvent(ev2)
+    onClear()
   }
 
   return (
@@ -65,7 +91,7 @@ function Select ({ placeholder, name, value, options, borderColor, errorMessage,
         <input type='text' name={name} value={value} className={inputClassName} ref={inputRef} onChange={onChange} disabled={disabled} placeholder={placeholder} />
         <div className={styles.icons}>
           {value?.length > 0 && <PlatformaticIcon iconName='CloseIcon' color={borderColor} onClick={() => clearValue()} />}
-          <PlatformaticIcon iconName={showOptions ? 'ArrowUpIcon' : 'ArrowDownIcon'} color={borderColor} onClick={() => setShowOptions(!showOptions)} />
+          <PlatformaticIcon iconName={showOptions ? 'ArrowUpIcon' : 'ArrowDownIcon'} color={borderColor} onClick={() => disabled ? null : setShowOptions(!showOptions)} />
         </div>
       </div>
       {showOptions && !showError && renderOptions()}
@@ -82,7 +108,10 @@ Select.propTypes = {
   /**
    * name
    */
-  name: PropTypes.string,
+  name: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
   /**
    * value
    */
@@ -91,8 +120,14 @@ Select.propTypes = {
    * options
    */
   options: PropTypes.arrayOf(PropTypes.shape({
-    value: PropTypes.string,
-    label: PropTypes.string
+    label: PropTypes.string,
+    value: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ]),
+    icon: PropTypes.string,
+    notSelectable: PropTypes.bool,
+    onClick: PropTypes.func
   })),
   /**
    * color of border
@@ -107,9 +142,17 @@ Select.propTypes = {
    */
   onSelect: PropTypes.func,
   /**
+   * onClear
+   */
+  onClear: PropTypes.func,
+  /**
    * Disabled
    */
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  /**
+   * optionsIconColor
+   */
+  optionsIconColor: PropTypes.string
 }
 
 Select.defaultProps = {
@@ -122,7 +165,9 @@ Select.defaultProps = {
   errorMessage: '',
   onChange: () => {},
   onSelect: () => {},
-  disabled: false
+  onClear: () => {},
+  disabled: false,
+  optionsIconColor: MAIN_DARK_BLUE
 }
 
 export default Select
