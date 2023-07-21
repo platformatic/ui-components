@@ -1,9 +1,9 @@
 .container {
-  @apply flex flex-col w-full relative z-10;
+  @apply flex flex-col w-full relative;
 }
 .selectContainer {
-  @apply w-full flex items-center h-10 relative;
-}
+  @apply w-full flex items-center h-10 relative z-10;
+} 
 .select {
   @apply px-2 h-full border border-solid box-border rounded-md ;
 }
@@ -12,11 +12,11 @@
   @apply shadow-main-dark-blue outline-none;
 }
 .options {
-  @apply absolute left-0 top-[42px] bg-white w-full max-h-[216px] overflow-y-scroll;
+  @apply absolute left-0 top-[42px] bg-white w-full max-h-[216px] overflow-y-scroll z-20;
   box-shadow: 0px 0px 10px rgb(0 40 61 / 25%);
 }
 .option {
-  @apply w-full px-4 py-2 border-b border-main-dark-blue/[.15] font-light cursor-pointer hover:bg-main-dark-blue hover:bg-opacity-10
+  @apply w-full px-4 py-2 border-b border-main-dark-blue/[.15] font-light cursor-pointer hover:bg-main-dark-blue hover:bg-opacity-10 inline-flex items-center gap-x-1
 }
 .icons {
   @apply absolute top-[50%] right-[0.5rem] translate-y-[-50%] flex gap-x-2;
