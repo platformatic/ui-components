@@ -25,11 +25,14 @@ import CircleArrowLeftIcon from './CircleArrowLeftIcon'
 import CircleArrowRightIcon from './CircleArrowRightIcon'
 import CircleCheckMarkIcon from './CircleCheckMarkIcon'
 import CircleCheckMarkFullIcon from './CircleCheckMarkFullIcon'
+import CircleCopyPasteIcon from './CircleCopyPasteIcon'
 import CircleCloseIcon from './CircleCloseIcon'
 import CircleCloseHoverIcon from './CircleCloseHoverIcon'
 import CircleExclamationIcon from './CircleExclamationIcon'
+import CircleEditIcon from './CircleEditIcon'
 import CircleFullIcon from './CircleFullIcon'
 import CircleGearIcon from './CircleGearIcon'
+import CircleRestartIcon from './CircleRestartIcon'
 import CircleTwoArrowsDownIcon from './CircleTwoArrowsDownIcon'
 import CircleTwoArrowsUpIcon from './CircleTwoArrowsUpIcon'
 import CloseIcon from './CloseIcon'
@@ -123,10 +126,13 @@ export default {
   CircleCheckMarkIcon,
   CircleCheckMarkFullIcon,
   CircleExclamationIcon,
+  CircleCopyPasteIcon,
   CircleCloseIcon,
   CircleCloseHoverIcon,
+  CircleEditIcon,
   CircleFullIcon,
   CircleGearIcon,
+  CircleRestartIcon,
   CircleTwoArrowsDownIcon,
   CircleTwoArrowsUpIcon,
   CloseIcon,
