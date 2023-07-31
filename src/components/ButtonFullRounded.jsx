@@ -20,9 +20,13 @@ function ButtonFullRounded ({
   selected
 }) {
   const padding = commonStyles[`padding--${paddingSize}`]
-  const containerClassName = `${className} ${styles.roundedFull}`
+  const containerClassName = `${className} border-0 ${styles.roundedFull}`
   let buttonClassName = `${styles.roundedFull} ${styles.buttonRoundedFull} ${padding}`
-  if (bordered) buttonClassName += ' ' + commonStyles[`bordered--${iconColor}`]
+  if (bordered) {
+    buttonClassName += ` ${styles.applyBorder} ` + commonStyles[`bordered--${iconColor}`]
+  } else {
+    buttonClassName += ` ${styles.borderLess} `
+  }
   if (disabled) {
     buttonClassName += ` ${styles.disabled}`
   } else {
@@ -38,7 +42,7 @@ function ButtonFullRounded ({
 
   return (
     <div className={containerClassName}>
-      <button className={buttonClassName} disabled={disabled} onClick={onClick} alt={alt}>
+      <button className={buttonClassName} disabled={disabled} onClick={onClick} alt={alt} type='button'>
         <PlatformaticIcon iconName={iconName} size={iconSize} color={iconColor} data-testid='button-icon' onClick={null} tip={tip} />
       </button>
     </div>
@@ -94,6 +98,7 @@ ButtonFullRounded.propTypes = {
 }
 
 ButtonFullRounded.defaultProps = {
+  className: '',
   iconName: '',
   iconColor: WHITE,
   iconSize: SMALL,
@@ -102,7 +107,7 @@ ButtonFullRounded.defaultProps = {
   alt: 'ButtonFullRounded',
   onClick: () => {},
   hoverEffect: '',
-  bordered: true,
+  bordered: false,
   tip: '',
   selected: false
 }

@@ -1,9 +1,15 @@
 .buttonRoundedFull {
-  @apply flex justify-center cursor-pointer border-0 items-center;
+  @apply flex justify-center cursor-pointer items-center;
 }
 .disabled {
   @apply opacity-30 cursor-default;
 }
 .roundedFull {
   @apply rounded-full 
+}
+.applyBorder {
+  @apply border
+}
+.borderLess {
+  @apply border-0
 }
