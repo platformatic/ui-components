@@ -62,25 +62,25 @@ SingleButton.args = {
 }
 
 const AllCircleButtonsTemplate = (args) => {
-  const icons = Object.values(Icons).filter(icon => icon.name.indexOf('Circle') > -1)
+  const icons = Object.keys(Icons).filter(icon => icon.indexOf('Circle') > -1)
 
   return (
     <>
       <div style={divStyle}>
         <p style={paragraph}>All Buttons with Circle Icons: {icons.length} </p>
-        {icons.map((IconComponent, index) => (
+        {icons.map((icon, index) => (
           <div style={row} key={index}>
             <div style={col}>
-              <p style={paragraph}>#{index + 1}: {IconComponent.name}</p>
+              <p style={paragraph}>#{index + 1}: {icon}</p>
             </div>
             <div style={col}>
-              <ButtonFullRounded key={IconComponent.name} iconName={IconComponent.name} iconSize={SMALL} {...args} />
+              <ButtonFullRounded key={icon} iconName={icon} iconSize={SMALL} {...args} />
             </div>
             <div style={col}>
-              <ButtonFullRounded key={IconComponent.name} iconName={IconComponent.name} iconSize={MEDIUM} {...args} />
+              <ButtonFullRounded key={icon} iconName={icon} iconSize={MEDIUM} {...args} />
             </div>
             <div style={col}>
-              <ButtonFullRounded key={IconComponent.name} iconName={IconComponent.name} iconSize={LARGE} {...args} />
+              <ButtonFullRounded key={icon} iconName={icon} iconSize={LARGE} {...args} />
             </div>
           </div>
         ))}
