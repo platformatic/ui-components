@@ -67,10 +67,13 @@ function Select ({ placeholder, name, value, options, borderColor, errorMessage,
         </ul>
       )
     }
-    const filteredOptions = options.filter(option => option.label.toLowerCase().includes(value.toLowerCase()))
+    const notFilterableOptions = options.filter(option => option.notFilterable)
+    const filteredOptions = options.filter(option => !option.notFilterable).filter(option => option.label.toLowerCase().includes(value.toLowerCase()))
+
     return (
       <ul className={styles.options}>
         {filteredOptions.length > 0 ? filteredOptions.map((option, index) => renderLi(option, index)) : <li className={styles.option}>No data found</li>}
+        {notFilterableOptions.length > 0 && notFilterableOptions.map((option, index) => renderLi(option, index))}
       </ul>
     )
   }
@@ -85,10 +88,23 @@ function Select ({ placeholder, name, value, options, borderColor, errorMessage,
     onClear()
   }
 
+  function handleFocus () {
+    setShowOptions(true)
+  }
+
+  function handleBlur (event) {
+    event.preventDefault()
+    setTimeout(() => {
+      if (!isSelected) {
+        setShowOptions(false)
+      }
+    }, 100)
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.selectContainer}>
-        <input type='text' name={name} value={value} className={inputClassName} ref={inputRef} onChange={onChange} disabled={disabled} placeholder={placeholder} />
+        <input type='text' name={name} value={value} className={inputClassName} ref={inputRef} onChange={onChange} disabled={disabled} placeholder={placeholder} onFocus={() => handleFocus()} onBlur={(e) => handleBlur(e)} />
         <div className={styles.icons}>
           {value?.length > 0 && <PlatformaticIcon iconName='CloseIcon' color={borderColor} onClick={() => clearValue()} />}
           <PlatformaticIcon iconName={showOptions ? 'ArrowUpIcon' : 'ArrowDownIcon'} color={borderColor} onClick={() => disabled ? null : setShowOptions(!showOptions)} />
@@ -127,6 +143,7 @@ Select.propTypes = {
     ]),
     icon: PropTypes.string,
     notSelectable: PropTypes.bool,
+    notFilterable: PropTypes.bool,
     onClick: PropTypes.func
   })),
   /**
