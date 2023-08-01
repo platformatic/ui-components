@@ -23,6 +23,7 @@ import CheckListIcon from './CheckListIcon'
 import CircleAddIcon from './CircleAddIcon'
 import CircleArrowLeftIcon from './CircleArrowLeftIcon'
 import CircleArrowRightIcon from './CircleArrowRightIcon'
+import CircleCheckMarkButtonIcon from './CircleCheckMarkButtonIcon'
 import CircleCheckMarkIcon from './CircleCheckMarkIcon'
 import CircleCheckMarkFullIcon from './CircleCheckMarkFullIcon'
 import CircleCopyPasteIcon from './CircleCopyPasteIcon'
@@ -123,6 +124,7 @@ export default {
   CircleAddIcon,
   CircleArrowLeftIcon,
   CircleArrowRightIcon,
+  CircleCheckMarkButtonIcon,
   CircleCheckMarkIcon,
   CircleCheckMarkFullIcon,
   CircleExclamationIcon,

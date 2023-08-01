@@ -117,3 +117,28 @@ withDifferentOptions.args = {
   }),
   borderColor: MAIN_DARK_BLUE
 }
+
+export const githubRepoExample = TemplateBorderMainDarkBlue2.bind({})
+
+githubRepoExample.args = {
+  name: 'test',
+  placeholder: 'Platformatic',
+  options: [...Array(4).keys()].map(ele => ({
+    label: `GitHub Repo ${ele}`,
+    value: `Value${ele}`,
+    iconName: 'SocialGitHubIcon'
+  })).concat({
+    label: 'this is an option that is not selectable',
+    iconName: 'AddIcon',
+    value: 123123,
+    notSelectable: true,
+    onClick: () => alert('you clicked last but not least')
+  }).concat({
+    label: 'Add Github repo',
+    iconName: 'PlayIcon',
+    value: 123123,
+    notSelectable: true,
+    notFilterable: true
+  }),
+  borderColor: MAIN_DARK_BLUE
+}
