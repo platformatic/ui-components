@@ -95,7 +95,7 @@ function Select ({ placeholder, name, value, options, borderColor, errorMessage,
   function handleBlur (event) {
     event.preventDefault()
     setTimeout(() => {
-      if (!isSelected) {
+      if (showOptions) {
         setShowOptions(false)
       }
     }, 100)
