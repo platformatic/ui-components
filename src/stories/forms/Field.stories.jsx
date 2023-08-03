@@ -77,7 +77,8 @@ export const WithInput = InputTemplate.bind({})
 
 WithInput.args = {
   title: 'Different cases',
-  helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  required: true
 }
 
 export const RedTitledField = SimpleTemplate.bind({})
