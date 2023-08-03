@@ -2,15 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Field.module.css'
 
-function Field ({ title, titleColor, helper, children, disabled }) {
+function Field ({ title, titleColor, helper, children, disabled, required }) {
   let className = `${styles.container}`
   if (disabled) className += ` ${styles.disabled}`
   let classnameTitle = `${styles.title} `
   classnameTitle += styles[`text-color-${titleColor}`]
+  let titleTmp = title
+  if (required) { titleTmp += ' *' }
 
   return (
     <div className={className}>
-      <p className={classnameTitle}>{title}</p>
+      <p className={classnameTitle}>{titleTmp}</p>
       {helper && <p className={styles.helper}>{helper}</p>}
       <div className={styles.content}>
         {children}
@@ -39,7 +41,11 @@ Field.propTypes = {
   /**
    * disabled
    */
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  /**
+   * required
+   */
+  required: PropTypes.bool
 }
 
 Field.defaultProps = {
@@ -47,7 +53,8 @@ Field.defaultProps = {
   titleColor: 'main-dark-blue',
   helper: '',
   children: null,
-  disabled: false
+  disabled: false,
+  required: false
 }
 
 export default Field

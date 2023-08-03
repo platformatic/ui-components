@@ -7,6 +7,9 @@
 .bordered--main-dark-blue {
   @apply border-main-dark-blue;
 }
+.bordered--tertiary-blue {
+  @apply border-tertiary-blue;
+}
 .bordered--error-red {
   @apply border-error-red;
 }
@@ -24,6 +27,9 @@
 }
 .bordered--main-dark-blue-100 {
   @apply border-main-dark-blue/100;
+}
+.bordered--tertiary-blue-100 {
+  @apply border-tertiary-blue/100;
 }
 .bordered--error-red-100 {
   @apply border-error-red/100;
@@ -56,12 +62,18 @@
 .bordered--white-20 {
   @apply border-white/20;
 }
+.bordered--tertiary-blue-20 {
+  @apply border-tertiary-blue/20;
+}
 
 .bordered--main-dark-blue-10 {
   @apply border-main-dark-blue/10;
 }
 .bordered--white-10 {
   @apply border-white/10;
+}
+.bordered--tertiary-blue-10 {
+  @apply border-tertiary-blue/10;
 }
 
 
