@@ -18,6 +18,7 @@ function Button ({
   bordered,
   fullWidth,
   platformaticIcon,
+  platformaticIconAfter,
   selected,
   ...rest
 }) {
@@ -46,8 +47,9 @@ function Button ({
   if (selected) buttonClassName += ' ' + commonStyles[`selected-background-color-${color}`]
   return (
     <button className={buttonClassName} disabled={disabled} alt={label} {...rest}>
-      {platformaticIcon ? <PlatformaticIcon iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' onClick={null} /> : null}
+      {platformaticIcon ? <PlatformaticIcon key='left' iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' onClick={null} /> : null}
       <span className={styles.label}>{label}</span>
+      {platformaticIconAfter ? <PlatformaticIcon key='right' iconName={platformaticIconAfter.iconName} color={platformaticIconAfter.color} data-testid='button-icon' onClick={null} /> : null}
     </button>
   )
 }
@@ -94,9 +96,16 @@ Button.propTypes = {
    */
   fullWidth: PropTypes.bool,
   /**
-   * platformaticIcon: should be removed once we use totally our icons
+   * platformaticIcon: should be removed
    */
   platformaticIcon: PropTypes.shape({
+    iconName: PropTypes.string,
+    color: PropTypes.string
+  }),
+  /**
+   * platformaticIconAfter: should be removed
+   */
+  platformaticIconAfter: PropTypes.shape({
     iconName: PropTypes.string,
     color: PropTypes.string
   }),

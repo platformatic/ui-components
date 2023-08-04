@@ -6,7 +6,20 @@ import commonStyles from '../Common.module.css'
 import { MAIN_DARK_BLUE, MAIN_GREEN, SMALL } from '../constants'
 import PlatformaticIcon from '../PlatformaticIcon'
 
-function Select ({ placeholder, name, value, options, borderColor, errorMessage, onChange, onSelect, onClear, disabled, optionsIconColor }) {
+function Select ({
+  placeholder,
+  name,
+  value,
+  options,
+  borderColor,
+  errorMessage,
+  onChange,
+  onSelect,
+  onClear,
+  disabled,
+  optionsIconColor,
+  optionSelected
+}) {
   const inputRef = useRef()
   const [showOptions, setShowOptions] = useState(false)
   const [isSelected, setIsSelected] = useState(false)
@@ -42,6 +55,12 @@ function Select ({ placeholder, name, value, options, borderColor, errorMessage,
       setIsSelected(false)
     }
   }, [value])
+
+  useEffect(() => {
+    if (optionSelected) {
+      setSelected(optionSelected)
+    }
+  }, [optionSelected])
 
   function renderLi (option, index) {
     return (
@@ -169,7 +188,17 @@ Select.propTypes = {
   /**
    * optionsIconColor
    */
-  optionsIconColor: PropTypes.string
+  optionsIconColor: PropTypes.string,
+  /**
+   * optionSelected
+   */
+  optionSelected: PropTypes.shape({
+    label: PropTypes.string,
+    value: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ])
+  })
 }
 
 Select.defaultProps = {
@@ -184,7 +213,8 @@ Select.defaultProps = {
   onSelect: () => {},
   onClear: () => {},
   disabled: false,
-  optionsIconColor: MAIN_DARK_BLUE
+  optionsIconColor: MAIN_DARK_BLUE,
+  optionSelected: null
 }
 
 export default Select
