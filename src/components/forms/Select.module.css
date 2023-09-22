@@ -9,8 +9,7 @@
 }
 .select.active,
 .select:focus {
-  @apply shadow-main-dark-blue;
-  outline: none;
+  @apply shadow-main-dark-blue outline-none;
 }
 .options {
   @apply absolute left-0 top-[42px] bg-white w-full max-h-[216px] overflow-y-scroll z-20;

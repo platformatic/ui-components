@@ -34,6 +34,7 @@ import CircleEditIcon from './CircleEditIcon'
 import CircleFullIcon from './CircleFullIcon'
 import CircleGearIcon from './CircleGearIcon'
 import CircleRestartIcon from './CircleRestartIcon'
+import CircleSubtractIcon from './CircleSubtractIcon'
 import CircleTwoArrowsDownIcon from './CircleTwoArrowsDownIcon'
 import CircleTwoArrowsUpIcon from './CircleTwoArrowsUpIcon'
 import CloseIcon from './CloseIcon'
@@ -135,6 +136,7 @@ export default {
   CircleFullIcon,
   CircleGearIcon,
   CircleRestartIcon,
+  CircleSubtractIcon,
   CircleTwoArrowsDownIcon,
   CircleTwoArrowsUpIcon,
   CloseIcon,
