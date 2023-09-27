@@ -119,7 +119,7 @@ function Select ({
       if (showOptions) {
         setShowOptions(false)
       }
-    }, 100)
+    }, 250)
   }
 
   return (
