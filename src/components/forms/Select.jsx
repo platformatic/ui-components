@@ -84,7 +84,7 @@ function Select ({
     if (value.length === 0) {
       return (
         <ul className={styles.options}>
-          {options.length > 0 ? options.map((option, index) => renderLi(option, index)) : <li className={styles.option}>No data found</li>}
+          {options.length > 0 ? options.map((option, index) => renderLi(option, index)) : <li className={styles.option}><div className={styles.liContent}>No data found</div></li>}
         </ul>
       )
     }
@@ -93,7 +93,7 @@ function Select ({
 
     return (
       <ul className={styles.options}>
-        {filteredOptions.length > 0 ? filteredOptions.map((option, index) => renderLi(option, index)) : <li className={styles.option}>No data found</li>}
+        {filteredOptions.length > 0 ? filteredOptions.map((option, index) => renderLi(option, index)) : <li className={styles.option}><div className={styles.liContent}>No data found</div></li>}
         {notFilterableOptions.length > 0 && notFilterableOptions.map((option, index) => renderLi(option, index))}
       </ul>
     )
