@@ -15,7 +15,7 @@ function RadioGroup ({ name, radios, errorMessage, onChange, disabled, value }) 
       <div className={styles.radioGroupContainer}>
         {radios.map(radio => (
           <div className={radioContainerClass} key={radio.value}>
-            <input className={styles.radio} type='radio' name={name} value={radio.value} onChange={onChange} disabled={disabled} checked={radio.value === value} />
+            <input className={styles.radio} type='radio' id={radio.name} name={name} value={radio.value} onChange={onChange} disabled={disabled} checked={radio.value === value} />
             <label className={styles.label} htmlFor={radio.name}>{radio.label}</label>
           </div>
         ))}
