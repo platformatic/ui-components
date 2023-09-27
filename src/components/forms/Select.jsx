@@ -72,8 +72,10 @@ function Select ({
           return setSelected(option)
         }}
       >
-        {option.iconName && <PlatformaticIcon iconName={option.iconName} color={optionsIconColor} size={SMALL} onClick={null} />}
-        <span>{option.label}</span>
+        <div className={styles.liContent}>
+          {option.iconName && <PlatformaticIcon iconName={option.iconName} color={optionsIconColor} size={SMALL} onClick={null} />}
+          <span>{option.label}</span>
+        </div>
       </li>
     )
   }
@@ -117,7 +119,7 @@ function Select ({
       if (showOptions) {
         setShowOptions(false)
       }
-    }, 100)
+    }, 250)
   }
 
   return (
