@@ -29,6 +29,7 @@ import CircleCheckMarkFullIcon from './CircleCheckMarkFullIcon'
 import CircleCopyPasteIcon from './CircleCopyPasteIcon'
 import CircleCloseIcon from './CircleCloseIcon'
 import CircleCloseHoverIcon from './CircleCloseHoverIcon'
+import CircleDownloadIcon from './CircleDownloadIcon'
 import CircleExclamationIcon from './CircleExclamationIcon'
 import CircleEditIcon from './CircleEditIcon'
 import CircleFullIcon from './CircleFullIcon'
@@ -132,6 +133,7 @@ export default {
   CircleCopyPasteIcon,
   CircleCloseIcon,
   CircleCloseHoverIcon,
+  CircleDownloadIcon,
   CircleEditIcon,
   CircleFullIcon,
   CircleGearIcon,
