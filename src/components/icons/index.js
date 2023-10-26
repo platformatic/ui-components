@@ -71,6 +71,8 @@ import NameAppIcon from './NameAppIcon'
 import OrganizationIcon from './OrganizationIcon'
 import PlatformaticComposerIcon from './PlatformaticComposerIcon'
 import PlatformaticDBIcon from './PlatformaticDBIcon'
+import PlatformaticRuntimeIcon from './PlatformaticRuntimeIcon'
+import PlatformaticServiceIcon from './PlatformaticServiceIcon'
 import PlayIcon from './PlayIcon'
 import PullRequestIcon from './PullRequestIcon'
 import PullRequestLoadingIcon from './PullRequestLoadingIcon'
@@ -178,6 +180,8 @@ export default {
   OrganizationIcon,
   PlatformaticComposerIcon,
   PlatformaticDBIcon,
+  PlatformaticRuntimeIcon,
+  PlatformaticServiceIcon,
   PlayIcon,
   PullRequestIcon,
   PullRequestLoadingIcon,
