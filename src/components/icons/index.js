@@ -8,6 +8,7 @@ import ApiEmptyIcon from './ApiEmptyIcon'
 import AppIcon from './AppIcon'
 import AppListIcon from './AppListIcon'
 import AppEmptyIcon from './AppEmptyIcon'
+import ApplicationTypeIcon from './ApplicationTypeIcon'
 import AppWorkspace from './AppWorkspace'
 import ArrowDownFullIcon from './ArrowDownFullIcon'
 import ArrowDownIcon from './ArrowDownIcon'
@@ -57,6 +58,7 @@ import GiveOwnershipIcon from './GiveOwnershipIcon'
 import GitHubRepoIcon from './GitHubRepoIcon'
 import GraphQLIcon from './GraphQLIcon'
 import KeyIcon from './KeyIcon'
+import ImportApplicationIcon from './ImportApplicationIcon'
 import LabelIcon from './LabelIcon'
 import LayersIcon from './LayersIcon'
 import LensIcon from './LensIcon'
@@ -67,6 +69,8 @@ import MetricsIcon from './MetricsIcon'
 import MetricsLoadingIcon from './MetricsLoadingIcon'
 import NameAppIcon from './NameAppIcon'
 import OrganizationIcon from './OrganizationIcon'
+import PlatformaticComposerIcon from './PlatformaticComposerIcon'
+import PlatformaticDBIcon from './PlatformaticDBIcon'
 import PlayIcon from './PlayIcon'
 import PullRequestIcon from './PullRequestIcon'
 import PullRequestLoadingIcon from './PullRequestLoadingIcon'
@@ -111,6 +115,7 @@ export default {
   AppIcon,
   AppListIcon,
   AppEmptyIcon,
+  ApplicationTypeIcon,
   AppWorkspace,
   ArrowDownFullIcon,
   ArrowDownIcon,
@@ -159,6 +164,7 @@ export default {
   GiveOwnershipIcon,
   GitHubRepoIcon,
   GraphQLIcon,
+  ImportApplicationIcon,
   KeyIcon,
   LabelIcon,
   LayersIcon,
@@ -170,6 +176,8 @@ export default {
   MetricsLoadingIcon,
   NameAppIcon,
   OrganizationIcon,
+  PlatformaticComposerIcon,
+  PlatformaticDBIcon,
   PlayIcon,
   PullRequestIcon,
   PullRequestLoadingIcon,
