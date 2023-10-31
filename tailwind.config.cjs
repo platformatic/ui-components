@@ -2,14 +2,18 @@
 module.exports = {
   content: ['./src/**/*.{html,jsx}'],
   theme: {
+    screens: {
+      xs: '350px',
+      sm: '390px',
+      md: '744px',
+      lg: '1240px',
+      xl: '1440px',
+      '2xl': '1920px'
+    },
     container: {
       center: true
     },
     extend: {
-      screens: {
-        lg: '1440px'
-        // => @media (min-width: 1440px) { ... }
-      },
       boxShadow: {
         wrap: '0px 0px 4px rgba(0, 0, 0, 0.5)',
         'main-green': '0px 0px 4px rgba(33, 250, 144, 0.5)',
