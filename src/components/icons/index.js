@@ -5,14 +5,17 @@ import ApiCloudIcon from './ApiCloudIcon'
 import ApiIcon from './ApiIcon'
 import ApiIconClosed from './ApiIconClosed'
 import ApiEmptyIcon from './ApiEmptyIcon'
+import ApiPerformanceIcon from './ApiPerformanceIcon'
 import AppIcon from './AppIcon'
 import AppListIcon from './AppListIcon'
 import AppEmptyIcon from './AppEmptyIcon'
+import ApplicationTypeIcon from './ApplicationTypeIcon'
 import AppWorkspace from './AppWorkspace'
 import ArrowDownFullIcon from './ArrowDownFullIcon'
 import ArrowDownIcon from './ArrowDownIcon'
 import ArrowLeftIcon from './ArrowLeftIcon'
 import ArrowRightIcon from './ArrowRightIcon'
+import ArrowLongRightIcon from './ArrowLongRightIcon'
 import ArrowUpIcon from './ArrowUpIcon'
 import BellIcon from './BellIcon'
 import BillingIcon from './BillingIcon'
@@ -39,14 +42,17 @@ import CircleSubtractIcon from './CircleSubtractIcon'
 import CircleTwoArrowsDownIcon from './CircleTwoArrowsDownIcon'
 import CircleTwoArrowsUpIcon from './CircleTwoArrowsUpIcon'
 import CloseIcon from './CloseIcon'
+import CloudIcon from './CloudIcon'
 import CreditCardIcon from './CreditCardIcon'
 import CopyPasteIcon from './CopyPasteIcon'
 import ConfigureDatabaseIcon from './ConfigureDatabaseIcon'
 import CreatingAppIcon from './CreatingAppIcon'
 import DatabaseIcon from './DatabaseIcon'
 import DatabaseMigrationIcon from './DatabaseMigrationIcon'
+import DepencenciesReloadIcon from './DepencenciesReloadIcon'
 import EyeClosedIcon from './EyeClosedIcon'
 import EyeOpenedIcon from './EyeOpenedIcon'
+import EditDocumentIcon from './EditDocumentIcon'
 import EditIcon from './EditIcon'
 import ExploreDocIcon from './ExploreDocIcon'
 import EnlargeIcon from './EnlargeIcon'
@@ -55,8 +61,10 @@ import GearIcon from './GearIcon'
 import GenerationLoadingIcon from './GenerationLoadingIcon'
 import GiveOwnershipIcon from './GiveOwnershipIcon'
 import GitHubRepoIcon from './GitHubRepoIcon'
+import GitHubRepo2Icon from './GitHubRepo2Icon'
 import GraphQLIcon from './GraphQLIcon'
 import KeyIcon from './KeyIcon'
+import ImportApplicationIcon from './ImportApplicationIcon'
 import LabelIcon from './LabelIcon'
 import LayersIcon from './LayersIcon'
 import LensIcon from './LensIcon'
@@ -67,7 +75,13 @@ import MetricsIcon from './MetricsIcon'
 import MetricsLoadingIcon from './MetricsLoadingIcon'
 import NameAppIcon from './NameAppIcon'
 import OrganizationIcon from './OrganizationIcon'
+import OutOfBoxGraphQLIcon from './OutOfBoxGraphQLIcon'
+import PlatformaticComposerIcon from './PlatformaticComposerIcon'
+import PlatformaticDBIcon from './PlatformaticDBIcon'
+import PlatformaticRuntimeIcon from './PlatformaticRuntimeIcon'
+import PlatformaticServiceIcon from './PlatformaticServiceIcon'
 import PlayIcon from './PlayIcon'
+import PreviewPRIcon from './PreviewPRIcon'
 import PullRequestIcon from './PullRequestIcon'
 import PullRequestLoadingIcon from './PullRequestLoadingIcon'
 import RequestOwnershipIcon from './RequestOwnershipIcon'
@@ -108,14 +122,17 @@ export default {
   ApiIcon,
   ApiIconClosed,
   ApiEmptyIcon,
+  ApiPerformanceIcon,
   AppIcon,
   AppListIcon,
   AppEmptyIcon,
+  ApplicationTypeIcon,
   AppWorkspace,
   ArrowDownFullIcon,
   ArrowDownIcon,
   ArrowLeftIcon,
   ArrowRightIcon,
+  ArrowLongRightIcon,
   ArrowUpIcon,
   BellIcon,
   BillingIcon,
@@ -142,12 +159,15 @@ export default {
   CircleTwoArrowsDownIcon,
   CircleTwoArrowsUpIcon,
   CloseIcon,
+  CloudIcon,
   CreditCardIcon,
   CopyPasteIcon,
   ConfigureDatabaseIcon,
   CreatingAppIcon,
   DatabaseIcon,
   DatabaseMigrationIcon,
+  DepencenciesReloadIcon,
+  EditDocumentIcon,
   EditIcon,
   EyeClosedIcon,
   EyeOpenedIcon,
@@ -158,7 +178,9 @@ export default {
   GenerationLoadingIcon,
   GiveOwnershipIcon,
   GitHubRepoIcon,
+  GitHubRepo2Icon,
   GraphQLIcon,
+  ImportApplicationIcon,
   KeyIcon,
   LabelIcon,
   LayersIcon,
@@ -170,7 +192,13 @@ export default {
   MetricsLoadingIcon,
   NameAppIcon,
   OrganizationIcon,
+  OutOfBoxGraphQLIcon,
+  PlatformaticComposerIcon,
+  PlatformaticDBIcon,
+  PlatformaticRuntimeIcon,
+  PlatformaticServiceIcon,
   PlayIcon,
+  PreviewPRIcon,
   PullRequestIcon,
   PullRequestLoadingIcon,
   RequestOwnershipIcon,

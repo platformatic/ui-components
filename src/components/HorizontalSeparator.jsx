@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import commonStyles from './Common.module.css'
-import { DARK_GREEN, MAIN_DARK_BLUE } from './constants'
+import { DARK_GREEN, MAIN_DARK_BLUE, WHITE } from './constants'
 import styles from './HorizontalSeparator.module.css'
 function HorizontalSeparator ({ marginTop, marginBottom, color, opacity }) {
   function getClassName () {
@@ -29,7 +29,7 @@ HorizontalSeparator.propTypes = {
   /**
    * color
    */
-  color: PropTypes.oneOf([DARK_GREEN, MAIN_DARK_BLUE]),
+  color: PropTypes.oneOf([DARK_GREEN, MAIN_DARK_BLUE, WHITE]),
   /**
    * opacity
    */
