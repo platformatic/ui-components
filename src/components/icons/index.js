@@ -97,7 +97,7 @@ import SocialGitHubIcon from './SocialGitHubIcon'
 import SocialGitLabIcon from './SocialGitLabIcon'
 import SocialLinkedInIcon from './SocialLinkedInIcon'
 import SocialNPMIcon from './SocialNPMIcon'
-import SocialTwitterIcon from './SocialTwitterIcon'
+import SocialXIcon from './SocialXIcon'
 import StopIcon from './StopIcon'
 import TerminalIcon from './TerminalIcon'
 import TwoUsersIcon from './TwoUsersIcon'
@@ -215,7 +215,7 @@ export default {
   SocialGitLabIcon,
   SocialLinkedInIcon,
   SocialNPMIcon,
-  SocialTwitterIcon,
+  SocialXIcon,
   TerminalIcon,
   UpgradeIcon,
   UserIcon,

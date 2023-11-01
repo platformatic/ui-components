@@ -4,12 +4,6 @@
 .containerDashboard {
   @apply flex items-center;
 }
-.labelFrontpage {
-  @apply uppercase tracking-more-widest text-sm mr-8;
-}
-.labelDashboard {
-  @apply text-xs mr-2;
-}
 .iconFrontpage {
   @apply text-white text-xl hover:cursor-pointer hover:scale-125;
 }

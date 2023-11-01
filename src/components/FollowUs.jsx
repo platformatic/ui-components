@@ -1,16 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import commonStyles from './Common.module.css'
 import styles from './FollowUs.module.css'
 import Icons from './icons'
 import { MAIN_GREEN, WHITE, MEDIUM, SMALL, MAIN_DARK_BLUE, LIGHT_GREEN } from './constants'
 
-function FollowUs ({ label, useOnFrontpage, iconColor, iconSize, labelColor }) {
+function FollowUs ({ label, labelClassName, useOnFrontpage, iconColor, iconSize, labelColor }) {
   const suffix = useOnFrontpage ? 'Frontpage' : 'Dashboard'
   const className = styles[`container${suffix}`]
   const iconClassName = styles[`icon${suffix}`]
-  let labelClassName = styles[`label${suffix}`]
-  labelClassName += ' ' + commonStyles[`text--${labelColor}`]
 
   return (
     <div className={className}>
@@ -19,7 +16,7 @@ function FollowUs ({ label, useOnFrontpage, iconColor, iconSize, labelColor }) {
       </div>
       <div className={iconClassName}>
         <a href='https://twitter.com/platformatic' target='_blank' rel='noopener noreferrer'>
-          <Icons.SocialTwitterIcon color={iconColor} size={iconSize} />
+          <Icons.SocialXIcon color={iconColor} size={iconSize} />
         </a>
       </div>
       <div className={iconClassName}>
@@ -46,6 +43,10 @@ FollowUs.propTypes = {
    * label
    */
   label: PropTypes.string,
+  /**
+   * labelClassName
+   */
+  labelClassName: PropTypes.string,
   /**
    * frontPageAspect
    */
