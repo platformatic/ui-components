@@ -67,6 +67,7 @@ FollowUs.propTypes = {
 
 FollowUs.defaultProps = {
   label: 'Follow us on',
+  labelClassName: '',
   useOnFrontpage: true,
   labelColor: LIGHT_GREEN,
   iconColor: WHITE,
