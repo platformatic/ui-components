@@ -1,7 +1,10 @@
 .container {
-  @apply max-w-[216px] w-full p-4 border border-white rounded-md h-auto relative min-h-[80vh] z-10 bg-dark-blue;
+  @apply max-w-[216px] w-full p-4 border border-white rounded-md h-auto relative min-h-[80vh] z-10 bg-dark-blue flex flex-col gap-y-6 justify-between;
   transition: max-width 0.2s linear;
 }
+.content {
+  @apply flex flex-col justify-between
+} 
 .collapsed {
   @apply max-w-[96px] text-center;
 }
@@ -53,9 +56,6 @@
 }
 .items {
   @apply flex flex-col gap-y-4;
-}
-.bottom {
-  @apply absolute left-0 bottom-[1rem] w-full px-4;
 }
 .titleSettings {
   @apply text-white font-semibold ml-3;
