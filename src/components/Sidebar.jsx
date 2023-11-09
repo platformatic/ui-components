@@ -40,95 +40,100 @@ function Sidebar (props) {
 
   return (
     <div className={`${styles.container} ${collapsed && styles.collapsed}`}>
-      {collapsed
-        ? (
-          <>
-            <ButtonFullRounded
-              className={buttonFullRoundedClassName}
-              iconName='CircleArrowRightIcon'
-              iconSize={MEDIUM}
-              iconColor={WHITE}
-              hoverEffect={BACKGROUND_COLOR_OPAQUE}
-              onClick={() => { setCollapsed(false) }}
-              bordered={false}
-            />
-            <button type='button' className={styles.buttonExpand} onClick={() => { setCollapsed(false) }}>
-              <Icons.WorkspaceStaticIcon color='white' size='large' />
-            </button>
-            <div className={styles.titleCollapsed} data-testid='lateral-bar-title'>
-              {title}
-            </div>
-            <HorizontalSeparator marginBottom={0} marginTop={0} />
-            <div className={styles.bottom}>
-              <button type='button' className={styles.buttonSettings} onClick={onClickSettings}>
-                <Icons.GearIcon color='white' size='large' />
-              </button>
-            </div>
-          </>
-          )
-        : (
-          <>
-            <ButtonFullRounded
-              className={buttonFullRoundedClassName}
-              iconName='CircleArrowLeftIcon'
-              iconSize={MEDIUM}
-              iconColor={WHITE}
-              hoverEffect={BACKGROUND_COLOR_OPAQUE}
-              onClick={() => { setCollapsed(true) }}
-              bordered={false}
-            />
-            <div className={styles.title} data-testid='lateral-bar-title'>
-              {title}
-            </div>
-            <div className={styles.items} data-test-id='lateral-bar-items'>
-              {items.map(item => {
-                const isSelected = selectedItem === item.id
-                return (
-                  <React.Fragment key={item.id}>
-                    <button className={`${styles.buttonItem} ${collapsed && styles.buttonItemCollapsed}`} type='button' onClick={() => onClickItemSelected(item)}>
-                      {item.iconName && (<PlatformaticIcon
-                        iconName={item.iconName}
-                        color={isSelected ? 'main-green' : 'white'}
-                        tip={item.title}
-                        size='medium'
-                                         />)}
-                      <div className={`${styles.item} ${isSelected ? styles.itemSelected : ''}`}>
-                        <span className={styles.itemSubTitle}>{item.subTitle}</span>
-                        <span className={styles.itemTitle}>{item.title}</span>
-                      </div>
-                    </button>
-                    <ReactTooltip place='top' type='info' />
-                  </React.Fragment>
-                )
-              })}
-              <button className={`${styles.buttonCreate} ${collapsed && styles.buttonItemCollapsed} ${disabledCreateButton} ${!disableClickAdd && styles.hoverSemibold}`} onClick={onClickAdd} disabled={disableClickAdd}>
-                <PlatformaticIcon
-                  iconName='CircleAddIcon'
-                  color='white'
-                  size='medium'
-                  tip={addTitle}
-                  onClick={null}
-                />
-                {!collapsed && <span className={styles.item}>{addTitle}</span>}
-              </button>
-            </div>
-            <HorizontalSeparator marginBottom={2} marginTop={2} />
-
-            <div className={styles.bottom}>
-              <Button
-                label={labelButtonSettings}
-                color={WHITE}
-                onClick={onClickSettings}
-                platformaticIcon={{ iconName: 'GearIcon', color: WHITE }}
-                fullWidth
-                bold
-                size={MEDIUM}
-                disabled={disableClickSettings}
+      <div>
+        {collapsed
+          ? (
+            <>
+              <ButtonFullRounded
+                className={buttonFullRoundedClassName}
+                iconName='CircleArrowRightIcon'
+                iconSize={MEDIUM}
+                iconColor={WHITE}
                 hoverEffect={BACKGROUND_COLOR_OPAQUE}
+                onClick={() => { setCollapsed(false) }}
+                bordered={false}
               />
-            </div>
-          </>
-          )}
+              <button type='button' className={styles.buttonExpand} onClick={() => { setCollapsed(false) }}>
+                <Icons.WorkspaceStaticIcon color='white' size='large' />
+              </button>
+              <div className={styles.titleCollapsed} data-testid='lateral-bar-title'>
+                {title}
+              </div>
+              <HorizontalSeparator marginBottom={0} marginTop={0} />
+            </>
+            )
+          : (
+            <>
+              <ButtonFullRounded
+                className={buttonFullRoundedClassName}
+                iconName='CircleArrowLeftIcon'
+                iconSize={MEDIUM}
+                iconColor={WHITE}
+                hoverEffect={BACKGROUND_COLOR_OPAQUE}
+                onClick={() => { setCollapsed(true) }}
+                bordered={false}
+              />
+              <div className={styles.title} data-testid='lateral-bar-title'>
+                {title}
+              </div>
+              <div className={styles.items} data-test-id='lateral-bar-items'>
+                {items.map(item => {
+                  const isSelected = selectedItem === item.id
+                  return (
+                    <React.Fragment key={item.id}>
+                      <button className={`${styles.buttonItem} ${collapsed && styles.buttonItemCollapsed}`} type='button' onClick={() => onClickItemSelected(item)}>
+                        {item.iconName && (<PlatformaticIcon
+                          iconName={item.iconName}
+                          color={isSelected ? 'main-green' : 'white'}
+                          tip={item.title}
+                          size='medium'
+                                           />)}
+                        <div className={`${styles.item} ${isSelected ? styles.itemSelected : ''}`}>
+                          <span className={styles.itemSubTitle}>{item.subTitle}</span>
+                          <span className={styles.itemTitle}>{item.title}</span>
+                        </div>
+                      </button>
+                      <ReactTooltip place='top' type='info' />
+                    </React.Fragment>
+                  )
+                })}
+                <button className={`${styles.buttonCreate} ${collapsed && styles.buttonItemCollapsed} ${disabledCreateButton} ${!disableClickAdd && styles.hoverSemibold}`} onClick={onClickAdd} disabled={disableClickAdd}>
+                  <PlatformaticIcon
+                    iconName='CircleAddIcon'
+                    color='white'
+                    size='medium'
+                    tip={addTitle}
+                    onClick={null}
+                  />
+                  {!collapsed && <span className={styles.item}>{addTitle}</span>}
+                </button>
+              </div>
+              <HorizontalSeparator marginBottom={2} marginTop={2} />
+            </>
+            )}
+      </div>
+
+      <div>
+        {collapsed
+          ? (
+            <button type='button' className={styles.buttonSettings} onClick={onClickSettings}>
+              <Icons.GearIcon color='white' size='large' />
+            </button>
+            )
+          : (
+            <Button
+              label={labelButtonSettings}
+              color={WHITE}
+              onClick={onClickSettings}
+              platformaticIcon={{ iconName: 'GearIcon', color: WHITE }}
+              fullWidth
+              bold
+              size={MEDIUM}
+              disabled={disableClickSettings}
+              hoverEffect={BACKGROUND_COLOR_OPAQUE}
+            />
+            )}
+      </div>
     </div>
   )
 }
