@@ -1,3 +1,6 @@
+.style {
+  @apply border-b-0 border-t;
+}
 .marginY-4 {
   @apply my-4;
 }
@@ -8,6 +11,18 @@
 
 .marginB-4 {
   @apply mb-4;
+}
+
+.marginY-8 {
+  @apply my-8;
+}
+
+.marginT-8 {
+  @apply mt-8;
+}
+
+.marginB-8 {
+  @apply mb-8;
 }
 
 .marginY-10 {

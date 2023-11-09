@@ -9,6 +9,8 @@ export const TRANSPARENT = 'transparent'
 export const TERTIARY_BLUE = 'tertiary-blue'
 export const ERROR_RED = 'error-red'
 export const WARNING_YELLOW = 'warning-yellow'
+export const RICH_BLACK = 'rich-black'
+
 export const NONE = 'none'
 export const EXTRA_SMALL = 'extra-small'
 export const SMALL = 'small'
@@ -26,7 +28,7 @@ export const HOVER_EFFECTS_BUTTONS = [BOX_SHADOW, BACKGROUND_COLOR_OPAQUE, UNDER
 export const MODAL_SIZES = [SMALL, MEDIUM, FULL_WIDTH]
 
 export const COLORS_ICON = [MAIN_GREEN, WHITE, MAIN_DARK_BLUE, ERROR_RED, WARNING_YELLOW, TERTIARY_BLUE]
-export const COLORS_BUTTON = [MAIN_GREEN, DARK_GREEN, LIGHT_GREEN, MAIN_DARK_BLUE, DARK_BLUE, LIGHT_BLUE, WHITE, ERROR_RED, TERTIARY_BLUE, TRANSPARENT]
+export const COLORS_BUTTON = [MAIN_GREEN, DARK_GREEN, LIGHT_GREEN, MAIN_DARK_BLUE, DARK_BLUE, LIGHT_BLUE, WHITE, ERROR_RED, TERTIARY_BLUE, TRANSPARENT, RICH_BLACK]
 export const COLORS_BORDERED_BOX = [MAIN_GREEN, ERROR_RED, WHITE, DARK_BLUE, MAIN_DARK_BLUE, WARNING_YELLOW, TRANSPARENT, LIGHT_BLUE, TERTIARY_BLUE]
 
 export const MODAL_POPUP = 'popup'
@@ -49,6 +51,7 @@ export const ROLE_USER = 'user'
 export const ROLE_OWNER = 'owner'
 
 export const MARGIN_10 = 10
+export const MARGIN_8 = 8
 export const MARGIN_0 = 0
 
 export const OPACITY_20 = 20

@@ -6,7 +6,8 @@ import { DARK_GREEN, MAIN_DARK_BLUE, WHITE } from './constants'
 import styles from './HorizontalSeparator.module.css'
 function HorizontalSeparator ({ marginTop, marginBottom, color, opacity }) {
   function getClassName () {
-    let className = commonStyles[`text--${color}`] + ' '
+    let className = `${styles.style} `
+    className += commonStyles[`text--${color}`] + ' '
     // margin
     className += (marginTop === marginBottom ? `${styles['marginY-' + marginTop]}` : `${styles['marginT-' + marginTop]} ${styles['marginB-' + marginBottom]}`)
     // opacity

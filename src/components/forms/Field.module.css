@@ -10,6 +10,9 @@
 .text-color-error-red {
   @apply text-error-red;
 }
+.text-color-white {
+  @apply text-white;
+}
 .helper{
   @apply text-sm pb-4;
 }

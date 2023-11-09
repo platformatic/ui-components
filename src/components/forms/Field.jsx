@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Field.module.css'
+import { ERROR_RED, MAIN_DARK_BLUE, WHITE } from '../constants'
 
 function Field ({ title, titleColor, helper, children, disabled, required }) {
   let className = `${styles.container}`
@@ -29,7 +30,7 @@ Field.propTypes = {
   /**
    * titleColor
    */
-  titleColor: PropTypes.oneOf(['error-red', 'main-dark-blue']),
+  titleColor: PropTypes.oneOf([ERROR_RED, MAIN_DARK_BLUE, WHITE]),
   /**
    * helper
    */

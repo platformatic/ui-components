@@ -7,9 +7,10 @@ import PlatformaticIcon from '../PlatformaticIcon'
 import { MAIN_DARK_BLUE, MAIN_GREEN } from '../constants'
 import BorderedBox from '../BorderedBox'
 
-function Input ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled, beforeIcon, afterIcon, focused, placeholderApart }) {
+function Input ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled, beforeIcon, afterIcon, focused, placeholderApart, backgroundTransparent }) {
   let inputClassName = `${commonStyles.fullWidth} ${styles.input} `
   inputClassName += commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`]
+  if (backgroundTransparent) inputClassName += ` ${commonStyles['background-color-transparent']}`
   const showError = errorMessage.length > 0
   if (showError) inputClassName += ' ' + commonStyles['bordered--error-red']
   if (disabled) inputClassName += ' ' + commonStyles['apply-opacity-30']
@@ -80,7 +81,11 @@ Input.propTypes = {
   /**
    * placeholderApart
    */
-  placeholderApart: PropTypes.bool
+  placeholderApart: PropTypes.bool,
+  /**
+   * backgroundTransparent
+   */
+  backgroundTransparent: PropTypes.bool
 }
 
 Input.defaultProps = {
@@ -94,7 +99,8 @@ Input.defaultProps = {
   beforeIcon: null,
   afterIcon: null,
   focused: false,
-  shadowPlaceholder: false
+  shadowPlaceholder: false,
+  backgroundTransparent: false
 }
 
 export default Input
