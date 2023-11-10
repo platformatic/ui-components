@@ -1,11 +1,11 @@
 .blur {
-  @apply absolute top-0 left-0 w-full h-screen translate-x-[-50%] translate-y-[-50%] z-10 bg-rich-black/75;
+  @apply absolute top-0 left-0 w-full h-full translate-x-[-50%] translate-y-[-50%] z-10 bg-rich-black/75;
 }
 .container {
   @apply z-20;
 }
 .modalLeftCover {
-  @apply fixed top-0 -right-[100%] h-screen max-w-[75%] min-h-screen min-w-[75%] overflow-y-auto w-full;
+  @apply fixed top-0 -right-[100%] max-w-[75%] min-w-[75%] overflow-y-auto w-full min-h-full h-full;
 }
 .modalLeftCoverEntering {
   animation: come-in 400ms forwards;
@@ -17,7 +17,8 @@
   @apply flex items-center gap-x-2 pb-4;
 }
 .modalLefty {
-  @apply py-20 px-[7.5rem] bg-rich-black border-solid border-white border-l h-full;
+  @apply py-20 px-[7.5rem] bg-rich-black border-solid border-white border-l;
+  height: calc(100% - 10rem);
 }
 
 @keyframes come-in {
