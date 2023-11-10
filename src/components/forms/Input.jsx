@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import styles from './Input.module.css'
 import commonStyles from '../Common.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
-import { MAIN_DARK_BLUE, MAIN_GREEN } from '../constants'
+import { MAIN_DARK_BLUE, MAIN_GREEN, WHITE } from '../constants'
 import BorderedBox from '../BorderedBox'
 
 function Input ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled, beforeIcon, afterIcon, focused, placeholderApart, backgroundTransparent }) {
@@ -49,7 +49,7 @@ Input.propTypes = {
   /**
    * color of border
    */
-  borderColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE]),
+  borderColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE, WHITE]),
   /**
    * onChange
    */
