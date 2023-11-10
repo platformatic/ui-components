@@ -14,8 +14,9 @@ import AppWorkspace from './AppWorkspace'
 import ArrowDownFullIcon from './ArrowDownFullIcon'
 import ArrowDownIcon from './ArrowDownIcon'
 import ArrowLeftIcon from './ArrowLeftIcon'
-import ArrowRightIcon from './ArrowRightIcon'
+import ArrowLongLeftIcon from './ArrowLongLeftIcon'
 import ArrowLongRightIcon from './ArrowLongRightIcon'
+import ArrowRightIcon from './ArrowRightIcon'
 import ArrowUpIcon from './ArrowUpIcon'
 import BellIcon from './BellIcon'
 import BillingIcon from './BillingIcon'
@@ -131,8 +132,9 @@ export default {
   ArrowDownFullIcon,
   ArrowDownIcon,
   ArrowLeftIcon,
-  ArrowRightIcon,
+  ArrowLongLeftIcon,
   ArrowLongRightIcon,
+  ArrowRightIcon,
   ArrowUpIcon,
   BellIcon,
   BillingIcon,
