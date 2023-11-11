@@ -99,8 +99,8 @@ import SocialGitLabIcon from './SocialGitLabIcon'
 import SocialLinkedInIcon from './SocialLinkedInIcon'
 import SocialNPMIcon from './SocialNPMIcon'
 import SocialXIcon from './SocialXIcon'
-import StackablesPlugin from './StackablesPlugin'
-import StackablesTemplate from './StackablesTemplate'
+import StackablesPluginIcon from './StackablesPluginIcon'
+import StackablesTemplateIcon from './StackablesTemplateIcon'
 import StopIcon from './StopIcon'
 import TerminalIcon from './TerminalIcon'
 import TwoUsersIcon from './TwoUsersIcon'
@@ -212,8 +212,8 @@ export default {
   SendIcon,
   ServiceIcon,
   StopIcon,
-  StackablesPlugin,
-  StackablesTemplate,
+  StackablesPluginIcon,
+  StackablesTemplateIcon,
   SlotIcon,
   SwitchIcon,
   SocialDiscordIcon,
