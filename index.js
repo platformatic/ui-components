@@ -31,6 +31,7 @@ import ModalStepsForward from './src/components/ModalStepsForward'
 import PlatformaticIcon from './src/components/PlatformaticIcon'
 import Playground from './src/components/Playground'
 import SearchBar from './src/components/SearchBar'
+import SearchBarV2 from './src/components/SearchBarV2'
 import SimpleMetric from './src/components/SimpleMetric'
 import Status from './src/components/Status'
 import TabbedWindow from './src/components/TabbedWindow'
@@ -72,6 +73,7 @@ export {
   PlatformaticIcon,
   Playground,
   SearchBar,
+  SearchBarV2,
   SimpleMetric,
   Status,
   TabbedWindow,
