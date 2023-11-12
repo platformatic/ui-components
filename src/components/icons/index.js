@@ -99,12 +99,14 @@ import SocialGitLabIcon from './SocialGitLabIcon'
 import SocialLinkedInIcon from './SocialLinkedInIcon'
 import SocialNPMIcon from './SocialNPMIcon'
 import SocialXIcon from './SocialXIcon'
+import SortableIcon from './SortableIcon'
 import StackablesPluginIcon from './StackablesPluginIcon'
 import StackablesTemplateIcon from './StackablesTemplateIcon'
 import StopIcon from './StopIcon'
 import TerminalIcon from './TerminalIcon'
 import TwoUsersIcon from './TwoUsersIcon'
 import TeamsIcon from './TeamsIcon'
+import TrashIcon from './TrashIcon'
 import UpgradeIcon from './UpgradeIcon'
 import UserIcon from './UserIcon'
 import UserRemoveIcon from './UserRemoveIcon'
@@ -222,13 +224,15 @@ export default {
   SocialLinkedInIcon,
   SocialNPMIcon,
   SocialXIcon,
+  SortableIcon,
   TerminalIcon,
+  TeamsIcon,
+  TwoUsersIcon,
+  TrashIcon,
   UpgradeIcon,
   UserIcon,
   UserRemoveIcon,
   UserRoleIcon,
-  TeamsIcon,
-  TwoUsersIcon,
   WorkspaceDynamicIcon,
   WorkspaceEmptyIcon,
   WorkspaceFailIcon,
