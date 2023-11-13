@@ -43,7 +43,27 @@
 .bordered--white-100 {
   @apply border-white/100;
 }
-
+.bordered--main-green-30 {
+  @apply border-main-green/30;
+}
+.bordered--main-dark-blue-30 {
+  @apply border-main-dark-blue/30;
+}
+.bordered--error-red-30 {
+  @apply border-error-red/30;
+}
+.bordered--warning-yellow-30 {
+  @apply border-warning-yellow/30;
+}
+.bordered--dark-blue-30 {
+  @apply border-dark-blue/30;
+}
+.bordered--white-30 {
+  @apply border-white/30;
+}
+.bordered--tertiary-blue-30 {
+  @apply border-tertiary-blue/30;
+}
 .bordered--main-green-20 {
   @apply border-main-green/20;
 }
@@ -65,7 +85,6 @@
 .bordered--tertiary-blue-20 {
   @apply border-tertiary-blue/20;
 }
-
 .bordered--main-dark-blue-10 {
   @apply border-main-dark-blue/10;
 }

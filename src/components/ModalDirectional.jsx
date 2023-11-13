@@ -22,7 +22,7 @@ function ModalDirectional ({
     setVariantModalClassName(`${modalClassName} ${styles.modalLeftCoverEntering}`)
   }, [])
 
-  useEscapeKey(() => closeModal)
+  useEscapeKey(() => closeModal())
 
   function closeModal () {
     setVariantModalClassName(`${modalClassName} ${styles.modalLeftCoverLeaving}`)

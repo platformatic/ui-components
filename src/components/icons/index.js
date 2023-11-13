@@ -58,6 +58,7 @@ import EditIcon from './EditIcon'
 import ExploreDocIcon from './ExploreDocIcon'
 import EnlargeIcon from './EnlargeIcon'
 import EntryIcon from './EntryIcon'
+import FoldersIcon from './FoldersIcon'
 import GearIcon from './GearIcon'
 import GenerationLoadingIcon from './GenerationLoadingIcon'
 import GiveOwnershipIcon from './GiveOwnershipIcon'
@@ -180,6 +181,7 @@ export default {
   ExploreDocIcon,
   EnlargeIcon,
   EntryIcon,
+  FoldersIcon,
   GearIcon,
   GenerationLoadingIcon,
   GiveOwnershipIcon,
