@@ -5,13 +5,10 @@
   @apply w-full p-0 bg-transparent border-none text-white ;
 }
 .onFocus {
-  @apply border-main-green;
-}
-.onBlur {
   @apply border-white;
 }
-.fillGreen {
-  @apply fill-main-green;
+.onBlur {
+  @apply border-white/15;
 }
 .fillWhite {
   @apply fill-white;
