@@ -13,9 +13,11 @@ function ModalDirectional ({
   setIsOpen,
   title,
   titleClassName,
-  children
+  children,
+  smallLayout
 }) {
-  const [modalClassName] = useState(`${styles.container} ${styles.modalLeftCover}`)
+  const className = `${styles.container} ${styles.modalLeftCover} ${smallLayout ? styles.smallLayout : styles.normalLayout}`
+  const [modalClassName] = useState(className)
   const [variantModalClassName, setVariantModalClassName] = useState(`${styles.container} ${styles.modalLeftCover}`)
 
   useEffect(() => {
@@ -63,14 +65,19 @@ ModalDirectional.propTypes = {
   /**
    * title
    */
-  titleClassName: PropTypes.string
+  titleClassName: PropTypes.string,
+  /**
+   * smallLayout
+   */
+  smallLayout: PropTypes.bool
 }
 
 ModalDirectional.defaultProps = {
   children: null,
   setIsOpen: () => {},
   title: '',
-  titleClassName: ''
+  titleClassName: '',
+  smallLayout: false
 }
 
 export default ModalDirectional

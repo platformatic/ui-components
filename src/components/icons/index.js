@@ -51,13 +51,14 @@ import CreatingAppIcon from './CreatingAppIcon'
 import DatabaseIcon from './DatabaseIcon'
 import DatabaseMigrationIcon from './DatabaseMigrationIcon'
 import DepencenciesReloadIcon from './DepencenciesReloadIcon'
-import EyeClosedIcon from './EyeClosedIcon'
-import EyeOpenedIcon from './EyeOpenedIcon'
 import EditDocumentIcon from './EditDocumentIcon'
 import EditIcon from './EditIcon'
-import ExploreDocIcon from './ExploreDocIcon'
 import EnlargeIcon from './EnlargeIcon'
 import EntryIcon from './EntryIcon'
+import ExpandIcon from './ExpandIcon'
+import ExploreDocIcon from './ExploreDocIcon'
+import EyeClosedIcon from './EyeClosedIcon'
+import EyeOpenedIcon from './EyeOpenedIcon'
 import FoldersIcon from './FoldersIcon'
 import GearIcon from './GearIcon'
 import GenerationLoadingIcon from './GenerationLoadingIcon'
@@ -178,6 +179,7 @@ export default {
   EditIcon,
   EyeClosedIcon,
   EyeOpenedIcon,
+  ExpandIcon,
   ExploreDocIcon,
   EnlargeIcon,
   EntryIcon,

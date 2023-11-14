@@ -11,6 +11,9 @@ export default {
     },
     titleClassName: {
       type: 'string'
+    },
+    smallLayout: {
+      type: 'bool'
     }
   }
 }
