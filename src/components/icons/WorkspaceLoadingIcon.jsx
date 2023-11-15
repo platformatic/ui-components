@@ -3,8 +3,11 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, EXTRA_LARGE, MEDIUM, MAIN_DARK_BLUE } from '../constants'
 
-const WorkspaceLoadingIcon = ({ color, size }) => {
-  const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
+const WorkspaceLoadingIcon = ({ color, size, disabled }) => {
+  let className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
+  if (disabled) {
+    className += ` ${styles.iconDisabled}`
+  }
   const filledClassName = styles[`filled-${color}`]
 
   let icon = <></>
@@ -46,12 +49,16 @@ WorkspaceLoadingIcon.propTypes = {
   /**
    * Size
    */
-  size: PropTypes.oneOf(SIZES)
+  size: PropTypes.oneOf(SIZES),
+  /**
+   * disabled
+   */
+  disabled: PropTypes.bool
 }
-
 WorkspaceLoadingIcon.defaultProps = {
   color: MAIN_DARK_BLUE,
-  size: MEDIUM
+  size: MEDIUM,
+  disabled: false
 }
 
 export default WorkspaceLoadingIcon

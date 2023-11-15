@@ -3,8 +3,11 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, MEDIUM, MAIN_DARK_BLUE } from '../constants'
 
-const CircleCheckMarkFullIcon = ({ color, size }) => {
-  const className = styles.noShrinkForFlex
+const CircleCheckMarkFullIcon = ({ color, size, disabled }) => {
+  let className = styles.noShrinkForFlex
+  if (disabled) {
+    className += ` ${styles.iconDisabled}`
+  }
   const filledClassName = styles[`filled-${color}`]
   let icon = <></>
 
@@ -39,12 +42,16 @@ CircleCheckMarkFullIcon.propTypes = {
   /**
    * Size
    */
-  size: PropTypes.oneOf(SIZES)
+  size: PropTypes.oneOf(SIZES),
+  /**
+   * disabled
+   */
+  disabled: PropTypes.bool
 }
-
 CircleCheckMarkFullIcon.defaultProps = {
   color: MAIN_DARK_BLUE,
-  size: MEDIUM
+  size: MEDIUM,
+  disabled: false
 }
 
 export default CircleCheckMarkFullIcon

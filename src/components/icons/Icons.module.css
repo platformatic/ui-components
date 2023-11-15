@@ -75,3 +75,7 @@
 .noShrinkForFlex {
   @apply shrink-0
 }
+
+.iconDisabled {
+  @apply opacity-30
+}

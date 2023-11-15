@@ -3,8 +3,11 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, LARGE, MAIN_DARK_BLUE } from '../constants'
 
-const ApplicationTypeIcon = ({ color, size }) => {
-  const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
+const ApplicationTypeIcon = ({ color, size, disabled }) => {
+  let className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
+  if (disabled) {
+    className += ` ${styles.iconDisabled}`
+  }
   let icon = <></>
 
   switch (size) {
@@ -40,12 +43,16 @@ ApplicationTypeIcon.propTypes = {
   /**
    * Size
    */
-  size: PropTypes.oneOf(SIZES)
+  size: PropTypes.oneOf(SIZES),
+  /**
+   * disabled
+   */
+  disabled: PropTypes.bool
 }
-
 ApplicationTypeIcon.defaultProps = {
   color: MAIN_DARK_BLUE,
-  size: LARGE
+  size: LARGE,
+  disabled: false
 }
 
 export default ApplicationTypeIcon
