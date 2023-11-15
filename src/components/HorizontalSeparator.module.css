@@ -1,5 +1,5 @@
 .style {
-  @apply border-b-0 border-t;
+  @apply border-b-0 border-t w-full;
 }
 .marginY-4 {
   @apply my-4;
@@ -39,4 +39,8 @@
 
 .apply-opacity-20 {
   @apply opacity-20;
+}
+
+.apply-opacity-30 {
+  @apply opacity-30;
 }

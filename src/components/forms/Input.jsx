@@ -7,8 +7,24 @@ import PlatformaticIcon from '../PlatformaticIcon'
 import { MAIN_DARK_BLUE, MAIN_GREEN, WHITE } from '../constants'
 import BorderedBox from '../BorderedBox'
 
-function Input ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled, beforeIcon, afterIcon, focused, placeholderApart, backgroundTransparent }) {
-  let inputClassName = `${commonStyles.fullWidth} ${styles.input} `
+function Input ({
+  placeholder,
+  value,
+  name,
+  borderColor,
+  errorMessage,
+  onChange,
+  disabled,
+  beforeIcon,
+  afterIcon,
+  focused,
+  placeholderApart,
+  backgroundTransparent,
+  inputTextClassName,
+  verticalPaddingClassName
+}) {
+  let inputClassName = `${commonStyles.fullWidth} ${styles.input} ${inputTextClassName}`
+  inputClassName += verticalPaddingClassName || `${styles.inputDefaultVerticalPadding}`
   inputClassName += commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`]
   if (backgroundTransparent) inputClassName += ` ${commonStyles['background-color-transparent']}`
   const showError = errorMessage.length > 0
@@ -85,7 +101,15 @@ Input.propTypes = {
   /**
    * backgroundTransparent
    */
-  backgroundTransparent: PropTypes.bool
+  backgroundTransparent: PropTypes.bool,
+  /**
+   * inputTextClassName
+   */
+  inputTextClassName: PropTypes.string,
+  /**
+   * verticalPaddingClassName
+   */
+  verticalPaddingClassName: PropTypes.string
 }
 
 Input.defaultProps = {
@@ -100,7 +124,9 @@ Input.defaultProps = {
   afterIcon: null,
   focused: false,
   shadowPlaceholder: false,
-  backgroundTransparent: false
+  backgroundTransparent: false,
+  inputTextClassName: '',
+  verticalPaddingClassName: ''
 }
 
 export default Input

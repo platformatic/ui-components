@@ -2,10 +2,15 @@
   @apply flex flex-col w-full relative;
 }
 .inputContainer {
-  @apply flex h-10 relative z-20;
+  @apply flex min-h-[2.5rem] relative z-20;
 }
 .input {
-  @apply border border-solid box-border rounded-md px-2 py-2.5 z-10;
+  padding-block: 0px;
+  padding-inline: 0px;
+  @apply border border-solid box-border rounded-md px-2 z-10;
+}
+.inputDefaultVerticalPadding {
+  @apply py-2.5;
 }
 .afterInputIcon,
 .beforeInputIcon {

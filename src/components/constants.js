@@ -32,10 +32,11 @@ export const COLORS_BUTTON = [MAIN_GREEN, DARK_GREEN, LIGHT_GREEN, MAIN_DARK_BLU
 export const COLORS_BORDERED_BOX = [MAIN_GREEN, ERROR_RED, WHITE, DARK_BLUE, MAIN_DARK_BLUE, WARNING_YELLOW, TRANSPARENT, LIGHT_BLUE, TERTIARY_BLUE]
 
 export const MODAL_POPUP = 'popup'
+export const MODAL_POPUP_V2 = 'popup-v2'
 export const MODAL_COVER = 'cover'
 export const MODAL_FULL_DARK = 'full-dark'
 export const MODAL_FULL_LIGHT = 'full-light'
-export const MODAL_LAYOUTS = [MODAL_POPUP, MODAL_COVER, MODAL_FULL_DARK, MODAL_FULL_LIGHT]
+export const MODAL_LAYOUTS = [MODAL_POPUP_V2, MODAL_POPUP, MODAL_COVER, MODAL_FULL_DARK, MODAL_FULL_LIGHT]
 
 export const FREE = 'free'
 export const BASIC = 'basic'
@@ -55,3 +56,4 @@ export const MARGIN_8 = 8
 export const MARGIN_0 = 0
 
 export const OPACITY_20 = 20
+export const OPACITY_30 = 30
