@@ -3,18 +3,28 @@ import PropTypes from 'prop-types'
 import styles from './Field.module.css'
 import { ERROR_RED, MAIN_DARK_BLUE, WHITE } from '../constants'
 
-function Field ({ title, titleColor, helper, children, disabled, required }) {
+function Field ({
+  title,
+  titleColor,
+  helper,
+  children,
+  disabled,
+  required,
+  titleClassName,
+  helperClassName
+}) {
   let className = `${styles.container}`
   if (disabled) className += ` ${styles.disabled}`
-  let classnameTitle = `${styles.title} `
-  classnameTitle += styles[`text-color-${titleColor}`]
+  const styledTitle = titleClassName || (`${styles.title} ` + styles[`text-color-${titleColor}`])
+  let styledHelper = helperClassName || styles.helper
+  styledHelper += ` ${styles.helperPadding}`
   let titleTmp = title
   if (required) { titleTmp += ' *' }
 
   return (
     <div className={className}>
-      <p className={classnameTitle}>{titleTmp}</p>
-      {helper && <p className={styles.helper}>{helper}</p>}
+      <p className={styledTitle}>{titleTmp}</p>
+      {helper && <p className={styledHelper}>{helper}</p>}
       <div className={styles.content}>
         {children}
       </div>
@@ -46,7 +56,15 @@ Field.propTypes = {
   /**
    * required
    */
-  required: PropTypes.bool
+  required: PropTypes.bool,
+  /**
+   * titleClassName
+   */
+  titleClassName: PropTypes.string,
+  /**
+   * titleClassName
+   */
+  helperClassName: PropTypes.string
 }
 
 Field.defaultProps = {
@@ -55,7 +73,9 @@ Field.defaultProps = {
   helper: '',
   children: null,
   disabled: false,
-  required: false
+  required: false,
+  titleClassName: '',
+  helperClassName: ''
 }
 
 export default Field

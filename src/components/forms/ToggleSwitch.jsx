@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 import styles from './ToggleSwitch.module.css'
 import commonStyles from '../Common.module.css'
 
-function ToggleSwitch ({ name, label, errorMessage, onChange, checked, disabled }) {
+function ToggleSwitch ({ name, label, labelClassName, errorMessage, onChange, checked, disabled }) {
   let className = `${styles.switch} `
   if (disabled) className += styles.disabled
-
+  const styleLabel = labelClassName || styles.defaultLabel
   return (
     <>
       <div className={styles.container}>
@@ -15,7 +15,7 @@ function ToggleSwitch ({ name, label, errorMessage, onChange, checked, disabled 
           <input type='checkbox' name={name} onChange={onChange} checked={checked} disabled={disabled} />
           <span className={`${styles.slider} ${styles.round}`} />
         </label>
-        <span className={styles.label}>{label}</span>
+        <span className={styleLabel}>{label}</span>
       </div>
       {errorMessage.length > 0 && <span className={commonStyles['error-message']}>{errorMessage}</span>}
     </>
@@ -46,7 +46,12 @@ ToggleSwitch.propTypes = {
   /**
    * onChange of border
    */
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  /**
+   * labelClassName
+   */
+  labelClassName: PropTypes.string
+
 }
 
 ToggleSwitch.defaultProps = {
@@ -55,7 +60,8 @@ ToggleSwitch.defaultProps = {
   errorMessage: '',
   checked: false,
   disabled: false,
-  onChange: () => {}
+  onChange: () => {},
+  labelClassName: ''
 }
 
 export default ToggleSwitch

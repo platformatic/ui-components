@@ -13,7 +13,7 @@
   -webkit-transition: .4s;
   transition: .4s;
 }
-.label {
+.defaultLabel {
   @apply px-2 text-xs font-normal text-main-dark-blue;
 }
 .slider:before {
