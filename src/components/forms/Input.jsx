@@ -21,7 +21,9 @@ function Input ({
   placeholderApart,
   backgroundTransparent,
   inputTextClassName,
-  verticalPaddingClassName
+  verticalPaddingClassName,
+  dataAttrName,
+  dataAttrValue
 }) {
   let inputClassName = `${commonStyles.fullWidth} ${styles.input} ${inputTextClassName}`
   inputClassName += verticalPaddingClassName || `${styles.inputDefaultVerticalPadding}`
@@ -34,8 +36,13 @@ function Input ({
   if (afterIcon) inputClassName += ' ' + styles.afterIconPadding
   const inputPlaceholder = placeholderApart ? '' : placeholder
 
+  const dataProps = {}
+  if (dataAttrName && dataAttrValue) {
+    dataProps[`data-${dataAttrName}`] = dataAttrValue
+  }
+
   const cmp = (
-    <div className={styles.container}>
+    <div className={styles.container} {...dataProps}>
       <div className={styles.inputContainer}>
         {beforeIcon && <div className={styles.beforeInputIcon}><PlatformaticIcon iconName={beforeIcon.iconName} size='small' data-testid='before-icon' color={beforeIcon.color} onClick={() => beforeIcon.onClick()} /></div>}
         <input type='text' name={name} value={value} className={inputClassName} onChange={onChange} disabled={disabled} placeholder={inputPlaceholder} />
@@ -109,7 +116,15 @@ Input.propTypes = {
   /**
    * verticalPaddingClassName
    */
-  verticalPaddingClassName: PropTypes.string
+  verticalPaddingClassName: PropTypes.string,
+  /**
+   * dataAttrName
+  */
+  dataAttrName: PropTypes.string,
+  /**
+   * dataAttrValue
+  */
+  dataAttrValue: PropTypes.string
 }
 
 Input.defaultProps = {
@@ -126,7 +141,9 @@ Input.defaultProps = {
   shadowPlaceholder: false,
   backgroundTransparent: false,
   inputTextClassName: '',
-  verticalPaddingClassName: ''
+  verticalPaddingClassName: '',
+  dataAttrName: '',
+  dataAttrValue: ''
 }
 
 export default Input
