@@ -59,6 +59,7 @@ import ExpandIcon from './ExpandIcon'
 import ExploreDocIcon from './ExploreDocIcon'
 import EyeClosedIcon from './EyeClosedIcon'
 import EyeOpenedIcon from './EyeOpenedIcon'
+import FolderIcon from './FolderIcon'
 import FoldersIcon from './FoldersIcon'
 import GearIcon from './GearIcon'
 import GenerationLoadingIcon from './GenerationLoadingIcon'
@@ -183,6 +184,7 @@ export default {
   ExploreDocIcon,
   EnlargeIcon,
   EntryIcon,
+  FolderIcon,
   FoldersIcon,
   GearIcon,
   GenerationLoadingIcon,
