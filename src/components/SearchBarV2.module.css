@@ -22,3 +22,7 @@
 .clearContainer {
   @apply absolute right-[1rem] translate-y-[-50%];
 }
+.wrapperPadding {
+  @apply px-2 py-1.5;
+}
+

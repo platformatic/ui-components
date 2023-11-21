@@ -2,7 +2,6 @@
 import React, { useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './SearchBarV2.module.css'
-import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
 import { MEDIUM, WHITE } from './constants'
 function SearchBarV2 ({ onSubmit, onChange, onClear, color, onFocusColor, placeholder }) {
@@ -42,11 +41,11 @@ function SearchBarV2 ({ onSubmit, onChange, onClear, color, onFocusColor, placeh
   }
 
   function onFocusClassName () {
-    return `${styles.container} ${commonStyles.padded} ${styles.onFocus}`
+    return `${styles.container} ${styles.wrapperPadding} ${styles.onFocus}`
   }
 
   function normalClassName () {
-    return `${styles.container} ${commonStyles.padded} ${styles.onBlur}`
+    return `${styles.container} ${styles.wrapperPadding} ${styles.onBlur}`
   }
 
   return (
