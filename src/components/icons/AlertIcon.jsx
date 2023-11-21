@@ -4,7 +4,7 @@ import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, ERROR_RED } from '../constants'
 
 const AlertIcon = ({ color, size, disabled }) => {
-  let className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
+  let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
   }

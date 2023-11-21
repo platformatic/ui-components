@@ -4,7 +4,7 @@ import styles from './Icons.module.css'
 import { COLORS_ICON, EXTRA_LARGE, SIZES, MAIN_DARK_BLUE, MEDIUM } from '../constants'
 
 const GenerationLoadingIcon = ({ color, size, disabled }) => {
-  let className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
+  let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
   }

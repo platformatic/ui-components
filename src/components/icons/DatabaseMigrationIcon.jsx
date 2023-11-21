@@ -4,7 +4,7 @@ import styles from './Icons.module.css'
 import { COLORS_ICON, LARGE, MAIN_DARK_BLUE, MEDIUM, SIZES, SMALL } from '../constants'
 
 const DatabaseMigrationIcon = ({ color, size, disabled }) => {
-  let className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
+  let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
   }

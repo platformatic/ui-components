@@ -28,7 +28,7 @@ function PlatformaticIcon ({
     if (onClick && !disabled) {
       let className = styles.cursorPointer
       if (classes) className += ` ${classes}`
-      icon = (<span className={className} onClick={onClick}>{icon}</span>)
+      icon = (<div className={className} onClick={onClick}>{icon}</div>)
     }
   }
   return (

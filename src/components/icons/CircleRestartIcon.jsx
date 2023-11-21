@@ -4,7 +4,7 @@ import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, SMALL, MAIN_DARK_BLUE, MEDIUM } from '../constants'
 
 const CircleRestartIcon = ({ color, size, disabled }) => {
-  let className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
+  let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
   }

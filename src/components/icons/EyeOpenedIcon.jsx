@@ -4,7 +4,7 @@ import styles from './Icons.module.css'
 import { COLORS_ICON, MAIN_DARK_BLUE, SIZES, SMALL } from '../constants'
 
 const EyeOpenedIcon = ({ color, size, disabled }) => {
-  let className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
+  let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
   }

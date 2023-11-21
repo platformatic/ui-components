@@ -4,7 +4,7 @@ import styles from './Icons.module.css'
 import { COLORS_ICON, LARGE, MEDIUM, SIZES, MAIN_DARK_BLUE, SMALL } from '../constants'
 
 const LabelIcon = ({ color, size, disabled }) => {
-  let className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
+  let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
   }
