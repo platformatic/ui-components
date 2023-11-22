@@ -23,7 +23,8 @@ function Input ({
   inputTextClassName,
   verticalPaddingClassName,
   dataAttrName,
-  dataAttrValue
+  dataAttrValue,
+  readOnly
 }) {
   let inputClassName = `${commonStyles.fullWidth} ${styles.input} ${inputTextClassName}`
   inputClassName += verticalPaddingClassName || `${styles.inputDefaultVerticalPadding}`
@@ -45,7 +46,17 @@ function Input ({
     <div className={styles.container} {...dataProps}>
       <div className={styles.inputContainer}>
         {beforeIcon && <div className={styles.beforeInputIcon}><PlatformaticIcon iconName={beforeIcon.iconName} size='small' data-testid='before-icon' color={beforeIcon.color} onClick={() => beforeIcon.onClick()} /></div>}
-        <input type='text' name={name} value={value} className={inputClassName} onChange={onChange} disabled={disabled} placeholder={inputPlaceholder} />
+        <input
+          type='text'
+          name={name}
+          value={value}
+          className={inputClassName}
+          onChange={onChange}
+          disabled={disabled}
+          placeholder={inputPlaceholder}
+          readOnly={readOnly}
+          aria-readonly={readOnly}
+        />
         {placeholderApart && <p className={styles.placeholderAPart}>{placeholder}</p>}
         {afterIcon && <div className={styles.afterInputIcon}><PlatformaticIcon iconName={afterIcon.iconName} color={afterIcon.color} data-testid='after-icon' onClick={null} /></div>}
       </div>
@@ -124,7 +135,11 @@ Input.propTypes = {
   /**
    * dataAttrValue
   */
-  dataAttrValue: PropTypes.string
+  dataAttrValue: PropTypes.string,
+  /**
+   * readOnly
+  */
+  readOnly: PropTypes.bool
 }
 
 Input.defaultProps = {
@@ -143,7 +158,8 @@ Input.defaultProps = {
   inputTextClassName: '',
   verticalPaddingClassName: '',
   dataAttrName: '',
-  dataAttrValue: ''
+  dataAttrValue: '',
+  readOnly: false
 }
 
 export default Input

@@ -57,3 +57,4 @@ export const MARGIN_0 = 0
 
 export const OPACITY_20 = 20
 export const OPACITY_30 = 30
+export const OPACITY_100 = 100
