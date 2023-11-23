@@ -35,6 +35,7 @@ import SearchBarV2 from './src/components/SearchBarV2'
 import SimpleMetric from './src/components/SimpleMetric'
 import Status from './src/components/Status'
 import TabbedWindow from './src/components/TabbedWindow'
+import TabbedWindowV2 from './src/components/TabbedWindowV2'
 import Tag from './src/components/Tag'
 import TextWithLabel from './src/components/TextWithLabel'
 import TwoColumnsLayout from './src/components/layouts/TwoColumnsLayout'
@@ -77,6 +78,7 @@ export {
   SimpleMetric,
   Status,
   TabbedWindow,
+  TabbedWindowV2,
   Tag,
   TextWithLabel,
   TwoColumnsLayout,
