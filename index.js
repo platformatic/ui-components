@@ -21,6 +21,7 @@ import List from './src/components/List'
 import ListElement from './src/components/ListElement'
 import Loadable from './src/components/Loadable'
 import LoadingSpinner from './src/components/LoadingSpinner'
+import LoadingSpinnerV2 from './src/components/LoadingSpinnerV2'
 import LoginButton from './src/components/LoginButton'
 import Logo from './src/components/Logo'
 import LogoDropDown from './src/components/LogoDropDown'
@@ -65,6 +66,7 @@ export {
   ListElement,
   Loadable,
   LoadingSpinner,
+  LoadingSpinnerV2,
   LoginButton,
   Logo,
   LogoDropDown,
