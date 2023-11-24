@@ -1,7 +1,7 @@
 'use strict'
 import React, { useState } from 'react'
 import Select from '../../components/forms/Select'
-import { MAIN_DARK_BLUE, MAIN_GREEN } from '../../components/constants'
+import { MAIN_DARK_BLUE, MAIN_GREEN, RICH_BLACK, WHITE } from '../../components/constants'
 
 const divStyle = {
   width: '100%',
@@ -141,4 +141,36 @@ githubRepoExample.args = {
     notFilterable: true
   }),
   borderColor: MAIN_DARK_BLUE
+}
+
+const TemplateTransparent = (args) => {
+  const [value, setValue] = useState('')
+
+  function handleChange (event) {
+    setValue(event.target.value)
+  }
+
+  function handleSelect (event) {
+    setValue(event.detail.label)
+  }
+
+  return (
+    <div style={{ padding: '20px 10px' }}>
+      <p>Value of the input {value}</p>
+      <Select {...args} value={value} onChange={handleChange} onSelect={handleSelect} />
+    </div>
+  )
+}
+
+export const TemplateBackgroundTransparent = TemplateTransparent.bind({})
+
+TemplateBackgroundTransparent.args = {
+  name: 'test',
+  placeholder: 'Defaul option',
+  optionsBorderedBottom: false,
+  options: [...Array(20).keys()].map(ele => ({ label: `Option ${ele}`, value: `Value${ele}`, iconName: 'OrganizationIcon' })),
+  borderColor: WHITE,
+  mainColor: WHITE,
+  backgroundColor: RICH_BLACK,
+  borderListColor: WHITE
 }

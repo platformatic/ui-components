@@ -3,31 +3,68 @@ import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import styles from './Select.module.css'
 import commonStyles from '../Common.module.css'
-import { MAIN_DARK_BLUE, MAIN_GREEN, SMALL } from '../constants'
+import { MAIN_DARK_BLUE, MAIN_GREEN, RICH_BLACK, SMALL, WHITE } from '../constants'
 import PlatformaticIcon from '../PlatformaticIcon'
 
 function Select ({
+  defaultContainerClassName,
   placeholder,
   name,
   value,
   options,
+  defaultOptionsClassName,
+  optionsBorderedBottom,
   borderColor,
+  borderListColor,
   errorMessage,
   onChange,
   onSelect,
   onClear,
   disabled,
-  optionsIconColor,
-  optionSelected
+  mainColor,
+  optionSelected,
+  dataAttrName,
+  dataAttrValue,
+  backgroundColor
+
 }) {
   const inputRef = useRef()
   const [showOptions, setShowOptions] = useState(false)
   const [isSelected, setIsSelected] = useState(false)
+  const [isOnFocus, setIsOnFocus] = useState(false)
   const showError = errorMessage.length > 0
-  let inputClassName = `${commonStyles.fullWidth} ${styles.select} `
-  inputClassName += ' ' + commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`]
+  const containerClassName = `${styles.container} ${defaultContainerClassName} `
+  let inputClassName = `${commonStyles.fullWidth} ${styles.select}`
+  inputClassName += ' ' + styles[`select-${mainColor}`]
+  inputClassName += ' ' + commonStyles[`text--${borderColor}`]
+  let optionsClassName = `${styles.options} ${defaultOptionsClassName} `
   if (showError) inputClassName += ' ' + commonStyles['bordered--error-red']
   if (disabled) inputClassName += ' ' + commonStyles['apply-opacity-30']
+  inputClassName += ' ' + commonStyles[`background-color-${backgroundColor}`]
+  optionsClassName += commonStyles[`background-color-${backgroundColor}`]
+
+  if (borderListColor) {
+    optionsClassName += ' ' + styles['bordered-options']
+    optionsClassName += ' ' + commonStyles[`bordered--${borderListColor}-30`]
+  }
+  let singleOptionClassName = `${styles.option} ` + commonStyles[`bordered--${mainColor}-15`] + ' ' + commonStyles[`hover-background-color-opaque-${mainColor}`]
+  if (optionsBorderedBottom) {
+    singleOptionClassName += ` ${styles['bordered-bottom']}`
+  }
+
+  const [wrapperClassName, setWrapperClassName] = useState(normalClassName())
+  function onFocusClassName () {
+    return inputClassName + ' ' + commonStyles[`bordered--${borderColor}-100`]
+  }
+
+  function normalClassName () {
+    return inputClassName + ' ' + commonStyles[`bordered--${borderColor}-15`]
+  }
+
+  const dataProps = {}
+  if (dataAttrName && dataAttrValue) {
+    dataProps[`data-${dataAttrName}`] = dataAttrValue
+  }
 
   function handleNotSelectable (callback = () => {}) {
     setIsSelected(true)
@@ -65,7 +102,7 @@ function Select ({
   function renderLi (option, index) {
     return (
       <li
-        key={index} className={styles.option} onClick={() => {
+        key={index} className={singleOptionClassName} onClick={() => {
           if (option.notSelectable) {
             return handleNotSelectable(option.onClick && option.onClick())
           }
@@ -73,8 +110,8 @@ function Select ({
         }}
       >
         <div className={styles.liContent}>
-          {option.iconName && <PlatformaticIcon iconName={option.iconName} color={optionsIconColor} size={SMALL} onClick={null} />}
-          <span>{option.label}</span>
+          {option.iconName && <PlatformaticIcon iconName={option.iconName} color={mainColor} size={SMALL} onClick={null} />}
+          <span className={commonStyles[`text--${mainColor}`]}>{option.label}</span>
         </div>
       </li>
     )
@@ -83,8 +120,8 @@ function Select ({
   function renderOptions () {
     if (value.length === 0) {
       return (
-        <ul className={styles.options}>
-          {options.length > 0 ? options.map((option, index) => renderLi(option, index)) : <li className={styles.option}><div className={styles.liContent}>No data found</div></li>}
+        <ul className={optionsClassName}>
+          {options.length > 0 ? options.map((option, index) => renderLi(option, index)) : <li className={singleOptionClassName}><div className={styles.liContent}><span className={commonStyles[`text--${mainColor}`]}>No data found</span></div></li>}
         </ul>
       )
     }
@@ -92,8 +129,8 @@ function Select ({
     const filteredOptions = options.filter(option => !option.notFilterable).filter(option => option.label.toLowerCase().includes(value.toLowerCase()))
 
     return (
-      <ul className={styles.options}>
-        {filteredOptions.length > 0 ? filteredOptions.map((option, index) => renderLi(option, index)) : <li className={styles.option}><div className={styles.liContent}>No data found</div></li>}
+      <ul className={optionsClassName}>
+        {filteredOptions.length > 0 ? filteredOptions.map((option, index) => renderLi(option, index)) : <li className={singleOptionClassName}><div className={styles.liContent}><span className={commonStyles[`text--${mainColor}`]}>No data found</span></div></li>}
         {notFilterableOptions.length > 0 && notFilterableOptions.map((option, index) => renderLi(option, index))}
       </ul>
     )
@@ -110,6 +147,10 @@ function Select ({
   }
 
   function handleFocus () {
+    if (!isOnFocus) {
+      setIsOnFocus(true)
+      setWrapperClassName(onFocusClassName())
+    }
     setShowOptions(true)
   }
 
@@ -118,14 +159,16 @@ function Select ({
     setTimeout(() => {
       if (showOptions) {
         setShowOptions(false)
+        setIsOnFocus(false)
+        setWrapperClassName(normalClassName())
       }
     }, 250)
   }
 
   return (
-    <div className={styles.container}>
+    <div className={containerClassName} {...dataProps}>
       <div className={styles.selectContainer}>
-        <input type='text' name={name} value={value} className={inputClassName} ref={inputRef} onChange={onChange} disabled={disabled} placeholder={placeholder} onFocus={() => handleFocus()} onBlur={(e) => handleBlur(e)} />
+        <input type='text' name={name} value={value} className={wrapperClassName} ref={inputRef} onChange={onChange} disabled={disabled} placeholder={placeholder} onFocus={() => handleFocus()} onBlur={(e) => handleBlur(e)} />
         <div className={styles.icons}>
           {value?.length > 0 && <PlatformaticIcon iconName='CloseIcon' color={borderColor} onClick={() => clearValue()} />}
           <PlatformaticIcon iconName={showOptions ? 'ArrowUpIcon' : 'ArrowDownIcon'} color={borderColor} onClick={() => disabled ? null : setShowOptions(!showOptions)} />
@@ -138,6 +181,10 @@ function Select ({
 }
 
 Select.propTypes = {
+  /**
+   * defaultContainerClassName
+   */
+  defaultContainerClassName: PropTypes.string,
   /**
    * placeholder
    */
@@ -168,9 +215,21 @@ Select.propTypes = {
     onClick: PropTypes.func
   })),
   /**
+   * defaultOptionsClassName
+   */
+  defaultOptionsClassName: PropTypes.string,
+  /**
+   * optionsBorderedBottom
+   */
+  optionsBorderedBottom: PropTypes.bool,
+  /**
    * color of border
    */
-  borderColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE]),
+  borderColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE, WHITE]),
+  /**
+   * color of border UL
+   */
+  borderListColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE, WHITE]),
   /**
    * onChange
    */
@@ -188,9 +247,9 @@ Select.propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * optionsIconColor
+   * mainColor
    */
-  optionsIconColor: PropTypes.string,
+  mainColor: PropTypes.oneOf([MAIN_DARK_BLUE, WHITE]),
   /**
    * optionSelected
    */
@@ -200,23 +259,42 @@ Select.propTypes = {
       PropTypes.string,
       PropTypes.number
     ])
-  })
+  }),
+  /**
+   * dataAttrName
+  */
+  dataAttrName: PropTypes.string,
+  /**
+   * dataAttrValue
+  */
+  dataAttrValue: PropTypes.string,
+  /**
+   * backgroundColor
+  */
+  backgroundColor: PropTypes.oneOf([MAIN_DARK_BLUE, WHITE, RICH_BLACK])
 }
 
 Select.defaultProps = {
+  defaultContainerClassName: '',
   placeholder: 'this is the default',
   name: '',
   value: '',
   id: '',
   options: [],
+  defaultOptionsClassName: '',
+  optionsBorderedBottom: true,
   borderColor: MAIN_GREEN,
+  borderListColor: '',
   errorMessage: '',
   onChange: () => {},
   onSelect: () => {},
   onClear: () => {},
   disabled: false,
-  optionsIconColor: MAIN_DARK_BLUE,
-  optionSelected: null
+  mainColor: MAIN_DARK_BLUE,
+  optionSelected: null,
+  dataAttrName: '',
+  dataAttrValue: '',
+  backgroundColor: WHITE
 }
 
 export default Select

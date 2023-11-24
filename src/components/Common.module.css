@@ -85,6 +85,15 @@
 .bordered--tertiary-blue-20 {
   @apply border-tertiary-blue/20;
 }
+.bordered--main-dark-blue-15 {
+  @apply border-main-dark-blue/15;
+}
+.bordered--white-15 {
+  @apply border-white/15;
+}
+.bordered--tertiary-blue-15 {
+  @apply border-tertiary-blue/15;
+}
 .bordered--main-dark-blue-10 {
   @apply border-main-dark-blue/10;
 }
@@ -160,8 +169,11 @@
 .background-color-tertiary-blue{
   @apply bg-tertiary-blue !important;
 }
-.background-color-warning-yellow{
+.background-color-warning-yellow {
   @apply bg-warning-yellow !important ;
+}
+.background-color-rich-black {
+  @apply bg-rich-black !important ;
 }
 .background-color-transparent{
   @apply bg-transparent;

@@ -4,11 +4,23 @@ import PropTypes from 'prop-types'
 import styles from './SearchBarV2.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
 import { MEDIUM, WHITE } from './constants'
-function SearchBarV2 ({ onSubmit, onChange, onClear, color, onFocusColor, placeholder }) {
+function SearchBarV2 ({
+  onSubmit,
+  onChange,
+  onClear,
+  color,
+  onFocusColor,
+  placeholder,
+  dataAttrName,
+  dataAttrValue
+}) {
   const inputRef = useRef()
   const [wrapperClassName, setWrapperClassName] = useState(normalClassName())
   const [isOnFocus, setIsOnFocus] = useState(false)
-
+  const dataProps = {}
+  if (dataAttrName && dataAttrValue) {
+    dataProps[`data-${dataAttrName}`] = dataAttrValue
+  }
   function handleSearch () {
     if (onSubmit) {
       const value = inputRef.current.value
@@ -49,7 +61,7 @@ function SearchBarV2 ({ onSubmit, onChange, onClear, color, onFocusColor, placeh
   }
 
   return (
-    <div className={wrapperClassName}>
+    <div className={wrapperClassName} {...dataProps}>
       <PlatformaticIcon iconName='LensIcon' color={isOnFocus ? onFocusColor : color} size={MEDIUM} onClick={handleSearch} />
       <input type='text' placeholder={placeholder} className={styles.input} ref={inputRef} onChange={handleChange} onFocus={onFocus} onBlur={onBlur} />
       <div className={styles.clearContainer}>
@@ -83,7 +95,15 @@ SearchBarV2.propTypes = {
   /**
    * placeholder
    */
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
+  /**
+   * dataAttrName
+  */
+  dataAttrName: PropTypes.string,
+  /**
+   * dataAttrValue
+  */
+  dataAttrValue: PropTypes.string
 }
 
 SearchBarV2.defaultProps = {
@@ -92,7 +112,9 @@ SearchBarV2.defaultProps = {
   onSubmit: () => {},
   onChange: () => {},
   onClear: () => {},
-  placeholder: 'Search'
+  placeholder: 'Search',
+  dataAttrName: '',
+  dataAttrValue: ''
 }
 
 export default SearchBarV2
