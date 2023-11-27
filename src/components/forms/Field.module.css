@@ -1,5 +1,5 @@
 .container {
-  @apply flex flex-col w-full;
+  @apply flex flex-col w-full gap-y-1;
 }
 .title {
   @apply font-semibold pb-2;
@@ -9,6 +9,9 @@
 }
 .text-color-error-red {
   @apply text-error-red;
+}
+.text-color-white {
+  @apply text-white;
 }
 .helper{
   @apply text-sm pb-4;
@@ -21,4 +24,7 @@
 }
 .disabled {
   @apply opacity-20;
+}
+.helperPadding {
+  @apply pb-3
 }

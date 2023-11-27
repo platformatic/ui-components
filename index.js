@@ -21,18 +21,22 @@ import List from './src/components/List'
 import ListElement from './src/components/ListElement'
 import Loadable from './src/components/Loadable'
 import LoadingSpinner from './src/components/LoadingSpinner'
+import LoadingSpinnerV2 from './src/components/LoadingSpinnerV2'
 import LoginButton from './src/components/LoginButton'
 import Logo from './src/components/Logo'
 import LogoDropDown from './src/components/LogoDropDown'
 import Logos from './src/components/logos'
 import Modal from './src/components/Modal'
+import ModalDirectional from './src/components/ModalDirectional'
 import ModalStepsForward from './src/components/ModalStepsForward'
 import PlatformaticIcon from './src/components/PlatformaticIcon'
 import Playground from './src/components/Playground'
 import SearchBar from './src/components/SearchBar'
+import SearchBarV2 from './src/components/SearchBarV2'
 import SimpleMetric from './src/components/SimpleMetric'
 import Status from './src/components/Status'
 import TabbedWindow from './src/components/TabbedWindow'
+import TabbedWindowV2 from './src/components/TabbedWindowV2'
 import Tag from './src/components/Tag'
 import TextWithLabel from './src/components/TextWithLabel'
 import TwoColumnsLayout from './src/components/layouts/TwoColumnsLayout'
@@ -62,17 +66,21 @@ export {
   ListElement,
   Loadable,
   LoadingSpinner,
+  LoadingSpinnerV2,
   LoginButton,
   Logo,
   LogoDropDown,
   Modal,
+  ModalDirectional,
   ModalStepsForward,
   PlatformaticIcon,
   Playground,
   SearchBar,
+  SearchBarV2,
   SimpleMetric,
   Status,
   TabbedWindow,
+  TabbedWindowV2,
   Tag,
   TextWithLabel,
   TwoColumnsLayout,

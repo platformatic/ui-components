@@ -72,6 +72,11 @@
   @apply fill-main-dark-blue;
 }
 
-.noShrinkForFlex {
-  @apply shrink-0
+.svgClassName {
+  @apply block shrink-0;
+  overflow-clip-margin: unset;
+}
+
+.iconDisabled {
+  @apply opacity-30
 }

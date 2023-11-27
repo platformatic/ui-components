@@ -3,8 +3,11 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES } from '../constants'
 
-const ApiIconClosed = ({ color, size }) => {
-  const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
+const ApiIconClosed = ({ color, size, disabled }) => {
+  let className = `${styles.svgClassName} ` + styles[`${color}`]
+  if (disabled) {
+    className += ` ${styles.iconDisabled}`
+  }
   let icon = <></>
 
   switch (size) {
@@ -42,9 +45,12 @@ ApiIconClosed.propTypes = {
   /**
    * Size
    */
-  size: PropTypes.oneOf(SIZES)
+  size: PropTypes.oneOf(SIZES),
+  /**
+   * disabled
+   */
+  disabled: PropTypes.bool
 }
-
 ApiIconClosed.defaultProps = {
   color: 'main-dark-blue',
   size: 'medium'

@@ -1,3 +1,6 @@
 .borderedBox {
   @apply rounded-md p-5 text-white flex-1 gap-y-4;
 }
+.clickable {
+  @apply cursor-pointer;
+}

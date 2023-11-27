@@ -3,8 +3,11 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
 
-const SocialXIcon = ({ color, size }) => {
-  const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
+const SocialXIcon = ({ color, size, disabled }) => {
+  let className = `${styles.svgClassName} ` + styles[`${color}`]
+  if (disabled) {
+    className += ` ${styles.iconDisabled}`
+  }
   const filledClassName = styles[`filled-${color}`]
   let icon = <></>
 
@@ -68,12 +71,16 @@ SocialXIcon.propTypes = {
   /**
    * Size
    */
-  size: PropTypes.oneOf(SIZES)
+  size: PropTypes.oneOf(SIZES),
+  /**
+   * disabled
+   */
+  disabled: PropTypes.bool
 }
-
 SocialXIcon.defaultProps = {
   color: MAIN_DARK_BLUE,
-  size: MEDIUM
+  size: MEDIUM,
+  disabled: false
 }
 
 export default SocialXIcon

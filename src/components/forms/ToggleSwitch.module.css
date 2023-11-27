@@ -1,5 +1,5 @@
 .container {
-  @apply flex w-full h-10 items-center;
+  @apply flex w-full h-10 items-center gap-x-2;
 }
 .switch {
   @apply relative inline-block w-[50px] h-[24px] cursor-pointer;
@@ -13,7 +13,7 @@
   -webkit-transition: .4s;
   transition: .4s;
 }
-.label {
+.defaultLabel {
   @apply px-2 text-xs font-normal text-main-dark-blue;
 }
 .slider:before {

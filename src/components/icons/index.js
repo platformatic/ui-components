@@ -14,8 +14,9 @@ import AppWorkspace from './AppWorkspace'
 import ArrowDownFullIcon from './ArrowDownFullIcon'
 import ArrowDownIcon from './ArrowDownIcon'
 import ArrowLeftIcon from './ArrowLeftIcon'
-import ArrowRightIcon from './ArrowRightIcon'
+import ArrowLongLeftIcon from './ArrowLongLeftIcon'
 import ArrowLongRightIcon from './ArrowLongRightIcon'
+import ArrowRightIcon from './ArrowRightIcon'
 import ArrowUpIcon from './ArrowUpIcon'
 import BellIcon from './BellIcon'
 import BillingIcon from './BillingIcon'
@@ -50,13 +51,16 @@ import CreatingAppIcon from './CreatingAppIcon'
 import DatabaseIcon from './DatabaseIcon'
 import DatabaseMigrationIcon from './DatabaseMigrationIcon'
 import DepencenciesReloadIcon from './DepencenciesReloadIcon'
-import EyeClosedIcon from './EyeClosedIcon'
-import EyeOpenedIcon from './EyeOpenedIcon'
 import EditDocumentIcon from './EditDocumentIcon'
 import EditIcon from './EditIcon'
-import ExploreDocIcon from './ExploreDocIcon'
 import EnlargeIcon from './EnlargeIcon'
 import EntryIcon from './EntryIcon'
+import ExpandIcon from './ExpandIcon'
+import ExploreDocIcon from './ExploreDocIcon'
+import EyeClosedIcon from './EyeClosedIcon'
+import EyeOpenedIcon from './EyeOpenedIcon'
+import FolderIcon from './FolderIcon'
+import FoldersIcon from './FoldersIcon'
 import GearIcon from './GearIcon'
 import GenerationLoadingIcon from './GenerationLoadingIcon'
 import GiveOwnershipIcon from './GiveOwnershipIcon'
@@ -98,10 +102,14 @@ import SocialGitLabIcon from './SocialGitLabIcon'
 import SocialLinkedInIcon from './SocialLinkedInIcon'
 import SocialNPMIcon from './SocialNPMIcon'
 import SocialXIcon from './SocialXIcon'
+import SortableIcon from './SortableIcon'
+import StackablesPluginIcon from './StackablesPluginIcon'
+import StackablesTemplateIcon from './StackablesTemplateIcon'
 import StopIcon from './StopIcon'
 import TerminalIcon from './TerminalIcon'
 import TwoUsersIcon from './TwoUsersIcon'
 import TeamsIcon from './TeamsIcon'
+import TrashIcon from './TrashIcon'
 import UpgradeIcon from './UpgradeIcon'
 import UserIcon from './UserIcon'
 import UserRemoveIcon from './UserRemoveIcon'
@@ -131,8 +139,9 @@ export default {
   ArrowDownFullIcon,
   ArrowDownIcon,
   ArrowLeftIcon,
-  ArrowRightIcon,
+  ArrowLongLeftIcon,
   ArrowLongRightIcon,
+  ArrowRightIcon,
   ArrowUpIcon,
   BellIcon,
   BillingIcon,
@@ -171,9 +180,12 @@ export default {
   EditIcon,
   EyeClosedIcon,
   EyeOpenedIcon,
+  ExpandIcon,
   ExploreDocIcon,
   EnlargeIcon,
   EntryIcon,
+  FolderIcon,
+  FoldersIcon,
   GearIcon,
   GenerationLoadingIcon,
   GiveOwnershipIcon,
@@ -208,6 +220,8 @@ export default {
   SendIcon,
   ServiceIcon,
   StopIcon,
+  StackablesPluginIcon,
+  StackablesTemplateIcon,
   SlotIcon,
   SwitchIcon,
   SocialDiscordIcon,
@@ -216,13 +230,15 @@ export default {
   SocialLinkedInIcon,
   SocialNPMIcon,
   SocialXIcon,
+  SortableIcon,
   TerminalIcon,
+  TeamsIcon,
+  TwoUsersIcon,
+  TrashIcon,
   UpgradeIcon,
   UserIcon,
   UserRemoveIcon,
   UserRoleIcon,
-  TeamsIcon,
-  TwoUsersIcon,
   WorkspaceDynamicIcon,
   WorkspaceEmptyIcon,
   WorkspaceFailIcon,

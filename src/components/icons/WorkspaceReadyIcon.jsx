@@ -3,8 +3,11 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, EXTRA_LARGE, MAIN_DARK_BLUE } from '../constants'
 
-const WorkspaceReadyIcon = ({ color, size }) => {
-  const className = `${styles.noShrinkForFlex} ` + styles[`${color}`]
+const WorkspaceReadyIcon = ({ color, size, disabled }) => {
+  let className = `${styles.svgClassName} ` + styles[`${color}`]
+  if (disabled) {
+    className += ` ${styles.iconDisabled}`
+  }
   let icon = <></>
 
   switch (size) {
@@ -134,12 +137,16 @@ WorkspaceReadyIcon.propTypes = {
   /**
    * Size
    */
-  size: PropTypes.oneOf(SIZES)
+  size: PropTypes.oneOf(SIZES),
+  /**
+   * disabled
+   */
+  disabled: PropTypes.bool
 }
-
 WorkspaceReadyIcon.defaultProps = {
   color: MAIN_DARK_BLUE,
-  size: MEDIUM
+  size: MEDIUM,
+  disabled: false
 }
 
 export default WorkspaceReadyIcon

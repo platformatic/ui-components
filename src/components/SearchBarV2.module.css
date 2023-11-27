@@ -1,0 +1,28 @@
+.container {
+  @apply relative flex gap-x-2 w-full h-auto border border-solid box-border rounded-md;
+}
+.input {
+  @apply w-full p-0 bg-transparent border-none text-white ;
+}
+.onFocus {
+  @apply border-white;
+}
+.onBlur {
+  @apply border-white/15;
+}
+.fillWhite {
+  @apply fill-white;
+}
+.container > input:focus {
+  @apply outline-none;
+}
+.title {
+  @apply font-semibold text-white text-3xl pb-4;
+}
+.clearContainer {
+  @apply absolute right-[1rem] translate-y-[-50%];
+}
+.wrapperPadding {
+  @apply px-2 py-1.5;
+}
+

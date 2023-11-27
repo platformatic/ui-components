@@ -7,19 +7,30 @@
 .select {
   @apply px-2 h-full border border-solid box-border rounded-md ;
 }
-.select.active,
-.select:focus {
+
+.select-main-dark-blue.active,
+.select-main-dark-blue:focus {
   @apply shadow-main-dark-blue outline-none;
 }
+.select-white.active,
+.select-white:focus {
+  @apply shadow-white outline-none;
+}
 .options {
-  @apply absolute left-0 top-[42px] bg-white w-full max-h-[216px] overflow-y-scroll z-20;
-  box-shadow: 0px 0px 10px rgb(0 40 61 / 25%);
+  @apply absolute left-0 top-[42px] w-full max-h-[216px] overflow-y-scroll z-20;
+}
+.bordered-options {
+  @apply border border-solid rounded-md
 }
 .option {
-  @apply w-full border-b border-main-dark-blue/[.15] font-light cursor-pointer hover:bg-main-dark-blue hover:bg-opacity-10 z-10;
+  @apply w-full font-light cursor-pointer z-10;
+}
+.bordered-bottom {
+  @apply border-b
 }
 .icons {
-  @apply absolute top-[50%] right-[0.5rem] translate-y-[-50%] flex gap-x-2;
+  @apply absolute top-[50%] right-[0.5rem] flex gap-x-2;
+  transform: translateY(-50%);
 }
 .liContent {
   @apply px-4 py-2 inline-flex items-center gap-x-1 relative z-[-1];

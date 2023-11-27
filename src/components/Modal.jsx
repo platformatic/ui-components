@@ -13,6 +13,7 @@ import {
   MODAL_LAYOUTS,
   MODAL_COVER,
   MODAL_POPUP,
+  MODAL_POPUP_V2,
   MAIN_DARK_BLUE,
   BACKGROUND_COLOR_OPAQUE,
   LARGE,
@@ -25,7 +26,16 @@ import {
 } from './constants'
 import PlatformaticIcon from './PlatformaticIcon'
 
-function Modal ({ setIsOpen, title, layout, children, size, profile, backgroundClassName }) {
+function Modal ({
+  setIsOpen,
+  title,
+  layout,
+  children,
+  size,
+  profile,
+  backgroundClassName,
+  titleClassName
+}) {
   let contentFullscreen
   let titleFullscreen
   let modalClassName = `${styles.modal}`
@@ -71,6 +81,24 @@ function Modal ({ setIsOpen, title, layout, children, size, profile, backgroundC
   }
 
   switch (layout) {
+    case MODAL_POPUP_V2:
+      whichModal = (
+        <>
+          <div className={`${styles['blur-absolute']}`} onClick={() => setIsOpen(false)} />
+          <div className={`${styles.container} ${styles.centered}`}>
+            <div className={modalClassName}>
+              <div className={headerClassName}>
+                <div className={titleClassName}>{title}</div>
+                <PlatformaticIcon iconName='CloseIcon' color={WHITE} size={SMALL} onClick={() => setIsOpen(false)} />
+              </div>
+              <div>
+                {children}
+              </div>
+            </div>
+          </div>
+        </>
+      )
+      break
     case MODAL_POPUP:
       whichModal = (
         <>
@@ -172,7 +200,11 @@ Modal.propTypes = {
   /**
    * backgroundClassName
    */
-  backgroundClassName: PropTypes.string
+  backgroundClassName: PropTypes.string,
+  /**
+   * titleClassName
+   */
+  titleClassName: PropTypes.string
 }
 
 Modal.defaultProps = {
@@ -182,7 +214,8 @@ Modal.defaultProps = {
   layout: MODAL_POPUP,
   size: SMALL,
   profile: '',
-  backgroundClassName: ''
+  backgroundClassName: '',
+  titleClassName: ''
 }
 
 export default Modal

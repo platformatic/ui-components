@@ -40,10 +40,13 @@ module.exports = {
       'error-red': '#FA2121',
       'tertiary-blue': '#2588E4',
       transparent: 'transparent',
-      'warning-yellow': '#FEB928'
+      'warning-yellow': '#FEB928',
+      'rich-black': '#00050B',
+      'electric-purple': '#C61BE2'
     },
     fontFamily: {
-      sans: ['Montserrat']
+      sans: ['Montserrat'],
+      inter: ['Inter']
     },
     letterSpacing: {
       tighter: '-.05em',

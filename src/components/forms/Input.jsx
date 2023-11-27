@@ -4,12 +4,32 @@ import PropTypes from 'prop-types'
 import styles from './Input.module.css'
 import commonStyles from '../Common.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
-import { MAIN_DARK_BLUE, MAIN_GREEN } from '../constants'
+import { MAIN_DARK_BLUE, MAIN_GREEN, WHITE } from '../constants'
 import BorderedBox from '../BorderedBox'
 
-function Input ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled, beforeIcon, afterIcon, focused, placeholderApart }) {
-  let inputClassName = `${commonStyles.fullWidth} ${styles.input} `
+function Input ({
+  placeholder,
+  value,
+  name,
+  borderColor,
+  errorMessage,
+  onChange,
+  disabled,
+  beforeIcon,
+  afterIcon,
+  focused,
+  placeholderApart,
+  backgroundTransparent,
+  inputTextClassName,
+  verticalPaddingClassName,
+  dataAttrName,
+  dataAttrValue,
+  readOnly
+}) {
+  let inputClassName = `${commonStyles.fullWidth} ${styles.input} ${inputTextClassName}`
+  inputClassName += verticalPaddingClassName || `${styles.inputDefaultVerticalPadding}`
   inputClassName += commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`]
+  if (backgroundTransparent) inputClassName += ` ${commonStyles['background-color-transparent']}`
   const showError = errorMessage.length > 0
   if (showError) inputClassName += ' ' + commonStyles['bordered--error-red']
   if (disabled) inputClassName += ' ' + commonStyles['apply-opacity-30']
@@ -17,11 +37,26 @@ function Input ({ placeholder, value, name, borderColor, errorMessage, onChange,
   if (afterIcon) inputClassName += ' ' + styles.afterIconPadding
   const inputPlaceholder = placeholderApart ? '' : placeholder
 
+  const dataProps = {}
+  if (dataAttrName && dataAttrValue) {
+    dataProps[`data-${dataAttrName}`] = dataAttrValue
+  }
+
   const cmp = (
-    <div className={styles.container}>
+    <div className={styles.container} {...dataProps}>
       <div className={styles.inputContainer}>
         {beforeIcon && <div className={styles.beforeInputIcon}><PlatformaticIcon iconName={beforeIcon.iconName} size='small' data-testid='before-icon' color={beforeIcon.color} onClick={() => beforeIcon.onClick()} /></div>}
-        <input type='text' name={name} value={value} className={inputClassName} onChange={onChange} disabled={disabled} placeholder={inputPlaceholder} />
+        <input
+          type='text'
+          name={name}
+          value={value}
+          className={inputClassName}
+          onChange={onChange}
+          disabled={disabled}
+          placeholder={inputPlaceholder}
+          readOnly={readOnly}
+          aria-readonly={readOnly}
+        />
         {placeholderApart && <p className={styles.placeholderAPart}>{placeholder}</p>}
         {afterIcon && <div className={styles.afterInputIcon}><PlatformaticIcon iconName={afterIcon.iconName} color={afterIcon.color} data-testid='after-icon' onClick={null} /></div>}
       </div>
@@ -48,7 +83,7 @@ Input.propTypes = {
   /**
    * color of border
    */
-  borderColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE]),
+  borderColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE, WHITE]),
   /**
    * onChange
    */
@@ -80,7 +115,31 @@ Input.propTypes = {
   /**
    * placeholderApart
    */
-  placeholderApart: PropTypes.bool
+  placeholderApart: PropTypes.bool,
+  /**
+   * backgroundTransparent
+   */
+  backgroundTransparent: PropTypes.bool,
+  /**
+   * inputTextClassName
+   */
+  inputTextClassName: PropTypes.string,
+  /**
+   * verticalPaddingClassName
+   */
+  verticalPaddingClassName: PropTypes.string,
+  /**
+   * dataAttrName
+  */
+  dataAttrName: PropTypes.string,
+  /**
+   * dataAttrValue
+  */
+  dataAttrValue: PropTypes.string,
+  /**
+   * readOnly
+  */
+  readOnly: PropTypes.bool
 }
 
 Input.defaultProps = {
@@ -94,7 +153,13 @@ Input.defaultProps = {
   beforeIcon: null,
   afterIcon: null,
   focused: false,
-  shadowPlaceholder: false
+  shadowPlaceholder: false,
+  backgroundTransparent: false,
+  inputTextClassName: '',
+  verticalPaddingClassName: '',
+  dataAttrName: '',
+  dataAttrValue: '',
+  readOnly: false
 }
 
 export default Input
