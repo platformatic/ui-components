@@ -4,11 +4,17 @@ import PropTypes from 'prop-types'
 import styles from './LoadingSpinnerV2.module.css'
 import { SpinnerCircular } from 'spinners-react'
 
-function LoadingSpinnerV2 ({ loading, applySentences, color }) {
+function LoadingSpinnerV2 ({
+  loading,
+  applySentences,
+  color,
+  containerClassName
+}) {
+  const defaultContainerClassName = containerClassName || `${styles.container}`
   // If null then loading not started, if true then loading, if false then done loading
   return loading
     ? (
-      <div className={styles.container} data-testid='loading-spinner'>
+      <div className={defaultContainerClassName} data-testid='loading-spinner'>
         <div className={styles.content}>
           <SpinnerCircular thickness={180} size={80} color={color} />
           {applySentences?.sentences.length > 0 && (
@@ -33,13 +39,18 @@ LoadingSpinnerV2.propTypes = {
   /**
    * color
    */
-  color: PropTypes.string
+  color: PropTypes.string,
+  /**
+   * containerClassName
+   */
+  containerClassName: PropTypes.string
 }
 
 LoadingSpinnerV2.defaultProps = {
   loading: false,
   applySentences: {},
-  color: '#FFFFFF'
+  color: '#FFFFFF',
+  containerClassName: ''
 }
 
 export default LoadingSpinnerV2
