@@ -5,6 +5,7 @@ import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../con
 
 const StackablesPluginIcon = ({ color, size, disabled }) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
+  const filledClassName = styles[`filled-${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
   }
@@ -28,9 +29,9 @@ const StackablesPluginIcon = ({ color, size, disabled }) => {
           <path d='M5.66943 10.9916V9.30066' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
           <path d='M2 7.20911V9.61228L5.67533 11.4672L7 11' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
           <path d='M9.38344 4.66032L5.67533 6.55991L2 4.70176L3.83767 3.81234M9.38344 4.66032L7.52939 3.79163M9.38344 4.66032V5.85938' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M10.5 14C10.5 14.2761 10.7239 14.5 11 14.5C11.2761 14.5 11.5 14.2761 11.5 14L10.5 14ZM10.5 12L10.5 14L11.5 14L11.5 12L10.5 12Z' fill='white' />
-          <path d='M9.5 7C9.5 6.72386 9.27614 6.5 9 6.5C8.72386 6.5 8.5 6.72386 8.5 7L9.5 7ZM9.5 9L9.5 7L8.5 7L8.5 9L9.5 9Z' fill='white' />
-          <path d='M13.5 7C13.5 6.72386 13.2761 6.5 13 6.5C12.7239 6.5 12.5 6.72386 12.5 7L13.5 7ZM13.5 9L13.5 7L12.5 7L12.5 9L13.5 9Z' fill='white' />
+          <path d='M10.5 14C10.5 14.2761 10.7239 14.5 11 14.5C11.2761 14.5 11.5 14.2761 11.5 14L10.5 14ZM10.5 12L10.5 14L11.5 14L11.5 12L10.5 12Z' fill='none' className={filledClassName} />
+          <path d='M9.5 7C9.5 6.72386 9.27614 6.5 9 6.5C8.72386 6.5 8.5 6.72386 8.5 7L9.5 7ZM9.5 9L9.5 7L8.5 7L8.5 9L9.5 9Z' fill='none' className={filledClassName} />
+          <path d='M13.5 7C13.5 6.72386 13.2761 6.5 13 6.5C12.7239 6.5 12.5 6.72386 12.5 7L13.5 7ZM13.5 9L13.5 7L12.5 7L12.5 9L13.5 9Z' fill='none' className={filledClassName} />
           <path d='M11 12C12.6569 12 14 10.6569 14 9H8C8 10.6569 9.34315 12 11 12Z' stroke='none' strokeLinejoin='round' />
           <path d='M5.66943 8.48436V6.79346' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
           <path d='M2 4.7019V7.10507L5.67533 8.96004L7 8.5' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
@@ -59,9 +60,9 @@ const StackablesPluginIcon = ({ color, size, disabled }) => {
           <path d='M8.50439 16.4874V13.951' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
           <path d='M3 10.8137V14.4185L8.513 17.2009L10.5 16.5001' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
           <path d='M14.0752 6.99055L8.513 9.83993L3 7.0527L5.7565 5.71858M14.0752 6.99055L11.2941 5.6875M14.0752 6.99055V8.78912' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M15.75 21C15.75 21.4142 16.0858 21.75 16.5 21.75C16.9142 21.75 17.25 21.4142 17.25 21L15.75 21ZM15.75 18L15.75 21L17.25 21L17.25 18L15.75 18Z' fill='white' />
-          <path d='M14.25 10.5C14.25 10.0858 13.9142 9.75 13.5 9.75C13.0858 9.75 12.75 10.0858 12.75 10.5L14.25 10.5ZM14.25 13.5L14.25 10.5L12.75 10.5L12.75 13.5L14.25 13.5Z' fill='white' />
-          <path d='M20.25 10.5C20.25 10.0858 19.9142 9.75 19.5 9.75C19.0858 9.75 18.75 10.0858 18.75 10.5L20.25 10.5ZM20.25 13.5L20.25 10.5L18.75 10.5L18.75 13.5L20.25 13.5Z' fill='white' />
+          <path d='M15.75 21C15.75 21.4142 16.0858 21.75 16.5 21.75C16.9142 21.75 17.25 21.4142 17.25 21L15.75 21ZM15.75 18L15.75 21L17.25 21L17.25 18L15.75 18Z' fill='none' className={filledClassName} />
+          <path d='M14.25 10.5C14.25 10.0858 13.9142 9.75 13.5 9.75C13.0858 9.75 12.75 10.0858 12.75 10.5L14.25 10.5ZM14.25 13.5L14.25 10.5L12.75 10.5L12.75 13.5L14.25 13.5Z' fill='none' className={filledClassName} />
+          <path d='M20.25 10.5C20.25 10.0858 19.9142 9.75 19.5 9.75C19.0858 9.75 18.75 10.0858 18.75 10.5L20.25 10.5ZM20.25 13.5L20.25 10.5L18.75 10.5L18.75 13.5L20.25 13.5Z' fill='none' className={filledClassName} />
           <path d='M16.5 18C18.9853 18 21 15.9853 21 13.5H12C12 15.9853 14.0147 18 16.5 18Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
           <path d='M8.50439 12.7265V10.1902' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
           <path d='M3 7.05286V10.6576L8.513 13.4401L10.5 12.75' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
@@ -90,9 +91,9 @@ const StackablesPluginIcon = ({ color, size, disabled }) => {
           <path d='M14.1738 27.4787V23.2515' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
           <path d='M5 18.0226V24.0305L14.1883 28.6679L17.5 27.4998' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
           <path d='M23.4586 11.6508L14.1883 16.3997L5 11.7543L9.59416 9.5308M23.4586 11.6508L18.8235 9.479M23.4586 11.6508V14.6484' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M26.5 35C26.5 35.5523 26.9477 36 27.5 36C28.0523 36 28.5 35.5523 28.5 35L26.5 35ZM26.5 30L26.5 35L28.5 35L28.5 30L26.5 30Z' fill='white' />
-          <path d='M23.5 17.5C23.5 16.9477 23.0523 16.5 22.5 16.5C21.9477 16.5 21.5 16.9477 21.5 17.5L23.5 17.5ZM23.5 22.5L23.5 17.5L21.5 17.5L21.5 22.5L23.5 22.5Z' fill='white' />
-          <path d='M33.5 17.5C33.5 16.9477 33.0523 16.5 32.5 16.5C31.9477 16.5 31.5 16.9477 31.5 17.5L33.5 17.5ZM33.5 22.5L33.5 17.5L31.5 17.5L31.5 22.5L33.5 22.5Z' fill='white' />
+          <path d='M26.5 35C26.5 35.5523 26.9477 36 27.5 36C28.0523 36 28.5 35.5523 28.5 35L26.5 35ZM26.5 30L26.5 35L28.5 35L28.5 30L26.5 30Z' fill='none' className={filledClassName} />
+          <path d='M23.5 17.5C23.5 16.9477 23.0523 16.5 22.5 16.5C21.9477 16.5 21.5 16.9477 21.5 17.5L23.5 17.5ZM23.5 22.5L23.5 17.5L21.5 17.5L21.5 22.5L23.5 22.5Z' fill='none' className={filledClassName} />
+          <path d='M33.5 17.5C33.5 16.9477 33.0523 16.5 32.5 16.5C31.9477 16.5 31.5 16.9477 31.5 17.5L33.5 17.5ZM33.5 22.5L33.5 17.5L31.5 17.5L31.5 22.5L33.5 22.5Z' fill='none' className={filledClassName} />
           <path d='M27.5 30C31.6421 30 35 26.6421 35 22.5H20C20 26.6421 23.3579 30 27.5 30Z' stroke='none' strokeWidth={2} strokeLinejoin='round' />
           <path d='M14.1738 21.2108V16.9835' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
           <path d='M5 11.7545V17.7624L14.1883 22.3999L17.5 21.2498' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />

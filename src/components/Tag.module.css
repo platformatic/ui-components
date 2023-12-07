@@ -1,7 +1,9 @@
 .tag {
-  @apply rounded-md px-2 py-1 tracking-super-widest w-fit;
+  @apply rounded-md px-4 py-2 w-fit;
 }
-
 .bordered {
   @apply border border-solid;
+}
+.fullRounded {
+  @apply rounded-full;
 }
