@@ -3,14 +3,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import commonStyles from './Common.module.css'
 import styles from './Tag.module.css'
-import { COLORS_BUTTON } from './constants'
+import { COLORS_BUTTON, OPACITY_100, OPACITY_20, OPACITY_30, OPACITY_60, WHITE } from './constants'
 
-function Tag ({ text, color, backgroundColor, bordered, opaque }) {
-  const stylesColor = commonStyles[`text--${color}`]
+function Tag ({ text, textClassName, color, backgroundColor, bordered, opaque, fullRounded }) {
+  const stylesColor = textClassName || commonStyles[`text--${color}`]
   let stylesBorderColor = ''
   if (bordered) {
     stylesBorderColor = `${styles.bordered} `
     stylesBorderColor += commonStyles[`bordered--${color}`]
+  }
+  if (fullRounded) {
+    stylesBorderColor += ` ${styles.fullRounded}`
   }
   const stylesBackgroundColor = backgroundColor ? commonStyles[`background-color-${backgroundColor}`] : ''
   const opacity = commonStyles[`background-color-opaque-${opaque}`]
@@ -30,6 +33,11 @@ Tag.propTypes = {
    */
   text: PropTypes.string,
   /**
+  /**
+   * textClassName
+   */
+  textClassName: PropTypes.string,
+  /**
    * backgroundColor
    */
   backgroundColor: PropTypes.oneOf(COLORS_BUTTON),
@@ -40,16 +48,22 @@ Tag.propTypes = {
   /**
    * opaque
    */
-  opaque: PropTypes.oneOf([100, 60, 30, 20])
+  opaque: PropTypes.oneOf([OPACITY_100, OPACITY_60, OPACITY_30, OPACITY_20]),
+  /**
+     * fullRounded
+     */
+  fullRounded: PropTypes.bool
 
 }
 
 Tag.defaultProps = {
   backgroundColor: '',
-  color: 'white',
+  color: WHITE,
   text: '',
+  textClassName: '',
   bordered: true,
-  opaque: 100
+  opaque: OPACITY_100,
+  fullRounded: false
 }
 
 export default Tag
