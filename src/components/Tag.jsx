@@ -52,8 +52,8 @@ Tag.propTypes = {
   /**
      * fullRounded
      */
-  fullRounded: PropTypes.bool,
-  
+  fullRounded: PropTypes.bool
+
 }
 
 Tag.defaultProps = {
