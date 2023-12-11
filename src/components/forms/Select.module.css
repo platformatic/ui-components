@@ -23,7 +23,7 @@
   @apply border border-solid rounded-md
 }
 .option {
-  @apply w-full font-light cursor-pointer z-10;
+  @apply font-light cursor-pointer z-10 flex flex-row justify-between items-center px-4;
 }
 .bordered-bottom {
   @apply border-b
@@ -33,5 +33,8 @@
   transform: translateY(-50%);
 }
 .liContent {
-  @apply px-4 py-2 inline-flex items-center gap-x-1 relative z-[-1];
+  @apply py-2 flex items-center gap-x-1 relative z-[-1] w-auto basis-2/3;
+}
+.descriptionValue {
+  @apply opacity-70
 }

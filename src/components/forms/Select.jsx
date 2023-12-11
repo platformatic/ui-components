@@ -52,6 +52,8 @@ function Select ({
     singleOptionClassName += ` ${styles['bordered-bottom']}`
   }
 
+  const optionSpanClassName = commonStyles[`text--${mainColor}`]
+
   const [wrapperClassName, setWrapperClassName] = useState(normalClassName())
   function onFocusClassName () {
     return inputClassName + ' ' + commonStyles[`bordered--${borderColor}-100`]
@@ -111,8 +113,9 @@ function Select ({
       >
         <div className={styles.liContent}>
           {option.iconName && <PlatformaticIcon iconName={option.iconName} color={mainColor} size={SMALL} onClick={null} />}
-          <span className={commonStyles[`text--${mainColor}`]}>{option.label}</span>
+          <span className={optionSpanClassName}>{option.label}</span>
         </div>
+        {option.descriptionValue && <span className={`${optionSpanClassName} ${styles.descriptionValue}`}>{option.descriptionValue}</span>}
       </li>
     )
   }
@@ -212,7 +215,8 @@ Select.propTypes = {
     icon: PropTypes.string,
     notSelectable: PropTypes.bool,
     notFilterable: PropTypes.bool,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    descriptionValue: PropTypes.string
   })),
   /**
    * defaultOptionsClassName
