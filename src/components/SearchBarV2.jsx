@@ -1,22 +1,25 @@
 'use strict'
 import React, { useRef, useState } from 'react'
 import PropTypes from 'prop-types'
+import commonStyles from './Common.module.css'
 import styles from './SearchBarV2.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
-import { MEDIUM, WHITE } from './constants'
+import { MEDIUM, RICH_BLACK, TRANSPARENT, WHITE } from './constants'
 function SearchBarV2 ({
   onSubmit,
   onChange,
   onClear,
   color,
-  onFocusColor,
+  backgroundColor,
   placeholder,
   dataAttrName,
   dataAttrValue
 }) {
   const inputRef = useRef()
+  const baseClassName = `${styles.container} ${styles.wrapperPadding} ` + commonStyles[`background-color-${backgroundColor}`]
   const [wrapperClassName, setWrapperClassName] = useState(normalClassName())
   const [isOnFocus, setIsOnFocus] = useState(false)
+  const [showClear, setShowClear] = useState(false)
   const dataProps = {}
   if (dataAttrName && dataAttrValue) {
     dataProps[`data-${dataAttrName}`] = dataAttrValue
@@ -31,12 +34,14 @@ function SearchBarV2 ({
   function handleChange () {
     if (onChange) {
       const value = inputRef.current.value
+      setShowClear(!!value)
       return onChange(value)
     }
   }
 
   function handleClear () {
     inputRef.current.value = ''
+    setShowClear(false)
     return onClear()
   }
 
@@ -53,20 +58,22 @@ function SearchBarV2 ({
   }
 
   function onFocusClassName () {
-    return `${styles.container} ${styles.wrapperPadding} ${styles.onFocus}`
+    return `${baseClassName} ${styles.onFocus}`
   }
 
   function normalClassName () {
-    return `${styles.container} ${styles.wrapperPadding} ${styles.onBlur}`
+    return `${baseClassName} ${styles.onBlur}`
   }
 
   return (
     <div className={wrapperClassName} {...dataProps}>
-      <PlatformaticIcon iconName='LensIcon' color={isOnFocus ? onFocusColor : color} size={MEDIUM} onClick={handleSearch} />
+      <PlatformaticIcon iconName='LensIcon' color={color} disabled={!isOnFocus} size={MEDIUM} onClick={handleSearch} />
       <input type='text' placeholder={placeholder} className={styles.input} ref={inputRef} onChange={handleChange} onFocus={onFocus} onBlur={onBlur} />
-      <div className={styles.clearContainer}>
-        <PlatformaticIcon iconName='CircleCloseIcon' color={isOnFocus ? onFocusColor : color} size={MEDIUM} onClick={handleClear} />
-      </div>
+      {showClear && (
+        <div className={styles.clearContainer}>
+          <PlatformaticIcon iconName='CircleCloseIcon' color={color} size={MEDIUM} onClick={handleClear} />
+        </div>
+      )}
     </div>
   )
 }
@@ -87,11 +94,11 @@ SearchBarV2.propTypes = {
   /**
    * color
    */
-  color: PropTypes.string,
+  color: PropTypes.oneOf([WHITE, RICH_BLACK]),
   /**
-   * onFocusColor
+   * backgroundColor
    */
-  onFocusColor: PropTypes.string,
+  backgroundColor: PropTypes.oneOf([WHITE, RICH_BLACK, TRANSPARENT]),
   /**
    * placeholder
    */
@@ -108,10 +115,10 @@ SearchBarV2.propTypes = {
 
 SearchBarV2.defaultProps = {
   color: WHITE,
-  onFocusColor: WHITE,
-  onSubmit: () => {},
-  onChange: () => {},
-  onClear: () => {},
+  backgroundColor: RICH_BLACK,
+  onSubmit: () => { },
+  onChange: () => { },
+  onClear: () => { },
   placeholder: 'Search',
   dataAttrName: '',
   dataAttrValue: ''
