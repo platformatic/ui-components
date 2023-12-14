@@ -20,7 +20,7 @@
   @apply font-semibold text-white text-3xl pb-4;
 }
 .clearContainer {
-  @apply absolute right-[1rem] translate-y-[-50%];
+  @apply absolute right-[1rem];
 }
 .wrapperPadding {
   @apply px-2 py-1.5;
