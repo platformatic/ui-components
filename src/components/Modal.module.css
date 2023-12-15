@@ -48,10 +48,10 @@
   @apply inline-flex items-center;
 }
 .modal--small {
-  @apply min-w-[480px] max-w-[480px];
+  @apply w-screen min-w-full lg:min-w-[480px] lg:max-w-[480px];
 }
 .modal--medium {
-  @apply min-w-[880px] max-w-[880px];
+  @apply lg:min-w-[880px] lg:max-w-[880px];
 }
 .modal--full-width {
   @apply w-screen min-w-full;

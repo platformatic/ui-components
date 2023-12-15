@@ -23,7 +23,7 @@
   @apply flex items-center gap-x-2 pb-4;
 }
 .modalLefty {
-  @apply py-20 px-[7.5rem];
+  @apply py-5 lg:py-20 lg:px-[7.5rem];
   height: calc(100% - 10rem);
 }
 
