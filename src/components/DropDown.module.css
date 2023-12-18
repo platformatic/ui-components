@@ -8,7 +8,8 @@
   @apply items-start;
 }
 .arrow {
-  @apply absolute top-[50%] right-0 translate-y-[-50%];
+  @apply absolute top-[50%] right-0;
+  transform: translateY(-50%);
 }
 .header {
   @apply flex items-center hover:cursor-pointer relative pr-6 tracking-more-widest uppercase text-sm font-normal;
@@ -20,7 +21,7 @@
   @apply absolute border-solid border p-0 mt-8 rounded-md z-10 text-sm min-w-[190px];
 }
 .item {
-  @apply py-2 px-3 text-sm leading-4 hover:cursor-pointer;
+  @apply hover:cursor-pointer;
 }
 .lastButton {
   @apply border-t py-2 text-center mx-auto;
@@ -33,4 +34,8 @@
 
 .hover--white {
   @apply hover:bg-white hover:bg-opacity-10;
+}
+
+.hover--rich-black {
+  @apply hover:bg-rich-black hover:bg-opacity-10;
 }

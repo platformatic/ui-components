@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 import styles from './DropDown.module.css'
 import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
-import { DARK_BLUE, LIGHT_BLUE, MAIN_DARK_BLUE, WHITE } from './constants'
+import { DARK_BLUE, LIGHT_BLUE, MAIN_DARK_BLUE, RICH_BLACK, WHITE } from './constants'
 function DropDown ({ pictureUrl, header, items, align, backgroundColor, textColor, borderColor, headerColor, lastButton }) {
   const [open, setOpen] = useState(false)
-  const borderClass = commonStyles[`bordered--${borderColor}-10`]
+  const borderClass = commonStyles[`bordered--${borderColor}-30`]
 
   let classNameMenu = `${styles.menu} `
   classNameMenu += commonStyles[`background-color-${backgroundColor}`]
@@ -16,10 +16,14 @@ function DropDown ({ pictureUrl, header, items, align, backgroundColor, textColo
   let classNameItem = `${styles.item} `
   classNameItem += commonStyles[`text--${textColor}`]
 
-  if (backgroundColor === DARK_BLUE) {
-    classNameItem += ' ' + styles[`hover--${WHITE}`]
-  } else {
-    classNameItem += ' ' + styles[`hover--${MAIN_DARK_BLUE}`]
+  switch (backgroundColor) {
+    case DARK_BLUE:
+    case RICH_BLACK:
+      classNameItem += ' ' + styles[`hover--${WHITE}`]
+      break
+    default:
+      classNameItem += ' ' + styles[`hover--${MAIN_DARK_BLUE}`]
+      break
   }
 
   const lastButtonClassName = styles.lastButton + ' ' + borderClass
@@ -75,19 +79,19 @@ DropDown.propTypes = {
   /**
    * backgroundColor
    */
-  backgroundColor: PropTypes.oneOf([DARK_BLUE, LIGHT_BLUE]),
+  backgroundColor: PropTypes.oneOf([DARK_BLUE, LIGHT_BLUE, RICH_BLACK]),
   /**
    * textColor
    */
-  textColor: PropTypes.oneOf([MAIN_DARK_BLUE, LIGHT_BLUE]),
+  textColor: PropTypes.oneOf([MAIN_DARK_BLUE, LIGHT_BLUE, WHITE]),
   /**
    * borderColor
    */
-  borderColor: PropTypes.oneOf([MAIN_DARK_BLUE, WHITE]),
+  borderColor: PropTypes.oneOf([MAIN_DARK_BLUE, WHITE, RICH_BLACK]),
   /**
    * headerColor
    */
-  headerColor: PropTypes.oneOf([MAIN_DARK_BLUE, WHITE]),
+  headerColor: PropTypes.oneOf([MAIN_DARK_BLUE, WHITE, RICH_BLACK]),
   /**
    * lastButton
    */

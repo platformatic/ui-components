@@ -103,6 +103,7 @@ import SocialLinkedInIcon from './SocialLinkedInIcon'
 import SocialNPMIcon from './SocialNPMIcon'
 import SocialXIcon from './SocialXIcon'
 import SortableIcon from './SortableIcon'
+import StackablesIcon from './StackablesIcon'
 import StackablesPluginIcon from './StackablesPluginIcon'
 import StackablesTemplateIcon from './StackablesTemplateIcon'
 import StopIcon from './StopIcon'
@@ -220,8 +221,6 @@ export default {
   SendIcon,
   ServiceIcon,
   StopIcon,
-  StackablesPluginIcon,
-  StackablesTemplateIcon,
   SlotIcon,
   SwitchIcon,
   SocialDiscordIcon,
@@ -231,6 +230,9 @@ export default {
   SocialNPMIcon,
   SocialXIcon,
   SortableIcon,
+  StackablesIcon,
+  StackablesPluginIcon,
+  StackablesTemplateIcon,
   TerminalIcon,
   TeamsIcon,
   TwoUsersIcon,
