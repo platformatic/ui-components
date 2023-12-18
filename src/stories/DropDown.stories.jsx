@@ -4,7 +4,7 @@ import BorderedBox from '../components/BorderedBox'
 import Button from '../components/Button'
 import HorizontalSeparator from '../components/HorizontalSeparator'
 import { useState } from 'react'
-import { BOX_SHADOW, LIGHT_BLUE, MAIN_DARK_BLUE, WHITE } from '../components/constants'
+import { BOX_SHADOW, LIGHT_BLUE, MAIN_DARK_BLUE, RICH_BLACK, WHITE } from '../components/constants'
 export default {
   title: 'Platformatic/DropDown',
   component: DropDown,
@@ -74,4 +74,17 @@ withButton.args = {
               />,
   borderColor: MAIN_DARK_BLUE
 
+}
+
+export const BlackVersion = Template.bind({})
+
+BlackVersion.args = {
+  header: 'My Menu',
+  backgroundColor: RICH_BLACK,
+  borderColor: WHITE,
+  items: [
+    <span className='text-white' key='1'>Menu 1</span>,
+    <span className='text-white' key='2'>Menu 2</span>,
+    <span className='text-white' key='3'>Menu3</span>
+  ]
 }
