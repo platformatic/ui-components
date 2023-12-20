@@ -1,5 +1,5 @@
 .tag {
-  @apply rounded-md px-4 py-2 w-fit;
+  @apply rounded-md px-3 py-1 w-fit;
 }
 .bordered {
   @apply border border-solid;

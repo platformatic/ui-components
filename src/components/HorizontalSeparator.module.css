@@ -1,5 +1,9 @@
 .style {
   @apply border-b-0 border-t w-full;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 .marginY-4 {
   @apply my-4;
