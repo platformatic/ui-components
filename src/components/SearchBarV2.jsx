@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import commonStyles from './Common.module.css'
 import styles from './SearchBarV2.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
-import { MEDIUM, RICH_BLACK, TRANSPARENT, WHITE } from './constants'
+import { RICH_BLACK, SMALL, TRANSPARENT, WHITE } from './constants'
 function SearchBarV2 ({
   onSubmit,
   onChange,
@@ -67,11 +67,11 @@ function SearchBarV2 ({
 
   return (
     <div className={wrapperClassName} {...dataProps}>
-      <PlatformaticIcon iconName='LensIcon' color={color} disabled={!isOnFocus} size={MEDIUM} onClick={handleSearch} />
+      <PlatformaticIcon iconName='LensIcon' color={color} disabled={!isOnFocus} size={SMALL} onClick={handleSearch} />
       <input type='text' placeholder={placeholder} className={styles.input} ref={inputRef} onChange={handleChange} onFocus={onFocus} onBlur={onBlur} />
       {showClear && (
         <div className={styles.clearContainer}>
-          <PlatformaticIcon iconName='CircleCloseIcon' color={color} size={MEDIUM} onClick={handleClear} />
+          <PlatformaticIcon iconName='CircleCloseIcon' color={color} size={SMALL} onClick={handleClear} />
         </div>
       )}
     </div>
