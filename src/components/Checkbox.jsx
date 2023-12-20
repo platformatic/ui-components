@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Checkbox.module.css'
-import { MAIN_DARK_BLUE, WHITE } from './constants'
+import { MAIN_DARK_BLUE, RICH_BLACK, WHITE } from './constants'
 function Checkbox ({ disabled, color, ...rest }) {
   let className = `${styles.checkbox} `
   className += styles[`checkbox--${color}`]
@@ -20,7 +20,7 @@ Checkbox.propTypes = {
   /**
    * color
    */
-  color: PropTypes.oneOf([WHITE, MAIN_DARK_BLUE])
+  color: PropTypes.oneOf([WHITE, MAIN_DARK_BLUE, RICH_BLACK])
 }
 
 Checkbox.defaultProps = {
