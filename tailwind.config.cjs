@@ -23,7 +23,8 @@ module.exports = {
         'dark-blue': '0px 0px 4px rgba(0, 52, 79, 0.5)',
         'light-blue': '0px 0px 4px rgba(233, 247, 255, 0.5)',
         'error-red': '0px 0px 4px rgba(250, 33, 33, 0.5)',
-        'tertiary-blue': '0px 0px 4px rgba(37, 136, 228, 0.5)'
+        'tertiary-blue': '0px 0px 4px rgba(37, 136, 228, 0.5)',
+        white: '0px 0px 4px rgba(255, 255, 255, 0.5)'
       },
       opacity: {
         15: '.15'
