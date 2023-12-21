@@ -44,8 +44,9 @@ import CircleTwoArrowsDownIcon from './CircleTwoArrowsDownIcon'
 import CircleTwoArrowsUpIcon from './CircleTwoArrowsUpIcon'
 import CloseIcon from './CloseIcon'
 import CloudIcon from './CloudIcon'
-import CreditCardIcon from './CreditCardIcon'
+import ComputerIcon from './ComputerIcon'
 import CopyPasteIcon from './CopyPasteIcon'
+import CreditCardIcon from './CreditCardIcon'
 import ConfigureDatabaseIcon from './ConfigureDatabaseIcon'
 import CreatingAppIcon from './CreatingAppIcon'
 import DatabaseIcon from './DatabaseIcon'
@@ -112,6 +113,7 @@ import TwoUsersIcon from './TwoUsersIcon'
 import TeamsIcon from './TeamsIcon'
 import TrashIcon from './TrashIcon'
 import UpgradeIcon from './UpgradeIcon'
+import UserComputerIcon from './UserComputerIcon'
 import UserIcon from './UserIcon'
 import UserRemoveIcon from './UserRemoveIcon'
 import UserRoleIcon from './UserRoleIcon'
@@ -170,8 +172,9 @@ export default {
   CircleTwoArrowsUpIcon,
   CloseIcon,
   CloudIcon,
-  CreditCardIcon,
+  ComputerIcon,
   CopyPasteIcon,
+  CreditCardIcon,
   ConfigureDatabaseIcon,
   CreatingAppIcon,
   DatabaseIcon,
@@ -238,6 +241,7 @@ export default {
   TwoUsersIcon,
   TrashIcon,
   UpgradeIcon,
+  UserComputerIcon,
   UserIcon,
   UserRemoveIcon,
   UserRoleIcon,
