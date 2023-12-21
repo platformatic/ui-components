@@ -4,19 +4,40 @@ import PropTypes from 'prop-types'
 import inputStyles from './Input.module.css'
 import styles from './InputWithSeparator.module.css'
 import commonStyles from '../Common.module.css'
-import { BACKGROUND_COLOR_OPAQUE, MAIN_DARK_BLUE, MAIN_GREEN, MEDIUM, TRANSPARENT } from '../constants'
+import { BACKGROUND_COLOR_OPAQUE, MAIN_DARK_BLUE, MAIN_GREEN, MEDIUM, OPACITY_30, RICH_BLACK, SMALL, TRANSPARENT, WHITE } from '../constants'
 import BorderedBox from '../BorderedBox'
 import ButtonFullRounded from '../ButtonFullRounded'
 
-function InputWithSeparator ({ placeholder, name, borderColor, errorMessage, onChange, disabled, afterIcon, value, separator }) {
+function InputWithSeparator ({
+  placeholder,
+  name,
+  borderColor,
+  backgroundColor,
+  errorMessage,
+  onChange,
+  disabled,
+  afterIcon,
+  value,
+  separator,
+  inputTextClassName
+}) {
+  const baseClassName = `${styles.input} ${styles.flexNone} ${styles.smallMargin} ${inputTextClassName} ` + commonStyles[`background-color-${backgroundColor}`]
+  const buttonClassName = commonStyles[`background-color-${borderColor}`] + ' ' + commonStyles['background-color-opaque-30']
   const [chunks, setChunks] = useState([])
-  const [inputClassName, setInputClassName] = useState(`${styles.flexNone} ${styles.smallMargin} ${commonStyles.fullWidth}`)
+  const [inputClassName, setInputClassName] = useState(normalClassName())
   const chunkClasses = `${styles.flexNone} ${styles.smallPadding} ${styles.smallMargin}`
-
-  let className = styles.inputContainer + ' ' + commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`] + ' ' + styles.smallPadding
+  let className = styles.inputContainer + ' ' + commonStyles[`bordered--${borderColor}-30`] + ' ' + commonStyles[`text--${borderColor}`]
   const showError = errorMessage.length > 0
   if (showError) className += ' ' + commonStyles['bordered--error-red']
   if (disabled) className += ' ' + commonStyles['apply-opacity-30']
+
+  useEffect(() => {
+    if (chunks.length > 0) {
+      setInputClassName(withChunksClassName())
+    } else {
+      setInputClassName(normalClassName())
+    }
+  }, [chunks.length])
 
   function handleRemove (chunk) {
     const index = chunks.findIndex(c => c === chunk)
@@ -40,24 +61,24 @@ function InputWithSeparator ({ placeholder, name, borderColor, errorMessage, onC
     onChange({ value: event.target.value, chunks })
   }
 
-  useEffect(() => {
-    if (chunks.length > 0) {
-      setInputClassName(`${styles.flexNone} ${styles.smallMargin}`)
-    } else {
-      setInputClassName(`${styles.flexNone} ${styles.smallMargin} ${commonStyles.fullWidth}`)
-    }
-  }, [chunks.length])
+  function normalClassName () {
+    return `${baseClassName} ${commonStyles.fullWidth} `
+  }
+
+  function withChunksClassName () {
+    return baseClassName
+  }
 
   function renderChunk (chunk, index) {
     return (
-      <BorderedBox color={TRANSPARENT} backgroundColor={MAIN_DARK_BLUE} backgroundColorOpacity={20} classes={chunkClasses} key={index}>
+      <BorderedBox color={TRANSPARENT} backgroundColor={borderColor} backgroundColorOpacity={OPACITY_30} classes={chunkClasses} key={index}>
         <div className={styles.chunkContent}>
-          <span className={styles.chunkText}>{chunk}</span>
+          <span className={`${styles.chunkText} ${inputTextClassName}`}>{chunk}</span>
           <ButtonFullRounded
             iconName='CircleCloseIcon'
-            iconSize={MEDIUM}
-            iconColor={MAIN_DARK_BLUE}
-            hoverEffect={BACKGROUND_COLOR_OPAQUE}
+            iconSize={SMALL}
+            iconColor={WHITE}
+            buttonClassName={buttonClassName}
             onClick={() => handleRemove(chunk)}
             bordered={false}
             alt='Close'
@@ -110,9 +131,17 @@ InputWithSeparator.propTypes = {
    */
   separator: PropTypes.string,
   /**
+   * inputTextClassName
+   */
+  inputTextClassName: PropTypes.string,
+  /**
    * color of border
    */
-  borderColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE]),
+  borderColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE, WHITE, RICH_BLACK]),
+  /**
+   * color of border
+   */
+  backgroundColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE, WHITE, RICH_BLACK, TRANSPARENT]),
   /**
    * onChange
    */
@@ -136,12 +165,14 @@ InputWithSeparator.defaultProps = {
   placeholder: '',
   value: '',
   name: '',
-  borderColor: 'main-green',
+  borderColor: MAIN_GREEN,
+  backgroundColor: WHITE,
   errorMessage: '',
   onChange: () => {},
   disabled: false,
   afterIcon: null,
-  separator: ''
+  separator: '',
+  inputTextClassName: ''
 }
 
 export default InputWithSeparator

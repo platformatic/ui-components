@@ -45,6 +45,6 @@
 }
 .input.active,
 .input:focus {
-  @apply shadow-main-dark-blue;
+  @apply shadow-white;
   outline: none;
 }

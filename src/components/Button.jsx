@@ -22,6 +22,7 @@ function Button ({
   selected,
   ...rest
 }) {
+  const containerClassName = `${styles.container} ${styles['color-' + color]} ${commonStyles['background-color-' + backgroundColor]}`
   let buttonClassName = classes
   buttonClassName += ` ${styles.button} ${commonStyles['background-color-' + backgroundColor]} ${styles['color-' + color]} ${styles['button-' + size]}`
   if (!bordered) buttonClassName += ` ${styles['no-border']}`
@@ -46,11 +47,13 @@ function Button ({
   if (fullWidth) buttonClassName += ` ${styles.fullWidth}`
   if (selected) buttonClassName += ' ' + commonStyles[`selected-background-color-${color}`]
   return (
-    <button className={buttonClassName} disabled={disabled} alt={label} {...rest}>
-      {platformaticIcon ? <PlatformaticIcon key='left' iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' onClick={null} /> : null}
-      <span className={styles.label}>{label}</span>
-      {platformaticIconAfter ? <PlatformaticIcon key='right' iconName={platformaticIconAfter.iconName} color={platformaticIconAfter.color} data-testid='button-icon' onClick={null} /> : null}
-    </button>
+    <div className={containerClassName}>
+      <button className={buttonClassName} disabled={disabled} alt={label} {...rest}>
+        {platformaticIcon ? <PlatformaticIcon key='left' iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' onClick={null} disabled={disabled} /> : null}
+        <span className={styles.label}>{label}</span>
+        {platformaticIconAfter ? <PlatformaticIcon key='right' iconName={platformaticIconAfter.iconName} color={platformaticIconAfter.color} data-testid='button-icon' onClick={null} disabled={disabled} /> : null}
+      </button>
+    </div>
   )
 }
 

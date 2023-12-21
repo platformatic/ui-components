@@ -17,32 +17,33 @@ function ButtonFullRounded ({
   hoverEffect,
   bordered,
   tip,
-  selected
+  selected,
+  buttonClassName
 }) {
   const padding = commonStyles[`padding--${paddingSize}`]
   const containerClassName = `${className} border-0 ${styles.roundedFull}`
-  let buttonClassName = `${styles.roundedFull} ${styles.buttonRoundedFull} ${padding}`
+  let innerButtonClassName = `${buttonClassName} ${styles.roundedFull} ${styles.buttonRoundedFull} ${padding}`
   if (bordered) {
-    buttonClassName += ` ${styles.applyBorder} ` + commonStyles[`bordered--${iconColor}`]
+    innerButtonClassName += ` ${styles.applyBorder} ` + commonStyles[`bordered--${iconColor}`]
   } else {
-    buttonClassName += ` ${styles.borderLess} `
+    innerButtonClassName += ` ${styles.borderLess} `
   }
   if (disabled) {
-    buttonClassName += ` ${styles.disabled}`
+    innerButtonClassName += ` ${styles.disabled}`
   } else {
     switch (hoverEffect) {
       case BACKGROUND_COLOR_OPAQUE:
-        buttonClassName += ' ' + commonStyles[`hover-${BACKGROUND_COLOR_OPAQUE}-${iconColor}`]
+        innerButtonClassName += ' ' + commonStyles[`hover-${BACKGROUND_COLOR_OPAQUE}-${iconColor}`]
         break
       default:
         break
     }
   }
-  if (selected) buttonClassName += ' ' + commonStyles[`selected-background-color-${iconColor}`]
+  if (selected) innerButtonClassName += ' ' + commonStyles[`selected-background-color-${iconColor}`]
 
   return (
     <div className={containerClassName}>
-      <button className={buttonClassName} disabled={disabled} onClick={onClick} alt={alt} type='button'>
+      <button className={innerButtonClassName} disabled={disabled} onClick={onClick} alt={alt} type='button'>
         <PlatformaticIcon iconName={iconName} size={iconSize} color={iconColor} data-testid='button-icon' onClick={null} tip={tip} />
       </button>
     </div>
@@ -93,7 +94,11 @@ ButtonFullRounded.propTypes = {
   /**
    * Selected: default false
    */
-  selected: PropTypes.bool
+  selected: PropTypes.bool,
+  /**
+     * buttonClassName
+     */
+  buttonClassName: PropTypes.string
 
 }
 
@@ -109,7 +114,8 @@ ButtonFullRounded.defaultProps = {
   hoverEffect: '',
   bordered: false,
   tip: '',
-  selected: false
+  selected: false,
+  buttonClassName: ''
 }
 
 export default ButtonFullRounded

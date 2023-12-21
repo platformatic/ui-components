@@ -2,14 +2,20 @@
   @apply flex gap-x-2 w-full items-center;
 }
 .chunkText {
-  @apply text-sm text-main-dark-blue;
+  @apply text-sm;
 }
 .inputContainer {
-  @apply flex min-h-[46px] border border-solid box-border rounded-md items-center gap-[0.1rem] flex-wrap relative grow;
+  @apply flex min-h-[46px] border border-solid box-border rounded-md items-center gap-[0.1rem] flex-wrap relative grow px-2;
+}
+.input {
+  @apply h-full m-0 border-0;
+  padding-block: 0;
+  padding-inline: 0;
+  background: inherit;
 }
 .smallPadding {
   @apply p-1 !important
-} 
+}
 .flexNone {
   @apply flex-none !important;
 }
@@ -24,4 +30,10 @@
 }
 .container {
   @apply flex w-full items-center;
+}
+
+.input.active,
+.input:focus {
+  @apply shadow-white;
+  outline: none;
 }

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import styles from './Input.module.css'
 import commonStyles from '../Common.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
-import { MAIN_DARK_BLUE, MAIN_GREEN, WHITE } from '../constants'
+import { MAIN_DARK_BLUE, MAIN_GREEN, RICH_BLACK, TRANSPARENT, WHITE } from '../constants'
 import BorderedBox from '../BorderedBox'
 
 function Input ({
@@ -19,7 +19,7 @@ function Input ({
   afterIcon,
   focused,
   placeholderApart,
-  backgroundTransparent,
+  backgroundColor,
   inputTextClassName,
   verticalPaddingClassName,
   dataAttrName,
@@ -29,7 +29,8 @@ function Input ({
   let inputClassName = `${commonStyles.fullWidth} ${styles.input} ${inputTextClassName}`
   inputClassName += verticalPaddingClassName || `${styles.inputDefaultVerticalPadding}`
   inputClassName += commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`]
-  if (backgroundTransparent) inputClassName += ` ${commonStyles['background-color-transparent']}`
+  inputClassName += ' ' + commonStyles[`background-color-${backgroundColor}`]
+
   const showError = errorMessage.length > 0
   if (showError) inputClassName += ' ' + commonStyles['bordered--error-red']
   if (disabled) inputClassName += ' ' + commonStyles['apply-opacity-30']
@@ -83,7 +84,11 @@ Input.propTypes = {
   /**
    * color of border
    */
-  borderColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE, WHITE]),
+  borderColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE, WHITE, RICH_BLACK]),
+  /**
+   * color of border
+   */
+  backgroundColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE, WHITE, RICH_BLACK, TRANSPARENT]),
   /**
    * onChange
    */
@@ -147,6 +152,7 @@ Input.defaultProps = {
   value: '',
   name: '',
   borderColor: MAIN_GREEN,
+  backgroundColor: WHITE,
   errorMessage: '',
   onChange: () => {},
   disabled: false,
@@ -154,7 +160,6 @@ Input.defaultProps = {
   afterIcon: null,
   focused: false,
   shadowPlaceholder: false,
-  backgroundTransparent: false,
   inputTextClassName: '',
   verticalPaddingClassName: '',
   dataAttrName: '',

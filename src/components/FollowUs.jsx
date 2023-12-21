@@ -1,8 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './FollowUs.module.css'
 import Icons from './icons'
 import { MAIN_GREEN, WHITE, MEDIUM, SMALL, MAIN_DARK_BLUE, LIGHT_GREEN } from './constants'
+
+function SocialElement ({ href, iconName, iconClassName, iconColor, iconSize }) {
+  const [hover, setHover] = useState(false)
+
+  const icon = React.createElement(Icons[`${iconName}`], {
+    color: iconColor,
+    size: iconSize,
+    tip: '',
+    disabled: !hover
+  })
+
+  return (
+    <div className={iconClassName} onMouseLeave={() => setHover(false)} onMouseOver={() => setHover(true)}>
+      <a href={href} target='_blank' rel='noopener noreferrer'>
+        {icon}
+      </a>
+    </div>
+  )
+}
 
 function FollowUs ({ label, labelClassName, useOnFrontpage, iconColor, iconSize, labelColor }) {
   const suffix = useOnFrontpage ? 'Frontpage' : 'Dashboard'
@@ -14,26 +33,35 @@ function FollowUs ({ label, labelClassName, useOnFrontpage, iconColor, iconSize,
       <div className={labelClassName}>
         {label}
       </div>
-      <div className={iconClassName}>
-        <a href='https://twitter.com/platformatic' target='_blank' rel='noopener noreferrer'>
-          <Icons.SocialXIcon color={iconColor} size={iconSize} />
-        </a>
-      </div>
-      <div className={iconClassName}>
-        <a href='https://www.linkedin.com/company/platformatic/' target='_blank' rel='noopener noreferrer'>
-          <Icons.SocialLinkedInIcon color={iconColor} size={iconSize} />
-        </a>
-      </div>
-      <div className={iconClassName}>
-        <a href='https://github.com/platformatic' target='_blank' rel='noopener noreferrer'>
-          <Icons.SocialGitHubIcon color={iconColor} size={iconSize} />
-        </a>
-      </div>
-      <div className={iconClassName}>
-        <a href='https://discord.gg/platformatic' target='_blank' rel='noopener noreferrer'>
-          <Icons.SocialDiscordIcon color={iconColor} size={iconSize} />
-        </a>
-      </div>
+
+      <SocialElement
+        href='https://twitter.com/platformatic'
+        iconName='SocialXIcon'
+        iconClassName={iconClassName}
+        iconColor={iconColor}
+        iconSize={iconSize}
+      />
+      <SocialElement
+        href='https://www.linkedin.com/company/platformatic/'
+        iconName='SocialLinkedInIcon'
+        iconClassName={iconClassName}
+        iconColor={iconColor}
+        iconSize={iconSize}
+      />
+      <SocialElement
+        href='https://github.com/platformatic'
+        iconName='SocialGitHubIcon'
+        iconClassName={iconClassName}
+        iconColor={iconColor}
+        iconSize={iconSize}
+      />
+      <SocialElement
+        href='https://discord.gg/platformatic'
+        iconName='SocialDiscordIcon'
+        iconClassName={iconClassName}
+        iconColor={iconColor}
+        iconSize={iconSize}
+      />
     </div>
   )
 }
