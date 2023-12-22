@@ -1,11 +1,11 @@
 .container {
-  @apply flex flex-col w-full relative;
+  @apply flex flex-col w-full relative
 }
 .selectContainer {
-  @apply w-full flex items-center h-10 relative z-10;
+  @apply w-full flex items-center relative z-10;
 } 
 .select {
-  @apply px-2 h-full border border-solid box-border rounded-md ;
+  @apply px-2 h-full border border-solid box-border rounded-md py-1.5;
 }
 
 .select-main-dark-blue.active,
@@ -14,7 +14,7 @@
 }
 .select-white.active,
 .select-white:focus {
-  @apply shadow-white outline-none;
+  @apply outline-none;
 }
 .options {
   @apply absolute left-0 top-[42px] w-full max-h-[216px] overflow-y-scroll z-20;
