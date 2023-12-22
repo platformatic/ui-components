@@ -22,7 +22,7 @@ function Button ({
   selected,
   ...rest
 }) {
-  const containerClassName = `${styles.container} ${styles['color-' + color]} ${commonStyles['background-color-' + backgroundColor]}`
+  let containerClassName = `${styles.container} ${styles['color-' + color]} ${commonStyles['background-color-' + backgroundColor]} `
   let buttonClassName = classes
   buttonClassName += ` ${styles.button} ${commonStyles['background-color-' + backgroundColor]} ${styles['color-' + color]} ${styles['button-' + size]}`
   if (!bordered) buttonClassName += ` ${styles['no-border']}`
@@ -44,7 +44,10 @@ function Button ({
     }
   }
   if (bold) buttonClassName += ` ${styles.fontBold}`
-  if (fullWidth) buttonClassName += ` ${styles.fullWidth}`
+  if (fullWidth) {
+    buttonClassName += ` ${styles.fullWidth}`
+    containerClassName += ` ${styles.fullWidth}`
+  }
   if (selected) buttonClassName += ' ' + commonStyles[`selected-background-color-${color}`]
   return (
     <div className={containerClassName}>
