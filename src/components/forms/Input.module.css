@@ -45,6 +45,5 @@
 }
 .input.active,
 .input:focus {
-  @apply shadow-white;
   outline: none;
 }

@@ -25,7 +25,7 @@ function InputWithSeparator ({
   const buttonClassName = commonStyles[`background-color-${borderColor}`] + ' ' + commonStyles['background-color-opaque-30']
   const [chunks, setChunks] = useState([])
   const [inputClassName, setInputClassName] = useState(normalClassName())
-  const chunkClasses = `${styles.flexNone} ${styles.smallPadding} ${styles.smallMargin}`
+  const chunkClasses = styles.chunkClasses
   let className = styles.inputContainer + ' ' + commonStyles[`bordered--${borderColor}-30`] + ' ' + commonStyles[`text--${borderColor}`]
   const showError = errorMessage.length > 0
   if (showError) className += ' ' + commonStyles['bordered--error-red']
@@ -71,9 +71,9 @@ function InputWithSeparator ({
 
   function renderChunk (chunk, index) {
     return (
-      <BorderedBox color={TRANSPARENT} backgroundColor={borderColor} backgroundColorOpacity={OPACITY_30} classes={chunkClasses} key={index}>
+      <BorderedBox color={TRANSPARENT} backgroundColor={borderColor} backgroundColorOpacity={OPACITY_30} classes={chunkClasses} key={index} bor>
         <div className={styles.chunkContent}>
-          <span className={`${styles.chunkText} ${inputTextClassName}`}>{chunk}</span>
+          <span className={`${inputTextClassName} ${styles.chunkText} `}>{chunk}</span>
           <ButtonFullRounded
             iconName='CircleCloseIcon'
             iconSize={SMALL}

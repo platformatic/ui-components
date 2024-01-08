@@ -2,10 +2,10 @@
   @apply flex gap-x-2 w-full items-center;
 }
 .chunkText {
-  @apply text-sm;
+  @apply text-[14px] leading-[17px] !important ;
 }
 .inputContainer {
-  @apply flex min-h-[46px] border border-solid box-border rounded-md items-center gap-[0.1rem] flex-wrap relative grow px-2;
+  @apply flex min-h-[40px] border border-solid box-border rounded-md items-center gap-2 flex-wrap relative grow px-2;
 }
 .input {
   @apply h-full m-0 border-0;
@@ -34,6 +34,8 @@
 
 .input.active,
 .input:focus {
-  @apply shadow-white;
   outline: none;
+}
+.chunkClasses {
+  @apply flex-none p-2 my-0 border-0;
 }

@@ -23,7 +23,14 @@ function SocialElement ({ href, iconName, iconClassName, iconColor, iconSize }) 
   )
 }
 
-function FollowUs ({ label, labelClassName, useOnFrontpage, iconColor, iconSize, labelColor }) {
+function FollowUs ({
+  label,
+  labelClassName,
+  useOnFrontpage,
+  iconColor,
+  iconSize,
+  socialElements
+}) {
   const suffix = useOnFrontpage ? 'Frontpage' : 'Dashboard'
   const className = styles[`container${suffix}`]
   const iconClassName = styles[`icon${suffix}`]
@@ -34,34 +41,16 @@ function FollowUs ({ label, labelClassName, useOnFrontpage, iconColor, iconSize,
         {label}
       </div>
 
-      <SocialElement
-        href='https://twitter.com/platformatic'
-        iconName='SocialXIcon'
-        iconClassName={iconClassName}
-        iconColor={iconColor}
-        iconSize={iconSize}
-      />
-      <SocialElement
-        href='https://www.linkedin.com/company/platformatic/'
-        iconName='SocialLinkedInIcon'
-        iconClassName={iconClassName}
-        iconColor={iconColor}
-        iconSize={iconSize}
-      />
-      <SocialElement
-        href='https://github.com/platformatic'
-        iconName='SocialGitHubIcon'
-        iconClassName={iconClassName}
-        iconColor={iconColor}
-        iconSize={iconSize}
-      />
-      <SocialElement
-        href='https://discord.gg/platformatic'
-        iconName='SocialDiscordIcon'
-        iconClassName={iconClassName}
-        iconColor={iconColor}
-        iconSize={iconSize}
-      />
+      {socialElements.map(socialElement =>
+        <SocialElement
+          key={socialElement.link}
+          href={socialElement.link}
+          iconName={socialElement.iconName}
+          iconClassName={iconClassName}
+          iconColor={iconColor}
+          iconSize={iconSize}
+        />
+      )}
     </div>
   )
 }
@@ -90,15 +79,35 @@ FollowUs.propTypes = {
   /**
    * iconSize
    */
-  iconSize: PropTypes.oneOf([MEDIUM, SMALL])
+  iconSize: PropTypes.oneOf([MEDIUM, SMALL]),
+  /**
+   * socialElements
+   */
+  socialElements: PropTypes.arrayOf(PropTypes.shape({
+    link: PropTypes.string.isRequired,
+    iconName: PropTypes.string.isRequired
+  }))
 }
 
 FollowUs.defaultProps = {
   label: 'Follow us on',
   labelClassName: '',
   useOnFrontpage: true,
-  labelColor: LIGHT_GREEN,
   iconColor: WHITE,
-  iconSize: MEDIUM
+  iconSize: MEDIUM,
+  socialElements: [{
+    link: 'https://twitter.com/platformatic',
+    iconName: 'SocialXIcon'
+  }, {
+    link: 'https://www.linkedin.com/company/platformatic/',
+    iconName: 'SocialLinkedInIcon'
+  }, {
+    link: 'https://github.com/platformatic',
+    iconName: 'SocialGitHubIcon'
+  }, {
+    link: 'https://discord.gg/platformatic',
+    iconName: 'SocialDiscordIcon'
+  }]
+
 }
 export default FollowUs

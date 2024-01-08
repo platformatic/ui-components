@@ -1,11 +1,10 @@
 'use strict'
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './Input.module.css'
 import commonStyles from '../Common.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
-import { MAIN_DARK_BLUE, MAIN_GREEN, RICH_BLACK, TRANSPARENT, WHITE } from '../constants'
-import BorderedBox from '../BorderedBox'
+import { ERROR_RED, MAIN_DARK_BLUE, MAIN_GREEN, RICH_BLACK, TRANSPARENT, WHITE } from '../constants'
 
 function Input ({
   placeholder,
@@ -17,7 +16,6 @@ function Input ({
   disabled,
   beforeIcon,
   afterIcon,
-  focused,
   placeholderApart,
   backgroundColor,
   inputTextClassName,
@@ -26,16 +24,15 @@ function Input ({
   dataAttrValue,
   readOnly
 }) {
-  let inputClassName = `${commonStyles.fullWidth} ${styles.input} ${inputTextClassName}`
-  inputClassName += verticalPaddingClassName || `${styles.inputDefaultVerticalPadding}`
-  inputClassName += commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`]
-  inputClassName += ' ' + commonStyles[`background-color-${backgroundColor}`]
+  let baseInputClassName = `${commonStyles.fullWidth} ${styles.input} ${inputTextClassName}`
+  baseInputClassName += verticalPaddingClassName || `${styles.inputDefaultVerticalPadding}`
+  baseInputClassName += ' ' + commonStyles[`text--${borderColor}`] + ' ' + commonStyles[`background-color-${backgroundColor}`]
 
   const showError = errorMessage.length > 0
-  if (showError) inputClassName += ' ' + commonStyles['bordered--error-red']
-  if (disabled) inputClassName += ' ' + commonStyles['apply-opacity-30']
-  if (beforeIcon) inputClassName += ' ' + styles.beforeIconPadding
-  if (afterIcon) inputClassName += ' ' + styles.afterIconPadding
+  if (disabled) baseInputClassName += ' ' + commonStyles['apply-opacity-30']
+  if (beforeIcon) baseInputClassName += ' ' + styles.beforeIconPadding
+  if (afterIcon) baseInputClassName += ' ' + styles.afterIconPadding
+  const [focus, setFocus] = useState(false)
   const inputPlaceholder = placeholderApart ? '' : placeholder
 
   const dataProps = {}
@@ -43,7 +40,27 @@ function Input ({
     dataProps[`data-${dataAttrName}`] = dataAttrValue
   }
 
-  const cmp = (
+  function focusedClassName () {
+    const useEffectColor = showError ? ERROR_RED : borderColor
+    return (baseInputClassName + ' ' + commonStyles[`bordered--${useEffectColor}-100`])
+  }
+
+  function normalClassName () {
+    const useEffectColor = showError ? ERROR_RED : borderColor
+    return baseInputClassName + ' ' + commonStyles[`bordered--${useEffectColor}-70`]
+  }
+
+  function handleFocus () {
+    if (!disabled) {
+      setFocus(true)
+    }
+  }
+
+  function handleBlur () {
+    if (!disabled) setFocus(false)
+  }
+
+  return (
     <div className={styles.container} {...dataProps}>
       <div className={styles.inputContainer}>
         {beforeIcon && <div className={styles.beforeInputIcon}><PlatformaticIcon iconName={beforeIcon.iconName} size='small' data-testid='before-icon' color={beforeIcon.color} onClick={() => beforeIcon.onClick()} /></div>}
@@ -51,12 +68,14 @@ function Input ({
           type='text'
           name={name}
           value={value}
-          className={inputClassName}
+          className={focus ? focusedClassName() : normalClassName()}
           onChange={onChange}
           disabled={disabled}
           placeholder={inputPlaceholder}
           readOnly={readOnly}
           aria-readonly={readOnly}
+          onFocus={() => handleFocus()}
+          onBlur={() => handleBlur()}
         />
         {placeholderApart && <p className={styles.placeholderAPart}>{placeholder}</p>}
         {afterIcon && <div className={styles.afterInputIcon}><PlatformaticIcon iconName={afterIcon.iconName} color={afterIcon.color} data-testid='after-icon' onClick={null} /></div>}
@@ -64,8 +83,6 @@ function Input ({
       {showError && <span className={commonStyles['error-message']}>{errorMessage}</span>}
     </div>
   )
-
-  return focused ? (<BorderedBox classes={styles.paddingFocused} color={MAIN_GREEN} backgroundColor={MAIN_GREEN} opaque={10}>{cmp}</BorderedBox>) : cmp
 }
 
 Input.propTypes = {
@@ -114,10 +131,6 @@ Input.propTypes = {
     onClick: PropTypes.func
   }),
   /**
-   * addFocus
-   */
-  focused: PropTypes.bool,
-  /**
    * placeholderApart
    */
   placeholderApart: PropTypes.bool,
@@ -158,7 +171,6 @@ Input.defaultProps = {
   disabled: false,
   beforeIcon: null,
   afterIcon: null,
-  focused: false,
   shadowPlaceholder: false,
   inputTextClassName: '',
   verticalPaddingClassName: '',
