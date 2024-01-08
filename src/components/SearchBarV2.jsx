@@ -13,11 +13,13 @@ function SearchBarV2 ({
   backgroundColor,
   placeholder,
   dataAttrName,
-  dataAttrValue
+  dataAttrValue,
+  inputTextClassName
 }) {
   const inputRef = useRef()
   const baseClassName = `${styles.container} ${styles.wrapperPadding} ` + commonStyles[`background-color-${backgroundColor}`]
   const [wrapperClassName, setWrapperClassName] = useState(normalClassName())
+  const inputClassName = `${styles.input} ${inputTextClassName} `
   const [isOnFocus, setIsOnFocus] = useState(false)
   const [showClear, setShowClear] = useState(false)
   const dataProps = {}
@@ -68,7 +70,7 @@ function SearchBarV2 ({
   return (
     <div className={wrapperClassName} {...dataProps}>
       <PlatformaticIcon iconName='LensIcon' color={color} disabled={!isOnFocus} size={SMALL} onClick={handleSearch} />
-      <input type='text' placeholder={placeholder} className={styles.input} ref={inputRef} onChange={handleChange} onFocus={onFocus} onBlur={onBlur} />
+      <input type='text' placeholder={placeholder} className={inputClassName} ref={inputRef} onChange={handleChange} onFocus={onFocus} onBlur={onBlur} />
       {showClear && (
         <div className={styles.clearContainer}>
           <PlatformaticIcon iconName='CircleCloseIcon' color={color} size={SMALL} onClick={handleClear} />
@@ -110,7 +112,11 @@ SearchBarV2.propTypes = {
   /**
    * dataAttrValue
   */
-  dataAttrValue: PropTypes.string
+  dataAttrValue: PropTypes.string,
+  /**
+   * inputTextClassName
+  */
+  inputTextClassName: PropTypes.string
 }
 
 SearchBarV2.defaultProps = {
@@ -121,7 +127,9 @@ SearchBarV2.defaultProps = {
   onClear: () => { },
   placeholder: 'Search',
   dataAttrName: '',
-  dataAttrValue: ''
+  dataAttrValue: '',
+  inputTextClassName: ''
+
 }
 
 export default SearchBarV2

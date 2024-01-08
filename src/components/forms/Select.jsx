@@ -25,8 +25,8 @@ function Select ({
   optionSelected,
   dataAttrName,
   dataAttrValue,
-  backgroundColor
-
+  backgroundColor,
+  inputTextClassName
 }) {
   const inputRef = useRef()
   const [showOptions, setShowOptions] = useState(false)
@@ -34,7 +34,7 @@ function Select ({
   const [isOnFocus, setIsOnFocus] = useState(false)
   const showError = errorMessage.length > 0
   const containerClassName = `${styles.container} ${defaultContainerClassName} `
-  let inputClassName = `${commonStyles.fullWidth} ${styles.select}`
+  let inputClassName = `${commonStyles.fullWidth} ${styles.select} ${inputTextClassName}`
   inputClassName += ' ' + styles[`select-${mainColor}`]
   inputClassName += ' ' + commonStyles[`text--${borderColor}`]
   let optionsClassName = `${styles.options} ${defaultOptionsClassName} `
@@ -47,7 +47,7 @@ function Select ({
     optionsClassName += ' ' + styles['bordered-options']
     optionsClassName += ' ' + commonStyles[`bordered--${borderListColor}-30`]
   }
-  let singleOptionClassName = `${styles.option} ` + commonStyles[`bordered--${mainColor}-15`] + ' ' + commonStyles[`hover-background-color-opaque-${mainColor}`]
+  let singleOptionClassName = `${styles.option} ` + commonStyles[`bordered--${mainColor}-70`] + ' ' + commonStyles[`hover-background-color-opaque-${mainColor}`]
   if (optionsBorderedBottom) {
     singleOptionClassName += ` ${styles['bordered-bottom']}`
   }
@@ -60,7 +60,7 @@ function Select ({
   }
 
   function normalClassName () {
-    return inputClassName + ' ' + commonStyles[`bordered--${borderColor}-15`]
+    return inputClassName + ' ' + commonStyles[`bordered--${borderColor}-70`]
   }
 
   const dataProps = {}
@@ -275,7 +275,11 @@ Select.propTypes = {
   /**
    * backgroundColor
   */
-  backgroundColor: PropTypes.oneOf([MAIN_DARK_BLUE, WHITE, RICH_BLACK])
+  backgroundColor: PropTypes.oneOf([MAIN_DARK_BLUE, WHITE, RICH_BLACK]),
+  /**
+   * inputTextClassName
+  */
+  inputTextClassName: PropTypes.string
 }
 
 Select.defaultProps = {
@@ -298,7 +302,8 @@ Select.defaultProps = {
   optionSelected: null,
   dataAttrName: '',
   dataAttrValue: '',
-  backgroundColor: WHITE
+  backgroundColor: WHITE,
+  inputTextClassName: ''
 }
 
 export default Select

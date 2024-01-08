@@ -1,14 +1,16 @@
 .container {
-  @apply relative flex gap-x-2 w-full h-auto border border-solid box-border rounded-md;
+  @apply flex items-center gap-x-2 w-full h-auto border border-solid box-border rounded-md relative ;
 }
 .input {
   @apply w-full p-0 bg-transparent border-none text-white ;
+  padding-block: 0px;
+  padding-inline: 0px;
 }
 .onFocus {
   @apply border-white;
 }
 .onBlur {
-  @apply border-white/15;
+  @apply border-white/70;
 }
 .fillWhite {
   @apply fill-white;
@@ -23,6 +25,6 @@
   @apply absolute right-[1rem];
 }
 .wrapperPadding {
-  @apply px-2 py-1.5;
+  @apply px-2 py-1.5 md:px-3 md:py-[8.5px];
 }
 

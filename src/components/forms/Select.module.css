@@ -5,7 +5,7 @@
   @apply w-full flex items-center relative z-10;
 } 
 .select {
-  @apply px-2 h-full border border-solid box-border rounded-md py-1.5;
+  @apply py-1.5 px-2 md:px-3 md:py-[10.5px] h-full border border-solid box-border rounded-md ;
 }
 
 .select-main-dark-blue.active,
