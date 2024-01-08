@@ -1,6 +1,7 @@
 'use strict'
 import React, { useState } from 'react'
 import Input from '../../components/forms/Input'
+import { ERROR_RED } from '../../components/constants'
 
 const divStyle = {
   width: '100%',
@@ -88,13 +89,12 @@ IconBeforeAndAfter.args = {
   }
 }
 
-export const Focused = TemplateBorderMainDarkBlue.bind({})
+export const Focused = TemplateValuedAndAlertChange.bind({})
 
 Focused.args = {
   name: 'test',
   placeholder: 'Platformatic',
-  borderColor: 'main-dark-blue',
-  focused: true
+  borderColor: ERROR_RED
 }
 
 export const PlaceholderAPart = TemplateValuedAndAlertChange.bind({})
