@@ -14,7 +14,8 @@
 }
 .afterInputIcon,
 .beforeInputIcon {
-  @apply absolute top-[50%] translate-y-[-50%] z-20;
+  @apply absolute top-[50%] z-20;
+  transform: translateY(-50%);
 }
 .beforeInputIcon {
   @apply left-0 ml-2

@@ -112,7 +112,7 @@ function Select ({
         }}
       >
         <div className={styles.liContent}>
-          {option.iconName && <PlatformaticIcon iconName={option.iconName} color={mainColor} size={SMALL} onClick={null} />}
+          {option.iconName && <PlatformaticIcon iconName={option.iconName} color={option.iconColor || mainColor} size={option.iconSize ?? SMALL} onClick={null} />}
           <span className={optionSpanClassName}>{option.label}</span>
         </div>
         {option.descriptionValue && <span className={`${optionSpanClassName} ${styles.descriptionValue}`}>{option.descriptionValue}</span>}
@@ -212,7 +212,9 @@ Select.propTypes = {
       PropTypes.string,
       PropTypes.number
     ]),
-    icon: PropTypes.string,
+    iconName: PropTypes.string,
+    iconSize: PropTypes.string,
+    iconColor: PropTypes.string,
     notSelectable: PropTypes.bool,
     notFilterable: PropTypes.bool,
     onClick: PropTypes.func,
