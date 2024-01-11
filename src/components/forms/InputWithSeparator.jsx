@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import inputStyles from './Input.module.css'
 import styles from './InputWithSeparator.module.css'
 import commonStyles from '../Common.module.css'
-import { BACKGROUND_COLOR_OPAQUE, MAIN_DARK_BLUE, MAIN_GREEN, MEDIUM, OPACITY_30, RICH_BLACK, SMALL, TRANSPARENT, WHITE } from '../constants'
+import { BACKGROUND_COLOR_OPAQUE, ERROR_RED, MAIN_DARK_BLUE, MAIN_GREEN, MEDIUM, OPACITY_30, RICH_BLACK, SMALL, TRANSPARENT, WHITE } from '../constants'
 import BorderedBox from '../BorderedBox'
 import ButtonFullRounded from '../ButtonFullRounded'
 
@@ -22,15 +22,14 @@ function InputWithSeparator ({
   separator,
   inputTextClassName
 }) {
+  const showError = errorMessage.length > 0
+  const [focus, setFocus] = useState(false)
   const baseClassName = `${styles.input} ${styles.flexNone} ${styles.smallMargin} ${inputTextClassName} ` + commonStyles[`background-color-${backgroundColor}`]
   const buttonClassName = commonStyles[`background-color-${borderColor}`] + ' ' + commonStyles['background-color-opaque-30']
   const [chunks, setChunks] = useState([])
   const [inputClassName, setInputClassName] = useState(normalClassName())
+  const [inputContainerClassName, setInputContainerClassName] = useState(unFocusedClassName())
   const chunkClasses = styles.chunkClasses
-  let className = styles.inputContainer + ' ' + commonStyles[`bordered--${borderColor}-30`] + ' ' + commonStyles[`text--${borderColor}`]
-  const showError = errorMessage.length > 0
-  if (showError) className += ' ' + commonStyles['bordered--error-red']
-  if (disabled) className += ' ' + commonStyles['apply-opacity-30']
 
   useEffect(() => {
     if (defaultValue.length > 0) {
@@ -46,6 +45,18 @@ function InputWithSeparator ({
       setInputClassName(normalClassName())
     }
   }, [chunks.length])
+
+  useEffect(() => {
+    if (disabled) {
+      setInputContainerClassName(unFocusedClassName() + ' ' + commonStyles['apply-opacity-30'])
+    } else {
+      if (focus) {
+        setInputContainerClassName(focusedClassName())
+      } else {
+        setInputContainerClassName(unFocusedClassName())
+      }
+    }
+  }, [focus, disabled])
 
   function handleRemove (chunk) {
     const index = chunks.findIndex(c => c === chunk)
@@ -77,6 +88,16 @@ function InputWithSeparator ({
     return baseClassName
   }
 
+  function focusedClassName () {
+    const useEffectColor = showError ? ERROR_RED : borderColor
+    return styles.inputContainer + ' ' + commonStyles[`bordered--${useEffectColor}-100`]
+  }
+
+  function unFocusedClassName () {
+    const useEffectColor = showError ? ERROR_RED : borderColor
+    return styles.inputContainer + ' ' + commonStyles[`bordered--${useEffectColor}-70`]
+  }
+
   function renderChunk (chunk, index) {
     return (
       <BorderedBox color={TRANSPARENT} backgroundColor={borderColor} backgroundColorOpacity={OPACITY_30} classes={chunkClasses} key={index} bor>
@@ -95,12 +116,33 @@ function InputWithSeparator ({
       </BorderedBox>
     )
   }
+
+  function handleFocus () {
+    if (!disabled) {
+      setFocus(true)
+    }
+  }
+
+  function handleBlur () {
+    if (!disabled) setFocus(false)
+  }
+
   return (
     <div className={inputStyles.container}>
       <div className={styles.container}>
-        <div className={className}>
+        <div className={inputContainerClassName}>
           {chunks.map((value, index) => renderChunk(value, index))}
-          <input type='text' name={name} value={value} placeholder={chunks.length > 0 ? '' : placeholder} className={inputClassName} onChange={handleChange} disabled={disabled} />
+          <input
+            type='text'
+            name={name}
+            value={value}
+            placeholder={chunks.length > 0 ? '' : placeholder}
+            className={inputClassName}
+            onChange={handleChange}
+            disabled={disabled}
+            onFocus={() => handleFocus()}
+            onBlur={() => handleBlur()}
+          />
         </div>
         {afterIcon &&
           (
