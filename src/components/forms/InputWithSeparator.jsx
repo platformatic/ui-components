@@ -17,6 +17,7 @@ function InputWithSeparator ({
   onChange,
   disabled,
   afterIcon,
+  defaultValue,
   value,
   separator,
   inputTextClassName
@@ -30,6 +31,13 @@ function InputWithSeparator ({
   const showError = errorMessage.length > 0
   if (showError) className += ' ' + commonStyles['bordered--error-red']
   if (disabled) className += ' ' + commonStyles['apply-opacity-30']
+
+  useEffect(() => {
+    if (defaultValue.length > 0) {
+      const elements = defaultValue.split(separator).filter(e => e !== '')
+      setChunks(prevChunks => [...prevChunks, ...elements])
+    }
+  }, [])
 
   useEffect(() => {
     if (chunks.length > 0) {
@@ -92,7 +100,7 @@ function InputWithSeparator ({
       <div className={styles.container}>
         <div className={className}>
           {chunks.map((value, index) => renderChunk(value, index))}
-          <input type='text' name={name} value={value} placeholder={placeholder} className={inputClassName} onChange={handleChange} disabled={disabled} />
+          <input type='text' name={name} value={value} placeholder={chunks.length > 0 ? '' : placeholder} className={inputClassName} onChange={handleChange} disabled={disabled} />
         </div>
         {afterIcon &&
           (
@@ -126,6 +134,10 @@ InputWithSeparator.propTypes = {
    * value
    */
   value: PropTypes.string,
+  /**
+   * defaultValue
+   */
+  defaultValue: PropTypes.string,
   /**
    * separator
    */
@@ -164,6 +176,7 @@ InputWithSeparator.propTypes = {
 InputWithSeparator.defaultProps = {
   placeholder: '',
   value: '',
+  defaultValue: '',
   name: '',
   borderColor: MAIN_GREEN,
   backgroundColor: WHITE,
