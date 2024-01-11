@@ -37,5 +37,5 @@
   outline: none;
 }
 .chunkClasses {
-  @apply flex-none p-2 my-0 border-0;
+  @apply flex-none p-2 my-0 border-0 !important;
 }
