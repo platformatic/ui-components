@@ -4,7 +4,7 @@
   padding-inline: 0px;
 }
 .content {
-  @apply flex items-center justify-center gap-x-2;
+  @apply rounded flex items-center justify-center gap-x-2;
   background: transparent;
 }
 .fontBold {
