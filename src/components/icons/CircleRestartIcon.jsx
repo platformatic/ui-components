@@ -78,7 +78,7 @@ CircleRestartIcon.defaultProps = {
   color: MAIN_DARK_BLUE,
   size: SMALL,
   disabled: false,
-inactive: false
+  inactive: false
 }
 
 export default CircleRestartIcon

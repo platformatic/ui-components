@@ -91,7 +91,7 @@ AlertIcon.defaultProps = {
   color: ERROR_RED,
   size: MEDIUM,
   disabled: false,
-inactive: false
+  inactive: false
 }
 
 export default AlertIcon

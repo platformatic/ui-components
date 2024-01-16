@@ -61,7 +61,7 @@ ImportApplicationIcon.defaultProps = {
   color: MAIN_DARK_BLUE,
   size: LARGE,
   disabled: false,
-inactive: false
+  inactive: false
 }
 
 export default ImportApplicationIcon

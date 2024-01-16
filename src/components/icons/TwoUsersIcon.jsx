@@ -94,7 +94,7 @@ TwoUsersIcon.defaultProps = {
   color: MAIN_DARK_BLUE,
   size: MEDIUM,
   disabled: false,
-inactive: false
+  inactive: false
 }
 
 export default TwoUsersIcon
