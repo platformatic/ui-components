@@ -24,6 +24,7 @@ module.exports = {
         'light-blue': '0px 0px 4px rgba(233, 247, 255, 0.5)',
         'error-red': '0px 0px 4px rgba(250, 33, 33, 0.5)',
         'tertiary-blue': '0px 0px 4px rgba(37, 136, 228, 0.5)',
+        'rich-black': '0px 0px 4px rgba(0, 5, 11, 1)',
         white: '0px 0px 4px rgba(255, 255, 255, 0.5)'
       },
       opacity: {

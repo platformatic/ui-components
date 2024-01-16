@@ -259,6 +259,9 @@
 .hover-background-color-opaque-tertiary-blue{
   @apply hover:bg-tertiary-blue hover:bg-opacity-15;
 }
+.hover-background-color-opaque-rich-black{
+  @apply hover:bg-rich-black hover:bg-opacity-15;
+}
 .selected-background-color-main-green {
   @apply !bg-main-green bg-opacity-15 !important;
 }
@@ -276,6 +279,9 @@
 }
 .selected-background-color-light-blue {
   @apply !bg-light-blue bg-opacity-15;
+}
+.selected-background-color-rich-black {
+  @apply !bg-rich-black bg-opacity-15;
 }
 .selected-background-color-white{
   @apply !bg-white bg-opacity-15;
