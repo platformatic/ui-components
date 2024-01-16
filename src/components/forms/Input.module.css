@@ -7,7 +7,7 @@
 .input {
   padding-block: 0px;
   padding-inline: 0px;
-  @apply border border-solid box-border rounded-md px-2 z-10;
+  @apply border border-solid box-border rounded px-2 z-10;
 }
 .inputDefaultVerticalPadding {
   @apply py-2.5;

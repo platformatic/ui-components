@@ -5,7 +5,7 @@
   @apply text-[14px] leading-[17px] !important ;
 }
 .inputContainer {
-  @apply flex min-h-[40px] border border-solid box-border rounded-md items-center gap-2 flex-wrap relative grow px-2;
+  @apply flex min-h-[40px] border border-solid box-border rounded items-center gap-2 flex-wrap relative grow px-2;
 }
 .input {
   @apply h-full m-0 border-0;

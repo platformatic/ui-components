@@ -1,5 +1,5 @@
 .container {
-  @apply flex items-center gap-x-2 w-full h-auto border border-solid box-border rounded-md relative ;
+  @apply flex items-center gap-x-2 w-full h-auto border border-solid box-border rounded relative ;
 }
 .input {
   @apply w-full p-0 bg-transparent border-none text-white ;

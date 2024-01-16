@@ -5,7 +5,7 @@
   @apply w-full flex items-center relative z-10;
 } 
 .select {
-  @apply py-1.5 px-2 md:px-3 md:py-[10.5px] h-full border border-solid box-border rounded-md ;
+  @apply py-1.5 px-2 md:px-3 md:py-[10.5px] h-full border border-solid box-border rounded;
 }
 
 .select-main-dark-blue.active,
@@ -20,7 +20,7 @@
   @apply absolute left-0 top-[42px] w-full max-h-[216px] overflow-y-scroll z-20;
 }
 .bordered-options {
-  @apply border border-solid rounded-md
+  @apply border border-solid rounded
 }
 .option {
   @apply font-light cursor-pointer z-10 flex flex-row justify-between items-center px-4;
