@@ -1,9 +1,11 @@
-.container {
-  @apply rounded border-0
-}
 .button {
-  @apply rounded text-center cursor-pointer font-normal border border-solid box-border flex items-center justify-center gap-x-2;
-  background: inherit;
+  @apply rounded text-center cursor-pointer font-normal border border-solid box-border;
+  padding-block: 0px;
+  padding-inline: 0px;
+}
+.content {
+  @apply rounded flex items-center justify-center gap-x-2;
+  background: transparent;
 }
 .fontBold {
   @apply font-semibold;
@@ -50,7 +52,7 @@
   @apply text-light-blue border-light-blue;
 }
 .color-white{
-  @apply text-white border-white;
+  @apply text-white;
 }
 .color-error-red{
   @apply text-error-red border-error-red;
@@ -89,8 +91,8 @@
 .hover-box-shadow-light-blue {
   @apply hover:shadow-light-blue;
 }
-.hover-box-shadow-white{
-  @apply hover:shadow-wrap;
+.hover-box-shadow-white {
+  @apply hover:shadow-white;
 }
 .hover-box-shadow-error-red {
   @apply hover:shadow-error-red;
@@ -98,6 +100,10 @@
 .hover-box-shadow-tertiary-blue {
   @apply hover:shadow-tertiary-blue;
 }
+.hover-box-shadow-rich-black {
+  @apply hover:shadow-rich-black;
+}
+
 .underline-effect {
   @apply hover:underline;
 }

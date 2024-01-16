@@ -173,7 +173,7 @@ function Select ({
       <div className={styles.selectContainer}>
         <input type='text' name={name} value={value} className={wrapperClassName} ref={inputRef} onChange={onChange} disabled={disabled} placeholder={placeholder} onFocus={() => handleFocus()} onBlur={(e) => handleBlur(e)} />
         <div className={styles.icons}>
-          {value?.length > 0 && <PlatformaticIcon iconName='CloseIcon' color={borderColor} onClick={() => clearValue()} size={SMALL} />}
+          {value?.length > 0 && <PlatformaticIcon iconName='CircleCloseIcon' color={borderColor} onClick={() => clearValue()} size={SMALL} />}
           <PlatformaticIcon iconName={showOptions ? 'ArrowUpIcon' : 'ArrowDownIcon'} color={borderColor} onClick={() => disabled ? null : setShowOptions(!showOptions)} size={SMALL} />
         </div>
       </div>

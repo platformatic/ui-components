@@ -3,10 +3,13 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, MAIN_DARK_BLUE, SIZES, SMALL } from '../constants'
 
-const EyeOpenedIcon = ({ color, size, disabled }) => {
+const EyeOpenedIcon = ({ color, size, disabled, inactive }) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
+  }
+  if (inactive) {
+    className += ` ${styles.iconInactive}`
   }
   let icon = <></>
 
@@ -45,12 +48,17 @@ EyeOpenedIcon.propTypes = {
   /**
    * disabled
    */
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  /**
+   * inactive
+   */
+  inactive: PropTypes.bool
 }
 EyeOpenedIcon.defaultProps = {
   color: MAIN_DARK_BLUE,
   size: SMALL,
-  disabled: false
+  disabled: false,
+  inactive: false
 }
 
 export default EyeOpenedIcon

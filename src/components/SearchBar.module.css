@@ -1,5 +1,5 @@
 .input {
-  @apply flex justify-between w-full h-10 text-white border border-solid box-border rounded-md;
+  @apply flex justify-between w-full h-10 text-white border border-solid box-border rounded;
 }
 .onFocus {
   @apply border-main-green;

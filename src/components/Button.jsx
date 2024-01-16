@@ -1,5 +1,5 @@
 'use strict'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './Button.module.css'
 import commonStyles from './Common.module.css'
@@ -7,7 +7,8 @@ import PlatformaticIcon from './PlatformaticIcon'
 import { SIZES, COLORS_BUTTON, BOX_SHADOW, UNDERLINE, HOVER_EFFECTS_BUTTONS, BACKGROUND_COLOR_OPAQUE, MAIN_DARK_BLUE, LARGE } from './constants'
 
 function Button ({
-  classes,
+  textClass,
+  paddingClass,
   label,
   color,
   backgroundColor,
@@ -22,49 +23,75 @@ function Button ({
   selected,
   ...rest
 }) {
-  let containerClassName = `${styles.container} ${styles['color-' + color]} ${commonStyles['background-color-' + backgroundColor]} `
-  let buttonClassName = classes
-  buttonClassName += ` ${styles.button} ${commonStyles['background-color-' + backgroundColor]} ${styles['color-' + color]} ${styles['button-' + size]}`
-  if (!bordered) buttonClassName += ` ${styles['no-border']}`
-  if (disabled) {
-    buttonClassName += ` ${styles.disabled}`
+  let buttonClassName = textClass
+  buttonClassName += ` ${styles.button} ${styles['color-' + color]} `
+  let contentClassName = `${styles.content} `
+  if (paddingClass) {
+    contentClassName += `${paddingClass} `
   } else {
-    switch (hoverEffect) {
-      case BACKGROUND_COLOR_OPAQUE:
-        buttonClassName += ' ' + commonStyles[`hover-${BACKGROUND_COLOR_OPAQUE}-${color}`]
-        break
-      case BOX_SHADOW:
-        buttonClassName += ' ' + styles[`hover-${BOX_SHADOW}-${backgroundColor}`]
-        break
-      case UNDERLINE:
-        buttonClassName += ` ${styles['underline-effect']}`
-        break
-      default:
-        break
-    }
+    contentClassName += `${styles['button-' + size]} `
   }
+  if (disabled) {
+    buttonClassName += ' ' + commonStyles[`bordered--${color}-30`]
+    contentClassName += ` ${styles.disabled}`
+  } else {
+    buttonClassName += bordered ? commonStyles[`bordered--${color}-100`] : ''
+  }
+  if (!bordered) buttonClassName += ` ${styles['no-border']}`
   if (bold) buttonClassName += ` ${styles.fontBold}`
   if (fullWidth) {
     buttonClassName += ` ${styles.fullWidth}`
-    containerClassName += ` ${styles.fullWidth}`
   }
   if (selected) buttonClassName += ' ' + commonStyles[`selected-background-color-${color}`]
+  const [hover, setHover] = useState(false)
+  const [backgroundClassName, setBackgroundClassName] = useState(restClassName())
+
+  useEffect(() => {
+    if (!disabled) {
+      if (hover) {
+        switch (hoverEffect) {
+          case BACKGROUND_COLOR_OPAQUE:
+            setBackgroundClassName(restClassName() + ' ' + commonStyles[`hover-${BACKGROUND_COLOR_OPAQUE}-${color}`])
+            break
+          case BOX_SHADOW:
+            setBackgroundClassName(restClassName() + ' ' + styles[`hover-${BOX_SHADOW}-${backgroundColor}`])
+            break
+          case UNDERLINE:
+            setBackgroundClassName(`${restClassName()} ${styles['underline-effect']}`)
+            break
+          default:
+            break
+        }
+      } else {
+        setBackgroundClassName(restClassName())
+      }
+    }
+  }, [disabled, hover, hoverEffect])
+
+  function restClassName () {
+    return `${commonStyles['background-color-' + backgroundColor]} `
+  }
+
   return (
-    <div className={containerClassName}>
-      <button className={buttonClassName} disabled={disabled} alt={label} {...rest}>
+    <button className={`${buttonClassName} ${restClassName()}`} disabled={disabled} alt={label} {...rest} onMouseLeave={() => setHover(false)} onMouseOver={() => setHover(true)}>
+      <div className={`${contentClassName} ${backgroundClassName}`}>
         {platformaticIcon ? <PlatformaticIcon key='left' iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' onClick={null} disabled={disabled} /> : null}
         <span className={styles.label}>{label}</span>
         {platformaticIconAfter ? <PlatformaticIcon key='right' iconName={platformaticIconAfter.iconName} color={platformaticIconAfter.color} data-testid='button-icon' onClick={null} disabled={disabled} /> : null}
-      </button>
-    </div>
+      </div>
+    </button>
   )
 }
 
 Button.propTypes = {
   /**
-   * classes
+   * textClass
    */
-  classes: PropTypes.string,
+  textClass: PropTypes.string,
+  /**
+   * paddingClass
+   */
+  paddingClass: PropTypes.string,
   /**
    * label
    */
@@ -122,7 +149,8 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-  classes: '',
+  textClass: '',
+  paddingClass: '',
   label: '',
   color: MAIN_DARK_BLUE,
   backgroundColor: 'transparent',

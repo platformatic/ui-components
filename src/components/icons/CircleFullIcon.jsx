@@ -3,10 +3,13 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, EXTRA_SMALL, LARGE, MEDIUM, SIZES, SMALL, MAIN_DARK_BLUE } from '../constants'
 
-const CircleFullIcon = ({ color, size, disabled }) => {
+const CircleFullIcon = ({ color, size, disabled, inactive }) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
+  }
+  if (inactive) {
+    className += ` ${styles.iconInactive}`
   }
   const filledClassName = styles[`filled-${color}`]
   let icon = <></>
@@ -87,12 +90,17 @@ CircleFullIcon.propTypes = {
   /**
    * disabled
    */
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  /**
+   * inactive
+   */
+  inactive: PropTypes.bool
 }
 CircleFullIcon.defaultProps = {
   color: MAIN_DARK_BLUE,
   size: MEDIUM,
-  disabled: false
+  disabled: false,
+  inactive: false
 }
 
 export default CircleFullIcon

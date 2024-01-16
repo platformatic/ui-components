@@ -3,10 +3,13 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, EXTRA_LARGE, SIZES, MAIN_DARK_BLUE, MEDIUM } from '../constants'
 
-const MetricsLoadingIcon = ({ color, size, disabled }) => {
+const MetricsLoadingIcon = ({ color, size, disabled, inactive }) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
+  }
+  if (inactive) {
+    className += ` ${styles.iconInactive}`
   }
   const filledClassName = styles[`filled-${color}`]
 
@@ -51,12 +54,17 @@ MetricsLoadingIcon.propTypes = {
   /**
    * disabled
    */
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  /**
+   * inactive
+   */
+  inactive: PropTypes.bool
 }
 MetricsLoadingIcon.defaultProps = {
   color: MAIN_DARK_BLUE,
   size: MEDIUM,
-  disabled: false
+  disabled: false,
+  inactive: false
 }
 
 export default MetricsLoadingIcon

@@ -80,3 +80,7 @@
 .iconDisabled {
   @apply opacity-30
 }
+
+.iconInactive {
+  @apply opacity-70
+}

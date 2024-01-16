@@ -3,10 +3,13 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, LARGE, MAIN_DARK_BLUE } from '../constants'
 
-const ImportApplicationIcon = ({ color, size, disabled }) => {
+const ImportApplicationIcon = ({ color, size, disabled, inactive }) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
+  }
+  if (inactive) {
+    className += ` ${styles.iconInactive}`
   }
   let icon = <></>
 
@@ -48,12 +51,17 @@ ImportApplicationIcon.propTypes = {
   /**
    * disabled
    */
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  /**
+   * inactive
+   */
+  inactive: PropTypes.bool
 }
 ImportApplicationIcon.defaultProps = {
   color: MAIN_DARK_BLUE,
   size: LARGE,
-  disabled: false
+  disabled: false,
+  inactive: false
 }
 
 export default ImportApplicationIcon
