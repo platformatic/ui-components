@@ -63,7 +63,7 @@ function InputWithSeparator ({
     if (index > -1) {
       chunks.splice(index, 1)
       setChunks(chunks => [...chunks])
-      onChange({ value, chunks })
+      onChange({ value, chunks: [...chunks] })
     }
   }
 
@@ -73,7 +73,7 @@ function InputWithSeparator ({
       if (elements[0] !== '') {
         const tmp = [elements[0]]
         setChunks(prevChunks => [...prevChunks, ...tmp])
-        onChange({ value: elements[1], chunks })
+        onChange({ value: elements[1], chunks: [...chunks, ...tmp] })
         return
       }
     }
