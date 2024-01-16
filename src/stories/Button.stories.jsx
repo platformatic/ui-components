@@ -29,18 +29,12 @@ export default {
       type: 'boolean'
     },
     backgroundColor: {
-      type: 'string',
-      control: {
-        type: 'radio',
-        options: COLORS_BUTTON
-      }
+      type: 'radio',
+      options: COLORS_BUTTON
     },
     color: {
-      type: 'string',
-      control: {
-        type: 'radio',
-        options: COLORS_BUTTON
-      }
+      type: 'radio',
+      options: COLORS_BUTTON
     },
     disabled: {
       type: 'boolean'

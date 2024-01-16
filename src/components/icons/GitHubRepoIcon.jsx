@@ -3,10 +3,13 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, LARGE, MAIN_DARK_BLUE, MEDIUM, SIZES, SMALL } from '../constants'
 
-const GitHubRepoIcon = ({ color, size, disabled }) => {
+const GitHubRepoIcon = ({ color, size, disabled, inactive }) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
+  }
+  if (inactive) {
+    className += ` ${styles.iconInactive}`
   }
   const filledClassName = styles[`filled-${color}`]
   let icon = <></>
@@ -104,12 +107,17 @@ GitHubRepoIcon.propTypes = {
   /**
    * disabled
    */
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  /**
+   * inactive
+   */
+  inactive: PropTypes.bool
 }
 GitHubRepoIcon.defaultProps = {
   color: MAIN_DARK_BLUE,
   size: MEDIUM,
-  disabled: false
+  disabled: false,
+inactive: false
 }
 
 export default GitHubRepoIcon

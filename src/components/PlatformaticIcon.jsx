@@ -14,6 +14,7 @@ function PlatformaticIcon ({
   classes,
   tip,
   disabled,
+  inactive,
   ...rest
 }) {
   let icon = <></>
@@ -23,6 +24,7 @@ function PlatformaticIcon ({
       size,
       tip,
       disabled,
+      inactive,
       ...rest
     })
     if (onClick && !disabled) {
@@ -67,7 +69,11 @@ PlatformaticIcon.propTypes = {
   /**
    * disabled
    */
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  /**
+   * inactive
+   */
+  inactive: PropTypes.bool
 }
 
 PlatformaticIcon.defaultProps = {
@@ -77,7 +83,8 @@ PlatformaticIcon.defaultProps = {
   onClick: () => {},
   classes: '',
   tip: '',
-  disabled: false
+  disabled: false,
+  inactive: false
 }
 
 export default PlatformaticIcon

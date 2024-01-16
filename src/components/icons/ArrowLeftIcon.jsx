@@ -3,10 +3,13 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
 
-const ArrowLeftIcon = ({ color, size, disabled }) => {
+const ArrowLeftIcon = ({ color, size, disabled, inactive }) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
+  }
+  if (inactive) {
+    className += ` ${styles.iconInactive}`
   }
   let icon = <></>
 
@@ -72,12 +75,17 @@ ArrowLeftIcon.propTypes = {
   /**
    * disabled
    */
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  /**
+   * inactive
+   */
+  inactive: PropTypes.bool
 }
 ArrowLeftIcon.defaultProps = {
   color: MAIN_DARK_BLUE,
   size: MEDIUM,
-  disabled: false
+  disabled: false,
+inactive: false
 }
 
 export default ArrowLeftIcon

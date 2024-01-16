@@ -11,7 +11,7 @@ function SocialElement ({ href, iconName, iconClassName, iconColor, iconSize }) 
     color: iconColor,
     size: iconSize,
     tip: '',
-    disabled: !hover
+    inactive: !hover
   })
 
   return (
