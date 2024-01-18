@@ -5,12 +5,15 @@
 .blur-absolute {
   @apply absolute top-0 left-0 w-full h-full z-10 bg-rich-black/75;
 }
+.blur-fixed {
+  @apply fixed top-0 left-0 w-screen h-full z-10 bg-rich-black/75;
+}
+
 .container {
   @apply z-20;
 }
 .centered {
-  @apply fixed top-[50%] left-[50%];
-  transform: translate(-50%, -50%);
+  @apply fixed top-[50%] left-0 lg:left-[50%] translate-y-[-50%] translate-x-[0] lg:translate-x-[-50%];
 }
 .modal {
   @apply p-4 rounded-md mx-auto my-auto max-h-[85vh] overflow-y-auto;
@@ -48,10 +51,10 @@
   @apply inline-flex items-center;
 }
 .modal--small {
-  @apply w-auto lg:min-w-[480px] lg:max-w-[480px];
+  @apply w-[calc(100vW-2rem)] lg:min-w-[480px] lg:max-w-[480px];
 }
 .modal--medium {
-  @apply w-auto lg:min-w-[880px] lg:max-w-[880px];
+  @apply w-[calc(100vW-2rem)] lg:min-w-[880px] lg:max-w-[880px];
 }
 .modal--full-width {
   @apply w-screen min-w-full;

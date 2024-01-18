@@ -84,7 +84,7 @@ function Modal ({
     case MODAL_POPUP_V2:
       whichModal = (
         <>
-          <div className={`${styles['blur-absolute']}`} onClick={() => setIsOpen(false)} />
+          <div className={`${styles['blur-fixed']}`} onClick={() => setIsOpen(false)} />
           <div className={`${styles.container} ${styles.centered}`}>
             <div className={modalClassName}>
               <div className={headerClassName}>
