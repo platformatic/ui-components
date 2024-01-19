@@ -1,12 +1,18 @@
 .blur {
-  @apply fixed top-[50%] left-[50%] w-full h-screen translate-x-[-50%] translate-y-[-50%] z-10;
+  @apply fixed top-0 left-0 w-full h-screen z-20;
   background-color: rgba(0, 0, 0, 0.75);
 }
 .blur-absolute {
   @apply absolute top-0 left-0 w-full h-full z-10 bg-rich-black/75;
 }
 .blur-fixed {
-  @apply fixed top-0 left-0 w-screen h-full z-10 bg-rich-black/75;
+  @apply fixed top-0 left-0 w-screen h-full z-20 bg-rich-black/75 flex justify-center items-center;
+}
+.fixedContainer {
+  @apply fixed top-0 left-0 w-full h-screen z-20 ;
+}
+.content {
+  @apply fixed top-0 h-[100vH] flex justify-center items-center ;
 }
 
 .container {
@@ -52,7 +58,7 @@
   @apply inline-flex items-center;
 }
 .modal--small {
-  @apply w-[calc(100vW-2rem)] md:min-w-[480px] md:max-w-[480px];
+  @apply w-auto md:min-w-[480px] md:max-w-[480px];
 }
 .modal--medium {
   @apply w-[calc(100vW-2rem)] md:min-w-[480px] md:max-w-[480px] lg:min-w-[880px] lg:max-w-[880px];

@@ -28,13 +28,20 @@ export default {
 
 const Template = (args) => {
   const [isOpen, setIsOpen] = useState(false)
+  const [isOpenInside, setIsOpenInside] = useState(false)
   const { text, ...rest } = args
   return (
-    <main>
+    <main style={{ height: '1440px', overflow: 'scroll' }}>
       <BorderedBox>This Is another Content</BorderedBox>
-      <ContentThatLoads />
       <Button color={MAIN_GREEN} backgroundColor={MAIN_DARK_BLUE} onClick={() => setIsOpen(true)} label='Open Modal' />
       {isOpen && <Modal setIsOpen={setIsOpen} {...rest}>{text}</Modal>}
+
+      <BorderedBox style={{ position: 'relative' }}>
+        <p>This Is another Component with Modal inside</p>
+
+        <Button color={MAIN_GREEN} backgroundColor={MAIN_DARK_BLUE} onClick={() => setIsOpenInside(true)} label='Open Modal Inside' />
+        {isOpenInside && <Modal setIsOpen={setIsOpenInside} {...rest}>{text}</Modal>}
+      </BorderedBox>
     </main>
   )
 }
