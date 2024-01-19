@@ -83,9 +83,8 @@ function Modal ({
   switch (layout) {
     case MODAL_POPUP_V2:
       whichModal = (
-        <>
-          <div className={`${styles['blur-fixed']}`} onClick={() => setIsOpen(false)} />
-          <div className={`${styles.container} ${styles.centered}`}>
+        <div className={`${styles['blur-fixed']}`} onClick={() => setIsOpen(false)}>
+          <div className={styles.content}>
             <div className={modalClassName}>
               <div className={headerClassName}>
                 <div className={titleClassName}>{title}</div>
@@ -96,7 +95,7 @@ function Modal ({
               </div>
             </div>
           </div>
-        </>
+        </div>
       )
       break
     case MODAL_POPUP:
