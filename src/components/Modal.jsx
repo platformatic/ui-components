@@ -1,5 +1,5 @@
 'use strict'
-import React from 'react'
+import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import ButtonFullRounded from './ButtonFullRounded'
 import useEscapeKey from '../hooks/useEscapeKey'
@@ -41,8 +41,8 @@ function Modal ({
   let modalClassName = `${styles.modal}`
   modalClassName += ' ' + styles[`modal--${layout}`]
   modalClassName += ' ' + styles[`modal--${size}`]
-
   let buttonFullRoundedClassName
+  const blurRef = useRef()
 
   const headerClassName = styles[`header--${layout}`]
   let modalCoverClassName = `${styles.container} ${styles.fullscreen} `
@@ -66,7 +66,6 @@ function Modal ({
     default:
       break
   }
-
   useEscapeKey(() => setIsOpen(false))
   let whichModal = <></>
 
@@ -80,10 +79,17 @@ function Modal ({
     return <Logo width={100} heigth={80} color={MAIN_DARK_BLUE} />
   }
 
+  function closeModal (event) {
+    if (event.target === blurRef.current) {
+      setIsOpen(false)
+    }
+  }
+
   switch (layout) {
     case MODAL_POPUP_V2:
       whichModal = (
-        <div className={`${styles['blur-fixed']}`} onClick={() => setIsOpen(false)}>
+
+        <div className={`${styles['blur-fixed']}`} onClick={(event) => closeModal(event)} ref={blurRef}>
           <div className={styles.content}>
             <div className={modalClassName}>
               <div className={headerClassName}>
@@ -96,6 +102,7 @@ function Modal ({
             </div>
           </div>
         </div>
+
       )
       break
     case MODAL_POPUP:
