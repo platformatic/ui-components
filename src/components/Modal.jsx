@@ -22,7 +22,9 @@ import {
   BASIC,
   MODAL_FULL_DARK,
   MODAL_FULL_LIGHT,
-  WHITE
+  MODAL_FULL_RICH_BLACK,
+  WHITE,
+  RICH_BLACK
 } from './constants'
 import PlatformaticIcon from './PlatformaticIcon'
 
@@ -61,6 +63,13 @@ function Modal ({
       break
     case MODAL_FULL_LIGHT:
       modalCoverClassName += commonStyles['background-color-light-blue']
+      break
+    case MODAL_FULL_RICH_BLACK:
+      contentFullscreen = styles[`content--${layout}`]
+      modalCoverClassName += commonStyles[`background-color-${RICH_BLACK}`]
+      modalCoverClassName += ` ${backgroundClassName}`
+      buttonFullRoundedClassName = `${styles['close--cover']} `
+      buttonFullRoundedClassName += commonStyles[`background-color-${RICH_BLACK}`]
       break
 
     default:
@@ -129,7 +138,7 @@ function Modal ({
         <div className={modalCoverClassName}>
           <div className={headerClassName}>
             <ButtonFullRounded
-              className={buttonFullRoundedClassName}
+              buttonClassName={buttonFullRoundedClassName}
               iconName='CircleCloseIcon'
               iconSize={LARGE}
               iconColor={MAIN_DARK_BLUE}
@@ -166,6 +175,31 @@ function Modal ({
             />
           </div>
           <div className={contentFullscreen}>
+            <div>{children}</div>
+          </div>
+        </div>
+      )
+      break
+
+    case MODAL_FULL_RICH_BLACK:
+      whichModal = (
+        <div className={modalCoverClassName}>
+          <div className={headerClassName}>
+            <ButtonFullRounded
+              buttonClassName={buttonFullRoundedClassName}
+              iconName='CircleCloseIcon'
+              iconSize={LARGE}
+              iconColor={WHITE}
+              hoverEffect={BACKGROUND_COLOR_OPAQUE}
+              onClick={() => { setIsOpen(false) }}
+              bordered={false}
+              alt='Close'
+            />
+          </div>
+          <div className={contentFullscreen}>
+            <div className={titleFullscreen}>
+              <Logo width={70} heigth={56} color={WHITE} />
+            </div>
             <div>{children}</div>
           </div>
         </div>

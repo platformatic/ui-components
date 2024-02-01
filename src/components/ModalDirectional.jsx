@@ -14,11 +14,13 @@ function ModalDirectional ({
   title,
   titleClassName,
   children,
-  smallLayout
+  smallLayout,
+  classNameModalLefty
 }) {
   const className = `${styles.container} ${styles.modalLeftCover} ${smallLayout ? styles.smallLayout : styles.normalLayout}`
   const [modalClassName] = useState(className)
   const [variantModalClassName, setVariantModalClassName] = useState(`${styles.container} ${styles.modalLeftCover}`)
+  const classNameLefty = classNameModalLefty || styles.modalLefty
 
   useEffect(() => {
     setVariantModalClassName(`${modalClassName} ${styles.modalLeftCoverEntering}`)
@@ -37,7 +39,7 @@ function ModalDirectional ({
     <>
       <div className={styles.blur} onClick={() => closeModal()} />
       <div className={variantModalClassName}>
-        <div className={styles.modalLefty}>
+        <div className={classNameLefty}>
           <div className={styles.headerClassName}>
             <PlatformaticIcon iconName='ArrowLongLeftIcon' color={WHITE} size={SMALL} onClick={() => closeModal()} />
             <span className={titleClassName}>{title}</span>
@@ -69,7 +71,11 @@ ModalDirectional.propTypes = {
   /**
    * smallLayout
    */
-  smallLayout: PropTypes.bool
+  smallLayout: PropTypes.bool,
+  /**
+   * classNameLefty
+   */
+  classNameLefty: PropTypes.string
 }
 
 ModalDirectional.defaultProps = {
@@ -77,7 +83,8 @@ ModalDirectional.defaultProps = {
   setIsOpen: () => {},
   title: '',
   titleClassName: '',
-  smallLayout: false
+  smallLayout: false,
+  classNameLefty: ''
 }
 
 export default ModalDirectional
