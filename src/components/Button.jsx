@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import styles from './Button.module.css'
 import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
-import { SIZES, COLORS_BUTTON, BOX_SHADOW, UNDERLINE, HOVER_EFFECTS_BUTTONS, BACKGROUND_COLOR_OPAQUE, MAIN_DARK_BLUE, LARGE } from './constants'
+import { SIZES, COLORS_BUTTON, BOX_SHADOW, UNDERLINE, HOVER_EFFECTS_BUTTONS, BACKGROUND_COLOR_OPAQUE, MAIN_DARK_BLUE, LARGE, MEDIUM } from './constants'
 
 function Button ({
   textClass,
@@ -74,11 +74,21 @@ function Button ({
 
   return (
     <button className={`${buttonClassName} ${restClassName()}`} disabled={disabled} alt={label} {...rest} onMouseLeave={() => setHover(false)} onMouseOver={() => setHover(true)}>
-      <div className={`${contentClassName} ${backgroundClassName}`}>
-        {platformaticIcon ? <PlatformaticIcon key='left' iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' onClick={null} disabled={disabled} /> : null}
-        <span className={styles.label}>{label}</span>
-        {platformaticIconAfter ? <PlatformaticIcon key='right' iconName={platformaticIconAfter.iconName} color={platformaticIconAfter.color} data-testid='button-icon' onClick={null} disabled={disabled} /> : null}
-      </div>
+      {
+      label
+        ? (
+          <div className={`${contentClassName} ${backgroundClassName}`}>
+            {platformaticIcon ? <PlatformaticIcon key='left' iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' onClick={null} disabled={disabled} /> : null}
+            <span className={styles.label}>{label}</span>
+            {platformaticIconAfter ? <PlatformaticIcon key='right' iconName={platformaticIconAfter.iconName} color={platformaticIconAfter.color} data-testid='button-icon' onClick={null} disabled={disabled} /> : null}
+          </div>
+          )
+        : (
+          <div className={`${contentClassName} ${backgroundClassName}`}>
+            {platformaticIcon ? <PlatformaticIcon key='center' iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' size={MEDIUM} onClick={null} disabled={disabled} /> : null}
+          </div>
+          )
+      }
     </button>
   )
 }
