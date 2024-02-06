@@ -4,6 +4,7 @@ import BorderedBox from './src/components/BorderedBox'
 import Box from './src/components/Box'
 import Button from './src/components/Button'
 import ButtonFullRounded from './src/components/ButtonFullRounded'
+import ButtonOnlyIcon from './src/components/ButtonOnlyIcon'
 import Backgrounds from './src/components/backgrounds'
 import CopyAndPaste from './src/components/CopyAndPaste'
 import Checkbox from './src/components/Checkbox'
@@ -49,6 +50,7 @@ export {
   Box,
   Button,
   ButtonFullRounded,
+  ButtonOnlyIcon,
   Checkbox,
   CopyAndPaste,
   DetailedMetric,
