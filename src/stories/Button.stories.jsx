@@ -1,7 +1,7 @@
 'use strict'
 import React from 'react'
 import Button from '../components/Button'
-import { BOX_SHADOW, COLORS_BUTTON, HOVER_EFFECTS_BUTTONS, LARGE, SIZES, WHITE, RICH_BLACK, BACKGROUND_COLOR_OPAQUE, SMALL } from '../components/constants'
+import { BOX_SHADOW, COLORS_BUTTON, HOVER_EFFECTS_BUTTONS, LARGE, SIZES, WHITE } from '../components/constants'
 
 const divStyle = {
   width: '100%',
@@ -121,16 +121,4 @@ AllFilled.args = {
   bordered: false,
   hoverEffect: BOX_SHADOW,
   bold: true
-}
-
-const OnlyIconTemplate = (args) => (<Button {...args} />)
-
-export const OnlyIcon = OnlyIconTemplate.bind({})
-
-OnlyIcon.args = {
-  color: WHITE,
-  backgroundColor: RICH_BLACK,
-  onClick: () => { alert('hit!') },
-  hoverEffect: BACKGROUND_COLOR_OPAQUE,
-  platformaticIcon: { size: SMALL, iconName: 'RunningIcon', color: WHITE }
 }
