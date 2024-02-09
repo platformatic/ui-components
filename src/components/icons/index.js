@@ -104,6 +104,9 @@ import SocialLinkedInIcon from './SocialLinkedInIcon'
 import SocialNPMIcon from './SocialNPMIcon'
 import SocialXIcon from './SocialXIcon'
 import SortableIcon from './SortableIcon'
+import SortIcon from './SortIcon'
+import SortDownIcon from './SortDownIcon'
+import SortUpIcon from './SortUpIcon'
 import StackablesIcon from './StackablesIcon'
 import StackablesPluginIcon from './StackablesPluginIcon'
 import StackablesTemplateIcon from './StackablesTemplateIcon'
@@ -233,6 +236,9 @@ export default {
   SocialNPMIcon,
   SocialXIcon,
   SortableIcon,
+  SortIcon,
+  SortDownIcon,
+  SortUpIcon,
   StackablesIcon,
   StackablesPluginIcon,
   StackablesTemplateIcon,
