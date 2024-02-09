@@ -34,7 +34,7 @@ function InputWithSeparator ({
   useEffect(() => {
     if (defaultValue.length > 0) {
       let elements
-      for (let separator of separators) {
+      for (const separator of separators) {
         elements = defaultValue.split(separator).filter(e => e !== '')
         setChunks(prevChunks => [...prevChunks, ...elements])
       }
@@ -71,10 +71,9 @@ function InputWithSeparator ({
   }
 
   function handleChange (event) {
-    
     if (!showError) {
       let elements
-      for (let separator of separators) {
+      for (const separator of separators) {
         if (event.target.value.indexOf(separator) > -1) {
           elements = event.target.value.split(separator)
           if (elements[0] !== '') {
