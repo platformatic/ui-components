@@ -19,7 +19,7 @@ function InputWithSeparator ({
   afterIcon,
   defaultValue,
   value,
-  separator,
+  separators,
   inputTextClassName
 }) {
   const showError = errorMessage.length > 0
@@ -33,8 +33,11 @@ function InputWithSeparator ({
 
   useEffect(() => {
     if (defaultValue.length > 0) {
-      const elements = defaultValue.split(separator).filter(e => e !== '')
-      setChunks(prevChunks => [...prevChunks, ...elements])
+      let elements
+      for (const separator of separators) {
+        elements = defaultValue.split(separator).filter(e => e !== '')
+        setChunks(prevChunks => [...prevChunks, ...elements])
+      }
     }
   }, [])
 
@@ -68,13 +71,18 @@ function InputWithSeparator ({
   }
 
   function handleChange (event) {
-    if (!showError && event.target.value.indexOf(separator) > -1) {
-      const elements = event.target.value.split(separator)
-      if (elements[0] !== '') {
-        const tmp = [elements[0]]
-        setChunks(prevChunks => [...prevChunks, ...tmp])
-        onChange({ value: elements[1], chunks: [...chunks, ...tmp] })
-        return
+    if (!showError) {
+      let elements
+      for (const separator of separators) {
+        if (event.target.value.indexOf(separator) > -1) {
+          elements = event.target.value.split(separator)
+          if (elements[0] !== '') {
+            const tmp = [elements[0]]
+            setChunks(prevChunks => [...prevChunks, ...tmp])
+            onChange({ value: elements[1], chunks: [...chunks, ...tmp] })
+            return
+          }
+        }
       }
     }
     onChange({ value: event.target.value, chunks })
@@ -181,9 +189,9 @@ InputWithSeparator.propTypes = {
    */
   defaultValue: PropTypes.string,
   /**
-   * separator
+   * separators
    */
-  separator: PropTypes.string,
+  separators: PropTypes.arrayOf(PropTypes.string),
   /**
    * inputTextClassName
    */
@@ -226,7 +234,7 @@ InputWithSeparator.defaultProps = {
   onChange: () => {},
   disabled: false,
   afterIcon: null,
-  separator: '',
+  separators: [''],
   inputTextClassName: ''
 }
 

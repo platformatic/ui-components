@@ -49,7 +49,7 @@ Default.args = {
   name: 'test',
   placeholder: 'Initial value',
   borderColor: 'main-dark-blue',
-  separator: ',',
+  separators: [','],
   afterIcon: {
     iconName: 'AddIcon',
     color: ERROR_RED,
@@ -84,7 +84,23 @@ PredefinedValues.args = {
   name: 'test',
   placeholder: 'Initial value',
   borderColor: 'main-dark-blue',
-  separator: ',',
+  separators: [','],
+  defaultValue: 'test,test-1,test-2',
+  afterIcon: {
+    iconName: 'AddIcon',
+    color: ERROR_RED,
+    handleClick: () => alert('I\'m an AddIcon')
+  }
+
+}
+
+export const DifferentsSeparators = TemplateDefaultWithValues.bind({})
+
+DifferentsSeparators.args = {
+  name: 'test',
+  placeholder: 'Initial value',
+  borderColor: 'main-dark-blue',
+  separators: [',', ' '],
   defaultValue: 'test,test-1,test-2',
   afterIcon: {
     iconName: 'AddIcon',
