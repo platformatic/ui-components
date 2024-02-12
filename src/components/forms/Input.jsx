@@ -24,8 +24,8 @@ function Input ({
   dataAttrValue,
   readOnly
 }) {
-  let baseInputClassName = `${commonStyles.fullWidth} ${styles.input} ${inputTextClassName}`
-  baseInputClassName += verticalPaddingClassName || `${styles.inputDefaultVerticalPadding}`
+  let baseInputClassName = `${commonStyles.fullWidth} ${styles.input} ${inputTextClassName} `
+  baseInputClassName += verticalPaddingClassName || ` ${styles.inputDefaultVerticalPadding} `
   baseInputClassName += ' ' + commonStyles[`text--${borderColor}`] + ' ' + commonStyles[`background-color-${backgroundColor}`]
 
   const showError = errorMessage.length > 0
