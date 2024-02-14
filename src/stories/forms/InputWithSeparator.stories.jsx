@@ -101,7 +101,7 @@ DifferentsSeparators.args = {
   placeholder: 'Initial value',
   borderColor: 'main-dark-blue',
   separators: [',', ' '],
-  defaultValue: 'test,test-1,test-2',
+  defaultValue: 'this,is,a,test,for,a,spac',
   afterIcon: {
     iconName: 'AddIcon',
     color: ERROR_RED,

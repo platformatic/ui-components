@@ -18,6 +18,7 @@ function InputWithSeparator ({
   disabled,
   afterIcon,
   defaultValue,
+  defaultValueSeparator,
   value,
   separators,
   inputTextClassName
@@ -33,11 +34,8 @@ function InputWithSeparator ({
 
   useEffect(() => {
     if (defaultValue.length > 0) {
-      let elements
-      for (const separator of separators) {
-        elements = defaultValue.split(separator).filter(e => e !== '')
-        setChunks(prevChunks => [...prevChunks, ...elements])
-      }
+      const elements = defaultValue.split(defaultValueSeparator).filter(e => e !== '')
+      setChunks(prevChunks => [...prevChunks, ...elements])
     }
   }, [])
 
@@ -189,6 +187,10 @@ InputWithSeparator.propTypes = {
    */
   defaultValue: PropTypes.string,
   /**
+   * defaultValueSeparator
+   */
+  defaultValueSeparator: PropTypes.string,
+  /**
    * separators
    */
   separators: PropTypes.arrayOf(PropTypes.string),
@@ -227,6 +229,7 @@ InputWithSeparator.defaultProps = {
   placeholder: '',
   value: '',
   defaultValue: '',
+  defaultValueSeparator: ',',
   name: '',
   borderColor: MAIN_GREEN,
   backgroundColor: WHITE,
