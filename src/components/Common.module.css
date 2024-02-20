@@ -202,8 +202,8 @@
 .background-color-fire-engine-red {
   @apply bg-fire-engine-red ;
 }
-.background-color-alternate-dark-blue {
-  @apply bg-alternate-dark-blue ;
+.background-color-alternate-rich-black {
+  @apply bg-alternate-rich-black ;
 }
 .background-color-transparent{
   @apply bg-transparent;
