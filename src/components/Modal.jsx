@@ -15,7 +15,7 @@ import {
   MODAL_POPUP,
   MODAL_POPUP_V2,
   MAIN_DARK_BLUE,
-  BACKGROUND_COLOR_OPAQUE,
+  DULLS_BACKGROUND_COLOR,
   LARGE,
   PROFILES,
   FREE,
@@ -142,7 +142,7 @@ function Modal ({
               iconName='CircleCloseIcon'
               iconSize={LARGE}
               iconColor={MAIN_DARK_BLUE}
-              hoverEffect={BACKGROUND_COLOR_OPAQUE}
+              hoverEffect={DULLS_BACKGROUND_COLOR}
               onClick={() => { setIsOpen(false) }}
               bordered={false}
               alt='Close'
@@ -168,7 +168,7 @@ function Modal ({
               iconName='CircleCloseIcon'
               iconSize={LARGE}
               iconColor={layout === MODAL_FULL_LIGHT ? MAIN_DARK_BLUE : WHITE}
-              hoverEffect={BACKGROUND_COLOR_OPAQUE}
+              hoverEffect={DULLS_BACKGROUND_COLOR}
               onClick={() => { setIsOpen(false) }}
               bordered={false}
               alt='Close'
@@ -190,7 +190,7 @@ function Modal ({
               iconName='CircleCloseIcon'
               iconSize={LARGE}
               iconColor={WHITE}
-              hoverEffect={BACKGROUND_COLOR_OPAQUE}
+              hoverEffect={DULLS_BACKGROUND_COLOR}
               onClick={() => { setIsOpen(false) }}
               bordered={false}
               alt='Close'

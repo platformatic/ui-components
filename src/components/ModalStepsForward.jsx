@@ -13,7 +13,7 @@ import {
   MODAL_LAYOUTS,
   MODAL_POPUP,
   MAIN_DARK_BLUE,
-  BACKGROUND_COLOR_OPAQUE,
+  DULLS_BACKGROUND_COLOR,
   LARGE,
   PROFILES,
   MARGIN_0,
@@ -44,7 +44,7 @@ function ModalStepsForward ({ setIsOpen, right, stepper, left }) {
             iconName='CircleCloseIcon'
             iconSize={LARGE}
             iconColor={MAIN_DARK_BLUE}
-            hoverEffect={BACKGROUND_COLOR_OPAQUE}
+            hoverEffect={DULLS_BACKGROUND_COLOR}
             onClick={() => { setIsOpen(false) }}
             bordered={false}
             alt='Close'

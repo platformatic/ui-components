@@ -44,7 +44,10 @@ module.exports = {
       transparent: 'transparent',
       'warning-yellow': '#FEB928',
       'rich-black': '#00050B',
-      'electric-purple': '#C61BE2'
+      'electric-purple': '#C61BE2',
+      'anti-flash-white': '#EDEDED',
+      'fire-engine-red': '#D71919',
+      'alternate-dark-blue': '#040607'
     },
     fontFamily: {
       sans: ['Montserrat'],

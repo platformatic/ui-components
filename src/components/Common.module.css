@@ -196,6 +196,15 @@
 .background-color-rich-black {
   @apply bg-rich-black ;
 }
+.background-color-anti-flash-white {
+  @apply bg-anti-flash-white ;
+}
+.background-color-fire-engine-red {
+  @apply bg-fire-engine-red ;
+}
+.background-color-alternate-dark-blue {
+  @apply bg-alternate-dark-blue ;
+}
 .background-color-transparent{
   @apply bg-transparent;
 }

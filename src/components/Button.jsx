@@ -4,7 +4,19 @@ import PropTypes from 'prop-types'
 import styles from './Button.module.css'
 import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
-import { SIZES, COLORS_BUTTON, BOX_SHADOW, UNDERLINE, HOVER_EFFECTS_BUTTONS, BACKGROUND_COLOR_OPAQUE, MAIN_DARK_BLUE, LARGE } from './constants'
+import {
+  SIZES,
+  COLORS_BUTTON,
+  BOX_SHADOW,
+  UNDERLINE,
+  HOVER_EFFECTS_BUTTONS,
+  DULLS_BACKGROUND_COLOR,
+  MAIN_DARK_BLUE,
+  LARGE,
+  CHANGE_BACKGROUND_COLOR,
+  BUTTON_BACKGROUNDS_COLOR_HOVER,
+  TRANSPARENT
+} from './constants'
 
 function Button ({
   textClass,
@@ -14,8 +26,8 @@ function Button ({
   backgroundColor,
   size,
   disabled,
-  bold,
   hoverEffect,
+  hoverEffectProperties,
   bordered,
   fullWidth,
   platformaticIcon,
@@ -38,7 +50,6 @@ function Button ({
     buttonClassName += bordered ? commonStyles[`bordered--${color}-100`] : ''
   }
   if (!bordered) buttonClassName += ` ${styles['no-border']}`
-  if (bold) buttonClassName += ` ${styles.fontBold}`
   if (fullWidth) {
     buttonClassName += ` ${styles.fullWidth}`
   }
@@ -50,14 +61,17 @@ function Button ({
     if (!disabled) {
       if (hover) {
         switch (hoverEffect) {
-          case BACKGROUND_COLOR_OPAQUE:
-            setBackgroundClassName(restClassName() + ' ' + commonStyles[`hover-${BACKGROUND_COLOR_OPAQUE}-${color}`])
+          case DULLS_BACKGROUND_COLOR:
+            setBackgroundClassName(restClassName() + ' ' + commonStyles[`hover-${DULLS_BACKGROUND_COLOR}-${color}`])
             break
           case BOX_SHADOW:
             setBackgroundClassName(restClassName() + ' ' + styles[`hover-${BOX_SHADOW}-${backgroundColor}`])
             break
           case UNDERLINE:
             setBackgroundClassName(`${restClassName()} ${styles['underline-effect']}`)
+            break
+          case CHANGE_BACKGROUND_COLOR:
+            setBackgroundClassName(`${commonStyles['background-color-' + hoverEffectProperties.changeBackgroundColor]} `)
             break
           default:
             break
@@ -113,13 +127,15 @@ Button.propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * Bold
-   */
-  bold: PropTypes.bool,
-  /**
    * Effect on hover
    */
   hoverEffect: PropTypes.oneOf(HOVER_EFFECTS_BUTTONS),
+  /**
+   * Hover effect properties
+   */
+  hoverEffectProperties: PropTypes.shape({
+    changeBackgroundColor: PropTypes.oneOf(BUTTON_BACKGROUNDS_COLOR_HOVER)
+  }),
   /**
    * Apply border: default true
    */
@@ -153,11 +169,11 @@ Button.defaultProps = {
   paddingClass: '',
   label: '',
   color: MAIN_DARK_BLUE,
-  backgroundColor: 'transparent',
+  backgroundColor: TRANSPARENT,
   disabled: false,
   size: LARGE,
-  bold: false,
-  hoverEffect: BACKGROUND_COLOR_OPAQUE,
+  hoverEffect: DULLS_BACKGROUND_COLOR,
+  hoverEffectProperties: {},
   bordered: true,
   fullWidth: false,
   platformaticIcon: null,
