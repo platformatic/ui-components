@@ -1,7 +1,7 @@
 'use strict'
 import React from 'react'
 import Button from '../components/Button'
-import { ALTERNATE_DARK_BLUE, ANTI_FLASH_WHITE, BOX_SHADOW, CHANGE_BACKGROUND_COLOR, COLORS_BUTTON, ERROR_RED, FIRE_ENGINE_RED, HOVER_EFFECTS_BUTTONS, LARGE, RICH_BLACK, SIZES, WHITE } from '../components/constants'
+import { ALTERNATE_RICH_BLACK, ANTI_FLASH_WHITE, BOX_SHADOW, CHANGE_BACKGROUND_COLOR, COLORS_BUTTON, ERROR_RED, FIRE_ENGINE_RED, HOVER_EFFECTS_BUTTONS, LARGE, RICH_BLACK, SIZES, WHITE } from '../components/constants'
 
 const divStyle = {
   width: '100%',
@@ -190,7 +190,7 @@ const DesignSystem = (args) => {
           onClick={() => alert('clicked Default RICH_BLACK')}
           bordered={false}
           hoverEffect={CHANGE_BACKGROUND_COLOR}
-          hoverEffectProperties={{ changeBackgroundColor: ALTERNATE_DARK_BLUE }}
+          hoverEffectProperties={{ changeBackgroundColor: ALTERNATE_RICH_BLACK }}
           {...args}
         />
         <Button

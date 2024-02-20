@@ -47,7 +47,7 @@ module.exports = {
       'electric-purple': '#C61BE2',
       'anti-flash-white': '#EDEDED',
       'fire-engine-red': '#D71919',
-      'alternate-dark-blue': '#040607'
+      'alternate-rich-black': '#12171D'
     },
     fontFamily: {
       sans: ['Montserrat'],
