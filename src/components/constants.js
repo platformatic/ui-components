@@ -10,6 +10,9 @@ export const TERTIARY_BLUE = 'tertiary-blue'
 export const ERROR_RED = 'error-red'
 export const WARNING_YELLOW = 'warning-yellow'
 export const RICH_BLACK = 'rich-black'
+export const ANTI_FLASH_WHITE = 'anti-flash-white'
+export const FIRE_ENGINE_RED = 'fire-engine-red'
+export const ALTERNATE_DARK_BLUE = 'alternate-dark-blue'
 
 export const NONE = 'none'
 export const EXTRA_SMALL = 'extra-small'
@@ -20,12 +23,14 @@ export const EXTRA_LARGE = 'extra-large'
 
 export const SIZES = [EXTRA_SMALL, SMALL, MEDIUM, LARGE, EXTRA_LARGE]
 export const PADDING_SIZES = [NONE, ...SIZES]
+export const CHANGE_BACKGROUND_COLOR = 'background-color-change'
 export const BOX_SHADOW = 'box-shadow'
-export const BACKGROUND_COLOR_OPAQUE = 'background-color-opaque'
+export const DULLS_BACKGROUND_COLOR = 'background-color-opaque'
 export const UNDERLINE = 'underline'
 export const FULL_WIDTH = 'full-width'
-export const HOVER_EFFECTS_BUTTONS = [BOX_SHADOW, BACKGROUND_COLOR_OPAQUE, UNDERLINE]
+export const HOVER_EFFECTS_BUTTONS = [BOX_SHADOW, DULLS_BACKGROUND_COLOR, UNDERLINE, CHANGE_BACKGROUND_COLOR]
 export const MODAL_SIZES = [SMALL, MEDIUM, FULL_WIDTH]
+export const BUTTON_BACKGROUNDS_COLOR_HOVER = [ANTI_FLASH_WHITE, FIRE_ENGINE_RED, ALTERNATE_DARK_BLUE]
 
 export const COLORS_ICON = [MAIN_GREEN, WHITE, MAIN_DARK_BLUE, ERROR_RED, WARNING_YELLOW, TERTIARY_BLUE]
 export const COLORS_BUTTON = [MAIN_GREEN, DARK_GREEN, LIGHT_GREEN, MAIN_DARK_BLUE, DARK_BLUE, LIGHT_BLUE, WHITE, ERROR_RED, TERTIARY_BLUE, TRANSPARENT, RICH_BLACK]

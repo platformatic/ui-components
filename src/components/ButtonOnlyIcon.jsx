@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import styles from './Button.module.css'
 import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
-import { SIZES, COLORS_BUTTON, BOX_SHADOW, UNDERLINE, HOVER_EFFECTS_BUTTONS, BACKGROUND_COLOR_OPAQUE, MAIN_DARK_BLUE, LARGE, MEDIUM } from './constants'
+import { SIZES, COLORS_BUTTON, BOX_SHADOW, UNDERLINE, HOVER_EFFECTS_BUTTONS, DULLS_BACKGROUND_COLOR, MAIN_DARK_BLUE, LARGE, MEDIUM } from './constants'
 
 function ButtonOnlyIcon ({
   textClass,
@@ -50,8 +50,8 @@ function ButtonOnlyIcon ({
     if (!disabled) {
       if (hover) {
         switch (hoverEffect) {
-          case BACKGROUND_COLOR_OPAQUE:
-            setBackgroundClassName(restClassName() + ' ' + commonStyles[`hover-${BACKGROUND_COLOR_OPAQUE}-${color}`])
+          case DULLS_BACKGROUND_COLOR:
+            setBackgroundClassName(restClassName() + ' ' + commonStyles[`hover-${DULLS_BACKGROUND_COLOR}-${color}`])
             break
           case BOX_SHADOW:
             setBackgroundClassName(restClassName() + ' ' + styles[`hover-${BOX_SHADOW}-${backgroundColor}`])
@@ -155,7 +155,7 @@ ButtonOnlyIcon.defaultProps = {
   disabled: false,
   size: LARGE,
   bold: false,
-  hoverEffect: BACKGROUND_COLOR_OPAQUE,
+  hoverEffect: DULLS_BACKGROUND_COLOR,
   bordered: true,
   fullWidth: false,
   platformaticIcon: null,

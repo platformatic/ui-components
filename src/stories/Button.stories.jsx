@@ -1,13 +1,12 @@
 'use strict'
 import React from 'react'
 import Button from '../components/Button'
-import { BOX_SHADOW, COLORS_BUTTON, HOVER_EFFECTS_BUTTONS, LARGE, SIZES, WHITE } from '../components/constants'
+import { ALTERNATE_DARK_BLUE, ANTI_FLASH_WHITE, BOX_SHADOW, CHANGE_BACKGROUND_COLOR, COLORS_BUTTON, ERROR_RED, FIRE_ENGINE_RED, HOVER_EFFECTS_BUTTONS, LARGE, RICH_BLACK, SIZES, WHITE } from '../components/constants'
 
 const divStyle = {
   width: '100%',
   height: 'auto',
-  padding: '2px',
-  backgroundColor: 'white'
+  padding: '2px'
 }
 
 export default {
@@ -121,4 +120,95 @@ AllFilled.args = {
   bordered: false,
   hoverEffect: BOX_SHADOW,
   bold: true
+}
+
+const DesignSystem = (args) => {
+  return (
+    <div className='grid grid-cols-5 gap-2 items-center'>
+      <span className='text-sm text-white col-span-1'>Disabled</span>
+      <div className='grid grid-cols-2 gap-x-2 bg-rich-black p-2 col-span-2'>
+        <Button
+          color={RICH_BLACK}
+          backgroundColor={WHITE}
+          onClick={() => alert('clicked Disabled WHITE')}
+          bordered={false}
+          disabled
+          {...args}
+        />
+        <Button
+          color={WHITE}
+          backgroundColor={ERROR_RED}
+          onClick={() => alert('clicked Disabled ERROR_RED')}
+          bordered={false}
+          disabled
+          {...args}
+        />
+      </div>
+      <div className='grid grid-cols-2 gap-x-2 bg-white p-2 col-span-2'>
+        <Button
+          color={WHITE}
+          backgroundColor={RICH_BLACK}
+          onClick={() => alert('clicked Disabled RICH_BLACK')}
+          bordered={false}
+          disabled
+          {...args}
+        />
+        <Button
+          color={WHITE}
+          backgroundColor={ERROR_RED}
+          onClick={() => alert('clicked Disabled ERROR_RED')}
+          bordered={false}
+          disabled
+          {...args}
+        />
+      </div>
+      <span className='text-sm text-white col-span-1'>Default</span>
+      <div className='grid grid-cols-2 gap-x-2 bg-rich-black p-2 col-span-2'>
+        <Button
+          color={RICH_BLACK}
+          backgroundColor={WHITE}
+          onClick={() => alert('clicked Default WHITE')}
+          hoverEffect={CHANGE_BACKGROUND_COLOR}
+          hoverEffectProperties={{ changeBackgroundColor: ANTI_FLASH_WHITE }}
+          bordered={false}
+          {...args}
+        />
+        <Button
+          color={WHITE}
+          backgroundColor={ERROR_RED}
+          onClick={() => alert('clicked Default ERROR_RED')}
+          hoverEffect={CHANGE_BACKGROUND_COLOR}
+          hoverEffectProperties={{ changeBackgroundColor: FIRE_ENGINE_RED }}
+          bordered={false}
+          {...args}
+        />
+      </div>
+      <div className='grid grid-cols-2 gap-x-2 bg-white p-2 col-span-2'>
+        <Button
+          color={WHITE}
+          backgroundColor={RICH_BLACK}
+          onClick={() => alert('clicked Default RICH_BLACK')}
+          bordered={false}
+          hoverEffect={CHANGE_BACKGROUND_COLOR}
+          hoverEffectProperties={{ changeBackgroundColor: ALTERNATE_DARK_BLUE }}
+          {...args}
+        />
+        <Button
+          color={WHITE}
+          backgroundColor={ERROR_RED}
+          onClick={() => alert('clicked Default ERROR_RED')}
+          hoverEffect={CHANGE_BACKGROUND_COLOR}
+          hoverEffectProperties={{ changeBackgroundColor: FIRE_ENGINE_RED }}
+          bordered={false}
+          {...args}
+        />
+      </div>
+    </div>
+  )
+}
+
+export const FigmaTemplate = DesignSystem.bind({})
+
+FigmaTemplate.args = {
+  label: 'Sample label'
 }

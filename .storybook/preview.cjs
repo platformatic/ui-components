@@ -13,15 +13,15 @@ export const parameters = {
     }
   },
   backgrounds: {
-    default: 'main-dark-blue',
+    default: 'rich-black',
     values: [
       {
-        name: 'main-dark-blue',
-        value: '#00283D',
+        name: 'rich-black',
+        value: '#00050B',
       },
       {
-        name: 'light-blue',
-        value: '#E9F7FF',
+        name: 'white',
+        value: '#ffffff',
       },
     ],
   }

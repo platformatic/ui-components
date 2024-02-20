@@ -8,7 +8,7 @@ import ReactTooltip from 'react-tooltip'
 import HorizontalSeparator from './HorizontalSeparator'
 import PlatformaticIcon from './PlatformaticIcon'
 import PropTypes from 'prop-types'
-import { BACKGROUND_COLOR_OPAQUE, MEDIUM, WHITE } from './constants'
+import { DULLS_BACKGROUND_COLOR, MEDIUM, WHITE } from './constants'
 
 function Sidebar (props) {
   const {
@@ -49,7 +49,7 @@ function Sidebar (props) {
                 iconName='CircleArrowRightIcon'
                 iconSize={MEDIUM}
                 iconColor={WHITE}
-                hoverEffect={BACKGROUND_COLOR_OPAQUE}
+                hoverEffect={DULLS_BACKGROUND_COLOR}
                 onClick={() => { setCollapsed(false) }}
                 bordered={false}
               />
@@ -69,7 +69,7 @@ function Sidebar (props) {
                 iconName='CircleArrowLeftIcon'
                 iconSize={MEDIUM}
                 iconColor={WHITE}
-                hoverEffect={BACKGROUND_COLOR_OPAQUE}
+                hoverEffect={DULLS_BACKGROUND_COLOR}
                 onClick={() => { setCollapsed(true) }}
                 bordered={false}
               />
@@ -130,7 +130,7 @@ function Sidebar (props) {
               bold
               size={MEDIUM}
               disabled={disableClickSettings}
-              hoverEffect={BACKGROUND_COLOR_OPAQUE}
+              hoverEffect={DULLS_BACKGROUND_COLOR}
             />
             )}
       </div>

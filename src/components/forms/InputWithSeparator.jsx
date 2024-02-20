@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import inputStyles from './Input.module.css'
 import styles from './InputWithSeparator.module.css'
 import commonStyles from '../Common.module.css'
-import { BACKGROUND_COLOR_OPAQUE, ERROR_RED, MAIN_DARK_BLUE, MAIN_GREEN, MEDIUM, OPACITY_30, RICH_BLACK, SMALL, TRANSPARENT, WHITE } from '../constants'
+import { DULLS_BACKGROUND_COLOR, ERROR_RED, MAIN_DARK_BLUE, MAIN_GREEN, MEDIUM, OPACITY_30, RICH_BLACK, SMALL, TRANSPARENT, WHITE } from '../constants'
 import BorderedBox from '../BorderedBox'
 import ButtonFullRounded from '../ButtonFullRounded'
 
@@ -159,7 +159,7 @@ function InputWithSeparator ({
               data-testid='after-icon'
               onClick={afterIcon.handleClick}
               iconSize={MEDIUM}
-              hoverEffect={BACKGROUND_COLOR_OPAQUE}
+              hoverEffect={DULLS_BACKGROUND_COLOR}
               disabled={afterIcon.disabled}
             />
           )}

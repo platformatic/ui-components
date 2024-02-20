@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import commonStyles from './Common.module.css'
 import styles from './ButtonFullRounded.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
-import { COLORS_ICON, SIZES, BACKGROUND_COLOR_OPAQUE, PADDING_SIZES, SMALL, WHITE, NONE } from './constants'
+import { COLORS_ICON, SIZES, DULLS_BACKGROUND_COLOR, PADDING_SIZES, SMALL, WHITE, NONE } from './constants'
 function ButtonFullRounded ({
   className,
   iconName,
@@ -32,8 +32,8 @@ function ButtonFullRounded ({
     innerButtonClassName += ` ${styles.disabled}`
   } else {
     switch (hoverEffect) {
-      case BACKGROUND_COLOR_OPAQUE:
-        innerButtonClassName += ' ' + commonStyles[`hover-${BACKGROUND_COLOR_OPAQUE}-${iconColor}`]
+      case DULLS_BACKGROUND_COLOR:
+        innerButtonClassName += ' ' + commonStyles[`hover-${DULLS_BACKGROUND_COLOR}-${iconColor}`]
         break
       default:
         break
@@ -82,7 +82,7 @@ ButtonFullRounded.propTypes = {
   /**
    * Effect on hover
    */
-  hoverEffect: PropTypes.oneOf(['', BACKGROUND_COLOR_OPAQUE]),
+  hoverEffect: PropTypes.oneOf(['', DULLS_BACKGROUND_COLOR]),
   /**
    * bordered
    */
