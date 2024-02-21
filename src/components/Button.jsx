@@ -15,9 +15,10 @@ import {
   LARGE,
   CHANGE_BACKGROUND_COLOR,
   BUTTON_BACKGROUNDS_COLOR_HOVER,
+  ACTIVE_AND_INACTIVE_STATUS,
   TRANSPARENT
 } from './constants'
-
+// ${inactive ? styles.inactive : styles.active}
 function Button ({
   textClass,
   paddingClass,
@@ -55,6 +56,7 @@ function Button ({
   }
   if (selected) buttonClassName += ' ' + commonStyles[`selected-background-color-${color}`]
   const [hover, setHover] = useState(false)
+  const [inactive, setInactive] = useState(false)
   const [backgroundClassName, setBackgroundClassName] = useState(restClassName())
 
   useEffect(() => {
@@ -73,25 +75,37 @@ function Button ({
           case CHANGE_BACKGROUND_COLOR:
             setBackgroundClassName(`${commonStyles['background-color-' + hoverEffectProperties.changeBackgroundColor]} `)
             break
+          case ACTIVE_AND_INACTIVE_STATUS:
+            setInactive(false)
+            setBackgroundClassName(`${restClassName()} ${styles.active}`)
+            break
           default:
             break
         }
       } else {
-        setBackgroundClassName(restClassName())
+        if (hoverEffect === ACTIVE_AND_INACTIVE_STATUS) {
+          setInactive(true)
+          setBackgroundClassName(`${restClassName()} ${styles.inactive}`)
+        } else {
+          setBackgroundClassName(restClassName())
+        }
       }
     }
   }, [disabled, hover, hoverEffect])
 
   function restClassName () {
+    if (hoverEffect === ACTIVE_AND_INACTIVE_STATUS) {
+      return `${commonStyles['background-color-' + backgroundColor]} ${commonStyles['background-color-opaque-70']} `
+    }
     return `${commonStyles['background-color-' + backgroundColor]} `
   }
 
   return (
     <button className={`${buttonClassName} ${restClassName()}`} disabled={disabled} alt={label} {...rest} onMouseLeave={() => setHover(false)} onMouseOver={() => setHover(true)}>
       <div className={`${contentClassName} ${backgroundClassName}`}>
-        {platformaticIcon ? <PlatformaticIcon key='left' iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' onClick={null} disabled={disabled} /> : null}
+        {platformaticIcon ? <PlatformaticIcon key='left' iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' onClick={null} inactive={inactive} /> : null}
         <span className={styles.label}>{label}</span>
-        {platformaticIconAfter ? <PlatformaticIcon key='right' iconName={platformaticIconAfter.iconName} color={platformaticIconAfter.color} data-testid='button-icon' onClick={null} disabled={disabled} /> : null}
+        {platformaticIconAfter ? <PlatformaticIcon key='right' iconName={platformaticIconAfter.iconName} color={platformaticIconAfter.color} data-testid='button-icon' onClick={null} inactive={inactive} /> : null}
       </div>
     </button>
   )

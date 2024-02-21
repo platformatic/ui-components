@@ -1,3 +1,11 @@
+.rich-black > circle,
+.rich-black > ellipse,
+.rich-black > rect,
+.rich-black > line, 
+.rich-black > path {
+  @apply stroke-rich-black;
+}
+
 .error-red > circle,
 .error-red > ellipse,
 .error-red > rect,
@@ -46,6 +54,9 @@
   @apply stroke-white;
 }
 
+.filled-rich-black {
+  @apply fill-rich-black
+}
 .filled-white {
   @apply fill-white
 }
@@ -71,7 +82,6 @@
 .fill-circle-main-dark-blue > circle {
   @apply fill-main-dark-blue;
 }
-
 .svgClassName {
   @apply block shrink-0;
   overflow-clip-margin: unset;

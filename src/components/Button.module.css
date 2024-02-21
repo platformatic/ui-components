@@ -114,3 +114,9 @@
 .label {
   @apply w-max;
 }
+.inactive {
+  @apply opacity-70;
+}
+.active {
+  @apply opacity-100;
+}
