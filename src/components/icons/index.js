@@ -48,6 +48,7 @@ import ComputerIcon from './ComputerIcon'
 import CopyPasteIcon from './CopyPasteIcon'
 import CreditCardIcon from './CreditCardIcon'
 import ConfigureDatabaseIcon from './ConfigureDatabaseIcon'
+import CreateAppIcon from './CreateAppIcon'
 import CreatingAppIcon from './CreatingAppIcon'
 import DatabaseIcon from './DatabaseIcon'
 import DatabaseMigrationIcon from './DatabaseMigrationIcon'
@@ -69,7 +70,7 @@ import GitHubRepoIcon from './GitHubRepoIcon'
 import GitHubRepo2Icon from './GitHubRepo2Icon'
 import GraphQLIcon from './GraphQLIcon'
 import KeyIcon from './KeyIcon'
-import ImportApplicationIcon from './ImportApplicationIcon'
+import ImportAppIcon from './ImportAppIcon'
 import LabelIcon from './LabelIcon'
 import LayersIcon from './LayersIcon'
 import LensIcon from './LensIcon'
@@ -90,6 +91,7 @@ import PreviewPRIcon from './PreviewPRIcon'
 import PullRequestIcon from './PullRequestIcon'
 import PullRequestLoadingIcon from './PullRequestLoadingIcon'
 import RequestOwnershipIcon from './RequestOwnershipIcon'
+import RecentAppsIcon from './RecentAppsIcon'
 import RestartIcon from './RestartIcon'
 import RocketIcon from './RocketIcon'
 import RunningIcon from './RunningIcon'
@@ -179,6 +181,7 @@ export default {
   CopyPasteIcon,
   CreditCardIcon,
   ConfigureDatabaseIcon,
+  CreateAppIcon,
   CreatingAppIcon,
   DatabaseIcon,
   DatabaseMigrationIcon,
@@ -199,7 +202,7 @@ export default {
   GitHubRepoIcon,
   GitHubRepo2Icon,
   GraphQLIcon,
-  ImportApplicationIcon,
+  ImportAppIcon,
   KeyIcon,
   LabelIcon,
   LayersIcon,
@@ -221,6 +224,7 @@ export default {
   PullRequestIcon,
   PullRequestLoadingIcon,
   RequestOwnershipIcon,
+  RecentAppsIcon,
   RestartIcon,
   RocketIcon,
   RunningIcon,

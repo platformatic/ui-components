@@ -1,5 +1,5 @@
 'use strict'
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import ReactTooltip from 'react-tooltip'
 import Icons from './icons'
@@ -15,8 +15,10 @@ function PlatformaticIcon ({
   tip,
   disabled,
   inactive,
+  internalOverHandling,
   ...rest
 }) {
+  const [hover, setHover] = useState(false)
   let icon = <></>
   if (iconName) {
     icon = React.createElement(Icons[`${iconName}`], {
@@ -24,13 +26,22 @@ function PlatformaticIcon ({
       size,
       tip,
       disabled,
-      inactive,
+      inactive: internalOverHandling ? !hover : inactive,
       ...rest
     })
     if (onClick && !disabled) {
       let className = styles.cursorPointer
       if (classes) className += ` ${classes}`
-      icon = (<div className={className} onClick={onClick}>{icon}</div>)
+      icon = (
+        <div
+          className={className}
+          onClick={onClick}
+          onMouseOver={() => internalOverHandling && !disabled ? setHover(true) : {}}
+          onMouseLeave={() => internalOverHandling && !disabled ? setHover(false) : {}}
+        >
+          {icon}
+        </div>
+      )
     }
   }
   return (
@@ -73,7 +84,11 @@ PlatformaticIcon.propTypes = {
   /**
    * inactive
    */
-  inactive: PropTypes.bool
+  inactive: PropTypes.bool,
+  /**
+   * handleOverInternally
+   */
+  internalOverHandling: PropTypes.bool
 }
 
 PlatformaticIcon.defaultProps = {
@@ -84,7 +99,8 @@ PlatformaticIcon.defaultProps = {
   classes: '',
   tip: '',
   disabled: false,
-  inactive: false
+  inactive: false,
+  internalOverHandling: false
 }
 
 export default PlatformaticIcon
