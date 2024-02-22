@@ -40,9 +40,6 @@ export default {
       options: COLORS_ICON,
       control: { type: 'radio' }
     },
-    onClick: {
-      type: 'function'
-    },
     size: {
       options: SIZES,
       control: { type: 'radio' }
@@ -98,6 +95,6 @@ export const PlatformaticIconAll = AllIconsTemplate.bind({})
 PlatformaticIconAll.args = {
   color: WHITE,
   classes: '',
-  onClick: null,
-  tip: ''
+  tip: '',
+  onClick: () => alert('clicked')
 }
