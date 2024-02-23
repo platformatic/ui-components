@@ -1,5 +1,5 @@
 .blur {
-  @apply fixed top-0 left-0 w-full h-full z-10 bg-rich-black/75;
+  @apply fixed top-0 left-0 w-full h-full z-10 bg-rich-black/95;
 }
 .container {
   @apply z-20 fixed top-0 -right-[100%] min-h-full h-full bg-rich-black border-solid border-white/30 border-l; 
