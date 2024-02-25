@@ -39,11 +39,14 @@ import CircleEditIcon from './CircleEditIcon'
 import CircleFullIcon from './CircleFullIcon'
 import CircleGearIcon from './CircleGearIcon'
 import CircleRestartIcon from './CircleRestartIcon'
+import CirclePlayIcon from './CirclePlayIcon'
 import CircleSubtractIcon from './CircleSubtractIcon'
+import CircleStopIcon from './CircleStopIcon'
 import CircleTwoArrowsDownIcon from './CircleTwoArrowsDownIcon'
 import CircleTwoArrowsUpIcon from './CircleTwoArrowsUpIcon'
 import CloseIcon from './CloseIcon'
 import CloudIcon from './CloudIcon'
+import CLIIcon from './CLIIcon'
 import ComputerIcon from './ComputerIcon'
 import CopyPasteIcon from './CopyPasteIcon'
 import CreditCardIcon from './CreditCardIcon'
@@ -113,6 +116,7 @@ import StackablesIcon from './StackablesIcon'
 import StackablesPluginIcon from './StackablesPluginIcon'
 import StackablesTemplateIcon from './StackablesTemplateIcon'
 import StopIcon from './StopIcon'
+import StoppedAppIcon from './StoppedAppIcon'
 import TerminalIcon from './TerminalIcon'
 import TwoUsersIcon from './TwoUsersIcon'
 import TeamsIcon from './TeamsIcon'
@@ -172,11 +176,14 @@ export default {
   CircleFullIcon,
   CircleGearIcon,
   CircleRestartIcon,
+  CirclePlayIcon,
   CircleSubtractIcon,
+  CircleStopIcon,
   CircleTwoArrowsDownIcon,
   CircleTwoArrowsUpIcon,
   CloseIcon,
   CloudIcon,
+  CLIIcon,
   ComputerIcon,
   CopyPasteIcon,
   CreditCardIcon,
@@ -231,6 +238,7 @@ export default {
   SendIcon,
   ServiceIcon,
   StopIcon,
+  StoppedAppIcon,
   SlotIcon,
   SwitchIcon,
   SocialDiscordIcon,
