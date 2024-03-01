@@ -1,14 +1,19 @@
 import AddIcon from './AddIcon'
 import AlertIcon from './AlertIcon'
+import AllAppsIcon from './AllAppsIcon'
 import AllInOneIcon from './AllInOneIcon'
 import ApiCloudIcon from './ApiCloudIcon'
 import ApiIcon from './ApiIcon'
 import ApiIconClosed from './ApiIconClosed'
 import ApiEmptyIcon from './ApiEmptyIcon'
 import ApiPerformanceIcon from './ApiPerformanceIcon'
+import AppConfigurationIcon from './AppConfigurationIcon'
+import AppDetailsIcon from './AppDetailsIcon'
+import AppEditIcon from './AppEditIcon'
 import AppIcon from './AppIcon'
 import AppListIcon from './AppListIcon'
 import AppEmptyIcon from './AppEmptyIcon'
+import AppSettingsIcon from './AppSettingsIcon'
 import ApplicationTypeIcon from './ApplicationTypeIcon'
 import AppWorkspace from './AppWorkspace'
 import ArrowDownFullIcon from './ArrowDownFullIcon'
@@ -47,12 +52,13 @@ import CircleTwoArrowsUpIcon from './CircleTwoArrowsUpIcon'
 import CloseIcon from './CloseIcon'
 import CloudIcon from './CloudIcon'
 import CLIIcon from './CLIIcon'
+import CodeTestingIcon from './CodeTestingIcon'
 import ComputerIcon from './ComputerIcon'
 import CopyPasteIcon from './CopyPasteIcon'
 import CreditCardIcon from './CreditCardIcon'
 import ConfigureDatabaseIcon from './ConfigureDatabaseIcon'
 import CreateAppIcon from './CreateAppIcon'
-import CreatingAppIcon from './CreatingAppIcon'
+import RunningAppIcon from './RunningAppIcon'
 import DatabaseIcon from './DatabaseIcon'
 import DatabaseMigrationIcon from './DatabaseMigrationIcon'
 import DepencenciesReloadIcon from './DepencenciesReloadIcon'
@@ -137,15 +143,20 @@ import WorkspaceStaticIcon from './WorkspaceStaticIcon'
 export default {
   AddIcon,
   AlertIcon,
+  AllAppsIcon,
   AllInOneIcon,
   ApiCloudIcon,
   ApiIcon,
   ApiIconClosed,
   ApiEmptyIcon,
   ApiPerformanceIcon,
+  AppConfigurationIcon,
+  AppDetailsIcon,
+  AppEditIcon,
   AppIcon,
   AppListIcon,
   AppEmptyIcon,
+  AppSettingsIcon,
   ApplicationTypeIcon,
   AppWorkspace,
   ArrowDownFullIcon,
@@ -184,12 +195,13 @@ export default {
   CloseIcon,
   CloudIcon,
   CLIIcon,
+  CodeTestingIcon,
   ComputerIcon,
   CopyPasteIcon,
   CreditCardIcon,
   ConfigureDatabaseIcon,
   CreateAppIcon,
-  CreatingAppIcon,
+  RunningAppIcon,
   DatabaseIcon,
   DatabaseMigrationIcon,
   DepencenciesReloadIcon,

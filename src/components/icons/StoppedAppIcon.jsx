@@ -12,6 +12,7 @@ const StoppedAppIcon = ({ color, size, disabled, inactive }) => {
     className += ` ${styles.iconInactive}`
   }
   let icon = <></>
+  const filledClassName = styles[`filled-${color}`]
 
   switch (size) {
     case SMALL:
@@ -24,12 +25,9 @@ const StoppedAppIcon = ({ color, size, disabled, inactive }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M7.5 2H3C2.44772 2 2 2.44772 2 3V9.34775C2 9.90004 2.44772 10.3478 3 10.3478H13C13.5523 10.3478 14 9.90004 14 9.34775V5.84783V3.04352C14 2.49124 13.5523 2.04352 13 2.04352H11.5' stroke='none' strokeLinecap='round' />
-          <rect x='6' y='10.3477' width='4' height='2.08694' stroke='none' />
-          <path d='M4 13.4348C4 12.8825 4.44772 12.4348 5 12.4348H11C11.5523 12.4348 12 12.8825 12 13.4348V14H4V13.4348Z' stroke='none' />
-          <path d='M7.44287 4.67217H8.0786H8.71432L9.50012 2.04346L10.2859 4.67217H12.8288L10.7716 6.29681L11.5574 8.92553L9.50012 7.30089L7.44287 8.92553L8.22867 6.29681L7.5 6' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M6 5L6 7' stroke='none' strokeLinecap='round' />
-          <path d='M4 5L4 7' stroke='none' strokeLinecap='round' />
+          <path d='M10.5 7L13.5311 8.75V12.25L10.5 14L7.46891 12.25V8.75L10.5 7Z' stroke='none' strokeLinejoin='round' />
+          <path d='M10 5.35553C9.67562 3.45026 8.0211 2 6.02882 2C3.80376 2 2 3.80895 2 6.04041C2 7.99513 3.38411 9.62564 5.22306 10' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <rect x='5' y='5' width='2' height='2' fill='none' className={filledClassName} stroke='none' strokeLinejoin='round' />
 
         </svg>
       )
@@ -44,12 +42,10 @@ const StoppedAppIcon = ({ color, size, disabled, inactive }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M11.25 3H4C3.44772 3 3 3.44771 3 4V14.5216C3 15.0739 3.44772 15.5216 4 15.5216H20C20.5523 15.5216 21 15.0739 21 14.5216V8.77175V4.06528C21 3.513 20.5523 3.06528 20 3.06528H17.25' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
-          <rect x='9' y='15.5215' width='6' height='3.13041' stroke='none' strokeWidth={1.5} />
-          <path d='M6 19.6521C6 19.0998 6.44772 18.6521 7 18.6521H17C17.5523 18.6521 18 19.0998 18 19.6521V20.9999H6V19.6521Z' stroke='none' strokeWidth={1.5} />
-          <path d='M11.1641 7.00826H12.1176H13.0712L14.2499 3.06519L15.4286 7.00826H19.243L16.1571 9.44521L17.3358 13.3883L14.2499 10.9513L11.1641 13.3883L12.3428 9.44521L11.2498 9' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M9 7.5L9 10.5' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
-          <path d='M6 7.5L6 10.5' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
+          <path d='M15.75 10.5L20.2966 13.125V18.375L15.75 21L11.2034 18.375V13.125L15.75 10.5Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+          <path d='M15 8.03329C14.5134 5.17539 12.0316 3 9.04323 3C5.70565 3 3 5.71343 3 9.06062C3 11.9927 5.07616 14.4385 7.83459 15' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <rect x='7.5' y='7.5' width='3' height='3' fill='none' className={filledClassName} stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+
         </svg>
       )
       break
@@ -63,12 +59,10 @@ const StoppedAppIcon = ({ color, size, disabled, inactive }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M18.75 5H6C5.44772 5 5 5.44771 5 6V24.8694C5 25.4217 5.44772 25.8694 6 25.8694H34C34.5523 25.8694 35 25.4217 35 24.8694V14.6196V6.1088C35 5.55652 34.5523 5.1088 34 5.1088H28.75' stroke='none' strokeWidth={2} strokeLinecap='round' />
-          <rect x='15' y='25.8691' width='10' height='5.21734' stroke='none' strokeWidth={2} />
-          <path d='M10 32.0869C10 31.5346 10.4477 31.0869 11 31.0869H29C29.5523 31.0869 30 31.5346 30 32.0869V34.9999H10V32.0869Z' stroke='none' strokeWidth={2} />
-          <path d='M18.6069 11.6807H20.1962H21.7856L23.7501 5.10889L25.7146 11.6807H32.0718L26.9287 15.7423L28.8932 22.3141L23.7501 18.2525L18.6069 22.3141L20.5714 15.7423L18.7498 15.0002' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M15 12.5L15 17.5' stroke='none' strokeWidth={2} strokeLinecap='round' />
-          <path d='M10 12.5L10 17.5' stroke='none' strokeWidth={2} strokeLinecap='round' />
+          <path d='M26.25 17.5L33.8277 21.875V30.625L26.25 35L18.6723 30.625V21.875L26.25 17.5Z' stroke='none' strokeWidth={2} strokeLinejoin='round' />
+          <path d='M25 13.3888C24.1891 8.62565 20.0527 5 15.0721 5C9.50941 5 5 9.52239 5 15.101C5 19.9878 8.46027 24.0641 13.0576 25' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <rect x='12.5' y='12.5' width='5' height='5' fill='none' className={filledClassName} stroke='none' strokeWidth={2} strokeLinejoin='round' />
+
         </svg>
       )
       break
