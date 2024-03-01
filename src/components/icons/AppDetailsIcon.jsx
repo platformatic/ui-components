@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
 
-const ImportAppIcon = ({ color, size, disabled, inactive }) => {
+const AppDetailsIcon = ({ color, size, disabled, inactive }) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
@@ -24,10 +24,9 @@ const ImportAppIcon = ({ color, size, disabled, inactive }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M10.5 7L13.5311 8.75V12.25L10.5 14L7.46891 12.25V8.75L10.5 7Z' stroke='none' strokeLinejoin='round' />
-          <path d='M7 10V10C6.44772 10 6 9.55228 6 9L6 5M6 5L8 6.5M6 5L4 6.5' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M5.33333 12L2 12L2 2L12 2L12 6' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
-
+          <path d='M10.6603 6V4.5L6.33013 2L2 4.5V9.5L5.33008 11.4226' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <circle cx='9.24675' cy='9.91667' r='2.91667' stroke='none' />
+          <path d='M13.3301 14L11.5801 12.25' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
@@ -41,9 +40,9 @@ const ImportAppIcon = ({ color, size, disabled, inactive }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M15.75 10.5L20.2966 13.125V18.375L15.75 21L11.2034 18.375V13.125L15.75 10.5Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
-          <path d='M10.5 15L10 15C9.44772 15 9 14.5523 9 14L9 7.5M9 7.5L12 9.75M9 7.5L6 9.75' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M8 18L3 18L3 3L18 3L18 9' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M15.9904 9V6.75L9.49519 3L3 6.75V14.25L7.99512 17.1339' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <circle cx='13.8701' cy='14.875' r='4.375' stroke='none' strokeWidth={1.5} />
+          <path d='M19.9951 21L17.3701 18.375' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
 
         </svg>
       )
@@ -58,9 +57,10 @@ const ImportAppIcon = ({ color, size, disabled, inactive }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M26.25 17.5L33.8277 21.875V30.625L26.25 35L18.6723 30.625V21.875L26.25 17.5Z' stroke='none' strokeWidth={2} strokeLinejoin='round' />
-          <path d='M17.5 25L16 25C15.4477 25 15 24.5523 15 24L15 12.5M15 12.5L20 16.25M15 12.5L10 16.25' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M13.3333 30L5 30L5 5L30 5L30 15' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M26.6506 15V11.25L15.8253 5L5 11.25V23.75L13.3252 28.5566' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <circle cx='23.1169' cy='24.7917' r='7.29167' stroke='none' strokeWidth={2} />
+          <path d='M33.3252 35L28.9502 30.625' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+
         </svg>
       )
       break
@@ -71,7 +71,7 @@ const ImportAppIcon = ({ color, size, disabled, inactive }) => {
   return icon
 }
 
-ImportAppIcon.propTypes = {
+AppDetailsIcon.propTypes = {
   /**
    * color of text, icon and borders
    */
@@ -89,11 +89,11 @@ ImportAppIcon.propTypes = {
    */
   inactive: PropTypes.bool
 }
-ImportAppIcon.defaultProps = {
+AppDetailsIcon.defaultProps = {
   color: MAIN_DARK_BLUE,
   size: MEDIUM,
   disabled: false,
   inactive: false
 }
 
-export default ImportAppIcon
+export default AppDetailsIcon
