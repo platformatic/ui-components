@@ -43,8 +43,9 @@ export const MODAL_COVER = 'cover'
 export const MODAL_FULL_DARK = 'full-dark'
 export const MODAL_FULL_LIGHT = 'full-light'
 export const MODAL_FULL_RICH_BLACK = 'full-rich-black'
+export const MODAL_FULL_RICH_BLACK_V2 = 'full-rich-black-v2'
 
-export const MODAL_LAYOUTS = [MODAL_POPUP_V2, MODAL_POPUP, MODAL_COVER, MODAL_FULL_DARK, MODAL_FULL_LIGHT, MODAL_FULL_RICH_BLACK]
+export const MODAL_LAYOUTS = [MODAL_POPUP_V2, MODAL_POPUP, MODAL_FULL_DARK, MODAL_FULL_LIGHT, MODAL_FULL_RICH_BLACK, MODAL_FULL_RICH_BLACK_V2]
 
 export const FREE = 'free'
 export const BASIC = 'basic'

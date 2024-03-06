@@ -23,8 +23,10 @@ import {
   MODAL_FULL_DARK,
   MODAL_FULL_LIGHT,
   MODAL_FULL_RICH_BLACK,
+  MODAL_FULL_RICH_BLACK_V2,
   WHITE,
-  RICH_BLACK
+  RICH_BLACK,
+  MEDIUM
 } from './constants'
 import PlatformaticIcon from './PlatformaticIcon'
 
@@ -36,7 +38,9 @@ function Modal ({
   size,
   profile,
   backgroundClassName,
-  titleClassName
+  titleClassName,
+  childrenClassContainer,
+  modalCloseClassName
 }) {
   let contentFullscreen
   let titleFullscreen
@@ -61,11 +65,14 @@ function Modal ({
       modalCoverClassName += commonStyles['background-color-main-dark-blue']
       modalCoverClassName += ` ${backgroundClassName}`
       break
+
     case MODAL_FULL_LIGHT:
       modalCoverClassName += commonStyles['background-color-light-blue']
       break
+
     case MODAL_FULL_RICH_BLACK:
-      contentFullscreen = styles[`content--${layout}`]
+    case MODAL_FULL_RICH_BLACK_V2:
+      contentFullscreen = childrenClassContainer || styles[`content--${layout}`]
       modalCoverClassName += commonStyles[`background-color-${RICH_BLACK}`]
       modalCoverClassName += ` ${backgroundClassName}`
       buttonFullRoundedClassName = `${styles['close--cover']} `
@@ -206,6 +213,19 @@ function Modal ({
       )
       break
 
+    case MODAL_FULL_RICH_BLACK_V2:
+      whichModal = (
+        <div className={modalCoverClassName}>
+          <div className={modalCloseClassName || buttonFullRoundedClassName}>
+            <PlatformaticIcon iconName='CloseIcon' color={WHITE} size={MEDIUM} onClick={() => setIsOpen(false)} internalOverHandling />
+          </div>
+          <div className={contentFullscreen}>
+            {children}
+          </div>
+        </div>
+      )
+      break
+
     default:
       break
   }
@@ -217,6 +237,10 @@ Modal.propTypes = {
    * children
    */
   children: PropTypes.node,
+  /**
+   * childrenClassContainer
+   */
+  childrenClassContainer: PropTypes.string,
   /**
    * setIsOpen
    */
@@ -244,18 +268,24 @@ Modal.propTypes = {
   /**
    * titleClassName
    */
-  titleClassName: PropTypes.string
+  titleClassName: PropTypes.string,
+  /**
+   * modalCloseClassName
+   */
+  modalCloseClassName: PropTypes.string
 }
 
 Modal.defaultProps = {
   children: null,
+  childrenClassContainer: '',
   setIsOpen: () => {},
   title: '',
   layout: MODAL_POPUP,
   size: SMALL,
   profile: '',
   backgroundClassName: '',
-  titleClassName: ''
+  titleClassName: '',
+  modalCloseClassName: ''
 }
 
 export default Modal

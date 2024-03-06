@@ -38,6 +38,7 @@
 .header--popup {
   @apply flex justify-between items-center;
 }
+.header--full-rich-black-v2,
 .header--full-rich-black,
 .header--full-dark,
 .header--full-light,
@@ -50,6 +51,7 @@
 .title {
   @apply font-bold text-[20px];
 }
+.content--full-rich-black-v2,
 .content--full-rich-black,
 .content--full-dark,
 .header--full-light,
