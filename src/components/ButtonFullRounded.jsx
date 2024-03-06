@@ -18,7 +18,8 @@ function ButtonFullRounded ({
   bordered,
   tip,
   selected,
-  buttonClassName
+  buttonClassName,
+  internalOverHandling
 }) {
   const padding = commonStyles[`padding--${paddingSize}`]
   const containerClassName = `${className} border-0 ${styles.roundedFull}`
@@ -98,8 +99,11 @@ ButtonFullRounded.propTypes = {
   /**
      * buttonClassName
      */
-  buttonClassName: PropTypes.string
-
+  buttonClassName: PropTypes.string,
+  /**
+     * internalOverHandling
+     */
+  internalOverHandling: PropTypes.bool
 }
 
 ButtonFullRounded.defaultProps = {
@@ -115,7 +119,8 @@ ButtonFullRounded.defaultProps = {
   bordered: false,
   tip: '',
   selected: false,
-  buttonClassName: ''
+  buttonClassName: '',
+  internalOverHandling: false
 }
 
 export default ButtonFullRounded
