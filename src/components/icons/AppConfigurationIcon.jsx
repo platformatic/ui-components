@@ -47,15 +47,15 @@ const AppConfigurationIcon = ({ color, size, disabled, inactive }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M26.25 17.5L33.8277 21.875V30.625L26.25 35L18.6723 30.625V21.875L26.25 17.5Z' stroke='none' strokeWidth={2} strokeLinejoin='round' />
-          <path d='M27.5 13.75V6C27.5 5.44772 27.0523 5 26.5 5H6C5.44772 5 5 5.44772 5 6V26.5C5 27.0523 5.44772 27.5 6 27.5H13.75' stroke='none' strokeWidth={2} strokeLinecap='round' />
-          <path d='M5 10.625H27.5' stroke='none' strokeWidth={2} />
-          <circle cx='7.8125' cy='7.8125' r='0.9375' fill='none' className={filledClassName} />
-          <circle cx='10.625' cy='7.8125' r='0.9375' fill='none' className={filledClassName} />
-          <circle cx='13.4375' cy='7.8125' r='0.9375' fill='none' className={filledClassName} />
-          <path d='M8.75 14.375H18.125' stroke='none' strokeWidth={2} strokeLinecap='round' />
-          <path d='M10.625 18.125H18.75' stroke='none' strokeWidth={2} strokeLinecap='round' />
-          <path d='M10.625 21.875H15' stroke='none' strokeWidth={2} strokeLinecap='round' />
+          <path d='M15.75 10.5L20.2966 13.125V18.375L15.75 21L11.2034 18.375V13.125L15.75 10.5Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+          <path d='M16.5 8.25V4C16.5 3.44772 16.0523 3 15.5 3H4C3.44772 3 3 3.44772 3 4V15.5C3 16.0523 3.44772 16.5 4 16.5H8.25' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
+          <path d='M3 6.375H16.5' stroke='none' strokeWidth={1.5} />
+          <circle cx='4.6875' cy='4.6875' r='0.5625' fill='none' className={filledClassName} />
+          <circle cx='6.375' cy='4.6875' r='0.5625' fill='none' className={filledClassName} />
+          <circle cx='8.0625' cy='4.6875' r='0.5625' fill='none' className={filledClassName} />
+          <path d='M5.25 8.625H10.875' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
+          <path d='M6.375 10.875H11.25' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
+          <path d='M6.375 13.125H9' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
 
         </svg>
       )
@@ -70,15 +70,16 @@ const AppConfigurationIcon = ({ color, size, disabled, inactive }) => {
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M26.25 17.5L33.8277 21.875V30.625L26.25 35L18.6723 30.625V21.875L26.25 17.5Z' stroke='white' strokeWidth={2} strokeLinejoin='round' />
-          <path d='M27.5 13.75V6C27.5 5.44772 27.0523 5 26.5 5H6C5.44772 5 5 5.44772 5 6V26.5C5 27.0523 5.44772 27.5 6 27.5H13.75' stroke='white' strokeWidth={2} strokeLinecap='round' />
-          <path d='M5 10.625H27.5' stroke='white' strokeWidth={2} />
-          <circle cx='7.8125' cy='7.8125' r='0.9375' fill='white' />
-          <circle cx='10.625' cy='7.8125' r='0.9375' fill='white' />
-          <circle cx='13.4375' cy='7.8125' r='0.9375' fill='white' />
-          <path d='M8.75 14.375H18.125' stroke='white' strokeWidth={2} strokeLinecap='round' />
-          <path d='M10.625 18.125H18.75' stroke='white' strokeWidth={2} strokeLinecap='round' />
-          <path d='M10.625 21.875H15' stroke='white' strokeWidth={2} strokeLinecap='round' />
+          <path d='M26.25 17.5L33.8277 21.875V30.625L26.25 35L18.6723 30.625V21.875L26.25 17.5Z' stroke='none' strokeWidth={2} strokeLinejoin='round' />
+          <path d='M27.5 13.75V6C27.5 5.44772 27.0523 5 26.5 5H6C5.44772 5 5 5.44772 5 6V26.5C5 27.0523 5.44772 27.5 6 27.5H13.75' stroke='none' strokeWidth={2} strokeLinecap='round' />
+          <path d='M5 10.625H27.5' stroke='none' strokeWidth={2} />
+          <circle cx='7.8125' cy='7.8125' r='0.9375' fill='none' className={filledClassName} />
+          <circle cx='10.625' cy='7.8125' r='0.9375' fill='none' className={filledClassName} />
+          <circle cx='13.4375' cy='7.8125' r='0.9375' fill='none' className={filledClassName} />
+          <path d='M8.75 14.375H18.125' stroke='none' strokeWidth={2} strokeLinecap='round' />
+          <path d='M10.625 18.125H18.75' stroke='none' strokeWidth={2} strokeLinecap='round' />
+          <path d='M10.625 21.875H15' stroke='none' strokeWidth={2} strokeLinecap='round' />
+
         </svg>
       )
       break
