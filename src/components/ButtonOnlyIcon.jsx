@@ -14,7 +14,6 @@ function ButtonOnlyIcon ({
   backgroundColor,
   size,
   disabled,
-  bold,
   hoverEffect,
   bordered,
   fullWidth,
@@ -23,28 +22,21 @@ function ButtonOnlyIcon ({
   selected,
   ...rest
 }) {
-  let buttonClassName = textClass
-  buttonClassName += ` ${styles.button} ${styles['color-' + color]} `
   let contentClassName = `${styles.content} `
   if (paddingClass) {
     contentClassName += `${paddingClass} `
   } else {
     contentClassName += `${styles['button-' + size]} `
   }
-  if (disabled) {
-    buttonClassName += ' ' + commonStyles[`bordered--${color}-30`]
-    contentClassName += ` ${styles.disabled}`
-  } else {
-    buttonClassName += bordered ? commonStyles[`bordered--${color}-100`] : ''
-  }
-  if (!bordered) buttonClassName += ` ${styles['no-border']}`
-  if (bold) buttonClassName += ` ${styles.fontBold}`
+  let baseButtonClassName = textClass
+  baseButtonClassName += ` ${styles.button} `
   if (fullWidth) {
-    buttonClassName += ` ${styles.fullWidth}`
+    baseButtonClassName += ` ${styles.fullWidth}`
   }
-  if (selected) buttonClassName += ' ' + commonStyles[`selected-background-color-${color}`]
+  if (selected) baseButtonClassName += ' ' + commonStyles[`selected-background-color-${color}`]
   const [hover, setHover] = useState(false)
   const [backgroundClassName, setBackgroundClassName] = useState(restClassName())
+  const [buttonClassName, setButtonClassName] = useState(disabled ? buttonRestClassName : buttonActiveClassName())
 
   useEffect(() => {
     if (!disabled) {
@@ -68,12 +60,30 @@ function ButtonOnlyIcon ({
     }
   }, [disabled, hover, hoverEffect])
 
+  useEffect(() => {
+    if (disabled) {
+      setButtonClassName(buttonRestClassName())
+    } else {
+      setButtonClassName(buttonActiveClassName())
+    }
+  }, [disabled])
+
   function restClassName () {
     return `${commonStyles['background-color-' + backgroundColor]} `
   }
 
+  function buttonRestClassName () {
+    if (!bordered) return ` ${styles['no-border']}`
+    return commonStyles[`bordered--${color}-30`]
+  }
+
+  function buttonActiveClassName () {
+    if (!bordered) return ` ${styles['no-border']}`
+    return commonStyles[`bordered--${color}-100`]
+  }
+
   return (
-    <button className={`${buttonClassName} ${restClassName()}`} disabled={disabled} alt={altLabel} {...rest} onMouseLeave={() => setHover(false)} onMouseOver={() => setHover(true)}>
+    <button className={`${baseButtonClassName} ${buttonClassName} ${restClassName()}`} disabled={disabled} alt={altLabel} {...rest} onMouseLeave={() => setHover(false)} onMouseOver={() => setHover(true)}>
       <div className={`${contentClassName} ${backgroundClassName}`}>
         {platformaticIcon ? <PlatformaticIcon key='center' iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' size={MEDIUM} onClick={null} disabled={disabled} /> : null}
       </div>
@@ -110,10 +120,6 @@ ButtonOnlyIcon.propTypes = {
    * Disabled
    */
   disabled: PropTypes.bool,
-  /**
-   * Bold
-   */
-  bold: PropTypes.bool,
   /**
    * Effect on hover
    */

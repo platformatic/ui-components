@@ -65,6 +65,7 @@ import DatabaseMigrationIcon from './DatabaseMigrationIcon'
 import DepencenciesReloadIcon from './DepencenciesReloadIcon'
 import EditDocumentIcon from './EditDocumentIcon'
 import EditIcon from './EditIcon'
+import EntrypointIcon from './EntrypointIcon'
 import EnlargeIcon from './EnlargeIcon'
 import EntryIcon from './EntryIcon'
 import ExpandIcon from './ExpandIcon'
@@ -209,6 +210,7 @@ export default {
   DepencenciesReloadIcon,
   EditDocumentIcon,
   EditIcon,
+  EntrypointIcon,
   EyeClosedIcon,
   EyeOpenedIcon,
   ExpandIcon,
