@@ -160,7 +160,6 @@ ButtonOnlyIcon.defaultProps = {
   backgroundColor: 'transparent',
   disabled: false,
   size: LARGE,
-  bold: false,
   hoverEffect: DULLS_BACKGROUND_COLOR,
   bordered: true,
   fullWidth: false,
