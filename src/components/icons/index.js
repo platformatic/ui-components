@@ -88,6 +88,7 @@ import LensIcon from './LensIcon'
 import LiveIcon from './LiveIcon'
 import LoadingAppIcon from './LoadingAppIcon'
 import LogOutIcon from './LogOutIcon'
+import LogsRiskIcon from './LogsRiskIcon'
 import MetricsIcon from './MetricsIcon'
 import MetricsLoadingIcon from './MetricsLoadingIcon'
 import NameAppIcon from './NameAppIcon'
@@ -233,6 +234,7 @@ export default {
   LiveIcon,
   LoadingAppIcon,
   LogOutIcon,
+  LogsRiskIcon,
   MetricsIcon,
   MetricsLoadingIcon,
   NameAppIcon,
