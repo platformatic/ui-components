@@ -46,7 +46,7 @@ function Button ({
   }
   if (disabled) {
     buttonClassName += ' ' + commonStyles[`bordered--${color}-30`]
-    contentClassName += ` ${styles.disabled}`
+    buttonClassName += ` ${styles.disabled}`
   } else {
     buttonClassName += bordered ? commonStyles[`bordered--${color}-100`] : ''
   }
