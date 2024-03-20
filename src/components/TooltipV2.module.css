@@ -1,0 +1,31 @@
+
+.pltTooltipText {
+  @apply bg-white text-rich-black text-center p-2;
+  z-index: 20;
+  position: fixed;
+  visibility: hidden;
+  border-radius: 6px;
+  padding: 0.25rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  transform: translateX(-50%);
+}
+
+.pltTooltipText::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+  left: 50%;
+}
+
+.leftPltTooltip::after {
+  
+}
+
+.pltTooltipTextVisible {
+  visibility: visible;
+  opacity: 1;
+}
