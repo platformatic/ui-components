@@ -32,14 +32,13 @@ function Select ({
   const [showOptions, setShowOptions] = useState(false)
   const [isSelected, setIsSelected] = useState(false)
   const [isOnFocus, setIsOnFocus] = useState(false)
+
   const showError = errorMessage.length > 0
   const containerClassName = `${styles.container} ${defaultContainerClassName} `
   let inputClassName = `${commonStyles.fullWidth} ${styles.select} ${inputTextClassName}`
   inputClassName += ' ' + styles[`select-${mainColor}`]
   inputClassName += ' ' + commonStyles[`text--${borderColor}`]
   let optionsClassName = `${styles.options} ${defaultOptionsClassName} `
-  if (showError) inputClassName += ' ' + commonStyles['bordered--error-red']
-  if (disabled) inputClassName += ' ' + commonStyles['apply-opacity-30']
   inputClassName += ' ' + commonStyles[`background-color-${backgroundColor}`]
   optionsClassName += commonStyles[`background-color-${backgroundColor}`]
 
@@ -55,12 +54,20 @@ function Select ({
   const optionSpanClassName = commonStyles[`text--${mainColor}`]
 
   const [wrapperClassName, setWrapperClassName] = useState(normalClassName())
+
   function onFocusClassName () {
     return inputClassName + ' ' + commonStyles[`bordered--${borderColor}-100`]
   }
 
   function normalClassName () {
-    return inputClassName + ' ' + commonStyles[`bordered--${borderColor}-70`]
+    const baseClassName = inputClassName
+    if (showError) {
+      inputClassName += ' ' + commonStyles['bordered--error-red']
+    } else {
+      inputClassName += ' ' + commonStyles[`bordered--${borderColor}-70`]
+    }
+    if (disabled) inputClassName += ' ' + commonStyles['apply-opacity-30']
+    return baseClassName
   }
 
   const dataProps = {}
@@ -100,6 +107,15 @@ function Select ({
       setSelected(optionSelected)
     }
   }, [optionSelected])
+
+  useEffect(() => {
+    if (disabled) {
+      const className = normalClassName() + ' ' + commonStyles['apply-opacity-30']
+      setWrapperClassName(className)
+    } else {
+      setWrapperClassName(normalClassName())
+    }
+  }, [disabled])
 
   function renderLi (option, index) {
     return (
@@ -173,8 +189,8 @@ function Select ({
       <div className={styles.selectContainer}>
         <input type='text' name={name} value={value} className={wrapperClassName} ref={inputRef} onChange={onChange} disabled={disabled} placeholder={placeholder} onFocus={() => handleFocus()} onBlur={(e) => handleBlur(e)} />
         <div className={styles.icons}>
-          {value?.length > 0 && <PlatformaticIcon iconName='CircleCloseIcon' color={borderColor} onClick={() => clearValue()} size={SMALL} />}
-          <PlatformaticIcon iconName={showOptions ? 'ArrowUpIcon' : 'ArrowDownIcon'} color={borderColor} onClick={() => disabled ? null : setShowOptions(!showOptions)} size={SMALL} />
+          {value?.length > 0 && !disabled && <PlatformaticIcon iconName='CircleCloseIcon' color={borderColor} onClick={() => clearValue()} size={SMALL} />}
+          <PlatformaticIcon iconName={showOptions ? 'ArrowUpIcon' : 'ArrowDownIcon'} color={borderColor} disabled={disabled} onClick={() => setShowOptions(!showOptions)} size={SMALL} />
         </div>
       </div>
       {showOptions && !showError && renderOptions()}
