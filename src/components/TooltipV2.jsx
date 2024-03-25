@@ -13,7 +13,6 @@ function TooltipV2 ({ tooltipClassName, text, visible, alignment, elementClassNa
     if (visible) {
       setClassName(visibleClassName())
       if (ref.current) {
-        console.log('elementClassName', elementClassName)
         const referenceBoundingClientRect = document.getElementsByClassName(elementClassName)[0]?.getBoundingClientRect()
         if (referenceBoundingClientRect) {
           const topPosition = referenceBoundingClientRect.y - (referenceBoundingClientRect.height)

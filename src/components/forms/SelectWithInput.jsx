@@ -1,12 +1,12 @@
 'use strict'
 import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
-import styles from './Select.module.css'
+import styles from './SelectWithInput.module.css'
 import commonStyles from '../Common.module.css'
 import { MAIN_DARK_BLUE, MAIN_GREEN, RICH_BLACK, SMALL, WHITE } from '../constants'
 import PlatformaticIcon from '../PlatformaticIcon'
 
-function Select ({
+function SelectWithInput ({
   defaultContainerClassName,
   placeholder,
   name,
@@ -17,9 +17,12 @@ function Select ({
   borderColor,
   borderListColor,
   errorMessage,
+  onChange,
   onSelect,
+  onClear,
   disabled,
   mainColor,
+  optionSelected,
   dataAttrName,
   dataAttrValue,
   backgroundColor,
@@ -27,7 +30,6 @@ function Select ({
 }) {
   const inputRef = useRef()
   const [showOptions, setShowOptions] = useState(false)
-  // eslint-disable-next-line  no-unused-vars
   const [isSelected, setIsSelected] = useState(false)
   const [isOnFocus, setIsOnFocus] = useState(false)
 
@@ -39,7 +41,6 @@ function Select ({
   let optionsClassName = `${styles.options} ${defaultOptionsClassName} `
   inputClassName += ' ' + commonStyles[`background-color-${backgroundColor}`]
   optionsClassName += commonStyles[`background-color-${backgroundColor}`]
-  const optionSelectedClassName = styles.optionSelected
 
   if (borderListColor) {
     optionsClassName += ' ' + styles['bordered-options']
@@ -93,10 +94,19 @@ function Select ({
   }
 
   useEffect(() => {
+    if (value.length > 0 && !showOptions && !isSelected) {
+      setShowOptions(true)
+    }
     if (value.length === 0) {
       setIsSelected(false)
     }
   }, [value])
+
+  useEffect(() => {
+    if (optionSelected) {
+      setSelected(optionSelected)
+    }
+  }, [optionSelected])
 
   useEffect(() => {
     if (disabled) {
@@ -107,10 +117,10 @@ function Select ({
     }
   }, [disabled])
 
-  function renderLi (option, index, isOptionSelected) {
+  function renderLi (option, index) {
     return (
       <li
-        key={index} className={`${isOptionSelected ? optionSelectedClassName : singleOptionClassName}`} onClick={() => {
+        key={index} className={singleOptionClassName} onClick={() => {
           if (option.notSelectable) {
             return handleNotSelectable(option.onClick && option.onClick())
           }
@@ -127,13 +137,32 @@ function Select ({
   }
 
   function renderOptions () {
+    if (value.length === 0) {
+      return (
+        <ul className={optionsClassName}>
+          {options.length > 0 ? options.map((option, index) => renderLi(option, index)) : <li className={singleOptionClassName}><div className={styles.liContent}><span className={commonStyles[`text--${mainColor}`]}>No data found</span></div></li>}
+        </ul>
+      )
+    }
     const notFilterableOptions = options.filter(option => option.notFilterable)
+    const filteredOptions = options.filter(option => !option.notFilterable).filter(option => option.label.toLowerCase().includes(value.toLowerCase()))
+
     return (
       <ul className={optionsClassName}>
+        {filteredOptions.length > 0 ? filteredOptions.map((option, index) => renderLi(option, index)) : <li className={singleOptionClassName}><div className={styles.liContent}><span className={commonStyles[`text--${mainColor}`]}>No data found</span></div></li>}
         {notFilterableOptions.length > 0 && notFilterableOptions.map((option, index) => renderLi(option, index))}
-        {options.length > 0 ? options.map((option, index) => renderLi(option, index, option.label === value)) : <li className={singleOptionClassName}><div className={styles.liContent}><span className={commonStyles[`text--${mainColor}`]}>No data found</span></div></li>}
       </ul>
     )
+  }
+
+  // https://stackoverflow.com/questions/23892547/what-is-the-best-way-to-trigger-change-or-input-event-in-react-js
+  function clearValue () {
+    const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set
+    nativeInputValueSetter.call(inputRef.current, '')
+    const ev2 = new Event('input', { bubbles: true })
+    ev2.simulated = true
+    inputRef.current.dispatchEvent(ev2)
+    onClear()
   }
 
   function handleFocus () {
@@ -148,7 +177,7 @@ function Select ({
     event.preventDefault()
     setTimeout(() => {
       if (showOptions) {
-        // setShowOptions(false)
+        setShowOptions(false)
         setIsOnFocus(false)
         setWrapperClassName(normalClassName())
       }
@@ -158,8 +187,9 @@ function Select ({
   return (
     <div className={containerClassName} {...dataProps}>
       <div className={styles.selectContainer}>
-        <input type='text' name={name} value={value} className={wrapperClassName} ref={inputRef} disabled={disabled} placeholder={placeholder} onFocus={() => handleFocus()} onBlur={(e) => handleBlur(e)} readOnly />
+        <input type='text' name={name} value={value} className={wrapperClassName} ref={inputRef} onChange={onChange} disabled={disabled} placeholder={placeholder} onFocus={() => handleFocus()} onBlur={(e) => handleBlur(e)} />
         <div className={styles.icons}>
+          {value?.length > 0 && !disabled && <PlatformaticIcon iconName='CircleCloseIcon' color={borderColor} onClick={() => clearValue()} size={SMALL} />}
           <PlatformaticIcon iconName={showOptions ? 'ArrowUpIcon' : 'ArrowDownIcon'} color={borderColor} disabled={disabled} onClick={() => setShowOptions(!showOptions)} size={SMALL} />
         </div>
       </div>
@@ -169,7 +199,7 @@ function Select ({
   )
 }
 
-Select.propTypes = {
+SelectWithInput.propTypes = {
   /**
    * defaultContainerClassName
    */
@@ -223,9 +253,17 @@ Select.propTypes = {
    */
   borderListColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE, WHITE]),
   /**
+   * onChange
+   */
+  onChange: PropTypes.func,
+  /**
    * onSelect
    */
   onSelect: PropTypes.func,
+  /**
+   * onClear
+   */
+  onClear: PropTypes.func,
   /**
    * Disabled
    */
@@ -234,6 +272,16 @@ Select.propTypes = {
    * mainColor
    */
   mainColor: PropTypes.oneOf([MAIN_DARK_BLUE, WHITE]),
+  /**
+   * optionSelected
+   */
+  optionSelected: PropTypes.shape({
+    label: PropTypes.string,
+    value: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ])
+  }),
   /**
    * dataAttrName
   */
@@ -252,7 +300,7 @@ Select.propTypes = {
   inputTextClassName: PropTypes.string
 }
 
-Select.defaultProps = {
+SelectWithInput.defaultProps = {
   defaultContainerClassName: '',
   placeholder: 'this is the default',
   name: '',
@@ -264,13 +312,16 @@ Select.defaultProps = {
   borderColor: MAIN_GREEN,
   borderListColor: '',
   errorMessage: '',
+  onChange: () => {},
   onSelect: () => {},
+  onClear: () => {},
   disabled: false,
   mainColor: MAIN_DARK_BLUE,
+  optionSelected: null,
   dataAttrName: '',
   dataAttrValue: '',
   backgroundColor: WHITE,
   inputTextClassName: ''
 }
 
-export default Select
+export default SelectWithInput
