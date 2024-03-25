@@ -17,16 +17,13 @@
   @apply outline-none;
 }
 .options {
-  @apply absolute left-0 top-[42px] w-[calc(100%-1rem)] max-h-[216px] overflow-y-auto z-20 p-2;
+  @apply absolute left-0 top-[42px] w-full max-h-[216px] overflow-y-scroll z-20;
 }
 .bordered-options {
   @apply border border-solid rounded
 }
 .option {
   @apply font-light cursor-pointer z-10 flex flex-row justify-between items-center px-4;
-}
-.optionSelected {
-  @apply font-light cursor-pointer z-10 flex flex-row justify-between items-center px-4 bg-white/15;
 }
 .bordered-bottom {
   @apply border-b
@@ -36,7 +33,7 @@
   transform: translateY(-50%);
 }
 .liContent {
-  @apply py-2 flex items-center gap-x-1 relative z-[-1] w-full;
+  @apply py-2 flex items-center gap-x-1 relative z-[-1] w-auto basis-2/3;
 }
 .descriptionValue {
   @apply opacity-70

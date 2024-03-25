@@ -1,6 +1,6 @@
 'use strict'
 import React, { useState } from 'react'
-import Select from '../../components/forms/Select'
+import SelectWithInput from '../../components/forms/SelectWithInput'
 import { MAIN_DARK_BLUE, MAIN_GREEN, RICH_BLACK, WHITE } from '../../components/constants'
 
 const divStyle = {
@@ -11,8 +11,8 @@ const divStyle = {
 }
 
 export default {
-  title: 'Platformatic/Forms/Select',
-  component: Select,
+  title: 'Platformatic/Forms/SelectWithInput',
+  component: SelectWithInput,
   decorators: [
     (Story) => (
       <div style={divStyle}>
@@ -22,7 +22,7 @@ export default {
   ]
 }
 
-const Template = (args) => <Select {...args} />
+const Template = (args) => <SelectWithInput {...args} />
 
 export const Default = Template.bind({})
 
@@ -35,19 +35,28 @@ Default.args = {
 const TemplateBorderMainDarkBlue = (args) => {
   const [value, setValue] = useState('')
 
+  function handleChange (event) {
+    setValue(event.target.value)
+  }
+
   function handleSelect (event) {
     setValue(event.detail.label)
   }
 
   return (
     <div style={{ backgroundColor: 'white', padding: '20px 10px' }}>
-      <Select {...args} value={value} onSelect={handleSelect} />
+      <p>Value of the input {value}</p>
+      <SelectWithInput {...args} value={value} onChange={handleChange} onSelect={handleSelect} />
     </div>
   )
 }
 
 const TemplateBorderMainDarkBlue2 = (args) => {
   const [value, setValue] = useState('')
+
+  function handleChange (event) {
+    setValue(event.target.value)
+  }
 
   function handleSelect (event) {
     setValue(event.detail.label)
@@ -57,9 +66,9 @@ const TemplateBorderMainDarkBlue2 = (args) => {
     <>
       <div style={{ backgroundColor: 'white', padding: '20px 10px' }}>
         <p>Value of the input {value}</p>
-        <Select {...args} value={value} onSelect={handleSelect} />
+        <SelectWithInput {...args} value={value} onChange={handleChange} onSelect={handleSelect} />
         <br />
-        <Select placeholder='Disabled' disabled />
+        <SelectWithInput placeholder='Disabled' disabled />
 
       </div>
     </>
@@ -137,6 +146,10 @@ githubRepoExample.args = {
 const TemplateTransparent = (args) => {
   const [value, setValue] = useState('')
 
+  function handleChange (event) {
+    setValue(event.target.value)
+  }
+
   function handleSelect (event) {
     setValue(event.detail.label)
   }
@@ -144,7 +157,7 @@ const TemplateTransparent = (args) => {
   return (
     <div style={{ padding: '20px 10px' }}>
       <p>Value of the input {value}</p>
-      <Select {...args} value={value} onSelect={handleSelect} />
+      <SelectWithInput {...args} value={value} onChange={handleChange} onSelect={handleSelect} />
     </div>
   )
 }
