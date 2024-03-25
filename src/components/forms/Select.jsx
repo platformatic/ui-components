@@ -27,6 +27,7 @@ function Select ({
 }) {
   const inputRef = useRef()
   const [showOptions, setShowOptions] = useState(false)
+  // eslint-disable-next-line  no-unused-vars
   const [isSelected, setIsSelected] = useState(false)
   const [isOnFocus, setIsOnFocus] = useState(false)
 
