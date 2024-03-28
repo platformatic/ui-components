@@ -1,11 +1,12 @@
 import React from 'react'
 import CopyAndPaste from '../components/CopyAndPaste'
+import { WHITE } from '../components/constants'
 
 const divStyle = {
   width: '100%',
   height: 'auto',
   padding: '50px',
-  backgroundColor: 'white'
+  backgroundColor: 'transparent'
 }
 
 export default {
@@ -24,5 +25,6 @@ const Template = (args) => <CopyAndPaste {...args} />
 export const CopyAndPasteDefault = Template.bind({})
 CopyAndPasteDefault.args = {
   value: 'copy this value',
-  tooltipLabel: 'Tooltip show'
+  tooltipLabel: 'Tooltip show',
+  color: WHITE
 }

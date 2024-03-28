@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types'
 import styles from './TooltipV2.module.css'
 import { useEffect, useRef, useState } from 'react'
-import { ALIGNMENT_LEFT, ALIGNMENTS } from './constants'
+import { DIRECTION_LEFT, DIRECTIONS } from './constants'
 
 function TooltipV2 ({ tooltipClassName, text, visible, alignment, elementClassName }) {
   const ref = useRef(null)
@@ -53,7 +53,7 @@ TooltipV2.propTypes = {
   /**
    * alignment
    */
-  alignment: PropTypes.oneOf(ALIGNMENTS),
+  alignment: PropTypes.oneOf(DIRECTIONS),
   /**
    * alignment
    */
@@ -64,7 +64,7 @@ TooltipV2.defaultProps = {
   text: '',
   tooltipClassName: '',
   visible: false,
-  alignment: ALIGNMENT_LEFT,
+  alignment: DIRECTION_LEFT,
   elementClassName: ''
 }
 

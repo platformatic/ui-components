@@ -1,31 +1,68 @@
+/* Wrapping */
+.tooltipWrapper {
+  display: inline-block;
+  position: relative;
+  outline: 1px solid red;
+}
 
-.pltTooltipText {
-  @apply bg-white text-rich-black text-center p-2;
-  margin-top: -65px;
-  z-index: 20;
+/* Absolute positioning */
+.tooltipTip {
   position: fixed;
-  visibility: hidden;
-  border-radius: 6px;
-  padding: 0.25rem;
-  opacity: 0;
-  transition: opacity 0.3s;
+  border-radius: 4px;
 }
 
-.pltTooltipText::after {
-  content: "";
+.tooltipTipBaseClass {
+  @apply text-rich-black bg-white p-2 font-sans text-sm z-20 rounded;
+  white-space: nowrap;
+}
+
+/* CSS border triangles */
+.tooltipTip::before {
+  content: " ";
+  left: 50%;
+  border: solid transparent;
+  height: 0;
+  width: 0;
   position: absolute;
+  pointer-events: none;
+  border-width: 6px;
+  margin-left: calc(6px * -1); 
+}
+
+/* CSS border triangles */
+.top::before {
+  @apply border-t-white;
   top: 100%;
-  border-width: 5px;
-  border-style: solid;
-  border-color: white transparent transparent transparent;
 }
 
-.leftPltTooltip::after {
-  left: 5%;
-  margin-left: -5px;
+/* Absolute positioning */
+.right {
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+}
+/* CSS border triangles */
+.right::before {
+  @apply border-r-white;
+  left: calc(6px * -1);
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+}
+/* CSS border triangles */
+.bottom::before {
+  @apply border-b-white;
+  bottom: 100%;
 }
 
-.pltTooltipTextVisible {
-  visibility: visible;
-  opacity: 1;
+/* Absolute positioning */
+.left {
+  left: auto;
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+}
+/* CSS border triangles */
+.left::before {
+  left: auto;
+  right: calc(6px * -2);
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
 }
