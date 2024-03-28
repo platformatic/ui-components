@@ -37,7 +37,7 @@ import SearchBarV2 from './src/components/SearchBarV2'
 import SimpleMetric from './src/components/SimpleMetric'
 import Status from './src/components/Status'
 import Tooltip from './src/components/Tooltip'
-import TooltipOnOverflow from './src/components/TooltipOnOverflow'
+import TooltipAbsolute from './src/components/TooltipAbsolute'
 import TabbedWindow from './src/components/TabbedWindow'
 import TabbedWindowV2 from './src/components/TabbedWindowV2'
 import Tag from './src/components/Tag'
@@ -88,7 +88,7 @@ export {
   Tag,
   TextWithLabel,
   Tooltip,
-  TooltipOnOverflow,
+  TooltipAbsolute,
   TwoColumnsLayout,
   Versions,
   VerticalSeparator

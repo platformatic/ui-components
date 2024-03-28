@@ -1,10 +1,10 @@
 'use strict'
 import PropTypes from 'prop-types'
-import styles from './TooltipOnOverflow.module.css'
+import styles from './TooltipAbsolute.module.css'
 import { useState } from 'react'
 import { DIRECTIONS, DIRECTION_LEFT, DIRECTION_BOTTOM, DIRECTION_TOP, DIRECTION_RIGHT } from './constants'
 
-const TooltipOnOverflow = ({
+const TooltipAbsolute = ({
   direction,
   content,
   delay,
@@ -14,11 +14,10 @@ const TooltipOnOverflow = ({
   position
 }) => {
   let timeout
-  const [active, setActive] = useState(true)
+  const [active, setActive] = useState(false)
   let componentClassName = tooltipClassName || styles.tooltipTipBaseClass
   componentClassName += ` ${styles.tooltipTip} ` + styles[`${position}`] + ' ' + styles[`${direction}`]
   const absoluteStyle = {}
-
   switch (direction) {
     case DIRECTION_BOTTOM:
       absoluteStyle.bottom = `calc(${offset}px * -1)`
@@ -61,7 +60,7 @@ const TooltipOnOverflow = ({
   )
 }
 
-TooltipOnOverflow.propTypes = {
+TooltipAbsolute.propTypes = {
   /**
    * direction
    */
@@ -92,7 +91,7 @@ TooltipOnOverflow.propTypes = {
   position: PropTypes.string
 }
 
-TooltipOnOverflow.defaultProps = {
+TooltipAbsolute.defaultProps = {
   direction: DIRECTION_TOP,
   tooltipClassName: '',
   delay: 0,
@@ -102,4 +101,4 @@ TooltipOnOverflow.defaultProps = {
   position: 'start'
 }
 
-export default TooltipOnOverflow
+export default TooltipAbsolute
