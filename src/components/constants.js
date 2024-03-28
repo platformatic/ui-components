@@ -75,3 +75,8 @@ export const DIRECTION_LEFT = 'left'
 export const DIRECTION_RIGHT = 'right'
 export const DIRECTION_TOP = 'top'
 export const DIRECTIONS = [DIRECTION_BOTTOM, DIRECTION_LEFT, DIRECTION_RIGHT, DIRECTION_TOP]
+
+export const POSITION_START = 'start'
+export const POSITION_END = 'end'
+export const POSITION_CENTER = 'center'
+export const POSITIONS = [POSITION_START, POSITION_END, POSITION_CENTER]

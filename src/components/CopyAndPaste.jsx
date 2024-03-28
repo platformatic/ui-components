@@ -1,11 +1,20 @@
 'use strict'
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { COLORS_ICON, DIRECTION_TOP, MEDIUM, SIZES } from './constants'
+import { COLORS_ICON, DIRECTION_TOP, MEDIUM, SIZES, POSITIONS, POSITION_CENTER } from './constants'
 import PlatformaticIcon from './PlatformaticIcon'
-import Tooltip from './Tooltip'
+import TooltipAbsolute from './TooltipAbsolute'
 
-function CopyAndPaste ({ value, tooltipLabel, color, timeout, size, tooltipClassName }) {
+function CopyAndPaste ({
+  value,
+  tooltipLabel,
+  color,
+  timeout,
+  size,
+  tooltipClassName,
+  position
+
+}) {
   const [copied, setCopied] = useState(false)
 
   function copy () {
@@ -19,7 +28,7 @@ function CopyAndPaste ({ value, tooltipLabel, color, timeout, size, tooltipClass
   return !copied
     ? (<PlatformaticIcon size={size} iconName='CopyPasteIcon' color={color} onClick={() => copy()} />)
     : (
-      <Tooltip
+      <TooltipAbsolute
         tooltipClassName={tooltipClassName}
         content={(<span>{tooltipLabel}</span>)}
         delay={100}
@@ -27,9 +36,10 @@ function CopyAndPaste ({ value, tooltipLabel, color, timeout, size, tooltipClass
         offset={44}
         activeDependsOnVisible
         visible={copied}
+        position={position}
       >
         <PlatformaticIcon size={size} iconName='CircleCheckMarkIcon' color={color} onClick={null} />
-      </Tooltip>
+      </TooltipAbsolute>
       )
 }
 
@@ -57,7 +67,11 @@ CopyAndPaste.propTypes = {
   /**
    * timeout
    */
-  tooltipClassName: PropTypes.string
+  tooltipClassName: PropTypes.string,
+  /**
+   * position
+   */
+  position: PropTypes.oneOf(POSITIONS)
 }
 
 CopyAndPaste.defaultProps = {
@@ -66,7 +80,8 @@ CopyAndPaste.defaultProps = {
   color: 'main-dark-blue',
   timeout: 1500,
   size: MEDIUM,
-  tooltipClassName: ''
+  tooltipClassName: '',
+  position: POSITION_CENTER
 }
 
 export default CopyAndPaste

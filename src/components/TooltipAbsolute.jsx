@@ -1,7 +1,7 @@
 'use strict'
 import PropTypes from 'prop-types'
 import styles from './TooltipAbsolute.module.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { DIRECTIONS, DIRECTION_LEFT, DIRECTION_BOTTOM, DIRECTION_TOP, DIRECTION_RIGHT } from './constants'
 
 const TooltipAbsolute = ({
@@ -11,13 +11,17 @@ const TooltipAbsolute = ({
   children,
   tooltipClassName,
   offset,
-  position
+  position,
+  visible,
+  activeDependsOnVisible
 }) => {
   let timeout
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(activeDependsOnVisible ? visible : false)
   let componentClassName = tooltipClassName || styles.tooltipTipBaseClass
   componentClassName += ` ${styles.tooltipTip} ` + styles[`${position}`] + ' ' + styles[`${direction}`]
+
   const absoluteStyle = {}
+
   switch (direction) {
     case DIRECTION_BOTTOM:
       absoluteStyle.bottom = `calc(${offset}px * -1)`
@@ -32,6 +36,12 @@ const TooltipAbsolute = ({
       absoluteStyle.top = `calc(${offset}px * -1)`
       break
   }
+
+  useEffect(() => {
+    if (activeDependsOnVisible) {
+      setActive(visible)
+    }
+  }, [activeDependsOnVisible, visible])
 
   const showTip = () => {
     timeout = setTimeout(() => {
@@ -88,7 +98,15 @@ TooltipAbsolute.propTypes = {
   /**
    * position
    */
-  position: PropTypes.string
+  position: PropTypes.string,
+  /**
+   * visible
+   */
+  visible: PropTypes.bool,
+  /**
+   * activeDependsOnVisible
+   */
+  activeDependsOnVisible: PropTypes.bool
 }
 
 TooltipAbsolute.defaultProps = {
@@ -98,7 +116,9 @@ TooltipAbsolute.defaultProps = {
   children: null,
   content: null,
   offset: 0,
-  position: 'start'
+  position: 'start',
+  activeDependsOnVisible: false,
+  visible: false
 }
 
 export default TooltipAbsolute

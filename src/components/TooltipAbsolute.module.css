@@ -41,6 +41,10 @@
   left: 100%;
   transform: translateX(-100%);
 }
+.end::before {
+  right: 4px;
+}
+
 
 /* CSS border triangles */
 .top::before {
@@ -58,13 +62,13 @@
   left: calc(6px * -1);
   top: 50%;
   transform: translateX(0) translateY(-50%);
-  border-right-color: var(--tooltip-background-color);
+  border-right-color: white;
 }
 
 /* CSS border triangles */
 .bottom::before {
   bottom: 100%;
-  border-bottom-color: var(--tooltip-background-color);
+  border-bottom-color: white;
 }
 
 /* Absolute positioning */
@@ -79,5 +83,6 @@
   right: calc(6px * -2);
   top: 50%;
   transform: translateX(0) translateY(-50%);
-  border-left-color: var(--tooltip-background-color);
+  border-left-color: white;
+  border-right-color: transparent;
 }
