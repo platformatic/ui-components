@@ -25,7 +25,7 @@ function CopyAndPaste ({ value, tooltipLabel, color, timeout, size, tooltipClass
         delay={100}
         direction={DIRECTION_TOP}
         offset={44}
-        activeDependsOnVisible={true}
+        activeDependsOnVisible
         visible={copied}
       >
         <PlatformaticIcon size={size} iconName='CircleCheckMarkIcon' color={color} onClick={null} />

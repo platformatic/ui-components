@@ -72,6 +72,6 @@ export const OPACITY_100 = 100
 
 export const DIRECTION_BOTTOM = 'bottom'
 export const DIRECTION_LEFT = 'left'
-export const DIRECTION_RIGHT = 'rigth'
+export const DIRECTION_RIGHT = 'right'
 export const DIRECTION_TOP = 'top'
 export const DIRECTIONS = [DIRECTION_BOTTOM, DIRECTION_LEFT, DIRECTION_RIGHT, DIRECTION_TOP]

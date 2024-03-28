@@ -19,7 +19,7 @@ function Tooltip ({
   // const [active, setActive] = useState(true)
   let componentClassName = tooltipClassName || styles.tooltipTipBaseClass
   componentClassName += ` ${styles.tooltipTip} ` + styles[`${direction}`]
-  let fixedStyle = {top: `0px`, left: `0px`}
+  const fixedStyle = { top: '0px', left: '0px' }
   const wrapperRef = useRef()
 
   useEffect(() => {
@@ -30,11 +30,10 @@ function Tooltip ({
 
   if (wrapperRef.current) {
     const referenceBoundingClientRect = wrapperRef.current.getBoundingClientRect()
-    console.log(referenceBoundingClientRect)
     if (referenceBoundingClientRect) {
       let topPosition
       let leftPosition
-      
+
       switch (direction) {
         case DIRECTION_BOTTOM:
           topPosition = referenceBoundingClientRect.y - (referenceBoundingClientRect.height) - offset
@@ -66,14 +65,12 @@ function Tooltip ({
     setActive(false)
   }
 
-  
-  console.log('fixedStyle', fixedStyle)
   return (
     <div
       className={styles.tooltipWrapper}
       onMouseEnter={!activeDependsOnVisible ? showTip : () => {}}
       onMouseLeave={!activeDependsOnVisible ? hideTip : () => {}}
-      ref={ el => wrapperRef.current = el }
+      ref={el => { wrapperRef.current = el }}
     >
       {children}
       {active && (
