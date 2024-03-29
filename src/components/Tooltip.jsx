@@ -2,64 +2,130 @@
 import PropTypes from 'prop-types'
 import styles from './Tooltip.module.css'
 import { useEffect, useRef, useState } from 'react'
-import { ALIGNMENT_CENTER, ALIGNMENT_LEFT, ALIGNMENTS } from './constants'
+import { DIRECTIONS, DIRECTION_BOTTOM, DIRECTION_LEFT, DIRECTION_RIGHT, DIRECTION_TOP } from './constants'
 
-function Tooltip ({ tooltipClassName, text, visible, alignment }) {
-  const ref = useRef(null)
-  const alignmentClassName = styles[`${alignment}PltTooltip`]
-  const [className, setClassName] = useState(normalClassName())
+function Tooltip ({
+  direction,
+  visible,
+  activeDependsOnVisible,
+  content,
+  delay,
+  children,
+  tooltipClassName,
+  offset
+}) {
+  let timeout
+  const [active, setActive] = useState(activeDependsOnVisible ? visible : false)
+  // const [active, setActive] = useState(true)
+  let componentClassName = tooltipClassName || styles.tooltipTipBaseClass
+  componentClassName += ` ${styles.tooltipTip} ` + styles[`${direction}`]
+  const fixedStyle = { top: '0px', left: '0px' }
+  const wrapperRef = useRef()
 
   useEffect(() => {
-    if (visible) {
-      setClassName(visibleClassName())
-      if (ref.current) {
-        if (alignment === ALIGNMENT_LEFT) {
-          ref.current.style.marginLeft = '-0px'
-        }
-        if (alignment === ALIGNMENT_CENTER) {
-          ref.current.style.marginLeft = '-' + ((ref.current.clientWidth / 2) - 12) + 'px'
-        }
-      }
-    } else {
-      setClassName(normalClassName())
+    if (activeDependsOnVisible) {
+      setActive(visible)
     }
-  }, [visible])
+  }, [activeDependsOnVisible, visible])
 
-  function normalClassName () {
-    return `${styles.pltTooltipText} ${tooltipClassName} ${alignmentClassName}`
+  if (wrapperRef.current) {
+    const referenceBoundingClientRect = wrapperRef.current.getBoundingClientRect()
+    if (referenceBoundingClientRect) {
+      let topPosition
+      let leftPosition
+
+      switch (direction) {
+        case DIRECTION_BOTTOM:
+          topPosition = referenceBoundingClientRect.y - (referenceBoundingClientRect.height) - offset
+          fixedStyle.top = `${topPosition}px`
+          // fixedStyle.bottom = `calc(${offset}px *-1)`
+          break
+        case DIRECTION_RIGHT:
+        case DIRECTION_LEFT:
+          leftPosition = referenceBoundingClientRect.x + referenceBoundingClientRect.width + offset
+          fixedStyle.left = `${leftPosition}px`
+          break
+        default:
+          fixedStyle.top = `${referenceBoundingClientRect.y - referenceBoundingClientRect.height - offset}px`
+          fixedStyle.left = `${referenceBoundingClientRect.x + (referenceBoundingClientRect.width / 2)}px`
+          fixedStyle.transform = 'translateX(-50%)'
+          break
+      }
+    }
   }
 
-  function visibleClassName () {
-    return `${normalClassName()} ${styles.pltTooltipTextVisible}`
+  const showTip = () => {
+    timeout = setTimeout(() => {
+      setActive(true)
+    }, delay)
   }
 
-  return <span ref={ref} className={className}>{text}</span>
+  const hideTip = () => {
+    clearInterval(timeout)
+    setActive(false)
+  }
+
+  return (
+    <div
+      className={styles.tooltipWrapper}
+      onMouseEnter={!activeDependsOnVisible ? showTip : () => {}}
+      onMouseLeave={!activeDependsOnVisible ? hideTip : () => {}}
+      ref={el => { wrapperRef.current = el }}
+    >
+      {children}
+      {active && (
+        <div className={componentClassName} style={{ ...fixedStyle }}>
+          {content}
+        </div>
+      )}
+    </div>
+  )
 }
 
 Tooltip.propTypes = {
   /**
-   * text
+   * direction
    */
-  text: PropTypes.string,
+  direction: PropTypes.oneOf(DIRECTIONS),
+  /**
+   * content
+   */
+  content: PropTypes.node,
+  /**
+   * children
+   */
+  children: PropTypes.node,
   /**
    * tooltipClassName
    */
   tooltipClassName: PropTypes.string,
   /**
+   * delay
+   */
+  delay: PropTypes.number,
+  /**
    * visible
    */
   visible: PropTypes.bool,
   /**
-   * alignment
+   * activeDependsOnVisible
    */
-  alignment: PropTypes.oneOf(ALIGNMENTS)
+  activeDependsOnVisible: PropTypes.bool,
+  /**
+   * offset
+   */
+  offset: PropTypes.number
 }
 
 Tooltip.defaultProps = {
-  text: '',
+  direction: DIRECTION_TOP,
   tooltipClassName: '',
+  delay: 0,
+  activeDependsOnVisible: false,
   visible: false,
-  alignment: ALIGNMENT_LEFT
+  children: null,
+  content: null,
+  offset: 0
 }
 
 export default Tooltip

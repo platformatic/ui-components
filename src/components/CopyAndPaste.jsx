@@ -1,11 +1,20 @@
 'use strict'
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { COLORS_ICON, MEDIUM, SIZES } from './constants'
+import { COLORS_ICON, DIRECTION_TOP, MEDIUM, SIZES, POSITIONS, POSITION_CENTER } from './constants'
 import PlatformaticIcon from './PlatformaticIcon'
-import ReactTooltip from 'react-tooltip'
+import TooltipAbsolute from './TooltipAbsolute'
 
-function CopyAndPaste ({ value, tooltipLabel, color, timeout, size }) {
+function CopyAndPaste ({
+  value,
+  tooltipLabel,
+  color,
+  timeout,
+  size,
+  tooltipClassName,
+  position
+
+}) {
   const [copied, setCopied] = useState(false)
 
   function copy () {
@@ -19,12 +28,18 @@ function CopyAndPaste ({ value, tooltipLabel, color, timeout, size }) {
   return !copied
     ? (<PlatformaticIcon size={size} iconName='CopyPasteIcon' color={color} onClick={() => copy()} />)
     : (
-      <>
-        <span data-tip={tooltipLabel} data-place='top'>
-          <PlatformaticIcon size={size} iconName='CircleCheckMarkIcon' color={color} onClick={null} />
-        </span>
-        <ReactTooltip place='top' type='info' />
-      </>
+      <TooltipAbsolute
+        tooltipClassName={tooltipClassName}
+        content={(<span>{tooltipLabel}</span>)}
+        delay={100}
+        direction={DIRECTION_TOP}
+        offset={44}
+        activeDependsOnVisible
+        visible={copied}
+        position={position}
+      >
+        <PlatformaticIcon size={size} iconName='CircleCheckMarkIcon' color={color} onClick={null} />
+      </TooltipAbsolute>
       )
 }
 
@@ -48,7 +63,15 @@ CopyAndPaste.propTypes = {
   /**
    * timeout
    */
-  timeout: PropTypes.number
+  timeout: PropTypes.number,
+  /**
+   * timeout
+   */
+  tooltipClassName: PropTypes.string,
+  /**
+   * position
+   */
+  position: PropTypes.oneOf(POSITIONS)
 }
 
 CopyAndPaste.defaultProps = {
@@ -56,7 +79,9 @@ CopyAndPaste.defaultProps = {
   tooltipLabel: 'Create your app now',
   color: 'main-dark-blue',
   timeout: 1500,
-  size: MEDIUM
+  size: MEDIUM,
+  tooltipClassName: '',
+  position: POSITION_CENTER
 }
 
 export default CopyAndPaste

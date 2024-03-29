@@ -4,9 +4,9 @@
   position: relative;
 }
 
-/* Fixed positioning */
+/* Absolute positioning */
 .tooltipTip {
-  position: fixed;
+  position: absolute;
   border-radius: 4px;
 }
 
@@ -18,20 +18,38 @@
 /* CSS border triangles */
 .tooltipTip::before {
   content: " ";
-  left: 50%;
   border: solid transparent;
   height: 0;
   width: 0;
   position: absolute;
   pointer-events: none;
   border-width: 6px;
-  margin-left: calc(6px * -1); 
+  margin-left: calc(6px * -1);
 }
+.start {
+  left: 0%;
+}
+.start::before {
+  left: 12px;
+}
+
+.center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.end {
+  left: 100%;
+  transform: translateX(-100%);
+}
+.end::before {
+  right: 4px;
+}
+
 
 /* CSS border triangles */
 .top::before {
-  @apply border-t-white;
   top: 100%;
+  border-top-color: white;
 }
 
 /* Absolute positioning */
@@ -41,15 +59,16 @@
 }
 /* CSS border triangles */
 .right::before {
-  @apply border-r-white;
   left: calc(6px * -1);
   top: 50%;
   transform: translateX(0) translateY(-50%);
+  border-right-color: white;
 }
+
 /* CSS border triangles */
 .bottom::before {
-  @apply border-b-white;
   bottom: 100%;
+  border-bottom-color: white;
 }
 
 /* Absolute positioning */
@@ -64,4 +83,6 @@
   right: calc(6px * -2);
   top: 50%;
   transform: translateX(0) translateY(-50%);
+  border-left-color: white;
+  border-right-color: transparent;
 }

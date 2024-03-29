@@ -70,7 +70,13 @@ export const OPACITY_30 = 30
 export const OPACITY_60 = 60
 export const OPACITY_100 = 100
 
-export const ALIGNMENT_LEFT = 'left'
-export const ALIGNMENT_RIGHT = 'rigth'
-export const ALIGNMENT_CENTER = 'center'
-export const ALIGNMENTS = [ALIGNMENT_LEFT, ALIGNMENT_CENTER, ALIGNMENT_RIGHT]
+export const DIRECTION_BOTTOM = 'bottom'
+export const DIRECTION_LEFT = 'left'
+export const DIRECTION_RIGHT = 'right'
+export const DIRECTION_TOP = 'top'
+export const DIRECTIONS = [DIRECTION_BOTTOM, DIRECTION_LEFT, DIRECTION_RIGHT, DIRECTION_TOP]
+
+export const POSITION_START = 'start'
+export const POSITION_END = 'end'
+export const POSITION_CENTER = 'center'
+export const POSITIONS = [POSITION_START, POSITION_END, POSITION_CENTER]

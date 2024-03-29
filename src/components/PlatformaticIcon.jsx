@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import Icons from './icons'
 import styles from './PlatformaticIcon.module.css'
 import { COLORS_ICON, MAIN_GREEN, SIZES, SMALL } from './constants'
-import Tooltip from './Tooltip'
 
 function PlatformaticIcon ({
   iconName,
@@ -13,7 +12,6 @@ function PlatformaticIcon ({
   size,
   classes,
   tip,
-  tipClassName,
   disabled,
   inactive,
   internalOverHandling,
@@ -41,7 +39,6 @@ function PlatformaticIcon ({
           onMouseLeave={() => internalOverHandling && !disabled ? setHover(false) : {}}
         >
           {icon}
-          {tip && <Tooltip tooltipClassName={tipClassName} text={tip} visible={hover} />}
         </div>
       )
     }
@@ -80,10 +77,6 @@ PlatformaticIcon.propTypes = {
    */
   tip: PropTypes.string,
   /**
-   * tip
-   */
-  tipClassName: PropTypes.string,
-  /**
    * disabled
    */
   disabled: PropTypes.bool,
@@ -104,7 +97,6 @@ PlatformaticIcon.defaultProps = {
   onClick: () => {},
   classes: '',
   tip: '',
-  tipClassName: '',
   disabled: false,
   inactive: false,
   internalOverHandling: false
