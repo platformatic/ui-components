@@ -39,7 +39,6 @@ function Select ({
   let optionsClassName = `${styles.options} ${defaultOptionsClassName} `
   inputClassName += ' ' + commonStyles[`background-color-${backgroundColor}`]
   optionsClassName += commonStyles[`background-color-${backgroundColor}`]
-  const optionSelectedClassName = styles.optionSelected
 
   if (borderListColor) {
     optionsClassName += ' ' + styles['bordered-options']
@@ -50,7 +49,9 @@ function Select ({
     singleOptionClassName += ` ${styles['bordered-bottom']}`
   }
 
-  const optionSpanClassName = commonStyles[`text--${mainColor}`]
+  const optionSpanClassName = commonStyles[`text--${mainColor}-70`]
+  const optionSpanClassNameSelected = commonStyles[`text--${mainColor}`]
+  const descriptionClassName = commonStyles[`text--${mainColor}`]
 
   const [wrapperClassName, setWrapperClassName] = useState(normalClassName())
 
@@ -110,7 +111,7 @@ function Select ({
   function renderLi (option, index, isOptionSelected) {
     return (
       <li
-        key={index} className={`${isOptionSelected ? optionSelectedClassName : singleOptionClassName}`} onClick={() => {
+        key={index} className={singleOptionClassName} onClick={() => {
           if (option.notSelectable) {
             return handleNotSelectable(option.onClick && option.onClick())
           }
@@ -118,10 +119,10 @@ function Select ({
         }}
       >
         <div className={styles.liContent}>
-          {option.iconName && <PlatformaticIcon iconName={option.iconName} color={option.iconColor || mainColor} size={option.iconSize ?? SMALL} onClick={null} />}
-          <span className={optionSpanClassName}>{option.label}</span>
+          {option.iconName && <PlatformaticIcon iconName={option.iconName} color={option.iconColor || mainColor} size={option.iconSize ?? SMALL} onClick={null} inactive={!isOptionSelected} />}
+          <span className={isOptionSelected ? optionSpanClassNameSelected : optionSpanClassName}>{option.label}</span>
         </div>
-        {option.descriptionValue && <span className={`${optionSpanClassName} ${styles.descriptionValue}`}>{option.descriptionValue}</span>}
+        {option.descriptionValue && <span className={`${descriptionClassName} ${styles.descriptionValue}`}>{option.descriptionValue}</span>}
       </li>
     )
   }
