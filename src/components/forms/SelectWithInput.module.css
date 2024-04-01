@@ -23,7 +23,7 @@
   @apply border border-solid rounded
 }
 .option {
-  @apply font-light cursor-pointer z-10 flex flex-row justify-between items-center px-4;
+  @apply font-light cursor-pointer z-10 flex flex-row justify-between items-center px-4 rounded;
 }
 .bordered-bottom {
   @apply border-b

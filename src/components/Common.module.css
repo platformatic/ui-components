@@ -133,27 +133,53 @@
 .padded {
   @apply px-2 py-2.5;
 }
-
 .text--error-red {
   @apply text-error-red
+}
+.text--error-red-70 {
+  @apply text-error-red/70
 }
 .text--white {
   @apply text-white
 }
+.text--white-70 {
+  @apply text-white/70;
+}
 .text--dark-green {
   @apply text-dark-green;
+}
+.text--dark-green-70 {
+  @apply text-dark-green/70;
 }
 .text--main-green {
   @apply text-main-green;
 }
+.text--main-green-70 {
+  @apply text-main-green/70;
+}
 .text--light-green {
   @apply text-light-green;
+}
+.text--light-green-70 {
+  @apply text-light-green/70;
 }
 .text--main-dark-blue {
   @apply text-main-dark-blue;
 }
+.text--main-dark-blue-70 {
+  @apply text-main-dark-blue/70;
+}
 .text--light-blue {
   @apply text-light-blue;
+}
+.text--light-blue-70 {
+  @apply text-light-blue/70;
+}
+.text--rich-black {
+  @apply text-rich-black;
+}
+.text--rich-black-70 {
+  @apply text-rich-black/70;
 }
 
 .text--base {
