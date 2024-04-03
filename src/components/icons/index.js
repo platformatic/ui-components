@@ -26,6 +26,7 @@ import ArrowRightIcon from './ArrowRightIcon'
 import ArrowUpIcon from './ArrowUpIcon'
 import BellIcon from './BellIcon'
 import BillingIcon from './BillingIcon'
+import BuiltInLoggingIcon from './BuiltInLoggingIcon'
 import CalendarIcon from './CalendarIcon'
 import Calendar1DayIcon from './Calendar1DayIcon'
 import Calendar7DaysIcon from './Calendar7DaysIcon'
@@ -92,6 +93,7 @@ import LogsRiskIcon from './LogsRiskIcon'
 import MetricsIcon from './MetricsIcon'
 import MetricsLoadingIcon from './MetricsLoadingIcon'
 import NameAppIcon from './NameAppIcon'
+import NoMetricsIcon from './NoMetricsIcon'
 import OrganizationIcon from './OrganizationIcon'
 import OutOfBoxGraphQLIcon from './OutOfBoxGraphQLIcon'
 import PlatformaticComposerIcon from './PlatformaticComposerIcon'
@@ -172,6 +174,7 @@ export default {
   ArrowUpIcon,
   BellIcon,
   BillingIcon,
+  BuiltInLoggingIcon,
   CalendarIcon,
   Calendar1DayIcon,
   Calendar7DaysIcon,
@@ -238,6 +241,7 @@ export default {
   MetricsIcon,
   MetricsLoadingIcon,
   NameAppIcon,
+  NoMetricsIcon,
   OrganizationIcon,
   OutOfBoxGraphQLIcon,
   PlatformaticComposerIcon,
