@@ -92,6 +92,8 @@ import LogOutIcon from './LogOutIcon'
 import LogsRiskIcon from './LogsRiskIcon'
 import MetricsIcon from './MetricsIcon'
 import MetricsLoadingIcon from './MetricsLoadingIcon'
+import MissingTemplateIcon from './MissingTemplateIcon'
+
 import NameAppIcon from './NameAppIcon'
 import NoMetricsIcon from './NoMetricsIcon'
 import OrganizationIcon from './OrganizationIcon'
@@ -240,6 +242,7 @@ export default {
   LogsRiskIcon,
   MetricsIcon,
   MetricsLoadingIcon,
+  MissingTemplateIcon,
   NameAppIcon,
   NoMetricsIcon,
   OrganizationIcon,
