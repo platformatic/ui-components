@@ -6,9 +6,22 @@ import commonStyles from '../Common.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
 import { MAIN_DARK_BLUE, MAIN_GREEN } from '../constants'
 
-function TextArea ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled, afterIcon, rows, cols }) {
+function TextArea ({
+  placeholder,
+  value,
+  name,
+  borderColor,
+  errorMessage,
+  errorMessageTextClassName,
+  onChange,
+  disabled,
+  afterIcon,
+  rows,
+  cols
+}) {
   let className = styles.textAreaContainer + ' ' + commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`]
   const showError = errorMessage.length > 0
+  const errorMessageClassName = errorMessageTextClassName || commonStyles['error-message']
   if (showError) className += ' ' + commonStyles['bordered--error-red']
   if (disabled) className += ' ' + commonStyles['apply-opacity-30']
   const textAreaClassName = `${commonStyles.fullWidth} ${styles.textarea}`
@@ -19,7 +32,7 @@ function TextArea ({ placeholder, value, name, borderColor, errorMessage, onChan
         <textarea name={name} className={textAreaClassName} onChange={onChange} disabled={disabled} placeholder={placeholder} rows={rows} cols={cols} value={value} />
         {afterIcon && <div className={styles.afterIcon}><PlatformaticIcon iconName={afterIcon.iconName} color={afterIcon.color} data-testid='after-icon' onClick={null} /></div>}
       </div>
-      {showError && <span className={commonStyles['error-message']}>{errorMessage}</span>}
+      {showError && <span className={errorMessageClassName}>{errorMessage}</span>}
     </div>
   )
 }
@@ -64,7 +77,15 @@ TextArea.propTypes = {
   /**
    * cols
    */
-  cols: PropTypes.number
+  cols: PropTypes.number,
+  /**
+   * errorMessage
+   */
+  errorMessage: PropTypes.string,
+  /**
+   * errorMessageTextClassName
+  */
+  errorMessageTextClassName: PropTypes.string
 }
 
 TextArea.defaultProps = {
@@ -73,6 +94,7 @@ TextArea.defaultProps = {
   name: '',
   borderColor: MAIN_DARK_BLUE,
   errorMessage: '',
+  errorMessageTextClassName: '',
   onChange: () => {},
   disabled: false,
   afterIcon: null,

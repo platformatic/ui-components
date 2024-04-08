@@ -17,6 +17,7 @@ function SelectWithInput ({
   borderColor,
   borderListColor,
   errorMessage,
+  errorMessageTextClassName,
   onChange,
   onSelect,
   onClear,
@@ -32,7 +33,7 @@ function SelectWithInput ({
   const [showOptions, setShowOptions] = useState(false)
   const [isSelected, setIsSelected] = useState(false)
   const [isOnFocus, setIsOnFocus] = useState(false)
-
+  const errorMessageClassName = errorMessageTextClassName || commonStyles['error-message']
   const showError = errorMessage.length > 0
   const containerClassName = `${styles.container} ${defaultContainerClassName} `
   let inputClassName = `${commonStyles.fullWidth} ${styles.select} ${inputTextClassName}`
@@ -194,7 +195,7 @@ function SelectWithInput ({
         </div>
       </div>
       {showOptions && !showError && renderOptions()}
-      {showError && <span className={commonStyles['error-message']}>{errorMessage}</span>}
+      {showError && <span className={errorMessageClassName}>{errorMessage}</span>}
     </div>
   )
 }
@@ -297,7 +298,15 @@ SelectWithInput.propTypes = {
   /**
    * inputTextClassName
   */
-  inputTextClassName: PropTypes.string
+  inputTextClassName: PropTypes.string,
+  /**
+   * errorMessage
+   */
+  errorMessage: PropTypes.string,
+  /**
+   * errorMessageTextClassName
+  */
+  errorMessageTextClassName: PropTypes.string
 }
 
 SelectWithInput.defaultProps = {
@@ -312,6 +321,7 @@ SelectWithInput.defaultProps = {
   borderColor: MAIN_GREEN,
   borderListColor: '',
   errorMessage: '',
+  errorMessageTextClassName: '',
   onChange: () => {},
   onSelect: () => {},
   onClear: () => {},

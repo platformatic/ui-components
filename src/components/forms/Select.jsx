@@ -17,6 +17,7 @@ function Select ({
   borderColor,
   borderListColor,
   errorMessage,
+  errorMessageTextClassName,
   onSelect,
   disabled,
   mainColor,
@@ -30,7 +31,7 @@ function Select ({
   // eslint-disable-next-line  no-unused-vars
   const [isSelected, setIsSelected] = useState(false)
   const [isOnFocus, setIsOnFocus] = useState(false)
-
+  const errorMessageClassName = errorMessageTextClassName || commonStyles['error-message']
   const showError = errorMessage.length > 0
   const containerClassName = `${styles.container} ${defaultContainerClassName} `
   let inputClassName = `${commonStyles.fullWidth} ${styles.select} ${inputTextClassName}`
@@ -165,7 +166,7 @@ function Select ({
         </div>
       </div>
       {showOptions && !showError && renderOptions()}
-      {showError && <span className={commonStyles['error-message']}>{errorMessage}</span>}
+      {showError && <span className={errorMessageClassName}>{errorMessage}</span>}
     </div>
   )
 }
@@ -250,7 +251,15 @@ Select.propTypes = {
   /**
    * inputTextClassName
   */
-  inputTextClassName: PropTypes.string
+  inputTextClassName: PropTypes.string,
+  /**
+   * errorMessage
+   */
+  errorMessage: PropTypes.string,
+  /**
+   * errorMessageTextClassName
+  */
+  errorMessageTextClassName: PropTypes.string
 }
 
 Select.defaultProps = {
@@ -265,6 +274,7 @@ Select.defaultProps = {
   borderColor: MAIN_GREEN,
   borderListColor: '',
   errorMessage: '',
+  errorMessageTextClassName: '',
   onSelect: () => {},
   disabled: false,
   mainColor: MAIN_DARK_BLUE,
