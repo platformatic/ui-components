@@ -12,6 +12,7 @@ function Input ({
   name,
   borderColor,
   errorMessage,
+  errorMessageTextClassName,
   onChange,
   disabled,
   beforeIcon,
@@ -27,7 +28,7 @@ function Input ({
   let baseInputClassName = `${commonStyles.fullWidth} ${styles.input} ${inputTextClassName} `
   baseInputClassName += verticalPaddingClassName || ` ${styles.inputDefaultVerticalPadding} `
   baseInputClassName += ' ' + commonStyles[`text--${borderColor}`] + ' ' + commonStyles[`background-color-${backgroundColor}`]
-
+  const errorMessageClassName = errorMessageTextClassName || commonStyles['error-message']
   const showError = errorMessage.length > 0
   if (disabled) baseInputClassName += ' ' + commonStyles['apply-opacity-30']
   if (beforeIcon) baseInputClassName += ' ' + styles.beforeIconPadding
@@ -80,7 +81,7 @@ function Input ({
         {placeholderApart && <p className={styles.placeholderAPart}>{placeholder}</p>}
         {afterIcon && <div className={styles.afterInputIcon}><PlatformaticIcon iconName={afterIcon.iconName} color={afterIcon.color} data-testid='after-icon' onClick={null} /></div>}
       </div>
-      {showError && <span className={commonStyles['error-message']}>{errorMessage}</span>}
+      {showError && <span className={errorMessageClassName}>{errorMessage}</span>}
     </div>
   )
 }
@@ -157,7 +158,15 @@ Input.propTypes = {
   /**
    * readOnly
   */
-  readOnly: PropTypes.bool
+  readOnly: PropTypes.bool,
+  /**
+   * errorMessage
+  */
+  errorMessage: PropTypes.string,
+  /**
+   * errorMessageTextClassName
+  */
+  errorMessageTextClassName: PropTypes.string
 }
 
 Input.defaultProps = {
@@ -167,6 +176,7 @@ Input.defaultProps = {
   borderColor: MAIN_GREEN,
   backgroundColor: WHITE,
   errorMessage: '',
+  errorMessageTextClassName: '',
   onChange: () => {},
   disabled: false,
   beforeIcon: null,

@@ -14,6 +14,7 @@ function InputWithSeparator ({
   borderColor,
   backgroundColor,
   errorMessage,
+  errorMessageTextClassName,
   onChange,
   disabled,
   afterIcon,
@@ -27,6 +28,7 @@ function InputWithSeparator ({
   const [focus, setFocus] = useState(false)
   const baseClassName = `${styles.input} ${styles.flexNone} ${styles.smallMargin} ${inputTextClassName} ` + commonStyles[`background-color-${backgroundColor}`]
   const buttonClassName = commonStyles[`background-color-${borderColor}`] + ' ' + commonStyles['background-color-opaque-30']
+  const errorMessageClassName = errorMessageTextClassName || commonStyles['error-message']
   const [chunks, setChunks] = useState([])
   const [inputClassName, setInputClassName] = useState(normalClassName())
   const [inputContainerClassName, setInputContainerClassName] = useState(unFocusedClassName())
@@ -164,7 +166,7 @@ function InputWithSeparator ({
             />
           )}
       </div>
-      {showError && <span className={commonStyles['error-message']}>{errorMessage}</span>}
+      {showError && <span className={errorMessageClassName}>{errorMessage}</span>}
     </div>
   )
 }
@@ -222,7 +224,15 @@ InputWithSeparator.propTypes = {
     color: PropTypes.string,
     handleClick: PropTypes.func,
     disabled: PropTypes.bool
-  })
+  }),
+  /**
+   * errorMessage
+  */
+  errorMessage: PropTypes.string,
+  /**
+   * errorMessageTextClassName
+  */
+  errorMessageTextClassName: PropTypes.string
 }
 
 InputWithSeparator.defaultProps = {
@@ -234,6 +244,7 @@ InputWithSeparator.defaultProps = {
   borderColor: MAIN_GREEN,
   backgroundColor: WHITE,
   errorMessage: '',
+  errorMessageTextClassName: '',
   onChange: () => {},
   disabled: false,
   afterIcon: null,

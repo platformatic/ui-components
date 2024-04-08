@@ -5,8 +5,10 @@ import styles from './RadioGroup.module.css'
 import commonStyles from '../Common.module.css'
 import { MAIN_DARK_BLUE, MAIN_GREEN } from '../constants'
 
-function RadioGroup ({ name, radios, errorMessage, onChange, disabled, value }) {
+function RadioGroup ({ name, radios, errorMessage, errorMessageTextClassName, onChange, disabled, value }) {
   let radioContainerClass = styles.radioContainer
+  const errorMessageClassName = errorMessageTextClassName || commonStyles['error-message']
+
   const showError = errorMessage.length > 0
   if (disabled) radioContainerClass += ' ' + commonStyles['apply-opacity-30']
 
@@ -20,7 +22,7 @@ function RadioGroup ({ name, radios, errorMessage, onChange, disabled, value }) 
           </div>
         ))}
       </div>
-      {showError && <span className={commonStyles['error-message']}>{errorMessage}</span>}
+      {showError && <span className={errorMessageClassName}>{errorMessage}</span>}
     </div>
   )
 }
@@ -41,6 +43,10 @@ RadioGroup.propTypes = {
    * errorMessage
    */
   errorMessage: PropTypes.string,
+  /**
+   * errorMessageTextClassName
+  */
+  errorMessageTextClassName: PropTypes.string,
   /**
    * onChange
    */
@@ -63,6 +69,7 @@ RadioGroup.defaultProps = {
   name: '',
   radios: [],
   errorMessage: '',
+  errorMessageTextClassName: '',
   onChange: () => {},
   disabled: false,
   color: MAIN_DARK_BLUE,

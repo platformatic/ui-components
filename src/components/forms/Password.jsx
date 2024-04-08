@@ -6,10 +6,11 @@ import commonStyles from '../Common.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
 import { MAIN_DARK_BLUE, MAIN_GREEN } from '../constants'
 
-function Input ({ placeholder, value, name, borderColor, errorMessage, onChange, disabled }) {
+function Input ({ placeholder, value, name, borderColor, errorMessage, errorMessageTextClassName, onChange, disabled }) {
   const [type, setType] = useState('password')
   let passwordClassName = `${commonStyles.fullWidth} ${styles.password} `
   passwordClassName += commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`] + ' ' + styles.afterIconPadding
+  const errorMessageClassName = errorMessageTextClassName || commonStyles['error-message']
   const showError = errorMessage.length > 0
   if (showError) passwordClassName += ' ' + commonStyles['bordered--error-red']
   if (disabled) passwordClassName += ' ' + commonStyles['apply-opacity-30']
@@ -24,7 +25,7 @@ function Input ({ placeholder, value, name, borderColor, errorMessage, onChange,
             : <PlatformaticIcon iconName='EyeClosedIcon' color={MAIN_DARK_BLUE} data-testid='after-eye-closed-icon' onClick={() => setType('password')} />}
         </div>
       </div>
-      {showError && <span className={commonStyles['error-message']}>{errorMessage}</span>}
+      {showError && <span className={errorMessageClassName}>{errorMessage}</span>}
     </div>
   )
 }
@@ -61,7 +62,15 @@ Input.propTypes = {
   /**
    * placeholderApart
    */
-  placeholderApart: PropTypes.bool
+  placeholderApart: PropTypes.bool,
+  /**
+   * errorMessage
+  */
+  errorMessage: PropTypes.string,
+  /**
+   * errorMessageTextClassName
+  */
+  errorMessageTextClassName: PropTypes.string
 }
 
 Input.defaultProps = {
@@ -70,6 +79,7 @@ Input.defaultProps = {
   name: '',
   borderColor: MAIN_DARK_BLUE,
   errorMessage: '',
+  errorMessageTextClassName: '',
   onChange: () => {},
   disabled: false,
   focused: false,

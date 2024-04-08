@@ -4,10 +4,21 @@ import PropTypes from 'prop-types'
 import styles from './ToggleSwitch.module.css'
 import commonStyles from '../Common.module.css'
 
-function ToggleSwitch ({ name, label, labelClassName, errorMessage, onChange, checked, disabled }) {
+function ToggleSwitch ({
+  name,
+  label,
+  labelClassName,
+  errorMessage,
+  errorMessageTextClassName,
+  onChange,
+  checked,
+  disabled
+}) {
   let className = `${styles.switch} `
   if (disabled) className += styles.disabled
   const styleLabel = labelClassName || styles.defaultLabel
+  const errorMessageClassName = errorMessageTextClassName || commonStyles['error-message']
+
   return (
     <>
       <div className={styles.container}>
@@ -17,7 +28,7 @@ function ToggleSwitch ({ name, label, labelClassName, errorMessage, onChange, ch
         </label>
         <span className={styleLabel}>{label}</span>
       </div>
-      {errorMessage.length > 0 && <span className={commonStyles['error-message']}>{errorMessage}</span>}
+      {errorMessage.length > 0 && <span className={errorMessageClassName}>{errorMessage}</span>}
     </>
   )
 }
@@ -35,6 +46,10 @@ ToggleSwitch.propTypes = {
    * errorMessage
    */
   errorMessage: PropTypes.string,
+  /**
+   * errorMessageTextClassName
+  */
+  errorMessageTextClassName: PropTypes.string,
   /**
    * checked
    */
@@ -58,6 +73,7 @@ ToggleSwitch.defaultProps = {
   name: '',
   label: '',
   errorMessage: '',
+  errorMessageTextClassName: '',
   checked: false,
   disabled: false,
   onChange: () => {},
