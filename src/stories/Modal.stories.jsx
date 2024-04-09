@@ -135,7 +135,7 @@ const NestedModalsTemplate = () => {
               {isOpen3 && (
                 <Modal
                   setIsOpen={setIsOpen3}
-                  title='third One'
+                  title='Third One'
                   layout={MODAL_POPUP_V2}
                 >
                   <p style={{ color: 'white' }}>This Is the third</p>
