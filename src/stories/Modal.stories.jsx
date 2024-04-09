@@ -4,7 +4,7 @@ import Button from '../components/Button'
 import BorderedBox from '../components/BorderedBox'
 import DropDown from '../components/DropDown'
 import HorizontalSeparator from '../components/HorizontalSeparator'
-import { FULL_WIDTH, MAIN_DARK_BLUE, MAIN_GREEN, MODAL_COVER, MODAL_FULL_DARK, MODAL_FULL_LIGHT, MODAL_LAYOUTS, MODAL_SIZES } from '../components/constants'
+import { FULL_WIDTH, MAIN_DARK_BLUE, MAIN_GREEN, MODAL_COVER, MODAL_FULL_DARK, MODAL_FULL_LIGHT, MODAL_LAYOUTS, MODAL_POPUP_V2, MODAL_SIZES } from '../components/constants'
 export default {
   title: 'Platformatic/Modal',
   component: Modal,
@@ -106,4 +106,55 @@ export const FullscreenLayoutLight = Template.bind({})
 FullscreenLayoutLight.args = {
   size: FULL_WIDTH,
   layout: MODAL_FULL_LIGHT
+}
+
+const NestedModalsTemplate = () => {
+  const [isOpen1, setIsOpen1] = useState(false)
+  const [isOpen2, setIsOpen2] = useState(false)
+  const [isOpen3, setIsOpen3] = useState(false)
+
+  return (
+    <main style={{ height: '1440px', overflow: 'scroll' }}>
+      <Button color={MAIN_GREEN} backgroundColor={MAIN_DARK_BLUE} onClick={() => setIsOpen1(true)} label='Open 1st Modal' />
+      {isOpen1 && (
+        <Modal
+          setIsOpen={setIsOpen1}
+          title='Fist One'
+          layout={MODAL_POPUP_V2}
+        >
+          <p style={{ color: 'white' }}>This Is the first</p>
+          <Button color={MAIN_GREEN} backgroundColor={MAIN_DARK_BLUE} onClick={() => setIsOpen2(true)} label='Open 2nd Modal' />
+          {isOpen2 && (
+            <Modal
+              setIsOpen={setIsOpen2}
+              title='Second One'
+              layout={MODAL_POPUP_V2}
+            >
+              <p style={{ color: 'white' }}>This Is the second</p>
+              <Button color={MAIN_GREEN} backgroundColor={MAIN_DARK_BLUE} onClick={() => setIsOpen3(true)} label='Open 3rd Modal' />
+              {isOpen3 && (
+                <Modal
+                  setIsOpen={setIsOpen3}
+                  title='third One'
+                  layout={MODAL_POPUP_V2}
+                >
+                  <p style={{ color: 'white' }}>This Is the third</p>
+                </Modal>
+              )}
+            </Modal>
+          )}
+        </Modal>
+      )}
+    </main>
+  )
+}
+
+export const NestedModals = NestedModalsTemplate.bind({})
+NestedModals.args = {}
+
+export const Permanent = Template.bind({})
+Permanent.args = {
+  title: 'Permanent modal',
+  text: 'Close clicking on Cancel or X or Esc',
+  permanent: true
 }

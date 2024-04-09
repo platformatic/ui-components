@@ -40,7 +40,8 @@ function Modal ({
   backgroundClassName,
   titleClassName,
   childrenClassContainer,
-  modalCloseClassName
+  modalCloseClassName,
+  permanent
 }) {
   let contentFullscreen
   let titleFullscreen
@@ -96,7 +97,10 @@ function Modal ({
   }
 
   function closeModal (event) {
+    console.log('closeModal', event)
     if (event.target === blurRef.current) {
+      event.preventDefault()
+      event.stopPropagation()
       setIsOpen(false)
     }
   }
@@ -105,7 +109,7 @@ function Modal ({
     case MODAL_POPUP_V2:
       whichModal = (
 
-        <div className={`${styles['blur-fixed']}`} onClick={(event) => closeModal(event)} ref={blurRef}>
+        <div className={`${styles['blur-fixed']}`} onClick={(event) => permanent ? {} : closeModal(event)} ref={blurRef}>
           <div className={styles.content}>
             <div className={modalClassName}>
               <div className={headerClassName}>
@@ -124,7 +128,7 @@ function Modal ({
     case MODAL_POPUP:
       whichModal = (
         <>
-          <div className={styles.blur} onClick={() => setIsOpen(false)} />
+          <div className={styles.blur} onClick={() => permanent ? {} : setIsOpen(false)} />
           <div className={`${styles.container} ${styles.centered}`}>
             <div className={modalClassName}>
               <div className={headerClassName}>
@@ -242,37 +246,41 @@ Modal.propTypes = {
    */
   childrenClassContainer: PropTypes.string,
   /**
-   * setIsOpen
+   * setIsOpen: function from Parent for close/pen
    */
   setIsOpen: PropTypes.func,
   /**
-   * title
+   * title: Title on top for small Modals (check MODAL_LAYOUTS)
    */
   title: PropTypes.string,
   /**
-   * layout
+   * layout: type of Layout of the modal
    */
   layout: PropTypes.oneOf(MODAL_LAYOUTS),
   /**
-   * Size
+   * Size: of the modal
    */
   size: PropTypes.oneOf(MODAL_SIZES),
   /**
-   * profile
+   * profile: deprecated
    */
   profile: PropTypes.oneOf(PROFILES),
   /**
-   * backgroundClassName
+   * backgroundClassName: background of the full screen modal
    */
   backgroundClassName: PropTypes.string,
   /**
-   * titleClassName
+   * titleClassName: classes of the title
    */
   titleClassName: PropTypes.string,
   /**
-   * modalCloseClassName
+   * modalCloseClassName: classes for the closing icon
    */
-  modalCloseClassName: PropTypes.string
+  modalCloseClassName: PropTypes.string,
+  /**
+   * permanent: modal could be closed only with Esc, X or Cancel
+   */
+  permanent: PropTypes.bool
 }
 
 Modal.defaultProps = {
@@ -285,7 +293,8 @@ Modal.defaultProps = {
   profile: '',
   backgroundClassName: '',
   titleClassName: '',
-  modalCloseClassName: ''
+  modalCloseClassName: '',
+  permanent: false
 }
 
 export default Modal
