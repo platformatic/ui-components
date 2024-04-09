@@ -17,7 +17,8 @@ function ModalDirectional ({
   titleClassName,
   children,
   smallLayout,
-  classNameModalLefty
+  classNameModalLefty,
+  permanent
 }) {
   const className = `${styles.container} ${styles.modalLeftCover} ${smallLayout ? styles.smallLayout : styles.normalLayout}`
   const [modalClassName] = useState(className)
@@ -39,7 +40,7 @@ function ModalDirectional ({
 
   return (
     <>
-      <div className={styles.blur} onClick={() => closeModal()} />
+      <div className={styles.blur} onClick={() => permanent ? {} : closeModal()} />
       <div className={variantModalClassName}>
         <div className={classNameLefty}>
           <div className={styles.headerClassName}>
@@ -89,7 +90,11 @@ ModalDirectional.propTypes = {
   /**
    * classNameLefty
    */
-  classNameLefty: PropTypes.string
+  classNameLefty: PropTypes.string,
+  /**
+   * permanent: modal could be closed only with Esc, X or Cancel
+   */
+  permanent: PropTypes.bool
 }
 
 ModalDirectional.defaultProps = {
@@ -98,7 +103,8 @@ ModalDirectional.defaultProps = {
   title: '',
   titleClassName: '',
   smallLayout: false,
-  classNameLefty: ''
+  classNameLefty: '',
+  permanent: false
 }
 
 export default ModalDirectional
