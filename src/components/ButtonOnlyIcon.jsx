@@ -62,7 +62,7 @@ function ButtonOnlyIcon ({
 
   useEffect(() => {
     if (disabled) {
-      setButtonClassName(buttonRestClassName())
+      setButtonClassName(buttonRestClassName() + ` ${styles.cursorDefault}`)
     } else {
       setButtonClassName(buttonActiveClassName())
     }

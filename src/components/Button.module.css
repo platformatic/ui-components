@@ -120,3 +120,6 @@
 .active {
   @apply opacity-100;
 }
+.cursorDefault {
+  @apply cursor-default;
+}
