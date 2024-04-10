@@ -33,7 +33,7 @@
   left: 12px;
 }
 
-.center {
+.center, .center::before {
   left: 50%;
   transform: translateX(-50%);
 }
@@ -42,7 +42,7 @@
   transform: translateX(-100%);
 }
 .end::before {
-  right: 4px;
+  right: 12px;
 }
 
 
