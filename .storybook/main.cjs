@@ -4,8 +4,7 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "@chromatic-com/storybook",
-    "@storybook/addon-mdx-gfm"
+    "@chromatic-com/storybook"
   ],
   "framework": {
     name: "@storybook/react-vite",
