@@ -8,9 +8,15 @@ export default {
 
 const Template = ({ checked, ...args }) => {
   const [localChecked, setLocalChecked] = useState(checked)
-  const onChange = () => { setLocalChecked(!localChecked) }
+  const onChange = () => {
+    setLocalChecked(!localChecked)
+  }
   return (
-    <ToggleSwitch {...args} checked={localChecked} onChange={() => onChange()} />
+    <ToggleSwitch
+      {...args}
+      checked={localChecked}
+      onChange={() => onChange()}
+    />
   )
 }
 
@@ -27,7 +33,9 @@ Checked.args = {
   name: 'test',
   label: 'This is a label',
   checked: true,
-  onChange: () => { alert('checked') }
+  onChange: () => {
+    alert('checked')
+  }
 }
 
 export const Disabled = Template.bind({})
@@ -36,6 +44,8 @@ Disabled.args = {
   name: 'test',
   label: 'This is a label',
   checked: true,
-  onChange: () => { alert('checked') },
+  onChange: () => {
+    alert('checked')
+  },
   disabled: true
 }

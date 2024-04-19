@@ -1,7 +1,22 @@
 'use strict'
 import React from 'react'
 import Button from '../components/Button'
-import { ALTERNATE_RICH_BLACK, ANTI_FLASH_WHITE, BOX_SHADOW, CHANGE_BACKGROUND_COLOR, COLORS_BUTTON, ERROR_RED, FIRE_ENGINE_RED, HOVER_EFFECTS_BUTTONS, LARGE, RICH_BLACK, SIZES, WHITE, ACTIVE_AND_INACTIVE_STATUS, MEDIUM } from '../components/constants'
+import {
+  ALTERNATE_RICH_BLACK,
+  ANTI_FLASH_WHITE,
+  BOX_SHADOW,
+  CHANGE_BACKGROUND_COLOR,
+  COLORS_BUTTON,
+  ERROR_RED,
+  FIRE_ENGINE_RED,
+  HOVER_EFFECTS_BUTTONS,
+  LARGE,
+  RICH_BLACK,
+  SIZES,
+  WHITE,
+  ACTIVE_AND_INACTIVE_STATUS,
+  MEDIUM
+} from '../components/constants'
 
 const divStyle = {
   width: '100%',
@@ -73,12 +88,21 @@ OnlyLabel.args = {
 const AllBorderedTemplate = (args) => {
   return (
     <>
-      {COLORS_BUTTON.map(color => (
+      {COLORS_BUTTON.map((color) => (
         <React.Fragment key={color}>
           <div className='grid grid-cols-6 gap-2 items-center' key={color}>
             <span className='text-sm'>{color}</span>
-            <Button color={color} onClick={() => alert('clicked ' + color)} {...args} />
-            <Button color={color} onClick={() => alert('clicked ' + color)} disabled {...args} />
+            <Button
+              color={color}
+              onClick={() => alert('clicked ' + color)}
+              {...args}
+            />
+            <Button
+              color={color}
+              onClick={() => alert('clicked ' + color)}
+              disabled
+              {...args}
+            />
           </div>
           <br />
         </React.Fragment>
@@ -97,12 +121,21 @@ AllBordered.args = {
 const AllFilledTemplate = (args) => {
   return (
     <>
-      {COLORS_BUTTON.map(color => (
+      {COLORS_BUTTON.map((color) => (
         <React.Fragment key={color}>
           <div className='grid grid-cols-6 gap-2 items-center'>
             <span className='text-sm'>{color}</span>
-            <Button backgroundColor={color} onClick={() => alert('clicked ' + color)} {...args} />
-            <Button backgroundColor={color} onClick={() => alert('clicked ' + color)} disabled {...args} />
+            <Button
+              backgroundColor={color}
+              onClick={() => alert('clicked ' + color)}
+              {...args}
+            />
+            <Button
+              backgroundColor={color}
+              onClick={() => alert('clicked ' + color)}
+              disabled
+              {...args}
+            />
           </div>
           <br />
         </React.Fragment>
@@ -125,7 +158,9 @@ AllFilled.args = {
 const DesignSystem = (args) => {
   return (
     <div className='grid grid-cols-5 gap-2 items-center'>
-      <span className='text-sm text-white col-span-1'>Disabled with Background Color</span>
+      <span className='text-sm text-white col-span-1'>
+        Disabled with Background Color
+      </span>
       <div className='grid grid-cols-2 gap-x-2 bg-rich-black p-2 col-span-2'>
         <Button
           color={RICH_BLACK}
@@ -156,7 +191,9 @@ const DesignSystem = (args) => {
           bordered={false}
           disabled
           hoverEffect={CHANGE_BACKGROUND_COLOR}
-          hoverEffectProperties={{ changeBackgroundColor: ALTERNATE_RICH_BLACK }}
+          hoverEffectProperties={{
+            changeBackgroundColor: ALTERNATE_RICH_BLACK
+          }}
           {...args}
         />
         <Button
@@ -170,7 +207,9 @@ const DesignSystem = (args) => {
           {...args}
         />
       </div>
-      <span className='text-sm text-white col-span-1'>Default with Background Color</span>
+      <span className='text-sm text-white col-span-1'>
+        Default with Background Color
+      </span>
       <div className='grid grid-cols-2 gap-x-2 bg-rich-black p-2 col-span-2'>
         <Button
           color={RICH_BLACK}
@@ -198,7 +237,9 @@ const DesignSystem = (args) => {
           onClick={() => alert('clicked Default RICH_BLACK')}
           bordered={false}
           hoverEffect={CHANGE_BACKGROUND_COLOR}
-          hoverEffectProperties={{ changeBackgroundColor: ALTERNATE_RICH_BLACK }}
+          hoverEffectProperties={{
+            changeBackgroundColor: ALTERNATE_RICH_BLACK
+          }}
           {...args}
         />
         <Button
@@ -211,7 +252,9 @@ const DesignSystem = (args) => {
           {...args}
         />
       </div>
-      <span className='text-sm text-white col-span-1'>Disabled with Background Color 2</span>
+      <span className='text-sm text-white col-span-1'>
+        Disabled with Background Color 2
+      </span>
       <div className='grid grid-cols-2 gap-x-2 bg-rich-black p-2 col-span-2'>
         <Button
           color={RICH_BLACK}
@@ -221,8 +264,16 @@ const DesignSystem = (args) => {
           disabled
           hoverEffect={CHANGE_BACKGROUND_COLOR}
           hoverEffectProperties={{ changeBackgroundColor: ANTI_FLASH_WHITE }}
-          platformaticIcon={{ iconName: 'GearIcon', size: MEDIUM, color: RICH_BLACK }}
-          platformaticIconAfter={{ iconName: 'GearIcon', size: MEDIUM, color: RICH_BLACK }}
+          platformaticIcon={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: RICH_BLACK
+          }}
+          platformaticIconAfter={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: RICH_BLACK
+          }}
           {...args}
         />
         <Button
@@ -233,8 +284,16 @@ const DesignSystem = (args) => {
           disabled
           hoverEffect={CHANGE_BACKGROUND_COLOR}
           hoverEffectProperties={{ changeBackgroundColor: FIRE_ENGINE_RED }}
-          platformaticIcon={{ iconName: 'GearIcon', size: MEDIUM, color: WHITE }}
-          platformaticIconAfter={{ iconName: 'GearIcon', size: MEDIUM, color: WHITE }}
+          platformaticIcon={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: WHITE
+          }}
+          platformaticIconAfter={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: WHITE
+          }}
           {...args}
         />
       </div>
@@ -246,9 +305,19 @@ const DesignSystem = (args) => {
           bordered={false}
           disabled
           hoverEffect={CHANGE_BACKGROUND_COLOR}
-          hoverEffectProperties={{ changeBackgroundColor: ALTERNATE_RICH_BLACK }}
-          platformaticIcon={{ iconName: 'GearIcon', size: MEDIUM, color: WHITE }}
-          platformaticIconAfter={{ iconName: 'GearIcon', size: MEDIUM, color: WHITE }}
+          hoverEffectProperties={{
+            changeBackgroundColor: ALTERNATE_RICH_BLACK
+          }}
+          platformaticIcon={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: WHITE
+          }}
+          platformaticIconAfter={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: WHITE
+          }}
           {...args}
         />
         <Button
@@ -259,12 +328,22 @@ const DesignSystem = (args) => {
           disabled
           hoverEffect={CHANGE_BACKGROUND_COLOR}
           hoverEffectProperties={{ changeBackgroundColor: FIRE_ENGINE_RED }}
-          platformaticIcon={{ iconName: 'GearIcon', size: MEDIUM, color: WHITE }}
-          platformaticIconAfter={{ iconName: 'GearIcon', size: MEDIUM, color: WHITE }}
+          platformaticIcon={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: WHITE
+          }}
+          platformaticIconAfter={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: WHITE
+          }}
           {...args}
         />
       </div>
-      <span className='text-sm text-white col-span-1'>Default with Background Color 2</span>
+      <span className='text-sm text-white col-span-1'>
+        Default with Background Color 2
+      </span>
       <div className='grid grid-cols-2 gap-x-2 bg-rich-black p-2 col-span-2'>
         <Button
           color={RICH_BLACK}
@@ -273,8 +352,16 @@ const DesignSystem = (args) => {
           hoverEffect={CHANGE_BACKGROUND_COLOR}
           hoverEffectProperties={{ changeBackgroundColor: ANTI_FLASH_WHITE }}
           bordered={false}
-          platformaticIcon={{ iconName: 'GearIcon', size: MEDIUM, color: RICH_BLACK }}
-          platformaticIconAfter={{ iconName: 'GearIcon', size: MEDIUM, color: RICH_BLACK }}
+          platformaticIcon={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: RICH_BLACK
+          }}
+          platformaticIconAfter={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: RICH_BLACK
+          }}
           {...args}
         />
         <Button
@@ -284,8 +371,16 @@ const DesignSystem = (args) => {
           hoverEffect={CHANGE_BACKGROUND_COLOR}
           hoverEffectProperties={{ changeBackgroundColor: FIRE_ENGINE_RED }}
           bordered={false}
-          platformaticIcon={{ iconName: 'GearIcon', size: MEDIUM, color: WHITE }}
-          platformaticIconAfter={{ iconName: 'GearIcon', size: MEDIUM, color: WHITE }}
+          platformaticIcon={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: WHITE
+          }}
+          platformaticIconAfter={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: WHITE
+          }}
           {...args}
         />
       </div>
@@ -296,9 +391,19 @@ const DesignSystem = (args) => {
           onClick={() => alert('clicked Default RICH_BLACK')}
           bordered={false}
           hoverEffect={CHANGE_BACKGROUND_COLOR}
-          hoverEffectProperties={{ changeBackgroundColor: ALTERNATE_RICH_BLACK }}
-          platformaticIcon={{ iconName: 'GearIcon', size: MEDIUM, color: WHITE }}
-          platformaticIconAfter={{ iconName: 'GearIcon', size: MEDIUM, color: WHITE }}
+          hoverEffectProperties={{
+            changeBackgroundColor: ALTERNATE_RICH_BLACK
+          }}
+          platformaticIcon={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: WHITE
+          }}
+          platformaticIconAfter={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: WHITE
+          }}
           {...args}
         />
         <Button
@@ -308,8 +413,16 @@ const DesignSystem = (args) => {
           hoverEffect={CHANGE_BACKGROUND_COLOR}
           hoverEffectProperties={{ changeBackgroundColor: FIRE_ENGINE_RED }}
           bordered={false}
-          platformaticIcon={{ iconName: 'GearIcon', size: MEDIUM, color: WHITE }}
-          platformaticIconAfter={{ iconName: 'GearIcon', size: MEDIUM, color: WHITE }}
+          platformaticIcon={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: WHITE
+          }}
+          platformaticIconAfter={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: WHITE
+          }}
           {...args}
         />
       </div>
@@ -400,8 +513,16 @@ const DesignSystem = (args) => {
           bordered={false}
           disabled
           hoverEffect={ACTIVE_AND_INACTIVE_STATUS}
-          platformaticIcon={{ iconName: 'GearIcon', size: MEDIUM, color: WHITE }}
-          platformaticIconAfter={{ iconName: 'GearIcon', size: MEDIUM, color: WHITE }}
+          platformaticIcon={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: WHITE
+          }}
+          platformaticIconAfter={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: WHITE
+          }}
           {...args}
         />
         <Button
@@ -411,8 +532,16 @@ const DesignSystem = (args) => {
           bordered={false}
           disabled
           hoverEffect={ACTIVE_AND_INACTIVE_STATUS}
-          platformaticIcon={{ iconName: 'GearIcon', size: MEDIUM, color: ERROR_RED }}
-          platformaticIconAfter={{ iconName: 'GearIcon', size: MEDIUM, color: ERROR_RED }}
+          platformaticIcon={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: ERROR_RED
+          }}
+          platformaticIconAfter={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: ERROR_RED
+          }}
           {...args}
         />
       </div>
@@ -424,8 +553,16 @@ const DesignSystem = (args) => {
           bordered={false}
           disabled
           hoverEffect={ACTIVE_AND_INACTIVE_STATUS}
-          platformaticIcon={{ iconName: 'GearIcon', size: MEDIUM, color: RICH_BLACK }}
-          platformaticIconAfter={{ iconName: 'GearIcon', size: MEDIUM, color: RICH_BLACK }}
+          platformaticIcon={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: RICH_BLACK
+          }}
+          platformaticIconAfter={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: RICH_BLACK
+          }}
           {...args}
         />
         <Button
@@ -435,8 +572,16 @@ const DesignSystem = (args) => {
           bordered={false}
           disabled
           hoverEffect={ACTIVE_AND_INACTIVE_STATUS}
-          platformaticIcon={{ iconName: 'GearIcon', size: MEDIUM, color: ERROR_RED }}
-          platformaticIconAfter={{ iconName: 'GearIcon', size: MEDIUM, color: ERROR_RED }}
+          platformaticIcon={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: ERROR_RED
+          }}
+          platformaticIconAfter={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: ERROR_RED
+          }}
           {...args}
         />
       </div>
@@ -448,8 +593,16 @@ const DesignSystem = (args) => {
           onClick={() => alert('clicked Default WHITE')}
           hoverEffect={ACTIVE_AND_INACTIVE_STATUS}
           bordered={false}
-          platformaticIcon={{ iconName: 'GearIcon', size: MEDIUM, color: WHITE }}
-          platformaticIconAfter={{ iconName: 'GearIcon', size: MEDIUM, color: WHITE }}
+          platformaticIcon={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: WHITE
+          }}
+          platformaticIconAfter={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: WHITE
+          }}
           {...args}
         />
         <Button
@@ -458,8 +611,16 @@ const DesignSystem = (args) => {
           onClick={() => alert('clicked Default ERROR_RED')}
           hoverEffect={ACTIVE_AND_INACTIVE_STATUS}
           bordered={false}
-          platformaticIcon={{ iconName: 'GearIcon', size: MEDIUM, color: ERROR_RED }}
-          platformaticIconAfter={{ iconName: 'GearIcon', size: MEDIUM, color: ERROR_RED }}
+          platformaticIcon={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: ERROR_RED
+          }}
+          platformaticIconAfter={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: ERROR_RED
+          }}
           {...args}
         />
       </div>
@@ -470,8 +631,16 @@ const DesignSystem = (args) => {
           onClick={() => alert('clicked Default RICH_BLACK')}
           bordered={false}
           hoverEffect={ACTIVE_AND_INACTIVE_STATUS}
-          platformaticIcon={{ iconName: 'GearIcon', size: MEDIUM, color: RICH_BLACK }}
-          platformaticIconAfter={{ iconName: 'GearIcon', size: MEDIUM, color: RICH_BLACK }}
+          platformaticIcon={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: RICH_BLACK
+          }}
+          platformaticIconAfter={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: RICH_BLACK
+          }}
           {...args}
         />
         <Button
@@ -480,8 +649,16 @@ const DesignSystem = (args) => {
           onClick={() => alert('clicked Default ERROR_RED')}
           hoverEffect={ACTIVE_AND_INACTIVE_STATUS}
           bordered={false}
-          platformaticIcon={{ iconName: 'GearIcon', size: MEDIUM, color: ERROR_RED }}
-          platformaticIconAfter={{ iconName: 'GearIcon', size: MEDIUM, color: ERROR_RED }}
+          platformaticIcon={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: ERROR_RED
+          }}
+          platformaticIconAfter={{
+            iconName: 'GearIcon',
+            size: MEDIUM,
+            color: ERROR_RED
+          }}
           {...args}
         />
       </div>

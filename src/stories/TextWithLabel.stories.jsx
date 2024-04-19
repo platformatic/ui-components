@@ -18,7 +18,11 @@ Standard.args = {
   text: 'Platformatic Team'
 }
 
-export const WithLink = (args) => <TextWithLabel {...args}><a href='https://example.com'>Standard Link</a></TextWithLabel>
+export const WithLink = (args) => (
+  <TextWithLabel {...args}>
+    <a href='https://example.com'>Standard Link</a>
+  </TextWithLabel>
+)
 
 WithLink.args = {
   label: 'External Link'

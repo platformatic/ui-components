@@ -31,7 +31,11 @@ Default.args = {
   placeholder: 'Platformatic'
 }
 
-const TemplateBorderMainDarkBlue = (args) => <div style={{ backgroundColor: 'white', padding: '2px' }}><Input {...args} /></div>
+const TemplateBorderMainDarkBlue = (args) => (
+  <div style={{ backgroundColor: 'white', padding: '2px' }}>
+    <Input {...args} />
+  </div>
+)
 
 export const BorderMainDarkBlue = TemplateBorderMainDarkBlue.bind({})
 
@@ -81,7 +85,9 @@ IconBeforeAndAfter.args = {
     iconName: 'CopyPasteIcon',
     color: 'main-dark-blue',
     size: 'small',
-    onClick: () => { alert('clicked') }
+    onClick: () => {
+      alert('clicked')
+    }
   },
   afterIcon: {
     iconName: 'CircleAddIcon',

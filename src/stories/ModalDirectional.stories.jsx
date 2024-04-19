@@ -32,9 +32,19 @@ const Template = (args) => {
   return (
     <div style={divStyle}>
       <div>
-        <Button type='button' color={MAIN_GREEN} backgroundColor={MAIN_DARK_BLUE} onClick={() => setIsOpen(true)} label='Open Modal' />
+        <Button
+          type='button'
+          color={MAIN_GREEN}
+          backgroundColor={MAIN_DARK_BLUE}
+          onClick={() => setIsOpen(true)}
+          label='Open Modal'
+        />
       </div>
-      {isOpen && <ModalDirectional setIsOpen={setIsOpen} {...rest}>{text}</ModalDirectional>}
+      {isOpen && (
+        <ModalDirectional setIsOpen={setIsOpen} {...rest}>
+          {text}
+        </ModalDirectional>
+      )}
     </div>
   )
 }

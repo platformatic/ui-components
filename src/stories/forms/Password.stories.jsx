@@ -43,7 +43,11 @@ Default.args = {
   placeholder: 'Platformatic'
 }
 
-const TemplateBorderMainDarkBlue = (args) => <div style={{ backgroundColor: 'white', padding: '2px' }}><Password {...args} /></div>
+const TemplateBorderMainDarkBlue = (args) => (
+  <div style={{ backgroundColor: 'white', padding: '2px' }}>
+    <Password {...args} />
+  </div>
+)
 
 export const BorderMainDarkBlue = TemplateBorderMainDarkBlue.bind({})
 
