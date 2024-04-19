@@ -23,8 +23,17 @@ ListWithNoElements.args = {
 
 const TemplateWithElements = (args) => (
   <List {...args}>
-    <ListElement title='List Element 1' detail='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et dui facilisis, molestie urna sed, volutpat nibh.' />
-    <ListElement title='List Element 2' detail='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et dui facilisis, molestie urna sed, volutpat nibh.' detailColor={MAIN_DARK_BLUE} titleColor={MAIN_DARK_BLUE} semiBold={false} />
+    <ListElement
+      title='List Element 1'
+      detail='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et dui facilisis, molestie urna sed, volutpat nibh.'
+    />
+    <ListElement
+      title='List Element 2'
+      detail='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et dui facilisis, molestie urna sed, volutpat nibh.'
+      detailColor={MAIN_DARK_BLUE}
+      titleColor={MAIN_DARK_BLUE}
+      semiBold={false}
+    />
   </List>
 )
 
@@ -51,13 +60,27 @@ ListWithElementsVariants.args = {
 const TemplateWithElementsOnWhiteDiv = (args) => (
   <div style={divStyle}>
     <List {...args}>
-      <ListElement title='List Element 1' marginSize='small' detailColor={MAIN_DARK_BLUE} titleColor={MAIN_DARK_BLUE} semiBold={false} />
-      <ListElement title='List Element 2' marginSize='small' detailColor={MAIN_DARK_BLUE} titleColor={MAIN_DARK_BLUE} semiBold={false} />
+      <ListElement
+        title='List Element 1'
+        marginSize='small'
+        detailColor={MAIN_DARK_BLUE}
+        titleColor={MAIN_DARK_BLUE}
+        semiBold={false}
+      />
+      <ListElement
+        title='List Element 2'
+        marginSize='small'
+        detailColor={MAIN_DARK_BLUE}
+        titleColor={MAIN_DARK_BLUE}
+        semiBold={false}
+      />
     </List>
   </div>
 )
 
-export const ListWithElementsOnWhiteDiv = TemplateWithElementsOnWhiteDiv.bind({})
+export const ListWithElementsOnWhiteDiv = TemplateWithElementsOnWhiteDiv.bind(
+  {}
+)
 ListWithElementsOnWhiteDiv.args = {
   title: 'List Title on White div'
 }

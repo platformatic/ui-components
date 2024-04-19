@@ -9,7 +9,11 @@ const divStyle = {
   backgroundColor: 'white'
 }
 
-const radios = [{ label: 'One', value: '1' }, { label: 'Two', value: '2' }, { label: 'Three', value: '3' }]
+const radios = [
+  { label: 'One', value: '1' },
+  { label: 'Two', value: '2' },
+  { label: 'Three', value: '3' }
+]
 
 export default {
   title: 'Platformatic/Forms/RadioGroup',

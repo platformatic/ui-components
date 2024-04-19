@@ -1,7 +1,12 @@
 'use strict'
 import React, { useState } from 'react'
 import Select from '../../components/forms/Select'
-import { MAIN_DARK_BLUE, MAIN_GREEN, RICH_BLACK, WHITE } from '../../components/constants'
+import {
+  MAIN_DARK_BLUE,
+  MAIN_GREEN,
+  RICH_BLACK,
+  WHITE
+} from '../../components/constants'
 
 const divStyle = {
   width: '100%',
@@ -60,7 +65,6 @@ const TemplateBorderMainDarkBlue2 = (args) => {
         <Select {...args} value={value} onSelect={handleSelect} />
         <br />
         <Select placeholder='Disabled' disabled />
-
       </div>
     </>
   )
@@ -71,7 +75,11 @@ export const BorderMainDarkBlue = TemplateBorderMainDarkBlue.bind({})
 BorderMainDarkBlue.args = {
   name: 'test',
   placeholder: 'Defaul option',
-  options: [...Array(20).keys()].map(ele => ({ label: `Option ${ele}`, value: `Value${ele}`, iconName: 'SocialGitHubIcon' })),
+  options: [...Array(20).keys()].map((ele) => ({
+    label: `Option ${ele}`,
+    value: `Value${ele}`,
+    iconName: 'SocialGitHubIcon'
+  })),
   borderColor: MAIN_DARK_BLUE
 }
 
@@ -80,7 +88,11 @@ export const DefaultInvalid = TemplateBorderMainDarkBlue.bind({})
 DefaultInvalid.args = {
   name: 'test',
   placeholder: 'Platformatic empty select',
-  options: [{ label: 'Option 1', value: '1' }, { label: 'Option 2', value: '2' }, { label: 'Option 3', value: '3' }],
+  options: [
+    { label: 'Option 1', value: '1' },
+    { label: 'Option 2', value: '2' },
+    { label: 'Option 3', value: '3' }
+  ],
   borderColor: MAIN_GREEN,
   errorMessage: 'This is an error message'
 }
@@ -90,22 +102,25 @@ export const withDifferentOptions = TemplateBorderMainDarkBlue2.bind({})
 withDifferentOptions.args = {
   name: 'test',
   placeholder: 'Platformatic',
-  options: [...Array(20).keys()].map(ele => ({
-    label: `Option ${ele}`,
-    value: `Value${ele}`,
-    iconName: 'SocialGitHubIcon'
-  })).concat({
-    label: 'Last but not least',
-    iconName: 'AddIcon',
-    value: 123123,
-    notSelectable: true,
-    onClick: () => alert('you clicked last but not least')
-  }).concat({
-    label: 'Play',
-    iconName: 'PlayIcon',
-    value: 123123,
-    notSelectable: true
-  }),
+  options: [...Array(20).keys()]
+    .map((ele) => ({
+      label: `Option ${ele}`,
+      value: `Value${ele}`,
+      iconName: 'SocialGitHubIcon'
+    }))
+    .concat({
+      label: 'Last but not least',
+      iconName: 'AddIcon',
+      value: 123123,
+      notSelectable: true,
+      onClick: () => alert('you clicked last but not least')
+    })
+    .concat({
+      label: 'Play',
+      iconName: 'PlayIcon',
+      value: 123123,
+      notSelectable: true
+    }),
   borderColor: MAIN_DARK_BLUE
 }
 
@@ -114,23 +129,26 @@ export const githubRepoExample = TemplateBorderMainDarkBlue2.bind({})
 githubRepoExample.args = {
   name: 'test',
   placeholder: 'Platformatic',
-  options: [...Array(4).keys()].map(ele => ({
-    label: `GitHub Repo ${ele}`,
-    value: `Value${ele}`,
-    iconName: 'SocialGitHubIcon'
-  })).concat({
-    label: 'this is an option that is not selectable',
-    iconName: 'AddIcon',
-    value: 123123,
-    notSelectable: true,
-    onClick: () => alert('you clicked last but not least')
-  }).concat({
-    label: 'Add Github repo',
-    iconName: 'PlayIcon',
-    value: 123123,
-    notSelectable: true,
-    notFilterable: true
-  }),
+  options: [...Array(4).keys()]
+    .map((ele) => ({
+      label: `GitHub Repo ${ele}`,
+      value: `Value${ele}`,
+      iconName: 'SocialGitHubIcon'
+    }))
+    .concat({
+      label: 'this is an option that is not selectable',
+      iconName: 'AddIcon',
+      value: 123123,
+      notSelectable: true,
+      onClick: () => alert('you clicked last but not least')
+    })
+    .concat({
+      label: 'Add Github repo',
+      iconName: 'PlayIcon',
+      value: 123123,
+      notSelectable: true,
+      notFilterable: true
+    }),
   borderColor: MAIN_DARK_BLUE
 }
 
@@ -155,7 +173,11 @@ TemplateBackgroundTransparent.args = {
   name: 'test',
   placeholder: 'Defaul option',
   optionsBorderedBottom: false,
-  options: [...Array(20).keys()].map(ele => ({ label: `Option ${ele}`, value: `Value${ele}`, iconName: 'OrganizationIcon' })),
+  options: [...Array(20).keys()].map((ele) => ({
+    label: `Option ${ele}`,
+    value: `Value${ele}`,
+    iconName: 'OrganizationIcon'
+  })),
   borderColor: WHITE,
   mainColor: WHITE,
   backgroundColor: RICH_BLACK,

@@ -56,13 +56,20 @@ const AllLogosTemplate = (args) => {
       {logos.map((LogoComponent, index) => (
         <div style={row} key={index}>
           <div style={col}>
-            <p style={paragraphClass}>#{index + 1}: {LogoComponent.name}</p>
+            <p style={paragraphClass}>
+              #{index + 1}: {LogoComponent.name}
+            </p>
           </div>
           <div style={col}>
             <LogoComponent key={LogoComponent.name} {...args} />
           </div>
           <div style={col}>
-            <LogoComponent key={LogoComponent.name} width={142} height={63} {...args} />
+            <LogoComponent
+              key={LogoComponent.name}
+              width={142}
+              height={63}
+              {...args}
+            />
           </div>
         </div>
       ))}

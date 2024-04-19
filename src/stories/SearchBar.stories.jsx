@@ -14,7 +14,6 @@ const Template = (args) => {
     <>
       <SearchBar {...args}>Hello Platformatic</SearchBar>
     </>
-
   )
 }
 export const Standard = Template.bind({})

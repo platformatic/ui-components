@@ -1,7 +1,15 @@
 'use strict'
 import React from 'react'
 import ButtonOnlyIcon from '../components/ButtonOnlyIcon'
-import { COLORS_BUTTON, HOVER_EFFECTS_BUTTONS, SIZES, WHITE, RICH_BLACK, DULLS_BACKGROUND_COLOR, SMALL } from '../components/constants'
+import {
+  COLORS_BUTTON,
+  HOVER_EFFECTS_BUTTONS,
+  SIZES,
+  WHITE,
+  RICH_BLACK,
+  DULLS_BACKGROUND_COLOR,
+  SMALL
+} from '../components/constants'
 
 const divStyle = {
   width: '100%',
@@ -62,14 +70,16 @@ export default {
   }
 }
 
-const OnlyIconTemplate = (args) => (<ButtonOnlyIcon {...args} />)
+const OnlyIconTemplate = (args) => <ButtonOnlyIcon {...args} />
 
 export const OnlyIcon = OnlyIconTemplate.bind({})
 
 OnlyIcon.args = {
   color: WHITE,
   backgroundColor: RICH_BLACK,
-  onClick: () => { alert('hit!') },
+  onClick: () => {
+    alert('hit!')
+  },
   hoverEffect: DULLS_BACKGROUND_COLOR,
   platformaticIcon: { size: SMALL, iconName: 'RunningIcon', color: WHITE }
 }

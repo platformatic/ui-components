@@ -15,10 +15,11 @@ const ContentThatLoads = ({ startLoading }) => {
   return <BorderedBox>{loremIpsum}</BorderedBox>
 }
 
-export const Loading = args =>
+export const Loading = (args) => (
   <Loadable {...args}>
     <ContentThatLoads />
   </Loadable>
+)
 Loading.args = {}
 
 const ContentThatLoadsAndStops = ({ startLoading, stopLoading }) => {
@@ -32,7 +33,7 @@ const ContentThatLoadsAndStops = ({ startLoading, stopLoading }) => {
   return <BorderedBox>{loremIpsum}</BorderedBox>
 }
 
-export const LoadsAndStops = args => {
+export const LoadsAndStops = (args) => {
   return (
     <Loadable {...args}>
       <ContentThatLoadsAndStops />
@@ -41,7 +42,7 @@ export const LoadsAndStops = args => {
 }
 LoadsAndStops.args = {}
 
-export const LoadsAndStops2 = args => {
+export const LoadsAndStops2 = (args) => {
   return (
     <Loadable {...args}>
       <ContentThatLoadsAndStops />
@@ -51,7 +52,7 @@ export const LoadsAndStops2 = args => {
 }
 LoadsAndStops2.args = {}
 
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 const ContentThatToggle = ({ startLoading, stopLoading }) => {
   useEffect(() => {
     startLoading()
@@ -65,7 +66,7 @@ const ContentThatToggle = ({ startLoading, stopLoading }) => {
   }, [])
   return <BorderedBox>{loremIpsum}</BorderedBox>
 }
-export const Toggle = args => {
+export const Toggle = (args) => {
   return (
     <Loadable {...args}>
       <ContentThatToggle />

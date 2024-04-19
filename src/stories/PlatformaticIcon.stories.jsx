@@ -1,7 +1,16 @@
 import React from 'react'
 import PlatformaticIcon from '../components/PlatformaticIcon'
 import Icons from '../components/icons'
-import { COLORS_ICON, EXTRA_LARGE, EXTRA_SMALL, LARGE, MEDIUM, SIZES, SMALL, WHITE } from '../components/constants'
+import {
+  COLORS_ICON,
+  EXTRA_LARGE,
+  EXTRA_SMALL,
+  LARGE,
+  MEDIUM,
+  SIZES,
+  SMALL,
+  WHITE
+} from '../components/constants'
 
 const divStyle = {
   width: '100%'
@@ -67,26 +76,52 @@ const AllIconsTemplate = (args) => {
         {icons.map((icon, index) => (
           <div style={row} key={index}>
             <div style={col}>
-              <p style={paragraph}>#{index + 1}: {icon}</p>
+              <p style={paragraph}>
+                #{index + 1}: {icon}
+              </p>
             </div>
             <div style={col}>
-              <PlatformaticIcon key={icon} iconName={icon} size={EXTRA_SMALL} {...args} />
+              <PlatformaticIcon
+                key={icon}
+                iconName={icon}
+                size={EXTRA_SMALL}
+                {...args}
+              />
             </div>
             <div style={col}>
-              <PlatformaticIcon key={icon} iconName={icon} size={SMALL} {...args} />
+              <PlatformaticIcon
+                key={icon}
+                iconName={icon}
+                size={SMALL}
+                {...args}
+              />
             </div>
             <div style={col}>
-              <PlatformaticIcon key={icon} iconName={icon} size={MEDIUM} {...args} />
+              <PlatformaticIcon
+                key={icon}
+                iconName={icon}
+                size={MEDIUM}
+                {...args}
+              />
             </div>
             <div style={col}>
-              <PlatformaticIcon key={icon} iconName={icon} size={LARGE} {...args} />
+              <PlatformaticIcon
+                key={icon}
+                iconName={icon}
+                size={LARGE}
+                {...args}
+              />
             </div>
             <div style={col}>
-              <PlatformaticIcon key={icon} iconName={icon} size={EXTRA_LARGE} {...args} />
+              <PlatformaticIcon
+                key={icon}
+                iconName={icon}
+                size={EXTRA_LARGE}
+                {...args}
+              />
             </div>
           </div>
-        )
-        )}
+        ))}
       </div>
     </>
   )

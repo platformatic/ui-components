@@ -9,7 +9,6 @@ const Template = (args) => {
     <>
       <SearchBarV2 {...args} />
     </>
-
   )
 }
 export const Standard = Template.bind({})

@@ -17,11 +17,16 @@ export default {
 }
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template = (args) => <TwoColumnsLayout {...args}><BorderedBox>1st</BorderedBox><BorderedBox>2nd</BorderedBox></TwoColumnsLayout>
+const Template = (args) => (
+  <TwoColumnsLayout {...args}>
+    <BorderedBox>1st</BorderedBox>
+    <BorderedBox>2nd</BorderedBox>
+  </TwoColumnsLayout>
+)
 
 export const Default = Template.bind({})
 
-Default.args = { }
+Default.args = {}
 
 export const Columns = Template.bind({})
 

@@ -37,8 +37,20 @@ const TemplateDefault = (args) => {
     <>
       <p>Chunks: {chunks.toString()} </p>
       <p>Value inserted: {value} </p>
-      <label>Add Error message: <input type='checkbox' onChange={() => setErrorMessage(errorMessage === '' ? 'custom message' : '')} /></label>
-      <InputWithSeparator {...args} value={value} onChange={handleChange} errorMessage={errorMessage} />
+      <label>
+        Add Error message:{' '}
+        <input
+          type='checkbox'
+          onChange={() =>
+            setErrorMessage(errorMessage === '' ? 'custom message' : '')}
+        />
+      </label>
+      <InputWithSeparator
+        {...args}
+        value={value}
+        onChange={handleChange}
+        errorMessage={errorMessage}
+      />
     </>
   )
 }
@@ -53,7 +65,7 @@ Default.args = {
   afterIcon: {
     iconName: 'AddIcon',
     color: ERROR_RED,
-    handleClick: () => alert('I\'m an AddIcon')
+    handleClick: () => alert("I'm an AddIcon")
   }
 }
 
@@ -72,8 +84,20 @@ const TemplateDefaultWithValues = (args) => {
     <>
       <p>Chunks: {chunks.toString()} </p>
       <p>Value inserted: {value} </p>
-      <label>Add Error message: <input type='checkbox' onChange={() => setErrorMessage(errorMessage === '' ? 'custom message' : '')} /></label>
-      <InputWithSeparator {...args} value={value} onChange={handleChange} errorMessage={errorMessage} />
+      <label>
+        Add Error message:{' '}
+        <input
+          type='checkbox'
+          onChange={() =>
+            setErrorMessage(errorMessage === '' ? 'custom message' : '')}
+        />
+      </label>
+      <InputWithSeparator
+        {...args}
+        value={value}
+        onChange={handleChange}
+        errorMessage={errorMessage}
+      />
     </>
   )
 }
@@ -89,9 +113,8 @@ PredefinedValues.args = {
   afterIcon: {
     iconName: 'AddIcon',
     color: ERROR_RED,
-    handleClick: () => alert('I\'m an AddIcon')
+    handleClick: () => alert("I'm an AddIcon")
   }
-
 }
 
 export const DifferentsSeparators = TemplateDefaultWithValues.bind({})
@@ -105,7 +128,6 @@ DifferentsSeparators.args = {
   afterIcon: {
     iconName: 'AddIcon',
     color: ERROR_RED,
-    handleClick: () => alert('I\'m an AddIcon')
+    handleClick: () => alert("I'm an AddIcon")
   }
-
 }

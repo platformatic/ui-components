@@ -20,13 +20,18 @@ export default {
   }
 }
 
-const SimpleTemplate = (args) => <div style={divStyle}><Field {...args} /></div>
+const SimpleTemplate = (args) => (
+  <div style={divStyle}>
+    <Field {...args} />
+  </div>
+)
 
 export const BasicField = SimpleTemplate.bind({})
 
 BasicField.args = {
   title: 'Field basic',
-  helper: 'A very very very very very very very very very very very very very very simple helper'
+  helper:
+    'A very very very very very very very very very very very very very very simple helper'
 }
 
 const InputTemplate = (args) => {
@@ -35,27 +40,55 @@ const InputTemplate = (args) => {
 
     switch (combinationSelected) {
       case 'button':
-        rendered = (<Button label='Button for a purpose' color='error-red' onClick={() => { alert('clicked') }} />)
+        rendered = (
+          <Button
+            label='Button for a purpose'
+            color='error-red'
+            onClick={() => {
+              alert('clicked')
+            }}
+          />
+        )
         break
       case 'input-buttons':
-        rendered =
-        (
+        rendered = (
           <>
-            <Input name='test' placeholder='Platformatic' errorMessage='this is an error message' />
-            <Button label='Button for some purposes' color='main-dark-blue' onClick={() => { alert('clicked') }} />
-            <Button label='Button for other purposes' color='error-red' onClick={() => { alert('clicked') }} />
+            <Input
+              name='test'
+              placeholder='Platformatic'
+              errorMessage='this is an error message'
+            />
+            <Button
+              label='Button for some purposes'
+              color='main-dark-blue'
+              onClick={() => {
+                alert('clicked')
+              }}
+            />
+            <Button
+              label='Button for other purposes'
+              color='error-red'
+              onClick={() => {
+                alert('clicked')
+              }}
+            />
           </>
         )
         break
       case 'input':
-        rendered = (<Input name='test' placeholder='Platformatic' />)
+        rendered = <Input name='test' placeholder='Platformatic' />
         break
       case 'input-button':
-        rendered =
-        (
+        rendered = (
           <>
             <Input name='test' placeholder='Platformatic' />
-            <Button label='Button Simple' color='main-dark-blue' onClick={() => { alert('clicked') }} />
+            <Button
+              label='Button Simple'
+              color='main-dark-blue'
+              onClick={() => {
+                alert('clicked')
+              }}
+            />
           </>
         )
         break
@@ -66,8 +99,12 @@ const InputTemplate = (args) => {
   }
   return (
     <div style={divStyle}>
-      {['input', 'input-button', 'input-buttons', 'button'].map(how => {
-        return (<Field key={how} {...args}>{renderChild(how)}</Field>)
+      {['input', 'input-button', 'input-buttons', 'button'].map((how) => {
+        return (
+          <Field key={how} {...args}>
+            {renderChild(how)}
+          </Field>
+        )
       })}
     </div>
   )
@@ -86,5 +123,6 @@ export const RedTitledField = SimpleTemplate.bind({})
 RedTitledField.args = {
   title: 'Red Field Title',
   titleColor: 'error-red',
-  helper: 'A very very very very very very very very very very very very very very simple helper'
+  helper:
+    'A very very very very very very very very very very very very very very simple helper'
 }

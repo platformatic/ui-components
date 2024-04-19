@@ -37,7 +37,12 @@ WithLink.args = {
   isLink: true
 }
 
-const TemplateWithChildren = (args) => <Preview {...args}><p>1st paragraph</p><p>2nd paragraph</p></Preview>
+const TemplateWithChildren = (args) => (
+  <Preview {...args}>
+    <p>1st paragraph</p>
+    <p>2nd paragraph</p>
+  </Preview>
+)
 
 export const WithChildren = TemplateWithChildren.bind({})
 

@@ -4,7 +4,17 @@ import Button from '../components/Button'
 import BorderedBox from '../components/BorderedBox'
 import DropDown from '../components/DropDown'
 import HorizontalSeparator from '../components/HorizontalSeparator'
-import { FULL_WIDTH, MAIN_DARK_BLUE, MAIN_GREEN, MODAL_COVER, MODAL_FULL_DARK, MODAL_FULL_LIGHT, MODAL_LAYOUTS, MODAL_POPUP_V2, MODAL_SIZES } from '../components/constants'
+import {
+  FULL_WIDTH,
+  MAIN_DARK_BLUE,
+  MAIN_GREEN,
+  MODAL_COVER,
+  MODAL_FULL_DARK,
+  MODAL_FULL_LIGHT,
+  MODAL_LAYOUTS,
+  MODAL_POPUP_V2,
+  MODAL_SIZES
+} from '../components/constants'
 export default {
   title: 'Platformatic/Modal',
   component: Modal,
@@ -33,14 +43,32 @@ const Template = (args) => {
   return (
     <main style={{ height: '1440px', overflow: 'scroll' }}>
       <BorderedBox>This Is another Content</BorderedBox>
-      <Button color={MAIN_GREEN} backgroundColor={MAIN_DARK_BLUE} onClick={() => setIsOpen(true)} label='Open Modal' />
-      {isOpen && <Modal setIsOpen={setIsOpen} {...rest}>{text}</Modal>}
+      <Button
+        color={MAIN_GREEN}
+        backgroundColor={MAIN_DARK_BLUE}
+        onClick={() => setIsOpen(true)}
+        label='Open Modal'
+      />
+      {isOpen && (
+        <Modal setIsOpen={setIsOpen} {...rest}>
+          {text}
+        </Modal>
+      )}
 
       <BorderedBox style={{ position: 'relative' }}>
         <p>This Is another Component with Modal inside</p>
 
-        <Button color={MAIN_GREEN} backgroundColor={MAIN_DARK_BLUE} onClick={() => setIsOpenInside(true)} label='Open Modal Inside' />
-        {isOpenInside && <Modal setIsOpen={setIsOpenInside} {...rest}>{text}</Modal>}
+        <Button
+          color={MAIN_GREEN}
+          backgroundColor={MAIN_DARK_BLUE}
+          onClick={() => setIsOpenInside(true)}
+          label='Open Modal Inside'
+        />
+        {isOpenInside && (
+          <Modal setIsOpen={setIsOpenInside} {...rest}>
+            {text}
+          </Modal>
+        )}
       </BorderedBox>
     </main>
   )
@@ -49,7 +77,11 @@ const Template = (args) => {
 const ContentThatLoads = () => {
   const [content, setContent] = useState(null)
   setTimeout(() => {
-    setContent(<div className='mt-4'><BorderedBox>This is a Future Component</BorderedBox></div>)
+    setContent(
+      <div className='mt-4'>
+        <BorderedBox>This is a Future Component</BorderedBox>
+      </div>
+    )
   }, 1000)
 
   return content
@@ -75,14 +107,26 @@ const MenuTemplate = () => {
   const dropDownArgs = {
     header: 'My Menu',
     items: [
-      <span className='hover:cursor-pointer' key='2' onClick={() => setIsOpen(true)}>Show Modal</span>
+      <span
+        className='hover:cursor-pointer'
+        key='2'
+        onClick={() => setIsOpen(true)}
+      >
+        Show Modal
+      </span>
     ]
   }
   return (
     <div>
-      <div className='text-white'><DropDown {...dropDownArgs} /></div>
+      <div className='text-white'>
+        <DropDown {...dropDownArgs} />
+      </div>
       <HorizontalSeparator />
-      {isOpen && <Modal setIsOpen={setIsOpen} title='Modal Title'>Hello world!</Modal>}
+      {isOpen && (
+        <Modal setIsOpen={setIsOpen} title='Modal Title'>
+          Hello world!
+        </Modal>
+      )}
       <ContentThatLoads />
     </div>
   )
@@ -115,15 +159,21 @@ const NestedModalsTemplate = () => {
 
   return (
     <main style={{ height: '1440px', overflow: 'scroll' }}>
-      <Button color={MAIN_GREEN} backgroundColor={MAIN_DARK_BLUE} onClick={() => setIsOpen1(true)} label='Open 1st Modal' />
+      <Button
+        color={MAIN_GREEN}
+        backgroundColor={MAIN_DARK_BLUE}
+        onClick={() => setIsOpen1(true)}
+        label='Open 1st Modal'
+      />
       {isOpen1 && (
-        <Modal
-          setIsOpen={setIsOpen1}
-          title='Fist One'
-          layout={MODAL_POPUP_V2}
-        >
+        <Modal setIsOpen={setIsOpen1} title='Fist One' layout={MODAL_POPUP_V2}>
           <p style={{ color: 'white' }}>This Is the first</p>
-          <Button color={MAIN_GREEN} backgroundColor={MAIN_DARK_BLUE} onClick={() => setIsOpen2(true)} label='Open 2nd Modal' />
+          <Button
+            color={MAIN_GREEN}
+            backgroundColor={MAIN_DARK_BLUE}
+            onClick={() => setIsOpen2(true)}
+            label='Open 2nd Modal'
+          />
           {isOpen2 && (
             <Modal
               setIsOpen={setIsOpen2}
@@ -131,7 +181,12 @@ const NestedModalsTemplate = () => {
               layout={MODAL_POPUP_V2}
             >
               <p style={{ color: 'white' }}>This Is the second</p>
-              <Button color={MAIN_GREEN} backgroundColor={MAIN_DARK_BLUE} onClick={() => setIsOpen3(true)} label='Open 3rd Modal' />
+              <Button
+                color={MAIN_GREEN}
+                backgroundColor={MAIN_DARK_BLUE}
+                onClick={() => setIsOpen3(true)}
+                label='Open 3rd Modal'
+              />
               {isOpen3 && (
                 <Modal
                   setIsOpen={setIsOpen3}

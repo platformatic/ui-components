@@ -1,7 +1,15 @@
 'use strict'
 import React from 'react'
 import Tooltip from '../components/Tooltip'
-import { ANTI_FLASH_WHITE, CHANGE_BACKGROUND_COLOR, COLORS_BUTTON, HOVER_EFFECTS_BUTTONS, RICH_BLACK, SIZES, WHITE } from '../components/constants'
+import {
+  ANTI_FLASH_WHITE,
+  CHANGE_BACKGROUND_COLOR,
+  COLORS_BUTTON,
+  HOVER_EFFECTS_BUTTONS,
+  RICH_BLACK,
+  SIZES,
+  WHITE
+} from '../components/constants'
 import Button from '../components/Button'
 
 const divStyle = {
@@ -79,7 +87,7 @@ const TemplateWithButton = (args) => (
 export const TooltipBase = TemplateWithButton.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 TooltipBase.args = {
-  content: (<span>I'm a tooltip over a button</span>),
+  content: <span>I'm a tooltip over a button</span>,
   delay: 100,
   offset: 44
 }

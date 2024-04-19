@@ -10,45 +10,85 @@ const Template = (args) => {
     <>
       <TabbedWindow {...args} />
     </>
-
   )
 }
 export const Default = Template.bind({})
 
 Default.args = {
-  tabs: [{
-    label: 'First',
-    key: 'first',
-    component: () => <TextWithLabel label='First component' text='Lorem ipsum dolor sit amet, consectetur adipiscing elit.' />
-  }, {
-    label: 'Second',
-    key: 'second',
-    component: () => <TextWithLabel label='Second component' text='Sed et dui facilisis, molestie urna sed, volutpat nibh' />
-  }, {
-    label: 'Third Third Third',
-    key: 'third',
-    component: () => <TextWithLabel label='Third component' text='ivamus est nisl, maximus aliquet urna eu, consequat semper nisi' />
-  }, {
-    label: 'Fourth',
-    key: 'fourth',
-    component: () => <TextWithLabel label='Fourth component' text='Ipse dixit' />
-  }]
+  tabs: [
+    {
+      label: 'First',
+      key: 'first',
+      component: () => (
+        <TextWithLabel
+          label='First component'
+          text='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        />
+      )
+    },
+    {
+      label: 'Second',
+      key: 'second',
+      component: () => (
+        <TextWithLabel
+          label='Second component'
+          text='Sed et dui facilisis, molestie urna sed, volutpat nibh'
+        />
+      )
+    },
+    {
+      label: 'Third Third Third',
+      key: 'third',
+      component: () => (
+        <TextWithLabel
+          label='Third component'
+          text='ivamus est nisl, maximus aliquet urna eu, consequat semper nisi'
+        />
+      )
+    },
+    {
+      label: 'Fourth',
+      key: 'fourth',
+      component: () => (
+        <TextWithLabel label='Fourth component' text='Ipse dixit' />
+      )
+    }
+  ]
 }
 
 export const DefaultSelected = Template.bind({})
 DefaultSelected.args = {
-  tabs: [{
-    label: 'First',
-    key: 'first',
-    component: () => <TextWithLabel label='First component' text='Lorem ipsum dolor sit amet, consectetur adipiscing elit.' />
-  }, {
-    label: 'Second',
-    key: 'second',
-    component: () => <TextWithLabel label='Second component' text='Sed et dui facilisis, molestie urna sed, volutpat nibh' />
-  }, {
-    label: 'Third',
-    key: 'third',
-    component: () => <TextWithLabel label='Third component' text='ivamus est nisl, maximus aliquet urna eu, consequat semper nisi' />
-  }],
+  tabs: [
+    {
+      label: 'First',
+      key: 'first',
+      component: () => (
+        <TextWithLabel
+          label='First component'
+          text='Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        />
+      )
+    },
+    {
+      label: 'Second',
+      key: 'second',
+      component: () => (
+        <TextWithLabel
+          label='Second component'
+          text='Sed et dui facilisis, molestie urna sed, volutpat nibh'
+        />
+      )
+    },
+    {
+      label: 'Third',
+      key: 'third',
+      component: () => (
+        <TextWithLabel
+          label='Third component'
+          text='ivamus est nisl, maximus aliquet urna eu, consequat semper nisi'
+        />
+      )
+    }
+  ],
   keySelected: 'second'
 }

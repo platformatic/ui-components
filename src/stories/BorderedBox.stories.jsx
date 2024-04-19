@@ -14,7 +14,9 @@ export default {
 }
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template = (args) => <BorderedBox {...args}>Hello Platformatic</BorderedBox>
+const Template = (args) => (
+  <BorderedBox {...args}>Hello Platformatic</BorderedBox>
+)
 
 export const Green = Template.bind({})
 

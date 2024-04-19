@@ -1,6 +1,12 @@
 'use strict'
 import ButtonFullRounded from '../components/ButtonFullRounded'
-import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE } from '../components/constants'
+import {
+  COLORS_ICON,
+  SIZES,
+  SMALL,
+  MEDIUM,
+  LARGE
+} from '../components/constants'
 import Icons from '../components/icons'
 
 const divStyle = {
@@ -62,7 +68,9 @@ SingleButton.args = {
 }
 
 const AllCircleButtonsTemplate = (args) => {
-  const icons = Object.keys(Icons).filter(icon => icon.indexOf('Circle') > -1)
+  const icons = Object.keys(Icons).filter(
+    (icon) => icon.indexOf('Circle') > -1
+  )
 
   return (
     <>
@@ -71,16 +79,33 @@ const AllCircleButtonsTemplate = (args) => {
         {icons.map((icon, index) => (
           <div style={row} key={index}>
             <div style={col}>
-              <p style={paragraph}>#{index + 1}: {icon}</p>
+              <p style={paragraph}>
+                #{index + 1}: {icon}
+              </p>
             </div>
             <div style={col}>
-              <ButtonFullRounded key={icon} iconName={icon} iconSize={SMALL} {...args} />
+              <ButtonFullRounded
+                key={icon}
+                iconName={icon}
+                iconSize={SMALL}
+                {...args}
+              />
             </div>
             <div style={col}>
-              <ButtonFullRounded key={icon} iconName={icon} iconSize={MEDIUM} {...args} />
+              <ButtonFullRounded
+                key={icon}
+                iconName={icon}
+                iconSize={MEDIUM}
+                {...args}
+              />
             </div>
             <div style={col}>
-              <ButtonFullRounded key={icon} iconName={icon} iconSize={LARGE} {...args} />
+              <ButtonFullRounded
+                key={icon}
+                iconName={icon}
+                iconSize={LARGE}
+                {...args}
+              />
             </div>
           </div>
         ))}

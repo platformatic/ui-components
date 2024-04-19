@@ -48,22 +48,49 @@ const CircleCloseIconTemplate = (args) => <CircleCloseIcon {...args} />
 export const CircleCloseIconDefault = CircleCloseIconTemplate.bind({})
 CircleCloseIconDefault.args = {}
 
-const WorkspaceIconsTemplate = () => (
-  [<WorkspaceStaticIcon key='a' />, <WorkspaceDynamicIcon key='b' />].map((component, index) => {
-    const listElement = []
-    listElement.push(React.cloneElement(component, { key: `0${index}` }))
-    listElement.push(React.cloneElement(component, { key: `1${index}`, size: 'small', color: 'main-green' }))
-    listElement.push(React.cloneElement(component, { key: `2${index}`, color: 'error-red' }))
-    listElement.push(React.cloneElement(component, { key: `3${index}`, size: 'small', color: 'error-red' }))
-    listElement.push(React.cloneElement(component, { key: `4${index}`, color: 'main-dark-blue' }))
-    listElement.push(React.cloneElement(component, { key: `5${index}`, size: 'small', color: 'main-dark-blue' }))
-    return listElement
-  })
-)
+const WorkspaceIconsTemplate = () =>
+  [<WorkspaceStaticIcon key='a' />, <WorkspaceDynamicIcon key='b' />].map(
+    (component, index) => {
+      const listElement = []
+      listElement.push(React.cloneElement(component, { key: `0${index}` }))
+      listElement.push(
+        React.cloneElement(component, {
+          key: `1${index}`,
+          size: 'small',
+          color: 'main-green'
+        })
+      )
+      listElement.push(
+        React.cloneElement(component, { key: `2${index}`, color: 'error-red' })
+      )
+      listElement.push(
+        React.cloneElement(component, {
+          key: `3${index}`,
+          size: 'small',
+          color: 'error-red'
+        })
+      )
+      listElement.push(
+        React.cloneElement(component, {
+          key: `4${index}`,
+          color: 'main-dark-blue'
+        })
+      )
+      listElement.push(
+        React.cloneElement(component, {
+          key: `5${index}`,
+          size: 'small',
+          color: 'main-dark-blue'
+        })
+      )
+      return listElement
+    }
+  )
 
 export const WorkspaceIconsAll = WorkspaceIconsTemplate.bind({})
 WorkspaceIconsAll.args = {}
 
-const LargeIconsTemplate = () => ([<UpgradeIcon key='b' size='extra-large' />].map(component => component))
+const LargeIconsTemplate = () =>
+  [<UpgradeIcon key='b' size='extra-large' />].map((component) => component)
 export const LargeIconsDefault = LargeIconsTemplate.bind({})
 LargeIconsDefault.args = {}
