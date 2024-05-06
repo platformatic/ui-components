@@ -5,7 +5,15 @@ import commonStyles from './Common.module.css'
 import styles from './Tag.module.css'
 import { COLORS_BUTTON, OPACITY_100, OPACITY_20, OPACITY_30, OPACITY_60, WHITE } from './constants'
 
-function Tag ({ text, textClassName, color, backgroundColor, bordered, opaque, fullRounded }) {
+function Tag ({
+  text = '',
+  textClassName = '',
+  color = WHITE,
+  backgroundColor = '',
+  bordered = true,
+  opaque = OPACITY_100,
+  fullRounded = false
+}) {
   const stylesColor = textClassName || commonStyles[`text--${color}`]
   let stylesBorderColor = ''
   if (bordered) {
@@ -54,16 +62,6 @@ Tag.propTypes = {
      */
   fullRounded: PropTypes.bool
 
-}
-
-Tag.defaultProps = {
-  backgroundColor: '',
-  color: WHITE,
-  text: '',
-  textClassName: '',
-  bordered: true,
-  opaque: OPACITY_100,
-  fullRounded: false
 }
 
 export default Tag

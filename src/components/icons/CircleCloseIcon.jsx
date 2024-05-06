@@ -3,7 +3,12 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, MEDIUM, LARGE, MAIN_DARK_BLUE, SMALL } from '../constants'
 
-const CircleCloseIcon = ({ color, size, disabled, inactive }) => {
+const CircleCloseIcon = ({
+  color = MAIN_DARK_BLUE,
+  size = MEDIUM,
+  disabled = false,
+  inactive = false
+}) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
@@ -98,12 +103,6 @@ CircleCloseIcon.propTypes = {
    * inactive
    */
   inactive: PropTypes.bool
-}
-CircleCloseIcon.defaultProps = {
-  color: MAIN_DARK_BLUE,
-  size: MEDIUM,
-  disabled: false,
-  inactive: false
 }
 
 export default CircleCloseIcon

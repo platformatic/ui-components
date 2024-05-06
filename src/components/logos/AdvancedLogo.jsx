@@ -2,7 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { MAIN_DARK_BLUE, WHITE } from '../constants'
 
-function AdvancedLogo ({ backgroundColor, width, height }) {
+function AdvancedLogo ({
+  backgroundColor = WHITE,
+  width = 539,
+  height = 182
+}) {
   let icon = (
     <svg width={width} height={height} viewBox='0 0 539 182' fill='none' xmlns='http://www.w3.org/2000/svg'>
       <path d='M186.81 64.7676H502.742C522.767 64.7676 539 81.0007 539 101.025V101.025C539 121.05 522.767 137.283 502.742 137.283H186.81L213.978 122.78L222.859 96.8815L207.708 75.1269L186.81 64.7676Z' fill='#00283D' />
@@ -48,12 +52,6 @@ AdvancedLogo.propTypes = {
    * height
    */
   height: PropTypes.number
-}
-
-AdvancedLogo.defaultProps = {
-  backgroundColor: WHITE,
-  width: 539,
-  height: 182
 }
 
 export default AdvancedLogo

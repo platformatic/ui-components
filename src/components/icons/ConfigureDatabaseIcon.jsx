@@ -3,7 +3,12 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, LARGE, MAIN_DARK_BLUE, MEDIUM, SIZES, SMALL } from '../constants'
 
-const ConfigureDatabaseIcon = ({ color, size, disabled, inactive }) => {
+const ConfigureDatabaseIcon = ({
+  color = MAIN_DARK_BLUE,
+  size = MEDIUM,
+  disabled = false,
+  inactive = false
+}) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
@@ -93,12 +98,6 @@ ConfigureDatabaseIcon.propTypes = {
    * inactive
    */
   inactive: PropTypes.bool
-}
-ConfigureDatabaseIcon.defaultProps = {
-  color: MAIN_DARK_BLUE,
-  size: MEDIUM,
-  disabled: false,
-  inactive: false
 }
 
 export default ConfigureDatabaseIcon

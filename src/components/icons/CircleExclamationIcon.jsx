@@ -3,7 +3,13 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
 
-const CircleExclamationIcon = ({ color, size, tip, disabled, inactive }) => {
+const CircleExclamationIcon = ({
+  color = MAIN_DARK_BLUE,
+  size = MEDIUM,
+  tip = '',
+  disabled = false,
+  inactive = false
+}) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
@@ -88,12 +94,6 @@ CircleExclamationIcon.propTypes = {
    * tip
    */
   tip: PropTypes.string
-}
-
-CircleExclamationIcon.defaultProps = {
-  color: MAIN_DARK_BLUE,
-  size: MEDIUM,
-  tip: ''
 }
 
 export default CircleExclamationIcon

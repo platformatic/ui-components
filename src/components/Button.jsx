@@ -20,20 +20,20 @@ import {
 } from './constants'
 // ${inactive ? styles.inactive : styles.active}
 function Button ({
-  textClass,
-  paddingClass,
-  label,
-  color,
-  backgroundColor,
-  size,
-  disabled,
-  hoverEffect,
-  hoverEffectProperties,
-  bordered,
-  fullWidth,
-  platformaticIcon,
-  platformaticIconAfter,
-  selected,
+  textClass = '',
+  paddingClass = '',
+  label = '',
+  color = MAIN_DARK_BLUE,
+  backgroundColor = TRANSPARENT,
+  size = LARGE,
+  disabled = false,
+  hoverEffect = DULLS_BACKGROUND_COLOR,
+  hoverEffectProperties = {},
+  bordered = true,
+  fullWidth = false,
+  platformaticIcon = null,
+  platformaticIconAfter = null,
+  selected = false,
   ...rest
 }) {
   let buttonClassName = textClass
@@ -176,22 +176,6 @@ Button.propTypes = {
    * Selected: default false
    */
   selected: PropTypes.bool
-}
-
-Button.defaultProps = {
-  textClass: '',
-  paddingClass: '',
-  label: '',
-  color: MAIN_DARK_BLUE,
-  backgroundColor: TRANSPARENT,
-  disabled: false,
-  size: LARGE,
-  hoverEffect: DULLS_BACKGROUND_COLOR,
-  hoverEffectProperties: {},
-  bordered: true,
-  fullWidth: false,
-  platformaticIcon: null,
-  selected: false
 }
 
 export default Button

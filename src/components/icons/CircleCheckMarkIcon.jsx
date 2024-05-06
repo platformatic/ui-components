@@ -3,7 +3,13 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
 
-const CircleCheckMarkIcon = ({ color, size, checked, disabled, inactive }) => {
+const CircleCheckMarkIcon = ({
+  color = MAIN_DARK_BLUE,
+  size = MEDIUM,
+  checked = true,
+  disabled = false,
+  inactive = false
+}) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
@@ -83,11 +89,6 @@ CircleCheckMarkIcon.propTypes = {
    * inactive
    */
   inactive: PropTypes.bool
-}
-CircleCheckMarkIcon.defaultProps = {
-  color: MAIN_DARK_BLUE,
-  size: MEDIUM,
-  checked: true
 }
 
 export default CircleCheckMarkIcon

@@ -9,7 +9,7 @@ export default defineConfig({
     globals: true,
     environment: 'happy-dom',
     exclude: ['node_modules'],
-    setupFiles: ["./setupTests.js"],
+    setupFiles: ['./setupTests.js']
   }
 
 })

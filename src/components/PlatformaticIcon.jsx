@@ -6,15 +6,15 @@ import styles from './PlatformaticIcon.module.css'
 import { COLORS_ICON, MAIN_GREEN, SIZES, SMALL } from './constants'
 
 function PlatformaticIcon ({
-  iconName,
-  color,
-  onClick,
-  size,
-  classes,
-  tip,
-  disabled,
-  inactive,
-  internalOverHandling,
+  iconName = '',
+  color = MAIN_GREEN,
+  onClick = () => {},
+  size = SMALL,
+  classes = '',
+  tip = '',
+  disabled = false,
+  inactive = false,
+  internalOverHandling = false,
   ...rest
 }) {
   const [hover, setHover] = useState(false)
@@ -88,18 +88,6 @@ PlatformaticIcon.propTypes = {
    * handleOverInternally
    */
   internalOverHandling: PropTypes.bool
-}
-
-PlatformaticIcon.defaultProps = {
-  iconName: '',
-  color: MAIN_GREEN,
-  size: SMALL,
-  onClick: () => {},
-  classes: '',
-  tip: '',
-  disabled: false,
-  inactive: false,
-  internalOverHandling: false
 }
 
 export default PlatformaticIcon

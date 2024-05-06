@@ -2,7 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { MAIN_DARK_BLUE, WHITE } from '../constants'
 
-function FreeLogo ({ backgroundColor, width, height }) {
+function FreeLogo ({
+  backgroundColor = WHITE,
+  width = 399,
+  height = 183
+}) {
   let icon = (
     <svg width={width} height={height} viewBox='0 0 399 183' fill='none' xmlns='http://www.w3.org/2000/svg'>
       <path d='M187.725 65.0947H354.562C374.696 65.0947 391.018 81.4167 391.018 101.551V101.551C391.018 121.685 374.696 138.007 354.562 138.007H187.725L215.041 123.424L223.971 97.3844L208.737 75.5107L187.725 65.0947Z' fill='#00283D' />
@@ -49,12 +53,6 @@ FreeLogo.propTypes = {
    * height
    */
   height: PropTypes.number
-}
-
-FreeLogo.defaultProps = {
-  backgroundColor: WHITE,
-  width: 399,
-  height: 183
 }
 
 export default FreeLogo

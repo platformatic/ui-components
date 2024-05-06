@@ -2,7 +2,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function Layout ({ className, children }) {
+function Layout ({
+  className = 'container mx-auto px-5 my-5 flex flex-col gap-10 h-screen',
+  children = null
+}) {
   return (
     <div className={className}>
       {children}
@@ -20,11 +23,6 @@ Layout.propTypes = {
    * children
    */
   children: PropTypes.node
-}
-
-Layout.defaultProps = {
-  className: 'container mx-auto px-5 my-5 flex flex-col gap-10 h-screen',
-  children: null
 }
 
 export default Layout

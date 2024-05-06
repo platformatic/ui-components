@@ -3,7 +3,12 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, EXTRA_LARGE, MAIN_DARK_BLUE } from '../constants'
 
-const WorkspaceGitHubIcon = ({ color, size, disabled, inactive }) => {
+const WorkspaceGitHubIcon = ({
+  color = MAIN_DARK_BLUE,
+  size = MEDIUM,
+  disabled = false,
+  inactive = false
+}) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
@@ -136,12 +141,6 @@ WorkspaceGitHubIcon.propTypes = {
    * inactive
    */
   inactive: PropTypes.bool
-}
-WorkspaceGitHubIcon.defaultProps = {
-  color: MAIN_DARK_BLUE,
-  size: MEDIUM,
-  disabled: false,
-  inactive: false
 }
 
 export default WorkspaceGitHubIcon

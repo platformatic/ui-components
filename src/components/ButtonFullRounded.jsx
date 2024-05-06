@@ -6,20 +6,19 @@ import styles from './ButtonFullRounded.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
 import { COLORS_ICON, SIZES, DULLS_BACKGROUND_COLOR, PADDING_SIZES, SMALL, WHITE, NONE } from './constants'
 function ButtonFullRounded ({
-  className,
-  iconName,
-  iconSize,
-  iconColor,
-  disabled,
-  paddingSize,
-  alt,
-  onClick,
-  hoverEffect,
-  bordered,
-  tip,
-  selected,
-  buttonClassName,
-  internalOverHandling
+  className = '',
+  iconName = '',
+  iconSize = SMALL,
+  iconColor = WHITE,
+  disabled = false,
+  paddingSize = NONE,
+  alt = 'ButtonFullRounded',
+  onClick = () => {},
+  hoverEffect = '',
+  bordered = false,
+  tip = '',
+  selected = false,
+  buttonClassName = ''
 }) {
   const padding = commonStyles[`padding--${paddingSize}`]
   const containerClassName = `${className} border-0 ${styles.roundedFull}`
@@ -104,23 +103,6 @@ ButtonFullRounded.propTypes = {
      * internalOverHandling
      */
   internalOverHandling: PropTypes.bool
-}
-
-ButtonFullRounded.defaultProps = {
-  className: '',
-  iconName: '',
-  iconColor: WHITE,
-  iconSize: SMALL,
-  disabled: false,
-  paddingSize: NONE,
-  alt: 'ButtonFullRounded',
-  onClick: () => {},
-  hoverEffect: '',
-  bordered: false,
-  tip: '',
-  selected: false,
-  buttonClassName: '',
-  internalOverHandling: false
 }
 
 export default ButtonFullRounded

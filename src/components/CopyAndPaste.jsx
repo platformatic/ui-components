@@ -1,19 +1,18 @@
 'use strict'
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { COLORS_ICON, DIRECTION_TOP, MEDIUM, SIZES, POSITIONS, POSITION_CENTER } from './constants'
+import { COLORS_ICON, DIRECTION_TOP, MEDIUM, SIZES, POSITIONS, POSITION_CENTER, MAIN_DARK_BLUE } from './constants'
 import PlatformaticIcon from './PlatformaticIcon'
 import TooltipAbsolute from './TooltipAbsolute'
 
 function CopyAndPaste ({
-  value,
-  tooltipLabel,
-  color,
-  timeout,
-  size,
-  tooltipClassName,
-  position
-
+  value = 'app',
+  tooltipLabel = 'Create your app now',
+  color = MAIN_DARK_BLUE,
+  timeout = 1500,
+  size = MEDIUM,
+  tooltipClassName = '',
+  position = POSITION_CENTER
 }) {
   const [copied, setCopied] = useState(false)
 
@@ -72,16 +71,6 @@ CopyAndPaste.propTypes = {
    * position
    */
   position: PropTypes.oneOf(POSITIONS)
-}
-
-CopyAndPaste.defaultProps = {
-  value: 'app',
-  tooltipLabel: 'Create your app now',
-  color: 'main-dark-blue',
-  timeout: 1500,
-  size: MEDIUM,
-  tooltipClassName: '',
-  position: POSITION_CENTER
 }
 
 export default CopyAndPaste

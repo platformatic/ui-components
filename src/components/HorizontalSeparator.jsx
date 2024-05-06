@@ -4,7 +4,12 @@ import PropTypes from 'prop-types'
 import commonStyles from './Common.module.css'
 import { DARK_GREEN, MAIN_DARK_BLUE, WHITE } from './constants'
 import styles from './HorizontalSeparator.module.css'
-function HorizontalSeparator ({ marginTop, marginBottom, color, opacity }) {
+function HorizontalSeparator ({
+  marginTop = 4,
+  marginBottom = 4,
+  color = DARK_GREEN,
+  opacity = 1
+}) {
   function getClassName () {
     let className = `${styles.style} `
     className += commonStyles[`text--${color}`] + ' '
@@ -35,13 +40,6 @@ HorizontalSeparator.propTypes = {
    * opacity
    */
   opacity: PropTypes.number
-}
-
-HorizontalSeparator.defaultProps = {
-  marginTop: 4,
-  marginBottom: 4,
-  color: DARK_GREEN,
-  opacity: 1
 }
 
 export default HorizontalSeparator
