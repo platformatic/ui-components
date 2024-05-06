@@ -3,7 +3,12 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, MEDIUM, EXTRA_LARGE, MAIN_DARK_BLUE } from '../constants'
 
-const PullRequestLoadingIcon = ({ color, size, disabled, inactive }) => {
+const PullRequestLoadingIcon = ({
+  color = MAIN_DARK_BLUE,
+  size = MEDIUM,
+  disabled = false,
+  inactive = false
+}) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
@@ -64,12 +69,6 @@ PullRequestLoadingIcon.propTypes = {
    * inactive
    */
   inactive: PropTypes.bool
-}
-PullRequestLoadingIcon.defaultProps = {
-  color: MAIN_DARK_BLUE,
-  size: MEDIUM,
-  disabled: false,
-  inactive: false
 }
 
 export default PullRequestLoadingIcon

@@ -1,12 +1,20 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES } from '../constants'
+import { COLORS_ICON, MAIN_DARK_BLUE, MEDIUM, SIZES } from '../constants'
 
-const ApiIconClosed = ({ color, size, disabled }) => {
+const ApiIconClosed = ({
+  color = MAIN_DARK_BLUE,
+  size = MEDIUM,
+  disabled = false,
+  inactive = false
+}) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
+  }
+  if (inactive) {
+    className += ` ${styles.iconInactive}`
   }
   let icon = <></>
 
@@ -50,10 +58,6 @@ ApiIconClosed.propTypes = {
    * disabled
    */
   disabled: PropTypes.bool
-}
-ApiIconClosed.defaultProps = {
-  color: 'main-dark-blue',
-  size: 'medium'
 }
 
 export default ApiIconClosed

@@ -3,7 +3,12 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
 
-const StackablesPluginIcon = ({ color, size, disabled, inactive }) => {
+const StackablesPluginIcon = ({
+  color = MAIN_DARK_BLUE,
+  size = MEDIUM,
+  disabled = false,
+  inactive = false
+}) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   const filledClassName = styles[`filled-${color}`]
   if (disabled) {
@@ -132,12 +137,6 @@ StackablesPluginIcon.propTypes = {
    * inactive
    */
   inactive: PropTypes.bool
-}
-StackablesPluginIcon.defaultProps = {
-  color: MAIN_DARK_BLUE,
-  size: MEDIUM,
-  disabled: false,
-  inactive: false
 }
 
 export default StackablesPluginIcon

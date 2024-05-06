@@ -3,7 +3,12 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, ERROR_RED } from '../constants'
 
-const AlertIcon = ({ color, size, disabled, inactive }) => {
+const AlertIcon = ({
+  color = ERROR_RED,
+  size = MEDIUM,
+  disabled = false,
+  inactive = false
+}) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
@@ -86,12 +91,6 @@ AlertIcon.propTypes = {
    * inactive
    */
   inactive: PropTypes.bool
-}
-AlertIcon.defaultProps = {
-  color: ERROR_RED,
-  size: MEDIUM,
-  disabled: false,
-  inactive: false
 }
 
 export default AlertIcon

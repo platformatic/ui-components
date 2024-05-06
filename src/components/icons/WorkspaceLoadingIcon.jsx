@@ -3,7 +3,12 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, EXTRA_LARGE, MEDIUM, MAIN_DARK_BLUE } from '../constants'
 
-const WorkspaceLoadingIcon = ({ color, size, disabled, inactive }) => {
+const WorkspaceLoadingIcon = ({
+  color = MAIN_DARK_BLUE,
+  size = MEDIUM,
+  disabled = false,
+  inactive = false
+}) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
@@ -61,12 +66,6 @@ WorkspaceLoadingIcon.propTypes = {
    * inactive
    */
   inactive: PropTypes.bool
-}
-WorkspaceLoadingIcon.defaultProps = {
-  color: MAIN_DARK_BLUE,
-  size: MEDIUM,
-  disabled: false,
-  inactive: false
 }
 
 export default WorkspaceLoadingIcon

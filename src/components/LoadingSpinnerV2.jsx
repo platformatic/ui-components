@@ -5,10 +5,10 @@ import styles from './LoadingSpinnerV2.module.css'
 import { SpinnerCircular } from 'spinners-react'
 
 function LoadingSpinnerV2 ({
-  loading,
-  applySentences,
-  color,
-  containerClassName
+  loading = false,
+  applySentences = {},
+  color = '#FFFFFF',
+  containerClassName = ''
 }) {
   const defaultContainerClassName = containerClassName || `${styles.container}`
   // If null then loading not started, if true then loading, if false then done loading
@@ -44,13 +44,6 @@ LoadingSpinnerV2.propTypes = {
    * containerClassName
    */
   containerClassName: PropTypes.string
-}
-
-LoadingSpinnerV2.defaultProps = {
-  loading: false,
-  applySentences: {},
-  color: '#FFFFFF',
-  containerClassName: ''
 }
 
 export default LoadingSpinnerV2

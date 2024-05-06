@@ -1,12 +1,20 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, LARGE, MEDIUM, SIZES, SMALL } from '../constants'
+import { COLORS_ICON, LARGE, MAIN_DARK_BLUE, MEDIUM, SIZES, SMALL } from '../constants'
 
-const AppWorkspace = ({ color, size, disabled }) => {
+const AppWorkspace = ({
+  color = MAIN_DARK_BLUE,
+  size = MEDIUM,
+  disabled = false,
+  inactive = false
+}) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
+  }
+  if (inactive) {
+    className += ` ${styles.iconInactive}`
   }
   let icon = <></>
 
@@ -87,11 +95,6 @@ AppWorkspace.propTypes = {
    * Size
    */
   size: PropTypes.oneOf(SIZES)
-}
-
-AppWorkspace.defaultProps = {
-  color: 'main-dark-blue',
-  size: 'medium'
 }
 
 export default AppWorkspace

@@ -4,22 +4,21 @@ import PropTypes from 'prop-types'
 import styles from './Button.module.css'
 import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
-import { SIZES, COLORS_BUTTON, BOX_SHADOW, UNDERLINE, HOVER_EFFECTS_BUTTONS, DULLS_BACKGROUND_COLOR, MAIN_DARK_BLUE, LARGE, MEDIUM } from './constants'
+import { SIZES, COLORS_BUTTON, BOX_SHADOW, UNDERLINE, HOVER_EFFECTS_BUTTONS, DULLS_BACKGROUND_COLOR, MAIN_DARK_BLUE, LARGE, MEDIUM, TRANSPARENT } from './constants'
 
 function ButtonOnlyIcon ({
-  textClass,
-  paddingClass,
-  altLabel,
-  color,
-  backgroundColor,
-  size,
-  disabled,
-  hoverEffect,
-  bordered,
-  fullWidth,
-  platformaticIcon,
-  platformaticIconAfter,
-  selected,
+  textClass = '',
+  paddingClass = '',
+  altLabel = '',
+  color = MAIN_DARK_BLUE,
+  backgroundColor = TRANSPARENT,
+  size = LARGE,
+  disabled = false,
+  hoverEffect = DULLS_BACKGROUND_COLOR,
+  bordered = true,
+  fullWidth = false,
+  platformaticIcon = null,
+  selected = false,
   ...rest
 }) {
   let contentClassName = `${styles.content} `
@@ -140,31 +139,9 @@ ButtonOnlyIcon.propTypes = {
     color: PropTypes.string
   }),
   /**
-   * platformaticIconAfter: should be removed
-   */
-  platformaticIconAfter: PropTypes.shape({
-    iconName: PropTypes.string,
-    color: PropTypes.string
-  }),
-  /**
    * Selected: default false
    */
   selected: PropTypes.bool
-}
-
-ButtonOnlyIcon.defaultProps = {
-  textClass: '',
-  paddingClass: '',
-  altLabel: '',
-  color: MAIN_DARK_BLUE,
-  backgroundColor: 'transparent',
-  disabled: false,
-  size: LARGE,
-  hoverEffect: DULLS_BACKGROUND_COLOR,
-  bordered: true,
-  fullWidth: false,
-  platformaticIcon: null,
-  selected: false
 }
 
 export default ButtonOnlyIcon

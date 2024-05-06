@@ -3,16 +3,16 @@ import PropTypes from 'prop-types'
 import styles from './BorderedBox.module.css'
 import commonStyles from './Common.module.css'
 import React from 'react'
-import { COLORS_BORDERED_BOX } from './constants'
+import { COLORS_BORDERED_BOX, DARK_BLUE, MAIN_GREEN, OPACITY_100 } from './constants'
 function BorderedBox ({
-  classes,
-  color,
-  children,
-  backgroundColor,
-  backgroundColorOpacity,
-  borderColorOpacity,
-  clickable,
-  onClick
+  classes = '',
+  color = MAIN_GREEN,
+  children = null,
+  backgroundColor = DARK_BLUE,
+  backgroundColorOpacity = OPACITY_100,
+  borderColorOpacity = OPACITY_100,
+  clickable = false,
+  onClick = () => {}
 }) {
   const borderColor = commonStyles[`bordered--${color}-${borderColorOpacity}`]
   const styledBackgroundColor = commonStyles[`background-color-${backgroundColor}`]
@@ -60,17 +60,6 @@ BorderedBox.propTypes = {
    * onClick
    */
   onClick: PropTypes.func
-}
-
-BorderedBox.defaultProps = {
-  children: null,
-  color: 'main-green',
-  backgroundColor: 'dark-blue',
-  classes: '',
-  backgroundColorOpacity: 100,
-  borderColorOpacity: 100,
-  clickable: false,
-  onClick: () => {}
 }
 
 export default BorderedBox

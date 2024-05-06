@@ -39,7 +39,6 @@ import Status from './src/components/Status'
 import Tooltip from './src/components/Tooltip'
 import TooltipAbsolute from './src/components/TooltipAbsolute'
 import TabbedWindow from './src/components/TabbedWindow'
-import TabbedWindowV2 from './src/components/TabbedWindowV2'
 import Tag from './src/components/Tag'
 import TextWithLabel from './src/components/TextWithLabel'
 import TwoColumnsLayout from './src/components/layouts/TwoColumnsLayout'
@@ -84,7 +83,6 @@ export {
   SimpleMetric,
   Status,
   TabbedWindow,
-  TabbedWindowV2,
   Tag,
   TextWithLabel,
   Tooltip,

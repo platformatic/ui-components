@@ -1,4 +1,4 @@
-.tabbed-container {
+.tabContainerClassName {
   @apply bg-main-dark-blue;
 }
 .tabs-header {
@@ -8,10 +8,10 @@
   @apply mx-8 min-w-[105px] text-center text-sm first:ml-0 last:mr-0 hover:font-semibold;  
 }
 .selected-tab {
-  @apply underline text-main-green underline-offset-8 font-semibold;
+  @apply underline underline-offset-8 font-semibold;
 }
-.tabs-content {
-  @apply min-h-screen
+.tabContentClassName {
+  @apply max-h-[calc(100vH-10rem)] overflow-y-auto
 }
 .tab::before {
   display: block;

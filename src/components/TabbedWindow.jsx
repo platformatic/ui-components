@@ -3,7 +3,13 @@ import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './TabbedWindow.module.css'
 
-function TabbedWindow ({ tabs, keySelected, callbackSelected }) {
+function TabbedWindow ({
+  tabs = [],
+  keySelected = '',
+  callbackSelected = () => {},
+  tabContainerClassName = '',
+  tabContentClassName = ''
+}) {
   const headers = []
   const keys = []
   const components = []
@@ -14,7 +20,8 @@ function TabbedWindow ({ tabs, keySelected, callbackSelected }) {
   })
   const [selected, setSelected] = useState(keySelected || tabs?.at(0).key || '')
   const [currentComponent, setCurrentComponent] = useState(components[0])
-
+  const containerClassName = tabContainerClassName || styles.tabContainerClassName
+  const contentClassName = tabContentClassName || styles.tabContentClassName
   useEffect(() => {
     const indexKey = keys.findIndex(key => key === selected)
     setCurrentComponent(components[indexKey])
@@ -26,7 +33,7 @@ function TabbedWindow ({ tabs, keySelected, callbackSelected }) {
   }
 
   return (
-    <div className={styles['tabbed-container']}>
+    <div className={containerClassName}>
       <div className={styles['tabs-header']}>
         {headers.map((header, index) => {
           return (
@@ -38,7 +45,7 @@ function TabbedWindow ({ tabs, keySelected, callbackSelected }) {
           )
         })}
       </div>
-      <div className={styles['tabs-content']}>{currentComponent}</div>
+      <div className={contentClassName}>{currentComponent}</div>
     </div>
   )
 }
@@ -57,12 +64,6 @@ TabbedWindow.propTypes = {
    */
   callbackSelected: PropTypes.func
 
-}
-
-TabbedWindow.defaultProps = {
-  tabs: [],
-  keySelected: '',
-  callbackSelected: () => {}
 }
 
 export default TabbedWindow

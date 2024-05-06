@@ -31,17 +31,17 @@ import {
 import PlatformaticIcon from './PlatformaticIcon'
 
 function Modal ({
-  setIsOpen,
-  title,
-  layout,
-  children,
-  size,
-  profile,
-  backgroundClassName,
-  titleClassName,
-  childrenClassContainer,
-  modalCloseClassName,
-  permanent
+  setIsOpen = () => {},
+  title = '',
+  layout = MODAL_POPUP,
+  children = null,
+  size = SMALL,
+  profile = '',
+  backgroundClassName = '',
+  titleClassName = '',
+  childrenClassContainer = '',
+  modalCloseClassName = '',
+  permanent = false
 }) {
   let contentFullscreen
   let titleFullscreen
@@ -281,20 +281,6 @@ Modal.propTypes = {
    * permanent: modal could be closed only with Esc, X or Cancel
    */
   permanent: PropTypes.bool
-}
-
-Modal.defaultProps = {
-  children: null,
-  childrenClassContainer: '',
-  setIsOpen: () => {},
-  title: '',
-  layout: MODAL_POPUP,
-  size: SMALL,
-  profile: '',
-  backgroundClassName: '',
-  titleClassName: '',
-  modalCloseClassName: '',
-  permanent: false
 }
 
 export default Modal

@@ -3,7 +3,13 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
 
-const LogOutIcon = ({ color, size, tip, disabled, inactive }) => {
+const LogOutIcon = ({
+  color = MAIN_DARK_BLUE,
+  size = MEDIUM,
+  tip = '',
+  disabled = false,
+  inactive = false
+}) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
@@ -85,12 +91,6 @@ LogOutIcon.propTypes = {
    * tip
    */
   tip: PropTypes.string
-}
-
-LogOutIcon.defaultProps = {
-  color: MAIN_DARK_BLUE,
-  size: MEDIUM,
-  tip: ''
 }
 
 export default LogOutIcon

@@ -3,7 +3,12 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, MEDIUM, MAIN_DARK_BLUE } from '../constants'
 
-const CircleDownloadIcon = ({ color, size, disabled, inactive }) => {
+const CircleDownloadIcon = ({
+  color = MAIN_DARK_BLUE,
+  size = MEDIUM,
+  disabled = false,
+  inactive = false
+}) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
@@ -55,12 +60,6 @@ CircleDownloadIcon.propTypes = {
    * inactive
    */
   inactive: PropTypes.bool
-}
-CircleDownloadIcon.defaultProps = {
-  color: MAIN_DARK_BLUE,
-  size: MEDIUM,
-  disabled: false,
-  inactive: false
 }
 
 export default CircleDownloadIcon

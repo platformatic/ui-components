@@ -2,7 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { MAIN_DARK_BLUE, WHITE } from '../constants'
 
-function BasicLogo ({ backgroundColor, width, height }) {
+function BasicLogo ({
+  backgroundColor = WHITE,
+  width = 423,
+  height = 182
+}) {
   let icon = (
     <svg width={width} height={height} viewBox='0 0 423 182' fill='none' xmlns='http://www.w3.org/2000/svg'>
       <path d='M187.436 64.9733H385.39C405.484 64.9733 421.773 81.2622 421.773 101.356V101.356C421.773 121.449 405.484 137.738 385.39 137.738H187.436L214.697 123.185L223.609 97.1977L208.406 75.3682L187.436 64.9733Z' fill='#00283D' />
@@ -51,12 +55,6 @@ BasicLogo.propTypes = {
    * height
    */
   height: PropTypes.number
-}
-
-BasicLogo.defaultProps = {
-  backgroundColor: WHITE,
-  width: 423,
-  height: 182
 }
 
 export default BasicLogo

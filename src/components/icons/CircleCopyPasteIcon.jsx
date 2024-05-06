@@ -3,7 +3,12 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, SMALL, MAIN_DARK_BLUE, MEDIUM } from '../constants'
 
-const CircleCopyPasteIcon = ({ color, size, disabled, inactive }) => {
+const CircleCopyPasteIcon = ({
+  color = MAIN_DARK_BLUE,
+  size = SMALL,
+  disabled = false,
+  inactive = false
+}) => {
   let className = `${styles.svgClassName} ` + styles[`${color}`]
   if (disabled) {
     className += ` ${styles.iconDisabled}`
@@ -73,12 +78,6 @@ CircleCopyPasteIcon.propTypes = {
    * inactive
    */
   inactive: PropTypes.bool
-}
-CircleCopyPasteIcon.defaultProps = {
-  color: MAIN_DARK_BLUE,
-  size: SMALL,
-  disabled: false,
-  inactive: false
 }
 
 export default CircleCopyPasteIcon
