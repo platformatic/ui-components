@@ -3,9 +3,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './RadioGroup.module.css'
 import commonStyles from '../Common.module.css'
-import { MAIN_DARK_BLUE, MAIN_GREEN } from '../constants'
 
-function RadioGroup ({ name, radios, errorMessage, errorMessageTextClassName, onChange, disabled, value }) {
+function RadioGroup ({
+  name = '',
+  radios = [],
+  errorMessage = '',
+  errorMessageTextClassName = '',
+  onChange = () => {},
+  disabled = false,
+  value = ''
+}) {
   let radioContainerClass = styles.radioContainer
   const errorMessageClassName = errorMessageTextClassName || commonStyles['error-message']
 
@@ -56,24 +63,9 @@ RadioGroup.propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * color
-   */
-  color: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE]),
-  /**
    * value
    */
   value: PropTypes.string
-}
-
-RadioGroup.defaultProps = {
-  name: '',
-  radios: [],
-  errorMessage: '',
-  errorMessageTextClassName: '',
-  onChange: () => {},
-  disabled: false,
-  color: MAIN_DARK_BLUE,
-  value: ''
 }
 
 export default RadioGroup

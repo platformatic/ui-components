@@ -7,23 +7,23 @@ import PlatformaticIcon from '../PlatformaticIcon'
 import { ERROR_RED, MAIN_DARK_BLUE, MAIN_GREEN, RICH_BLACK, TRANSPARENT, WHITE } from '../constants'
 
 function Input ({
-  placeholder,
-  value,
-  name,
-  borderColor,
-  errorMessage,
-  errorMessageTextClassName,
-  onChange,
-  disabled,
-  beforeIcon,
-  afterIcon,
-  placeholderApart,
-  backgroundColor,
-  inputTextClassName,
-  verticalPaddingClassName,
-  dataAttrName,
-  dataAttrValue,
-  readOnly
+  placeholder = '',
+  value = '',
+  name = '',
+  borderColor = MAIN_GREEN,
+  errorMessage = '',
+  errorMessageTextClassName = '',
+  onChange = () => {},
+  disabled = false,
+  beforeIcon = null,
+  afterIcon = null,
+  placeholderApart = '',
+  backgroundColor = WHITE,
+  inputTextClassName = '',
+  verticalPaddingClassName = '',
+  dataAttrName = '',
+  dataAttrValue = '',
+  readOnly = false
 }) {
   let baseInputClassName = `${commonStyles.fullWidth} ${styles.input} ${inputTextClassName} `
   baseInputClassName += verticalPaddingClassName || ` ${styles.inputDefaultVerticalPadding} `
@@ -167,26 +167,6 @@ Input.propTypes = {
    * errorMessageTextClassName
   */
   errorMessageTextClassName: PropTypes.string
-}
-
-Input.defaultProps = {
-  placeholder: '',
-  value: '',
-  name: '',
-  borderColor: MAIN_GREEN,
-  backgroundColor: WHITE,
-  errorMessage: '',
-  errorMessageTextClassName: '',
-  onChange: () => {},
-  disabled: false,
-  beforeIcon: null,
-  afterIcon: null,
-  shadowPlaceholder: false,
-  inputTextClassName: '',
-  verticalPaddingClassName: '',
-  dataAttrName: '',
-  dataAttrValue: '',
-  readOnly: false
 }
 
 export default Input

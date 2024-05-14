@@ -20,7 +20,16 @@ function renderParagraph (value, useCopyAndPaste, copyAndPaste, usePlatformaticI
     </>
   )
 }
-function Preview ({ title, value, isLink, children, useCopyAndPaste, copyAndPaste, usePlatformaticIcon, platformaticIcon }) {
+function Preview ({
+  title = '',
+  value = '',
+  isLink = false,
+  children = null,
+  useCopyAndPaste = false,
+  copyAndPaste = null,
+  platformaticIcon = null,
+  usePlatformaticIcon = false
+}) {
   return (
     <>
       <div className={styles.container}>
@@ -79,17 +88,6 @@ Preview.propTypes = {
     size: PropTypes.oneOf(SIZES),
     onClick: PropTypes.func
   })
-}
-
-Preview.defaultProps = {
-  title: '',
-  value: '',
-  isLink: false,
-  children: null,
-  useCopyAndPaste: false,
-  copyAndPaste: null,
-  platformaticIcon: null,
-  usePlatformaticIcon: false
 }
 
 export default Preview

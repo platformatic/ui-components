@@ -6,7 +6,16 @@ import commonStyles from '../Common.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
 import { MAIN_DARK_BLUE, MAIN_GREEN } from '../constants'
 
-function Input ({ placeholder, value, name, borderColor, errorMessage, errorMessageTextClassName, onChange, disabled }) {
+function Input ({
+  placeholder = '',
+  value = '',
+  name = '',
+  borderColor = MAIN_DARK_BLUE,
+  errorMessage = '',
+  errorMessageTextClassName = '',
+  onChange = () => {},
+  disabled = false
+}) {
   const [type, setType] = useState('password')
   let passwordClassName = `${commonStyles.fullWidth} ${styles.password} `
   passwordClassName += commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`] + ' ' + styles.afterIconPadding
@@ -56,10 +65,6 @@ Input.propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * addFocus
-   */
-  focused: PropTypes.bool,
-  /**
    * placeholderApart
    */
   placeholderApart: PropTypes.bool,
@@ -71,19 +76,6 @@ Input.propTypes = {
    * errorMessageTextClassName
   */
   errorMessageTextClassName: PropTypes.string
-}
-
-Input.defaultProps = {
-  placeholder: '',
-  value: '',
-  name: '',
-  borderColor: MAIN_DARK_BLUE,
-  errorMessage: '',
-  errorMessageTextClassName: '',
-  onChange: () => {},
-  disabled: false,
-  focused: false,
-  shadowPlaceholder: false
 }
 
 export default Input

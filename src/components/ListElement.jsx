@@ -5,7 +5,15 @@ import commonStyles from './Common.module.css'
 import styles from './ListElement.module.css'
 import { MAIN_DARK_BLUE, MEDIUM, SMALL, WHITE, MAIN_GREEN } from './constants'
 
-function List ({ title, detail, marginSize, detailColor, titleColor, semiBold, iconColor }) {
+function List ({
+  title = '',
+  detail = '',
+  marginSize = MEDIUM,
+  detailColor = WHITE,
+  titleColor = MAIN_GREEN,
+  semiBold = true,
+  iconColor = MAIN_GREEN
+}) {
   let className = `${styles.container} `
   className += styles[`margin-${marginSize}`]
 
@@ -61,16 +69,6 @@ List.propTypes = {
    * semiBold
    */
   semiBold: PropTypes.bool
-}
-
-List.defaultProps = {
-  title: '',
-  detail: '',
-  marginSize: MEDIUM,
-  detailColor: WHITE,
-  titleColor: MAIN_GREEN,
-  iconColor: MAIN_GREEN,
-  semiBold: true
 }
 
 export default List

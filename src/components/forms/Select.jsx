@@ -7,24 +7,25 @@ import { MAIN_DARK_BLUE, MAIN_GREEN, RICH_BLACK, SMALL, WHITE } from '../constan
 import PlatformaticIcon from '../PlatformaticIcon'
 
 function Select ({
-  defaultContainerClassName,
-  placeholder,
-  name,
-  value,
-  options,
-  defaultOptionsClassName,
-  optionsBorderedBottom,
-  borderColor,
-  borderListColor,
-  errorMessage,
-  errorMessageTextClassName,
-  onSelect,
-  disabled,
-  mainColor,
-  dataAttrName,
-  dataAttrValue,
-  backgroundColor,
-  inputTextClassName
+  defaultContainerClassName = '',
+  placeholder = 'this is the default',
+  name = '',
+  value = '',
+  id = '',
+  options = [],
+  defaultOptionsClassName = '',
+  optionsBorderedBottom = true,
+  borderColor = MAIN_GREEN,
+  borderListColor = '',
+  errorMessage = '',
+  errorMessageTextClassName = '',
+  onSelect = () => {},
+  disabled = false,
+  mainColor = MAIN_DARK_BLUE,
+  dataAttrName = '',
+  dataAttrValue = '',
+  backgroundColor = WHITE,
+  inputTextClassName = ''
 }) {
   const inputRef = useRef()
   const [showOptions, setShowOptions] = useState(false)
@@ -260,28 +261,6 @@ Select.propTypes = {
    * errorMessageTextClassName
   */
   errorMessageTextClassName: PropTypes.string
-}
-
-Select.defaultProps = {
-  defaultContainerClassName: '',
-  placeholder: 'this is the default',
-  name: '',
-  value: '',
-  id: '',
-  options: [],
-  defaultOptionsClassName: '',
-  optionsBorderedBottom: true,
-  borderColor: MAIN_GREEN,
-  borderListColor: '',
-  errorMessage: '',
-  errorMessageTextClassName: '',
-  onSelect: () => {},
-  disabled: false,
-  mainColor: MAIN_DARK_BLUE,
-  dataAttrName: '',
-  dataAttrValue: '',
-  backgroundColor: WHITE,
-  inputTextClassName: ''
 }
 
 export default Select

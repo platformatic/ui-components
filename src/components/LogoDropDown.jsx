@@ -5,7 +5,13 @@ import styles from './LogoDropDown.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
 import { MAIN_DARK_BLUE, SMALL, WHITE } from './constants'
 import Logo from './Logo'
-function LogoDropDown ({ itemSelected, items, width, height, onClickItemSelected }) {
+function LogoDropDown ({
+  itemSelected = '',
+  items = [],
+  width = 71,
+  height = 56,
+  onClickItemSelected = () => {}
+}) {
   const [open, setOpen] = useState(false)
 
   function handleOpen () {
@@ -82,11 +88,4 @@ LogoDropDown.propTypes = {
   onClickItemSelected: PropTypes.func
 }
 
-LogoDropDown.defaultProps = {
-  width: 71,
-  height: 56,
-  itemSelected: '',
-  items: [],
-  onClickItemSelected: () => {}
-}
 export default LogoDropDown

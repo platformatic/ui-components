@@ -9,20 +9,20 @@ import BorderedBox from '../BorderedBox'
 import ButtonFullRounded from '../ButtonFullRounded'
 
 function InputWithSeparator ({
-  placeholder,
-  name,
-  borderColor,
-  backgroundColor,
-  errorMessage,
-  errorMessageTextClassName,
-  onChange,
-  disabled,
-  afterIcon,
-  defaultValue,
-  defaultValueSeparator,
-  value,
-  separators,
-  inputTextClassName
+  placeholder = '',
+  name = '',
+  value = '',
+  borderColor = MAIN_GREEN,
+  backgroundColor = WHITE,
+  errorMessage = '',
+  errorMessageTextClassName = '',
+  onChange = () => {},
+  disabled = false,
+  afterIcon = null,
+  defaultValue = '',
+  defaultValueSeparator = ',',
+  separators = [''],
+  inputTextClassName = ''
 }) {
   const showError = errorMessage.length > 0
   const [focus, setFocus] = useState(false)
@@ -233,23 +233,6 @@ InputWithSeparator.propTypes = {
    * errorMessageTextClassName
   */
   errorMessageTextClassName: PropTypes.string
-}
-
-InputWithSeparator.defaultProps = {
-  placeholder: '',
-  value: '',
-  defaultValue: '',
-  defaultValueSeparator: ',',
-  name: '',
-  borderColor: MAIN_GREEN,
-  backgroundColor: WHITE,
-  errorMessage: '',
-  errorMessageTextClassName: '',
-  onChange: () => {},
-  disabled: false,
-  afterIcon: null,
-  separators: [''],
-  inputTextClassName: ''
 }
 
 export default InputWithSeparator

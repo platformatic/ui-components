@@ -7,17 +7,17 @@ import PlatformaticIcon from '../PlatformaticIcon'
 import { MAIN_DARK_BLUE, MAIN_GREEN } from '../constants'
 
 function TextArea ({
-  placeholder,
-  value,
-  name,
-  borderColor,
-  errorMessage,
-  errorMessageTextClassName,
-  onChange,
-  disabled,
-  afterIcon,
-  rows,
-  cols
+  placeholder = '',
+  value = '',
+  name = '',
+  borderColor = MAIN_DARK_BLUE,
+  errorMessage = '',
+  errorMessageTextClassName = '',
+  onChange = () => {},
+  disabled = false,
+  afterIcon = null,
+  rows = 5,
+  cols = 20
 }) {
   let className = styles.textAreaContainer + ' ' + commonStyles[`bordered--${borderColor}`] + ' ' + commonStyles[`text--${borderColor}`]
   const showError = errorMessage.length > 0
@@ -86,20 +86,6 @@ TextArea.propTypes = {
    * errorMessageTextClassName
   */
   errorMessageTextClassName: PropTypes.string
-}
-
-TextArea.defaultProps = {
-  placeholder: '',
-  value: '',
-  name: '',
-  borderColor: MAIN_DARK_BLUE,
-  errorMessage: '',
-  errorMessageTextClassName: '',
-  onChange: () => {},
-  disabled: false,
-  afterIcon: null,
-  rows: 5,
-  cols: 20
 }
 
 export default TextArea

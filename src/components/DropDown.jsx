@@ -6,15 +6,15 @@ import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
 import { DARK_BLUE, LIGHT_BLUE, MAIN_DARK_BLUE, RICH_BLACK, WHITE } from './constants'
 function DropDown ({
-  pictureUrl,
-  header,
-  items,
-  align,
-  backgroundColor,
-  textColor,
-  borderColor,
-  headerColor,
-  lastButton
+  pictureUrl = '',
+  header = '',
+  align = 'left',
+  items = [],
+  backgroundColor = DARK_BLUE,
+  textColor = MAIN_DARK_BLUE,
+  headerColor = WHITE,
+  borderColor = WHITE,
+  lastButton = null
 }) {
   const [open, setOpen] = useState(false)
   const borderClass = commonStyles[`bordered--${borderColor}-30`]
@@ -105,23 +105,7 @@ DropDown.propTypes = {
   /**
    * lastButton
    */
-  lastButton: PropTypes.node,
-  /**
-   * callBackClose
-   */
-  callBackClose: PropTypes.func
+  lastButton: PropTypes.node
 }
 
-DropDown.defaultProps = {
-  pictureUrl: '',
-  header: '',
-  align: 'left',
-  items: [],
-  backgroundColor: DARK_BLUE,
-  textColor: MAIN_DARK_BLUE,
-  headerColor: WHITE,
-  borderColor: WHITE,
-  lastButton: null,
-  callBackClose: () => {}
-}
 export default DropDown
