@@ -36,8 +36,4 @@ VerticalSeparator.propTypes = {
 
 }
 
-VerticalSeparator.defaultProps = {
-
-}
-
 export default VerticalSeparator

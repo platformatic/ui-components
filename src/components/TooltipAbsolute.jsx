@@ -2,18 +2,18 @@
 import PropTypes from 'prop-types'
 import styles from './TooltipAbsolute.module.css'
 import { useEffect, useState } from 'react'
-import { DIRECTIONS, DIRECTION_LEFT, DIRECTION_BOTTOM, DIRECTION_TOP, DIRECTION_RIGHT } from './constants'
+import { DIRECTIONS, DIRECTION_LEFT, DIRECTION_BOTTOM, DIRECTION_TOP, DIRECTION_RIGHT, POSITION_START } from './constants'
 
 const TooltipAbsolute = ({
-  direction,
-  content,
-  delay,
-  children,
-  tooltipClassName,
-  offset,
-  position,
-  visible,
-  activeDependsOnVisible
+  direction = DIRECTION_TOP,
+  tooltipClassName = '',
+  delay = 0,
+  children = null,
+  content = null,
+  offset = 0,
+  position = POSITION_START,
+  visible = false,
+  activeDependsOnVisible = false
 }) => {
   let timeout
   const [active, setActive] = useState(activeDependsOnVisible ? visible : false)
@@ -107,18 +107,6 @@ TooltipAbsolute.propTypes = {
    * activeDependsOnVisible
    */
   activeDependsOnVisible: PropTypes.bool
-}
-
-TooltipAbsolute.defaultProps = {
-  direction: DIRECTION_TOP,
-  tooltipClassName: '',
-  delay: 0,
-  children: null,
-  content: null,
-  offset: 0,
-  position: 'start',
-  activeDependsOnVisible: false,
-  visible: false
 }
 
 export default TooltipAbsolute

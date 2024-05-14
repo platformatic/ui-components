@@ -8,19 +8,19 @@ import HorizontalSeparator from './HorizontalSeparator'
 import styles from './ModalStepsForward.module.css'
 import commonStyles from './Common.module.css'
 import {
-  MODAL_SIZES,
-  SMALL,
-  MODAL_LAYOUTS,
-  MODAL_POPUP,
   MAIN_DARK_BLUE,
   DULLS_BACKGROUND_COLOR,
   LARGE,
-  PROFILES,
   MARGIN_0,
   OPACITY_20
 } from './constants'
 
-function ModalStepsForward ({ setIsOpen, right, stepper, left }) {
+function ModalStepsForward ({
+  setIsOpen = () => {},
+  right = null,
+  stepper = null,
+  left = null
+}) {
   const buttonFullRoundedClassName = commonStyles['background-color-white']
   let modalCoverClassName = `${styles.container} ${styles.fullscreen} `
   modalCoverClassName += commonStyles['background-color-light-blue']
@@ -62,29 +62,17 @@ ModalStepsForward.propTypes = {
    */
   setIsOpen: PropTypes.func,
   /**
-   * layout
+   * right
    */
-  layout: PropTypes.oneOf(MODAL_LAYOUTS),
+  right: PropTypes.node,
   /**
-   * Size
+   * stepper
    */
-  size: PropTypes.oneOf(MODAL_SIZES),
+  stepper: PropTypes.node,
   /**
-   * profile
+   * left
    */
-  profile: PropTypes.oneOf(PROFILES),
-  /**
-   * backgroundClassName
-   */
-  backgroundClassName: PropTypes.string
-}
-
-ModalStepsForward.defaultProps = {
-  setIsOpen: () => {},
-  layout: MODAL_POPUP,
-  size: SMALL,
-  profile: '',
-  backgroundClassName: ''
+  left: PropTypes.node
 }
 
 export default ModalStepsForward

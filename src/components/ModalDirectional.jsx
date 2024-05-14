@@ -12,13 +12,13 @@ import {
 import Button from './Button'
 
 function ModalDirectional ({
-  setIsOpen,
-  title,
-  titleClassName,
-  children,
-  smallLayout,
-  classNameModalLefty,
-  permanent
+  children = null,
+  setIsOpen = () => {},
+  title = '',
+  titleClassName = '',
+  smallLayout = false,
+  classNameModalLefty = '',
+  permanent = false
 }) {
   const className = `${styles.container} ${styles.modalLeftCover} ${smallLayout ? styles.smallLayout : styles.normalLayout}`
   const [modalClassName] = useState(className)
@@ -88,23 +88,13 @@ ModalDirectional.propTypes = {
    */
   smallLayout: PropTypes.bool,
   /**
-   * classNameLefty
+   * classNameModalLefty
    */
-  classNameLefty: PropTypes.string,
+  classNameModalLefty: PropTypes.string,
   /**
    * permanent: modal could be closed only with Esc, X or Cancel
    */
   permanent: PropTypes.bool
-}
-
-ModalDirectional.defaultProps = {
-  children: null,
-  setIsOpen: () => {},
-  title: '',
-  titleClassName: '',
-  smallLayout: false,
-  classNameLefty: '',
-  permanent: false
 }
 
 export default ModalDirectional

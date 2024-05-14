@@ -4,14 +4,14 @@ import styles from './Field.module.css'
 import { ERROR_RED, MAIN_DARK_BLUE, WHITE } from '../constants'
 
 function Field ({
-  title,
-  titleColor,
-  helper,
-  children,
-  disabled,
-  required,
-  titleClassName,
-  helperClassName
+  title = '',
+  titleColor = MAIN_DARK_BLUE,
+  helper = '',
+  children = null,
+  disabled = false,
+  required = false,
+  titleClassName = '',
+  helperClassName = ''
 }) {
   let className = `${styles.container}`
   if (disabled) className += ` ${styles.disabled}`
@@ -65,17 +65,6 @@ Field.propTypes = {
    * titleClassName
    */
   helperClassName: PropTypes.string
-}
-
-Field.defaultProps = {
-  title: '',
-  titleColor: 'main-dark-blue',
-  helper: '',
-  children: null,
-  disabled: false,
-  required: false,
-  titleClassName: '',
-  helperClassName: ''
 }
 
 export default Field

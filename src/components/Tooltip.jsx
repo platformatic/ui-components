@@ -5,14 +5,14 @@ import { useEffect, useRef, useState } from 'react'
 import { DIRECTIONS, DIRECTION_BOTTOM, DIRECTION_LEFT, DIRECTION_RIGHT, DIRECTION_TOP } from './constants'
 
 function Tooltip ({
-  direction,
-  visible,
-  activeDependsOnVisible,
-  content,
-  delay,
-  children,
-  tooltipClassName,
-  offset
+  direction = DIRECTION_TOP,
+  visible = false,
+  activeDependsOnVisible = false,
+  content = null,
+  delay = 0,
+  children = null,
+  tooltipClassName = '',
+  offset = 0
 }) {
   let timeout
   const [active, setActive] = useState(activeDependsOnVisible ? visible : false)
@@ -115,17 +115,6 @@ Tooltip.propTypes = {
    * offset
    */
   offset: PropTypes.number
-}
-
-Tooltip.defaultProps = {
-  direction: DIRECTION_TOP,
-  tooltipClassName: '',
-  delay: 0,
-  activeDependsOnVisible: false,
-  visible: false,
-  children: null,
-  content: null,
-  offset: 0
 }
 
 export default Tooltip

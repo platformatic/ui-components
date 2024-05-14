@@ -24,12 +24,24 @@ function SocialElement ({ href, iconName, iconClassName, iconColor, iconSize }) 
 }
 
 function FollowUs ({
-  label,
-  labelClassName,
-  useOnFrontpage,
-  iconColor,
-  iconSize,
-  socialElements
+  label = 'Follow us on',
+  labelClassName = '',
+  useOnFrontpage = true,
+  iconColor = WHITE,
+  iconSize = MEDIUM,
+  socialElements = [{
+    link: 'https://twitter.com/platformatic',
+    iconName: 'SocialXIcon'
+  }, {
+    link: 'https://www.linkedin.com/company/platformatic/',
+    iconName: 'SocialLinkedInIcon'
+  }, {
+    link: 'https://github.com/platformatic',
+    iconName: 'SocialGitHubIcon'
+  }, {
+    link: 'https://discord.gg/platformatic',
+    iconName: 'SocialDiscordIcon'
+  }]
 }) {
   const suffix = useOnFrontpage ? 'Frontpage' : 'Dashboard'
   const className = styles[`container${suffix}`]
@@ -89,25 +101,4 @@ FollowUs.propTypes = {
   }))
 }
 
-FollowUs.defaultProps = {
-  label: 'Follow us on',
-  labelClassName: '',
-  useOnFrontpage: true,
-  iconColor: WHITE,
-  iconSize: MEDIUM,
-  socialElements: [{
-    link: 'https://twitter.com/platformatic',
-    iconName: 'SocialXIcon'
-  }, {
-    link: 'https://www.linkedin.com/company/platformatic/',
-    iconName: 'SocialLinkedInIcon'
-  }, {
-    link: 'https://github.com/platformatic',
-    iconName: 'SocialGitHubIcon'
-  }, {
-    link: 'https://discord.gg/platformatic',
-    iconName: 'SocialDiscordIcon'
-  }]
-
-}
 export default FollowUs

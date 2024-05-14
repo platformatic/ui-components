@@ -4,7 +4,11 @@ import PropTypes from 'prop-types'
 import PlatformaticIcon from './PlatformaticIcon'
 import { COLORS_ICON, EXTRA_SMALL, SIZES, WHITE } from './constants'
 
-function Status ({ color, status, size }) {
+function Status ({
+  color = WHITE,
+  status = '',
+  size = EXTRA_SMALL
+}) {
   const className = `inline-flex items-center text-${color}`
   return (
     <div className={className}>
@@ -28,12 +32,6 @@ Status.propTypes = {
    */
   size: PropTypes.oneOf(SIZES)
 
-}
-
-Status.defaultProps = {
-  color: WHITE,
-  status: '',
-  size: EXTRA_SMALL
 }
 
 export default Status

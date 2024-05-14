@@ -6,15 +6,15 @@ import styles from './SearchBarV2.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
 import { RICH_BLACK, SMALL, TRANSPARENT, WHITE } from './constants'
 function SearchBarV2 ({
-  onSubmit,
-  onChange,
-  onClear,
-  color,
-  backgroundColor,
-  placeholder,
-  dataAttrName,
-  dataAttrValue,
-  inputTextClassName
+  color = WHITE,
+  backgroundColor = RICH_BLACK,
+  onSubmit = () => { },
+  onChange = () => { },
+  onClear = () => { },
+  placeholder = 'Search',
+  dataAttrName = '',
+  dataAttrValue = '',
+  inputTextClassName = ''
 }) {
   const inputRef = useRef()
   const baseClassName = `${styles.container} ${styles.wrapperPadding} ` + commonStyles[`background-color-${backgroundColor}`]
@@ -117,19 +117,6 @@ SearchBarV2.propTypes = {
    * inputTextClassName
   */
   inputTextClassName: PropTypes.string
-}
-
-SearchBarV2.defaultProps = {
-  color: WHITE,
-  backgroundColor: RICH_BLACK,
-  onSubmit: () => { },
-  onChange: () => { },
-  onClear: () => { },
-  placeholder: 'Search',
-  dataAttrName: '',
-  dataAttrValue: '',
-  inputTextClassName: ''
-
 }
 
 export default SearchBarV2

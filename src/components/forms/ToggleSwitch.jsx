@@ -5,14 +5,14 @@ import styles from './ToggleSwitch.module.css'
 import commonStyles from '../Common.module.css'
 
 function ToggleSwitch ({
-  name,
-  label,
-  labelClassName,
-  errorMessage,
-  errorMessageTextClassName,
-  onChange,
-  checked,
-  disabled
+  name = '',
+  label = '',
+  labelClassName = '',
+  errorMessage = '',
+  errorMessageTextClassName = '',
+  onChange = () => {},
+  checked = false,
+  disabled = false
 }) {
   let className = `${styles.switch} `
   if (disabled) className += styles.disabled
@@ -67,17 +67,6 @@ ToggleSwitch.propTypes = {
    */
   labelClassName: PropTypes.string
 
-}
-
-ToggleSwitch.defaultProps = {
-  name: '',
-  label: '',
-  errorMessage: '',
-  errorMessageTextClassName: '',
-  checked: false,
-  disabled: false,
-  onChange: () => {},
-  labelClassName: ''
 }
 
 export default ToggleSwitch

@@ -4,9 +4,15 @@ import PropTypes from 'prop-types'
 import styles from './InfoBox.module.css'
 import Button from './Button'
 import PlatformaticIcon from './PlatformaticIcon'
-import { COLORS_BUTTON, COLORS_ICON, HOVER_EFFECTS_BUTTONS } from './constants'
+import { COLORS_BUTTON, COLORS_ICON, HOVER_EFFECTS_BUTTONS, MAIN_GREEN } from './constants'
 
-function InfoBox ({ children, iconName, iconColor, helpText, buttonProps }) {
+function InfoBox ({
+  children = null,
+  iconName = '',
+  iconColor = MAIN_GREEN,
+  helpText = '',
+  buttonProps = null
+}) {
   return (
     <div className={styles.container}>
       <PlatformaticIcon size='extra-large' iconName={iconName} color={iconColor} />
@@ -45,14 +51,6 @@ InfoBox.propTypes = {
     bordered: PropTypes.bool,
     onClick: PropTypes.func
   })
-}
-
-InfoBox.defaultProps = {
-  children: null,
-  iconName: '',
-  iconColor: 'main-green',
-  helpText: '',
-  buttonProps: null
 }
 
 export default InfoBox

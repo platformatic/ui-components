@@ -10,19 +10,18 @@ import PlatformaticIcon from './PlatformaticIcon'
 import PropTypes from 'prop-types'
 import { DULLS_BACKGROUND_COLOR, MEDIUM, WHITE } from './constants'
 
-function Sidebar (props) {
-  const {
-    title,
-    labelButtonSettings,
-    defaultSelected,
-    onClickItemSelectedParent,
-    items,
-    onClickAdd,
-    addTitle,
-    onClickSettings,
-    disableClickAdd,
-    disableClickSettings
-  } = props
+function Sidebar ({
+  title = '',
+  labelButtonSettings = 'Settings',
+  defaultSelected = null,
+  onClickItemSelectedParent = () => {},
+  items = [],
+  onClickAdd = () => {},
+  addTitle = 'Add',
+  onClickSettings = () => {},
+  disableClickAdd = false,
+  disableClickSettings = false
+}) {
   const [collapsed, setCollapsed] = useState(false)
   const [selectedItem, setSelectedItem] = useState(null)
   const disabledCreateButton = disableClickAdd ? styles.disabled : ''
@@ -188,19 +187,6 @@ Sidebar.propTypes = {
    * disableClickSettings
    */
   disableClickSettings: PropTypes.bool
-}
-
-Sidebar.defaultProps = {
-  title: '',
-  labelButtonSettings: 'Settings',
-  defaultSelected: null,
-  onClickItemSelectedParent: () => {},
-  items: [],
-  onClickAdd: () => {},
-  addTitle: 'Add',
-  onClickSettings: () => {},
-  disableClickAdd: false,
-  disableClickSettings: false
 }
 
 export default Sidebar
