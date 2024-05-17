@@ -105,6 +105,7 @@ import NotCompliantServiceIcon from './NotCompliantServiceIcon'
 import OrganizationIcon from './OrganizationIcon'
 import OutOfBoxGraphQLIcon from './OutOfBoxGraphQLIcon'
 import OutdatedServiceIcon from './OutdatedServiceIcon'
+import OtherLogosGoogleIcon from './OtherLogosGoogleIcon'
 import PlatformaticComposerIcon from './PlatformaticComposerIcon'
 import PlatformaticDBIcon from './PlatformaticDBIcon'
 import PlatformaticRuntimeIcon from './PlatformaticRuntimeIcon'
@@ -264,6 +265,7 @@ export default {
   NotCompliantServiceIcon,
   OrganizationIcon,
   OutdatedServiceIcon,
+  OtherLogosGoogleIcon,
   OutOfBoxGraphQLIcon,
   PlatformaticComposerIcon,
   PlatformaticDBIcon,
