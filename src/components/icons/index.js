@@ -81,6 +81,7 @@ import GiveOwnershipIcon from './GiveOwnershipIcon'
 import GitHubRepoIcon from './GitHubRepoIcon'
 import GitHubRepo2Icon from './GitHubRepo2Icon'
 import GraphQLIcon from './GraphQLIcon'
+import K8SMetricsIcon from './K8SMetricsIcon'
 import KeyIcon from './KeyIcon'
 import ImportAppIcon from './ImportAppIcon'
 import LabelIcon from './LabelIcon'
@@ -93,8 +94,8 @@ import LogsRiskIcon from './LogsRiskIcon'
 import MetricsIcon from './MetricsIcon'
 import MetricsLoadingIcon from './MetricsLoadingIcon'
 import MissingTemplateIcon from './MissingTemplateIcon'
-
 import NameAppIcon from './NameAppIcon'
+import NodeJSMetricsIcon from './NodeJSMetricsIcon'
 import NoMetricsIcon from './NoMetricsIcon'
 import OrganizationIcon from './OrganizationIcon'
 import OutOfBoxGraphQLIcon from './OutOfBoxGraphQLIcon'
@@ -232,6 +233,7 @@ export default {
   GitHubRepo2Icon,
   GraphQLIcon,
   ImportAppIcon,
+  K8SMetricsIcon,
   KeyIcon,
   LabelIcon,
   LayersIcon,
@@ -244,6 +246,7 @@ export default {
   MetricsLoadingIcon,
   MissingTemplateIcon,
   NameAppIcon,
+  NodeJSMetricsIcon,
   NoMetricsIcon,
   OrganizationIcon,
   OutOfBoxGraphQLIcon,
