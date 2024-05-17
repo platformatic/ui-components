@@ -27,6 +27,7 @@ import ArrowUpIcon from './ArrowUpIcon'
 import BellIcon from './BellIcon'
 import BillingIcon from './BillingIcon'
 import BuiltInLoggingIcon from './BuiltInLoggingIcon'
+import BranchIcon from './BranchIcon'
 import CalendarIcon from './CalendarIcon'
 import Calendar1DayIcon from './Calendar1DayIcon'
 import Calendar7DaysIcon from './Calendar7DaysIcon'
@@ -64,6 +65,7 @@ import RunningAppIcon from './RunningAppIcon'
 import DatabaseIcon from './DatabaseIcon'
 import DatabaseMigrationIcon from './DatabaseMigrationIcon'
 import DepencenciesReloadIcon from './DepencenciesReloadIcon'
+import DeploymentHistoryIcon from './DeploymentHistoryIcon'
 import EditDocumentIcon from './EditDocumentIcon'
 import EditIcon from './EditIcon'
 import EntrypointIcon from './EntrypointIcon'
@@ -73,6 +75,7 @@ import ExpandIcon from './ExpandIcon'
 import ExploreDocIcon from './ExploreDocIcon'
 import EyeClosedIcon from './EyeClosedIcon'
 import EyeOpenedIcon from './EyeOpenedIcon'
+import FailureRateIcon from './FailureRateIcon'
 import FolderIcon from './FolderIcon'
 import FoldersIcon from './FoldersIcon'
 import GearIcon from './GearIcon'
@@ -93,12 +96,15 @@ import LogOutIcon from './LogOutIcon'
 import LogsRiskIcon from './LogsRiskIcon'
 import MetricsIcon from './MetricsIcon'
 import MetricsLoadingIcon from './MetricsLoadingIcon'
+import MetricsLogsIcon from './MetricsLogsIcon'
 import MissingTemplateIcon from './MissingTemplateIcon'
 import NameAppIcon from './NameAppIcon'
 import NodeJSMetricsIcon from './NodeJSMetricsIcon'
 import NoMetricsIcon from './NoMetricsIcon'
+import NotCompliantServiceIcon from './NotCompliantServiceIcon'
 import OrganizationIcon from './OrganizationIcon'
 import OutOfBoxGraphQLIcon from './OutOfBoxGraphQLIcon'
+import OutdatedServiceIcon from './OutdatedServiceIcon'
 import PlatformaticComposerIcon from './PlatformaticComposerIcon'
 import PlatformaticDBIcon from './PlatformaticDBIcon'
 import PlatformaticRuntimeIcon from './PlatformaticRuntimeIcon'
@@ -109,6 +115,7 @@ import PullRequestIcon from './PullRequestIcon'
 import PullRequestLoadingIcon from './PullRequestLoadingIcon'
 import RequestOwnershipIcon from './RequestOwnershipIcon'
 import RecentAppsIcon from './RecentAppsIcon'
+import ResourceIcon from './ResourceIcon'
 import RestartIcon from './RestartIcon'
 import RocketIcon from './RocketIcon'
 import RunningIcon from './RunningIcon'
@@ -147,6 +154,8 @@ import WorkspaceFailIcon from './WorkspaceFailIcon'
 import WorkspaceLoadingIcon from './WorkspaceLoadingIcon'
 import WorkspaceReadyIcon from './WorkspaceReadyIcon'
 import WorkspaceStaticIcon from './WorkspaceStaticIcon'
+import ZoomInIcon from './ZoomInIcon'
+import ZoomOutIcon from './ZoomOutIcon'
 
 export default {
   AddIcon,
@@ -178,6 +187,7 @@ export default {
   BellIcon,
   BillingIcon,
   BuiltInLoggingIcon,
+  BranchIcon,
   CalendarIcon,
   Calendar1DayIcon,
   Calendar7DaysIcon,
@@ -215,6 +225,7 @@ export default {
   DatabaseIcon,
   DatabaseMigrationIcon,
   DepencenciesReloadIcon,
+  DeploymentHistoryIcon,
   EditDocumentIcon,
   EditIcon,
   EntrypointIcon,
@@ -224,6 +235,7 @@ export default {
   ExploreDocIcon,
   EnlargeIcon,
   EntryIcon,
+  FailureRateIcon,
   FolderIcon,
   FoldersIcon,
   GearIcon,
@@ -244,11 +256,14 @@ export default {
   LogsRiskIcon,
   MetricsIcon,
   MetricsLoadingIcon,
+  MetricsLogsIcon,
   MissingTemplateIcon,
   NameAppIcon,
   NodeJSMetricsIcon,
   NoMetricsIcon,
+  NotCompliantServiceIcon,
   OrganizationIcon,
+  OutdatedServiceIcon,
   OutOfBoxGraphQLIcon,
   PlatformaticComposerIcon,
   PlatformaticDBIcon,
@@ -260,6 +275,7 @@ export default {
   PullRequestLoadingIcon,
   RequestOwnershipIcon,
   RecentAppsIcon,
+  ResourceIcon,
   RestartIcon,
   RocketIcon,
   RunningIcon,
@@ -297,5 +313,7 @@ export default {
   WorkspaceGitHubIcon,
   WorkspaceLoadingIcon,
   WorkspaceReadyIcon,
-  WorkspaceStaticIcon
+  WorkspaceStaticIcon,
+  ZoomInIcon,
+  ZoomOutIcon
 }
