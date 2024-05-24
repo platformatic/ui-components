@@ -87,6 +87,8 @@ import GraphQLIcon from './GraphQLIcon'
 import K8SMetricsIcon from './K8SMetricsIcon'
 import KeyIcon from './KeyIcon'
 import ImportAppIcon from './ImportAppIcon'
+import InfrastructureIcon from './InfrastructureIcon'
+import InternetIcon from './InternetIcon'
 import LabelIcon from './LabelIcon'
 import LayersIcon from './LayersIcon'
 import LensIcon from './LensIcon'
@@ -139,6 +141,7 @@ import StackablesPluginIcon from './StackablesPluginIcon'
 import StackablesTemplateIcon from './StackablesTemplateIcon'
 import StopIcon from './StopIcon'
 import StoppedAppIcon from './StoppedAppIcon'
+import TaxonomyIcon from './TaxonomyIcon'
 import TerminalIcon from './TerminalIcon'
 import TwoUsersIcon from './TwoUsersIcon'
 import TeamsIcon from './TeamsIcon'
@@ -246,6 +249,8 @@ export default {
   GitHubRepo2Icon,
   GraphQLIcon,
   ImportAppIcon,
+  InfrastructureIcon,
+  InternetIcon,
   K8SMetricsIcon,
   KeyIcon,
   LabelIcon,
@@ -300,6 +305,7 @@ export default {
   StackablesIcon,
   StackablesPluginIcon,
   StackablesTemplateIcon,
+  TaxonomyIcon,
   TerminalIcon,
   TeamsIcon,
   TwoUsersIcon,
