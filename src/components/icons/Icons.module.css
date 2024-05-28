@@ -6,12 +6,28 @@
   @apply stroke-rich-black;
 }
 
+.important-rich-black > circle,
+.important-rich-black > ellipse,
+.important-rich-black > rect,
+.important-rich-black > line, 
+.important-rich-black > path {
+  @apply !stroke-rich-black;
+}
+
 .error-red > circle,
 .error-red > ellipse,
 .error-red > rect,
 .error-red > line, 
 .error-red > path {
   @apply stroke-error-red;
+}
+
+.important-error-red > circle,
+.important-error-red > ellipse,
+.important-error-red > rect,
+.important-error-red > line, 
+.important-error-red > path {
+  @apply !stroke-error-red;
 }
 
 .main-dark-blue > circle,
@@ -22,12 +38,28 @@
   @apply stroke-main-dark-blue;
 }
 
+.important-main-dark-blue > circle,
+.important-main-dark-blue > ellipse,
+.important-main-dark-blue > rect,
+.important-main-dark-blue > line,
+.important-main-dark-blue > path {
+  @apply !stroke-main-dark-blue;
+}
+
 .main-green > circle,
 .main-green > ellipse,
 .main-green > rect, 
 .main-green > line, 
 .main-green > path {
   @apply stroke-main-green;
+}
+
+.important-main-green > circle,
+.important-main-green > ellipse,
+.important-main-green > rect, 
+.important-main-green > line, 
+.important-main-green > path {
+  @apply !stroke-main-green;
 }
 
 .tertiary-blue > circle,
@@ -38,6 +70,14 @@
   @apply stroke-tertiary-blue;
 }
 
+.important-tertiary-blue > circle,
+.important-tertiary-blue > ellipse,
+.important-tertiary-blue > rect,
+.important-tertiary-blue > line,
+.important-tertiary-blue > path {
+  @apply !stroke-tertiary-blue;
+}
+
 .warning-yellow > circle,
 .warning-yellow > ellipse,
 .warning-yellow > rect,
@@ -46,12 +86,28 @@
   @apply stroke-warning-yellow;
 }
 
+.important-warning-yellow > circle,
+.important-warning-yellow > ellipse,
+.important-warning-yellow > rect,
+.important-warning-yellow > line,
+.important-warning-yellow > path {
+  @apply !stroke-warning-yellow;
+}
+
 .white > circle,
 .white > ellipse,
 .white > rect,
 .white > line,
 .white > path {
   @apply stroke-white;
+}
+
+.important-white > circle,
+.important-white > ellipse,
+.important-white > rect,
+.important-white > line,
+.important-white > path {
+  @apply !stroke-white;
 }
 
 .filled-rich-black {
