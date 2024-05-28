@@ -7,9 +7,17 @@ const InternetIcon = ({
   color = MAIN_DARK_BLUE,
   size = MEDIUM,
   disabled = false,
-  inactive = false
+  inactive = false,
+  addImportantToColor = false
 }) => {
-  let className = `${styles.svgClassName} ` + styles[`${color}`]
+  let className = `${styles.svgClassName} `
+  // this will be useful if the css is used inside some integrated part, like using icons inside other svg generator
+  if (!addImportantToColor) {
+    className += styles[`${color}`]
+  } else {
+    className += styles[`important-${color}`]
+  }
+
   if (disabled) {
     className += ` ${styles.iconDisabled}`
   }
@@ -99,7 +107,11 @@ InternetIcon.propTypes = {
   /**
    * inactive
    */
-  inactive: PropTypes.bool
+  inactive: PropTypes.bool,
+  /**
+   * addImportantToColor
+   */
+  addImportantToColor: PropTypes.bool
 }
 
 export default InternetIcon
