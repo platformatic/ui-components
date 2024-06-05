@@ -1,6 +1,6 @@
 import React, { useState, cloneElement, Children } from 'react'
 import styles from './Loadable.module.css'
-import { SpinnerCircular } from 'spinners-react'
+import SpinnerCircular from './loaders/SpinnerCircular'
 
 export default function Loadable ({ ...props }) {
   // If null then loading not started, if true then loading, if false then done loading
@@ -22,7 +22,7 @@ export default function Loadable ({ ...props }) {
           ? (
             <>
               <div data-testid='loadable-content' className={styles.relative}>
-                <SpinnerCircular className={styles.spinner} thickness={180} size={60} />
+                <SpinnerCircular className={styles.spinner} size={60} />
                 <div className={styles.blurred}>{children}</div>
               </div>
             </>
