@@ -8,7 +8,7 @@ import { COLORS_BUTTON, WHITE } from '../constants'
 function SpinnerCircular ({
   className = '',
   color = WHITE,
-  size = 80,
+  size = 60,
   thickness = 4
 }) {
   const styleRing = { width: `${size}px`, height: `${size}px` }
