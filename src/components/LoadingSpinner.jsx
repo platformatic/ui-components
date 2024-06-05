@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './LoadingSpinner.module.css'
-import { SpinnerCircular } from 'spinners-react'
+import SpinnerCircular from './loaders/SpinnerCircular'
 
 function LoadingSpinner ({ loading = false }) {
   // If null then loading not started, if true then loading, if false then done loading
@@ -9,7 +9,7 @@ function LoadingSpinner ({ loading = false }) {
     ? (
       <div className={styles.container} data-testid='loading-spinner'>
         <div data-testid='loading-spinner-content' className={styles.relative}>
-          <SpinnerCircular className={styles.spinner} thickness={180} size={60} />
+          <SpinnerCircular className={styles.spinner} size={60} />
         </div>
       </div>
       )

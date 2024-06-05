@@ -2,12 +2,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './LoadingSpinnerV2.module.css'
-import { SpinnerCircular } from 'spinners-react'
+import SpinnerCircular from './loaders/SpinnerCircular'
 
 function LoadingSpinnerV2 ({
   loading = false,
   applySentences = {},
-  color = '#FFFFFF',
+  spinnerProps = {},
   containerClassName = ''
 }) {
   const defaultContainerClassName = containerClassName || `${styles.container}`
@@ -16,7 +16,7 @@ function LoadingSpinnerV2 ({
     ? (
       <div className={defaultContainerClassName} data-testid='loading-spinner'>
         <div className={styles.content}>
-          <SpinnerCircular thickness={180} size={80} color={color} />
+          <SpinnerCircular {...spinnerProps} />
           {applySentences?.sentences.length > 0 && (
             <div className={applySentences.containerClassName}>
               {applySentences.sentences.map((sentence, index) => (<p key={index} className={sentence.style}>{sentence.text}</p>))}
@@ -37,9 +37,14 @@ LoadingSpinnerV2.propTypes = {
    */
   applySentences: PropTypes.object,
   /**
-   * color
+   * spinnerProps
    */
-  color: PropTypes.string,
+  spinnerProps: PropTypes.shape({
+    className: PropTypes.string,
+    color: PropTypes.string,
+    size: PropTypes.number,
+    thickness: PropTypes.number
+  }),
   /**
    * containerClassName
    */

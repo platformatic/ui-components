@@ -12,19 +12,20 @@ export default {
 }
 
 export const Loading = (args) => (
-  <LoadingSpinner {...args}>
+  <>
+    <LoadingSpinner {...args} />
     <BorderedBox>{loremIpsum}</BorderedBox>
-  </LoadingSpinner>
+  </>
 )
 
 Loading.args = {
   loading: true
 }
 
-export const LoadsAndStops = ({ loading, ...args }) => {
-  const [showLoadingSpoinner, setShowLoadingSpoinner] = useState(args.loading)
-  const show = () => setShowLoadingSpoinner(true)
-  const hide = () => setShowLoadingSpoinner(false)
+export const LoadsAndStops = ({ loading }) => {
+  const [showLoadingSoinner, setShowLoadingSpinner] = useState(loading)
+  const show = () => setShowLoadingSpinner(true)
+  const hide = () => setShowLoadingSpinner(false)
 
   function load () {
     show()
@@ -35,10 +36,12 @@ export const LoadsAndStops = ({ loading, ...args }) => {
   }
 
   return (
-    <LoadingSpinner loading={showLoadingSpoinner} {...args}>
+    <>
+      <LoadingSpinner loading={showLoadingSoinner} />
       <Button label='Start Loading' color='error-red' onClick={() => load()} />
       <BorderedBox>{loremIpsum}</BorderedBox>
-    </LoadingSpinner>
+    </>
+
   )
 }
 LoadsAndStops.args = {
