@@ -26,5 +26,6 @@ export const CopyAndPasteDefault = Template.bind({})
 CopyAndPasteDefault.args = {
   value: 'copy this value',
   tooltipLabel: 'Tooltip show',
-  color: WHITE
+  color: WHITE,
+  internalOverHandling: true
 }

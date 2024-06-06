@@ -12,7 +12,8 @@ function CopyAndPaste ({
   timeout = 1500,
   size = MEDIUM,
   tooltipClassName = '',
-  position = POSITION_CENTER
+  position = POSITION_CENTER,
+  internalOverHandling = false
 }) {
   const [copied, setCopied] = useState(false)
 
@@ -25,7 +26,7 @@ function CopyAndPaste ({
   }
 
   return !copied
-    ? (<PlatformaticIcon size={size} iconName='CopyPasteIcon' color={color} onClick={() => copy()} />)
+    ? (<PlatformaticIcon size={size} iconName='CopyPasteIcon' color={color} onClick={() => copy()} internalOverHandling={internalOverHandling} />)
     : (
       <TooltipAbsolute
         tooltipClassName={tooltipClassName}
@@ -63,6 +64,10 @@ CopyAndPaste.propTypes = {
    * timeout
    */
   timeout: PropTypes.number,
+  /**
+   * internalOverHandling
+   */
+  internalOverHandling: PropTypes.bool,
   /**
    * timeout
    */

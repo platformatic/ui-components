@@ -1,4 +1,5 @@
 import AddIcon from './AddIcon'
+import AddEnvVariableIcon from './AddEnvVariableIcon'
 import AlertIcon from './AlertIcon'
 import AllAppsIcon from './AllAppsIcon'
 import AllInOneIcon from './AllInOneIcon'
@@ -66,6 +67,7 @@ import DatabaseIcon from './DatabaseIcon'
 import DatabaseMigrationIcon from './DatabaseMigrationIcon'
 import DepencenciesReloadIcon from './DepencenciesReloadIcon'
 import DeploymentHistoryIcon from './DeploymentHistoryIcon'
+import DownloadIcon from './DownloadIcon'
 import EditDocumentIcon from './EditDocumentIcon'
 import EditIcon from './EditIcon'
 import EntrypointIcon from './EntrypointIcon'
@@ -163,6 +165,7 @@ import ZoomOutIcon from './ZoomOutIcon'
 
 export default {
   AddIcon,
+  AddEnvVariableIcon,
   AlertIcon,
   AllAppsIcon,
   AllInOneIcon,
@@ -230,6 +233,7 @@ export default {
   DatabaseMigrationIcon,
   DepencenciesReloadIcon,
   DeploymentHistoryIcon,
+  DownloadIcon,
   EditDocumentIcon,
   EditIcon,
   EntrypointIcon,
