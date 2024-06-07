@@ -84,7 +84,7 @@ function ButtonOnlyIcon ({
   return (
     <button className={`${baseButtonClassName} ${buttonClassName} ${restClassName()}`} disabled={disabled} alt={altLabel} {...rest} onMouseLeave={() => setHover(false)} onMouseOver={() => setHover(true)}>
       <div className={`${contentClassName} ${backgroundClassName}`}>
-        {platformaticIcon ? <PlatformaticIcon key='center' iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' size={MEDIUM} onClick={null} disabled={disabled} /> : null}
+        {platformaticIcon ? <PlatformaticIcon key='center' iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' size={platformaticIcon?.size ?? MEDIUM} onClick={null} disabled={disabled} /> : null}
       </div>
     </button>
   )
@@ -136,7 +136,8 @@ ButtonOnlyIcon.propTypes = {
    */
   platformaticIcon: PropTypes.shape({
     iconName: PropTypes.string,
-    color: PropTypes.string
+    color: PropTypes.string,
+    size: PropTypes.string
   }),
   /**
    * Selected: default false
