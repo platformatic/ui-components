@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
+import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE, EXTRA_MEDIUM } from '../constants'
 
 const DeploymentHistoryIcon = ({
   color = MAIN_DARK_BLUE,
@@ -63,6 +63,29 @@ const DeploymentHistoryIcon = ({
           <circle cx='12.75' cy='12' r='0.75' fill='none' className={filledClassName} />
           <circle cx='12.75' cy='14.25' r='0.75' fill='none' className={filledClassName} />
           <circle cx='12.75' cy='16.5' r='0.75' fill='none' className={filledClassName} />
+        </svg>
+      )
+      break
+    case EXTRA_MEDIUM:
+      icon = (
+        <svg
+          width={32}
+          height={32}
+          viewBox='0 0 32 32'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+          className={className}
+        >
+          <rect x='14' y='12' width='14' height='14' rx='1' stroke='none' strokeWidth={1.5} />
+          <path d='M20 16H25' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
+          <path d='M20 19H25' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
+          <path d='M20 22H25' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
+          <path d='M14.5642 10L14.5642 9.66979C14.5642 9.47499 14.5073 9.28443 14.4005 9.12151L11.461 4.63781C11.2635 4.33666 10.8221 4.33666 10.6247 4.63781L7.68516 9.12151C7.57836 9.28443 7.52146 9.47505 7.52146 9.66985C7.52146 12.6583 7.52146 13.6376 7.52146 14.071L4 18.2673L8.22565 18.2673L8.92992 19.9458L11.4537 19.9458' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M7.521 22.4644L7.521 25.8214' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='bevel' />
+          <path d='M11.0444 24.1431L11.0444 27.5001' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='bevel' />
+          <circle cx='17' cy='16' r='1' fill='none' className={filledClassName} />
+          <circle cx='17' cy='19' r='1' fill='none' className={filledClassName} />
+          <circle cx='17' cy='22' r='1' fill='none' className={filledClassName} />
         </svg>
       )
       break

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
+import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE, EXTRA_MEDIUM } from '../constants'
 
 const AppDetailsIcon = ({
   color = MAIN_DARK_BLUE,
@@ -48,6 +48,22 @@ const AppDetailsIcon = ({
           <path d='M15.9904 9V6.75L9.49519 3L3 6.75V14.25L7.99512 17.1339' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
           <circle cx='13.8701' cy='14.875' r='4.375' stroke='none' strokeWidth={1.5} />
           <path d='M19.9951 21L17.3701 18.375' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+        </svg>
+      )
+      break
+    case EXTRA_MEDIUM:
+      icon = (
+        <svg
+          width={32}
+          height={32}
+          viewBox='0 0 32 32'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+          className={className}
+        >
+          <path d='M21.3205 12V9L12.6603 4L4 9V19L10.6602 22.8452' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <circle cx='18.4935' cy='19.8333' r='5.83333' stroke='none' strokeWidth={1.5} />
+          <path d='M26.6602 28L23.1602 24.5' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
 
         </svg>
       )

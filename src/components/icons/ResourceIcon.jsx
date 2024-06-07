@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
+import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE, EXTRA_MEDIUM } from '../constants'
 
 const ResourceIcon = ({
   color = MAIN_DARK_BLUE,
@@ -58,6 +58,27 @@ const ResourceIcon = ({
           <path d='M9.59033 9.61475H14.25' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
           <path d='M9.59033 12.5654H14.25' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
           <path d='M9.59033 15.5164H14.25' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+        </svg>
+      )
+      break
+    case EXTRA_MEDIUM:
+      icon = (
+        <svg
+          width={32}
+          height={32}
+          viewBox='0 0 32 32'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+          className={className}
+        >
+          <path d='M14 10V5C14 4.44772 13.5523 4 13 4H5C4.44772 4 4 4.44772 4 5V13C4 13.5523 4.44772 14 5 14H10.25' stroke='none' strokeWidth={1.5} />
+          <path d='M18 23.8333L18 27C18 27.5523 18.4477 28 19 28L27 28C27.5523 28 28 27.5523 28 27L28 19C28 18.4477 27.5523 18 27 18L21.75 18' stroke='none' strokeWidth={1.5} />
+          <path d='M22 14L27 14C27.5523 14 28 13.5523 28 13L28 5C28 4.44772 27.5523 4 27 4L19 4C18.4477 4 18 4.44772 18 5L18 9' stroke='none' strokeWidth={1.5} />
+          <path d='M10 18L5 18C4.44772 18 4 18.4477 4 19L4 27C4 27.5523 4.44771 28 5 28L13 28C13.5523 28 14 27.5523 14 27L14 23' stroke='none' strokeWidth={1.5} />
+          <rect x='10' y='10' width='12' height='14' rx='1' stroke='none' strokeWidth={1.5} />
+          <path d='M12.7871 12.8198H19' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M12.7871 16.7539H19' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M12.7871 20.6885H19' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
