@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
+import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE, EXTRA_MEDIUM } from '../constants'
 
 const PlatformaticServiceIcon = ({
   color = MAIN_DARK_BLUE,
@@ -34,7 +34,6 @@ const PlatformaticServiceIcon = ({
           <path d='M4 5.09668H2V11.2902H11.6V11.1289' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
           <rect x='5.2002' y='11.2903' width='3.2' height='1.54839' stroke='none' />
           <path d='M3.6001 12.8386H10.0001V13.9999H3.6001V12.8386Z' stroke='none' strokeLinejoin='round' />
-
         </svg>
       )
       break
@@ -53,7 +52,24 @@ const PlatformaticServiceIcon = ({
           <path d='M6 7.64502H3V16.9353H17.4V16.6934' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
           <rect x='7.7998' y='16.9353' width='4.8' height='2.32258' stroke='none' strokeWidth={1.5} />
           <path d='M5.3999 19.2578H14.9999V20.9997H5.3999V19.2578Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
-
+        </svg>
+      )
+      break
+    case EXTRA_MEDIUM:
+      icon = (
+        <svg
+          width={32}
+          height={32}
+          viewBox='0 0 32 32'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+          className={className}
+        >
+          <path d='M21.6261 4.44907V5.42722C21.6261 5.61338 21.7479 5.78158 21.9316 5.8469L23.2427 6.31883C23.4212 6.38251 23.6237 6.33842 23.7542 6.20452L24.384 5.56112C24.5693 5.3717 24.8851 5.37007 25.0722 5.55949L26.5927 7.09122C26.7626 7.26268 26.7643 7.52886 26.5979 7.70196L25.7878 8.54784C25.6591 8.68174 25.6282 8.87606 25.7089 9.03936L26.2581 10.1661C26.3353 10.3245 26.5035 10.4274 26.6871 10.4274H27.528C27.7889 10.4274 28 10.6282 28 10.8765V12.7674C28 13.0157 27.7889 13.2165 27.528 13.2165H26.6442C26.44 13.2165 26.2581 13.3423 26.1946 13.5268L25.7484 14.8283C25.6952 14.9818 25.7329 15.15 25.8479 15.2692L26.5738 16.0318C26.7506 16.2179 26.7335 16.507 26.5344 16.6719L24.8611 18.0648C24.6689 18.2248 24.3771 18.2102 24.2038 18.0322L23.6203 17.4345C23.4933 17.3039 23.2959 17.2565 23.1192 17.3153L21.9007 17.7203C21.7102 17.7839 21.5832 17.9538 21.5832 18.1448V19.0348C21.5832 19.283 21.3721 19.4839 21.1112 19.4839H18.8871C18.6262 19.4839 18.4151 19.283 18.4151 19.0348V18.1448C18.4151 17.9538 18.2881 17.7839 18.0976 17.7203L16.8791 17.3153C16.7023 17.2565 16.505 17.3022 16.378 17.4345L15.7945 18.0322C15.6212 18.2102 15.3294 18.2248 15.1372 18.0648L13.4639 16.6719C13.2648 16.507 13.2477 16.2179 13.4244 16.0318L14.1504 15.2692C14.2636 15.15 14.3014 14.9818 14.2499 14.8283L13.8037 13.5268C13.7402 13.3423 13.5583 13.2165 13.3541 13.2165H12.472C12.2111 13.2165 12 13.0157 12 12.7674V10.8765C12 10.6282 12.2111 10.4274 12.472 10.4274H13.3129C13.4965 10.4274 13.6647 10.3261 13.7419 10.1661L14.2911 9.03936C14.3718 8.87443 14.3392 8.68174 14.2122 8.54784L13.4021 7.70196C13.2357 7.52886 13.2374 7.26105 13.4073 7.09122L14.9278 5.55949C15.1149 5.3717 15.4307 5.3717 15.616 5.56112L16.2458 6.20452C16.3763 6.33842 16.5788 6.38251 16.7573 6.31883L18.0684 5.8469C18.2521 5.78158 18.3739 5.61338 18.3739 5.42722V4.44907C18.3739 4.20086 18.585 4 18.8459 4H21.1541C21.415 4 21.6261 4.20086 21.6261 4.44907Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M23 14H17L20 8L23 14Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M8 10.1934H4V22.5805H23.2V22.2579' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <rect x='10.3999' y='22.5806' width='6.4' height='3.09677' stroke='none' strokeWidth={1.5} />
+          <path d='M7.2002 25.6772H20.0002V27.9998H7.2002V25.6772Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
         </svg>
       )
       break

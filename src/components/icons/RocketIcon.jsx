@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
+import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE, EXTRA_MEDIUM } from '../constants'
 
 const RocketIcon = ({
   color = MAIN_DARK_BLUE,
@@ -54,6 +54,24 @@ const RocketIcon = ({
           <path d='M17.6052 13.816L19.5 15.7108' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='bevel' />
           <circle cx={9} cy={9} r={1.5} stroke='none' strokeWidth={1.5} />
 
+        </svg>
+      )
+      break
+    case EXTRA_MEDIUM:
+      icon = (
+        <svg
+          width={32}
+          height={32}
+          viewBox='0 0 32 32'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+          className={className}
+        >
+          <path d='M12.1054 17.1576L8.77172 13.8239C8.63919 13.6914 8.54619 13.5239 8.50405 13.3413L7.23262 7.83176C7.14953 7.47172 7.47221 7.14905 7.83225 7.23214L13.3418 8.50356C13.5244 8.5457 13.6915 8.63832 13.824 8.77085L17.1581 12.1049L22.8423 12.7366L19.8107 15.7682L20.5686 17.5366L17.537 20.5682L15.7685 19.8103L12.7369 22.8419L12.1054 17.1576Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+          <path d='M18.4209 23.4736L20.9472 26' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='bevel' />
+          <path d='M22.2109 22.21L24.7373 24.7363' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='bevel' />
+          <path d='M23.4736 18.4209L26 20.9472' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='bevel' />
+          <circle cx='12' cy='11.9995' r='2' stroke='none' strokeWidth={1.5} />
         </svg>
       )
       break

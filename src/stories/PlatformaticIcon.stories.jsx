@@ -4,6 +4,7 @@ import Icons from '../components/icons'
 import {
   COLORS_ICON,
   EXTRA_LARGE,
+  EXTRA_MEDIUM,
   EXTRA_SMALL,
   LARGE,
   MEDIUM,
@@ -101,6 +102,14 @@ const AllIconsTemplate = (args) => {
                 key={icon}
                 iconName={icon}
                 size={MEDIUM}
+                {...args}
+              />
+            </div>
+            <div style={col}>
+              <PlatformaticIcon
+                key={icon}
+                iconName={icon}
+                size={EXTRA_MEDIUM}
                 {...args}
               />
             </div>

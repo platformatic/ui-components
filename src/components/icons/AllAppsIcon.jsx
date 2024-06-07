@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
+import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE, EXTRA_MEDIUM } from '../constants'
 
 const AllAppsIcon = ({
   color = MAIN_DARK_BLUE,
@@ -57,6 +57,26 @@ const AllAppsIcon = ({
           <path d='M16.5 3L19.0981 4.5V7.5L16.5 9L13.9019 7.5V4.5L16.5 3Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
           <path d='M16.5 15L19.0981 16.5V19.5L16.5 21L13.9019 19.5V16.5L16.5 15Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
 
+        </svg>
+      )
+      break
+    case EXTRA_MEDIUM:
+      icon = (
+        <svg
+          width={32}
+          height={32}
+          viewBox='0 0 32 32'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+          className={className}
+        >
+          <path d='M8.5 0.999512L12.8301 3.49951V8.49951L8.5 10.9995L4.16987 8.49951V3.49951L8.5 0.999512Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+          <path d='M8.5 20.9995L12.8301 23.4995V28.4995L8.5 30.9995L4.16987 28.4995V23.4995L8.5 20.9995Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+          <path d='M16 10.9995L20.3301 13.4995V18.4995L16 20.9995L11.6699 18.4995V13.4995L16 10.9995Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+          <path d='M1 10.9995L5.33013 13.4995V18.4995L1 20.9995' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M30.3296 10.9995L25.9995 13.4995V18.4995L30.3296 20.9995' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M23.5 0.999512L27.8301 3.49951V8.49951L23.5 10.9995L19.1699 8.49951V3.49951L23.5 0.999512Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+          <path d='M23.5 20.9995L27.8301 23.4995V28.4995L23.5 30.9995L19.1699 28.4995V23.4995L23.5 20.9995Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
         </svg>
       )
       break

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
+import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE, EXTRA_MEDIUM } from '../constants'
 
 const InfrastructureIcon = ({
   color = MAIN_DARK_BLUE,
@@ -63,6 +63,29 @@ const InfrastructureIcon = ({
           <path d='M12.1069 20.9664C12.7696 20.9594 13.2997 20.4166 13.2909 19.7539C13.282 19.0912 12.7376 18.5597 12.0749 18.5667C11.4122 18.5737 10.8822 19.1166 10.891 19.7792C10.8998 20.4419 11.4442 20.9735 12.1069 20.9664Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
           <path d='M19.4819 17.0801C20.1446 17.0731 20.6747 16.5302 20.6659 15.8675C20.657 15.2048 20.1126 14.6733 19.4499 14.6803C18.7872 14.6873 18.2572 15.2302 18.266 15.8929C18.2748 16.5556 18.8192 17.0871 19.4819 17.0801Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
           <path d='M4.23192 17.081C4.89462 17.0739 5.42469 16.5311 5.41586 15.8684C5.40703 15.2057 4.86264 14.6742 4.19993 14.6812C3.53723 14.6882 3.00716 15.2311 3.01599 15.8937C3.02482 16.5564 3.56921 17.088 4.23192 17.081Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+        </svg>
+      )
+      break
+    case EXTRA_MEDIUM:
+      icon = (
+        <svg
+          width={32}
+          height={32}
+          viewBox='0 0 32 32'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+          className={className}
+        >
+          <path d='M7 11.9995H16M16 11.9995V5.99951M16 11.9995L26 20.9995M5 20.9995L15 19.9995L26 10.9995' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M5.83252 10.8414V21.2964L16.0006 26.5232L26.1671 21.2964V10.8414L16.0006 5.61328L5.83252 10.8414Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M16.1 7.19951C16.9837 7.19951 17.7 6.48317 17.7 5.59951C17.7 4.71586 16.9837 3.99951 16.1 3.99951C15.2163 3.99951 14.5 4.71586 14.5 5.59951C14.5 6.48317 15.2163 7.19951 16.1 7.19951Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M16.1 13.1995C16.9837 13.1995 17.7 12.4832 17.7 11.5995C17.7 10.7159 16.9837 9.99951 16.1 9.99951C15.2163 9.99951 14.5 10.7159 14.5 11.5995C14.5 12.4832 15.2163 13.1995 16.1 13.1995Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M16.1 21.1995C16.9837 21.1995 17.7 20.4832 17.7 19.5995C17.7 18.7159 16.9837 17.9995 16.1 17.9995C15.2163 17.9995 14.5 18.7159 14.5 19.5995C14.5 20.4832 15.2163 21.1995 16.1 21.1995Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M5.62148 12.3816C6.50514 12.3816 7.22148 11.6653 7.22148 10.7816C7.22148 9.89798 6.50514 9.18164 5.62148 9.18164C4.73783 9.18164 4.02148 9.89798 4.02148 10.7816C4.02148 11.6653 4.73783 12.3816 5.62148 12.3816Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M25.9545 12.3816C26.8381 12.3816 27.5545 11.6653 27.5545 10.7816C27.5545 9.89798 26.8381 9.18164 25.9545 9.18164C25.0708 9.18164 24.3545 9.89798 24.3545 10.7816C24.3545 11.6653 25.0708 12.3816 25.9545 12.3816Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M16.1426 27.9548C17.0262 27.9454 17.7329 27.2216 17.7211 26.338C17.7094 25.4544 16.9835 24.7457 16.0999 24.7551C15.2163 24.7644 14.5095 25.4883 14.5213 26.3718C14.5331 27.2554 15.2589 27.9641 16.1426 27.9548Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M25.9756 22.7731C26.8592 22.7638 27.5659 22.0399 27.5542 21.1564C27.5424 20.2728 26.8165 19.5641 25.9329 19.5734C25.0493 19.5828 24.3426 20.3066 24.3543 21.1902C24.3661 22.0738 25.092 22.7825 25.9756 22.7731Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M5.64255 22.7741C6.52616 22.7648 7.23292 22.0409 7.22114 21.1573C7.20937 20.2738 6.48352 19.5651 5.59991 19.5744C4.7163 19.5837 4.00955 20.3076 4.02132 21.1912C4.0331 22.0747 4.75895 22.7835 5.64255 22.7741Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
+import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE, EXTRA_MEDIUM } from '../constants'
 
 const MetricsLogsIcon = ({
   color = MAIN_DARK_BLUE,
@@ -67,6 +67,31 @@ const MetricsLogsIcon = ({
           <path d='M12.25 14.875H16.625' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
           <path d='M13.125 16.625H19.25' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
           <path d='M13.125 18.375H19.25' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
+        </svg>
+      )
+      break
+    case EXTRA_MEDIUM:
+      icon = (
+        <svg
+          width={32}
+          height={32}
+          viewBox='0 0 32 32'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+          className={className}
+        >
+          <rect x='7.81836' y='9.68408' width='3.81819' height='13.2632' rx='0.5' stroke='none' strokeWidth={1.5} />
+          <path d='M15.4541 11.5788V6.39453C15.4541 6.11839 15.678 5.89453 15.9541 5.89453H18.7723C19.0484 5.89453 19.2723 6.11839 19.2723 6.39453V11.5788' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
+          <path d='M23.1818 11L23.0974 4.5065C23.0938 4.22784 23.3187 4 23.5974 4H26.4153C26.6889 4 26.9117 4.21991 26.9153 4.49349L27 11' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
+          <path d='M4 4V26.7369H11' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <rect x='14' y='14' width='14' height='14' rx='1' stroke='none' strokeWidth={1.5} />
+          <path d='M14 17.5H28' stroke='none' strokeWidth={1.5} />
+          <circle cx='15.7498' cy='15.7498' r='0.583333' fill='none' className={filledClassName} />
+          <ellipse cx='17.4998' cy='15.7498' rx='0.583334' ry='0.583333' fill='none' className={filledClassName} />
+          <ellipse cx='19.2498' cy='15.7498' rx='0.583334' ry='0.583333' fill='none' className={filledClassName} />
+          <path d='M16.3335 19.8335H22.1668' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
+          <path d='M17.5 22.1665H25.6667' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
+          <path d='M17.5 24.5H25.6667' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
         </svg>
       )
       break

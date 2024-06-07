@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
+import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE, EXTRA_MEDIUM } from '../constants'
 
 const CheckListIcon = ({
   color = MAIN_DARK_BLUE,
@@ -59,6 +59,27 @@ const CheckListIcon = ({
           <path d='M7.5 13.5L9 15L11.25 12.75' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
           <path d='M7.5 17.25L9 18.75L11.25 16.5' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
 
+        </svg>
+      )
+      break
+    case EXTRA_MEDIUM:
+      icon = (
+        <svg
+          width={32}
+          height={32}
+          viewBox='0 0 32 32'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+          className={className}
+        >
+          <path d='M22 5.99951H25C25.5523 5.99951 26 6.44723 26 6.99951V26.9995C26 27.5518 25.5523 27.9995 25 27.9995H7C6.44772 27.9995 6 27.5518 6 26.9995V6.99951C6 6.44723 6.44772 5.99951 7 5.99951H10' stroke='none' strokeWidth={1.5} />
+          <rect x='10' y='3.99951' width='12' height='4' rx='1' stroke='none' strokeWidth={1.5} />
+          <path d='M18 13.9995L22 13.9995' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M18 23.9995L22 23.9995' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M10 12.9995L12 14.9995L15 11.9995' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M18 18.9995L22 18.9995' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M10 17.9995L12 19.9995L15 16.9995' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M10 22.9995L12 24.9995L15 21.9995' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
