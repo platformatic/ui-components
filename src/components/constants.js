@@ -18,10 +18,11 @@ export const NONE = 'none'
 export const EXTRA_SMALL = 'extra-small'
 export const SMALL = 'small'
 export const MEDIUM = 'medium'
+export const EXTRA_MEDIUM = 'extra-medium'
 export const LARGE = 'large'
 export const EXTRA_LARGE = 'extra-large'
 
-export const SIZES = [EXTRA_SMALL, SMALL, MEDIUM, LARGE, EXTRA_LARGE]
+export const SIZES = [EXTRA_SMALL, SMALL, MEDIUM, EXTRA_MEDIUM, LARGE, EXTRA_LARGE]
 export const PADDING_SIZES = [NONE, ...SIZES]
 export const CHANGE_BACKGROUND_COLOR = 'background-color-change'
 export const BOX_SHADOW = 'box-shadow'
