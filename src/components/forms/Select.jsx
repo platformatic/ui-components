@@ -199,7 +199,8 @@ Select.propTypes = {
     label: PropTypes.string,
     value: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.number
+      PropTypes.number,
+      PropTypes.func
     ]),
     iconName: PropTypes.string,
     iconSize: PropTypes.string,

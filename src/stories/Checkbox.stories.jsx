@@ -4,8 +4,7 @@ import { WHITE } from '../components/constants'
 const divStyle = {
   width: '100%',
   height: 'auto',
-  padding: '50px',
-  backgroundColor: 'white'
+  padding: '50px'
 }
 
 export default {
