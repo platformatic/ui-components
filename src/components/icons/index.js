@@ -104,6 +104,8 @@ import MetricsLogsIcon from './MetricsLogsIcon'
 import MissingTemplateIcon from './MissingTemplateIcon'
 import NameAppIcon from './NameAppIcon'
 import NodeJSMetricsIcon from './NodeJSMetricsIcon'
+import NoActivitiesIcon from './NoActivitiesIcon'
+import NoDeploymentsIcon from './NoDeploymentsIcon'
 import NoMetricsIcon from './NoMetricsIcon'
 import NotCompliantServiceIcon from './NotCompliantServiceIcon'
 import OrganizationIcon from './OrganizationIcon'
@@ -126,6 +128,7 @@ import RocketIcon from './RocketIcon'
 import RunningIcon from './RunningIcon'
 import SendIcon from './SendIcon'
 import ServiceIcon from './ServiceIcon'
+import ServicesWorkingIcon from './ServicesWorkingIcon'
 import SlotIcon from './SlotIcon'
 import SwitchIcon from './SwitchIcon'
 import SocialDiscordIcon from './SocialDiscordIcon'
@@ -270,6 +273,8 @@ export default {
   MissingTemplateIcon,
   NameAppIcon,
   NodeJSMetricsIcon,
+  NoActivitiesIcon,
+  NoDeploymentsIcon,
   NoMetricsIcon,
   NotCompliantServiceIcon,
   OrganizationIcon,
@@ -292,6 +297,7 @@ export default {
   RunningIcon,
   SendIcon,
   ServiceIcon,
+  ServicesWorkingIcon,
   StopIcon,
   StoppedAppIcon,
   SlotIcon,
