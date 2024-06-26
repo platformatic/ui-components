@@ -1,0 +1,129 @@
+.button {
+  @apply rounded text-center cursor-pointer font-normal border border-solid box-border;
+  padding-block: 0px;
+  padding-inline: 0px;
+}
+.content {
+  @apply rounded flex items-center justify-center gap-x-2;
+  background: transparent;
+}
+.fontBold {
+  @apply font-semibold;
+}
+.button-small {
+  @apply p-1 text-sm;
+}
+.button-medium {
+  @apply p-1;
+}
+.button-large {
+  @apply p-2;
+}
+.button-extra-large {
+  @apply p-2 md:p-2.5;
+}
+
+.margin-right-medium,
+.margin-right-small {
+  @apply mr-1;
+}
+.margin-right-large {
+  @apply mr-2;
+}
+.margin-right-extra-large {
+  @apply mr-3;
+}
+.color-main-green {
+  @apply text-main-green border-main-green;
+}
+.color-light-green {
+  @apply text-light-green border-light-green;
+}
+.color-dark-green {
+  @apply text-dark-green border-dark-green;
+}
+.color-main-dark-blue {
+  @apply text-main-dark-blue border-main-dark-blue;
+}
+.color-dark-blue{
+  @apply text-dark-blue border-dark-blue;
+}
+.color-light-blue{
+  @apply text-light-blue border-light-blue;
+}
+.color-white{
+  @apply text-white;
+}
+.color-error-red{
+  @apply text-error-red border-error-red;
+}
+.color-tertiary-blue{
+  @apply text-tertiary-blue border-tertiary-blue;
+}
+.color-transparent{
+  @apply text-transparent border-transparent;
+}
+.color-rich-black{
+  @apply text-rich-black border-rich-black;
+}
+
+.no-border {
+  @apply border-0;
+}
+.disabled {
+  @apply opacity-30 cursor-default;
+}
+.hover-box-shadow-main-green {
+  @apply hover:shadow-main-green;
+}
+.hover-box-shadow-light-green {
+  @apply hover:shadow-light-green;
+}
+.hover-box-shadow-dark-green {
+  @apply hover:shadow-dark-green;
+}
+.hover-box-shadow-main-dark-blue {
+  @apply hover:shadow-main-dark-blue;
+}
+.hover-box-shadow-dark-blue {
+  @apply hover:shadow-dark-blue;
+}
+.hover-box-shadow-light-blue {
+  @apply hover:shadow-light-blue;
+}
+.hover-box-shadow-white {
+  @apply hover:shadow-white;
+}
+.hover-box-shadow-error-red {
+  @apply hover:shadow-error-red;
+}
+.hover-box-shadow-tertiary-blue {
+  @apply hover:shadow-tertiary-blue;
+}
+.hover-box-shadow-rich-black {
+  @apply hover:shadow-rich-black;
+}
+
+.underline-effect {
+  @apply hover:underline;
+}
+
+.fullWidth {
+  @apply w-full;
+}
+.label {
+  @apply w-max;
+}
+.inactive {
+  @apply opacity-70;
+}
+.active {
+  @apply opacity-100;
+}
+.cursorDefault {
+  @apply cursor-default;
+}
+
+.fullRounded {
+  @apply rounded-full;
+}

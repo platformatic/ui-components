@@ -1,7 +1,7 @@
 'use strict'
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import styles from './Button.module.css'
+import styles from './ButtonOnlyIcon.module.css'
 import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
 import { SIZES, COLORS_BUTTON, BOX_SHADOW, UNDERLINE, HOVER_EFFECTS_BUTTONS, DULLS_BACKGROUND_COLOR, MAIN_DARK_BLUE, LARGE, MEDIUM, TRANSPARENT } from './constants'
@@ -19,6 +19,7 @@ function ButtonOnlyIcon ({
   fullWidth = false,
   platformaticIcon = null,
   selected = false,
+  fullRounded = false,
   ...rest
 }) {
   let contentClassName = `${styles.content} `
@@ -31,6 +32,10 @@ function ButtonOnlyIcon ({
   baseButtonClassName += ` ${styles.button} `
   if (fullWidth) {
     baseButtonClassName += ` ${styles.fullWidth}`
+  }
+  if (fullRounded) {
+    baseButtonClassName += ` ${styles.fullRounded}`
+    contentClassName += ` ${styles.fullRounded} `
   }
   if (selected) baseButtonClassName += ' ' + commonStyles[`selected-background-color-${color}`]
   const [hover, setHover] = useState(false)

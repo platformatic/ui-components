@@ -66,7 +66,11 @@ export default {
     },
     selected: {
       type: 'boolean'
+    },
+    fullRounded: {
+      type: 'boolean'
     }
+
   }
 }
 
