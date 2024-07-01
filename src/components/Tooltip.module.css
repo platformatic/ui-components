@@ -60,7 +60,8 @@
 }
 /* CSS border triangles */
 .left::before {
-  left: auto;
+  @apply border-l-white;
+  left: calc(100% + 6px);
   right: calc(6px * -2);
   top: 50%;
   transform: translateX(0) translateY(-50%);
