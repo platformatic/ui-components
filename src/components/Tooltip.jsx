@@ -15,8 +15,8 @@ function Tooltip ({
   offset = 0
 }) {
   let timeout
-  const [active, setActive] = useState(activeDependsOnVisible ? visible : false)
-  // const [active, setActive] = useState(true)
+  // const [active, setActive] = useState(activeDependsOnVisible ? visible : false)
+  const [active, setActive] = useState(true)
   let componentClassName = tooltipClassName || styles.tooltipTipBaseClass
   componentClassName += ` ${styles.tooltipTip} ` + styles[`${direction}`]
   const fixedStyle = { top: '0px', left: '0px' }
@@ -31,17 +31,21 @@ function Tooltip ({
   if (wrapperRef.current) {
     const referenceBoundingClientRect = wrapperRef.current.getBoundingClientRect()
     if (referenceBoundingClientRect) {
-      let topPosition
       let leftPosition
 
       switch (direction) {
         case DIRECTION_BOTTOM:
-          topPosition = referenceBoundingClientRect.y - (referenceBoundingClientRect.height) - offset
-          fixedStyle.top = `${topPosition}px`
-          // fixedStyle.bottom = `calc(${offset}px *-1)`
+          fixedStyle.top = `${referenceBoundingClientRect.y + referenceBoundingClientRect.height + offset}px`
+          fixedStyle.left = `${referenceBoundingClientRect.x + (referenceBoundingClientRect.width / 2)}px`
+          fixedStyle.transform = 'translateX(-50%)'
+          break
+        case DIRECTION_LEFT:
+          fixedStyle.top = `${referenceBoundingClientRect.y + referenceBoundingClientRect.height / 2}px`
+          leftPosition = referenceBoundingClientRect.x - (2 * referenceBoundingClientRect.width) + offset
+          fixedStyle.left = `${leftPosition}px`
           break
         case DIRECTION_RIGHT:
-        case DIRECTION_LEFT:
+          fixedStyle.top = `${referenceBoundingClientRect.y + referenceBoundingClientRect.height / 2}px`
           leftPosition = referenceBoundingClientRect.x + referenceBoundingClientRect.width + offset
           fixedStyle.left = `${leftPosition}px`
           break

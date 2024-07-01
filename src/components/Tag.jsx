@@ -3,7 +3,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import commonStyles from './Common.module.css'
 import styles from './Tag.module.css'
-import { COLORS_BUTTON, OPACITY_100, OPACITY_20, OPACITY_30, OPACITY_60, WHITE } from './constants'
+import { COLORS_BUTTON, OPACITY_100, OPACITY_20, OPACITY_30, OPACITY_60, SIZES, WHITE } from './constants'
+import PlatformaticIcon from './PlatformaticIcon'
 
 function Tag ({
   text = '',
@@ -12,7 +13,9 @@ function Tag ({
   backgroundColor = '',
   bordered = true,
   opaque = OPACITY_100,
-  fullRounded = false
+  fullRounded = false,
+  platformaticIcon = null,
+  paddingClass = ''
 }) {
   const stylesColor = textClassName || commonStyles[`text--${color}`]
   let stylesBorderColor = ''
@@ -25,10 +28,14 @@ function Tag ({
   }
   const stylesBackgroundColor = backgroundColor ? commonStyles[`background-color-${backgroundColor}`] : ''
   const opacity = commonStyles[`background-color-opaque-${opaque}`]
-  const className = `${styles.tag} ${stylesColor} ${stylesBorderColor} ${stylesBackgroundColor} ${opacity}`
+  let className = `${styles.container} ${styles.tag} ${stylesBorderColor} ${stylesBackgroundColor} ${opacity} `
+  className += paddingClass || `${styles.padding} `
 
   return (
-    <span className={className}>{text}</span>
+    <div className={className}>
+      {platformaticIcon && <PlatformaticIcon iconName={platformaticIcon.iconName} color={platformaticIcon.color} size={platformaticIcon.size} onClick={null} />}
+      <span className={stylesColor}>{text}</span>
+    </div>
   )
 }
 Tag.propTypes = {
@@ -40,7 +47,6 @@ Tag.propTypes = {
    * text
    */
   text: PropTypes.string,
-  /**
   /**
    * textClassName
    */
@@ -60,8 +66,19 @@ Tag.propTypes = {
   /**
      * fullRounded
      */
-  fullRounded: PropTypes.bool
-
+  fullRounded: PropTypes.bool,
+  /**
+   * platformaticIcon
+   */
+  platformaticIcon: PropTypes.shape({
+    iconName: PropTypes.string,
+    color: PropTypes.oneOf(COLORS_BUTTON),
+    size: PropTypes.oneOf(SIZES)
+  }),
+  /**
+   * paddingClass
+   */
+  paddingClass: PropTypes.string
 }
 
 export default Tag

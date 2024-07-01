@@ -71,17 +71,19 @@ export default {
 }
 
 const TemplateWithButton = (args) => (
-  <Tooltip {...args}>
-    <Button
-      color={RICH_BLACK}
-      backgroundColor={WHITE}
-      onClick={() => alert('clicked Disabled WHITE')}
-      bordered={false}
-      hoverEffect={CHANGE_BACKGROUND_COLOR}
-      hoverEffectProperties={{ changeBackgroundColor: ANTI_FLASH_WHITE }}
-      label='Test button'
-    />
-  </Tooltip>
+  <div style={{ width: '100%', textAlign: 'center' }}>
+    <Tooltip {...args}>
+      <Button
+        color={RICH_BLACK}
+        backgroundColor={WHITE}
+        onClick={() => alert('clicked Disabled WHITE')}
+        bordered={false}
+        hoverEffect={CHANGE_BACKGROUND_COLOR}
+        hoverEffectProperties={{ changeBackgroundColor: ANTI_FLASH_WHITE }}
+        label='Test button'
+      />
+    </Tooltip>
+  </div>
 )
 
 export const TooltipBase = TemplateWithButton.bind({})

@@ -1,9 +1,15 @@
 .tag {
-  @apply rounded-md px-3 py-1 w-fit;
+  @apply rounded-md w-fit;
 }
 .bordered {
   @apply border border-solid;
 }
 .fullRounded {
   @apply rounded-full;
+}
+.container {
+  @apply flex flex-row gap-x-2 items-center border-0;
+}
+.padding {
+  @apply px-3 py-1
 }
