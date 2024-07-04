@@ -90,6 +90,7 @@ export const TooltipBase = TemplateWithButton.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 TooltipBase.args = {
   content: <span>I'm a tooltip over a button</span>,
-  delay: 100,
-  offset: 44
+  delay: 0,
+  offset: 14,
+  immediateActive: false
 }

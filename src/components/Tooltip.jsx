@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 import { DIRECTIONS, DIRECTION_BOTTOM, DIRECTION_LEFT, DIRECTION_RIGHT, DIRECTION_TOP } from './constants'
 
 function Tooltip ({
+  immediateActive = true,
   direction = DIRECTION_TOP,
   visible = false,
   activeDependsOnVisible = false,
@@ -16,7 +17,7 @@ function Tooltip ({
 }) {
   let timeout
   // const [active, setActive] = useState(activeDependsOnVisible ? visible : false)
-  const [active, setActive] = useState(true)
+  const [active, setActive] = useState(immediateActive)
   let componentClassName = tooltipClassName || styles.tooltipTipBaseClass
   componentClassName += ` ${styles.tooltipTip} ` + styles[`${direction}`]
   const fixedStyle = { top: '0px', left: '0px' }
@@ -111,6 +112,10 @@ Tooltip.propTypes = {
    * visible
    */
   visible: PropTypes.bool,
+  /**
+   * immediateActive
+   */
+  immediateActive: PropTypes.bool,
   /**
    * activeDependsOnVisible
    */
