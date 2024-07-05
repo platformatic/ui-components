@@ -33,6 +33,7 @@ import CalendarIcon from './CalendarIcon'
 import Calendar1DayIcon from './Calendar1DayIcon'
 import Calendar7DaysIcon from './Calendar7DaysIcon'
 import CheckListIcon from './CheckListIcon'
+import CheckListReviewIcon from './CheckListReviewIcon'
 import CircleAddIcon from './CircleAddIcon'
 import CircleArrowLeftIcon from './CircleArrowLeftIcon'
 import CircleArrowRightIcon from './CircleArrowRightIcon'
@@ -202,6 +203,7 @@ export default {
   Calendar1DayIcon,
   Calendar7DaysIcon,
   CheckListIcon,
+  CheckListReviewIcon,
   CircleAddIcon,
   CircleArrowLeftIcon,
   CircleArrowRightIcon,
