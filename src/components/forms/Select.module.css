@@ -17,7 +17,7 @@
   @apply outline-none;
 }
 .options {
-  @apply absolute left-0 top-[42px] w-[calc(100%-1rem)] max-h-[216px] overflow-y-auto z-20 p-2;
+  @apply absolute left-0 top-[42px] w-full max-h-[216px] overflow-y-auto z-20 p-2 box-border;
 }
 .bordered-options {
   @apply border border-solid rounded
