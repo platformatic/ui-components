@@ -12,7 +12,10 @@
   transform: translateY(-50%);
 }
 .header {
-  @apply flex items-center hover:cursor-pointer relative pr-6 tracking-more-widest uppercase text-sm font-normal;
+  @apply flex items-center hover:cursor-pointer relative pr-6;
+}
+.headerClassNameDefault {
+  @apply tracking-more-widest uppercase text-sm font-normal;
 }
 .picture {
   @apply border border-transparent rounded-full mr-2;

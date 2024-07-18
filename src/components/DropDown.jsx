@@ -8,13 +8,15 @@ import { DARK_BLUE, LIGHT_BLUE, MAIN_DARK_BLUE, RICH_BLACK, WHITE } from './cons
 function DropDown ({
   pictureUrl = '',
   header = '',
+  headerClassName = '',
   align = 'left',
   items = [],
   backgroundColor = DARK_BLUE,
   textColor = MAIN_DARK_BLUE,
   headerColor = WHITE,
   borderColor = WHITE,
-  lastButton = null
+  lastButton = null,
+  menuCustomClassName = ''
 }) {
   const [open, setOpen] = useState(false)
   const borderClass = commonStyles[`bordered--${borderColor}-30`]
@@ -22,6 +24,7 @@ function DropDown ({
   let classNameMenu = `${styles.menu} `
   classNameMenu += commonStyles[`background-color-${backgroundColor}`]
   classNameMenu += ' ' + borderClass
+  classNameMenu += ' ' + menuCustomClassName
 
   let classNameItem = `${styles.item} `
   classNameItem += commonStyles[`text--${textColor}`]
@@ -49,7 +52,7 @@ function DropDown ({
     <div className={`${styles.dropDown} ${styles[align]}`}>
       <span className={headerClassNamme} onClick={handleOpen}>
         {pictureUrl && <img src={pictureUrl} height={32} width={32} className={styles.picture} />}
-        {header}
+        {header && (<span className={headerClassName || styles.headerClassNameDefault}>{header}</span>)}
         {!open && <div className={styles.arrow}><PlatformaticIcon iconName='ArrowRightIcon' color={headerColor} onClick={null} /></div>}
         {open && <div className={styles.arrow}><PlatformaticIcon iconName='ArrowDownIcon' color={headerColor} onClick={null} /></div>}
       </span>
@@ -79,6 +82,10 @@ DropDown.propTypes = {
    */
   header: PropTypes.string,
   /**
+   * headerClassName
+   */
+  headerClassName: PropTypes.string,
+  /**
    * align
    */
   align: PropTypes.string,
@@ -105,7 +112,11 @@ DropDown.propTypes = {
   /**
    * lastButton
    */
-  lastButton: PropTypes.node
+  lastButton: PropTypes.node,
+  /**
+   * menuCustomClassName
+   */
+  menuCustomClassName: PropTypes.string
 }
 
 export default DropDown
