@@ -237,6 +237,9 @@
 .background-color-opaque-100 {
   @apply bg-opacity-100 !important;
 }
+.background-color-opaque-70 {
+  @apply bg-opacity-70 !important;
+}
 .background-color-opaque-60 {
   @apply bg-opacity-60 !important;
 }

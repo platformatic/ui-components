@@ -87,6 +87,7 @@ import GiveOwnershipIcon from './GiveOwnershipIcon'
 import GitHubRepoIcon from './GitHubRepoIcon'
 import GitHubRepo2Icon from './GitHubRepo2Icon'
 import GraphQLIcon from './GraphQLIcon'
+import GraphQLEditsIcon from './GraphQLEditsIcon'
 import K8SMetricsIcon from './K8SMetricsIcon'
 import KeyIcon from './KeyIcon'
 import ImportAppIcon from './ImportAppIcon'
@@ -109,6 +110,7 @@ import NoActivitiesIcon from './NoActivitiesIcon'
 import NoDeploymentsIcon from './NoDeploymentsIcon'
 import NoMetricsIcon from './NoMetricsIcon'
 import NotCompliantServiceIcon from './NotCompliantServiceIcon'
+import OpenAPIEditsIcon from './OpenAPIEditsIcon'
 import OrganizationIcon from './OrganizationIcon'
 import OutOfBoxGraphQLIcon from './OutOfBoxGraphQLIcon'
 import OutdatedServiceIcon from './OutdatedServiceIcon'
@@ -257,6 +259,7 @@ export default {
   GitHubRepoIcon,
   GitHubRepo2Icon,
   GraphQLIcon,
+  GraphQLEditsIcon,
   ImportAppIcon,
   InfrastructureIcon,
   InternetIcon,
@@ -279,6 +282,7 @@ export default {
   NoDeploymentsIcon,
   NoMetricsIcon,
   NotCompliantServiceIcon,
+  OpenAPIEditsIcon,
   OrganizationIcon,
   OutdatedServiceIcon,
   OtherLogosGoogleIcon,

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './BorderedBox.module.css'
 import commonStyles from './Common.module.css'
 import React from 'react'
-import { COLORS_BORDERED_BOX, DARK_BLUE, MAIN_GREEN, OPACITY_100 } from './constants'
+import { COLORS_BORDERED_BOX, DARK_BLUE, MAIN_GREEN, OPACITIES, OPACITY_100 } from './constants'
 function BorderedBox ({
   classes = '',
   color = MAIN_GREEN,
@@ -47,11 +47,11 @@ BorderedBox.propTypes = {
   /**
    * backgroundColorOpacity
    */
-  backgroundColorOpacity: PropTypes.oneOf([100, 60, 30, 20, 10]),
+  backgroundColorOpacity: PropTypes.oneOf(OPACITIES),
   /**
    * borderColorOpacity
    */
-  borderColorOpacity: PropTypes.oneOf([100, 60, 30, 20, 10]),
+  borderColorOpacity: PropTypes.oneOf(OPACITIES),
   /**
    * clickable
    */
