@@ -155,6 +155,7 @@ import TwoUsersIcon from './TwoUsersIcon'
 import TeamsIcon from './TeamsIcon'
 import TrashIcon from './TrashIcon'
 import UpgradeIcon from './UpgradeIcon'
+import UploadFileIcon from './UploadFileIcon'
 import UserComputerIcon from './UserComputerIcon'
 import UserIcon from './UserIcon'
 import UserRemoveIcon from './UserRemoveIcon'
@@ -327,6 +328,7 @@ export default {
   TwoUsersIcon,
   TrashIcon,
   UpgradeIcon,
+  UploadFileIcon,
   UserComputerIcon,
   UserIcon,
   UserRemoveIcon,
