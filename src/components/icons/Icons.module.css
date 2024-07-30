@@ -111,10 +111,10 @@
 }
 
 .filled-rich-black {
-  @apply fill-rich-black
+  @apply fill-rich-black;
 }
 .filled-white {
-  @apply fill-white
+  @apply fill-white;
 }
 .filled-error-red{
   @apply fill-error-red;
@@ -149,4 +149,8 @@
 
 .iconInactive {
   @apply opacity-70
+}
+
+.strokeTransparent {
+  stroke: transparent !important;
 }

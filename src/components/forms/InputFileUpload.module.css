@@ -2,7 +2,7 @@
   @apply flex flex-col w-full relative;
 }
 .inputContainer {
-  @apply flex relative z-20;
+  @apply flex min-h-[2.5rem] relative z-20 gap-x-2 items-center;
 }
 .input {
   padding-block: 0px;
