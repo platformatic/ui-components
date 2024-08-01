@@ -2,18 +2,17 @@
   @apply flex flex-col w-full relative
 }
 .selectContainer {
-  @apply w-full flex items-center relative z-10;
+  @apply w-full flex items-center relative z-10 gap-x-2 border border-solid box-border rounded py-1.5 px-2 md:px-3 md:py-[10.5px];
 } 
 .select {
-  @apply py-1.5 px-2 md:px-3 md:py-[10.5px] h-full border border-solid box-border rounded;
+  @apply h-full border-none rounded;
 }
-
-.select-main-dark-blue.active,
-.select-main-dark-blue:focus {
+.select-main-dark-blue input.active,
+.select-main-dark-blue input:focus {
   @apply shadow-main-dark-blue outline-none;
 }
-.select-white.active,
-.select-white:focus {
+.select-white input.active,
+.select-white input:focus {
   @apply outline-none;
 }
 .options {

@@ -2,6 +2,8 @@
 import React, { useState } from 'react'
 import Select from '../../components/forms/Select'
 import {
+  ERROR_RED,
+  LARGE,
   MAIN_DARK_BLUE,
   MAIN_GREEN,
   RICH_BLACK,
@@ -182,4 +184,19 @@ TemplateBackgroundTransparent.args = {
   mainColor: WHITE,
   backgroundColor: RICH_BLACK,
   borderListColor: WHITE
+}
+
+const TemplateWithBeforeIcon = (args) => <Select {...args} />
+
+export const WithBeforeIcon = TemplateWithBeforeIcon.bind({})
+
+WithBeforeIcon.args = {
+  name: 'test',
+  placeholder: 'Platformatic empty select',
+  borderColor: MAIN_GREEN,
+  beforeIcon: {
+    iconName: 'AddIcon',
+    color: ERROR_RED,
+    size: LARGE
+  }
 }

@@ -3,8 +3,9 @@ import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import styles from './Select.module.css'
 import commonStyles from '../Common.module.css'
-import { MAIN_DARK_BLUE, MAIN_GREEN, RICH_BLACK, SMALL, WHITE } from '../constants'
+import { MAIN_DARK_BLUE, MAIN_GREEN, RICH_BLACK, SIZES, SMALL, WHITE } from '../constants'
 import PlatformaticIcon from '../PlatformaticIcon'
+import Icons from '../icons'
 
 function Select ({
   defaultContainerClassName = '',
@@ -25,7 +26,8 @@ function Select ({
   dataAttrName = '',
   dataAttrValue = '',
   backgroundColor = WHITE,
-  inputTextClassName = ''
+  inputTextClassName = '',
+  beforeIcon = {}
 }) {
   const inputRef = useRef()
   const [showOptions, setShowOptions] = useState(false)
@@ -35,10 +37,12 @@ function Select ({
   const errorMessageClassName = errorMessageTextClassName || commonStyles['error-message']
   const showError = errorMessage.length > 0
   const containerClassName = `${styles.container} ${defaultContainerClassName} `
+  let baseWrapperClassName = `${styles.selectContainer} `
   let inputClassName = `${commonStyles.fullWidth} ${styles.select} ${inputTextClassName}`
-  inputClassName += ' ' + styles[`select-${mainColor}`]
-  inputClassName += ' ' + commonStyles[`text--${borderColor}`]
+  baseWrapperClassName += ' ' + styles[`select-${mainColor}`]
+  baseWrapperClassName += ' ' + commonStyles[`text--${borderColor}`]
   let optionsClassName = `${styles.options} ${defaultOptionsClassName} `
+  baseWrapperClassName += ' ' + commonStyles[`background-color-${backgroundColor}`]
   inputClassName += ' ' + commonStyles[`background-color-${backgroundColor}`]
   optionsClassName += commonStyles[`background-color-${backgroundColor}`]
 
@@ -50,7 +54,6 @@ function Select ({
   if (optionsBorderedBottom) {
     singleOptionClassName += ` ${styles['bordered-bottom']}`
   }
-
   const optionSpanClassName = commonStyles[`text--${mainColor}-70`]
   const optionSpanClassNameSelected = commonStyles[`text--${mainColor}`]
   const descriptionClassName = commonStyles[`text--${mainColor}`]
@@ -58,17 +61,17 @@ function Select ({
   const [wrapperClassName, setWrapperClassName] = useState(normalClassName())
 
   function onFocusClassName () {
-    return inputClassName + ' ' + commonStyles[`bordered--${borderColor}-100`]
+    return commonStyles[`bordered--${borderColor}-100`] + ' ' + baseWrapperClassName
   }
 
   function normalClassName () {
-    const baseClassName = inputClassName
+    const baseClassName = baseWrapperClassName
     if (showError) {
-      inputClassName += ' ' + commonStyles['bordered--error-red']
+      baseWrapperClassName += ' ' + commonStyles['bordered--error-red']
     } else {
-      inputClassName += ' ' + commonStyles[`bordered--${borderColor}-70`]
+      baseWrapperClassName += ' ' + commonStyles[`bordered--${borderColor}-70`]
     }
-    if (disabled) inputClassName += ' ' + commonStyles['apply-opacity-30']
+    if (disabled) baseWrapperClassName += ' ' + commonStyles['apply-opacity-30']
     return baseClassName
   }
 
@@ -158,10 +161,18 @@ function Select ({
     }, 250)
   }
 
+  function getBeforeIcon () {
+    return React.createElement(Icons[`${beforeIcon.iconName}`], {
+      color: beforeIcon.color,
+      size: beforeIcon.size
+    })
+  }
+
   return (
     <div className={containerClassName} {...dataProps}>
-      <div className={styles.selectContainer}>
-        <input type='text' name={name} value={value} className={wrapperClassName} ref={inputRef} disabled={disabled} placeholder={placeholder} onFocus={() => handleFocus()} onBlur={(e) => handleBlur(e)} readOnly />
+      <div className={wrapperClassName}>
+        {beforeIcon?.iconName && getBeforeIcon()}
+        <input type='text' name={name} value={value} className={inputClassName} ref={inputRef} disabled={disabled} placeholder={placeholder} onFocus={() => handleFocus()} onBlur={(e) => handleBlur(e)} readOnly />
         <div className={styles.icons}>
           <PlatformaticIcon iconName={showOptions ? 'ArrowUpIcon' : 'ArrowDownIcon'} color={borderColor} disabled={disabled} onClick={() => setShowOptions(!showOptions)} size={SMALL} />
         </div>
@@ -261,7 +272,15 @@ Select.propTypes = {
   /**
    * errorMessageTextClassName
   */
-  errorMessageTextClassName: PropTypes.string
+  errorMessageTextClassName: PropTypes.string,
+  /**
+   * beforeIcon: PlatformaticIcon props
+   */
+  beforeIcon: PropTypes.shape({
+    iconName: PropTypes.string,
+    color: PropTypes.string,
+    size: PropTypes.oneOf(SIZES)
+  })
 }
 
 export default Select
