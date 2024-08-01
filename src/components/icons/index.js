@@ -169,6 +169,8 @@ import WorkspaceReadyIcon from './WorkspaceReadyIcon'
 import WorkspaceStaticIcon from './WorkspaceStaticIcon'
 import ZoomInIcon from './ZoomInIcon'
 import ZoomOutIcon from './ZoomOutIcon'
+import SortUpArrowAndBarIcon from './SortUpArrowAndBarIcon'
+import SortDownArrowAndBarIcon from './SortDownArrowAndBarIcon'
 
 export default {
   AddIcon,
@@ -317,8 +319,10 @@ export default {
   SocialXIcon,
   SortableIcon,
   SortIcon,
+  SortDownArrowAndBarIcon,
   SortDownIcon,
   SortUpIcon,
+  SortUpArrowAndBarIcon,
   StackablesIcon,
   StackablesPluginIcon,
   StackablesTemplateIcon,
