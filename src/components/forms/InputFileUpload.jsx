@@ -8,6 +8,7 @@ import Button from '../Button'
 import { ERROR_RED, MAIN_DARK_BLUE, MAIN_GREEN, RICH_BLACK, TRANSPARENT, WHITE } from '../constants'
 
 function InputFileUpload ({
+  idInputFile = 'fileUpload',
   placeholder = '',
   borderColor = MAIN_GREEN,
   errorMessage = '',
@@ -70,6 +71,7 @@ function InputFileUpload ({
   }
 
   function clearFile () {
+    document.getElementById(idInputFile).value = ''
     setFile(null)
     onFileSelect(null)
   }
@@ -80,6 +82,7 @@ function InputFileUpload ({
         <div className={styles.inputContainer}>
           {beforeIcon && <div className={styles.beforeInputIcon}><PlatformaticIcon iconName={beforeIcon.iconName} size='small' data-testid='before-icon' color={beforeIcon.color} onClick={() => beforeIcon.onClick()} /></div>}
           <input
+            id={idInputFile}
             type='file'
             className={focus ? focusedClassName() : normalClassName()}
             onChange={handleFileInput}
@@ -110,6 +113,10 @@ function InputFileUpload ({
 }
 
 InputFileUpload.propTypes = {
+  /**
+   * idInputFile
+   */
+  idInputFile: PropTypes.string,
   /**
    * placeholder
    */
