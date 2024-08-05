@@ -18,12 +18,14 @@ function InputFileUpload ({
   afterIcon = null,
   backgroundColor = WHITE,
   inputTextClassName = '',
+  detailTextClassName = '',
   verticalPaddingClassName = '',
   dataAttrName = '',
   dataAttrValue = '',
   readOnly = false,
   removeFileButton = {},
-  onClickDetail = () => {}
+  onClickDetail = () => {},
+  acceptFiles = '*'
 }) {
   let baseInputClassName = `${commonStyles.fullWidth} ${styles.input} ${inputTextClassName} `
   baseInputClassName += verticalPaddingClassName || ` ${styles.inputDefaultVerticalPadding} `
@@ -74,20 +76,23 @@ function InputFileUpload ({
 
   return (
     <div className={styles.container} {...dataProps}>
-      <div className={styles.inputContainer}>
-        {beforeIcon && <div className={styles.beforeInputIcon}><PlatformaticIcon iconName={beforeIcon.iconName} size='small' data-testid='before-icon' color={beforeIcon.color} onClick={() => beforeIcon.onClick()} /></div>}
-        <input
-          type='file'
-          className={focus ? focusedClassName() : normalClassName()}
-          onChange={handleFileInput}
-          disabled={disabled}
-          placeholder={inputPlaceholder}
-          readOnly={readOnly}
-          aria-readonly={readOnly}
-          onFocus={() => handleFocus()}
-          onBlur={() => handleBlur()}
-        />
-        {file !== null && <span onClick={() => onClickDetail()}>Detail</span>}
+      <div className={styles.content}>
+        <div className={styles.inputContainer}>
+          {beforeIcon && <div className={styles.beforeInputIcon}><PlatformaticIcon iconName={beforeIcon.iconName} size='small' data-testid='before-icon' color={beforeIcon.color} onClick={() => beforeIcon.onClick()} /></div>}
+          <input
+            type='file'
+            className={focus ? focusedClassName() : normalClassName()}
+            onChange={handleFileInput}
+            disabled={disabled}
+            placeholder={inputPlaceholder}
+            readOnly={readOnly}
+            aria-readonly={readOnly}
+            onFocus={() => handleFocus()}
+            onBlur={() => handleBlur()}
+            accept={acceptFiles}
+          />
+          {file !== null && <span className={`${styles.afterInputDetail} ${detailTextClassName}`} onClick={() => onClickDetail()}>Detail</span>}
+        </div>
         {file !== null && (
           <Button
             textClass={removeFileButton?.textClass ?? ''}
@@ -149,6 +154,14 @@ InputFileUpload.propTypes = {
    * inputTextClassName
    */
   inputTextClassName: PropTypes.string,
+  /**
+   * detailTextClassName
+   */
+  detailTextClassName: PropTypes.string,
+  /**
+   * accept
+   */
+  accept: PropTypes.string,
   /**
    * verticalPaddingClassName
    */

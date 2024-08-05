@@ -1,8 +1,9 @@
 .container {
   @apply flex flex-col w-full relative;
 }
+.content,
 .inputContainer {
-  @apply flex min-h-[2.5rem] relative z-20 gap-x-2 items-center;
+  @apply flex w-full relative z-20 gap-x-2 items-center;
 }
 .input {
   padding-block: 0px;
@@ -12,7 +13,7 @@
 .inputDefaultVerticalPadding {
   @apply py-2.5;
 }
-.afterInputIcon,
+.afterInputDetail,
 .beforeInputIcon {
   @apply absolute top-[50%] z-20;
   transform: translateY(-50%);
@@ -20,7 +21,7 @@
 .beforeInputIcon {
   @apply left-0 ml-2
 }
-.afterInputIcon {
+.afterInputDetail {
   @apply right-0 mr-2
 }
 .beforeIconPadding {
