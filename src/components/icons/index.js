@@ -171,6 +171,11 @@ import ZoomInIcon from './ZoomInIcon'
 import ZoomOutIcon from './ZoomOutIcon'
 import SortUpArrowAndBarIcon from './SortUpArrowAndBarIcon'
 import SortDownArrowAndBarIcon from './SortDownArrowAndBarIcon'
+import HorizontalPodAutoscalerIcon from './HorizontalPodAutoscalerIcon'
+import PodMetricsIcon from './PodMetricsIcon'
+import PodPerformanceIcon from './PodPerformanceIcon'
+import ScalerDetailsIcon from './ScalerDetailsIcon'
+import ScalerHistoryIcon from './ScalerHistoryIcon'
 
 export default {
   AddIcon,
@@ -263,6 +268,7 @@ export default {
   GitHubRepo2Icon,
   GraphQLIcon,
   GraphQLEditsIcon,
+  HorizontalPodAutoscalerIcon,
   ImportAppIcon,
   InfrastructureIcon,
   InternetIcon,
@@ -295,6 +301,8 @@ export default {
   PlatformaticRuntimeIcon,
   PlatformaticServiceIcon,
   PlayIcon,
+  PodPerformanceIcon,
+  PodMetricsIcon,
   PreviewPRIcon,
   PullRequestIcon,
   PullRequestLoadingIcon,
@@ -304,6 +312,8 @@ export default {
   RestartIcon,
   RocketIcon,
   RunningIcon,
+  ScalerDetailsIcon,
+  ScalerHistoryIcon,
   SendIcon,
   ServiceIcon,
   ServicesWorkingIcon,
