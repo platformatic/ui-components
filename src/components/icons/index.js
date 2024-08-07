@@ -124,6 +124,7 @@ import PreviewPRIcon from './PreviewPRIcon'
 import PullRequestIcon from './PullRequestIcon'
 import PullRequestLoadingIcon from './PullRequestLoadingIcon'
 import RequestOwnershipIcon from './RequestOwnershipIcon'
+import RequestsIcon from './RequestsIcon'
 import RecentAppsIcon from './RecentAppsIcon'
 import ResourceIcon from './ResourceIcon'
 import RestartIcon from './RestartIcon'
@@ -176,6 +177,7 @@ import PodMetricsIcon from './PodMetricsIcon'
 import PodPerformanceIcon from './PodPerformanceIcon'
 import ScalerDetailsIcon from './ScalerDetailsIcon'
 import ScalerHistoryIcon from './ScalerHistoryIcon'
+import DocumentIcon from './DocumentIcon'
 
 export default {
   AddIcon,
@@ -249,6 +251,7 @@ export default {
   DepencenciesReloadIcon,
   DeploymentHistoryIcon,
   DownloadIcon,
+  DocumentIcon,
   EditDocumentIcon,
   EditIcon,
   EntrypointIcon,
@@ -307,6 +310,7 @@ export default {
   PullRequestIcon,
   PullRequestLoadingIcon,
   RequestOwnershipIcon,
+  RequestsIcon,
   RecentAppsIcon,
   ResourceIcon,
   RestartIcon,
