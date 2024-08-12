@@ -21,8 +21,10 @@ import AppWorkspace from './AppWorkspace'
 import ArrowDownFullIcon from './ArrowDownFullIcon'
 import ArrowDownIcon from './ArrowDownIcon'
 import ArrowLeftIcon from './ArrowLeftIcon'
+import ArrowLongDownIcon from './ArrowLongDownIcon'
 import ArrowLongLeftIcon from './ArrowLongLeftIcon'
 import ArrowLongRightIcon from './ArrowLongRightIcon'
+import ArrowLongUpIcon from './ArrowLongUpIcon'
 import ArrowRightIcon from './ArrowRightIcon'
 import ArrowUpIcon from './ArrowUpIcon'
 import BellIcon from './BellIcon'
@@ -68,6 +70,7 @@ import DatabaseIcon from './DatabaseIcon'
 import DatabaseMigrationIcon from './DatabaseMigrationIcon'
 import DepencenciesReloadIcon from './DepencenciesReloadIcon'
 import DeploymentHistoryIcon from './DeploymentHistoryIcon'
+import DocumentIcon from './DocumentIcon'
 import DownloadIcon from './DownloadIcon'
 import EditDocumentIcon from './EditDocumentIcon'
 import EditIcon from './EditIcon'
@@ -177,7 +180,6 @@ import PodMetricsIcon from './PodMetricsIcon'
 import PodPerformanceIcon from './PodPerformanceIcon'
 import ScalerDetailsIcon from './ScalerDetailsIcon'
 import ScalerHistoryIcon from './ScalerHistoryIcon'
-import DocumentIcon from './DocumentIcon'
 
 export default {
   AddIcon,
@@ -203,8 +205,10 @@ export default {
   ArrowDownFullIcon,
   ArrowDownIcon,
   ArrowLeftIcon,
+  ArrowLongDownIcon,
   ArrowLongLeftIcon,
   ArrowLongRightIcon,
+  ArrowLongUpIcon,
   ArrowRightIcon,
   ArrowUpIcon,
   BellIcon,
