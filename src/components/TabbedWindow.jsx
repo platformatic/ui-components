@@ -8,7 +8,8 @@ function TabbedWindow ({
   keySelected = '',
   callbackSelected = () => {},
   tabContainerClassName = '',
-  tabContentClassName = ''
+  tabContentClassName = '',
+  textClassName = ''
 }) {
   const headers = []
   const keys = []
@@ -38,7 +39,7 @@ function TabbedWindow ({
         {headers.map((header, index) => {
           return (
             <React.Fragment key={index}>
-              <span onClick={() => setCurrentTab(index)} className={`${styles.tab} ${selected === keys[index] ? styles['selected-tab'] : ''}`} title={header}>
+              <span onClick={() => setCurrentTab(index)} className={`${styles.tab} ${textClassName} ${selected === keys[index] ? styles['selected-tab'] : ''}`} title={header}>
                 {header}
               </span>
             </React.Fragment>
@@ -62,8 +63,19 @@ TabbedWindow.propTypes = {
   /**
    * callbackSelected
    */
-  callbackSelected: PropTypes.func
-
+  callbackSelected: PropTypes.func,
+  /**
+   * tabContainerClassName
+   */
+  tabContainerClassName: PropTypes.string,
+  /**
+   * tabContentClassName
+   */
+  tabContentClassName: PropTypes.string,
+  /**
+   * textClassName
+   */
+  textClassName: PropTypes.string
 }
 
 export default TabbedWindow

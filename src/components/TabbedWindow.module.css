@@ -5,13 +5,13 @@
   @apply flex justify-start text-white uppercase hover:cursor-pointer mb-4 tracking-super-widest h-[2rem];
 }
 .tab {
-  @apply mx-8 min-w-[105px] text-center text-sm first:ml-0 last:mr-0 hover:font-semibold;  
+  @apply mx-8 min-w-[105px] text-center text-sm first:ml-0 last:mr-0 font-light hover:font-medium opacity-70;  
 }
 .selected-tab {
-  @apply underline underline-offset-8 font-semibold;
+  @apply underline underline-offset-8 font-medium opacity-100;
 }
 .tabContentClassName {
-  @apply max-h-[calc(100vH-10rem)] overflow-y-auto
+  @apply max-h-[calc(100vH-10rem)] overflow-y-auto;
 }
 .tab::before {
   display: block;
