@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './TabbedWindow.module.css'
+import { COLORS_BUTTON, MARGIN_0, OPACITY_30, WHITE } from './constants'
+import HorizontalSeparator from './HorizontalSeparator'
 
 function TabbedWindow ({
   tabs = [],
@@ -9,7 +11,8 @@ function TabbedWindow ({
   callbackSelected = () => {},
   tabContainerClassName = '',
   tabContentClassName = '',
-  textClassName = ''
+  textClassName = '',
+  horizontalSeparatorColor = WHITE
 }) {
   const headers = []
   const keys = []
@@ -46,6 +49,7 @@ function TabbedWindow ({
           )
         })}
       </div>
+      <HorizontalSeparator marginTop={MARGIN_0} marginBottom={MARGIN_0} color={horizontalSeparatorColor} opacity={OPACITY_30} />
       <div className={contentClassName}>{currentComponent}</div>
     </div>
   )
@@ -75,7 +79,11 @@ TabbedWindow.propTypes = {
   /**
    * textClassName
    */
-  textClassName: PropTypes.string
+  textClassName: PropTypes.string,
+  /**
+   * horizontalSeparatorColor
+   */
+  horizontalSeparatorColor: PropTypes.oneOf(COLORS_BUTTON)
 }
 
 export default TabbedWindow

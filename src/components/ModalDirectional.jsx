@@ -4,18 +4,14 @@ import PropTypes from 'prop-types'
 import useEscapeKey from '../hooks/useEscapeKey'
 import styles from './ModalDirectional.module.css'
 import {
-  ACTIVE_AND_INACTIVE_STATUS,
-  RICH_BLACK,
-  SMALL,
+  MEDIUM,
   WHITE
 } from './constants'
-import Button from './Button'
+import PlatformaticIcon from './PlatformaticIcon'
 
 function ModalDirectional ({
   children = null,
   setIsOpen = () => {},
-  title = '',
-  titleClassName = '',
   smallLayout = false,
   classNameModalLefty = '',
   permanent = false,
@@ -45,19 +41,11 @@ function ModalDirectional ({
       <div className={variantModalClassName}>
         <div className={classNameLefty}>
           <div className={styles.headerClassName}>
-            <Button
+            <PlatformaticIcon
               color={WHITE}
-              backgroundColor={RICH_BLACK}
+              iconName='CloseIcon'
+              size={MEDIUM}
               onClick={() => closeModal()}
-              hoverEffect={ACTIVE_AND_INACTIVE_STATUS}
-              bordered={false}
-              platformaticIcon={{
-                iconName: 'ArrowLongLeftIcon',
-                size: SMALL,
-                color: WHITE
-              }}
-              label={title}
-              textClass={titleClassName}
             />
           </div>
           {children}
@@ -76,14 +64,6 @@ ModalDirectional.propTypes = {
    * setIsOpen
    */
   setIsOpen: PropTypes.func,
-  /**
-   * title
-   */
-  title: PropTypes.string,
-  /**
-   * title
-   */
-  titleClassName: PropTypes.string,
   /**
    * smallLayout
    */

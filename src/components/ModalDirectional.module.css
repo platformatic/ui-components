@@ -20,10 +20,10 @@
   animation: come-out 200ms forwards;
 }
 .headerClassName {
-  @apply flex items-center gap-x-2 pb-4;
+  @apply flex items-center justify-end gap-x-2;
 }
 .modalLefty {
-  @apply p-5 xl:py-20 xl:px-[7.5rem] h-[calc(100%-2rem)] xl:h-[calc(100%-10rem)];
+  @apply p-5 xl:py-20 xl:px-[7.5rem] h-[calc(100%-2rem)] xl:h-[calc(100%-10rem)] flex flex-col gap-y-4;
 }
 
 @keyframes come-in {

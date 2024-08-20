@@ -1,8 +1,8 @@
 .tabContainerClassName {
-  @apply bg-main-dark-blue;
+  @apply bg-main-dark-blue flex flex-col gap-y-2 w-full;
 }
 .tabs-header {
-  @apply flex justify-start text-white uppercase hover:cursor-pointer mb-4 tracking-super-widest h-[2rem];
+  @apply flex justify-start text-white uppercase hover:cursor-pointer tracking-super-widest h-[2rem];
 }
 .tab {
   @apply mx-8 min-w-[105px] text-center text-sm first:ml-0 last:mr-0 font-light hover:font-medium opacity-70;  
