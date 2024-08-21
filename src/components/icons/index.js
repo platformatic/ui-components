@@ -1,5 +1,6 @@
 import AddIcon from './AddIcon'
 import AddEnvVariableIcon from './AddEnvVariableIcon'
+import AddRouteIcon from './AddRouteIcon'
 import AlertIcon from './AlertIcon'
 import AllAppsIcon from './AllAppsIcon'
 import AllInOneIcon from './AllInOneIcon'
@@ -95,6 +96,7 @@ import K8SMetricsIcon from './K8SMetricsIcon'
 import KeyIcon from './KeyIcon'
 import ImportAppIcon from './ImportAppIcon'
 import InfrastructureIcon from './InfrastructureIcon'
+import IngressControllIcon from './IngressControllIcon'
 import InternetIcon from './InternetIcon'
 import LabelIcon from './LabelIcon'
 import LayersIcon from './LayersIcon'
@@ -184,6 +186,7 @@ import ScalerHistoryIcon from './ScalerHistoryIcon'
 export default {
   AddIcon,
   AddEnvVariableIcon,
+  AddRouteIcon,
   AlertIcon,
   AllAppsIcon,
   AllInOneIcon,
@@ -278,6 +281,7 @@ export default {
   HorizontalPodAutoscalerIcon,
   ImportAppIcon,
   InfrastructureIcon,
+  IngressControllIcon,
   InternetIcon,
   K8SMetricsIcon,
   KeyIcon,
