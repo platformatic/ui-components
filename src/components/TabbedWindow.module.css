@@ -5,7 +5,7 @@
   @apply flex justify-start text-white uppercase hover:cursor-pointer tracking-super-widest h-[2rem];
 }
 .tab {
-  @apply mx-8 min-w-[105px] text-center text-sm first:ml-0 last:mr-0 font-light hover:font-medium opacity-70;  
+  @apply mx-8 min-w-[105px] text-center text-sm first:ml-0 last:mr-0 font-light opacity-70 hover:opacity-100;  
 }
 .selected-tab {
   @apply underline underline-offset-8 font-medium opacity-100;
