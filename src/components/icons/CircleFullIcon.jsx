@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, EXTRA_SMALL, LARGE, MEDIUM, SIZES, SMALL, MAIN_DARK_BLUE } from '../constants'
+import { COLORS_ICON, MINI, TINY, LARGE, MEDIUM, SIZES, SMALL, MAIN_DARK_BLUE } from '../constants'
 
 const CircleFullIcon = ({
   color = MAIN_DARK_BLUE,
@@ -20,12 +20,27 @@ const CircleFullIcon = ({
   let icon = <></>
 
   switch (size) {
-    case EXTRA_SMALL:
+    case MINI:
       icon = (
         <svg
-          width={8}
-          height={8}
-          viewBox='0 0 8 8'
+          width={4}
+          height={4}
+          viewBox='0 0 4 4'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+          className={className}
+        >
+          <circle cx={2} cy={2} r={2} fill='none' className={filledClassName} />
+        </svg>
+      )
+      break
+
+    case TINY:
+      icon = (
+        <svg
+          width={4}
+          height={4}
+          viewBox='0 0 4 4'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
           className={className}

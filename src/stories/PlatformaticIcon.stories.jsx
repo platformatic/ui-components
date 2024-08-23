@@ -5,7 +5,7 @@ import {
   COLORS_ICON,
   EXTRA_LARGE,
   EXTRA_MEDIUM,
-  EXTRA_SMALL,
+  TINY,
   LARGE,
   MEDIUM,
   SIZES,
@@ -85,7 +85,7 @@ const AllIconsTemplate = (args) => {
               <PlatformaticIcon
                 key={icon}
                 iconName={icon}
-                size={EXTRA_SMALL}
+                size={TINY}
                 {...args}
               />
             </div>
