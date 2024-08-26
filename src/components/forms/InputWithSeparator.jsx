@@ -4,9 +4,10 @@ import PropTypes from 'prop-types'
 import inputStyles from './Input.module.css'
 import styles from './InputWithSeparator.module.css'
 import commonStyles from '../Common.module.css'
-import { DULLS_BACKGROUND_COLOR, ERROR_RED, MAIN_DARK_BLUE, MAIN_GREEN, MEDIUM, OPACITY_30, RICH_BLACK, SMALL, TRANSPARENT, WHITE } from '../constants'
+import { DULLS_BACKGROUND_COLOR, ERROR_RED, MAIN_DARK_BLUE, MAIN_GREEN, MEDIUM, OPACITY_30, RICH_BLACK, SIZES, SMALL, TRANSPARENT, WHITE } from '../constants'
 import BorderedBox from '../BorderedBox'
 import ButtonFullRounded from '../ButtonFullRounded'
+import PlatformaticIcon from '../PlatformaticIcon'
 
 function InputWithSeparator ({
   placeholder = '',
@@ -19,6 +20,7 @@ function InputWithSeparator ({
   onChange = () => {},
   disabled = false,
   afterIcon = null,
+  beforeIcon = null,
   defaultValue = '',
   defaultValueSeparator = ',',
   separators = [''],
@@ -89,7 +91,7 @@ function InputWithSeparator ({
   }
 
   function normalClassName () {
-    return `${baseClassName} ${commonStyles.fullWidth} `
+    return `${baseClassName} `
   }
 
   function withChunksClassName () {
@@ -139,6 +141,7 @@ function InputWithSeparator ({
     <div className={inputStyles.container}>
       <div className={styles.container}>
         <div className={inputContainerClassName}>
+          {beforeIcon && <PlatformaticIcon iconName={beforeIcon.iconName} size={beforeIcon.size} data-testid='before-icon' color={beforeIcon.color} onClick={null} />}
           {chunks.map((value, index) => renderChunk(value, index))}
           <input
             type='text'
@@ -224,6 +227,14 @@ InputWithSeparator.propTypes = {
     color: PropTypes.string,
     handleClick: PropTypes.func,
     disabled: PropTypes.bool
+  }),
+  /**
+   * beforeIcon: PlatformaticIcon props
+   */
+  beforeIcon: PropTypes.shape({
+    iconName: PropTypes.string,
+    color: PropTypes.string,
+    size: PropTypes.oneOf(SIZES)
   }),
   /**
    * errorMessage

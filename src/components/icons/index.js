@@ -105,6 +105,7 @@ import LiveIcon from './LiveIcon'
 import LoadingAppIcon from './LoadingAppIcon'
 import LogOutIcon from './LogOutIcon'
 import LogsRiskIcon from './LogsRiskIcon'
+import MailIcon from './MailIcon'
 import MetricsIcon from './MetricsIcon'
 import MetricsLoadingIcon from './MetricsLoadingIcon'
 import MetricsLogsIcon from './MetricsLogsIcon'
@@ -292,6 +293,7 @@ export default {
   LoadingAppIcon,
   LogOutIcon,
   LogsRiskIcon,
+  MailIcon,
   MetricsIcon,
   MetricsLoadingIcon,
   MetricsLogsIcon,

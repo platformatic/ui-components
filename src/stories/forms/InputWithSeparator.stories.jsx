@@ -1,6 +1,6 @@
 'use strict'
 import React, { useState } from 'react'
-import { ERROR_RED } from '../../components/constants'
+import { ERROR_RED, MAIN_GREEN, MEDIUM } from '../../components/constants'
 import InputWithSeparator from '../../components/forms/InputWithSeparator'
 
 const divStyle = {
@@ -66,6 +66,11 @@ Default.args = {
     iconName: 'AddIcon',
     color: ERROR_RED,
     handleClick: () => alert("I'm an AddIcon")
+  },
+  beforeIcon: {
+    iconName: 'UserIcon',
+    color: MAIN_GREEN,
+    size: MEDIUM
   }
 }
 

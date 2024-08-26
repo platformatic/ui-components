@@ -46,6 +46,7 @@ function ModalDirectional ({
               iconName='CloseIcon'
               size={MEDIUM}
               onClick={() => closeModal()}
+              internalOverHandling
             />
           </div>
           {children}

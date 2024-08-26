@@ -97,7 +97,6 @@ function Modal ({
   }
 
   function closeModal (event) {
-    console.log('closeModal', event)
     if (event.target === blurRef.current) {
       event.preventDefault()
       event.stopPropagation()
@@ -133,7 +132,13 @@ function Modal ({
             <div className={modalClassName}>
               <div className={headerClassName}>
                 <div className={styles.title}>{title}</div>
-                <PlatformaticIcon iconName='CloseIcon' color={MAIN_DARK_BLUE} size={SMALL} onClick={() => setIsOpen(false)} />
+                <PlatformaticIcon
+                  iconName='CloseIcon'
+                  color={MAIN_DARK_BLUE}
+                  size={SMALL}
+                  onClick={() => setIsOpen(false)}
+                  internalOverHandling
+                />
               </div>
               <div>
                 {children}

@@ -66,8 +66,15 @@ function InputFileUpload ({
   }
 
   function handleFileInput (e) {
-    setFile(e.target.files[0])
-    onFileSelect(e.target.files[0])
+    if ((e.target.files?.length ?? 0) > 0) {
+      setFile(e.target.files[0])
+      onFileSelect(e.target.files[0])
+    } else {
+      // Ignore the Cancel Button
+      if (file !== null) {
+        document.getElementById(idInputFile).value = file.name
+      }
+    }
   }
 
   function clearFile () {
@@ -93,7 +100,13 @@ function InputFileUpload ({
             onFocus={() => handleFocus()}
             onBlur={() => handleBlur()}
             accept={acceptFiles}
+            style={{ display: 'none' }}
           />
+          <label
+            for={idInputFile}
+            className={focus ? focusedClassName() : normalClassName()}
+          >{file !== null ? file.name : 'Select .env file'}
+          </label>
           {file !== null && <span className={`${styles.afterInputDetail} ${detailTextClassName}`} onClick={() => onClickDetail()}>Detail</span>}
         </div>
         {file !== null && (
