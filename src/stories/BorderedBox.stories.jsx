@@ -1,6 +1,6 @@
 'use strict'
 import BorderedBox from '../components/BorderedBox'
-import { COLORS_BORDERED_BOX } from '../components/constants'
+import { COLORS_BORDERED_BOX, ERROR_RED, OPACITY_30, OPACITY_100, TERTIARY_BLUE, WHITE } from '../components/constants'
 export default {
   title: 'Platformatic/BorderedBox',
   component: BorderedBox,
@@ -32,4 +32,14 @@ Red.args = {
 export const White = Template.bind({})
 White.args = {
   color: 'white'
+}
+
+export const HandlingOver = Template.bind({})
+HandlingOver.args = {
+  color: WHITE,
+  backgroundColor: ERROR_RED,
+  borderColorOpacity: OPACITY_30,
+  internalOverHandling: true,
+  borderColorOpacityOver: OPACITY_100,
+  backgroundColorOver: TERTIARY_BLUE
 }
