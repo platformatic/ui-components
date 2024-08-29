@@ -1,27 +1,58 @@
 'use strict'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './BorderedBox.module.css'
 import commonStyles from './Common.module.css'
-import React from 'react'
-import { COLORS_BORDERED_BOX, DARK_BLUE, MAIN_GREEN, OPACITIES, OPACITY_100 } from './constants'
+import { COLORS_BORDERED_BOX, DARK_BLUE, TRANSPARENT, OPACITIES, OPACITY_100 } from './constants'
 function BorderedBox ({
   classes = '',
-  color = MAIN_GREEN,
+  color = TRANSPARENT,
   children = null,
   backgroundColor = DARK_BLUE,
   backgroundColorOpacity = OPACITY_100,
   borderColorOpacity = OPACITY_100,
   clickable = false,
-  onClick = () => {}
+  onClick = () => {},
+  internalOverHandling = false,
+  backgroundColorOver = null,
+  backgroundColorOpacityOver = null,
+  borderColorOpacityOver = null
 }) {
-  const borderColor = commonStyles[`bordered--${color}-${borderColorOpacity}`]
-  const styledBackgroundColor = commonStyles[`background-color-${backgroundColor}`]
-  const opacity = commonStyles[`background-color-opaque-${backgroundColorOpacity}`]
-  let className = `${styles.borderedBox} ${commonStyles.bordered} ${classes} ${borderColor} ${styledBackgroundColor} ${opacity}`
-  className += clickable ? ` ${styles.clickable}` : ''
+  const [over, setOver] = useState(false)
+  const [className, setClassName] = useState(normalClassName())
+
+  useEffect(() => {
+    if (over) {
+      setClassName(overClassName())
+    } else {
+      setClassName(normalClassName())
+    }
+  }, [over])
+
+  function normalClassName () {
+    const borderColor = color === TRANSPARENT ? commonStyles[`bordered--${color}`] : commonStyles[`bordered--${color}-${borderColorOpacity}`]
+    const styledBackgroundColor = commonStyles[`background-color-${backgroundColor}`]
+    const opacity = commonStyles[`background-color-opaque-${backgroundColorOpacity}`]
+    let className = `${styles.borderedBox} ${commonStyles.bordered} ${classes} ${borderColor} ${styledBackgroundColor} ${opacity}`
+    className += clickable ? ` ${styles.clickable}` : ''
+    return className
+  }
+
+  function overClassName () {
+    const borderColor = color === TRANSPARENT ? commonStyles[`bordered--${color}`] : commonStyles[`bordered--${color}-${borderColorOpacityOver}`]
+    const styledBackgroundColor = commonStyles[`background-color-${backgroundColorOver}`]
+    const opacity = commonStyles[`background-color-opaque-${backgroundColorOpacityOver}`]
+    let className = `${styles.borderedBox} ${commonStyles.bordered} ${classes} ${borderColor} ${styledBackgroundColor} ${opacity}`
+    className += clickable ? ` ${styles.clickable}` : ''
+    return className
+  }
 
   return (
-    <div className={className} onClick={() => clickable ? onClick() : {}}>
+    <div
+      className={className}
+      onMouseOver={() => internalOverHandling && setOver(true)} onMouseLeave={() => internalOverHandling && setOver(false)}
+      onClick={() => clickable ? onClick() : {}}
+    >
       {children}
     </div>
   )

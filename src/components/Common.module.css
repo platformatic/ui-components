@@ -22,6 +22,12 @@
 .bordered--white {
   @apply border-white;
 }
+.bordered--rich-black {
+  @apply border-rich-black;
+}
+.bordered--transparent {
+  @apply border-none;
+}
 .bordered--main-green-100 {
   @apply border-main-green/100;
 }
@@ -42,6 +48,9 @@
 }
 .bordered--white-100 {
   @apply border-white/100;
+}
+.bordered--rich-black-100 {
+  @apply border-rich-black/100;
 }
 .bordered--main-green-70 {
   @apply border-main-green/70;
@@ -64,6 +73,9 @@
 .bordered--white-70 {
   @apply border-white/70;
 }
+.bordered--rich-black-70 {
+  @apply border-rich-black/70;
+}
 .bordered--main-green-30 {
   @apply border-main-green/30;
 }
@@ -81,6 +93,9 @@
 }
 .bordered--white-30 {
   @apply border-white/30;
+}
+.bordered--rich-black-30 {
+  @apply border-rich-black/30;
 }
 .bordered--tertiary-blue-30 {
   @apply border-tertiary-blue/30;
@@ -103,6 +118,9 @@
 .bordered--white-20 {
   @apply border-white/20;
 }
+.bordered--rich-black-20 {
+  @apply border-rich-black/20;
+}
 .bordered--tertiary-blue-20 {
   @apply border-tertiary-blue/20;
 }
@@ -111,6 +129,9 @@
 }
 .bordered--white-15 {
   @apply border-white/15;
+}
+.bordered--rich-black-15 {
+  @apply border-rich-black/15;
 }
 .bordered--tertiary-blue-15 {
   @apply border-tertiary-blue/15;
@@ -121,11 +142,12 @@
 .bordered--white-10 {
   @apply border-white/10;
 }
+.bordered--rich-black-10 {
+  @apply border-rich-black/10;
+}
 .bordered--tertiary-blue-10 {
   @apply border-tertiary-blue/10;
 }
-
-
 .error-message {
   @apply absolute -bottom-5 text-error-red text-xs px-2 w-max;
 }
@@ -222,6 +244,9 @@
 .background-color-rich-black {
   @apply bg-rich-black ;
 }
+.background-color-night {
+  @apply bg-night ;
+}
 .background-color-anti-flash-white {
   @apply bg-anti-flash-white ;
 }
@@ -300,6 +325,9 @@
 .hover-background-color-opaque-rich-black{
   @apply hover:bg-rich-black hover:bg-opacity-15;
 }
+.hover-background-color-opaque-night{
+  @apply hover:bg-night hover:bg-opacity-15;
+}
 .selected-background-color-main-green {
   @apply !bg-main-green bg-opacity-15 !important;
 }
@@ -320,6 +348,9 @@
 }
 .selected-background-color-rich-black {
   @apply !bg-rich-black bg-opacity-15;
+}
+.selected-background-color-night {
+  @apply !bg-night bg-opacity-15;
 }
 .selected-background-color-white{
   @apply !bg-white bg-opacity-15;
