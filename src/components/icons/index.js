@@ -68,6 +68,7 @@ import ConfigureDatabaseIcon from './ConfigureDatabaseIcon'
 import CreateAppIcon from './CreateAppIcon'
 import RunningAppIcon from './RunningAppIcon'
 import DatabaseIcon from './DatabaseIcon'
+import DatabaseEditIcon from './DatabaseEditIcon'
 import DatabaseMigrationIcon from './DatabaseMigrationIcon'
 import DepencenciesReloadIcon from './DepencenciesReloadIcon'
 import DeploymentHistoryIcon from './DeploymentHistoryIcon'
@@ -255,6 +256,7 @@ export default {
   CreateAppIcon,
   RunningAppIcon,
   DatabaseIcon,
+  DatabaseEditIcon,
   DatabaseMigrationIcon,
   DepencenciesReloadIcon,
   DeploymentHistoryIcon,
