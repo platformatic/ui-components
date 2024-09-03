@@ -92,8 +92,9 @@ function InputWithSeparator ({
 
   function handleKeyDown (event) {
     if ((event.keyCode === 46 || event.keyCode === 8) && value === '' && chunks.length > 0) {
-      setChunks(prevChunks => prevChunks.splice(prevChunks.length - 1, 1))
-      onChange({ value: '', chunks })
+      const tmpChunks = chunks.filter((_elem, index) => index < chunks.length - 1)
+      setChunks(tmpChunks)
+      onChange({ value: '', chunks: tmpChunks })
     }
   }
 
