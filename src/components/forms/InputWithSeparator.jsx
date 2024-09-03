@@ -90,6 +90,13 @@ function InputWithSeparator ({
     onChange({ value: event.target.value, chunks })
   }
 
+  function handleKeyDown (event) {
+    if ((event.keyCode === 46 || event.keyCode === 8) && value === '' && chunks.length > 0) {
+      setChunks(prevChunks => prevChunks.splice(0, prevChunks.length - 1))
+      onChange({ value: '', chunks })
+    }
+  }
+
   function normalClassName () {
     return `${baseClassName} `
   }
@@ -150,6 +157,7 @@ function InputWithSeparator ({
             placeholder={chunks.length > 0 ? '' : placeholder}
             className={inputClassName}
             onChange={handleChange}
+            onKeyDown={handleKeyDown}
             disabled={disabled}
             onFocus={() => handleFocus()}
             onBlur={() => handleBlur()}

@@ -8,7 +8,7 @@
   @apply flex min-h-[40px] border border-solid box-border rounded items-center gap-2 flex-wrap relative grow px-2;
 }
 .input {
-  @apply h-full m-0 border-0;
+  @apply h-full m-0 border-0 min-w-[250px];
   padding-block: 0;
   padding-inline: 0;
   background: inherit;

@@ -1,6 +1,7 @@
 import AddIcon from './AddIcon'
 import AddEnvVariableIcon from './AddEnvVariableIcon'
 import AddRouteIcon from './AddRouteIcon'
+import AddUserIcon from './AddUserIcon'
 import AlertIcon from './AlertIcon'
 import AllAppsIcon from './AllAppsIcon'
 import AllInOneIcon from './AllInOneIcon'
@@ -189,6 +190,7 @@ export default {
   AddIcon,
   AddEnvVariableIcon,
   AddRouteIcon,
+  AddUserIcon,
   AlertIcon,
   AllAppsIcon,
   AllInOneIcon,
