@@ -113,7 +113,13 @@ function Modal ({
             <div className={modalClassName}>
               <div className={headerClassName}>
                 <div className={titleClassName}>{title}</div>
-                <PlatformaticIcon iconName='CloseIcon' color={WHITE} size={SMALL} onClick={() => setIsOpen(false)} />
+                <PlatformaticIcon
+                  iconName='CloseIcon'
+                  color={WHITE}
+                  size={SMALL}
+                  onClick={() => setIsOpen(false)}
+                  internalOverHandling
+                />
               </div>
               <div>
                 {children}
@@ -226,7 +232,13 @@ function Modal ({
       whichModal = (
         <div className={modalCoverClassName}>
           <div className={modalCloseClassName || buttonFullRoundedClassName}>
-            <PlatformaticIcon iconName='CloseIcon' color={WHITE} size={MEDIUM} onClick={() => setIsOpen(false)} internalOverHandling />
+            <PlatformaticIcon
+              iconName='CloseIcon'
+              color={WHITE}
+              size={MEDIUM}
+              onClick={() => setIsOpen(false)}
+              internalOverHandling
+            />
           </div>
           <div className={contentFullscreen}>
             {children}
