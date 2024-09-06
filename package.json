@@ -46,7 +46,7 @@
     "@vitejs/plugin-react": "^4.0.0",
     "babel-loader": "^9.0.0",
     "happy-dom": "^14.0.0",
-    "jsdom": "^24.0.0",
+    "jsdom": "^25.0.0",
     "react-test-renderer": "^18.2.0",
     "snazzy": "^9.0.0",
     "standard": "^17.0.0",
