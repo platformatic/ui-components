@@ -2,11 +2,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import commonStyles from './Common.module.css'
-import { DARK_GREEN, MAIN_DARK_BLUE, WHITE } from './constants'
+import { DARK_GREEN, MAIN_DARK_BLUE, WHITE, MARGIN_4 } from './constants'
 import styles from './HorizontalSeparator.module.css'
 function HorizontalSeparator ({
-  marginTop = 4,
-  marginBottom = 4,
+  marginTop = MARGIN_4,
+  marginBottom = MARGIN_4,
   color = DARK_GREEN,
   opacity = 1
 }) {

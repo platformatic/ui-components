@@ -64,6 +64,7 @@ export const ROLE_USER = 'user'
 export const ROLE_OWNER = 'owner'
 
 export const MARGIN_10 = 10
+export const MARGIN_4 = 4
 export const MARGIN_8 = 8
 export const MARGIN_0 = 0
 
