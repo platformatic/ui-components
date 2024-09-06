@@ -8,7 +8,7 @@
   @apply mx-8 min-w-[105px] text-center text-sm first:ml-0 last:mr-0 font-light opacity-70 hover:opacity-100;  
 }
 .selected-tab {
-  @apply underline underline-offset-8 font-medium opacity-100;
+  @apply underline underline-offset-8 opacity-100;
 }
 .tabContentClassName {
   @apply max-h-[calc(100vH-10rem)] overflow-y-auto;
