@@ -135,9 +135,10 @@ import PodPerformanceIcon from './PodPerformanceIcon'
 import PreviewPRIcon from './PreviewPRIcon'
 import PullRequestIcon from './PullRequestIcon'
 import PullRequestLoadingIcon from './PullRequestLoadingIcon'
+import RecentAppsIcon from './RecentAppsIcon'
+import RemoveIcon from './RemoveIcon'
 import RequestOwnershipIcon from './RequestOwnershipIcon'
 import RequestsIcon from './RequestsIcon'
-import RecentAppsIcon from './RecentAppsIcon'
 import ResourceIcon from './ResourceIcon'
 import RestartIcon from './RestartIcon'
 import RocketIcon from './RocketIcon'
@@ -166,6 +167,7 @@ import StackablesPluginIcon from './StackablesPluginIcon'
 import StackablesTemplateIcon from './StackablesTemplateIcon'
 import StopIcon from './StopIcon'
 import StoppedAppIcon from './StoppedAppIcon'
+import TableIcon from './TableIcon'
 import TaxonomyIcon from './TaxonomyIcon'
 import TerminalIcon from './TerminalIcon'
 import TwoUsersIcon from './TwoUsersIcon'
@@ -325,9 +327,10 @@ export default {
   PreviewPRIcon,
   PullRequestIcon,
   PullRequestLoadingIcon,
+  RecentAppsIcon,
+  RemoveIcon,
   RequestOwnershipIcon,
   RequestsIcon,
-  RecentAppsIcon,
   ResourceIcon,
   RestartIcon,
   RocketIcon,
@@ -356,6 +359,7 @@ export default {
   StackablesIcon,
   StackablesPluginIcon,
   StackablesTemplateIcon,
+  TableIcon,
   TaxonomyIcon,
   TerminalIcon,
   TeamsIcon,
