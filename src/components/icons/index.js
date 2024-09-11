@@ -63,6 +63,8 @@ import CloudIcon from './CloudIcon'
 import CLIIcon from './CLIIcon'
 import CodeTestingIcon from './CodeTestingIcon'
 import ComputerIcon from './ComputerIcon'
+import ComputerInIcon from './ComputerInIcon'
+import ComputerOutIcon from './ComputerOutIcon'
 import CopyPasteIcon from './CopyPasteIcon'
 import CreditCardIcon from './CreditCardIcon'
 import ConfigureDatabaseIcon from './ConfigureDatabaseIcon'
@@ -255,6 +257,8 @@ export default {
   CLIIcon,
   CodeTestingIcon,
   ComputerIcon,
+  ComputerInIcon,
+  ComputerOutIcon,
   CopyPasteIcon,
   CreditCardIcon,
   ConfigureDatabaseIcon,
