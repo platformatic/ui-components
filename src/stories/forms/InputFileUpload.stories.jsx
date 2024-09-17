@@ -32,11 +32,12 @@ export const Default = Template.bind({})
 
 Default.args = {
   name: 'test',
-  placeholder: 'Platformatic',
+  placeholder: 'Select txt file',
   borderColor: 'main-dark-blue',
   beforeIcon: {
     iconName: 'AddIcon',
     color: RICH_BLACK,
     onClick: null
-  }
+  },
+  acceptFiles: '.txt'
 }

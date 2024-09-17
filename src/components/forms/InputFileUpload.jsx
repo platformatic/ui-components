@@ -105,7 +105,7 @@ function InputFileUpload ({
           <label
             for={idInputFile}
             className={focus ? focusedClassName() : normalClassName()}
-          >{file !== null ? file.name : 'Select .env file'}
+          >{file !== null ? file.name : inputPlaceholder}
           </label>
           {file !== null && <span className={`${styles.afterInputDetail} ${detailTextClassName}`} onClick={() => onClickDetail()}>Detail</span>}
         </div>
