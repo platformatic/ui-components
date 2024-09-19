@@ -3,7 +3,7 @@
   background-color: rgba(0, 0, 0, 0.95);
 }
 .blur-absolute {
-  @apply absolute top-0 left-0 w-full h-full z-10 bg-rich-black/95;
+  @apply absolute top-0 left-0 w-full h-full z-20 bg-rich-black/95;
 }
 .blur-fixed {
   @apply fixed top-0 left-0 w-screen h-full z-20 bg-rich-black/95 flex justify-center items-center;
