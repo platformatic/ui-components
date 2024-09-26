@@ -38,7 +38,7 @@ function Select ({
   const showError = errorMessage.length > 0
   const containerClassName = `${styles.container} ${defaultContainerClassName} `
   let baseWrapperClassName = `${styles.selectContainer} `
-  let inputClassName = `${commonStyles.fullWidth} ${styles.select} ${inputTextClassName}`
+  let inputClassName = `${styles.select} ${inputTextClassName}`
   baseWrapperClassName += ' ' + styles[`select-${mainColor}`]
   baseWrapperClassName += ' ' + commonStyles[`text--${borderColor}`]
   let optionsClassName = `${styles.options} ${defaultOptionsClassName} `

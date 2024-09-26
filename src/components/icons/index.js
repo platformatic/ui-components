@@ -97,6 +97,7 @@ import GitHubRepo2Icon from './GitHubRepo2Icon'
 import GraphQLIcon from './GraphQLIcon'
 import GraphQLEditsIcon from './GraphQLEditsIcon'
 import HorizontalPodAutoscalerIcon from './HorizontalPodAutoscalerIcon'
+import HourglassIcon from './HourglassIcon'
 import K8SMetricsIcon from './K8SMetricsIcon'
 import KeyIcon from './KeyIcon'
 import ImportAppIcon from './ImportAppIcon'
@@ -291,6 +292,7 @@ export default {
   GraphQLIcon,
   GraphQLEditsIcon,
   HorizontalPodAutoscalerIcon,
+  HourglassIcon,
   ImportAppIcon,
   InfrastructureIcon,
   IngressControllIcon,
