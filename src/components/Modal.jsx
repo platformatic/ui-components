@@ -41,7 +41,8 @@ function Modal ({
   titleClassName = '',
   childrenClassContainer = '',
   modalCloseClassName = '',
-  permanent = false
+  permanent = false,
+  showCloseButtonOnTop = true
 }) {
   let contentFullscreen
   let titleFullscreen
@@ -83,7 +84,11 @@ function Modal ({
     default:
       break
   }
-  useEscapeKey(() => setIsOpen(false))
+  useEscapeKey(() => {
+    if (showCloseButtonOnTop) {
+      setIsOpen(false)
+    }
+  })
   let whichModal = <></>
 
   function renderLogo () {
@@ -231,15 +236,18 @@ function Modal ({
     case MODAL_FULL_RICH_BLACK_V2:
       whichModal = (
         <div className={modalCoverClassName}>
-          <div className={modalCloseClassName || buttonFullRoundedClassName}>
-            <PlatformaticIcon
-              iconName='CloseIcon'
-              color={WHITE}
-              size={MEDIUM}
-              onClick={() => setIsOpen(false)}
-              internalOverHandling
-            />
-          </div>
+
+          {showCloseButtonOnTop && (
+            <div className={modalCloseClassName || buttonFullRoundedClassName}>
+              <PlatformaticIcon
+                iconName='CloseIcon'
+                color={WHITE}
+                size={MEDIUM}
+                onClick={() => setIsOpen(false)}
+                internalOverHandling
+              />
+            </div>
+          )}
           <div className={contentFullscreen}>
             {children}
           </div>
@@ -297,7 +305,11 @@ Modal.propTypes = {
   /**
    * permanent: modal could be closed only with Esc, X or Cancel
    */
-  permanent: PropTypes.bool
+  permanent: PropTypes.bool,
+  /**
+   * showCloseButtonOnTop: show button on X
+   */
+  showCloseButtonOnTop: PropTypes.bool
 }
 
 export default Modal
