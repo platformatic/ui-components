@@ -5,7 +5,7 @@
   @apply w-full flex items-center relative z-10 gap-x-2 border border-solid box-border rounded py-1.5 px-2 md:px-3 md:py-[10.5px];
 } 
 .select {
-  @apply h-full border-none rounded;
+  @apply h-full border-none rounded truncate w-[calc(100%-1rem)];
 }
 .select-main-dark-blue input.active,
 .select-main-dark-blue input:focus {
@@ -33,6 +33,9 @@
 }
 .liContent {
   @apply py-2 flex items-center gap-x-1 relative z-[-1] w-full;
+}
+.liContent > span {
+  @apply truncate;
 }
 .descriptionValue {
   @apply opacity-70

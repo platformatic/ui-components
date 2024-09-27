@@ -11,7 +11,7 @@ import {
 } from '../../components/constants'
 
 const divStyle = {
-  width: '100%',
+  width: '300px',
   height: 'auto',
   padding: '20px',
   backgroundColor: 'transparent'
@@ -78,7 +78,7 @@ BorderMainDarkBlue.args = {
   name: 'test',
   placeholder: 'Defaul option',
   options: [...Array(20).keys()].map((ele) => ({
-    label: `Option ${ele}`,
+    label: ele % 2 === 0 ? `Option ${ele}` : `Long long long long Option ${ele}`,
     value: `Value${ele}`,
     iconName: 'SocialGitHubIcon'
   })),
