@@ -24,7 +24,7 @@
 .clearContainer {
   @apply absolute right-[1rem];
 }
-.wrapperPadding {
+.defaultPaddingClass {
   @apply px-2 py-1.5 md:px-3 md:py-[8.5px];
 }
 

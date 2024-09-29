@@ -14,10 +14,11 @@ function SearchBarV2 ({
   placeholder = 'Search',
   dataAttrName = '',
   dataAttrValue = '',
-  inputTextClassName = ''
+  inputTextClassName = '',
+  paddingClass = ''
 }) {
   const inputRef = useRef()
-  const baseClassName = `${styles.container} ${styles.wrapperPadding} ` + commonStyles[`background-color-${backgroundColor}`]
+  const baseClassName = `${styles.container} ${paddingClass || styles.defaultPaddingClass} ` + commonStyles[`background-color-${backgroundColor}`]
   const [wrapperClassName, setWrapperClassName] = useState(normalClassName())
   const inputClassName = `${styles.input} ${inputTextClassName} `
   const [isOnFocus, setIsOnFocus] = useState(false)
@@ -116,7 +117,11 @@ SearchBarV2.propTypes = {
   /**
    * inputTextClassName
   */
-  inputTextClassName: PropTypes.string
+  inputTextClassName: PropTypes.string,
+  /**
+   * paddingClass
+  */
+  paddingClass: PropTypes.string
 }
 
 export default SearchBarV2
