@@ -2,8 +2,11 @@
   @apply flex flex-col w-full relative
 }
 .selectContainer {
-  @apply w-full flex items-center relative z-10 gap-x-2 border border-solid box-border rounded py-1.5 px-2 md:px-3 md:py-[10.5px];
-} 
+  @apply w-full flex items-center relative z-10 gap-x-2 border border-solid box-border rounded;
+}
+.defaultPaddingClass {
+  @apply py-1.5 px-2 md:px-3 md:py-[10.5px];
+}
 .select {
   @apply h-full border-none rounded truncate w-[calc(100%-1rem)];
 }

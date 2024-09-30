@@ -27,7 +27,8 @@ function Select ({
   dataAttrValue = '',
   backgroundColor = WHITE,
   inputTextClassName = '',
-  beforeIcon = {}
+  beforeIcon = {},
+  paddingClass = ''
 }) {
   const inputRef = useRef()
   const [showOptions, setShowOptions] = useState(false)
@@ -37,7 +38,7 @@ function Select ({
   const errorMessageClassName = errorMessageTextClassName || commonStyles['error-message']
   const showError = errorMessage.length > 0
   const containerClassName = `${styles.container} ${defaultContainerClassName} `
-  let baseWrapperClassName = `${styles.selectContainer} `
+  let baseWrapperClassName = `${styles.selectContainer} ${paddingClass || styles.defaultPaddingClass}`
   let inputClassName = `${styles.select} ${inputTextClassName}`
   baseWrapperClassName += ' ' + styles[`select-${mainColor}`]
   baseWrapperClassName += ' ' + commonStyles[`text--${borderColor}`]
@@ -280,7 +281,11 @@ Select.propTypes = {
     iconName: PropTypes.string,
     color: PropTypes.string,
     size: PropTypes.oneOf(SIZES)
-  })
+  }),
+  /**
+   * paddingClass
+  */
+  paddingClass: PropTypes.string
 }
 
 export default Select
