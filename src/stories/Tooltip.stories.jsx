@@ -4,10 +4,9 @@ import Tooltip from '../components/Tooltip'
 import {
   ANTI_FLASH_WHITE,
   CHANGE_BACKGROUND_COLOR,
-  COLORS_BUTTON,
-  HOVER_EFFECTS_BUTTONS,
+  DIRECTIONS,
+  POSITIONS,
   RICH_BLACK,
-  SIZES,
   WHITE
 } from '../components/constants'
 import Button from '../components/Button'
@@ -29,43 +28,38 @@ export default {
     )
   ],
   argTypes: {
-    label: {
+    immediateActive: {
+      type: 'boolean'
+    },
+    direction: {
+      type: 'radio',
+      options: DIRECTIONS
+    },
+    visible: {
+      type: 'boolean'
+    },
+    activeDependsOnVisible: {
+      type: 'boolean'
+    },
+    content: {
+      type: 'node'
+    },
+    delay: {
+      type: 'number'
+    },
+    children: {
+      type: 'node'
+    },
+    tooltipClassName: {
       type: 'string',
       control: 'text'
     },
-    bold: {
-      type: 'boolean'
+    offset: {
+      type: 'number'
     },
-    backgroundColor: {
+    position: {
       type: 'radio',
-      options: COLORS_BUTTON
-    },
-    color: {
-      type: 'radio',
-      options: COLORS_BUTTON
-    },
-    disabled: {
-      type: 'boolean'
-    },
-    size: {
-      type: 'string',
-      control: {
-        type: 'radio',
-        options: SIZES
-      }
-    },
-    hoverEffect: {
-      type: 'radio',
-      options: HOVER_EFFECTS_BUTTONS
-    },
-    bordered: {
-      type: 'boolean'
-    },
-    fullWidth: {
-      type: 'boolean'
-    },
-    selected: {
-      type: 'boolean'
+      options: POSITIONS
     }
   }
 }

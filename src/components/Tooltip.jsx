@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types'
 import styles from './Tooltip.module.css'
 import { useEffect, useRef, useState } from 'react'
-import { DIRECTIONS, DIRECTION_BOTTOM, DIRECTION_LEFT, DIRECTION_RIGHT, DIRECTION_TOP } from './constants'
+import { DIRECTIONS, DIRECTION_BOTTOM, DIRECTION_LEFT, DIRECTION_RIGHT, DIRECTION_TOP, POSITIONS, POSITION_CENTER, POSITION_END, POSITION_START } from './constants'
 
 function Tooltip ({
   immediateActive = true,
@@ -13,13 +13,17 @@ function Tooltip ({
   delay = 0,
   children = null,
   tooltipClassName = '',
-  offset = 0
+  offset = 0,
+  position = POSITION_CENTER
 }) {
   let timeout
   // const [active, setActive] = useState(activeDependsOnVisible ? visible : false)
   const [active, setActive] = useState(immediateActive)
   let componentClassName = tooltipClassName || styles.tooltipTipBaseClass
   componentClassName += ` ${styles.tooltipTip} ` + styles[`${direction}`]
+  if (direction === DIRECTION_BOTTOM || direction === DIRECTION_TOP) {
+    componentClassName += ' ' + styles[`${position}`]
+  }
   const fixedStyle = { top: '0px', left: '0px' }
   const wrapperRef = useRef()
 
@@ -39,6 +43,19 @@ function Tooltip ({
           fixedStyle.top = `${referenceBoundingClientRect.y + referenceBoundingClientRect.height + offset}px`
           fixedStyle.left = `${referenceBoundingClientRect.x + (referenceBoundingClientRect.width / 2)}px`
           fixedStyle.transform = 'translateX(-50%)'
+          switch (position) {
+            case POSITION_END:
+              fixedStyle.transform = 'translateX(0%)'
+              fixedStyle.left = `${referenceBoundingClientRect.x + (referenceBoundingClientRect.width / 2) - 10}px`
+              break
+            case POSITION_START:
+              fixedStyle.transform = 'translateX(-100%)'
+              fixedStyle.left = `${referenceBoundingClientRect.x + (referenceBoundingClientRect.width / 2) + 10}px`
+              break
+            default:
+              fixedStyle.transform = 'translateX(-50%)'
+              break
+          }
           break
         case DIRECTION_LEFT:
           fixedStyle.top = `${referenceBoundingClientRect.y + referenceBoundingClientRect.height / 2}px`
@@ -53,7 +70,19 @@ function Tooltip ({
         default:
           fixedStyle.top = `${referenceBoundingClientRect.y - referenceBoundingClientRect.height - offset}px`
           fixedStyle.left = `${referenceBoundingClientRect.x + (referenceBoundingClientRect.width / 2)}px`
-          fixedStyle.transform = 'translateX(-50%)'
+          switch (position) {
+            case POSITION_END:
+              fixedStyle.transform = 'translateX(0%)'
+              fixedStyle.left = `${referenceBoundingClientRect.x + (referenceBoundingClientRect.width / 2) - 10}px`
+              break
+            case POSITION_START:
+              fixedStyle.transform = 'translateX(-100%)'
+              fixedStyle.left = `${referenceBoundingClientRect.x + (referenceBoundingClientRect.width / 2) + 10}px`
+              break
+            default:
+              fixedStyle.transform = 'translateX(-50%)'
+              break
+          }
           break
       }
     }
@@ -123,7 +152,11 @@ Tooltip.propTypes = {
   /**
    * offset
    */
-  offset: PropTypes.number
+  offset: PropTypes.number,
+  /**
+   * position
+   */
+  position: PropTypes.oneOf(POSITIONS)
 }
 
 export default Tooltip

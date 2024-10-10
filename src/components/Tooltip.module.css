@@ -66,3 +66,11 @@
   top: 50%;
   transform: translateX(0) translateY(-50%);
 }
+
+.start::before {
+  left: calc(100% - 10px);
+  right: 10px;
+}
+.end::before {
+  left: 10px;
+}
