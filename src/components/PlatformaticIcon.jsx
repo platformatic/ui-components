@@ -19,6 +19,18 @@ function PlatformaticIcon ({
 }) {
   const [hover, setHover] = useState(false)
   let icon = <></>
+
+  function handleOnClick (event) {
+    switch (event.detail) {
+      case 1:
+        onClick()
+        break
+      default:
+        event.stopPropagation()
+        break
+    }
+  };
+
   if (iconName) {
     icon = React.createElement(Icons[`${iconName}`], {
       color,
@@ -34,7 +46,7 @@ function PlatformaticIcon ({
       icon = (
         <div
           className={className}
-          onClick={onClick}
+          onClick={handleOnClick}
           onMouseOver={() => internalOverHandling && !disabled ? setHover(true) : {}}
           onMouseLeave={() => internalOverHandling && !disabled ? setHover(false) : {}}
         >
