@@ -133,7 +133,10 @@ import PlatformaticDBIcon from './PlatformaticDBIcon'
 import PlatformaticRuntimeIcon from './PlatformaticRuntimeIcon'
 import PlatformaticServiceIcon from './PlatformaticServiceIcon'
 import PlayIcon from './PlayIcon'
+import PodDetailsIcon from './PodDetailsIcon'
+import PodLogsIcon from './PodLogsIcon'
 import PodMetricsIcon from './PodMetricsIcon'
+import PodServicesIcon from './PodServicesIcon'
 import PodPerformanceIcon from './PodPerformanceIcon'
 import PreviewPRIcon from './PreviewPRIcon'
 import PullRequestIcon from './PullRequestIcon'
@@ -329,7 +332,10 @@ export default {
   PlatformaticServiceIcon,
   PlayIcon,
   PodPerformanceIcon,
+  PodDetailsIcon,
+  PodLogsIcon,
   PodMetricsIcon,
+  PodServicesIcon,
   PreviewPRIcon,
   PullRequestIcon,
   PullRequestLoadingIcon,
