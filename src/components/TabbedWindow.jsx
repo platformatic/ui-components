@@ -2,8 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './TabbedWindow.module.css'
-import { COLORS_BUTTON, MARGIN_0, OPACITY_30, WHITE } from './constants'
-import HorizontalSeparator from './HorizontalSeparator'
+import { COLORS_BUTTON, WHITE } from './constants'
 
 function TabbedWindow ({
   tabs = [],
