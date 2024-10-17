@@ -25,6 +25,9 @@
 .bordered--rich-black {
   @apply border-rich-black;
 }
+.bordered--black-russian {
+  @apply border-black-russian;
+}
 .bordered--transparent {
   @apply border-none;
 }
@@ -52,6 +55,9 @@
 .bordered--rich-black-100 {
   @apply border-rich-black/100;
 }
+.bordered--black-russian-100 {
+  @apply border-black-russian/100;
+}
 .bordered--main-green-70 {
   @apply border-main-green/70;
 }
@@ -76,6 +82,9 @@
 .bordered--rich-black-70 {
   @apply border-rich-black/70;
 }
+.bordered--black-russian-70 {
+  @apply border-black-russian/70;
+}
 .bordered--main-green-30 {
   @apply border-main-green/30;
 }
@@ -96,6 +105,9 @@
 }
 .bordered--rich-black-30 {
   @apply border-rich-black/30;
+}
+.bordered--black-russian-30 {
+  @apply border-black-russian/30;
 }
 .bordered--tertiary-blue-30 {
   @apply border-tertiary-blue/30;
@@ -121,6 +133,9 @@
 .bordered--rich-black-20 {
   @apply border-rich-black/20;
 }
+.bordered--black-russian-20 {
+  @apply border-black-russian/20;
+}
 .bordered--tertiary-blue-20 {
   @apply border-tertiary-blue/20;
 }
@@ -133,6 +148,9 @@
 .bordered--rich-black-15 {
   @apply border-rich-black/15;
 }
+.bordered--black-russian-15 {
+  @apply border-black-russian/15;
+}
 .bordered--tertiary-blue-15 {
   @apply border-tertiary-blue/15;
 }
@@ -144,6 +162,9 @@
 }
 .bordered--rich-black-10 {
   @apply border-rich-black/10;
+}
+.bordered--black-russian-10 {
+  @apply border-black-russian/10;
 }
 .bordered--tertiary-blue-10 {
   @apply border-tertiary-blue/10;
@@ -200,8 +221,14 @@
 .text--rich-black {
   @apply text-rich-black;
 }
+.text--black-russian {
+  @apply text-black-russian;
+}
 .text--rich-black-70 {
   @apply text-rich-black/70;
+}
+.text--black-russian-70 {
+  @apply text-black-russian/70;
 }
 
 .text--base {
@@ -243,6 +270,9 @@
 }
 .background-color-rich-black {
   @apply bg-rich-black ;
+}
+.background-color-black-russian {
+  @apply bg-black-russian ;
 }
 .background-color-night {
   @apply bg-night ;
@@ -325,6 +355,9 @@
 .hover-background-color-opaque-rich-black{
   @apply hover:bg-rich-black hover:bg-opacity-15;
 }
+.hover-background-color-opaque-black-russian{
+  @apply hover:bg-black-russian hover:bg-opacity-15;
+}
 .hover-background-color-opaque-night{
   @apply hover:bg-night hover:bg-opacity-15;
 }
@@ -348,6 +381,9 @@
 }
 .selected-background-color-rich-black {
   @apply !bg-rich-black bg-opacity-15;
+}
+.selected-background-color-black-russian {
+  @apply !bg-black-russian bg-opacity-15;
 }
 .selected-background-color-night {
   @apply !bg-night bg-opacity-15;

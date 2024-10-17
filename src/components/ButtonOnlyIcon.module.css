@@ -66,6 +66,9 @@
 .color-rich-black{
   @apply text-rich-black border-rich-black;
 }
+.color-black-russian{
+  @apply text-black-russian border-black-russian;
+}
 
 .no-border {
   @apply border-0;
@@ -102,6 +105,9 @@
 }
 .hover-box-shadow-rich-black {
   @apply hover:shadow-rich-black;
+}
+.hover-box-shadow-black-russian {
+  @apply hover:shadow-black-russian;
 }
 
 .underline-effect {

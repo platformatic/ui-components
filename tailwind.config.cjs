@@ -25,6 +25,7 @@ module.exports = {
         'error-red': '0px 0px 4px rgba(250, 33, 33, 0.5)',
         'tertiary-blue': '0px 0px 4px rgba(37, 136, 228, 0.5)',
         'rich-black': '0px 0px 4px rgba(0, 5, 11, 1)',
+        'black-russian': '0px 0px 4px rgba(0, 9, 14, 23)',
         white: '0px 0px 4px rgba(255, 255, 255, 0.5)'
       },
       opacity: {
@@ -44,6 +45,7 @@ module.exports = {
       transparent: 'transparent',
       'warning-yellow': '#FEB928',
       'rich-black': '#00050B',
+      'black-russian': '#090E17',
       night: '#0F1114',
       'electric-purple': '#C61BE2',
       'anti-flash-white': '#EDEDED',

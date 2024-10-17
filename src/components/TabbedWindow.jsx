@@ -48,8 +48,8 @@ function TabbedWindow ({
             </React.Fragment>
           )
         })}
+        <hr className={styles.divider} />
       </div>
-      <HorizontalSeparator marginTop={MARGIN_0} marginBottom={MARGIN_0} color={horizontalSeparatorColor} opacity={OPACITY_30} />
       <div className={contentClassName}>{currentComponent}</div>
     </div>
   )
