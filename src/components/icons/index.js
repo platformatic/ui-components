@@ -7,6 +7,7 @@ import AllAppsIcon from './AllAppsIcon'
 import AllInOneIcon from './AllInOneIcon'
 import APIDocsIcon from './APIDocsIcon'
 import ApiCloudIcon from './ApiCloudIcon'
+import APIKeyIcon from './APIKeyIcon'
 import ApiIcon from './ApiIcon'
 import ApiIconClosed from './ApiIconClosed'
 import ApiEmptyIcon from './ApiEmptyIcon'
@@ -122,6 +123,7 @@ import NodeJSMetricsIcon from './NodeJSMetricsIcon'
 import NoActivitiesIcon from './NoActivitiesIcon'
 import NoDeploymentsIcon from './NoDeploymentsIcon'
 import NoMetricsIcon from './NoMetricsIcon'
+import NoResultsIcon from './NoResultsIcon'
 import NotCompliantServiceIcon from './NotCompliantServiceIcon'
 import OpenAPIEditsIcon from './OpenAPIEditsIcon'
 import OrganizationIcon from './OrganizationIcon'
@@ -205,6 +207,7 @@ export default {
   AllInOneIcon,
   APIDocsIcon,
   ApiCloudIcon,
+  APIKeyIcon,
   ApiIcon,
   ApiIconClosed,
   ApiEmptyIcon,
@@ -320,6 +323,7 @@ export default {
   NoActivitiesIcon,
   NoDeploymentsIcon,
   NoMetricsIcon,
+  NoResultsIcon,
   NotCompliantServiceIcon,
   OpenAPIEditsIcon,
   OrganizationIcon,
