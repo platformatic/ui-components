@@ -70,12 +70,13 @@ export const MARGIN_8 = 8
 export const MARGIN_0 = 0
 
 export const OPACITY_10 = 10
+export const OPACITY_15 = 15
 export const OPACITY_20 = 20
 export const OPACITY_30 = 30
 export const OPACITY_60 = 60
 export const OPACITY_70 = 70
 export const OPACITY_100 = 100
-export const OPACITIES = [OPACITY_10, OPACITY_20, OPACITY_30, OPACITY_60, OPACITY_70, OPACITY_100]
+export const OPACITIES = [OPACITY_10, OPACITY_15, OPACITY_20, OPACITY_30, OPACITY_60, OPACITY_70, OPACITY_100]
 
 export const DIRECTION_BOTTOM = 'bottom'
 export const DIRECTION_LEFT = 'left'

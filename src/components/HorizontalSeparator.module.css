@@ -48,3 +48,7 @@
 .apply-opacity-30 {
   @apply opacity-30;
 }
+
+.apply-opacity-15 {
+  @apply opacity-15;
+}

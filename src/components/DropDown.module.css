@@ -21,7 +21,7 @@
   @apply border border-transparent rounded-full mr-2;
 }
 .menu {
-  @apply absolute border-solid border p-0 mt-8 rounded-md z-10 text-sm min-w-[190px];
+  @apply absolute border-solid border p-0 mt-8 rounded-md z-10 text-sm;
 }
 .item {
   @apply hover:cursor-pointer;
