@@ -99,6 +99,7 @@ import GraphQLIcon from './GraphQLIcon'
 import GraphQLEditsIcon from './GraphQLEditsIcon'
 import HorizontalPodAutoscalerIcon from './HorizontalPodAutoscalerIcon'
 import HourglassIcon from './HourglassIcon'
+import K8SIcon from './K8SIcon'
 import K8SMetricsIcon from './K8SMetricsIcon'
 import KeyIcon from './KeyIcon'
 import ImportAppIcon from './ImportAppIcon'
@@ -122,6 +123,7 @@ import NameAppIcon from './NameAppIcon'
 import NodeJSMetricsIcon from './NodeJSMetricsIcon'
 import NoActivitiesIcon from './NoActivitiesIcon'
 import NoDeploymentsIcon from './NoDeploymentsIcon'
+import NodeJSIcon from './NodeJSIcon'
 import NoMetricsIcon from './NoMetricsIcon'
 import NoResultsIcon from './NoResultsIcon'
 import NotCompliantServiceIcon from './NotCompliantServiceIcon'
@@ -304,6 +306,7 @@ export default {
   IngressControllIcon,
   InternalLinkIcon,
   InternetIcon,
+  K8SIcon,
   K8SMetricsIcon,
   KeyIcon,
   LabelIcon,
@@ -319,6 +322,7 @@ export default {
   MetricsLogsIcon,
   MissingTemplateIcon,
   NameAppIcon,
+  NodeJSIcon,
   NodeJSMetricsIcon,
   NoActivitiesIcon,
   NoDeploymentsIcon,
