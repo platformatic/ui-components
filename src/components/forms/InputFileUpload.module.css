@@ -49,3 +49,6 @@
 .input:focus {
   outline: none;
 }
+.inputPlaceholderClassName {
+  @apply opacity-30;
+}

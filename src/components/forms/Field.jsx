@@ -16,8 +16,7 @@ function Field ({
   let className = `${styles.container}`
   if (disabled) className += ` ${styles.disabled}`
   const styledTitle = titleClassName || (`${styles.title} ` + styles[`text-color-${titleColor}`])
-  let styledHelper = helperClassName || styles.helper
-  styledHelper += ` ${styles.helperPadding}`
+  const styledHelper = helperClassName || styles.helper
   let titleTmp = title
   if (required) { titleTmp += ' *' }
 

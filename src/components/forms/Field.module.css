@@ -25,6 +25,3 @@
 .disabled {
   @apply opacity-20;
 }
-.helperPadding {
-  @apply pb-3
-}
