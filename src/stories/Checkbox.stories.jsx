@@ -1,6 +1,6 @@
 'use strict'
 import Checkbox from '../components/Checkbox'
-import { WHITE } from '../components/constants'
+import { MEDIUM, SMALL, WHITE } from '../components/constants'
 const divStyle = {
   width: '100%',
   height: 'auto',
@@ -24,6 +24,10 @@ export default {
     },
     disabled: {
       type: 'boolean'
+    },
+    size: {
+      type: 'radio',
+      options: [SMALL, MEDIUM]
     }
   }
 }
