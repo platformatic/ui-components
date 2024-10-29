@@ -175,7 +175,7 @@ function Select ({
         {beforeIcon?.iconName && getBeforeIcon()}
         <input type='text' name={name} value={value} className={inputClassName} ref={inputRef} disabled={disabled} placeholder={placeholder} onFocus={() => handleFocus()} onBlur={(e) => handleBlur(e)} readOnly />
         <div className={styles.icons}>
-          <PlatformaticIcon iconName={showOptions ? 'ArrowUpIcon' : 'ArrowDownIcon'} color={borderColor} disabled={disabled} onClick={() => setShowOptions(!showOptions)} size={SMALL} />
+          <PlatformaticIcon iconName={showOptions ? 'ArrowDownIcon' : 'ArrowRightIcon'} color={borderColor} disabled={disabled} onClick={() => setShowOptions(!showOptions)} size={SMALL} />
         </div>
       </div>
       {showOptions && !showError && renderOptions()}

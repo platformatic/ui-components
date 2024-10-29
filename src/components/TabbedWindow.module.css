@@ -2,7 +2,7 @@
   @apply bg-main-dark-blue flex flex-col gap-y-2 w-full;
 }
 .tabs-header {
-  @apply flex justify-start text-white uppercase hover:cursor-pointer tracking-super-widest h-[1.5rem] relative;
+  @apply flex justify-start text-white uppercase hover:cursor-pointer tracking-super-widest h-[1.5rem] relative items-center;
 }
 .tab {
   @apply mx-8 min-w-[105px] text-center text-sm first:ml-0 last:mr-0 font-light opacity-70 hover:opacity-100;  
@@ -22,7 +22,7 @@
   visibility: hidden;
 }
 .divider {
-  @apply w-full border border-none rounded-md h-[1px] bg-white/15 absolute bottom-0;
+  @apply w-full border border-none rounded-md h-[1px] bg-white/15 absolute bottom-[-1px];
   margin-block-start: 0;
   margin-block-end: 0;
 }
