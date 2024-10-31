@@ -177,7 +177,7 @@ import StackablesIcon from './StackablesIcon'
 import StackablesPluginIcon from './StackablesPluginIcon'
 import StackablesTemplateIcon from './StackablesTemplateIcon'
 import StopIcon from './StopIcon'
-import StoppedAppIcon from './StoppedAppIcon'
+import AppStoppedIcon from './AppStoppedIcon'
 import TableIcon from './TableIcon'
 import TaxonomyIcon from './TaxonomyIcon'
 import TerminalIcon from './TerminalIcon'
@@ -363,7 +363,7 @@ export default {
   ServiceIcon,
   ServicesWorkingIcon,
   StopIcon,
-  StoppedAppIcon,
+  AppStoppedIcon,
   SlotIcon,
   SwitchIcon,
   SocialDiscordIcon,
