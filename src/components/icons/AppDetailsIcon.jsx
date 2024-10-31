@@ -29,9 +29,10 @@ const AppDetailsIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M10.6603 6V4.5L6.33013 2L2 4.5V9.5L5.33008 11.4226' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
-          <circle cx='9.24675' cy='9.91667' r='2.91667' stroke='none' />
-          <path d='M13.3301 14L11.5801 12.25' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M2.5 5V10.8722L8 14M8 14L13.5 10.8722V5M8 14V10.8722' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M4 5.71428L2.5 4.85711L8 2L13.5 4.85711L11.625 5.71428' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <circle cx='7.58333' cy='7.08333' r='2.08333' stroke='none' />
+          <path d='M10.5 10L9.25 8.75' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
@@ -45,9 +46,11 @@ const AppDetailsIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M15.9904 9V6.75L9.49519 3L3 6.75V14.25L7.99512 17.1339' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
-          <circle cx='13.8701' cy='14.875' r='4.375' stroke='none' strokeWidth={1.5} />
-          <path d='M19.9951 21L17.3701 18.375' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M3.75 7.5V16.3083L12 21M12 21L20.25 16.3083V7.5M12 21V16.3083' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M6 8.57142L3.75 7.28567L12 3L20.25 7.28567L17.4375 8.57142' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <circle cx='11.375' cy='10.625' r='3.125' stroke='none' strokeWidth={1.5} />
+          <path d='M15.75 15L13.875 13.125' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+
         </svg>
       )
       break
@@ -64,7 +67,6 @@ const AppDetailsIcon = ({
           <path d='M21.3205 12V9L12.6603 4L4 9V19L10.6602 22.8452' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
           <circle cx='18.4935' cy='19.8333' r='5.83333' stroke='none' strokeWidth={1.5} />
           <path d='M26.6602 28L23.1602 24.5' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
-
         </svg>
       )
       break
@@ -78,9 +80,10 @@ const AppDetailsIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M26.6506 15V11.25L15.8253 5L5 11.25V23.75L13.3252 28.5566' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
-          <circle cx='23.1169' cy='24.7917' r='7.29167' stroke='none' strokeWidth={2} />
-          <path d='M33.3252 35L28.9502 30.625' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M6.25 12.5V27.1806L20 35M20 35L33.75 27.1806V12.5M20 35V27.1806' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M10 14.2857L6.25 12.1428L20 5L33.75 12.1428L29.0625 14.2857' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <circle cx='18.9583' cy='17.7083' r='5.20833' stroke='none' strokeWidth={2} />
+          <path d='M26.25 25L23.125 21.875' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
 
         </svg>
       )

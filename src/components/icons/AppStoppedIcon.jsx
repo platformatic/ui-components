@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
 
-const StoppedAppIcon = ({
+const AppStoppedIcon = ({
   color = MAIN_DARK_BLUE,
   size = MEDIUM,
   disabled = false,
@@ -30,10 +30,10 @@ const StoppedAppIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M10.5 7L13.5311 8.75V12.25L10.5 14L7.46891 12.25V8.75L10.5 7Z' stroke='none' strokeLinejoin='round' />
-          <path d='M10 5.35553C9.67562 3.45026 8.0211 2 6.02882 2C3.80376 2 2 3.80895 2 6.04041C2 7.99513 3.38411 9.62564 5.22306 10' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
-          <rect x='5' y='5' width='2' height='2' fill='none' className={filledClassName} stroke='none' strokeLinejoin='round' />
-
+          <path d='M2.5 5V10.8722L8 14M8 14L13.5 10.8722V5M8 14V11' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M4.5 6L2.5 4.85711L8 2L13.5 4.85711L11.4538 5.79253' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <circle cx='8' cy='7.5' r='3.5' stroke='none' />
+          <rect x='6.5' y='6' width='3' height='3' rx='1' fill='none' className={filledClassName} />
         </svg>
       )
       break
@@ -47,10 +47,10 @@ const StoppedAppIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M15.75 10.5L20.2966 13.125V18.375L15.75 21L11.2034 18.375V13.125L15.75 10.5Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
-          <path d='M15 8.03329C14.5134 5.17539 12.0316 3 9.04323 3C5.70565 3 3 5.71343 3 9.06062C3 11.9927 5.07616 14.4385 7.83459 15' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
-          <rect x='7.5' y='7.5' width='3' height='3' fill='none' className={filledClassName} stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
-
+          <path d='M3.75 7.5V16.3083L12 21M12 21L20.25 16.3083V7.5M12 21V16.5' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M6.75 9L3.75 7.28567L12 3L20.25 7.28567L17.1807 8.6888' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <circle cx='12' cy='11.25' r='5.25' stroke='none' strokeWidth={1.5} />
+          <rect x='9.75' y='9' width='4.5' height='4.5' rx='1' fill='none' className={filledClassName} />
         </svg>
       )
       break
@@ -64,10 +64,10 @@ const StoppedAppIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M26.25 17.5L33.8277 21.875V30.625L26.25 35L18.6723 30.625V21.875L26.25 17.5Z' stroke='none' strokeWidth={2} strokeLinejoin='round' />
-          <path d='M25 13.3888C24.1891 8.62565 20.0527 5 15.0721 5C9.50941 5 5 9.52239 5 15.101C5 19.9878 8.46027 24.0641 13.0576 25' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
-          <rect x='12.5' y='12.5' width='5' height='5' fill='none' className={filledClassName} stroke='none' strokeWidth={2} strokeLinejoin='round' />
-
+          <path d='M6.25 12.5V27.1806L20 35M20 35L33.75 27.1806V12.5M20 35V27.5' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M11.25 15L6.25 12.1428L20 5L33.75 12.1428L28.6345 14.4813' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <circle cx='20' cy='18.75' r='8.75' stroke='none' strokeWidth={2} />
+          <rect x='16.25' y='15' width='7.5' height='7.5' rx='2' fill='none' className={filledClassName} />
         </svg>
       )
       break
@@ -78,7 +78,7 @@ const StoppedAppIcon = ({
   return icon
 }
 
-StoppedAppIcon.propTypes = {
+AppStoppedIcon.propTypes = {
   /**
    * color of text, icon and borders
    */
@@ -97,4 +97,4 @@ StoppedAppIcon.propTypes = {
   inactive: PropTypes.bool
 }
 
-export default StoppedAppIcon
+export default AppStoppedIcon

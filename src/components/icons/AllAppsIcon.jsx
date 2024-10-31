@@ -29,13 +29,17 @@ const AllAppsIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M5 2L6.73205 3V5L5 6L3.26795 5V3L5 2Z' stroke='none' strokeLinejoin='round' />
-          <path d='M5 10L6.73205 11V13L5 14L3.26795 13V11L5 10Z' stroke='none' strokeLinejoin='round' />
-          <path d='M8 6L9.73205 7V9L8 10L6.26795 9V7L8 6Z' stroke='none' strokeLinejoin='round' />
-          <path d='M2 6L3.73205 7V9L2 10' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M13.7319 6L11.9999 7V9L13.7319 10' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M11 2L12.7321 3V5L11 6L9.26795 5V3L11 2Z' stroke='none' strokeLinejoin='round' />
-          <path d='M11 10L12.7321 11V13L11 14L9.26795 13V11L11 10Z' stroke='none' strokeLinejoin='round' />
+          <path d='M2.5 3.32227V5.91083L4.18212 6.91605M7.11442 3.32227V3.91718' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M4.80721 4.51891L2.5 3.25946L4.80721 2L7.11442 3.25946L4.80721 4.51891ZM4.80721 4.51891V5.35508' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M13.5002 3.32227V5.91083L11.8181 6.91605M8.88582 3.32227V3.91718' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M11.223 4.51891V5.35508M13.5 3.25946L11.1928 4.51891L8.88558 3.25946L11.1928 2L13.5 3.25946Z' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M8.88574 12.0653V12.621L11.193 13.9998M11.193 13.9998L13.5002 12.621V10.0325M11.193 13.9998V11.3549' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M11.9246 9.10938L13.5005 9.96963L11.1933 11.2291L10.7104 10.9655' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M7.1145 12.0653V12.621L4.80729 13.9998M4.80729 13.9998L2.50008 12.621V10.0325M4.80729 13.9998V11.3549' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M4.07591 9.10938L2.5 9.96963L4.80721 11.2291L5.29004 10.9655' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M7.97351 11.1067L5.23682 9.48268V6.43359L7.97351 7.99132M7.97351 11.1067L10.7102 9.48268V6.43359L7.97351 7.99132M7.97351 11.1067V7.99132' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M7.97351 7.84302L5.23682 6.3595L7.97351 4.87598L10.7102 6.3595L7.97351 7.84302Z' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+
         </svg>
       )
       break
@@ -49,13 +53,16 @@ const AllAppsIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M7.5 3L10.0981 4.5V7.5L7.5 9L4.90192 7.5V4.5L7.5 3Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
-          <path d='M7.5 15L10.0981 16.5V19.5L7.5 21L4.90192 19.5V16.5L7.5 15Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
-          <path d='M12 9L14.5981 10.5V13.5L12 15L9.40192 13.5V10.5L12 9Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
-          <path d='M3 9L5.59808 10.5V13.5L3 15' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M20.5977 9L17.9996 10.5V13.5L20.5977 15' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M16.5 3L19.0981 4.5V7.5L16.5 9L13.9019 7.5V4.5L16.5 3Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
-          <path d='M16.5 15L19.0981 16.5V19.5L16.5 21L13.9019 19.5V16.5L16.5 15Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+          <path d='M3.75 4.9834V8.86624L6.27318 10.3741M10.6716 4.9834V5.87576' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M7.21082 6.77837L3.75 4.88918L7.21082 3L10.6716 4.88918L7.21082 6.77837ZM7.21082 6.77837V8.03263' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M20.2502 4.9834V8.86624L17.7271 10.3741M13.3286 4.9834V5.87576' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M16.8345 6.77837V8.03263M20.25 4.88918L16.7892 6.77837L13.3284 4.88918L16.7892 3L20.25 4.88918Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M13.3284 18.0979V18.9315L16.7892 20.9997M16.7892 20.9997L20.25 18.9315V15.0487M16.7892 20.9997V17.0324' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M17.8866 13.6641L20.2505 14.9544L16.7897 16.8436L16.0654 16.4483' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M10.6719 18.0979V18.9315L7.21106 20.9997M7.21106 20.9997L3.75024 18.9315V15.0487M7.21106 20.9997V17.0324' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M6.11411 13.6641L3.75025 14.9544L7.21107 16.8436L7.9353 16.4483' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M11.9603 16.6601L7.85522 14.224V9.65039L11.9603 11.987M11.9603 16.6601L16.0653 14.224V9.65039L11.9603 11.987M11.9603 16.6601V11.987' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M11.9603 11.7645L7.85522 9.53925L11.9603 7.31396L16.0653 9.53925L11.9603 11.7645Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
 
         </svg>
       )
@@ -90,13 +97,16 @@ const AllAppsIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M12.5 5L16.8301 7.5V12.5L12.5 15L8.16987 12.5V7.5L12.5 5Z' stroke='none' strokeWidth={2} strokeLinejoin='round' />
-          <path d='M12.5 25L16.8301 27.5V32.5L12.5 35L8.16987 32.5V27.5L12.5 25Z' stroke='none' strokeWidth={2} strokeLinejoin='round' />
-          <path d='M20 15L24.3301 17.5V22.5L20 25L15.6699 22.5V17.5L20 15Z' stroke='none' strokeWidth={2} strokeLinejoin='round' />
-          <path d='M5 15L9.33013 17.5V22.5L5 25' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M34.3301 15L30 17.5V22.5L34.3301 25' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M27.5 5L31.8301 7.5V12.5L27.5 15L23.1699 12.5V7.5L27.5 5Z' stroke='none' strokeWidth={2} strokeLinejoin='round' />
-          <path d='M27.5 25L31.8301 27.5V32.5L27.5 35L23.1699 32.5V27.5L27.5 25Z' stroke='none' strokeWidth={2} strokeLinejoin='round' />
+          <path d='M6.25 8.30566V14.7771L10.4553 17.2901M17.7861 8.30566V9.79294' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M12.018 11.2973L6.25 8.14864L12.018 5L17.7861 8.14864L12.018 11.2973ZM12.018 11.2973V13.3877' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M33.7505 8.30566V14.7771L29.5452 17.2901M22.2144 8.30566V9.79294' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M28.0577 11.2973V13.3877M33.7502 8.14864L27.9822 11.2973L22.2142 8.14864L27.9822 5L33.7502 8.14864Z' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M22.2141 30.1632V31.5526L27.9821 34.9995M27.9821 34.9995L33.7502 31.5526V25.0812M27.9821 34.9995V28.3873' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M29.8112 22.7734L33.751 24.9241L27.9829 28.0727L26.7759 27.4138' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M17.7864 30.1632V31.5526L12.0183 34.9995M12.0183 34.9995L6.25032 31.5526V25.0812M12.0183 34.9995V28.3873' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M10.19 22.7734L6.25025 24.9241L12.0183 28.0727L13.2253 27.4138' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M19.9343 27.7669L13.0925 23.7067V16.084L19.9343 19.9783M19.9343 27.7669L26.776 23.7067V16.084L19.9343 19.9783M19.9343 27.7669V19.9783' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M19.934 19.6076L13.0923 15.8987L19.934 12.1899L26.7757 15.8987L19.934 19.6076Z' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break

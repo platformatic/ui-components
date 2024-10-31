@@ -29,9 +29,10 @@ const CreateAppIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M10.5 7L13.5311 8.75V12.25L10.5 14L7.46891 12.25V8.75L10.5 7Z' stroke='none' strokeLinejoin='round' />
-          <path d='M10 5.35553C9.67562 3.45026 8.0211 2 6.02882 2C3.80376 2 2 3.80895 2 6.04041C2 7.99513 3.38411 9.62564 5.22306 10M6.02882 4V8M4 6L8 6.04041' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
-
+          <path d='M2.5 5V10.8722L8 14M8 14L13.5 10.8722V5M8 14V11' stroke='white' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M4.5 6L2.5 4.85711L8 2L13.5 4.85711L11.4538 5.79253' stroke='white' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M8 6V9M6.5 7.5H9.5' stroke='white' strokeLinecap='round' strokeLinejoin='round' />
+          <circle cx='8' cy='7.5' r='3.5' stroke='white' />
         </svg>
       )
       break
@@ -45,8 +46,11 @@ const CreateAppIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M15.75 10.5L20.2966 13.125V18.375L15.75 21L11.2034 18.375V13.125L15.75 10.5Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
-          <path d='M15 8.03329C14.5134 5.17539 12.0316 3 9.04323 3C5.70565 3 3 5.71343 3 9.06062C3 11.9927 5.07616 14.4385 7.83459 15M9.04323 6V12M6 9L12 9.06062' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M3.75 7.5V16.3083L12 21M12 21L20.25 16.3083V7.5M12 21V16.5' stroke='white' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M6.75 9L3.75 7.28567L12 3L20.25 7.28567L17.1807 8.6888' stroke='white' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M12 9V13.5M9.75 11.25H14.25' stroke='white' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <circle cx='12' cy='11.25' r='5.25' stroke='white' strokeWidth={1.5} />
+
         </svg>
       )
       break
@@ -60,8 +64,10 @@ const CreateAppIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M26.25 17.5L33.8277 21.875V30.625L26.25 35L18.6723 30.625V21.875L26.25 17.5Z' stroke='none' strokeWidth={2} strokeLinejoin='round' />
-          <path d='M25 13.3888C24.1891 8.62565 20.0527 5 15.0721 5C9.50941 5 5 9.52239 5 15.101C5 19.9878 8.46027 24.0641 13.0576 25M15.0721 10V20M10 15L20 15.101' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M6.25 12.4999V27.1805L20 35M20 35L33.75 27.1805V12.4999M20 35V27.4999' stroke='white' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M11.25 15L6.25 12.1428L20 5L33.75 12.1428L28.6345 14.4813' stroke='white' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M20 15V22.5M16.25 18.75H23.75' stroke='white' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <circle cx='20' cy='18.75' r='8.75' stroke='white' strokeWidth={2} />
 
         </svg>
       )

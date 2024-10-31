@@ -17,6 +17,7 @@ import AppDetailsIcon from './AppDetailsIcon'
 import AppEditIcon from './AppEditIcon'
 import AppIcon from './AppIcon'
 import AppListIcon from './AppListIcon'
+import AppMissingIcon from './AppMissingIcon'
 import AppEmptyIcon from './AppEmptyIcon'
 import AppSettingsIcon from './AppSettingsIcon'
 import ApplicationTypeIcon from './ApplicationTypeIcon'
@@ -70,6 +71,7 @@ import CopyPasteIcon from './CopyPasteIcon'
 import CreditCardIcon from './CreditCardIcon'
 import ConfigureDatabaseIcon from './ConfigureDatabaseIcon'
 import CreateAppIcon from './CreateAppIcon'
+import CreatingAppIcon from './CreatingAppIcon'
 import RunningAppIcon from './RunningAppIcon'
 import DatabaseIcon from './DatabaseIcon'
 import DatabaseEditIcon from './DatabaseEditIcon'
@@ -146,6 +148,7 @@ import PreviewPRIcon from './PreviewPRIcon'
 import PullRequestIcon from './PullRequestIcon'
 import PullRequestLoadingIcon from './PullRequestLoadingIcon'
 import RecentAppsIcon from './RecentAppsIcon'
+import RemoveAppIcon from './RemoveAppIcon'
 import RemoveIcon from './RemoveIcon'
 import RequestOwnershipIcon from './RequestOwnershipIcon'
 import RequestsIcon from './RequestsIcon'
@@ -176,7 +179,7 @@ import StackablesIcon from './StackablesIcon'
 import StackablesPluginIcon from './StackablesPluginIcon'
 import StackablesTemplateIcon from './StackablesTemplateIcon'
 import StopIcon from './StopIcon'
-import StoppedAppIcon from './StoppedAppIcon'
+import AppStoppedIcon from './AppStoppedIcon'
 import TableIcon from './TableIcon'
 import TaxonomyIcon from './TaxonomyIcon'
 import TerminalIcon from './TerminalIcon'
@@ -218,8 +221,9 @@ export default {
   AppDetailsIcon,
   AppEditIcon,
   AppIcon,
-  AppListIcon,
   AppEmptyIcon,
+  AppListIcon,
+  AppMissingIcon,
   AppSettingsIcon,
   ApplicationTypeIcon,
   AppWorkspace,
@@ -272,6 +276,7 @@ export default {
   CreditCardIcon,
   ConfigureDatabaseIcon,
   CreateAppIcon,
+  CreatingAppIcon,
   RunningAppIcon,
   DatabaseIcon,
   DatabaseEditIcon,
@@ -348,6 +353,7 @@ export default {
   PullRequestIcon,
   PullRequestLoadingIcon,
   RecentAppsIcon,
+  RemoveAppIcon,
   RemoveIcon,
   RequestOwnershipIcon,
   RequestsIcon,
@@ -361,7 +367,7 @@ export default {
   ServiceIcon,
   ServicesWorkingIcon,
   StopIcon,
-  StoppedAppIcon,
+  AppStoppedIcon,
   SlotIcon,
   SwitchIcon,
   SocialDiscordIcon,

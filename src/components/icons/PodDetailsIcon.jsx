@@ -29,13 +29,10 @@ const PodDetailsIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M8.81982 5.6875L7.84555 5.125L5.89699 4L1.99987 6.25V10.75L5.89699 13L6.87127 12.4375' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M6 7H12' stroke='none' strokeLinecap='round' />
-          <path d='M7 9H13' stroke='none' strokeLinecap='round' />
-          <path d='M8 11H14' stroke='none' strokeLinecap='round' />
-          <circle cx='4.39697' cy='7' r='0.5' fill='none' />
-          <circle cx='5.39697' cy='9' r='0.5' fill='none' />
-          <circle cx='6.39697' cy='11' r='0.5' fill='none' />
+          <path d='M8 2L13.1962 5V11L8 14L2.80385 11V5L8 2Z' stroke='none' strokeLinejoin='round' />
+          <circle cx='7.5' cy='7.5' r='2.5' stroke='none' />
+          <path d='M9.5 9.5L10.6172 10.6172' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+
         </svg>
       )
       break
@@ -49,13 +46,10 @@ const PodDetailsIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M13.23 8.53125L11.7686 7.6875L8.84573 6L3.00006 9.375V16.125L8.84573 19.5L10.3071 18.6562' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M9 10.5H18' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
-          <path d='M10.5 13.5H19.5' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
-          <path d='M12 16.5H21' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
-          <circle cx='6.5957' cy='10.5' r='0.75' fill='none' />
-          <circle cx='8.0957' cy='13.5' r='0.75' fill='none' />
-          <circle cx='9.5957' cy='16.5' r='0.75' fill='none' />
+          <path d='M12 3L19.7942 7.5V16.5L12 21L4.20577 16.5V7.5L12 3Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+          <circle cx='11.25' cy='11.25' r='3.75' stroke='none' strokeWidth={1.5} />
+          <path d='M14.25 14.25L15.9258 15.9258' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+
         </svg>
       )
       break
@@ -69,13 +63,10 @@ const PodDetailsIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M22.0498 14.2188L19.6141 12.8125L14.7427 10L4.99993 15.625V26.875L14.7427 32.5L17.1784 31.0938' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M15 17.5H30' stroke='none' strokeWidth={2} strokeLinecap='round' />
-          <path d='M17.5 22.5H32.5' stroke='none' strokeWidth={2} strokeLinecap='round' />
-          <path d='M20 27.5H35' stroke='none' strokeWidth={2} strokeLinecap='round' />
-          <circle cx='10.9927' cy='17.5' r='1.25' fill='none' />
-          <circle cx='13.4927' cy='22.5' r='1.25' fill='none' />
-          <circle cx='15.9927' cy='27.5' r='1.25' fill='none' />
+          <path d='M20 5L32.9904 12.5V27.5L20 35L7.00962 27.5V12.5L20 5Z' stroke='none' strokeWidth={2} strokeLinejoin='round' />
+          <circle cx='18.75' cy='18.75' r='6.25' stroke='none' strokeWidth={2} />
+          <path d='M23.75 23.75L26.543 26.543' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+
         </svg>
       )
       break
