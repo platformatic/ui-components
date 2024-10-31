@@ -71,6 +71,7 @@ import CopyPasteIcon from './CopyPasteIcon'
 import CreditCardIcon from './CreditCardIcon'
 import ConfigureDatabaseIcon from './ConfigureDatabaseIcon'
 import CreateAppIcon from './CreateAppIcon'
+import CreatingAppIcon from './CreatingAppIcon'
 import RunningAppIcon from './RunningAppIcon'
 import DatabaseIcon from './DatabaseIcon'
 import DatabaseEditIcon from './DatabaseEditIcon'
@@ -274,6 +275,7 @@ export default {
   CreditCardIcon,
   ConfigureDatabaseIcon,
   CreateAppIcon,
+  CreatingAppIcon,
   RunningAppIcon,
   DatabaseIcon,
   DatabaseEditIcon,
