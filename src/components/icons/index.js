@@ -17,6 +17,7 @@ import AppDetailsIcon from './AppDetailsIcon'
 import AppEditIcon from './AppEditIcon'
 import AppIcon from './AppIcon'
 import AppListIcon from './AppListIcon'
+import AppMissingIcon from './AppMissingIcon'
 import AppEmptyIcon from './AppEmptyIcon'
 import AppSettingsIcon from './AppSettingsIcon'
 import ApplicationTypeIcon from './ApplicationTypeIcon'
@@ -218,8 +219,9 @@ export default {
   AppDetailsIcon,
   AppEditIcon,
   AppIcon,
-  AppListIcon,
   AppEmptyIcon,
+  AppListIcon,
+  AppMissingIcon,
   AppSettingsIcon,
   ApplicationTypeIcon,
   AppWorkspace,
