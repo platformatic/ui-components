@@ -28,12 +28,13 @@ const PodPerformanceIcon = ({
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
           className={className}
-        ><path d='M7.06325 14C4.26689 14 2 11.727 2 8.92311C2 6.11921 4.26689 3.84619 7.06325 3.84619C9.46576 3.84619 11.4775 5.52403 11.9965 7.77486' stroke='none' strokeLinecap='round' />
-          <path d='M7.06286 3.84615V2M5.22168 2H8.90404' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M10.9837 5.02751L11.642 4.38226M10.9985 3.72217L12.2856 5.04235' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M3.33446 5.09739L2.69392 4.43439M2.03271 5.07666L3.35514 3.79212' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M8.67407 6.61512L7.06295 9.38435' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M10.5 9L8.33494 10.25V12.75L10.5 14L12.6651 12.75V10.25L10.5 9Z' stroke='none' strokeLinejoin='round' />
+        >
+          <path d='M8 2L13.1962 5V11L8 14L2.80385 11V5L8 2Z' stroke='none' strokeLinejoin='round' />
+          <ellipse cx='7.9579' cy='8.32058' rx='2.67225' ry='2.67947' stroke='none' />
+          <path d='M7.95781 5.6411V4.66675M6.98608 4.66675H8.92954' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M10.0271 6.26461L10.3745 5.92406M10.0349 5.57568L10.7142 6.27244' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M5.99001 6.30134L5.65195 5.95143M5.30298 6.29041L6.00092 5.61246' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M8.80809 7.10256L7.95778 8.56409' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
@@ -46,12 +47,13 @@ const PodPerformanceIcon = ({
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
           className={className}
-        ><path d='M10.5949 21.0001C6.40034 21.0001 3 17.5905 3 13.3847C3 9.17881 6.40034 5.76929 10.5949 5.76929C14.1986 5.76929 17.2162 8.28604 17.9947 11.6623' stroke='none' strokeWidth={1.5} strokeLinecap='round' />
-          <path d='M10.5943 5.76923V3M7.83252 3H13.3561' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M16.4754 7.54127L17.4628 6.57339M16.4976 5.58325L18.4281 7.56353' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M5.00145 7.64608L4.04064 6.65159M3.04883 7.61499L5.03246 5.68819' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M13.0114 9.9228L10.5947 14.0767' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M15.75 13.5L12.5024 15.375V19.125L15.75 21L18.9976 19.125V15.375L15.75 13.5Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+        >
+          <path d='M12 3L19.7942 7.5V16.5L12 21L4.20577 16.5V7.5L12 3Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+          <ellipse cx='11.9371' cy='12.4808' rx='4.00838' ry='4.0192' stroke='none' strokeWidth={1.5} />
+          <path d='M11.9368 8.46165V7.00012M10.4792 7.00012H13.3944' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M15.0408 9.39692L15.5619 8.88609M15.0525 8.36353L16.0714 9.40866' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M8.98513 9.45208L8.47804 8.92721M7.95459 9.43567L9.0015 8.41875' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M13.2125 10.6539L11.937 12.8462' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
@@ -65,12 +67,12 @@ const PodPerformanceIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M17.6581 35.0001C10.6672 35.0001 5 29.3176 5 22.3078C5 15.298 10.6672 9.61548 17.6581 9.61548C23.6644 9.61548 28.6936 13.8101 29.9911 19.4372' stroke='none' strokeWidth={2} strokeLinecap='round' />
-          <path d='M17.6576 9.61538V5M13.0547 5H22.2606' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M27.4591 12.5688L29.1049 10.9556M27.4961 9.30542L30.7137 12.6059' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M8.33591 12.7435L6.73457 11.086M5.08154 12.6917L8.38759 9.48031' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M21.6859 16.5379L17.6581 23.461' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M26.25 22.5L20.8373 25.625V31.875L26.25 35L31.6627 31.875V25.625L26.25 22.5Z' stroke='none' strokeWidth={2} strokeLinejoin='round' />
+          <path d='M20 5L32.9904 12.5V27.5L20 35L7.00962 27.5V12.5L20 5Z' stroke='none' strokeWidth={2} strokeLinejoin='round' />
+          <ellipse cx='19.895' cy='20.8012' rx='6.68063' ry='6.69867' stroke='none' strokeWidth={2} />
+          <path d='M19.8947 14.1026V11.6667M17.4653 11.6667H22.324' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M25.0676 15.6615L25.9362 14.8102M25.0872 13.9392L26.7853 15.6811' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M14.9749 15.7534L14.1297 14.8786M13.2573 15.7261L15.0022 14.0312' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M22.0206 17.7563L19.8948 21.4102' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
