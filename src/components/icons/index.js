@@ -148,6 +148,7 @@ import PreviewPRIcon from './PreviewPRIcon'
 import PullRequestIcon from './PullRequestIcon'
 import PullRequestLoadingIcon from './PullRequestLoadingIcon'
 import RecentAppsIcon from './RecentAppsIcon'
+import RemoveAppIcon from './RemoveAppIcon'
 import RemoveIcon from './RemoveIcon'
 import RequestOwnershipIcon from './RequestOwnershipIcon'
 import RequestsIcon from './RequestsIcon'
@@ -352,6 +353,7 @@ export default {
   PullRequestIcon,
   PullRequestLoadingIcon,
   RecentAppsIcon,
+  RemoveAppIcon,
   RemoveIcon,
   RequestOwnershipIcon,
   RequestsIcon,
