@@ -29,9 +29,9 @@ const ImportAppIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M10.5 7L13.5311 8.75V12.25L10.5 14L7.46891 12.25V8.75L10.5 7Z' stroke='none' strokeLinejoin='round' />
-          <path d='M7 10V10C6.44772 10 6 9.55228 6 9L6 5M6 5L8 6.5M6 5L4 6.5' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M5.33333 12L2 12L2 2L12 2L12 6' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M2 5V10.8722L7.5 14M7.5 14V8.00001M7.5 14L9.5 13M13 8.5V5' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M7.5 7.71423L2 4.85711L7.5 2L13 4.85711L7.5 7.71423Z' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M10.5 9L12.5 10V13.5M12.5 13.5L11 12M12.5 13.5L14 12' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
 
         </svg>
       )
@@ -46,10 +46,9 @@ const ImportAppIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M15.75 10.5L20.2966 13.125V18.375L15.75 21L11.2034 18.375V13.125L15.75 10.5Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
-          <path d='M10.5 15L10 15C9.44772 15 9 14.5523 9 14L9 7.5M9 7.5L12 9.75M9 7.5L6 9.75' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M8 18L3 18L3 3L18 3L18 9' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
-
+          <path d='M3 7.5V16.3083L11.25 21M11.25 21V12M11.25 21L14.25 19.5M19.5 12.75V7.5' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M11.25 11.5713L3 7.28567L11.25 3L19.5 7.28567L11.25 11.5713Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M15.75 13.5L18.75 15V20.25M18.75 20.25L16.5 18M18.75 20.25L21 18' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
@@ -63,9 +62,9 @@ const ImportAppIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M26.25 17.5L33.8277 21.875V30.625L26.25 35L18.6723 30.625V21.875L26.25 17.5Z' stroke='none' strokeWidth={2} strokeLinejoin='round' />
-          <path d='M17.5 25L16 25C15.4477 25 15 24.5523 15 24L15 12.5M15 12.5L20 16.25M15 12.5L10 16.25' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M13.3333 30L5 30L5 5L30 5L30 15' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M5 12.5V27.1806L18.75 35M18.75 35V20M18.75 35L23.75 32.5M32.5 21.25V12.5' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M18.75 19.2856L5 12.1428L18.75 5L32.5 12.1428L18.75 19.2856Z' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M26.25 22.5L31.25 25V33.75M31.25 33.75L27.5 30M31.25 33.75L35 30' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
