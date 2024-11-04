@@ -69,6 +69,9 @@
 .color-black-russian{
   @apply text-black-russian border-black-russian;
 }
+.color-fluorescent-cyan{
+  @apply text-fluorescent-cyan border-fluorescent-cyan;
+}
 
 .no-border {
   @apply border-0;
@@ -108,6 +111,9 @@
 }
 .hover-box-shadow-black-russian {
   @apply hover:shadow-black-russian;
+}
+.hover-box-shadow-fluorescent-cyan {
+  @apply hover:shadow-fluorescent-cyan;
 }
 
 .underline-effect {

@@ -110,6 +110,23 @@
   @apply !stroke-white;
 }
 
+.fluorescent-cyan > circle,
+.fluorescent-cyan > ellipse,
+.fluorescent-cyan > rect,
+.fluorescent-cyan > line, 
+.fluorescent-cyan > path {
+  @apply stroke-fluorescent-cyan;
+}
+
+.important-fluorescent-cyan > circle,
+.important-fluorescent-cyan > ellipse,
+.important-fluorescent-cyan > rect,
+.important-fluorescent-cyan > line, 
+.important-fluorescent-cyan > path {
+  @apply !stroke-fluorescent-cyan;
+}
+
+
 .filled-rich-black {
   @apply fill-rich-black;
 }
@@ -131,6 +148,10 @@
 .filled-tertiary-blue {
   @apply fill-tertiary-blue;
 }
+.filled-fluorescent-cyan {
+  @apply fill-fluorescent-cyan;
+}
+
 
 .fill-circle-green > circle {
   @apply fill-white;
