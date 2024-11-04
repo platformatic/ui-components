@@ -28,6 +28,9 @@
 .bordered--black-russian {
   @apply border-black-russian;
 }
+.bordered--fluorescent-cyan {
+  @apply border-fluorescent-cyan;
+}
 .bordered--transparent {
   @apply border-none;
 }
@@ -58,6 +61,9 @@
 .bordered--black-russian-100 {
   @apply border-black-russian/100;
 }
+.bordered--fluorescent-cyan-100 {
+  @apply border-fluorescent-cyan/100;
+}
 .bordered--main-green-70 {
   @apply border-main-green/70;
 }
@@ -85,6 +91,9 @@
 .bordered--black-russian-70 {
   @apply border-black-russian/70;
 }
+.bordered--fluorescent-cyan-70 {
+  @apply border-fluorescent-cyan/70;
+}
 .bordered--main-green-30 {
   @apply border-main-green/30;
 }
@@ -108,6 +117,9 @@
 }
 .bordered--black-russian-30 {
   @apply border-black-russian/30;
+}
+.bordered--fluorescent-cyan-30 {
+  @apply border-fluorescent-cyan/30;
 }
 .bordered--tertiary-blue-30 {
   @apply border-tertiary-blue/30;
@@ -136,6 +148,9 @@
 .bordered--black-russian-20 {
   @apply border-black-russian/20;
 }
+.bordered--fluorescent-cyan-20 {
+  @apply border-fluorescent-cyan/20;
+}
 .bordered--tertiary-blue-20 {
   @apply border-tertiary-blue/20;
 }
@@ -151,6 +166,9 @@
 .bordered--black-russian-15 {
   @apply border-black-russian/15;
 }
+.bordered--fluorescent-cyan-15 {
+  @apply border-fluorescent-cyan/15;
+}
 .bordered--tertiary-blue-15 {
   @apply border-tertiary-blue/15;
 }
@@ -165,6 +183,9 @@
 }
 .bordered--black-russian-10 {
   @apply border-black-russian/10;
+}
+.bordered--fluorescent-cyan-10 {
+  @apply border-fluorescent-cyan/10;
 }
 .bordered--tertiary-blue-10 {
   @apply border-tertiary-blue/10;
@@ -224,11 +245,17 @@
 .text--black-russian {
   @apply text-black-russian;
 }
+.text--fluorescent-cyan {
+  @apply text-fluorescent-cyan;
+}
 .text--rich-black-70 {
   @apply text-rich-black/70;
 }
 .text--black-russian-70 {
   @apply text-black-russian/70;
+}
+.text--fluorescent-cyan-70 {
+  @apply text-fluorescent-cyan/70;
 }
 
 .text--base {
@@ -270,6 +297,9 @@
 }
 .background-color-rich-black {
   @apply bg-rich-black ;
+}
+.background-color-fluorescent-cyan {
+  @apply bg-fluorescent-cyan ;
 }
 .background-color-black-russian {
   @apply bg-black-russian ;
@@ -361,6 +391,9 @@
 .hover-background-color-opaque-black-russian{
   @apply hover:bg-black-russian hover:bg-opacity-15;
 }
+.hover-background-color-opaque-fluorescent-cyan{
+  @apply hover:bg-fluorescent-cyan hover:bg-opacity-15;
+}
 .hover-background-color-opaque-night{
   @apply hover:bg-night hover:bg-opacity-15;
 }
@@ -387,6 +420,9 @@
 }
 .selected-background-color-black-russian {
   @apply !bg-black-russian bg-opacity-15;
+}
+.selected-background-color-fluorescent-cyan {
+  @apply !bg-fluorescent-cyan bg-opacity-15;
 }
 .selected-background-color-night {
   @apply !bg-night bg-opacity-15;

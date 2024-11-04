@@ -26,6 +26,7 @@ module.exports = {
         'tertiary-blue': '0px 0px 4px rgba(37, 136, 228, 0.5)',
         'rich-black': '0px 0px 4px rgba(0, 5, 11, 1)',
         'black-russian': '0px 0px 4px rgba(0, 9, 14, 23)',
+        'fluorescent-cyan': '0px 0px 4px rgba(68, 255, 236, 23)',
         white: '0px 0px 4px rgba(255, 255, 255, 0.5)'
       },
       opacity: {
@@ -50,7 +51,8 @@ module.exports = {
       'electric-purple': '#C61BE2',
       'anti-flash-white': '#EDEDED',
       'fire-engine-red': '#D71919',
-      'alternate-rich-black': '#12171D'
+      'alternate-rich-black': '#12171D',
+      'fluorescent-cyan': '#44FFEC'
     },
     fontFamily: {
       sans: ['Montserrat'],

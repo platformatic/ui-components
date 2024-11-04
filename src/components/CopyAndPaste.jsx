@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { COLORS_ICON, DIRECTION_TOP, MEDIUM, SIZES, POSITIONS, POSITION_CENTER, MAIN_DARK_BLUE } from './constants'
 import PlatformaticIcon from './PlatformaticIcon'
 import TooltipAbsolute from './TooltipAbsolute'
+import Tooltip from './Tooltip'
 
 function CopyAndPaste ({
   value = 'app',
@@ -13,7 +14,8 @@ function CopyAndPaste ({
   size = MEDIUM,
   tooltipClassName = '',
   position = POSITION_CENTER,
-  internalOverHandling = false
+  internalOverHandling = false,
+  tooltipFixed = false
 }) {
   const [copied, setCopied] = useState(false)
 
@@ -25,9 +27,30 @@ function CopyAndPaste ({
     }, timeout)
   }
 
-  return !copied
-    ? (<PlatformaticIcon size={size} iconName='CopyPasteIcon' color={color} onClick={() => copy()} internalOverHandling={internalOverHandling} />)
-    : (
+  function renderTooltip () {
+    if (tooltipFixed) {
+      return (
+        <Tooltip
+          tooltipClassName={tooltipClassName}
+          content={(<span>{tooltipLabel}</span>)}
+          delay={100}
+          direction={DIRECTION_TOP}
+          offset={24}
+          activeDependsOnVisible
+          visible={copied}
+          position={position}
+        >
+          <PlatformaticIcon
+            size={size}
+            iconName={!copied ? 'CopyPasteIcon' : 'CircleCheckMarkIcon'}
+            color={color}
+            onClick={() => !copied ? copy() : {}}
+            internalOverHandling={internalOverHandling}
+          />
+        </Tooltip>
+      )
+    }
+    return (
       <TooltipAbsolute
         tooltipClassName={tooltipClassName}
         content={(<span>{tooltipLabel}</span>)}
@@ -38,9 +61,18 @@ function CopyAndPaste ({
         visible={copied}
         position={position}
       >
-        <PlatformaticIcon size={size} iconName='CircleCheckMarkIcon' color={color} onClick={null} />
+        <PlatformaticIcon
+          size={size}
+          iconName={!copied ? 'CopyPasteIcon' : 'CircleCheckMarkIcon'}
+          color={color}
+          onClick={() => !copied ? copy() : {}}
+          internalOverHandling={internalOverHandling}
+        />
       </TooltipAbsolute>
-      )
+    )
+  }
+
+  return renderTooltip()
 }
 
 CopyAndPaste.propTypes = {
@@ -75,7 +107,11 @@ CopyAndPaste.propTypes = {
   /**
    * position
    */
-  position: PropTypes.oneOf(POSITIONS)
+  position: PropTypes.oneOf(POSITIONS),
+  /**
+   * tooltipFixed
+   */
+  tooltipFixed: PropTypes.bool
 }
 
 export default CopyAndPaste
