@@ -52,7 +52,9 @@ module.exports = {
       'anti-flash-white': '#EDEDED',
       'fire-engine-red': '#D71919',
       'alternate-rich-black': '#12171D',
-      'fluorescent-cyan': '#44FFEC'
+      'fluorescent-cyan': '#44FFEC',
+      'giants-orange': '#FA6221'
+
     },
     fontFamily: {
       sans: ['Montserrat'],
