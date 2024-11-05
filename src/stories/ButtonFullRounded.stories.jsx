@@ -5,7 +5,8 @@ import {
   SIZES,
   SMALL,
   MEDIUM,
-  LARGE
+  LARGE,
+  HOVER_EFFECTS_BUTTONS
 } from '../components/constants'
 import Icons from '../components/icons'
 
@@ -53,6 +54,10 @@ export default {
         type: 'radio',
         options: SIZES
       }
+    },
+    hoverEffect: {
+      type: 'radio',
+      options: HOVER_EFFECTS_BUTTONS
     },
     selected: {
       type: 'boolean'

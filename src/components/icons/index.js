@@ -85,6 +85,7 @@ import EditIcon from './EditIcon'
 import EntrypointIcon from './EntrypointIcon'
 import EnlargeIcon from './EnlargeIcon'
 import EntryIcon from './EntryIcon'
+import EnvVariableszIcon from './EnvVariableszIcon'
 import ExpandIcon from './ExpandIcon'
 import ExploreDocIcon from './ExploreDocIcon'
 import EyeClosedIcon from './EyeClosedIcon'
@@ -294,6 +295,7 @@ export default {
   ExploreDocIcon,
   EnlargeIcon,
   EntryIcon,
+  EnvVariableszIcon,
   FailureRateIcon,
   FolderIcon,
   FoldersIcon,
