@@ -1,5 +1,5 @@
 'use strict'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './DropDown.module.css'
 import commonStyles from './Common.module.css'
@@ -16,10 +16,28 @@ function DropDown ({
   headerColor = WHITE,
   borderColor = WHITE,
   lastButton = null,
-  menuCustomClassName = ''
+  menuCustomClassName = '',
+  handleClickOutside = false
 }) {
   const [open, setOpen] = useState(false)
+  const wrapperRef = useRef(null)
   const borderClass = commonStyles[`bordered--${borderColor}-30`]
+
+  useEffect(() => {
+    if (open && handleClickOutside) {
+      function innerHandleClickOutside (event) {
+        if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+          setOpen(false)
+        }
+      }
+      // Bind the event listener
+      document.addEventListener('mousedown', innerHandleClickOutside)
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener('mousedown', innerHandleClickOutside)
+      }
+    }
+  }, [handleClickOutside, open])
 
   let classNameMenu = `${styles.menu} `
   classNameMenu += commonStyles[`background-color-${backgroundColor}`]
@@ -49,7 +67,7 @@ function DropDown ({
   }
 
   return (
-    <div className={`${styles.dropDown} ${styles[align]}`}>
+    <div className={`${styles.dropDown} ${styles[align]}`} ref={wrapperRef}>
       <span className={headerClassNamme} onClick={handleOpen}>
         {pictureUrl && <img src={pictureUrl} height={32} width={32} className={styles.picture} />}
         {header && (<span className={headerClassName || styles.headerClassNameDefault}>{header}</span>)}
@@ -116,7 +134,11 @@ DropDown.propTypes = {
   /**
    * menuCustomClassName
    */
-  menuCustomClassName: PropTypes.string
+  menuCustomClassName: PropTypes.string,
+  /**
+   * handleClickOutside
+   */
+  handleClickOutside: PropTypes.bool
 }
 
 export default DropDown
