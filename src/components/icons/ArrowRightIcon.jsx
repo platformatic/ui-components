@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE } from '../constants'
+import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, MAIN_DARK_BLUE, TINY } from '../constants'
 
 const ArrowRightIcon = ({
   color = MAIN_DARK_BLUE,
@@ -19,6 +19,20 @@ const ArrowRightIcon = ({
   let icon = <></>
 
   switch (size) {
+    case TINY:
+      icon = (
+        <svg
+          width={8}
+          height={8}
+          viewBox='0 0 8 8'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+          className={className}
+        >
+          <path d='M2.5 7L5.5 4L2.5 1' stroke='none' strokeLinecap='round' strokeLinejoin='round' />
+        </svg>
+      )
+      break
     case SMALL:
       icon = (
         <svg

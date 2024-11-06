@@ -127,6 +127,40 @@
 }
 
 
+.giants-orange > circle,
+.giants-orange > ellipse,
+.giants-orange > rect,
+.giants-orange > line, 
+.giants-orange > path {
+  @apply stroke-giants-orange;
+}
+
+.important-giants-orange > circle,
+.important-giants-orange > ellipse,
+.important-giants-orange > rect,
+.important-giants-orange > line, 
+.important-giants-orange > path {
+  @apply !stroke-giants-orange;
+}
+
+
+.electric-purple > circle,
+.electric-purple > ellipse,
+.electric-purple > rect,
+.electric-purple > line, 
+.electric-purple > path {
+  @apply stroke-electric-purple;
+}
+
+.important-electric-purple > circle,
+.important-electric-purple > ellipse,
+.important-electric-purple > rect,
+.important-electric-purple > line, 
+.important-electric-purple > path {
+  @apply !stroke-electric-purple;
+}
+
+
 .filled-rich-black {
   @apply fill-rich-black;
 }
@@ -150,6 +184,12 @@
 }
 .filled-fluorescent-cyan {
   @apply fill-fluorescent-cyan;
+}
+.filled-giants-orange {
+  @apply fill-giants-orange;
+}
+.filled-electric-purple {
+  @apply fill-electric-purple;
 }
 
 

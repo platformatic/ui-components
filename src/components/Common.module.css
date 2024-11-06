@@ -31,6 +31,12 @@
 .bordered--fluorescent-cyan {
   @apply border-fluorescent-cyan;
 }
+.bordered--electric-purple {
+  @apply border-electric-purple;
+}
+.bordered--giants-orange {
+  @apply border-giants-orange;
+}
 .bordered--transparent {
   @apply border-none;
 }
@@ -64,6 +70,12 @@
 .bordered--fluorescent-cyan-100 {
   @apply border-fluorescent-cyan/100;
 }
+.bordered--electric-purple-100 {
+  @apply border-electric-purple/100;
+}
+.bordered--giants-orange-100 {
+  @apply border-giants-orange/100;
+}
 .bordered--main-green-70 {
   @apply border-main-green/70;
 }
@@ -94,6 +106,12 @@
 .bordered--fluorescent-cyan-70 {
   @apply border-fluorescent-cyan/70;
 }
+.bordered--electric-purple-70 {
+  @apply border-electric-purple/70;
+}
+.bordered--giants-orange-70 {
+  @apply border-giants-orange/70;
+}
 .bordered--main-green-30 {
   @apply border-main-green/30;
 }
@@ -120,6 +138,12 @@
 }
 .bordered--fluorescent-cyan-30 {
   @apply border-fluorescent-cyan/30;
+}
+.bordered--electric-purple-30 {
+  @apply border-electric-purple/30;
+}
+.bordered--giants-orange-30 {
+  @apply border-giants-orange/30;
 }
 .bordered--tertiary-blue-30 {
   @apply border-tertiary-blue/30;
@@ -151,6 +175,12 @@
 .bordered--fluorescent-cyan-20 {
   @apply border-fluorescent-cyan/20;
 }
+.bordered--electric-purple-20 {
+  @apply border-electric-purple/20;
+}
+.bordered--giants-orange-20 {
+  @apply border-giants-orange/20;
+}
 .bordered--tertiary-blue-20 {
   @apply border-tertiary-blue/20;
 }
@@ -169,6 +199,12 @@
 .bordered--fluorescent-cyan-15 {
   @apply border-fluorescent-cyan/15;
 }
+.bordered--electric-purple-15 {
+  @apply border-electric-purple/15;
+}
+.bordered--giants-orange-15 {
+  @apply border-giants-orange/15;
+}
 .bordered--tertiary-blue-15 {
   @apply border-tertiary-blue/15;
 }
@@ -186,6 +222,12 @@
 }
 .bordered--fluorescent-cyan-10 {
   @apply border-fluorescent-cyan/10;
+}
+.bordered--electric-purple-10 {
+  @apply border-electric-purple/10;
+}
+.bordered--giants-orange-10 {
+  @apply border-giants-orange/10;
 }
 .bordered--tertiary-blue-10 {
   @apply border-tertiary-blue/10;
@@ -248,6 +290,12 @@
 .text--fluorescent-cyan {
   @apply text-fluorescent-cyan;
 }
+.text--giants-orange {
+  @apply text-giants-orange;
+}
+.text--electric-purple {
+  @apply text-electric-purple;
+}
 .text--rich-black-70 {
   @apply text-rich-black/70;
 }
@@ -257,7 +305,12 @@
 .text--fluorescent-cyan-70 {
   @apply text-fluorescent-cyan/70;
 }
-
+.text--giants-orange-70 {
+  @apply text-giants-orange/70;
+}
+.text--electric-purple-70 {
+  @apply text-electric-purple/70;
+}
 .text--base {
   @apply text-base
 }
@@ -301,9 +354,16 @@
 .background-color-fluorescent-cyan {
   @apply bg-fluorescent-cyan ;
 }
+.background-color-giants-orange {
+  @apply bg-giants-orange ;
+}
+.background-color-electric-purple {
+  @apply bg-electric-purple ;
+}
 .background-color-black-russian {
   @apply bg-black-russian ;
 }
+
 .background-color-night {
   @apply bg-night ;
 }
@@ -394,6 +454,12 @@
 .hover-background-color-opaque-fluorescent-cyan{
   @apply hover:bg-fluorescent-cyan hover:bg-opacity-15;
 }
+.hover-background-color-opaque-giants-orange{
+  @apply hover:bg-giants-orange hover:bg-opacity-15;
+}
+.hover-background-color-opaque-electric-purple{
+  @apply hover:bg-electric-purple hover:bg-opacity-15;
+}
 .hover-background-color-opaque-night{
   @apply hover:bg-night hover:bg-opacity-15;
 }
@@ -423,6 +489,12 @@
 }
 .selected-background-color-fluorescent-cyan {
   @apply !bg-fluorescent-cyan bg-opacity-15;
+}
+.selected-background-color-electric-purple {
+  @apply !bg-electric-purple bg-opacity-15;
+}
+.selected-background-color-giants-orange {
+  @apply !bg-giants-orange bg-opacity-15;
 }
 .selected-background-color-night {
   @apply !bg-night bg-opacity-15;

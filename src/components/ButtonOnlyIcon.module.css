@@ -72,6 +72,12 @@
 .color-fluorescent-cyan{
   @apply text-fluorescent-cyan border-fluorescent-cyan;
 }
+.color-electric-purple {
+  @apply text-electric-purple border-electric-purple;
+}
+.color-giants-orange {
+  @apply text-giants-orange border-giants-orange;
+}
 
 .no-border {
   @apply border-0;
@@ -114,6 +120,12 @@
 }
 .hover-box-shadow-fluorescent-cyan {
   @apply hover:shadow-fluorescent-cyan;
+}
+.hover-box-shadow-electric-purple {
+  @apply hover:shadow-electric-purple;
+}
+.hover-box-shadow-giants-orange {
+  @apply hover:shadow-giants-orange;
 }
 
 .underline-effect {
