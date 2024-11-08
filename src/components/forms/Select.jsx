@@ -28,8 +28,10 @@ function Select ({
   backgroundColor = WHITE,
   inputTextClassName = '',
   beforeIcon = {},
-  paddingClass = ''
+  paddingClass = '',
+  handleClickOutside = false
 }) {
+  const wrapperRef = useRef(null)
   const inputRef = useRef()
   const [showOptions, setShowOptions] = useState(false)
   // eslint-disable-next-line  no-unused-vars
@@ -106,6 +108,22 @@ function Select ({
   }, [value])
 
   useEffect(() => {
+    if (showOptions && handleClickOutside) {
+      function innerHandleClickOutside (event) {
+        if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+          setShowOptions(false)
+        }
+      }
+      // Bind the event listener
+      document.addEventListener('mousedown', innerHandleClickOutside)
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener('mousedown', innerHandleClickOutside)
+      }
+    }
+  }, [handleClickOutside, showOptions])
+
+  useEffect(() => {
     if (disabled) {
       const className = normalClassName() + ' ' + commonStyles['apply-opacity-30']
       setWrapperClassName(className)
@@ -170,7 +188,7 @@ function Select ({
   }
 
   return (
-    <div className={containerClassName} {...dataProps}>
+    <div className={containerClassName} {...dataProps} ref={wrapperRef}>
       <div className={wrapperClassName}>
         {beforeIcon?.iconName && getBeforeIcon()}
         <input type='text' name={name} value={value} className={inputClassName} ref={inputRef} disabled={disabled} placeholder={placeholder} onFocus={() => handleFocus()} onBlur={(e) => handleBlur(e)} readOnly />
@@ -285,7 +303,11 @@ Select.propTypes = {
   /**
    * paddingClass
   */
-  paddingClass: PropTypes.string
+  paddingClass: PropTypes.string,
+  /**
+   * handleClickOutside
+   */
+  handleClickOutside: PropTypes.bool
 }
 
 export default Select

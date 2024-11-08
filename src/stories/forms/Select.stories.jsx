@@ -198,5 +198,6 @@ WithBeforeIcon.args = {
     iconName: 'AddIcon',
     color: ERROR_RED,
     size: LARGE
-  }
+  },
+  handleClickOutside: true
 }
