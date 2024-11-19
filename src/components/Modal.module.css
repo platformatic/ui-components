@@ -25,8 +25,12 @@
 .modal {
   @apply p-4 rounded-md mx-auto my-auto max-h-[85vh] overflow-y-auto;
 }
+.modalDefaultFlex {
+  @apply flex flex-col gap-y-2;
+}
 .modal--popup-v2 {
-  @apply bg-rich-black border border-solid border-white/30 flex flex-col gap-y-4;
+  @apply bg-rich-black border border-solid;
+  border-color: rgba(255, 255, 255, .3);
 }
 .modal--popup {
   @apply bg-light-blue;
