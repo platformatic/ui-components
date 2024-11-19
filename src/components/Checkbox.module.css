@@ -1,5 +1,5 @@
 .checkbox {
-  @apply border border-solid rounded-sm relative inline-block m-0;
+  @apply border border-solid rounded-sm relative inline-block m-0 hover:cursor-pointer;
   -webkit-appearance: none;
 }
 
