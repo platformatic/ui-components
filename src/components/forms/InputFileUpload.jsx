@@ -5,7 +5,7 @@ import styles from './InputFileUpload.module.css'
 import commonStyles from '../Common.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
 import Button from '../Button'
-import { ERROR_RED, MAIN_DARK_BLUE, MAIN_GREEN, RICH_BLACK, TRANSPARENT, WHITE } from '../constants'
+import { ACTIVE_AND_INACTIVE_STATUS, ERROR_RED, MAIN_DARK_BLUE, MAIN_GREEN, RICH_BLACK, TRANSPARENT, WHITE } from '../constants'
 
 function InputFileUpload ({
   idInputFile = 'fileUpload',
@@ -19,12 +19,13 @@ function InputFileUpload ({
   afterIcon = null,
   backgroundColor = WHITE,
   inputTextClassName = '',
-  detailTextClassName = '',
   verticalPaddingClassName = '',
   dataAttrName = '',
   dataAttrValue = '',
   readOnly = false,
   removeFileButton = {},
+  showDetailButton = true,
+  detailFileButton = {},
   onClickDetail = () => {},
   acceptFiles = '*'
 }) {
@@ -108,7 +109,20 @@ function InputFileUpload ({
           >
             {file !== null ? file.name : <span className={styles.inputPlaceholderClassName}>{inputPlaceholder}</span>}
           </label>
-          {file !== null && <span className={`${styles.afterInputDetail} ${detailTextClassName}`} onClick={() => onClickDetail()}>Detail</span>}
+          {file !== null && showDetailButton && (
+            <div className={styles.afterInputDetail}>
+              <Button
+                textClass={detailFileButton?.textClass ?? ''}
+                paddingClass={detailFileButton?.paddingClass ?? ''}
+                label={detailFileButton?.label ?? 'Details'}
+                color={detailFileButton?.color ?? WHITE}
+                type='button'
+                onClick={() => onClickDetail()}
+                bordered={false}
+                hoverEffect={ACTIVE_AND_INACTIVE_STATUS}
+              />
+            </div>
+          )}
         </div>
         {file !== null && (
           <Button
@@ -211,6 +225,14 @@ InputFileUpload.propTypes = {
    * removeFileButton
   */
   removeFileButton: PropTypes.object,
+  /**
+   * showDetailButton
+  */
+  showDetailButton: PropTypes.bool,
+  /**
+   * detailFileButton
+  */
+  detailFileButton: PropTypes.object,
   /**
      * onClickDetail
     */
