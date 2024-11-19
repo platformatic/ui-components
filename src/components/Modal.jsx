@@ -42,13 +42,15 @@ function Modal ({
   childrenClassContainer = '',
   modalCloseClassName = '',
   permanent = false,
-  showCloseButtonOnTop = true
+  showCloseButtonOnTop = true,
+  additionalModalClassName = ''
 }) {
   let contentFullscreen
   let titleFullscreen
-  let modalClassName = `${styles.modal}`
+  let modalClassName = `${styles.modal} `
   modalClassName += ' ' + styles[`modal--${layout}`]
   modalClassName += ' ' + styles[`modal--${size}`]
+  modalClassName += ` ${additionalModalClassName || styles.modalDefaultFlex}`
   let buttonFullRoundedClassName
   const blurRef = useRef()
 
@@ -309,7 +311,11 @@ Modal.propTypes = {
   /**
    * showCloseButtonOnTop: show button on X
    */
-  showCloseButtonOnTop: PropTypes.bool
+  showCloseButtonOnTop: PropTypes.bool,
+  /**
+   * additionalModalClassName: show button on X
+   */
+  additionalModalClassName: PropTypes.string
 }
 
 export default Modal
