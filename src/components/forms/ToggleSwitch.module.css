@@ -1,5 +1,5 @@
 .container {
-  @apply flex w-full h-10 items-center gap-x-2;
+  @apply flex w-full items-center gap-x-2;
 }
 .switch {
   @apply relative inline-block cursor-pointer;
