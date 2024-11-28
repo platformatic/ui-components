@@ -50,12 +50,12 @@ const PodServicesIcon = ({
           className={className}
           transform='rotate(270)'
         >
-          <path d='M12 9.9976L10.125 9.9976L8.25 6.75L10.125 3.5024L13.875 3.5024L15.75 6.75L13.875 9.9976L12 9.9976ZM12 9.9976C12 11.1651 12 13.5 12 13.5' stroke='none' stroke-width='1.5' strokeLinejoin='round' />
-          <rect x='7.5' y='13.5' width='7.5' height='4.5' transform='rotate(90 7.5 13.5)' stroke='none' stroke-width='1.5' strokeLinejoin='round' />
-          <rect x='14.25' y='13.5' width='7.5' height='4.5' transform='rotate(90 14.25 13.5)' stroke='none' stroke-width='1.5' strokeLinejoin='round' />
-          <rect x='21' y='13.5' width='7.5' height='4.5' transform='rotate(90 21 13.5)' stroke='none' stroke-width='1.5' strokeLinejoin='round' />
-          <path d='M8.25 6.75L5.25 6.75L5.25 13.5' stroke='none' stroke-width='1.5' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M15.75 6.75L18.75 6.75L18.75 13.5' stroke='none' stroke-width='1.5' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M12 9.9976L10.125 9.9976L8.25 6.75L10.125 3.5024L13.875 3.5024L15.75 6.75L13.875 9.9976L12 9.9976ZM12 9.9976C12 11.1651 12 13.5 12 13.5' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+          <rect x='7.5' y='13.5' width='7.5' height='4.5' transform='rotate(90 7.5 13.5)' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+          <rect x='14.25' y='13.5' width='7.5' height='4.5' transform='rotate(90 14.25 13.5)' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+          <rect x='21' y='13.5' width='7.5' height='4.5' transform='rotate(90 21 13.5)' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+          <path d='M8.25 6.75L5.25 6.75L5.25 13.5' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M15.75 6.75L18.75 6.75L18.75 13.5' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
@@ -71,12 +71,12 @@ const PodServicesIcon = ({
           transform='rotate(270)'
 
         >
-          <path d='M20 16.6627L16.875 16.6627L13.75 11.25L16.875 5.83734L23.125 5.83734L26.25 11.25L23.125 16.6627L20 16.6627ZM20 16.6627C20 18.6084 20 22.5 20 22.5' stroke='none' stroke-width='2' strokeLinejoin='round' />
-          <rect x='12.5' y='22.5' width='12.5' height='7.5' transform='rotate(90 12.5 22.5)' stroke='none' stroke-width='2' strokeLinejoin='round' />
-          <rect x='23.75' y='22.5' width='12.5' height='7.5' transform='rotate(90 23.75 22.5)' stroke='none' stroke-width='2' strokeLinejoin='round' />
-          <rect x='35' y='22.5' width='12.5' height='7.5' transform='rotate(90 35 22.5)' stroke='none' stroke-width='2' strokeLinejoin='round' />
-          <path d='M13.75 11.25L8.75 11.25L8.75 22.5' stroke='none' stroke-width='2' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M26.25 11.25L31.25 11.25L31.25 22.5' stroke='none' stroke-width='2' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M20 16.6627L16.875 16.6627L13.75 11.25L16.875 5.83734L23.125 5.83734L26.25 11.25L23.125 16.6627L20 16.6627ZM20 16.6627C20 18.6084 20 22.5 20 22.5' stroke='none' strokeWidth={2} strokeLinejoin='round' />
+          <rect x='12.5' y='22.5' width='12.5' height='7.5' transform='rotate(90 12.5 22.5)' stroke='none' strokeWidth={2} strokeLinejoin='round' />
+          <rect x='23.75' y='22.5' width='12.5' height='7.5' transform='rotate(90 23.75 22.5)' stroke='none' strokeWidth={2} strokeLinejoin='round' />
+          <rect x='35' y='22.5' width='12.5' height='7.5' transform='rotate(90 35 22.5)' stroke='none' strokeWidth={2} strokeLinejoin='round' />
+          <path d='M13.75 11.25L8.75 11.25L8.75 22.5' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M26.25 11.25L31.25 11.25L31.25 22.5' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
