@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import commonStyles from './Common.module.css'
 import styles from './Tag.module.css'
-import { COLORS_BUTTON, OPACITY_100, OPACITY_20, OPACITY_30, OPACITY_60, SIZES, WHITE } from './constants'
+import { COLORS_BUTTON, OPACITY_100, OPACITIES, SIZES, WHITE } from './constants'
 import PlatformaticIcon from './PlatformaticIcon'
 
 function Tag ({
@@ -62,7 +62,7 @@ Tag.propTypes = {
   /**
    * opaque
    */
-  opaque: PropTypes.oneOf([OPACITY_100, OPACITY_60, OPACITY_30, OPACITY_20]),
+  opaque: PropTypes.oneOf([OPACITIES]),
   /**
      * fullRounded
      */
