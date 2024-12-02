@@ -35,6 +35,7 @@ import BellIcon from './BellIcon'
 import BillingIcon from './BillingIcon'
 import BuiltInLoggingIcon from './BuiltInLoggingIcon'
 import BranchIcon from './BranchIcon'
+import CachingIcon from './CachingIcon'
 import CalendarIcon from './CalendarIcon'
 import Calendar1DayIcon from './Calendar1DayIcon'
 import Calendar7DaysIcon from './Calendar7DaysIcon'
@@ -242,6 +243,7 @@ export default {
   BillingIcon,
   BuiltInLoggingIcon,
   BranchIcon,
+  CachingIcon,
   CalendarIcon,
   Calendar1DayIcon,
   Calendar7DaysIcon,
