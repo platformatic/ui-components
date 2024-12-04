@@ -124,6 +124,7 @@ import MetricsLoadingIcon from './MetricsLoadingIcon'
 import MetricsLogsIcon from './MetricsLogsIcon'
 import MissingTemplateIcon from './MissingTemplateIcon'
 import NameAppIcon from './NameAppIcon'
+import NextJSIcon from './NextJSIcon'
 import NodeJSMetricsIcon from './NodeJSMetricsIcon'
 import NoActivitiesIcon from './NoActivitiesIcon'
 import NoDeploymentsIcon from './NoDeploymentsIcon'
@@ -332,6 +333,7 @@ export default {
   MetricsLogsIcon,
   MissingTemplateIcon,
   NameAppIcon,
+  NextJSIcon,
   NodeJSIcon,
   NodeJSMetricsIcon,
   NoActivitiesIcon,
