@@ -65,6 +65,7 @@ import CloseIcon from './CloseIcon'
 import CloudIcon from './CloudIcon'
 import CLIIcon from './CLIIcon'
 import CodeTestingIcon from './CodeTestingIcon'
+import CollapseIcon from './CollapseIcon'
 import ComputerIcon from './ComputerIcon'
 import ComputerInIcon from './ComputerInIcon'
 import ComputerOutIcon from './ComputerOutIcon'
@@ -274,6 +275,7 @@ export default {
   CloudIcon,
   CLIIcon,
   CodeTestingIcon,
+  CollapseIcon,
   ComputerIcon,
   ComputerInIcon,
   ComputerOutIcon,
