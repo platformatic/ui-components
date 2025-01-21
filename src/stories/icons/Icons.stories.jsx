@@ -5,6 +5,9 @@ import CircleCloseIcon from '../../components/icons/CircleCloseIcon'
 import WorkspaceStaticIcon from '../../components/icons/WorkspaceStaticIcon'
 import UpgradeIcon from '../../components/icons/UpgradeIcon'
 import WorkspaceDynamicIcon from '../../components/icons/WorkspaceDynamicIcon'
+import CollapseIcon from '../../components/icons/CollapseIcon'
+import ExpandIcon from '../../components/icons/ExpandIcon'
+import EnlargeIcon from '../../components/icons/EnlargeIcon'
 import { COLORS_ICON } from '../../components/constants'
 
 const divStyle = {
@@ -94,3 +97,12 @@ const LargeIconsTemplate = () =>
   [<UpgradeIcon key='b' size='extra-large' />].map((component) => component)
 export const LargeIconsDefault = LargeIconsTemplate.bind({})
 LargeIconsDefault.args = {}
+
+export const Expand = ExpandIcon.bind({})
+Expand.args = {}
+
+export const Collapse = CollapseIcon.bind({})
+Collapse.args = {}
+
+export const Enlarge = EnlargeIcon.bind({})
+Enlarge.args = {}
