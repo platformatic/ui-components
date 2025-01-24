@@ -9,6 +9,7 @@ import CollapseIcon from '../../components/icons/CollapseIcon'
 import ExpandIcon from '../../components/icons/ExpandIcon'
 import EnlargeIcon from '../../components/icons/EnlargeIcon'
 import { COLORS_ICON } from '../../components/constants'
+import AppOptimizedIcon from '../../components/icons/AppOptimizedIcon'
 
 const divStyle = {
   display: 'flex',
@@ -106,3 +107,6 @@ Collapse.args = {}
 
 export const Enlarge = EnlargeIcon.bind({})
 Enlarge.args = {}
+
+export const AppOptimized = AppOptimizedIcon.bind({})
+AppOptimized.args = {}
