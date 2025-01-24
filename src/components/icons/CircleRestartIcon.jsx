@@ -47,10 +47,10 @@ const CircleRestartIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <circle cx='13' cy='13' r='12' stroke='none' strokeWidth='1.5' />
-          <path d='M7.07675 8.85276C8.34335 6.83189 10.5092 5.5 12.9683 5.5C16.8729 5.5 20.0382 8.85786 20.0382 13C20.0382 13.7532 19.9335 14.4805 19.7388 15.1664M5.99619 11.75C5.9319 12.1565 5.89844 12.5741 5.89844 13C5.89844 17.1421 9.06373 20.5 12.9683 20.5C15.0799 20.5 16.9753 19.518 18.2707 17.9609' stroke='none' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M17.8574 12.8125L19.7043 15.2471L21.9992 13.2879' stroke='none' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M8.15723 13.5273L5.93706 11.4735L4.00095 13.8287' stroke='none' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
+          <circle cx='13' cy='13' r='12' stroke='none' strokeWidth={1.5} />
+          <path d='M7.07675 8.85276C8.34335 6.83189 10.5092 5.5 12.9683 5.5C16.8729 5.5 20.0382 8.85786 20.0382 13C20.0382 13.7532 19.9335 14.4805 19.7388 15.1664M5.99619 11.75C5.9319 12.1565 5.89844 12.5741 5.89844 13C5.89844 17.1421 9.06373 20.5 12.9683 20.5C15.0799 20.5 16.9753 19.518 18.2707 17.9609' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M17.8574 12.8125L19.7043 15.2471L21.9992 13.2879' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M8.15723 13.5273L5.93706 11.4735L4.00095 13.8287' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break

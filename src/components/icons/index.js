@@ -206,6 +206,7 @@ import WorkspaceReadyIcon from './WorkspaceReadyIcon'
 import WorkspaceStaticIcon from './WorkspaceStaticIcon'
 import ZoomInIcon from './ZoomInIcon'
 import ZoomOutIcon from './ZoomOutIcon'
+import AppOptimizedIcon from './AppOptimizedIcon'
 
 export default {
   AddIcon,
@@ -225,12 +226,13 @@ export default {
   AppConfigurationIcon,
   AppDetailsIcon,
   AppEditIcon,
-  AppIcon,
   AppEmptyIcon,
+  AppIcon,
+  ApplicationTypeIcon,
   AppListIcon,
   AppMissingIcon,
+  AppOptimizedIcon,
   AppSettingsIcon,
-  ApplicationTypeIcon,
   AppWorkspace,
   ArrowDownFullIcon,
   ArrowDownIcon,

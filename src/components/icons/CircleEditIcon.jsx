@@ -48,10 +48,10 @@ const CircleEditIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <circle cx='13' cy='13' r='12' stroke='none' strokeWidth='1.5' />
-          <rect x='16.083' y='7.75977' width='3.17647' height='11.6471' transform='rotate(45 16.083 7.75977)' stroke='none' strokeWidth='1.5' strokeLinejoin='round' />
-          <path d='M10.0928 18.2402L7.84668 15.9941L6.72363 19.3633L10.0928 18.2402Z' stroke='none' strokeWidth='1.5' strokeLinejoin='round' />
-          <path d='M17.2684 6.57238C17.8542 5.98659 18.804 5.98659 19.3898 6.57238L19.5145 6.69716C20.1003 7.28295 20.1003 8.2327 19.5145 8.81848L18.3291 10.0039L16.083 7.75782L17.2684 6.57238Z' stroke='none' strokeWidth='1.5' />
+          <circle cx='13' cy='13' r='12' stroke='none' strokeWidth={1.5} />
+          <rect x='16.083' y='7.75977' width='3.17647' height='11.6471' transform='rotate(45 16.083 7.75977)' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+          <path d='M10.0928 18.2402L7.84668 15.9941L6.72363 19.3633L10.0928 18.2402Z' stroke='none' strokeWidth={1.5} strokeLinejoin='round' />
+          <path d='M17.2684 6.57238C17.8542 5.98659 18.804 5.98659 19.3898 6.57238L19.5145 6.69716C20.1003 7.28295 20.1003 8.2327 19.5145 8.81848L18.3291 10.0039L16.083 7.75782L17.2684 6.57238Z' stroke='none' strokeWidth={1.5} />
 
         </svg>
       )

@@ -29,8 +29,8 @@ const CircleCheckMarkButtonIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <circle cx='13' cy='13' r='12' stroke='none' strokeWidth='1.5' />
-          <path d='M7 13L12 17L19 9' stroke='none' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
+          <circle cx='13' cy='13' r='12' stroke='none' strokeWidth={1.5} />
+          <path d='M7 13L12 17L19 9' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break

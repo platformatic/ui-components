@@ -29,10 +29,10 @@ const CollapseIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M13.1426 7.14258L8.85686 7.14258L8.85686 2.85686' stroke='white' stroke-linecap='round' stroke-linejoin='round' />
-          <path d='M14.0004 2L9.28613 6.71429' stroke='white' stroke-linecap='round' stroke-linejoin='round' />
-          <path d='M2.85742 8.85742L7.14314 8.85742L7.14314 13.1431' stroke='white' stroke-linecap='round' stroke-linejoin='round' />
-          <path d='M6.71429 9.28613L2 14.0004' stroke='white' stroke-linecap='round' stroke-linejoin='round' />
+          <path d='M13.1426 7.14258L8.85686 7.14258L8.85686 2.85686' stroke='white' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M14.0004 2L9.28613 6.71429' stroke='white' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M2.85742 8.85742L7.14314 8.85742L7.14314 13.1431' stroke='white' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M6.71429 9.28613L2 14.0004' stroke='white' strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
@@ -46,10 +46,10 @@ const CollapseIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M19.7139 10.7144L13.2853 10.7144L13.2853 4.28578' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' />
-          <path d='M21.0001 3L13.9287 10.0714' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' />
-          <path d='M4.28613 13.2856L10.7147 13.2856L10.7147 19.7142' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' />
-          <path d='M10.0714 13.9287L3 21.0001' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' />
+          <path d='M19.7139 10.7144L13.2853 10.7144L13.2853 4.28578' stroke='white' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M21.0001 3L13.9287 10.0714' stroke='white' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M4.28613 13.2856L10.7147 13.2856L10.7147 19.7142' stroke='white' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M10.0714 13.9287L3 21.0001' stroke='white' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
 
         </svg>
       )
@@ -64,10 +64,10 @@ const CollapseIcon = ({
           xmlns='http://www.w3.org/2000/svg'
           className={className}
         >
-          <path d='M32.8574 17.8569L22.1431 17.8569L22.1431 7.14265' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' />
-          <path d='M35.0006 5L23.2148 16.7857' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' />
-          <path d='M7.14355 22.1431L17.8578 22.1431L17.8578 32.8574' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' />
-          <path d='M16.7857 23.2144L5 35.0001' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' />
+          <path d='M32.8574 17.8569L22.1431 17.8569L22.1431 7.14265' stroke='white' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M35.0006 5L23.2148 16.7857' stroke='white' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M7.14355 22.1431L17.8578 22.1431L17.8578 32.8574' stroke='white' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M16.7857 23.2144L5 35.0001' stroke='white' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break

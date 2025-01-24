@@ -62,9 +62,9 @@ const GitHubRepoIcon = ({
           <path d='M11.7773 18.3878C11.7776 18.4323 11.7653 18.4703 11.7172 18.4697C11.6373 18.4685 11.6009 18.4143 11.5912 18.3394C11.5858 18.2967 11.6 18.2575 11.649 18.2581C11.7297 18.259 11.7608 18.3176 11.7773 18.3881V18.3878Z' fill='none' className={filledClassName} />
           <path d='M11.5316 18.0482C11.5353 18.0957 11.5139 18.1219 11.476 18.1216C11.4115 18.1213 11.3702 18.0836 11.3599 18.0176C11.3528 17.973 11.3699 17.9347 11.4184 17.94C11.4802 17.9471 11.5167 17.9916 11.5316 18.0482Z' fill='none' className={filledClassName} />
           <path d='M11.2764 17.8052C11.2738 17.8511 11.2424 17.8662 11.2085 17.8629C11.1655 17.8585 11.1221 17.8405 11.1113 17.791C11.1022 17.7486 11.1313 17.7282 11.1695 17.7279C11.2219 17.7276 11.2578 17.7551 11.2764 17.8052Z' fill='none' className={filledClassName} />
-          <path d='M8.99999 7.8072C12.3137 7.8072 15 6.73107 15 5.4036C15 4.07613 12.3137 3 8.99999 3C5.68629 3 3 4.07613 3 5.4036C3 6.73107 5.68629 7.8072 8.99999 7.8072Z' stroke='none' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M3 9.08593C3 10.134 4.67489 11.0255 7.01069 11.3542' stroke='none' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M3 5.4043V12.5971C3 13.5914 4.50751 14.4448 6.65669 14.8104' stroke='none' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M8.99999 7.8072C12.3137 7.8072 15 6.73107 15 5.4036C15 4.07613 12.3137 3 8.99999 3C5.68629 3 3 4.07613 3 5.4036C3 6.73107 5.68629 7.8072 8.99999 7.8072Z' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M3 9.08593C3 10.134 4.67489 11.0255 7.01069 11.3542' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M3 5.4043V12.5971C3 13.5914 4.50751 14.4448 6.65669 14.8104' stroke='none' strokeWidth={1.5} strokeLinecap='round' strokeLinejoin='round' />
         </svg>
       )
       break
@@ -86,9 +86,9 @@ const GitHubRepoIcon = ({
           <path d='M19.6289 30.6463C19.6294 30.7205 19.609 30.7838 19.5287 30.7828C19.3957 30.7809 19.3349 30.6905 19.3187 30.5657C19.3097 30.4945 19.3334 30.4292 19.4151 30.4301C19.5496 30.4316 19.6014 30.5294 19.6289 30.6468V30.6463Z' fill='none' className={filledClassName} />
           <path d='M19.2193 30.0803C19.2254 30.1594 19.1898 30.2032 19.1266 30.2027C19.0192 30.2022 18.9504 30.1393 18.9332 30.0293C18.9214 29.9551 18.9499 29.8912 19.0306 29.9001C19.1337 29.9118 19.1945 29.986 19.2193 30.0803Z' fill='none' className={filledClassName} />
           <path d='M18.794 29.6753C18.7897 29.7519 18.7375 29.777 18.6809 29.7716C18.6092 29.7642 18.537 29.7342 18.5189 29.6517C18.5037 29.581 18.5522 29.5471 18.6158 29.5466C18.7033 29.5461 18.7631 29.5918 18.794 29.6753Z' fill='none' className={filledClassName} />
-          <path d='M15 13.012C20.5228 13.012 25 11.2184 25 9.006C25 6.79355 20.5228 5 15 5C9.47715 5 5 6.79355 5 9.006C5 11.2184 9.47715 13.012 15 13.012Z' stroke='none' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M5 15.1432C5 16.89 7.79148 18.3758 11.6845 18.9237' stroke='none' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
-          <path d='M5 9.00716V20.9951C5 22.6524 7.51252 24.0746 11.0945 24.6841' stroke='none' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M15 13.012C20.5228 13.012 25 11.2184 25 9.006C25 6.79355 20.5228 5 15 5C9.47715 5 5 6.79355 5 9.006C5 11.2184 9.47715 13.012 15 13.012Z' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M5 15.1432C5 16.89 7.79148 18.3758 11.6845 18.9237' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
+          <path d='M5 9.00716V20.9951C5 22.6524 7.51252 24.0746 11.0945 24.6841' stroke='none' strokeWidth={2} strokeLinecap='round' strokeLinejoin='round' />
 
         </svg>
       )
