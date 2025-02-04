@@ -296,6 +296,13 @@
 .text--electric-purple {
   @apply text-electric-purple;
 }
+.text--tertiary-blue {
+ @apply text-tertiary-blue;
+}
+.text--warning-yellow {
+  @apply text-warning-yellow;
+ }
+
 .text--rich-black-70 {
   @apply text-rich-black/70;
 }
@@ -317,6 +324,8 @@
 .text--xs {
   @apply text-xs
 }
+
+
 
 .background-color-main-green {
   @apply bg-main-green;

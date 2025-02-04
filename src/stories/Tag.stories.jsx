@@ -1,6 +1,6 @@
 'use strict'
 import Tag from '../components/Tag'
-import { MAIN_GREEN, OPACITY_30, SMALL, TERTIARY_BLUE, WHITE } from '../components/constants'
+import { ELECTRIC_PURPLE, ERROR_RED, MAIN_GREEN, OPACITY_30, SMALL, TERTIARY_BLUE, WARNING_YELLOW, WHITE } from '../components/constants'
 export default {
   title: 'Platformatic/Tag',
   component: Tag,
@@ -44,4 +44,31 @@ WithIcon.args = {
   opaque: OPACITY_30,
   fullRounded: true,
   platformaticIcon: { iconName: 'AddIcon', size: SMALL, color: WHITE }
+}
+
+const MultiColorTemplate = {
+  render: ({ colors }) => {
+    const tags = colors.map((color, idx) => {
+      return (
+        <Tag
+          key={idx}
+          bordered={false}
+          opaque={OPACITY_30}
+          fullRounded
+          backgroundColor={color}
+          color={color}
+          text={color.toUpperCase()}
+        />
+      )
+    })
+    return <div>{tags}</div>
+  }
+
+}
+
+export const MultiColor = {
+  ...MultiColorTemplate,
+  args: {
+    colors: [ERROR_RED, TERTIARY_BLUE, WHITE, WARNING_YELLOW, ELECTRIC_PURPLE, MAIN_GREEN]
+  }
 }
