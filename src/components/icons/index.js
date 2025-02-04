@@ -15,10 +15,11 @@ import ApiPerformanceIcon from './ApiPerformanceIcon'
 import AppConfigurationIcon from './AppConfigurationIcon'
 import AppDetailsIcon from './AppDetailsIcon'
 import AppEditIcon from './AppEditIcon'
+import AppEmptyIcon from './AppEmptyIcon'
 import AppIcon from './AppIcon'
 import AppListIcon from './AppListIcon'
 import AppMissingIcon from './AppMissingIcon'
-import AppEmptyIcon from './AppEmptyIcon'
+import AppOptimizedIcon from './AppOptimizedIcon'
 import AppSettingsIcon from './AppSettingsIcon'
 import ApplicationTypeIcon from './ApplicationTypeIcon'
 import AppWorkspace from './AppWorkspace'
@@ -67,6 +68,7 @@ import CloudIcon from './CloudIcon'
 import CLIIcon from './CLIIcon'
 import CodeTestingIcon from './CodeTestingIcon'
 import CollapseIcon from './CollapseIcon'
+import CollapseSquareIcon from './CollapseSquareIcon'
 import ComputerIcon from './ComputerIcon'
 import ComputerInIcon from './ComputerInIcon'
 import ComputerOutIcon from './ComputerOutIcon'
@@ -90,6 +92,7 @@ import EnlargeIcon from './EnlargeIcon'
 import EntryIcon from './EntryIcon'
 import EnvVariableszIcon from './EnvVariableszIcon'
 import ExpandIcon from './ExpandIcon'
+import ExpandSquareIcon from './ExpandSquadreIcon'
 import ExploreDocIcon from './ExploreDocIcon'
 import ExportIcon from './ExportIcon'
 import EyeClosedIcon from './EyeClosedIcon'
@@ -210,7 +213,6 @@ import WorkspaceReadyIcon from './WorkspaceReadyIcon'
 import WorkspaceStaticIcon from './WorkspaceStaticIcon'
 import ZoomInIcon from './ZoomInIcon'
 import ZoomOutIcon from './ZoomOutIcon'
-import AppOptimizedIcon from './AppOptimizedIcon'
 
 export default {
   AddIcon,
@@ -283,6 +285,7 @@ export default {
   CLIIcon,
   CodeTestingIcon,
   CollapseIcon,
+  CollapseSquareIcon,
   ComputerIcon,
   ComputerInIcon,
   ComputerOutIcon,
@@ -305,6 +308,7 @@ export default {
   EyeClosedIcon,
   EyeOpenedIcon,
   ExpandIcon,
+  ExpandSquareIcon,
   ExploreDocIcon,
   ExportIcon,
   EnlargeIcon,
