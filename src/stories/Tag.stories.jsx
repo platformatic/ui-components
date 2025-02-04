@@ -1,7 +1,6 @@
 'use strict'
-import { render } from '@testing-library/react'
 import Tag from '../components/Tag'
-import { ELECTRIC_PURPLE, ERROR_RED, MAIN_GREEN, OPACITY_30, RICH_BLACK, SMALL, TERTIARY_BLUE, WARNING_YELLOW, WHITE } from '../components/constants'
+import { ELECTRIC_PURPLE, ERROR_RED, MAIN_GREEN, OPACITY_30, SMALL, TERTIARY_BLUE, WARNING_YELLOW, WHITE } from '../components/constants'
 export default {
   title: 'Platformatic/Tag',
   component: Tag,
@@ -49,9 +48,10 @@ WithIcon.args = {
 
 const MultiColorTemplate = {
   render: ({ colors }) => {
-    const tags = colors.map((color) => {
+    const tags = colors.map((color, idx) => {
       return (
         <Tag
+          key={idx}
           bordered={false}
           opaque={OPACITY_30}
           fullRounded
