@@ -31,6 +31,7 @@ import ArrowLongRightIcon from './ArrowLongRightIcon'
 import ArrowLongUpIcon from './ArrowLongUpIcon'
 import ArrowRightIcon from './ArrowRightIcon'
 import ArrowUpIcon from './ArrowUpIcon'
+import AWSIcon from './AWSIcon'
 import BellIcon from './BellIcon'
 import BillingIcon from './BillingIcon'
 import BuiltInLoggingIcon from './BuiltInLoggingIcon'
@@ -90,6 +91,7 @@ import EntryIcon from './EntryIcon'
 import EnvVariableszIcon from './EnvVariableszIcon'
 import ExpandIcon from './ExpandIcon'
 import ExploreDocIcon from './ExploreDocIcon'
+import ExportIcon from './ExportIcon'
 import EyeClosedIcon from './EyeClosedIcon'
 import EyeOpenedIcon from './EyeOpenedIcon'
 import FailureRateIcon from './FailureRateIcon'
@@ -108,6 +110,7 @@ import K8SIcon from './K8SIcon'
 import K8SMetricsIcon from './K8SMetricsIcon'
 import KeyIcon from './KeyIcon'
 import ImportAppIcon from './ImportAppIcon'
+import ImportIcon from './ImportIcon'
 import InfrastructureIcon from './InfrastructureIcon'
 import IngressControllIcon from './IngressControllIcon'
 import InternalLinkIcon from './InternalLinkIcon'
@@ -243,6 +246,7 @@ export default {
   ArrowLongUpIcon,
   ArrowRightIcon,
   ArrowUpIcon,
+  AWSIcon,
   BellIcon,
   BillingIcon,
   BuiltInLoggingIcon,
@@ -301,6 +305,7 @@ export default {
   EyeOpenedIcon,
   ExpandIcon,
   ExploreDocIcon,
+  ExportIcon,
   EnlargeIcon,
   EntryIcon,
   EnvVariableszIcon,
@@ -317,6 +322,7 @@ export default {
   HorizontalPodAutoscalerIcon,
   HourglassIcon,
   ImportAppIcon,
+  ImportIcon,
   InfrastructureIcon,
   IngressControllIcon,
   InternalLinkIcon,

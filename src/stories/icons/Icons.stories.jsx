@@ -5,11 +5,8 @@ import CircleCloseIcon from '../../components/icons/CircleCloseIcon'
 import WorkspaceStaticIcon from '../../components/icons/WorkspaceStaticIcon'
 import UpgradeIcon from '../../components/icons/UpgradeIcon'
 import WorkspaceDynamicIcon from '../../components/icons/WorkspaceDynamicIcon'
-import CollapseIcon from '../../components/icons/CollapseIcon'
-import ExpandIcon from '../../components/icons/ExpandIcon'
-import EnlargeIcon from '../../components/icons/EnlargeIcon'
 import { COLORS_ICON } from '../../components/constants'
-import AppOptimizedIcon from '../../components/icons/AppOptimizedIcon'
+import icons from '../../components/icons/index.js'
 
 const divStyle = {
   display: 'flex',
@@ -99,14 +96,17 @@ const LargeIconsTemplate = () =>
 export const LargeIconsDefault = LargeIconsTemplate.bind({})
 LargeIconsDefault.args = {}
 
-export const Expand = ExpandIcon.bind({})
-Expand.args = {}
+const AllSizesIcons = (Icon) => () => {
+  const icons = ['small', 'medium', 'large'].map((size) => (
+    <Icon key={size} size={size} />
+  ))
+  return icons
+}
 
-export const Collapse = CollapseIcon.bind({})
-Collapse.args = {}
-
-export const Enlarge = EnlargeIcon.bind({})
-Enlarge.args = {}
-
-export const AppOptimized = AppOptimizedIcon.bind({})
-AppOptimized.args = {}
+export const ExpandIcons = AllSizesIcons(icons.ExpandIcon).bind({})
+export const CollapseIcons = AllSizesIcons(icons.CollapseIcon).bind({})
+export const EnlargeIcons = AllSizesIcons(icons.EnlargeIcon).bind({})
+export const AppOptimizedIcons = AllSizesIcons(icons.AppOptimizedIcon).bind({})
+export const AWSIcons = AllSizesIcons(icons.AWSIcon).bind({})
+export const ImportIcons = AllSizesIcons(icons.ImportIcon).bind({})
+export const ExportIcons = AllSizesIcons(icons.ExportIcon).bind({})
