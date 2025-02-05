@@ -111,6 +111,7 @@ import K8SMetricsIcon from './K8SMetricsIcon'
 import KeyIcon from './KeyIcon'
 import ImportAppIcon from './ImportAppIcon'
 import ImportIcon from './ImportIcon'
+import InfoCircleIcon from './InfoCircleIcon'
 import InfrastructureIcon from './InfrastructureIcon'
 import IngressControllIcon from './IngressControllIcon'
 import InternalLinkIcon from './InternalLinkIcon'
@@ -324,6 +325,7 @@ export default {
   ImportAppIcon,
   ImportIcon,
   InfrastructureIcon,
+  InfoCircleIcon,
   IngressControllIcon,
   InternalLinkIcon,
   InternetIcon,
