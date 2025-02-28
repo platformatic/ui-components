@@ -1,4 +1,3 @@
-'use strict'
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './DropDown.module.css'

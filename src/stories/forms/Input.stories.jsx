@@ -1,4 +1,3 @@
-'use strict'
 import React, { useState } from 'react'
 import Input from '../../components/forms/Input'
 import { ERROR_RED } from '../../components/constants'

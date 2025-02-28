@@ -1,4 +1,3 @@
-'use strict'
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import ButtonFullRounded from './ButtonFullRounded'
@@ -34,7 +33,7 @@ function Modal ({
   setIsOpen = () => {},
   title = '',
   layout = MODAL_POPUP,
-  children = null,
+  children,
   size = SMALL,
   profile = '',
   backgroundClassName = '',

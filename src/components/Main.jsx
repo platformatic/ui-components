@@ -1,5 +1,3 @@
-'use strict'
-
 import SearchBar from './SearchBar'
 import TabbedWindow from './TabbedWindow'
 import Playground from './Playground'

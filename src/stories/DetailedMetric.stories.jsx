@@ -1,5 +1,3 @@
-'use strict'
-
 import { MAIN_GREEN } from '../components/constants'
 import DetailedMetric from '../components/DetailedMetric'
 

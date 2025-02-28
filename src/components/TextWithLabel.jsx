@@ -6,7 +6,7 @@ import styles from './TextWithLabel.module.css'
 function TextWithLabel ({
   label = '',
   text = '',
-  children = null,
+  children,
   color = WHITE,
   fontSize = FONT_BASE
 }) {

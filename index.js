@@ -1,5 +1,3 @@
-'use strict'
-
 import BorderedBox from './src/components/BorderedBox'
 import Box from './src/components/Box'
 import Button from './src/components/Button'

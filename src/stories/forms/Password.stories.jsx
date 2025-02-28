@@ -1,4 +1,3 @@
-'use strict'
 import React, { useState } from 'react'
 import Password from '../../components/forms/Password'
 

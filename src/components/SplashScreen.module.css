@@ -1,0 +1,19 @@
+.container {
+  @apply fixed inset-0 flex items-center justify-center  text-white;
+}
+
+.title {
+  @apply text-[16px];
+}
+
+.message {
+  @apply text-[14px] text-white/70 mb-4;
+}
+
+.icon {
+  @apply mb-4;
+}
+
+.content {
+  @apply flex flex-col gap-y-2 items-center justify-center text-center bg-transparent;
+}

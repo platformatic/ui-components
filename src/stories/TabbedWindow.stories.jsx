@@ -1,4 +1,3 @@
-'use strict'
 import TabbedWindow from '../components/TabbedWindow'
 import TextWithLabel from '../components/TextWithLabel'
 export default {

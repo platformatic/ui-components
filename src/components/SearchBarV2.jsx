@@ -1,4 +1,3 @@
-'use strict'
 import React, { useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import commonStyles from './Common.module.css'

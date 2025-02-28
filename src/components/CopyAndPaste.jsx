@@ -1,4 +1,3 @@
-'use strict'
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { COLORS_ICON, DIRECTION_TOP, MEDIUM, SIZES, POSITIONS, POSITION_CENTER, MAIN_DARK_BLUE } from './constants'

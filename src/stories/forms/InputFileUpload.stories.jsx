@@ -1,4 +1,3 @@
-'use strict'
 import React from 'react'
 import InputFileUpload from '../../components/forms/InputFileUpload'
 import { RICH_BLACK } from '../../components/constants'

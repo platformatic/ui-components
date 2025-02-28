@@ -1,4 +1,3 @@
-'use strict'
 import React, { useRef, useState } from 'react'
 import styles from './SearchBar.module.css'
 import commonStyles from './Common.module.css'

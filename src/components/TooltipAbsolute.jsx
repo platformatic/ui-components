@@ -1,4 +1,3 @@
-'use strict'
 import PropTypes from 'prop-types'
 import styles from './TooltipAbsolute.module.css'
 import { useEffect, useState } from 'react'
@@ -8,7 +7,7 @@ const TooltipAbsolute = ({
   direction = DIRECTION_TOP,
   tooltipClassName = '',
   delay = 0,
-  children = null,
+  children,
   content = null,
   offset = 0,
   position = POSITION_START,

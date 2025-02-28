@@ -1,4 +1,3 @@
-'use strict'
 import DropDown from '../components/DropDown'
 import BorderedBox from '../components/BorderedBox'
 import Button from '../components/Button'

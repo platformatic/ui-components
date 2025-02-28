@@ -5,7 +5,7 @@ import CircleCloseIcon from '../../components/icons/CircleCloseIcon'
 import WorkspaceStaticIcon from '../../components/icons/WorkspaceStaticIcon'
 import UpgradeIcon from '../../components/icons/UpgradeIcon'
 import WorkspaceDynamicIcon from '../../components/icons/WorkspaceDynamicIcon'
-import { COLORS_ICON } from '../../components/constants'
+import { COLORS_ICON, MAIN_GREEN, RICH_BLACK } from '../../components/constants'
 import icons from '../../components/icons/index.js'
 
 const divStyle = {
@@ -98,7 +98,10 @@ LargeIconsDefault.args = {}
 
 const AllSizesIcons = (Icon) => () => {
   const icons = ['small', 'medium', 'large'].map((size) => (
-    <Icon key={size} size={size} />
+    <div key={size} className='antani' style={{ backgroundColor: RICH_BLACK }}>
+      <Icon size={size} color={MAIN_GREEN} />
+    </div>
+
   ))
   return icons
 }
@@ -113,3 +116,5 @@ export const ExportIcons = AllSizesIcons(icons.ExportIcon).bind({})
 export const InfoCircleIcons = AllSizesIcons(icons.InfoCircleIcon).bind({})
 export const CollapseSquareIcons = AllSizesIcons(icons.CollapseSquareIcon).bind({})
 export const ExpandSquareIcon = AllSizesIcons(icons.ExpandSquareIcon).bind({})
+export const EntrypointIcon = AllSizesIcons(icons.EntrypointIcon).bind({})
+export const AlertIcon = AllSizesIcons(icons.AlertIcon).bind({})

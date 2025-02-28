@@ -1,4 +1,3 @@
-'use strict'
 import Preview from '../../components/forms/Preview'
 
 const divStyle = {

@@ -1,4 +1,3 @@
-'use strict'
 import ButtonFullRounded from '../components/ButtonFullRounded'
 import {
   COLORS_ICON,

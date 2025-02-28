@@ -1,4 +1,3 @@
-'use strict'
 import Field from '../../components/forms/Field'
 import Button from '../../components/Button'
 import Input from '../../components/forms/Input'

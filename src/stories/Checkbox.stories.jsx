@@ -1,4 +1,3 @@
-'use strict'
 import Checkbox from '../components/Checkbox'
 import { MEDIUM, SMALL, WHITE } from '../components/constants'
 const divStyle = {

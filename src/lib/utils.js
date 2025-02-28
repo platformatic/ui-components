@@ -1,5 +1,3 @@
-'use strict'
-
 function getColor (type, color) {
   let convertedColor
   switch (color) {
