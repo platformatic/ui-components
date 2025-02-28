@@ -30,9 +30,11 @@ import ModalDirectional from './src/components/ModalDirectional'
 import ModalStepsForward from './src/components/ModalStepsForward'
 import PlatformaticIcon from './src/components/PlatformaticIcon'
 import Playground from './src/components/Playground'
+import Report from './src/components/Report'
 import SearchBar from './src/components/SearchBar'
 import SearchBarV2 from './src/components/SearchBarV2'
 import SimpleMetric from './src/components/SimpleMetric'
+import SplashScreen from './src/components/SplashScreen'
 import Status from './src/components/Status'
 import Tooltip from './src/components/Tooltip'
 import TooltipAbsolute from './src/components/TooltipAbsolute'
@@ -76,9 +78,11 @@ export {
   ModalStepsForward,
   PlatformaticIcon,
   Playground,
+  Report,
   SearchBar,
   SearchBarV2,
   SimpleMetric,
+  SplashScreen,
   Status,
   TabbedWindow,
   Tag,
