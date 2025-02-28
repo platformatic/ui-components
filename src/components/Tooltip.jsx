@@ -11,7 +11,7 @@ function Tooltip ({
   activeDependsOnVisible = false,
   content = null,
   delay = 0,
-  children = null,
+  children,
   tooltipClassName = '',
   offset = 0,
   position = POSITION_CENTER

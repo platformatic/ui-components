@@ -7,7 +7,7 @@ import { COLORS_BORDERED_BOX, DARK_BLUE, TRANSPARENT, OPACITIES, OPACITY_100 } f
 function BorderedBox ({
   classes = '',
   color = TRANSPARENT,
-  children = null,
+  children,
   backgroundColor = DARK_BLUE,
   backgroundColorOpacity = OPACITY_100,
   borderColorOpacity = OPACITY_100,

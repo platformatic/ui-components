@@ -34,7 +34,7 @@ function Modal ({
   setIsOpen = () => {},
   title = '',
   layout = MODAL_POPUP,
-  children = null,
+  children,
   size = SMALL,
   profile = '',
   backgroundClassName = '',

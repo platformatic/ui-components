@@ -7,7 +7,7 @@ function Field ({
   title = '',
   titleColor = MAIN_DARK_BLUE,
   helper = '',
-  children = null,
+  children,
   disabled = false,
   required = false,
   titleClassName = '',

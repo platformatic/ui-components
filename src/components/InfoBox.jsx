@@ -7,7 +7,7 @@ import PlatformaticIcon from './PlatformaticIcon'
 import { COLORS_BUTTON, COLORS_ICON, HOVER_EFFECTS_BUTTONS, MAIN_GREEN } from './constants'
 
 function InfoBox ({
-  children = null,
+  children,
   iconName = '',
   iconColor = MAIN_GREEN,
   helpText = '',

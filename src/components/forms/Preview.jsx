@@ -24,7 +24,7 @@ function Preview ({
   title = '',
   value = '',
   isLink = false,
-  children = null,
+  children,
   useCopyAndPaste = false,
   copyAndPaste = null,
   platformaticIcon = null,

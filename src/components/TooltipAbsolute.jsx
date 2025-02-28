@@ -8,7 +8,7 @@ const TooltipAbsolute = ({
   direction = DIRECTION_TOP,
   tooltipClassName = '',
   delay = 0,
-  children = null,
+  children,
   content = null,
   offset = 0,
   position = POSITION_START,

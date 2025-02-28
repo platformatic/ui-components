@@ -10,7 +10,7 @@ import {
 import PlatformaticIcon from './PlatformaticIcon'
 
 function ModalDirectional ({
-  children = null,
+  children,
   setIsOpen = () => {},
   smallLayout = false,
   classNameModalLefty = '',
