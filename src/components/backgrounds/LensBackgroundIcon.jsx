@@ -1,4 +1,3 @@
-
 const LensBackgroundIcon = () => {
   return (
     <svg width='828' height='828' viewBox='0 0 828 828' fill='none' xmlns='http://www.w3.org/2000/svg'>

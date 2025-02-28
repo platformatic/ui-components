@@ -41,35 +41,40 @@ const Template = (args) => {
   const [isOpenInside, setIsOpenInside] = useState(false)
   const { text, ...rest } = args
   return (
-    <main style={{ height: '1440px', overflow: 'scroll' }}>
-      <BorderedBox>This Is another Content</BorderedBox>
-      <Button
-        color={MAIN_GREEN}
-        backgroundColor={MAIN_DARK_BLUE}
-        onClick={() => setIsOpen(true)}
-        label='Open Modal'
-      />
-      {isOpen && (
-        <Modal setIsOpen={setIsOpen} {...rest}>
-          {text}
-        </Modal>
-      )}
-
-      <BorderedBox style={{ position: 'relative' }}>
-        <p>This Is another Component with Modal inside</p>
-
+    <main style={{ height: '100vh', overflow: 'scroll' }} className='flex flex-col gap-y-4'>
+      <div className='flex flex-col gap-y-4'>
+        <BorderedBox>This Is another Content</BorderedBox>
         <Button
           color={MAIN_GREEN}
           backgroundColor={MAIN_DARK_BLUE}
-          onClick={() => setIsOpenInside(true)}
-          label='Open Modal Inside'
+          onClick={() => setIsOpen(true)}
+          label='Open Modal'
         />
-        {isOpenInside && (
-          <Modal setIsOpen={setIsOpenInside} {...rest}>
+        {isOpen && (
+          <Modal setIsOpen={setIsOpen} {...rest}>
             {text}
           </Modal>
         )}
-      </BorderedBox>
+      </div>
+
+      <div>
+        <BorderedBox style={{ position: 'relative' }}>
+          <p>This Is another Component with Modal inside</p>
+
+          <Button
+            color={MAIN_GREEN}
+            backgroundColor={MAIN_DARK_BLUE}
+            onClick={() => setIsOpenInside(true)}
+            label='Open Modal Inside'
+          />
+          {isOpenInside && (
+            <Modal setIsOpen={setIsOpenInside} {...rest}>
+              {text}
+            </Modal>
+          )}
+        </BorderedBox>
+      </div>
+
     </main>
   )
 }

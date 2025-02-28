@@ -1,4 +1,3 @@
-
 import TextWithLabel from '../components/TextWithLabel'
 export default {
   title: 'Platformatic/TextWithLabel',

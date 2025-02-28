@@ -1,4 +1,3 @@
-
 const AppBackgroundIcon = () => {
   return (
     <svg width='669' height='669' viewBox='0 0 669 669' fill='none' xmlns='http://www.w3.org/2000/svg'>

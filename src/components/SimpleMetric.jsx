@@ -1,4 +1,3 @@
-
 import React from 'react'
 import BorderedBox from './BorderedBox'
 import styles from './SimpleMetric.module.css'

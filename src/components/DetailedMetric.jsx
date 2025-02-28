@@ -1,4 +1,3 @@
-
 import React from 'react'
 import SimpleMetric from './SimpleMetric'
 import HorizontalSeparator from './HorizontalSeparator'

@@ -1,20 +1,11 @@
-
 import React, { useEffect, useState } from 'react'
 import SplashScreen from '../components/SplashScreen'
-import { COLORS_ICON, ERROR_RED, MAIN_GREEN, RICH_BLACK, WHITE } from '../components/constants'
+import { ERROR_RED, MAIN_GREEN, RICH_BLACK, WHITE } from '../components/constants'
 import Button from '../components/Button'
+import Report from '../components/Report'
 export default {
   title: 'Platformatic/Splash Screen',
-  component: SplashScreen,
-  argTypes: {
-    color: {
-      type: 'string',
-      control: {
-        type: 'radio',
-        options: COLORS_ICON
-      }
-    }
-  }
+  component: SplashScreen
 }
 
 const Template = (args) => {
@@ -29,6 +20,17 @@ const Template = (args) => {
       setShowSplashScreen(true)
     }
   }, [splashOptions])
+
+  function getReportSteps () {
+    const steps = [
+      { type: 'success', label: 'Removed from Main Taxonomy' },
+      { type: 'success', label: 'Removed from Preview Taxonomy' },
+      { type: 'success', label: 'API Key Invalidated' },
+      { type: 'success', label: 'Secrets removed' },
+      { type: 'success', label: 'All pods removed' }
+    ]
+    return steps
+  }
   return (
     <div style={{ height: '100vh' }}>
       <div className='flex flex-col gap-y-2 w-1/4'>
@@ -74,13 +76,31 @@ const Template = (args) => {
           }}
           label='With Blur'
         />
+
+        <Button
+          color={WHITE}
+          backgroundColor={RICH_BLACK}
+          onClick={() => {
+            setSplashOptions({
+              title: 'Application deleted successfully',
+              success: true,
+              message: 'You successfully delete this application.',
+              timeout,
+              children: (
+                <Report steps={getReportSteps()} />
+              )
+            })
+          }}
+          label='With report'
+        />
       </div>
 
       {showSplashScreen && (
         <SplashScreen
           {...splashOptions}
           onDestroyed={() => setShowSplashScreen(false)}
-        />
+        >{splashOptions.children}
+        </SplashScreen>
       )}
     </div>
   )

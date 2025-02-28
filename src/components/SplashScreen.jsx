@@ -9,6 +9,7 @@ export default function SplashScreen ({
   message = '',
   title = 'Operation completed',
   blur = false,
+  children,
   onDestroyed = () => {}
 }) {
   const [destroyed, setDestroyed] = useState(false)
@@ -40,6 +41,10 @@ export default function SplashScreen ({
         <div className={styles.icon}>{renderIcon()}</div>
         <div className={styles.title}>{title}</div>
         <div className={styles.message}>{message}</div>
+
+        <div className='mb-4'>
+          {children}
+        </div>
 
         <div className={styles.button}>
           <Button
