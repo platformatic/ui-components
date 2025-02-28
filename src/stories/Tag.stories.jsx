@@ -1,4 +1,3 @@
-'use strict'
 import Tag from '../components/Tag'
 import { ELECTRIC_PURPLE, ERROR_RED, MAIN_GREEN, OPACITY_30, SMALL, TERTIARY_BLUE, WARNING_YELLOW, WHITE } from '../components/constants'
 export default {

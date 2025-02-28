@@ -1,4 +1,3 @@
-'use strict'
 import React from 'react'
 import styles from './MetricValue.module.css'
 import commonStyles from './Common.module.css'

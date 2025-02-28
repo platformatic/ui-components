@@ -1,4 +1,3 @@
-'use strict'
 
 import TextWithLabel from '../components/TextWithLabel'
 export default {

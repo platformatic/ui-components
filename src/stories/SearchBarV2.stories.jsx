@@ -1,4 +1,3 @@
-'use strict'
 import SearchBarV2 from '../components/SearchBarV2'
 export default {
   title: 'Platformatic/SearchBarV2',

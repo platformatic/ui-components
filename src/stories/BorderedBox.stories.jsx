@@ -1,4 +1,3 @@
-'use strict'
 import React from 'react'
 import BorderedBox from '../components/BorderedBox'
 import { COLORS_BORDERED_BOX, ERROR_RED, OPACITY_30, OPACITY_100, TERTIARY_BLUE, WHITE } from '../components/constants'

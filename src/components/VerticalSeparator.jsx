@@ -1,4 +1,3 @@
-'use strict'
 import React from 'react'
 import PropTypes from 'prop-types'
 import { DARK_GREEN, MAIN_DARK_BLUE, OPACITY_10, OPACITY_20, OPACITY_30, OPACITY_60, OPACITY_100, WHITE } from './constants'

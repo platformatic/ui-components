@@ -1,4 +1,3 @@
-'use strict'
 import React, { useState } from 'react'
 import SelectWithInput from '../../components/forms/SelectWithInput'
 import {

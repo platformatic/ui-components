@@ -1,4 +1,3 @@
-'use strict'
 
 import styles from './Box.module.css'
 import React from 'react'

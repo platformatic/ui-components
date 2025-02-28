@@ -1,4 +1,3 @@
-'use strict'
 import React, { useState } from 'react'
 import ToggleSwitch from '../../components/forms/ToggleSwitch'
 export default {

@@ -1,4 +1,3 @@
-'use strict'
 import SearchBar from '../components/SearchBar'
 export default {
   title: 'Platformatic/SearchBar',

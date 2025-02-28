@@ -1,4 +1,3 @@
-'use strict'
 import PropTypes from 'prop-types'
 import styles from './Tooltip.module.css'
 import { useEffect, useRef, useState } from 'react'

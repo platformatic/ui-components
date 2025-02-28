@@ -1,4 +1,3 @@
-'use strict'
 
 import { ERROR_RED, MAIN_GREEN } from '../components/constants'
 import SimpleMetric from '../components/SimpleMetric'

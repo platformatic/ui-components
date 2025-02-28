@@ -1,4 +1,3 @@
-'use strict'
 import { useState } from 'react'
 import Sidebar from '../components/Sidebar'
 import BorderedBox from '../components/BorderedBox'

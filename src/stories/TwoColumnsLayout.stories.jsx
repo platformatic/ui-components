@@ -1,4 +1,3 @@
-'use strict'
 import TwoColumnsLayout from '../components/layouts/TwoColumnsLayout'
 import BorderedBox from '../components/BorderedBox'
 export default {

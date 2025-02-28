@@ -1,4 +1,3 @@
-'use strict'
 
 import React, { useEffect, useState } from 'react'
 import SplashScreen from '../components/SplashScreen'
