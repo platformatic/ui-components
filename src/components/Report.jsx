@@ -1,6 +1,7 @@
 import React from 'react'
 import Icons from './icons'
 import { ERROR_RED, MAIN_GREEN, WARNING_YELLOW } from './constants'
+import styles from './Report.module.css'
 
 function getIcon (type) {
   switch (type) {
@@ -17,7 +18,7 @@ function Step ({
   label
 }) {
   return (
-    <div className='flex items-center gap-x-2'>
+    <div className={styles.step}>
       {getIcon(type)}
       <span>{label}</span>
     </div>
@@ -32,7 +33,7 @@ export default function Report ({
     })
   }
   return (
-    <div className='text-white/70 flex flex-col gap-y-2'>
+    <div className={styles.container}>
       {renderSteps()}
     </div>
 

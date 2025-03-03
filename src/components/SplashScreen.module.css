@@ -1,5 +1,13 @@
 .container {
-  @apply fixed inset-0 flex items-center justify-center  text-white;
+  @apply fixed inset-0 flex items-center justify-center text-white;
+}
+
+.container.blur {
+  @apply backdrop-blur-sm bg-rich-black/50;
+}
+
+.container.solid {
+  @apply bg-rich-black;
 }
 
 .title {
@@ -16,4 +24,12 @@
 
 .content {
   @apply flex flex-col gap-y-2 items-center justify-center text-center bg-transparent;
+}
+
+.childrenContainer {
+  @apply mb-4;
+}
+
+.button {
+  @apply flex items-center justify-center;
 }

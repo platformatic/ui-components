@@ -36,13 +36,13 @@ export default function SplashScreen ({
     }
   }
   return (
-    <div className={`${styles.container} ${blur ? 'backdrop-blur-sm bg-rich-black/50' : 'bg-rich-black'}`} onClick={() => setDestroyed(true)}>
+    <div className={`${styles.container} ${blur ? styles.blur : styles.solid}`} onClick={() => setDestroyed(true)}>
       <div className={styles.content}>
         <div className={styles.icon}>{renderIcon()}</div>
         <div className={styles.title}>{title}</div>
         <div className={styles.message}>{message}</div>
 
-        <div className='mb-4'>
+        <div className={styles.childrenContainer}>
           {children}
         </div>
 
