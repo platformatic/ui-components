@@ -3,15 +3,18 @@ import styles from './SplashScreen.module.css'
 import { ERROR_RED, MAIN_GREEN, RICH_BLACK, WHITE } from './constants'
 import Icons from './icons'
 import Button from './Button'
-export default function SplashScreen ({
-  success = true,
-  timeout = 5000,
-  message = '',
-  title = 'Operation completed',
-  blur = false,
-  children,
-  onDestroyed = () => {}
-}) {
+
+export default function SplashScreen (props) {
+  const {
+    success = true,
+    timeout = 5000,
+    message = '',
+    title = 'Operation completed',
+    blur = false,
+    children,
+    onDestroyed = () => {}
+  } = props
+
   const [destroyed, setDestroyed] = useState(false)
   useEffect(() => {
     if (destroyed) {
@@ -52,13 +55,11 @@ export default function SplashScreen ({
             backgroundColor={WHITE}
             onClick={() => setDestroyed(true)}
             label='Dismiss'
-            paddingClass='px-2 py-1'
-            textClass='text-[13px]'
+            paddingClass={styles.buttonPadding}
+            textClass={styles.buttonText}
           />
         </div>
-
       </div>
-
     </div>
   )
 }

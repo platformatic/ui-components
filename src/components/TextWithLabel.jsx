@@ -3,13 +3,16 @@ import PropTypes from 'prop-types'
 import { FONT_BASE, FONT_XS, MAIN_DARK_BLUE, WHITE } from './constants'
 import commonStyles from './Common.module.css'
 import styles from './TextWithLabel.module.css'
-function TextWithLabel ({
-  label = '',
-  text = '',
-  children,
-  color = WHITE,
-  fontSize = FONT_BASE
-}) {
+
+function TextWithLabel (props) {
+  const {
+    label = '',
+    text = '',
+    children,
+    color = WHITE,
+    fontSize = FONT_BASE
+  } = props
+
   const className = commonStyles[`text--${color}`] + ' ' + commonStyles[`text--${fontSize}`]
   return (
     <div className={className}>

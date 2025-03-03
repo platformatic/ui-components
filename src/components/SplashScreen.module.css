@@ -33,3 +33,11 @@
 .button {
   @apply flex items-center justify-center;
 }
+
+.buttonPadding {
+  @apply px-2 py-1;
+}
+
+.buttonText {
+  @apply text-[14px];
+}

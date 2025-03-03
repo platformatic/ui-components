@@ -5,13 +5,15 @@ import Button from './Button'
 import PlatformaticIcon from './PlatformaticIcon'
 import { COLORS_BUTTON, COLORS_ICON, HOVER_EFFECTS_BUTTONS, MAIN_GREEN } from './constants'
 
-function InfoBox ({
-  children,
-  iconName = '',
-  iconColor = MAIN_GREEN,
-  helpText = '',
-  buttonProps = null
-}) {
+function InfoBox (props) {
+  const {
+    children,
+    iconName = '',
+    iconColor = MAIN_GREEN,
+    helpText = '',
+    buttonProps = null
+  } = props
+
   return (
     <div className={styles.container}>
       <PlatformaticIcon size='extra-large' iconName={iconName} color={iconColor} />

@@ -5,7 +5,8 @@ import MetricValue from './MetricValue'
 import ButtonFullRounded from './ButtonFullRounded'
 import { DULLS_BACKGROUND_COLOR, MEDIUM, WHITE } from './constants'
 
-export default function SimpleMetric ({ title, pre, color, unit, value, tooltip, children }) {
+export default function SimpleMetric (props) {
+  const { title, pre, color, unit, value, tooltip, children } = props
   const withoutChildrenSingleMetric = !children ? styles.centerMetric : ''
   return (
     <BorderedBox>

@@ -3,20 +3,23 @@ import PropTypes from 'prop-types'
 import styles from './BorderedBox.module.css'
 import commonStyles from './Common.module.css'
 import { COLORS_BORDERED_BOX, DARK_BLUE, TRANSPARENT, OPACITIES, OPACITY_100 } from './constants'
-function BorderedBox ({
-  classes = '',
-  color = TRANSPARENT,
-  children,
-  backgroundColor = DARK_BLUE,
-  backgroundColorOpacity = OPACITY_100,
-  borderColorOpacity = OPACITY_100,
-  clickable = false,
-  onClick = () => {},
-  internalOverHandling = false,
-  backgroundColorOver = null,
-  backgroundColorOpacityOver = null,
-  borderColorOpacityOver = null
-}) {
+
+function BorderedBox (props) {
+  const {
+    classes = '',
+    color = TRANSPARENT,
+    children,
+    backgroundColor = DARK_BLUE,
+    backgroundColorOpacity = OPACITY_100,
+    borderColorOpacity = OPACITY_100,
+    clickable = false,
+    onClick = () => {},
+    internalOverHandling = false,
+    backgroundColorOver = null,
+    backgroundColorOpacityOver = null,
+    borderColorOpacityOver = null
+  } = props
+
   const [over, setOver] = useState(false)
   const [className, setClassName] = useState(normalClassName())
 
