@@ -169,6 +169,9 @@ import RestartIcon from './RestartIcon'
 import RocketIcon from './RocketIcon'
 import RunningIcon from './RunningIcon'
 import ScheduledJobsIcon from './ScheduledJobsIcon'
+import ScheduledJobSettingsIcon from './ScheduledJobSettingsIcon'
+import ScheduledJobsSuspendIcon from './ScheduledJobsSuspendIcon'
+import ScheduledJobsDetailIcon from './ScheduledJobsDetailIcon'
 import ScalerDetailsIcon from './ScalerDetailsIcon'
 import ScalerHistoryIcon from './ScalerHistoryIcon'
 import SendIcon from './SendIcon'
@@ -387,6 +390,9 @@ export default {
   RocketIcon,
   RunningIcon,
   ScheduledJobsIcon,
+  ScheduledJobSettingsIcon,
+  ScheduledJobsSuspendIcon,
+  ScheduledJobsDetailIcon,
   ScalerDetailsIcon,
   ScalerHistoryIcon,
   SendIcon,

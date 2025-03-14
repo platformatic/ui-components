@@ -5,7 +5,7 @@ import CircleCloseIcon from '../../components/icons/CircleCloseIcon'
 import WorkspaceStaticIcon from '../../components/icons/WorkspaceStaticIcon'
 import UpgradeIcon from '../../components/icons/UpgradeIcon'
 import WorkspaceDynamicIcon from '../../components/icons/WorkspaceDynamicIcon'
-import { COLORS_ICON, MAIN_GREEN, RICH_BLACK } from '../../components/constants'
+import { COLORS_ICON, RICH_BLACK } from '../../components/constants'
 import icons from '../../components/icons/index.js'
 
 const divStyle = {
@@ -98,8 +98,8 @@ LargeIconsDefault.args = {}
 
 const AllSizesIcons = (Icon) => () => {
   const icons = ['small', 'medium', 'large'].map((size) => (
-    <div key={size} className='antani' style={{ backgroundColor: RICH_BLACK }}>
-      <Icon size={size} color={MAIN_GREEN} />
+    <div key={size} className='' style={{ backgroundColor: RICH_BLACK }}>
+      <Icon size={size} color={RICH_BLACK} />
     </div>
 
   ))
@@ -118,3 +118,6 @@ export const CollapseSquareIcons = AllSizesIcons(icons.CollapseSquareIcon).bind(
 export const ExpandSquareIcon = AllSizesIcons(icons.ExpandSquareIcon).bind({})
 export const EntrypointIcon = AllSizesIcons(icons.EntrypointIcon).bind({})
 export const AlertIcon = AllSizesIcons(icons.AlertIcon).bind({})
+export const ScheduledJobSettingsIcons = AllSizesIcons(icons.ScheduledJobSettingsIcon).bind({})
+export const ScheduledJobsSuspendIcons = AllSizesIcons(icons.ScheduledJobsSuspendIcon).bind({})
+export const ScheduledJobsDetailIcons = AllSizesIcons(icons.ScheduledJobsDetailIcon).bind({})
