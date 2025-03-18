@@ -5,7 +5,7 @@ import CircleCloseIcon from '../../components/icons/CircleCloseIcon'
 import WorkspaceStaticIcon from '../../components/icons/WorkspaceStaticIcon'
 import UpgradeIcon from '../../components/icons/UpgradeIcon'
 import WorkspaceDynamicIcon from '../../components/icons/WorkspaceDynamicIcon'
-import { COLORS_ICON, RICH_BLACK } from '../../components/constants'
+import { COLORS_ICON, LARGE, MEDIUM, RICH_BLACK, SIZES, SMALL } from '../../components/constants'
 import icons from '../../components/icons/index.js'
 
 const divStyle = {
@@ -121,3 +121,39 @@ export const AlertIcon = AllSizesIcons(icons.AlertIcon).bind({})
 export const ScheduledJobSettingsIcons = AllSizesIcons(icons.ScheduledJobSettingsIcon).bind({})
 export const ScheduledJobsSuspendIcons = AllSizesIcons(icons.ScheduledJobsSuspendIcon).bind({})
 export const ScheduledJobsDetailIcons = AllSizesIcons(icons.ScheduledJobsDetailIcon).bind({})
+
+const IconPreviewTemplate = ({ iconName, size, color }) => {
+  const Icon = icons[iconName]
+  if (!Icon) return <div>Icon not found</div>
+
+  return (
+    <div style={{ backgroundColor: RICH_BLACK, padding: '20px', display: 'flex', gap: '10px' }}>
+      <Icon size={SMALL} color={color} />
+      <Icon size={MEDIUM} color={color} />
+      <Icon size={LARGE} color={color} />
+    </div>
+  )
+}
+
+export const IconPreview = IconPreviewTemplate.bind({})
+IconPreview.args = {
+  iconName: 'AddIcon',
+  color: 'rich-black'
+}
+IconPreview.argTypes = {
+  iconName: {
+    control: 'select',
+    options: Object.keys(icons),
+    description: 'Select an icon to preview'
+  },
+  size: {
+    control: 'select',
+    options: SIZES,
+    description: 'Select icon size'
+  },
+  color: {
+    control: 'select',
+    options: COLORS_ICON,
+    description: 'Select icon color'
+  }
+}

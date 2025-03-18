@@ -178,6 +178,7 @@ import SendIcon from './SendIcon'
 import ServiceIcon from './ServiceIcon'
 import ServicesWorkingIcon from './ServicesWorkingIcon'
 import SlotIcon from './SlotIcon'
+import SuspendIcon from './SuspendIcon'
 import SwitchIcon from './SwitchIcon'
 import SocialDiscordIcon from './SocialDiscordIcon'
 import SocialGitHubIcon from './SocialGitHubIcon'
@@ -399,6 +400,7 @@ export default {
   ServiceIcon,
   ServicesWorkingIcon,
   SlotIcon,
+  SuspendIcon,
   SwitchIcon,
   SocialDiscordIcon,
   SocialGitHubIcon,
