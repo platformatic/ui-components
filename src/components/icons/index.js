@@ -38,6 +38,7 @@ import BellIcon from './BellIcon'
 import BillingIcon from './BillingIcon'
 import BranchIcon from './BranchIcon'
 import BuiltInLoggingIcon from './BuiltInLoggingIcon'
+import CacheRecommendationIcon from './CacheRecommendationIcon'
 import CachingIcon from './CachingIcon'
 import Calendar1DayIcon from './Calendar1DayIcon'
 import Calendar7DaysIcon from './Calendar7DaysIcon'
@@ -167,6 +168,9 @@ import RequestsIcon from './RequestsIcon'
 import ResourceIcon from './ResourceIcon'
 import RestartIcon from './RestartIcon'
 import RocketIcon from './RocketIcon'
+import RouteEditIcon from './RouteEditIcon'
+import RouteHistoryIcon from './RouteHistoryIcon'
+import RoutingIcon from './RoutingIcon'
 import RunningAppIcon from './RunningAppIcon'
 import RunningIcon from './RunningIcon'
 import ScalerDetailsIcon from './ScalerDetailsIcon'
@@ -261,6 +265,7 @@ export default {
   BillingIcon,
   BranchIcon,
   BuiltInLoggingIcon,
+  CacheRecommendationIcon,
   CachingIcon,
   Calendar1DayIcon,
   Calendar7DaysIcon,
@@ -390,6 +395,9 @@ export default {
   ResourceIcon,
   RestartIcon,
   RocketIcon,
+  RouteEditIcon,
+  RouteHistoryIcon,
+  RoutingIcon,
   RunningAppIcon,
   RunningIcon,
   ScalerDetailsIcon,
