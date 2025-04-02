@@ -18,7 +18,7 @@
     "tailwind": "tailwindcss -i ./src/styles/main.css -o ./dist/main.css",
     "lint": "standard src | snazzy",
     "lint:fix": "standard src --fix",
-    "test": "vitest run",
+    "test": "tsd && vitest run",
     "prepare": "rm -Rf dist; npm run build; npm run tailwind"
   },
   "dependencies": {
@@ -69,5 +69,8 @@
   "pre-commit": [
     "lint",
     "test"
-  ]
+  ],
+  "tsd": {
+    "directory": "test-d"
+  }
 }
