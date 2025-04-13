@@ -12,7 +12,8 @@ export default function SplashScreen (props) {
     title = 'Operation completed',
     blur = false,
     children,
-    onDestroyed = () => {}
+    onDestroyed = () => {},
+    showDismissButton = true
   } = props
 
   const [destroyed, setDestroyed] = useState(false)
@@ -49,16 +50,18 @@ export default function SplashScreen (props) {
           {children}
         </div>
 
-        <div className={styles.button}>
-          <Button
-            color={RICH_BLACK}
-            backgroundColor={WHITE}
-            onClick={() => setDestroyed(true)}
-            label='Dismiss'
-            paddingClass={styles.buttonPadding}
-            textClass={styles.buttonText}
-          />
-        </div>
+        {showDismissButton && (
+          <div className={styles.button}>
+            <Button
+              color={RICH_BLACK}
+              backgroundColor={WHITE}
+              onClick={() => setDestroyed(true)}
+              label='Dismiss'
+              paddingClass={styles.buttonPadding}
+              textClass={styles.buttonText}
+            />
+          </div>
+        )}
       </div>
     </div>
   )

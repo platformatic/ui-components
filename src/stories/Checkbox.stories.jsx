@@ -46,3 +46,9 @@ export const CheckboxWhite = Template.bind({})
 CheckboxWhite.args = {
   color: WHITE
 }
+
+export const CheckboxWhiteSmall = Template.bind({})
+CheckboxWhiteSmall.args = {
+  color: WHITE,
+  size: SMALL
+}
