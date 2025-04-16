@@ -12,11 +12,24 @@ import {
   TooltipAbsolute,
   PlatformaticIconProps,
   CopyAndPasteProps,
-  IconsType,
   PlatformaticIcon,
   CopyAndPaste,
   Icons,
+  Forms,
+  ToggleSwitchProps,
+  InputProps,
+  SelectProps,
+  CheckboxProps,
+  RadioButtonProps,
+  IconProps,
 } from "@platformatic/ui-components";
+
+// Test that Forms components are properly typed as React ComponentType
+expectType<ComponentType<ToggleSwitchProps>>(Forms.ToggleSwitch);
+expectType<ComponentType<InputProps>>(Forms.Input);
+expectType<ComponentType<SelectProps>>(Forms.Select);
+expectType<ComponentType<CheckboxProps>>(Forms.Checkbox);
+expectType<ComponentType<RadioButtonProps>>(Forms.RadioButton);
 
 // Test VerticalSeparatorProps interface
 expectAssignable<VerticalSeparatorProps>({});
@@ -70,17 +83,10 @@ expectType<ComponentType<any>>(TooltipAbsolute);
 expectType<ComponentType<PlatformaticIconProps>>(PlatformaticIcon);
 expectType<ComponentType<CopyAndPasteProps>>(CopyAndPaste);
 
-// Test IconsType
-expectAssignable<IconsType>({
-  CircleStopIcon: (() => null) as ComponentType<any>,
-  RunningIcon: (() => null) as ComponentType<any>,
-  customIcon: "string-value",
-});
-
 // Test specific Icons exports
-expectType<ComponentType<any>>(Icons.CircleStopIcon);
-expectType<ComponentType<any>>(Icons.RunningIcon);
+expectType<ComponentType<IconProps>>(Icons.CircleStopIcon);
+expectType<ComponentType<IconProps>>(Icons.RunningIcon);
 
 // Test that Icons allows string index access
 const dynamicIcon: string | ComponentType<any> = Icons["someIconName"];
-expectType<string | ComponentType<any>>(dynamicIcon);
+expectType<ComponentType<any>>(dynamicIcon);
