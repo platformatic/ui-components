@@ -1,0 +1,25 @@
+declare module "@platformatic/ui-components/src/components/constants" {
+  export const WHITE: string;
+  export const SMALL: string;
+  export const POSITION_END: string;
+  export const RICH_BLACK: string;
+  export const BLACK_RUSSIAN: string;
+  export const TRANSPARENT: string;
+  export const MARGIN_0: string;
+  export const OPACITY_15: string;
+  export const OPACITY_30: string;
+  export const OPACITY_100: string;
+  export const WARNING_YELLOW: string;
+  export const ANTI_FLASH_WHITE: string;
+  export const DULLS_BACKGROUND_COLOR: string;
+  export const ERROR_RED: string;
+  export const LARGE: string;
+  export const MEDIUM: string;
+  export const MAIN_GREEN: string;
+  export const BOX_SHADOW: string;
+  export const UNDERLINE: string;
+  export const MAIN_DARK_BLUE: string;
+  export const DIRECTION_RIGHT: string;
+  export const POSITION_CENTER: string;
+  export const TINY: string;
+}
