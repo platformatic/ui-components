@@ -176,6 +176,7 @@ import RunningIcon from './RunningIcon'
 import ScalerDetailsIcon from './ScalerDetailsIcon'
 import ScalerHistoryIcon from './ScalerHistoryIcon'
 import ScheduledJobsAppIcon from './ScheduledJobsAppIcon'
+import ScheduledJobsCreateIcon from './ScheduledJobsCreateIcon'
 import ScheduledJobsDetailIcon from './ScheduledJobsDetailIcon'
 import ScheduledJobSettingsIcon from './ScheduledJobSettingsIcon'
 import ScheduledJobsIcon from './ScheduledJobsIcon'
@@ -403,6 +404,7 @@ export default {
   ScalerDetailsIcon,
   ScalerHistoryIcon,
   ScheduledJobsAppIcon,
+  ScheduledJobsCreateIcon,
   ScheduledJobsDetailIcon,
   ScheduledJobSettingsIcon,
   ScheduledJobsIcon,
