@@ -28,3 +28,6 @@
   @apply px-2 py-1.5 md:px-3 md:py-[8.5px];
 }
 
+.disabled::placeholder {
+  @apply text-white/30;
+}

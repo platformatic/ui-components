@@ -14,12 +14,13 @@ function SearchBarV2 ({
   dataAttrName = '',
   dataAttrValue = '',
   inputTextClassName = '',
-  paddingClass = ''
+  paddingClass = '',
+  disabled = false
 }) {
   const inputRef = useRef()
   const baseClassName = `${styles.container} ${paddingClass || styles.defaultPaddingClass} ` + commonStyles[`background-color-${backgroundColor}`]
   const [wrapperClassName, setWrapperClassName] = useState(normalClassName())
-  const inputClassName = `${styles.input} ${inputTextClassName} `
+  const inputClassName = `${styles.input} ${inputTextClassName} ${disabled ? styles.disabled : ''} `
   const [isOnFocus, setIsOnFocus] = useState(false)
   const [showClear, setShowClear] = useState(false)
   const dataProps = {}
@@ -70,7 +71,16 @@ function SearchBarV2 ({
   return (
     <div className={wrapperClassName} {...dataProps}>
       <PlatformaticIcon iconName='LensIcon' color={color} disabled={!isOnFocus} size={SMALL} onClick={handleSearch} />
-      <input type='text' placeholder={placeholder} className={inputClassName} ref={inputRef} onChange={handleChange} onFocus={onFocus} onBlur={onBlur} />
+      <input
+        type='text'
+        placeholder={placeholder}
+        className={inputClassName}
+        ref={inputRef}
+        onChange={handleChange}
+        onFocus={onFocus}
+        onBlur={onBlur}
+        disabled={disabled}
+      />
       {showClear && (
         <div className={styles.clearContainer}>
           <PlatformaticIcon iconName='CircleCloseIcon' color={color} size={SMALL} onClick={handleClear} />

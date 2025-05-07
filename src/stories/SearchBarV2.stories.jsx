@@ -11,7 +11,6 @@ const Template = (args) => {
   )
 }
 export const Standard = Template.bind({})
-
 Standard.args = {
   onChange: (value) => {
     console.log('Current search: ' + value)
@@ -19,4 +18,10 @@ Standard.args = {
   onSubmit: (value) => {
     alert('Query value: ' + value)
   }
+}
+
+export const Disabled = Template.bind({})
+Disabled.args = {
+  disabled: true,
+  placeholder: 'Disabled'
 }
