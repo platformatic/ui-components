@@ -156,6 +156,7 @@ import PodhealthIcon from './PodhealthIcon'
 import PodLogsIcon from './PodLogsIcon'
 import PodMetricsIcon from './PodMetricsIcon'
 import PodPerformanceIcon from './PodPerformanceIcon'
+import PodSettingsIcon from './PodSettingsIcon'
 import PodServicesIcon from './PodServicesIcon'
 import PreviewPRIcon from './PreviewPRIcon'
 import PullRequestIcon from './PullRequestIcon'
@@ -384,6 +385,7 @@ export default {
   PodLogsIcon,
   PodMetricsIcon,
   PodPerformanceIcon,
+  PodSettingsIcon,
   PodServicesIcon,
   PreviewPRIcon,
   PullRequestIcon,
