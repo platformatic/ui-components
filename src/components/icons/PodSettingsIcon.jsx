@@ -17,7 +17,6 @@ const PodSettingsIcon = ({
     className += ` ${styles.iconInactive}`
   }
   let icon = <></>
-  const filledClassName = styles[`filled-${color}`]
 
   switch (size) {
     case SMALL:
