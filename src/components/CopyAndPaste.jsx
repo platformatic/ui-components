@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import { COLORS_ICON, DIRECTION_TOP, MEDIUM, SIZES, POSITIONS, POSITION_CENTER, MAIN_DARK_BLUE } from './constants'
 import PlatformaticIcon from './PlatformaticIcon'
 import TooltipAbsolute from './TooltipAbsolute'
@@ -72,45 +71,6 @@ function CopyAndPaste ({
   }
 
   return renderTooltip()
-}
-
-CopyAndPaste.propTypes = {
-  /**
-   * value
-   */
-  value: PropTypes.string,
-  /**
-   * tooltipLabel
-   */
-  tooltipLabel: PropTypes.string,
-  /**
-   * size
-   */
-  size: PropTypes.oneOf(SIZES),
-  /**
-   * color
-   */
-  color: PropTypes.oneOf(COLORS_ICON),
-  /**
-   * timeout
-   */
-  timeout: PropTypes.number,
-  /**
-   * internalOverHandling
-   */
-  internalOverHandling: PropTypes.bool,
-  /**
-   * timeout
-   */
-  tooltipClassName: PropTypes.string,
-  /**
-   * position
-   */
-  position: PropTypes.oneOf(POSITIONS),
-  /**
-   * tooltipFixed
-   */
-  tooltipFixed: PropTypes.bool
 }
 
 export default CopyAndPaste

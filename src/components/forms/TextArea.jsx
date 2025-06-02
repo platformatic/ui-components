@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from './TextArea.module.css'
 import commonStyles from '../Common.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
@@ -34,57 +33,6 @@ function TextArea ({
       {showError && <span className={errorMessageClassName}>{errorMessage}</span>}
     </div>
   )
-}
-
-TextArea.propTypes = {
-  /**
-   * placeholder
-   */
-  placeholder: PropTypes.string,
-  /**
-   * value
-   */
-  value: PropTypes.string,
-  /**
-   * name
-   */
-  name: PropTypes.string,
-  /**
-   * color of border
-   */
-  borderColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE]),
-  /**
-   * onChange
-   */
-  onChange: PropTypes.func,
-  /**
-   * Disabled
-   */
-  disabled: PropTypes.bool,
-  /**
-   * afterIcon: PlatformaticIcon props
-   */
-  afterIcon: PropTypes.shape({
-    iconName: PropTypes.string,
-    color: PropTypes.string,
-    onClick: PropTypes.func
-  }),
-  /**
-   * rows
-   */
-  rows: PropTypes.number,
-  /**
-   * cols
-   */
-  cols: PropTypes.number,
-  /**
-   * errorMessage
-   */
-  errorMessage: PropTypes.string,
-  /**
-   * errorMessageTextClassName
-  */
-  errorMessageTextClassName: PropTypes.string
 }
 
 export default TextArea

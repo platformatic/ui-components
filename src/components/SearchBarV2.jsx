@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react'
-import PropTypes from 'prop-types'
 import commonStyles from './Common.module.css'
 import styles from './SearchBarV2.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
@@ -88,49 +87,6 @@ function SearchBarV2 ({
       )}
     </div>
   )
-}
-
-SearchBarV2.propTypes = {
-  /**
-   * onSubmit
-   */
-  onSubmit: PropTypes.func,
-  /**
-   * onSubmit
-   */
-  onChange: PropTypes.func,
-  /**
-   * onSubmit
-   */
-  onClear: PropTypes.func,
-  /**
-   * color
-   */
-  color: PropTypes.oneOf([WHITE, RICH_BLACK]),
-  /**
-   * backgroundColor
-   */
-  backgroundColor: PropTypes.oneOf([WHITE, RICH_BLACK, TRANSPARENT]),
-  /**
-   * placeholder
-   */
-  placeholder: PropTypes.string,
-  /**
-   * dataAttrName
-  */
-  dataAttrName: PropTypes.string,
-  /**
-   * dataAttrValue
-  */
-  dataAttrValue: PropTypes.string,
-  /**
-   * inputTextClassName
-  */
-  inputTextClassName: PropTypes.string,
-  /**
-   * paddingClass
-  */
-  paddingClass: PropTypes.string
 }
 
 export default SearchBarV2

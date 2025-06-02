@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
 import useEscapeKey from '../hooks/useEscapeKey'
 import styles from './ModalDirectional.module.css'
 import {
@@ -53,33 +52,6 @@ function ModalDirectional ({
       </div>
     </>
   )
-}
-
-ModalDirectional.propTypes = {
-  /**
-   * children
-   */
-  children: PropTypes.node,
-  /**
-   * setIsOpen
-   */
-  setIsOpen: PropTypes.func,
-  /**
-   * smallLayout
-   */
-  smallLayout: PropTypes.bool,
-  /**
-   * classNameModalLefty
-   */
-  classNameModalLefty: PropTypes.string,
-  /**
-   * permanent: modal could be closed only with Esc, X or Cancel
-   */
-  permanent: PropTypes.bool,
-  /**
-   * blurClassName: override
-   */
-  blurClassName: PropTypes.string
 }
 
 export default ModalDirectional

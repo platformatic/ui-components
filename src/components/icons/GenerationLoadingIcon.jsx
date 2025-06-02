@@ -1,5 +1,4 @@
 import * as React from 'react'
-import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, EXTRA_LARGE, SIZES, MAIN_DARK_BLUE, MEDIUM } from '../constants'
 
@@ -46,25 +45,6 @@ const GenerationLoadingIcon = ({
       break
   }
   return icon
-}
-
-GenerationLoadingIcon.propTypes = {
-  /**
-   * color of text, icon and borders
-   */
-  color: PropTypes.oneOf(COLORS_ICON),
-  /**
-   * Size
-   */
-  size: PropTypes.oneOf(SIZES),
-  /**
-   * disabled
-   */
-  disabled: PropTypes.bool,
-  /**
-   * inactive
-   */
-  inactive: PropTypes.bool
 }
 
 export default GenerationLoadingIcon

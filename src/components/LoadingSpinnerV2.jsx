@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from './LoadingSpinnerV2.module.css'
 import SpinnerCircular from './loaders/SpinnerCircular'
 
@@ -24,30 +23,6 @@ function LoadingSpinnerV2 ({
       </div>
       )
     : <></>
-}
-
-LoadingSpinnerV2.propTypes = {
-  /**
-   * loading
-   */
-  loading: PropTypes.bool,
-  /**
-   * applySentences
-   */
-  applySentences: PropTypes.object,
-  /**
-   * spinnerProps
-   */
-  spinnerProps: PropTypes.shape({
-    className: PropTypes.string,
-    color: PropTypes.string,
-    size: PropTypes.number,
-    thickness: PropTypes.number
-  }),
-  /**
-   * containerClassName
-   */
-  containerClassName: PropTypes.string
 }
 
 export default LoadingSpinnerV2

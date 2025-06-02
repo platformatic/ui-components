@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
 import styles from './ButtonOnlyIcon.module.css'
 import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
@@ -92,61 +91,6 @@ function ButtonOnlyIcon ({
       </div>
     </button>
   )
-}
-
-ButtonOnlyIcon.propTypes = {
-  /**
-   * textClass
-   */
-  textClass: PropTypes.string,
-  /**
-   * paddingClass
-   */
-  paddingClass: PropTypes.string,
-  /**
-   * altLabel
-   */
-  altLabel: PropTypes.string,
-  /**
-   * color of text, icon and borders
-   */
-  color: PropTypes.oneOf(COLORS_BUTTON),
-  /**
-   * background color of the button
-   */
-  backgroundColor: PropTypes.oneOf(COLORS_BUTTON),
-  /**
-   * Size
-   */
-  size: PropTypes.oneOf(SIZES),
-  /**
-   * Disabled
-   */
-  disabled: PropTypes.bool,
-  /**
-   * Effect on hover
-   */
-  hoverEffect: PropTypes.oneOf(HOVER_EFFECTS_BUTTONS),
-  /**
-   * Apply border: default true
-   */
-  bordered: PropTypes.bool,
-  /**
-   * Full Width: default false
-   */
-  fullWidth: PropTypes.bool,
-  /**
-   * platformaticIcon: should be removed
-   */
-  platformaticIcon: PropTypes.shape({
-    iconName: PropTypes.string,
-    color: PropTypes.string,
-    size: PropTypes.string
-  }),
-  /**
-   * Selected: default false
-   */
-  selected: PropTypes.bool
 }
 
 export default ButtonOnlyIcon

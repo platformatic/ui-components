@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import styles from './Input.module.css'
 import commonStyles from '../Common.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
@@ -83,89 +82,6 @@ function Input ({
       {showError && <span className={errorMessageClassName}>{errorMessage}</span>}
     </div>
   )
-}
-
-Input.propTypes = {
-  /**
-   * placeholder
-   */
-  placeholder: PropTypes.string,
-  /**
-   * value
-   */
-  value: PropTypes.string,
-  /**
-   * name
-   */
-  name: PropTypes.string,
-  /**
-   * color of border
-   */
-  borderColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE, WHITE, RICH_BLACK]),
-  /**
-   * color of border
-   */
-  backgroundColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE, WHITE, RICH_BLACK, TRANSPARENT]),
-  /**
-   * onChange
-   */
-  onChange: PropTypes.func,
-  /**
-   * Disabled
-   */
-  disabled: PropTypes.bool,
-  /**
-   * beforeIcon: PlatformaticIcon props
-   */
-  beforeIcon: PropTypes.shape({
-    iconName: PropTypes.string,
-    color: PropTypes.string,
-    onClick: PropTypes.func
-  }),
-  /**
-   * afterIcon: PlatformaticIcon props
-   */
-  afterIcon: PropTypes.shape({
-    iconName: PropTypes.string,
-    color: PropTypes.string,
-    onClick: PropTypes.func
-  }),
-  /**
-   * placeholderApart
-   */
-  placeholderApart: PropTypes.bool,
-  /**
-   * backgroundTransparent
-   */
-  backgroundTransparent: PropTypes.bool,
-  /**
-   * inputTextClassName
-   */
-  inputTextClassName: PropTypes.string,
-  /**
-   * verticalPaddingClassName
-   */
-  verticalPaddingClassName: PropTypes.string,
-  /**
-   * dataAttrName
-  */
-  dataAttrName: PropTypes.string,
-  /**
-   * dataAttrValue
-  */
-  dataAttrValue: PropTypes.string,
-  /**
-   * readOnly
-  */
-  readOnly: PropTypes.bool,
-  /**
-   * errorMessage
-  */
-  errorMessage: PropTypes.string,
-  /**
-   * errorMessageTextClassName
-  */
-  errorMessageTextClassName: PropTypes.string
 }
 
 export default Input

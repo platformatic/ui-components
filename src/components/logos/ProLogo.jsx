@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { MAIN_DARK_BLUE, WHITE } from '../constants'
 
 function ProLogo ({
@@ -38,21 +37,6 @@ function ProLogo ({
   }
 
   return icon
-}
-
-ProLogo.propTypes = {
-  /**
-   * background color of the button
-   */
-  backgroundColor: PropTypes.oneOf([MAIN_DARK_BLUE, WHITE]),
-  /**
-   * width
-   */
-  width: PropTypes.number,
-  /**
-   * height
-   */
-  height: PropTypes.number
 }
 
 export default ProLogo

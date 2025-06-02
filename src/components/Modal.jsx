@@ -1,5 +1,4 @@
 import React, { useRef } from 'react'
-import PropTypes from 'prop-types'
 import ButtonFullRounded from './ButtonFullRounded'
 import useEscapeKey from '../hooks/useEscapeKey'
 import Logo from './Logo'
@@ -260,61 +259,6 @@ function Modal ({
       break
   }
   return whichModal
-}
-
-Modal.propTypes = {
-  /**
-   * children
-   */
-  children: PropTypes.node,
-  /**
-   * childrenClassContainer
-   */
-  childrenClassContainer: PropTypes.string,
-  /**
-   * setIsOpen: function from Parent for close/pen
-   */
-  setIsOpen: PropTypes.func,
-  /**
-   * title: Title on top for small Modals (check MODAL_LAYOUTS)
-   */
-  title: PropTypes.string,
-  /**
-   * layout: type of Layout of the modal
-   */
-  layout: PropTypes.oneOf(MODAL_LAYOUTS),
-  /**
-   * Size: of the modal
-   */
-  size: PropTypes.oneOf(MODAL_SIZES),
-  /**
-   * profile: deprecated
-   */
-  profile: PropTypes.oneOf(PROFILES),
-  /**
-   * backgroundClassName: background of the full screen modal
-   */
-  backgroundClassName: PropTypes.string,
-  /**
-   * titleClassName: classes of the title
-   */
-  titleClassName: PropTypes.string,
-  /**
-   * modalCloseClassName: classes for the closing icon
-   */
-  modalCloseClassName: PropTypes.string,
-  /**
-   * permanent: modal could be closed only with Esc, X or Cancel
-   */
-  permanent: PropTypes.bool,
-  /**
-   * showCloseButtonOnTop: show button on X
-   */
-  showCloseButtonOnTop: PropTypes.bool,
-  /**
-   * additionalModalClassName: show button on X
-   */
-  additionalModalClassName: PropTypes.string
 }
 
 export default Modal

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import styles from './FollowUs.module.css'
 import Icons from './icons'
 import { MAIN_GREEN, WHITE, MEDIUM, SMALL, MAIN_DARK_BLUE, LIGHT_GREEN } from './constants'
@@ -65,40 +64,6 @@ function FollowUs ({
       )}
     </div>
   )
-}
-
-FollowUs.propTypes = {
-  /**
-   * label
-   */
-  label: PropTypes.string,
-  /**
-   * labelClassName
-   */
-  labelClassName: PropTypes.string,
-  /**
-   * frontPageAspect
-   */
-  frontPageAspect: PropTypes.bool,
-  /**
-   * labelColor
-   */
-  labelColor: PropTypes.oneOf([LIGHT_GREEN, WHITE, MAIN_DARK_BLUE]),
-  /**
-   * iconColor
-   */
-  iconColor: PropTypes.oneOf([MAIN_DARK_BLUE, WHITE, MAIN_GREEN]),
-  /**
-   * iconSize
-   */
-  iconSize: PropTypes.oneOf([MEDIUM, SMALL]),
-  /**
-   * socialElements
-   */
-  socialElements: PropTypes.arrayOf(PropTypes.shape({
-    link: PropTypes.string.isRequired,
-    iconName: PropTypes.string.isRequired
-  }))
 }
 
 export default FollowUs

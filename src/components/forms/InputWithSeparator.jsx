@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
 import inputStyles from './Input.module.css'
 import styles from './InputWithSeparator.module.css'
 import commonStyles from '../Common.module.css'
@@ -180,78 +179,6 @@ function InputWithSeparator ({
       {showError && <span className={errorMessageClassName}>{errorMessage}</span>}
     </div>
   )
-}
-
-InputWithSeparator.propTypes = {
-  /**
-   * placeholder
-   */
-  placeholder: PropTypes.string,
-  /**
-   * name
-   */
-  name: PropTypes.string,
-  /**
-   * value
-   */
-  value: PropTypes.string,
-  /**
-   * defaultValue
-   */
-  defaultValue: PropTypes.string,
-  /**
-   * defaultValueSeparator
-   */
-  defaultValueSeparator: PropTypes.string,
-  /**
-   * separators
-   */
-  separators: PropTypes.arrayOf(PropTypes.string),
-  /**
-   * inputTextClassName
-   */
-  inputTextClassName: PropTypes.string,
-  /**
-   * color of border
-   */
-  borderColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE, WHITE, RICH_BLACK]),
-  /**
-   * color of border
-   */
-  backgroundColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE, WHITE, RICH_BLACK, TRANSPARENT]),
-  /**
-   * onChange
-   */
-  onChange: PropTypes.func,
-  /**
-   * Disabled
-   */
-  disabled: PropTypes.bool,
-  /**
-   * afterIcon: PlatformaticIcon props
-   */
-  afterIcon: PropTypes.shape({
-    iconName: PropTypes.string,
-    color: PropTypes.string,
-    handleClick: PropTypes.func,
-    disabled: PropTypes.bool
-  }),
-  /**
-   * beforeIcon: PlatformaticIcon props
-   */
-  beforeIcon: PropTypes.shape({
-    iconName: PropTypes.string,
-    color: PropTypes.string,
-    size: PropTypes.oneOf(SIZES)
-  }),
-  /**
-   * errorMessage
-  */
-  errorMessage: PropTypes.string,
-  /**
-   * errorMessageTextClassName
-  */
-  errorMessageTextClassName: PropTypes.string
 }
 
 export default InputWithSeparator

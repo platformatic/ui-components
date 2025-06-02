@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import styles from './LogoDropDown.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
 import { MAIN_DARK_BLUE, SMALL, WHITE } from './constants'
@@ -58,33 +57,6 @@ function LogoDropDown ({
       )}
     </div>
   )
-}
-
-LogoDropDown.propTypes = {
-  /**
-   * width
-   */
-  width: PropTypes.number,
-  /**
-   * height
-   */
-  height: PropTypes.number,
-  /**
-   * itemSelected
-   */
-  itemSelected: PropTypes.string,
-  /**
-   * items
-   */
-  items: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string,
-    handleClick: PropTypes.func
-  })),
-  /**
-   * onClickItemSelected
-   */
-  onClickItemSelected: PropTypes.func
 }
 
 export default LogoDropDown

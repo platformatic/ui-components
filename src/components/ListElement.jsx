@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import PlatformaticIcon from './PlatformaticIcon'
 import commonStyles from './Common.module.css'
 import styles from './ListElement.module.css'
@@ -39,36 +38,6 @@ function List ({
         )}
     </div>
   )
-}
-List.propTypes = {
-  /**
-   * title
-   */
-  title: PropTypes.string,
-  /**
-   * detail
-   */
-  detail: PropTypes.string,
-  /**
-   * marginSize
-   */
-  marginSize: PropTypes.oneOf([SMALL, MEDIUM]),
-  /**
-   * color
-   */
-  titleColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE, WHITE]),
-  /**
-   * color
-   */
-  iconColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE]),
-  /**
-   * titleColor
-   */
-  detailColor: PropTypes.oneOf([WHITE, MAIN_DARK_BLUE]),
-  /**
-   * semiBold
-   */
-  semiBold: PropTypes.bool
 }
 
 export default List

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import styles from './InputFileUpload.module.css'
 import commonStyles from '../Common.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
@@ -137,105 +136,6 @@ function InputFileUpload ({
       {showError && <span className={errorMessageClassName}>{errorMessage}</span>}
     </div>
   )
-}
-
-InputFileUpload.propTypes = {
-  /**
-   * idInputFile
-   */
-  idInputFile: PropTypes.string,
-  /**
-   * placeholder
-   */
-  placeholder: PropTypes.string,
-  /**
-   * color of border
-   */
-  borderColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE, WHITE, RICH_BLACK]),
-  /**
-   * color of border
-   */
-  backgroundColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE, WHITE, RICH_BLACK, TRANSPARENT]),
-  /**
-   * onFileSelect
-   */
-  onFileSelect: PropTypes.func,
-  /**
-   * Disabled
-   */
-  disabled: PropTypes.bool,
-  /**
-   * beforeIcon: PlatformaticIcon props
-   */
-  beforeIcon: PropTypes.shape({
-    iconName: PropTypes.string,
-    color: PropTypes.string,
-    onClick: PropTypes.func
-  }),
-  /**
-   * afterIcon: PlatformaticIcon props
-   */
-  afterIcon: PropTypes.shape({
-    iconName: PropTypes.string,
-    color: PropTypes.string,
-    onClick: PropTypes.func
-  }),
-  /**
-   * backgroundTransparent
-   */
-  backgroundTransparent: PropTypes.bool,
-  /**
-   * inputTextClassName
-   */
-  inputTextClassName: PropTypes.string,
-  /**
-   * detailTextClassName
-   */
-  detailTextClassName: PropTypes.string,
-  /**
-   * accept
-   */
-  accept: PropTypes.string,
-  /**
-   * verticalPaddingClassName
-   */
-  verticalPaddingClassName: PropTypes.string,
-  /**
-   * dataAttrName
-  */
-  dataAttrName: PropTypes.string,
-  /**
-   * dataAttrValue
-  */
-  dataAttrValue: PropTypes.string,
-  /**
-   * readOnly
-  */
-  readOnly: PropTypes.bool,
-  /**
-   * errorMessage
-  */
-  errorMessage: PropTypes.string,
-  /**
-   * errorMessageTextClassName
-  */
-  errorMessageTextClassName: PropTypes.string,
-  /**
-   * removeFileButton
-  */
-  removeFileButton: PropTypes.object,
-  /**
-   * showDetailButton
-  */
-  showDetailButton: PropTypes.bool,
-  /**
-   * detailFileButton
-  */
-  detailFileButton: PropTypes.object,
-  /**
-     * onClickDetail
-    */
-  onClickDetail: PropTypes.func
 }
 
 export default InputFileUpload

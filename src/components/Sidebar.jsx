@@ -7,7 +7,6 @@ import styles from './Sidebar.module.css'
 import ReactTooltip from 'react-tooltip'
 import HorizontalSeparator from './HorizontalSeparator'
 import PlatformaticIcon from './PlatformaticIcon'
-import PropTypes from 'prop-types'
 import { DULLS_BACKGROUND_COLOR, MEDIUM, WHITE } from './constants'
 
 function Sidebar ({
@@ -135,58 +134,6 @@ function Sidebar ({
       </div>
     </div>
   )
-}
-
-Sidebar.propTypes = {
-  /**
-   * title
-   */
-  title: PropTypes.string,
-  /**
-   * title
-   */
-  labelButtonSettings: PropTypes.string,
-  /**
-   * defaultSelected
-   */
-  defaultSelected: PropTypes.string,
-  /**
-   * addTitle
-   */
-  addTitle: PropTypes.string,
-  /**
-   * items: array with keys
-   * id: id of the worspacedSeleted
-   * title: name to display
-   * subtitle: secondary title
-   * icon: what Icon
-   */
-  items: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string,
-    subtitle: PropTypes.string,
-    iconName: PropTypes.string
-  })),
-  /**
-   * Apply onClickItemSelectedParent
-   */
-  onClickItemSelectedParent: PropTypes.func,
-  /**
-   * Apply onClickAdd: function called clicking on plus button
-   */
-  onClickAdd: PropTypes.func,
-  /**
-   * Apply onClickSettings: function called clicking on Settings button
-   */
-  onClickSettings: PropTypes.func,
-  /**
-   * disableClickAdd
-   */
-  disableClickAdd: PropTypes.bool,
-  /**
-   * disableClickSettings
-   */
-  disableClickSettings: PropTypes.bool
 }
 
 export default Sidebar

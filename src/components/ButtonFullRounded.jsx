@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import commonStyles from './Common.module.css'
 import styles from './ButtonFullRounded.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
@@ -47,61 +46,6 @@ function ButtonFullRounded ({
       </button>
     </div>
   )
-}
-
-ButtonFullRounded.propTypes = {
-  /**
-   * iconName
-   */
-  iconName: PropTypes.string,
-  /**
-   * iconColor
-   */
-  iconColor: PropTypes.oneOf(COLORS_ICON),
-  /**
-   * iconColor
-   */
-  iconSize: PropTypes.oneOf(SIZES),
-  /**
-   * disabled
-   */
-  disabled: PropTypes.bool,
-  /**
-   * paddingSize
-   */
-  paddingSize: PropTypes.oneOf(PADDING_SIZES),
-  /**
-   * alt
-   */
-  alt: PropTypes.string,
-  /**
-   * onClick
-   */
-  onClick: PropTypes.func,
-  /**
-   * Effect on hover
-   */
-  hoverEffect: PropTypes.oneOf(['', DULLS_BACKGROUND_COLOR]),
-  /**
-   * bordered
-   */
-  bordered: PropTypes.bool,
-  /**
-   * tip
-   */
-  tip: PropTypes.string,
-  /**
-   * Selected: default false
-   */
-  selected: PropTypes.bool,
-  /**
-     * buttonClassName
-     */
-  buttonClassName: PropTypes.string,
-  /**
-     * internalOverHandling
-     */
-  internalOverHandling: PropTypes.bool
 }
 
 export default ButtonFullRounded

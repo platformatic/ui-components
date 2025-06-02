@@ -1,5 +1,4 @@
 import * as React from 'react'
-import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, LARGE, MAIN_DARK_BLUE, MEDIUM, SIZES, SMALL } from '../constants'
 
@@ -84,17 +83,6 @@ const AppWorkspace = ({
       break
   }
   return icon
-}
-
-AppWorkspace.propTypes = {
-  /**
-   * color of text, icon and borders
-   */
-  color: PropTypes.oneOf(COLORS_ICON),
-  /**
-   * Size
-   */
-  size: PropTypes.oneOf(SIZES)
 }
 
 export default AppWorkspace

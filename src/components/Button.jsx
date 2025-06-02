@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
 import styles from './Button.module.css'
 import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
@@ -120,73 +119,6 @@ function Button ({
       </div>
     </button>
   )
-}
-
-Button.propTypes = {
-  /**
-   * textClass
-   */
-  textClass: PropTypes.string,
-  /**
-   * paddingClass
-   */
-  paddingClass: PropTypes.string,
-  /**
-   * label
-   */
-  label: PropTypes.string,
-  /**
-   * color of text, icon and borders
-   */
-  color: PropTypes.oneOf(COLORS_BUTTON),
-  /**
-   * background color of the button
-   */
-  backgroundColor: PropTypes.oneOf(COLORS_BUTTON),
-  /**
-   * Size
-   */
-  size: PropTypes.oneOf(SIZES),
-  /**
-   * Disabled
-   */
-  disabled: PropTypes.bool,
-  /**
-   * Effect on hover
-   */
-  hoverEffect: PropTypes.oneOf(HOVER_EFFECTS_BUTTONS),
-  /**
-   * Hover effect properties
-   */
-  hoverEffectProperties: PropTypes.shape({
-    changeBackgroundColor: PropTypes.oneOf(BUTTON_BACKGROUNDS_COLOR_HOVER)
-  }),
-  /**
-   * Apply border: default true
-   */
-  bordered: PropTypes.bool,
-  /**
-   * Full Width: default false
-   */
-  fullWidth: PropTypes.bool,
-  /**
-   * platformaticIcon: should be removed
-   */
-  platformaticIcon: PropTypes.shape({
-    iconName: PropTypes.string,
-    color: PropTypes.string
-  }),
-  /**
-   * platformaticIconAfter: should be removed
-   */
-  platformaticIconAfter: PropTypes.shape({
-    iconName: PropTypes.string,
-    color: PropTypes.string
-  }),
-  /**
-   * Selected: default false
-   */
-  selected: PropTypes.bool
 }
 
 export default Button

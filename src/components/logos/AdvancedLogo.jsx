@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { MAIN_DARK_BLUE, WHITE } from '../constants'
 
 function AdvancedLogo ({
@@ -37,21 +36,6 @@ function AdvancedLogo ({
   }
 
   return icon
-}
-
-AdvancedLogo.propTypes = {
-  /**
-   * background color of the button
-   */
-  backgroundColor: PropTypes.oneOf([MAIN_DARK_BLUE, WHITE]),
-  /**
-   * width
-   */
-  width: PropTypes.number,
-  /**
-   * height
-   */
-  height: PropTypes.number
 }
 
 export default AdvancedLogo

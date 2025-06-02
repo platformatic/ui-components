@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from './RadioGroup.module.css'
 import commonStyles from '../Common.module.css'
 
@@ -31,40 +30,6 @@ function RadioGroup ({
       {showError && <span className={errorMessageClassName}>{errorMessage}</span>}
     </div>
   )
-}
-
-RadioGroup.propTypes = {
-  /**
-   * name
-   */
-  name: PropTypes.string,
-  /**
-   * radios
-   */
-  radios: PropTypes.arrayOf(PropTypes.shape({
-    value: PropTypes.string,
-    label: PropTypes.string
-  })),
-  /**
-   * errorMessage
-   */
-  errorMessage: PropTypes.string,
-  /**
-   * errorMessageTextClassName
-  */
-  errorMessageTextClassName: PropTypes.string,
-  /**
-   * onChange
-   */
-  onChange: PropTypes.func,
-  /**
-   * Disabled
-   */
-  disabled: PropTypes.bool,
-  /**
-   * value
-   */
-  value: PropTypes.string
 }
 
 export default RadioGroup

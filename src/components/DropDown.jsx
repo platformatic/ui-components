@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
-import PropTypes from 'prop-types'
 import styles from './DropDown.module.css'
 import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
 import { DARK_BLUE, LIGHT_BLUE, MAIN_DARK_BLUE, RICH_BLACK, WHITE } from './constants'
+
 function DropDown ({
   pictureUrl = '',
   header = '',
@@ -87,57 +87,6 @@ function DropDown ({
       )}
     </div>
   )
-}
-
-DropDown.propTypes = {
-  /**
-   * pictureUrl
-   */
-  pictureUrl: PropTypes.string,
-  /**
-   * header
-   */
-  header: PropTypes.string,
-  /**
-   * headerClassName
-   */
-  headerClassName: PropTypes.string,
-  /**
-   * align
-   */
-  align: PropTypes.string,
-  /**
-   * items
-   */
-  items: PropTypes.array,
-  /**
-   * backgroundColor
-   */
-  backgroundColor: PropTypes.oneOf([DARK_BLUE, LIGHT_BLUE, RICH_BLACK]),
-  /**
-   * textColor
-   */
-  textColor: PropTypes.oneOf([MAIN_DARK_BLUE, LIGHT_BLUE, WHITE]),
-  /**
-   * borderColor
-   */
-  borderColor: PropTypes.oneOf([MAIN_DARK_BLUE, WHITE, RICH_BLACK]),
-  /**
-   * headerColor
-   */
-  headerColor: PropTypes.oneOf([MAIN_DARK_BLUE, WHITE, RICH_BLACK]),
-  /**
-   * lastButton
-   */
-  lastButton: PropTypes.node,
-  /**
-   * menuCustomClassName
-   */
-  menuCustomClassName: PropTypes.string,
-  /**
-   * handleClickOutside
-   */
-  handleClickOutside: PropTypes.bool
 }
 
 export default DropDown

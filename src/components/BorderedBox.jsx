@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
 import styles from './BorderedBox.module.css'
 import commonStyles from './Common.module.css'
 import { COLORS_BORDERED_BOX, DARK_BLUE, TRANSPARENT, OPACITIES, OPACITY_100 } from './constants'
@@ -58,41 +57,6 @@ function BorderedBox (props) {
       {children}
     </div>
   )
-}
-
-BorderedBox.propTypes = {
-  /**
-   * children
-   */
-  children: PropTypes.node,
-  /**
-   * color of text, icon and borders
-   */
-  color: PropTypes.oneOf(COLORS_BORDERED_BOX),
-  /**
-   * background color of the button
-   */
-  backgroundColor: PropTypes.oneOf(COLORS_BORDERED_BOX),
-  /**
-   * classes
-   */
-  classes: PropTypes.string,
-  /**
-   * backgroundColorOpacity
-   */
-  backgroundColorOpacity: PropTypes.oneOf(OPACITIES),
-  /**
-   * borderColorOpacity
-   */
-  borderColorOpacity: PropTypes.oneOf(OPACITIES),
-  /**
-   * clickable
-   */
-  clickable: PropTypes.bool,
-  /**
-   * onClick
-   */
-  onClick: PropTypes.func
 }
 
 export default BorderedBox

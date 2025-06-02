@@ -1,5 +1,4 @@
 import * as React from 'react'
-import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, MEDIUM, MAIN_DARK_BLUE } from '../constants'
 
@@ -39,17 +38,6 @@ const CircleCheckMarkButtonIcon = ({
       break
   }
   return icon
-}
-
-CircleCheckMarkButtonIcon.propTypes = {
-  /**
-   * color of text, icon and borders
-   */
-  color: PropTypes.oneOf(COLORS_ICON),
-  /**
-   * Size
-   */
-  size: PropTypes.oneOf([MEDIUM])
 }
 
 export default CircleCheckMarkButtonIcon

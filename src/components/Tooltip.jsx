@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import React from 'react'
 import styles from './Tooltip.module.css'
 import { useEffect, useRef, useState } from 'react'
 import { DIRECTIONS, DIRECTION_BOTTOM, DIRECTION_LEFT, DIRECTION_RIGHT, DIRECTION_TOP, POSITIONS, POSITION_CENTER, POSITION_END, POSITION_START } from './constants'
@@ -113,49 +113,6 @@ function Tooltip ({
       )}
     </div>
   )
-}
-
-Tooltip.propTypes = {
-  /**
-   * direction
-   */
-  direction: PropTypes.oneOf(DIRECTIONS),
-  /**
-   * content
-   */
-  content: PropTypes.node,
-  /**
-   * children
-   */
-  children: PropTypes.node,
-  /**
-   * tooltipClassName
-   */
-  tooltipClassName: PropTypes.string,
-  /**
-   * delay
-   */
-  delay: PropTypes.number,
-  /**
-   * visible
-   */
-  visible: PropTypes.bool,
-  /**
-   * immediateActive
-   */
-  immediateActive: PropTypes.bool,
-  /**
-   * activeDependsOnVisible
-   */
-  activeDependsOnVisible: PropTypes.bool,
-  /**
-   * offset
-   */
-  offset: PropTypes.number,
-  /**
-   * position
-   */
-  position: PropTypes.oneOf(POSITIONS)
 }
 
 export default Tooltip

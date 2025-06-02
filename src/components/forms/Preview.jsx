@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from './Preview.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
 import CopyAndPaste from '../CopyAndPaste'
@@ -39,55 +38,6 @@ function Preview ({
       {children}
     </>
   )
-}
-
-Preview.propTypes = {
-  /**
-   * title
-   */
-  title: PropTypes.string,
-  /**
-   * value
-   */
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number
-  ]),
-  /**
-   * isLink
-   */
-  isLink: PropTypes.bool,
-  /**
-   * color of border
-   */
-  children: PropTypes.node,
-  /**
-   * useCopyAndPaste
-   */
-  useCopyAndPaste: PropTypes.bool,
-  /**
-   * copyAndPaste
-   */
-  copyAndPaste: PropTypes.shape({
-    value: PropTypes.string,
-    tooltipLabel: PropTypes.string,
-    iconSize: PropTypes.oneOf(SIZES),
-    iconColor: PropTypes.oneOf(COLORS_ICON),
-    timeout: PropTypes.number
-  }),
-  /**
-   * usePlatformaticIcon
-   */
-  usePlatformaticIcon: PropTypes.bool,
-  /**
-   * platformaticIcon
-   */
-  platformaticIcon: PropTypes.shape({
-    iconName: PropTypes.string.isRequired,
-    color: PropTypes.oneOf(COLORS_ICON),
-    size: PropTypes.oneOf(SIZES),
-    onClick: PropTypes.func
-  })
 }
 
 export default Preview

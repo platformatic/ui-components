@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import commonStyles from './Common.module.css'
 import styles from './Tag.module.css'
 import { COLORS_BUTTON, OPACITY_100, OPACITIES, SIZES, WHITE } from './constants'
@@ -36,48 +35,6 @@ function Tag ({
       <span className={stylesColor}>{text}</span>
     </div>
   )
-}
-Tag.propTypes = {
-  /**
-   * color
-   */
-  color: PropTypes.oneOf(COLORS_BUTTON),
-  /**
-   * text
-   */
-  text: PropTypes.string,
-  /**
-   * textClassName
-   */
-  textClassName: PropTypes.string,
-  /**
-   * backgroundColor
-   */
-  backgroundColor: PropTypes.oneOf(COLORS_BUTTON),
-  /**
-   * bordered
-   */
-  bordered: PropTypes.bool,
-  /**
-   * opaque
-   */
-  opaque: PropTypes.oneOf([OPACITIES]),
-  /**
-     * fullRounded
-     */
-  fullRounded: PropTypes.bool,
-  /**
-   * platformaticIcon
-   */
-  platformaticIcon: PropTypes.shape({
-    iconName: PropTypes.string,
-    color: PropTypes.oneOf(COLORS_BUTTON),
-    size: PropTypes.oneOf(SIZES)
-  }),
-  /**
-   * paddingClass
-   */
-  paddingClass: PropTypes.string
 }
 
 export default Tag

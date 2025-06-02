@@ -1,6 +1,5 @@
 // https://loading.io/css/
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from './SpinnerCircular.module.css'
 import { COLORS_BUTTON, WHITE } from '../constants'
 
@@ -27,25 +26,6 @@ function SpinnerCircular ({
       <div style={styleDiv} />
     </div>
   )
-}
-
-SpinnerCircular.propTypes = {
-  /**
-   * className
-   */
-  className: PropTypes.string,
-  /**
-   * color
-   */
-  color: PropTypes.oneOf(COLORS_BUTTON),
-  /**
-   * size
-   */
-  size: PropTypes.number,
-  /**
-   * thickness
-   */
-  thickness: PropTypes.number
 }
 
 export default SpinnerCircular

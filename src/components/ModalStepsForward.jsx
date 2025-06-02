@@ -1,10 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import styles from './ModalStepsForward.module.css'
 import ButtonFullRounded from './ButtonFullRounded'
 import useEscapeKey from '../hooks/useEscapeKey'
 import Logo from './Logo'
 import HorizontalSeparator from './HorizontalSeparator'
-import styles from './ModalStepsForward.module.css'
 import commonStyles from './Common.module.css'
 import {
   MAIN_DARK_BLUE,
@@ -53,25 +52,6 @@ function ModalStepsForward ({
       </div>
     </div>
   )
-}
-
-ModalStepsForward.propTypes = {
-  /**
-   * setIsOpen
-   */
-  setIsOpen: PropTypes.func,
-  /**
-   * right
-   */
-  right: PropTypes.node,
-  /**
-   * stepper
-   */
-  stepper: PropTypes.node,
-  /**
-   * left
-   */
-  left: PropTypes.node
 }
 
 export default ModalStepsForward

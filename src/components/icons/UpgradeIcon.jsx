@@ -1,5 +1,4 @@
 import * as React from 'react'
-import PropTypes from 'prop-types'
 import styles from './Icons.module.css'
 import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, EXTRA_LARGE, MAIN_DARK_BLUE } from '../constants'
 
@@ -108,25 +107,6 @@ const UpgradeIcon = ({
       break
   }
   return icon
-}
-
-UpgradeIcon.propTypes = {
-  /**
-   * color of text, icon and borders
-   */
-  color: PropTypes.oneOf(COLORS_ICON),
-  /**
-   * Size
-   */
-  size: PropTypes.oneOf(SIZES),
-  /**
-   * disabled
-   */
-  disabled: PropTypes.bool,
-  /**
-   * inactive
-   */
-  inactive: PropTypes.bool
 }
 
 export default UpgradeIcon

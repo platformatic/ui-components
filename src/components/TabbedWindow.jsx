@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
 import styles from './TabbedWindow.module.css'
 import { COLORS_BUTTON, WHITE } from './constants'
 
@@ -51,37 +50,6 @@ function TabbedWindow ({
       <div className={contentClassName}>{currentComponent}</div>
     </div>
   )
-}
-
-TabbedWindow.propTypes = {
-  /**
-   * tabs
-   */
-  tabs: PropTypes.array,
-  /**
-   * keySelected
-   */
-  keySelected: PropTypes.string,
-  /**
-   * callbackSelected
-   */
-  callbackSelected: PropTypes.func,
-  /**
-   * tabContainerClassName
-   */
-  tabContainerClassName: PropTypes.string,
-  /**
-   * tabContentClassName
-   */
-  tabContentClassName: PropTypes.string,
-  /**
-   * textClassName
-   */
-  textClassName: PropTypes.string,
-  /**
-   * horizontalSeparatorColor
-   */
-  horizontalSeparatorColor: PropTypes.oneOf(COLORS_BUTTON)
 }
 
 export default TabbedWindow

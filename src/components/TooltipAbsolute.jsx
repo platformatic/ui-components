@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import styles from './TooltipAbsolute.module.css'
 import { useEffect, useState } from 'react'
 import { DIRECTIONS, DIRECTION_LEFT, DIRECTION_BOTTOM, DIRECTION_TOP, DIRECTION_RIGHT, POSITION_START } from './constants'
@@ -67,45 +66,6 @@ const TooltipAbsolute = ({
       )}
     </div>
   )
-}
-
-TooltipAbsolute.propTypes = {
-  /**
-   * direction
-   */
-  direction: PropTypes.oneOf(DIRECTIONS),
-  /**
-   * content
-   */
-  content: PropTypes.node,
-  /**
-   * children
-   */
-  children: PropTypes.node,
-  /**
-   * tooltipClassName
-   */
-  tooltipClassName: PropTypes.string,
-  /**
-   * delay
-   */
-  delay: PropTypes.number,
-  /**
-   * offset
-   */
-  offset: PropTypes.number,
-  /**
-   * position
-   */
-  position: PropTypes.string,
-  /**
-   * visible
-   */
-  visible: PropTypes.bool,
-  /**
-   * activeDependsOnVisible
-   */
-  activeDependsOnVisible: PropTypes.bool
 }
 
 export default TooltipAbsolute

@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from './LoadingSpinner.module.css'
 import SpinnerCircular from './loaders/SpinnerCircular'
 
@@ -14,13 +13,6 @@ function LoadingSpinner ({ loading = false }) {
       </div>
       )
     : <></>
-}
-
-LoadingSpinner.propTypes = {
-  /**
-   * loading
-   */
-  loading: PropTypes.bool
 }
 
 export default LoadingSpinner

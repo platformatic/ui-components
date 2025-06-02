@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
+import React, { useEffect, useState } from 'react'
 import styles from './Password.module.css'
 import commonStyles from '../Common.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
 import { MAIN_DARK_BLUE, MAIN_GREEN } from '../constants'
 
-function Input ({
+function Password ({
   placeholder = '',
   value = '',
   name = '',
@@ -38,43 +37,4 @@ function Input ({
   )
 }
 
-Input.propTypes = {
-  /**
-   * placeholder
-   */
-  placeholder: PropTypes.string,
-  /**
-   * value
-   */
-  value: PropTypes.string,
-  /**
-   * name
-   */
-  name: PropTypes.string,
-  /**
-   * color of border
-   */
-  borderColor: PropTypes.oneOf([MAIN_GREEN, MAIN_DARK_BLUE]),
-  /**
-   * onChange
-   */
-  onChange: PropTypes.func,
-  /**
-   * Disabled
-   */
-  disabled: PropTypes.bool,
-  /**
-   * placeholderApart
-   */
-  placeholderApart: PropTypes.bool,
-  /**
-   * errorMessage
-  */
-  errorMessage: PropTypes.string,
-  /**
-   * errorMessageTextClassName
-  */
-  errorMessageTextClassName: PropTypes.string
-}
-
-export default Input
+export default Password

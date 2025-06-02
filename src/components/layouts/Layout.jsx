@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 function Layout (props) {
   const {
@@ -13,17 +12,6 @@ function Layout (props) {
     </div>
 
   )
-}
-
-Layout.propTypes = {
-  /**
-   * className
-   */
-  className: PropTypes.string,
-  /**
-   * children
-   */
-  children: PropTypes.node
 }
 
 export default Layout
