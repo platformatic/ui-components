@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styles from './Icons.module.css'
-import { COLORS_ICON, MINI, TINY, LARGE, MEDIUM, SIZES, SMALL, MAIN_DARK_BLUE } from '../constants'
+import { MINI, TINY, LARGE, MEDIUM, SMALL, MAIN_DARK_BLUE } from '../constants'
 
 const CircleFullIcon = ({
   color = MAIN_DARK_BLUE,

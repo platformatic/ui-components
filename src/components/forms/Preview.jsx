@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Preview.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
 import CopyAndPaste from '../CopyAndPaste'
-import { SIZES, COLORS_ICON } from '../constants'
+import {} from '../constants'
 
 function renderLink (value) {
   return (<a className={styles.link} href={value} target='_blank' rel='noreferrer'>{value}</a>)

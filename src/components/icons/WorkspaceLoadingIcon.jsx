@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES, EXTRA_LARGE, MEDIUM, MAIN_DARK_BLUE } from '../constants'
+import { EXTRA_LARGE, MEDIUM, MAIN_DARK_BLUE } from '../constants'
 
 const WorkspaceLoadingIcon = ({
   color = MAIN_DARK_BLUE,

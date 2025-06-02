@@ -6,16 +6,13 @@ import Logos from './logos'
 import styles from './Modal.module.css'
 import commonStyles from './Common.module.css'
 import {
-  MODAL_SIZES,
   SMALL,
-  MODAL_LAYOUTS,
   MODAL_COVER,
   MODAL_POPUP,
   MODAL_POPUP_V2,
   MAIN_DARK_BLUE,
   DULLS_BACKGROUND_COLOR,
   LARGE,
-  PROFILES,
   FREE,
   BASIC,
   MODAL_FULL_DARK,

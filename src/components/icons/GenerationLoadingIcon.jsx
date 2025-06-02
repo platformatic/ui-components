@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styles from './Icons.module.css'
-import { COLORS_ICON, EXTRA_LARGE, SIZES, MAIN_DARK_BLUE, MEDIUM } from '../constants'
+import { EXTRA_LARGE, MAIN_DARK_BLUE, MEDIUM } from '../constants'
 
 const GenerationLoadingIcon = ({
   color = MAIN_DARK_BLUE,

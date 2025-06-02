@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from './FollowUs.module.css'
 import Icons from './icons'
-import { MAIN_GREEN, WHITE, MEDIUM, SMALL, MAIN_DARK_BLUE, LIGHT_GREEN } from './constants'
+import { WHITE, MEDIUM } from './constants'
 
 function SocialElement ({ href, iconName, iconClassName, iconColor, iconSize }) {
   const [hover, setHover] = useState(false)

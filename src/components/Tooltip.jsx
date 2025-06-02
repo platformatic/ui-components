@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from './Tooltip.module.css'
-import { useEffect, useRef, useState } from 'react'
-import { DIRECTIONS, DIRECTION_BOTTOM, DIRECTION_LEFT, DIRECTION_RIGHT, DIRECTION_TOP, POSITIONS, POSITION_CENTER, POSITION_END, POSITION_START } from './constants'
+import { DIRECTION_BOTTOM, DIRECTION_LEFT, DIRECTION_RIGHT, DIRECTION_TOP, POSITION_CENTER, POSITION_END, POSITION_START } from './constants'
 
 function Tooltip ({
   immediateActive = true,

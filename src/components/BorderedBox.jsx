@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from './BorderedBox.module.css'
 import commonStyles from './Common.module.css'
-import { COLORS_BORDERED_BOX, DARK_BLUE, TRANSPARENT, OPACITIES, OPACITY_100 } from './constants'
+import { DARK_BLUE, TRANSPARENT, OPACITY_100 } from './constants'
 
 function BorderedBox (props) {
   const {

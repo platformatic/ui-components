@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from './TabbedWindow.module.css'
-import { COLORS_BUTTON, WHITE } from './constants'
+import { WHITE } from './constants'
 
 function TabbedWindow ({
   tabs = [],

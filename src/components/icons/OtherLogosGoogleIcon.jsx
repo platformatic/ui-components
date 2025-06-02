@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES, SMALL, MEDIUM, MAIN_DARK_BLUE } from '../constants'
+import { SMALL, MEDIUM, MAIN_DARK_BLUE } from '../constants'
 
 const OtherLogosGoogleIcon = ({
   color = MAIN_DARK_BLUE,

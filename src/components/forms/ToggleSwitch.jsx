@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './ToggleSwitch.module.css'
 import commonStyles from '../Common.module.css'
-import { MEDIUM, SMALL } from '../constants'
+import { MEDIUM } from '../constants'
 
 function ToggleSwitch ({
   name = '',

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styles from './Icons.module.css'
-import { COLORS_ICON, LARGE, MEDIUM, SIZES, MAIN_DARK_BLUE, SMALL } from '../constants'
+import { LARGE, MEDIUM, MAIN_DARK_BLUE, SMALL } from '../constants'
 
 const LabelIcon = ({
   color = MAIN_DARK_BLUE,

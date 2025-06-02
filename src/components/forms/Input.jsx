@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styles from './Input.module.css'
 import commonStyles from '../Common.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
-import { ERROR_RED, MAIN_DARK_BLUE, MAIN_GREEN, RICH_BLACK, TRANSPARENT, WHITE } from '../constants'
+import { ERROR_RED, MAIN_GREEN, WHITE } from '../constants'
 
 function Input ({
   placeholder = '',

@@ -2,7 +2,7 @@ import React from 'react'
 import PlatformaticIcon from './PlatformaticIcon'
 import commonStyles from './Common.module.css'
 import styles from './ListElement.module.css'
-import { MAIN_DARK_BLUE, MEDIUM, SMALL, WHITE, MAIN_GREEN } from './constants'
+import { MEDIUM, WHITE, MAIN_GREEN } from './constants'
 
 function List ({
   title = '',

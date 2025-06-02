@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './InfoBox.module.css'
 import Button from './Button'
 import PlatformaticIcon from './PlatformaticIcon'
-import { COLORS_BUTTON, COLORS_ICON, HOVER_EFFECTS_BUTTONS, MAIN_GREEN } from './constants'
+import { MAIN_GREEN } from './constants'
 
 function InfoBox (props) {
   const {

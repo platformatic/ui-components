@@ -1,6 +1,6 @@
 import styles from './TooltipAbsolute.module.css'
 import { useEffect, useState } from 'react'
-import { DIRECTIONS, DIRECTION_LEFT, DIRECTION_BOTTOM, DIRECTION_TOP, DIRECTION_RIGHT, POSITION_START } from './constants'
+import { DIRECTION_LEFT, DIRECTION_BOTTOM, DIRECTION_TOP, DIRECTION_RIGHT, POSITION_START } from './constants'
 
 const TooltipAbsolute = ({
   direction = DIRECTION_TOP,

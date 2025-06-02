@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styles from './Icons.module.css'
-import { COLORS_ICON, LARGE, MAIN_DARK_BLUE, MEDIUM, SIZES, SMALL } from '../constants'
+import { LARGE, MAIN_DARK_BLUE, MEDIUM, SMALL } from '../constants'
 
 const DatabaseMigrationIcon = ({
   color = MAIN_DARK_BLUE,

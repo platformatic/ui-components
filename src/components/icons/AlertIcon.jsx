@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES, SMALL, MEDIUM, LARGE, ERROR_RED } from '../constants'
+import { SMALL, MEDIUM, LARGE, ERROR_RED } from '../constants'
 
 const AlertIcon = ({
   color = ERROR_RED,

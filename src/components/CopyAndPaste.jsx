@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { COLORS_ICON, DIRECTION_TOP, MEDIUM, SIZES, POSITIONS, POSITION_CENTER, MAIN_DARK_BLUE } from './constants'
+import { DIRECTION_TOP, MEDIUM, POSITION_CENTER, MAIN_DARK_BLUE } from './constants'
 import PlatformaticIcon from './PlatformaticIcon'
 import TooltipAbsolute from './TooltipAbsolute'
 import Tooltip from './Tooltip'

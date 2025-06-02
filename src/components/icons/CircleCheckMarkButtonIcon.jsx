@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styles from './Icons.module.css'
-import { COLORS_ICON, MEDIUM, MAIN_DARK_BLUE } from '../constants'
+import { MEDIUM, MAIN_DARK_BLUE } from '../constants'
 
 const CircleCheckMarkButtonIcon = ({
   color = MAIN_DARK_BLUE,

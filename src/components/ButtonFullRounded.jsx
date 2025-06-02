@@ -2,7 +2,7 @@ import React from 'react'
 import commonStyles from './Common.module.css'
 import styles from './ButtonFullRounded.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
-import { COLORS_ICON, SIZES, DULLS_BACKGROUND_COLOR, PADDING_SIZES, SMALL, WHITE, NONE } from './constants'
+import { DULLS_BACKGROUND_COLOR, SMALL, WHITE, NONE } from './constants'
 function ButtonFullRounded ({
   className = '',
   iconName = '',

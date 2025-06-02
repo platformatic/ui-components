@@ -1,5 +1,5 @@
 import React from 'react'
-import { FONT_BASE, FONT_XS, MAIN_DARK_BLUE, WHITE } from './constants'
+import { FONT_BASE, WHITE } from './constants'
 import commonStyles from './Common.module.css'
 import styles from './TextWithLabel.module.css'
 

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES, LARGE, MAIN_DARK_BLUE } from '../constants'
+import { LARGE, MAIN_DARK_BLUE } from '../constants'
 
 const ApplicationTypeIcon = ({
   color = MAIN_DARK_BLUE,

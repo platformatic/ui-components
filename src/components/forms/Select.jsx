@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import styles from './Select.module.css'
 import commonStyles from '../Common.module.css'
-import { MAIN_DARK_BLUE, MAIN_GREEN, RICH_BLACK, SIZES, SMALL, WHITE } from '../constants'
+import { MAIN_DARK_BLUE, MAIN_GREEN, SMALL, WHITE } from '../constants'
 import PlatformaticIcon from '../PlatformaticIcon'
 import Icons from '../icons'
 

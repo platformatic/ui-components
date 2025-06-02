@@ -1,7 +1,7 @@
 // https://loading.io/css/
 import React from 'react'
 import styles from './SpinnerCircular.module.css'
-import { COLORS_BUTTON, WHITE } from '../constants'
+import { WHITE } from '../constants'
 
 function SpinnerCircular ({
   className = '',

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import styles from './SelectWithInput.module.css'
 import commonStyles from '../Common.module.css'
-import { MAIN_DARK_BLUE, MAIN_GREEN, RICH_BLACK, SMALL, WHITE } from '../constants'
+import { MAIN_DARK_BLUE, MAIN_GREEN, SMALL, WHITE } from '../constants'
 import PlatformaticIcon from '../PlatformaticIcon'
 
 function SelectWithInput ({

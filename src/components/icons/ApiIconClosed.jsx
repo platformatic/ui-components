@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styles from './Icons.module.css'
-import { COLORS_ICON, MAIN_DARK_BLUE, MEDIUM, SIZES } from '../constants'
+import { MAIN_DARK_BLUE, MEDIUM } from '../constants'
 
 const ApiIconClosed = ({
   color = MAIN_DARK_BLUE,

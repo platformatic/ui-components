@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styles from './Icons.module.css'
-import { COLORS_ICON, SIZES, MEDIUM, LARGE, MAIN_DARK_BLUE, SMALL } from '../constants'
+import { MEDIUM, LARGE, MAIN_DARK_BLUE, SMALL } from '../constants'
 
 const AppMissingIcon = ({
   color = MAIN_DARK_BLUE,

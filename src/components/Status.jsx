@@ -1,6 +1,6 @@
 import React from 'react'
 import PlatformaticIcon from './PlatformaticIcon'
-import { COLORS_ICON, TINY, SIZES, WHITE } from './constants'
+import { TINY, WHITE } from './constants'
 
 function Status ({
   color = WHITE,

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styles from './ButtonOnlyIcon.module.css'
 import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
-import { SIZES, COLORS_BUTTON, BOX_SHADOW, UNDERLINE, HOVER_EFFECTS_BUTTONS, DULLS_BACKGROUND_COLOR, MAIN_DARK_BLUE, LARGE, MEDIUM, TRANSPARENT } from './constants'
+import { BOX_SHADOW, UNDERLINE, DULLS_BACKGROUND_COLOR, MAIN_DARK_BLUE, LARGE, MEDIUM, TRANSPARENT } from './constants'
 
 function ButtonOnlyIcon ({
   textClass = '',

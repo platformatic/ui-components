@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import commonStyles from './Common.module.css'
 import styles from './SearchBarV2.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
-import { RICH_BLACK, SMALL, TRANSPARENT, WHITE } from './constants'
+import { RICH_BLACK, SMALL, WHITE } from './constants'
 function SearchBarV2 ({
   color = WHITE,
   backgroundColor = RICH_BLACK,

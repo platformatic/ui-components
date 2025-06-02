@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './TextArea.module.css'
 import commonStyles from '../Common.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
-import { MAIN_DARK_BLUE, MAIN_GREEN } from '../constants'
+import { MAIN_DARK_BLUE } from '../constants'
 
 function TextArea ({
   placeholder = '',

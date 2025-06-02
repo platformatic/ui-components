@@ -1,6 +1,6 @@
 import React from 'react'
 import commonStyles from './Common.module.css'
-import { DARK_GREEN, MAIN_DARK_BLUE, WHITE, MARGIN_4 } from './constants'
+import { DARK_GREEN, MARGIN_4 } from './constants'
 import styles from './HorizontalSeparator.module.css'
 
 function HorizontalSeparator ({

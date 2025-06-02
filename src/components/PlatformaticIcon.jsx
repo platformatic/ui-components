@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Icons from './icons'
 import styles from './PlatformaticIcon.module.css'
-import { COLORS_ICON, MAIN_GREEN, SIZES, SMALL } from './constants'
+import { MAIN_GREEN, SMALL } from './constants'
 
 function PlatformaticIcon ({
   iconName = '',

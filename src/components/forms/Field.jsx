@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Field.module.css'
-import { ERROR_RED, MAIN_DARK_BLUE, WHITE } from '../constants'
+import { MAIN_DARK_BLUE } from '../constants'
 
 function Field ({
   title = '',

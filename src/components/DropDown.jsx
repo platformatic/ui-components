@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import styles from './DropDown.module.css'
 import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
-import { DARK_BLUE, LIGHT_BLUE, MAIN_DARK_BLUE, RICH_BLACK, WHITE } from './constants'
+import { DARK_BLUE, MAIN_DARK_BLUE, RICH_BLACK, WHITE } from './constants'
 
 function DropDown ({
   pictureUrl = '',

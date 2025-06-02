@@ -1,5 +1,5 @@
 import React from 'react'
-import { DARK_GREEN, MAIN_DARK_BLUE, OPACITY_10, OPACITY_20, OPACITY_30, OPACITY_60, OPACITY_100, WHITE } from './constants'
+import { DARK_GREEN, OPACITY_100 } from './constants'
 import commonStyles from './Common.module.css'
 import styles from './VerticalSeparator.module.css'
 

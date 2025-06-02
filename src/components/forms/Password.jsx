@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styles from './Password.module.css'
 import commonStyles from '../Common.module.css'
 import PlatformaticIcon from '../PlatformaticIcon'
-import { MAIN_DARK_BLUE, MAIN_GREEN } from '../constants'
+import { MAIN_DARK_BLUE } from '../constants'
 
 function Password ({
   placeholder = '',

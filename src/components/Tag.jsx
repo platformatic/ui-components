@@ -1,7 +1,7 @@
 import React from 'react'
 import commonStyles from './Common.module.css'
 import styles from './Tag.module.css'
-import { COLORS_BUTTON, OPACITY_100, OPACITIES, SIZES, WHITE } from './constants'
+import { OPACITY_100, WHITE } from './constants'
 import PlatformaticIcon from './PlatformaticIcon'
 
 function Tag ({

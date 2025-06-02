@@ -3,16 +3,12 @@ import styles from './Button.module.css'
 import commonStyles from './Common.module.css'
 import PlatformaticIcon from './PlatformaticIcon'
 import {
-  SIZES,
-  COLORS_BUTTON,
   BOX_SHADOW,
   UNDERLINE,
-  HOVER_EFFECTS_BUTTONS,
   DULLS_BACKGROUND_COLOR,
   MAIN_DARK_BLUE,
   LARGE,
   CHANGE_BACKGROUND_COLOR,
-  BUTTON_BACKGROUNDS_COLOR_HOVER,
   ACTIVE_AND_INACTIVE_STATUS,
   TRANSPARENT
 } from './constants'

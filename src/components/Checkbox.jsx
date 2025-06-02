@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Checkbox.module.css'
-import { MAIN_DARK_BLUE, MEDIUM, RICH_BLACK, SMALL, WHITE } from './constants'
+import { MAIN_DARK_BLUE, MEDIUM } from './constants'
 function Checkbox ({
   disabled = false,
   color = MAIN_DARK_BLUE,
