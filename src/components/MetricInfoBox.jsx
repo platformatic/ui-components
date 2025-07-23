@@ -20,16 +20,6 @@ export default function MetricInfoBox ({
   const trend = data[0] > data[data.length - 1] ? 'up' : 'down'
   const [tooltipVisible, setTooltipVisible] = useState(false)
 
-  function mouseEnter () {
-    console.log('mouseEnter')
-    console.log(tooltip)
-    setTooltipVisible(true)
-  }
-
-  function mouseLeave () {
-    console.log('mouseLeave')
-    setTooltipVisible(false)
-  }
   return (
     <div className={styles.container}>
       <div className={styles.headerRow}>
@@ -38,8 +28,8 @@ export default function MetricInfoBox ({
         {tooltip && (
           <div
             className={styles.infoIcon}
-            onMouseEnter={mouseEnter}
-            onMouseLeave={mouseLeave}
+            onMouseEnter={() => setTooltipVisible(true)}
+            onMouseLeave={() => setTooltipVisible(false)}
           >
             <Tooltip
               content={<span>{tooltip}</span>}
