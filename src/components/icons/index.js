@@ -209,6 +209,8 @@ import TaxonomyIcon from './TaxonomyIcon'
 import TeamsIcon from './TeamsIcon'
 import TerminalIcon from './TerminalIcon'
 import TrashIcon from './TrashIcon'
+import TrendDownIcon from './TrendDownIcon'
+import TrendUpIcon from './TrendUpIcon'
 import TwoUsersIcon from './TwoUsersIcon'
 import UpgradeIcon from './UpgradeIcon'
 import UploadFileIcon from './UploadFileIcon'
@@ -438,6 +440,8 @@ export default {
   TeamsIcon,
   TerminalIcon,
   TrashIcon,
+  TrendDownIcon,
+  TrendUpIcon,
   TwoUsersIcon,
   UpgradeIcon,
   UploadFileIcon,

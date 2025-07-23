@@ -23,7 +23,7 @@ function Tooltip ({
     componentClassName += ' ' + styles[`${position}`]
   }
   const fixedStyle = { top: '0px', left: '0px' }
-  const wrapperRef = useRef()
+  const wrapperRef = useRef(null)
 
   useEffect(() => {
     if (activeDependsOnVisible) {
