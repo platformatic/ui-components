@@ -25,6 +25,7 @@ import LoginButton from './src/components/LoginButton'
 import Logo from './src/components/Logo'
 import LogoDropDown from './src/components/LogoDropDown'
 import Logos from './src/components/logos'
+import MetricInfoBox from './src/components/MetricInfoBox'
 import Modal from './src/components/Modal'
 import ModalDirectional from './src/components/ModalDirectional'
 import ModalStepsForward from './src/components/ModalStepsForward'
@@ -41,6 +42,7 @@ import TooltipAbsolute from './src/components/TooltipAbsolute'
 import TabbedWindow from './src/components/TabbedWindow'
 import Tag from './src/components/Tag'
 import TextWithLabel from './src/components/TextWithLabel'
+import TrendMetric from './src/components/TrendMetric'
 import TwoColumnsLayout from './src/components/layouts/TwoColumnsLayout'
 import Versions from './src/components/Versions'
 import VerticalSeparator from './src/components/VerticalSeparator'
@@ -61,8 +63,9 @@ export {
   GHLoginButton,
   Forms,
   Icons,
-  Logos,
   InfoBox,
+  Logos,
+  MetricInfoBox,
   Sidebar,
   Layout,
   List,
@@ -87,6 +90,7 @@ export {
   TabbedWindow,
   Tag,
   TextWithLabel,
+  TrendMetric,
   Tooltip,
   TooltipAbsolute,
   TwoColumnsLayout,
