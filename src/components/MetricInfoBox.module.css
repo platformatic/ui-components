@@ -18,25 +18,3 @@
   @apply flex items-center justify-center gap-4;
 }
 
-.contentText {
-  @apply flex flex-col gap-2 items-center justify-center;
-}
-.value {
-  @apply flex gap-4 items-center justify-center;
-}
-
-.valueNumber {
-  @apply text-[24px] font-semibold text-white;
-}
-
-.valueUnit {
-  @apply text-[16px] font-normal text-white/70;
-}
-
-.helperBox {
-  @apply text-[14px] font-normal text-white/70;
-} 
-
-.contentGraph {
-  @apply w-[210px] h-[60px];
-}
