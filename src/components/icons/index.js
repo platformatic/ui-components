@@ -105,6 +105,7 @@ import GearIcon from './GearIcon'
 import GenerationLoadingIcon from './GenerationLoadingIcon'
 import GitHubRepo2Icon from './GitHubRepo2Icon'
 import GitHubRepoIcon from './GitHubRepoIcon'
+import HeartBeatIcon from './HeartBeatIcon'
 import GiveOwnershipIcon from './GiveOwnershipIcon'
 import GraphQLEditsIcon from './GraphQLEditsIcon'
 import GraphQLIcon from './GraphQLIcon'
@@ -205,6 +206,7 @@ import StopIcon from './StopIcon'
 import SuspendIcon from './SuspendIcon'
 import SwitchIcon from './SwitchIcon'
 import TableIcon from './TableIcon'
+import TechIcon from './TechIcon'
 import TaxonomyIcon from './TaxonomyIcon'
 import TeamsIcon from './TeamsIcon'
 import TerminalIcon from './TerminalIcon'
@@ -339,6 +341,7 @@ export default {
   GiveOwnershipIcon,
   GraphQLEditsIcon,
   GraphQLIcon,
+  HeartBeatIcon,
   HorizontalPodAutoscalerIcon,
   HourglassIcon,
   ImportAppIcon,
@@ -436,6 +439,7 @@ export default {
   SuspendIcon,
   SwitchIcon,
   TableIcon,
+  TechIcon,
   TaxonomyIcon,
   TeamsIcon,
   TerminalIcon,
