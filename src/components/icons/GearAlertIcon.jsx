@@ -74,5 +74,3 @@ const GearAlertIcon = ({
 }
 
 export default GearAlertIcon
-
-
