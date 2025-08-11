@@ -101,7 +101,10 @@ import EyeOpenedIcon from './EyeOpenedIcon'
 import FailureRateIcon from './FailureRateIcon'
 import FolderIcon from './FolderIcon'
 import FoldersIcon from './FoldersIcon'
+import FlamegraphsIcon from './FlamegraphsIcon'
+import GearAlertIcon from './GearAlertIcon'
 import GearIcon from './GearIcon'
+import GearUserIcon from './GearUserIcon'
 import GenerationLoadingIcon from './GenerationLoadingIcon'
 import GitHubRepo2Icon from './GitHubRepo2Icon'
 import GitHubRepoIcon from './GitHubRepoIcon'
@@ -334,7 +337,10 @@ export default {
   FailureRateIcon,
   FolderIcon,
   FoldersIcon,
+  FlamegraphsIcon,
+  GearAlertIcon,
   GearIcon,
+  GearUserIcon,
   GenerationLoadingIcon,
   GitHubRepo2Icon,
   GitHubRepoIcon,
