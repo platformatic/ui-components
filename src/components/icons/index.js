@@ -162,6 +162,7 @@ import PodMetricsIcon from './PodMetricsIcon'
 import PodPerformanceIcon from './PodPerformanceIcon'
 import PodSettingsIcon from './PodSettingsIcon'
 import PodServicesIcon from './PodServicesIcon'
+import PodSignalsIcon from './PodSignalsIcon'
 import PreviewPRIcon from './PreviewPRIcon'
 import PullRequestIcon from './PullRequestIcon'
 import PullRequestLoadingIcon from './PullRequestLoadingIcon'
@@ -398,6 +399,7 @@ export default {
   PodPerformanceIcon,
   PodSettingsIcon,
   PodServicesIcon,
+  PodSignalsIcon,
   PreviewPRIcon,
   PullRequestIcon,
   PullRequestLoadingIcon,

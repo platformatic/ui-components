@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react'
 import * as d3 from 'd3'
+import styles from './TrendLine.module.css'
 
 /**
  * TrendLine component
@@ -132,7 +133,7 @@ function TrendLine ({ yValues }) {
   }, [yValues, dimensions])
 
   return (
-    <div className='w-full h-full' ref={typedContainerRef} style={{ position: 'relative' }}>
+    <div className={styles.line} ref={typedContainerRef} style={{ position: 'relative' }}>
       <svg
         ref={ref}
         width='100%'

@@ -29,3 +29,11 @@
   min-width: 120px;
   text-align: left;
 } 
+
+.percentContainer {
+  @apply flex items-center justify-center gap-2 absolute bottom-0 left-0 right-0 text-white text-[2.3rem] font-bold;
+}
+
+.percentUnit {
+  @apply text-white/70 text-[1.2rem] font-normal;
+}

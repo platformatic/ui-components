@@ -112,9 +112,9 @@ export function SemiCircleProgress ({
         />
       </svg>
       {showPercentValue && (
-        <div className='flex items-center justify-center gap-2 absolute bottom-0 left-0 right-0 text-white text-[2.3rem] font-bold'>
+        <div className={styles.percentContainer}>
           <span>{value}</span>
-          <span className='text-white/70 text-[1.2rem] font-normal'>{unit}</span>
+          <span className={styles.percentUnit}>{unit}</span>
         </div>
 
       )}

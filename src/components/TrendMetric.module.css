@@ -18,7 +18,7 @@
 } 
 
 .contentGraph {
-  @apply w-[210px] h-[60px];
+  @apply w-[210px] h-[25px];
 }
 .container {
   @apply flex items-center justify-center gap-4;

@@ -2,7 +2,7 @@ import React from 'react'
 import TrendLine from '../components/TrendLine'
 
 export default {
-  title: 'Components/TrendLine',
+  title: 'Platformatic/Metrics/TrendLine',
   component: TrendLine
 }
 
