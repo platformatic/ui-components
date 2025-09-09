@@ -13,3 +13,7 @@
 .padding {
   @apply px-3 py-1
 }
+
+.experimentalPadding {
+  @apply text-sm px-2 py-0.5 tracking-[0.15rem] text-[10px];
+}

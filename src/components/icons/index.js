@@ -125,6 +125,7 @@ import K8SIcon from './K8SIcon'
 import K8SMetricsIcon from './K8SMetricsIcon'
 import KeyIcon from './KeyIcon'
 import LabelIcon from './LabelIcon'
+import LabIcon from './LabIcon'
 import LayersIcon from './LayersIcon'
 import LensIcon from './LensIcon'
 import LiveIcon from './LiveIcon'
@@ -362,6 +363,7 @@ export default {
   K8SMetricsIcon,
   KeyIcon,
   LabelIcon,
+  LabIcon,
   LayersIcon,
   LensIcon,
   LiveIcon,

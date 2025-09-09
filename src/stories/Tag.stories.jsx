@@ -1,5 +1,6 @@
 import Tag from '../components/Tag'
 import { ELECTRIC_PURPLE, ERROR_RED, MAIN_GREEN, OPACITY_30, SMALL, TERTIARY_BLUE, WARNING_YELLOW, WHITE } from '../components/constants'
+import ExperimentalTag from '../components/ExperimentalTag'
 export default {
   title: 'Platformatic/Tag',
   component: Tag,
@@ -71,3 +72,14 @@ export const MultiColor = {
     colors: [ERROR_RED, TERTIARY_BLUE, WHITE, WARNING_YELLOW, ELECTRIC_PURPLE, MAIN_GREEN]
   }
 }
+
+const ExperimentalTemplate = (args) => {
+  return (
+    <div className='bg-black-russian h-full w-full p-8'>
+      <ExperimentalTag {...args} />
+    </div>
+  )
+}
+
+export const Experimental = ExperimentalTemplate.bind({})
+Experimental.args = {}
