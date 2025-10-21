@@ -240,13 +240,13 @@
   @apply px-2 py-2.5;
 }
 .text--error-red {
-  @apply text-error-red
+  @apply text-error-red;
 }
 .text--error-red-70 {
-  @apply text-error-red/70
+  @apply text-error-red/70;
 }
 .text--white {
-  @apply text-white
+  @apply text-white;
 }
 .text--white-70 {
   @apply text-white/70;
@@ -319,10 +319,10 @@
   @apply text-electric-purple/70;
 }
 .text--base {
-  @apply text-base
+  @apply text-base;
 }
 .text--xs {
-  @apply text-xs
+  @apply text-xs;
 }
 
 
@@ -355,35 +355,35 @@
   @apply bg-tertiary-blue;
 }
 .background-color-warning-yellow {
-  @apply bg-warning-yellow ;
+  @apply bg-warning-yellow;
 }
 .background-color-rich-black {
-  @apply bg-rich-black ;
+  @apply bg-rich-black;
 }
 .background-color-fluorescent-cyan {
-  @apply bg-fluorescent-cyan ;
+  @apply bg-fluorescent-cyan;
 }
 .background-color-giants-orange {
-  @apply bg-giants-orange ;
+  @apply bg-giants-orange;
 }
 .background-color-electric-purple {
-  @apply bg-electric-purple ;
+  @apply bg-electric-purple;
 }
 .background-color-black-russian {
-  @apply bg-black-russian ;
+  @apply bg-black-russian;
 }
 
 .background-color-night {
-  @apply bg-night ;
+  @apply bg-night;
 }
 .background-color-anti-flash-white {
-  @apply bg-anti-flash-white ;
+  @apply bg-anti-flash-white;
 }
 .background-color-fire-engine-red {
-  @apply bg-fire-engine-red ;
+  @apply bg-fire-engine-red;
 }
 .background-color-alternate-rich-black {
-  @apply bg-alternate-rich-black ;
+  @apply bg-alternate-rich-black;
 }
 .background-color-transparent{
   @apply bg-transparent;
@@ -413,10 +413,10 @@
   @apply opacity-30;
 }
 .padding--none {
-  @apply p-0 ;
+  @apply p-0;
 }
 .padding--small {
-  @apply p-1 ;
+  @apply p-1;
 }
 .padding--medium {
   @apply p-2;
