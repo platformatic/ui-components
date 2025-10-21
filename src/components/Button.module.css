@@ -146,3 +146,6 @@
 .cursorDefault {
   @apply cursor-default;
 }
+.spinner {
+  @apply z-50 relative top-[20px] left-[20px] transform -translate-x-1/2 -translate-y-1/2
+}

@@ -670,3 +670,9 @@ export const FigmaTemplate = DesignSystem.bind({})
 FigmaTemplate.args = {
   label: 'Sample label'
 }
+
+export const LoadingButton = Template.bind({})
+LoadingButton.args = {
+  label: 'Loading Button',
+  loading: true
+}
