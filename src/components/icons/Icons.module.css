@@ -205,11 +205,11 @@
 }
 
 .iconDisabled {
-  @apply opacity-30
+  @apply opacity-30;
 }
 
 .iconInactive {
-  @apply opacity-70
+  @apply opacity-70;
 }
 
 .strokeTransparent {
