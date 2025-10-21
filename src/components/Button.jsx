@@ -12,7 +12,7 @@ import {
   ACTIVE_AND_INACTIVE_STATUS,
   TRANSPARENT
 } from './constants'
-import SpinnerCircular from './loaders/SpinnerCircular'
+import SpinnerCircularV2 from './loaders/SpinnerCircularV2'
 
 function Button ({
   textClass = '',
@@ -111,7 +111,8 @@ function Button ({
   return (
     <button className={`${buttonClassName} ${restClassName()} ${borderedClassName}`} disabled={disabled} alt={label} {...rest} onMouseLeave={() => setHover(false)} onMouseOver={() => setHover(true)}>
       <div className={`${contentClassName} ${backgroundClassName}`}>
-        {loading ? <SpinnerCircular className={styles.spinner} size={30} thickness={2} color={color} /> : null}
+        {loading ? <SpinnerCircularV2 className={styles.spinner} size={28} thickness={1} color={color} /> : null}
+
         {platformaticIcon ? <PlatformaticIcon key='left' iconName={platformaticIcon.iconName} color={platformaticIcon.color} data-testid='button-icon' onClick={null} inactive={inactive} /> : null}
         <span className={styles.label}>{label}</span>
         {platformaticIconAfter ? <PlatformaticIcon key='right' iconName={platformaticIconAfter.iconName} color={platformaticIconAfter.color} data-testid='button-icon' onClick={null} inactive={inactive} /> : null}

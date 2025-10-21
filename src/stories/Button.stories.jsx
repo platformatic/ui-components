@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from '../components/Button'
 import {
   ALTERNATE_RICH_BLACK,
@@ -675,4 +675,23 @@ export const LoadingButton = Template.bind({})
 LoadingButton.args = {
   label: 'Loading Button',
   loading: true
+}
+
+export const ClickToLoad = (args) => {
+  const [loading, setLoading] = useState(false)
+  return (
+    <Button
+      label='Click to Load'
+      loading={loading}
+      onClick={() => {
+        setLoading(true)
+        setTimeout(() => setLoading(false), 2000)
+      }}
+    />
+  )
+}
+
+ClickToLoad.args = {
+  label: 'Click to Load',
+  loading: false
 }
