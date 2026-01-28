@@ -133,6 +133,7 @@ import LoadingAppIcon from './LoadingAppIcon'
 import LogOutIcon from './LogOutIcon'
 import LogsRiskIcon from './LogsRiskIcon'
 import MailIcon from './MailIcon'
+import MarkdownDownloadIcon from './MarkdownDownloadIcon'
 import MetricsIcon from './MetricsIcon'
 import MetricsLoadingIcon from './MetricsLoadingIcon'
 import MetricsLogsIcon from './MetricsLogsIcon'
@@ -371,6 +372,7 @@ export default {
   LogOutIcon,
   LogsRiskIcon,
   MailIcon,
+  MarkdownDownloadIcon,
   MetricsIcon,
   MetricsLoadingIcon,
   MetricsLogsIcon,
