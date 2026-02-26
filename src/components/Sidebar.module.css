@@ -42,7 +42,7 @@
 }
 .item {
   @apply text-white ml-2 grow-0 text-left flex flex-col;
-  width: calc(100% - 28px)
+  width: calc(100% - 28px);
 }
 .itemSubTitle {
   @apply text-[10px] leading-[10px]; 

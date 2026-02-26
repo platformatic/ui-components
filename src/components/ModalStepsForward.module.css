@@ -15,7 +15,7 @@
 }
 .leftWrapper {
   @apply overflow-y-auto w-full h-full pb-40;
-  max-height: calc(100vh - 200px)
+  max-height: calc(100vh - 200px);
 }
 .left {
   @apply min-w-[60%] max-w-[60%] w-full ; 

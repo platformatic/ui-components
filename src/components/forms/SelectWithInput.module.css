@@ -36,5 +36,5 @@
   @apply py-2 flex items-center gap-x-1 relative z-[-1] w-auto basis-2/3;
 }
 .descriptionValue {
-  @apply opacity-70
+  @apply opacity-70;
 }
