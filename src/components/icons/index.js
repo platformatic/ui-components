@@ -226,6 +226,7 @@ import UserComputerIcon from './UserComputerIcon'
 import UserIcon from './UserIcon'
 import UserRemoveIcon from './UserRemoveIcon'
 import UserRoleIcon from './UserRoleIcon'
+import WorkflowIcon from './WorkflowIcon'
 import WorkspaceDynamicIcon from './WorkspaceDynamicIcon'
 import WorkspaceEmptyIcon from './WorkspaceEmptyIcon'
 import WorkspaceFailIcon from './WorkspaceFailIcon'
@@ -465,6 +466,7 @@ export default {
   UserIcon,
   UserRemoveIcon,
   UserRoleIcon,
+  WorkflowIcon,
   WorkspaceDynamicIcon,
   WorkspaceEmptyIcon,
   WorkspaceFailIcon,
