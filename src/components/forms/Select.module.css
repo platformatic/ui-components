@@ -41,5 +41,5 @@
   @apply truncate;
 }
 .descriptionValue {
-  @apply opacity-70
+  @apply opacity-70;
 }

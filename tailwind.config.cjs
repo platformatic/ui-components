@@ -79,5 +79,8 @@ module.exports = {
     'text-5xl',
     'text-6xl'
   ],
-  plugins: []
+  plugins: [
+    require('@tailwindcss/postcss'),
+    require('autoprefixer')
+  ]
 }
