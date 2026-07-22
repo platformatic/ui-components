@@ -36,6 +36,7 @@ import ArrowUpIcon from './ArrowUpIcon'
 import AWSIcon from './AWSIcon'
 import BellIcon from './BellIcon'
 import BillingIcon from './BillingIcon'
+import BookmarkIcon from './BookmarkIcon'
 import BranchIcon from './BranchIcon'
 import BuiltInLoggingIcon from './BuiltInLoggingIcon'
 import CacheRecommendationIcon from './CacheRecommendationIcon'
@@ -66,6 +67,7 @@ import CircleSubtractIcon from './CircleSubtractIcon'
 import CircleTwoArrowsDownIcon from './CircleTwoArrowsDownIcon'
 import CircleTwoArrowsUpIcon from './CircleTwoArrowsUpIcon'
 import CLIIcon from './CLIIcon'
+import ClockIcon from './ClockIcon'
 import CloseIcon from './CloseIcon'
 import CloudIcon from './CloudIcon'
 import CodeTestingIcon from './CodeTestingIcon'
@@ -277,6 +279,7 @@ export default {
   AWSIcon,
   BellIcon,
   BillingIcon,
+  BookmarkIcon,
   BranchIcon,
   BuiltInLoggingIcon,
   CacheRecommendationIcon,
@@ -307,6 +310,7 @@ export default {
   CircleTwoArrowsDownIcon,
   CircleTwoArrowsUpIcon,
   CLIIcon,
+  ClockIcon,
   CloseIcon,
   CloudIcon,
   CodeTestingIcon,
@@ -406,6 +410,8 @@ export default {
   PodSettingsIcon,
   PodServicesIcon,
   PodSignalsIcon,
+  // alias: the same glyph under a name that isn't tied to the autoscaler
+  PodsIcon: HorizontalPodAutoscalerIcon,
   PreviewPRIcon,
   PullRequestIcon,
   PullRequestLoadingIcon,
