@@ -9,10 +9,10 @@
   @apply fixed top-0 left-0 w-screen h-full z-20 bg-rich-black/95 flex justify-center items-center;
 }
 .fixedContainer {
-  @apply fixed top-0 left-0 w-full h-screen z-20 ;
+  @apply fixed top-0 left-0 w-full h-screen z-20;
 }
 .content {
-  @apply fixed top-0 h-[100vH] flex justify-center items-center ;
+  @apply fixed top-0 h-[100vH] flex justify-center items-center;
 }
 
 .container {
